@@ -49,7 +49,7 @@ add_action('admin_init', function () {
 
   add_settings_section(
     'aesirx_analytics_settings',
-    'AesirX Analytics & CMP',
+    'Aesirx Consent Management',
     function () {
       echo wp_kses_post(
         /* translators: %s: URL to aesir.io read mor details */
@@ -314,10 +314,10 @@ add_action('admin_init', function () {
 
 add_action('admin_menu', function () {
   add_options_page(
-    esc_html__('Aesirx Analytics', 'aesirx-analytics'),
-    esc_html__('Aesirx Analytics', 'aesirx-analytics'),
+    esc_html__('Aesirx Consent Management', 'aesirx-analytics'),
+    esc_html__('Aesirx Consent Management', 'aesirx-analytics'),
     'manage_options',
-    'aesirx-analytics-plugin',
+    'aesirx-consent-management-plugin',
     function () {
       ?>
 			<form action="options.php" method="post">
@@ -339,7 +339,7 @@ add_action('admin_menu', function () {
 });
 
 add_action('admin_enqueue_scripts', function ($hook) {
-  if ($hook === 'settings_page_aesirx-analytics-plugin') {
+  if ($hook === 'settings_page_aesirx-consent-management-plugin') {
     wp_enqueue_script('aesirx_analytics_repeatable_fields', plugins_url('assets/vendor/aesirx-analytics-repeatable-fields.js', __DIR__), array('jquery'), '1.0.0', true);
   }
 });

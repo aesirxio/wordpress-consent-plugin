@@ -146,7 +146,7 @@ add_action('plugins_loaded', function () {
 });
 
 add_filter('plugin_action_links_' . plugin_basename(__FILE__), function ($links) {
-  $url = esc_url(add_query_arg('page', 'aesirx-analytics-plugin', get_admin_url() . 'admin.php'));
+  $url = esc_url(add_query_arg('page', 'aesirx-consent-management-plugin', get_admin_url() . 'admin.php'));
   array_push($links, "<a href='$url'>" . esc_html__('Settings', 'aesirx-analytics') . '</a>');
   return $links;
 });
@@ -276,7 +276,7 @@ add_action('admin_init', function () {
 
         delete_option('aesirx_analytics_do_activation_redirect');
 
-        if (wp_safe_redirect("options-general.php?page=aesirx-analytics-plugin")) {
+        if (wp_safe_redirect("options-general.php?page=aesirx-consent-management-plugin")) {
             exit();
         }
     }
