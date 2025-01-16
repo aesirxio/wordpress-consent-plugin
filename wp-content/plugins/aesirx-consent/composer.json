@@ -1,0 +1,24 @@
+{
+  "require": {
+    "php": ">=7.2",
+    "php-aesirx/aesirx_analytics_lib": "dev-master",
+    "guzzlehttp/guzzle": "^7.8",
+    "symfony/deprecation-contracts": "^2.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "AesirxAnalytics\\": "src"
+    }
+  },
+  "require-dev": {
+    "dealerdirect/phpcodesniffer-composer-installer": "^1",
+    "phpcompatibility/phpcompatibility-wp": "*",
+    "wp-coding-standards/wpcs": "^3.1",
+    "squizlabs/php_codesniffer": "^3.7"
+  },
+  "config": {
+    "allow-plugins": {
+      "dealerdirect/phpcodesniffer-composer-installer": true
+    }
+  }
+}
