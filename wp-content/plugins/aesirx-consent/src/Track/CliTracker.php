@@ -30,7 +30,7 @@ class CliTracker extends AbstractTracker {
             } catch (Exception $e) {
                 // Handle any other general exceptions that might occur
                 error_log($e->getMessage());
-                throw esc_html__('Error in tracking', 'aesirx-analytics');
+                throw esc_html__('Error in tracking', 'aesirx-consent');
             }
         }
     }

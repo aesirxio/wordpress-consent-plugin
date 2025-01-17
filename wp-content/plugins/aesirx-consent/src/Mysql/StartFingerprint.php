@@ -64,11 +64,11 @@ Class AesirX_Analytics_Start_Fingerprint extends AesirxAnalyticsMysqlHelper
         } else {
             $url = wp_parse_url($params['request']['url']);
             if (!$url || !isset($url['host'])) {
-                return new WP_Error('validation_error', esc_html__('Wrong URL format, domain not found', 'aesirx-analytics'));
+                return new WP_Error('validation_error', esc_html__('Wrong URL format, domain not found', 'aesirx-consent'));
             }
     
             if ($url['host'] != $visitor['domain']) {
-                return new WP_Error('validation_error', esc_html__('The domain sent in the new URL does not match the domain stored in the visitor document', 'aesirx-analytics'));
+                return new WP_Error('validation_error', esc_html__('The domain sent in the new URL does not match the domain stored in the visitor document', 'aesirx-consent'));
             }
     
             $create_flow = true;

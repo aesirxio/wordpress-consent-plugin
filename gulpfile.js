@@ -31,7 +31,7 @@ function moveAnalyticJSTask() {
 
 function moveRepeatableFieldsJSTask() {
   return gulp
-    .src(['./wp-content/plugins/aesirx-consent/aesirx-analytics-repeatable-fields.js'])
+    .src(['./wp-content/plugins/aesirx-consent/aesirx-consent-repeatable-fields.js'])
     .pipe(gulp.dest(`${dist}/plugins/aesirx-consent/assets/vendor`));
 }
 

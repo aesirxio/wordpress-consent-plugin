@@ -13,7 +13,7 @@ Class AesirX_Analytics_Add_Consent_Level2 extends AesirxAnalyticsMysqlHelper
         }
 
         if (!$web3idObj || !isset($web3idObj['web3id'])) {
-            return new WP_Error('validation_error', esc_html__('Invalid token', 'aesirx-analytics'));
+            return new WP_Error('validation_error', esc_html__('Invalid token', 'aesirx-consent'));
         }
 
         $web3id = $web3idObj['web3id'];
@@ -21,7 +21,7 @@ Class AesirX_Analytics_Add_Consent_Level2 extends AesirxAnalyticsMysqlHelper
         $visitor = parent::aesirx_analytics_find_visitor_by_uuid($params['visitor_uuid']);
 
         if (!$visitor || is_wp_error($visitor)) {
-            return new WP_Error('validation_error', esc_html__('Visitor not found', 'aesirx-analytics'));
+            return new WP_Error('validation_error', esc_html__('Visitor not found', 'aesirx-consent'));
         }
 
         $found_consent = [];
@@ -38,7 +38,7 @@ Class AesirX_Analytics_Add_Consent_Level2 extends AesirxAnalyticsMysqlHelper
                 if (in_array($params['visitor_uuid'], array_column($one_consent->visitor, 'uuid'))) {
                     foreach ($params['consents'] as $consent) {
                         if (intval($consent) == $one_consent->consent) {
-                            return new WP_Error('rejected', esc_html__('Previous consent still active', 'aesirx-analytics'));
+                            return new WP_Error('rejected', esc_html__('Previous consent still active', 'aesirx-consent'));
                         }
                     }
                 }
@@ -122,7 +122,7 @@ Class AesirX_Analytics_Add_Consent_Level2 extends AesirxAnalyticsMysqlHelper
             return parent::aesirx_analytics_list_consent_common($consents, $visitors, $flows);
         } catch (Exception $e) {
             error_log("Query error: " . $e->getMessage());
-            return new WP_Error('db_update_error', esc_html__('There was a problem querying the data in the database.', 'aesirx-analytics'), ['status' => 500]);
+            return new WP_Error('db_update_error', esc_html__('There was a problem querying the data in the database.', 'aesirx-consent'), ['status' => 500]);
         }
     }
 }

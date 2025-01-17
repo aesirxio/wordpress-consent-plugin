@@ -1,6 +1,6 @@
-#aesirx-analytics-blocking-cookies {
+#aesirx-consent-blocking-cookies {
   min-width: 800px;
-  .aesirx-analytics-cookie-row {
+  .aesirx-consent-cookie-row {
     & > td {
       padding-top: 0;
       padding-left: 0;
@@ -10,7 +10,7 @@
     }
   }
 }
-#aesirx-analytics-consent-template {
+#aesirx-consent-template {
   width: 800px;
   table-layout: fixed;
   td {
@@ -40,15 +40,15 @@
     color: #646970;
   }
 }
-.aesirx-analytics-cookie-plugin {
-  .aesirx-analytics-cookie-plugin-item {
+.aesirx-consent-cookie-plugin {
+  .aesirx-consent-cookie-plugin-item {
     & > td {
       padding-top: 0;
       padding-left: 0;
     }
   }
 }
-.aesirx_analytics_info {
+.aesirx_consent_info {
   margin-top: 1rem;
   background-image: url('../images/Hero.png');
   background-size: cover;

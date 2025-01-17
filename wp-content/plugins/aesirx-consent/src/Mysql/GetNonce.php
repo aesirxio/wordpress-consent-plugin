@@ -11,7 +11,7 @@ Class AesirX_Analytics_Get_Nonce extends AesirxAnalyticsMysqlHelper
         $validate_address = parent::aesirx_analytics_validate_address($params['address']);
 
         if (!$validate_address || is_wp_error($validate_address)) {
-            return new WP_Error('validation_error', esc_html__('Address is not valid', 'aesirx-analytics'));
+            return new WP_Error('validation_error', esc_html__('Address is not valid', 'aesirx-consent'));
         }
 
         $num = (string) wp_rand(10000, 99999);

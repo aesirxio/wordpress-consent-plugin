@@ -11,7 +11,7 @@ Class AesirX_Analytics_Revoke_Consent_Level3or4 extends AesirxAnalyticsMysqlHelp
         // Decode the signaturea
         $decoded = base64_decode($params['request']['signature']);
         if ($decoded === false) {
-            return new WP_Error('invalid_signature', esc_html__('Invalid signature.', 'aesirx-analytics'));
+            return new WP_Error('invalid_signature', esc_html__('Invalid signature.', 'aesirx-consent'));
         }
 
         // Find the wallet
@@ -21,27 +21,27 @@ Class AesirX_Analytics_Revoke_Consent_Level3or4 extends AesirxAnalyticsMysqlHelp
         $wallet_row = parent::aesirx_analytics_find_wallet($network, $wallet);
 
         if (!$wallet_row || is_wp_error($wallet_row)) {
-            return new WP_Error('wallet_not_found', esc_html__('Wallet not found.', 'aesirx-analytics'));
+            return new WP_Error('wallet_not_found', esc_html__('Wallet not found.', 'aesirx-consent'));
         }
 
         // Check for nonce
         $nonce = $wallet_row->nonce;
         if (!$nonce) {
-            return new WP_Error('nonce_not_found', esc_html__('Nonce not found.', 'aesirx-analytics'));
+            return new WP_Error('nonce_not_found', esc_html__('Nonce not found.', 'aesirx-consent'));
         }
 
         // Validate network using extracted details
         $validate_nonce = parent::aesirx_analytics_validate_string($nonce, $params['wallet'], $params['request']['signature']);
 
         if (!$validate_nonce || is_wp_error($validate_nonce)) {
-            return new WP_Error('validation_error', esc_html__('Nonce is not valid', 'aesirx-analytics'));
+            return new WP_Error('validation_error', esc_html__('Nonce is not valid', 'aesirx-consent'));
         }
 
         if (isset($params['token']) && $params['token']) {
             $validate_contract = parent::aesirx_analytics_validate_contract($params['token']);
 
             if (!$validate_contract || is_wp_error($validate_contract)) {
-                return new WP_Error('validation_error', esc_html__('Contract is not valid', 'aesirx-analytics'));
+                return new WP_Error('validation_error', esc_html__('Contract is not valid', 'aesirx-consent'));
             }
         }
 
@@ -52,14 +52,14 @@ Class AesirX_Analytics_Revoke_Consent_Level3or4 extends AesirxAnalyticsMysqlHelp
         $result = parent::aesirx_analytics_expired_consent($consent_uuid, $expiration);
 
         if ($result === false || is_wp_error($result)) {
-            return new WP_Error('update_failed', esc_html__('Failed to update consent expiration.', 'aesirx-analytics'));
+            return new WP_Error('update_failed', esc_html__('Failed to update consent expiration.', 'aesirx-consent'));
         }
 
         // Update the nonce to None (NULL in this context)
         $result = parent::aesirx_analytics_update_nonce($network, $wallet, null);
 
         if ($result === false) {
-            return new WP_Error('nonce_update_failed', esc_html__('Failed to update nonce.', 'aesirx-analytics'));
+            return new WP_Error('nonce_update_failed', esc_html__('Failed to update nonce.', 'aesirx-consent'));
         }
 
         return true;

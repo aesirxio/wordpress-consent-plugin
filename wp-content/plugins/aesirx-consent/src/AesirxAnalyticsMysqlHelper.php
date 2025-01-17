@@ -94,7 +94,7 @@ if (!class_exists('AesirxAnalyticsMysqlHelper')) {
     
             } catch (Exception $e) {
                 error_log("Query error: " . $e->getMessage());
-                return new WP_Error('database_error', esc_html__('Database error occurred.', 'aesirx-analytics'), ['status' => 500]);
+                return new WP_Error('database_error', esc_html__('Database error occurred.', 'aesirx-consent'), ['status' => 500]);
             }
         }
     
@@ -249,7 +249,7 @@ if (!class_exists('AesirxAnalyticsMysqlHelper')) {
                                 $bind[] = strtotime($list[0]);
                             } catch (Exception $e) {
                                 error_log('Validation error: ' . $e->getMessage());
-                                return new WP_Error('validation_error', esc_html__('"start" filter is not correct', 'aesirx-analytics'), ['status' => 400]);
+                                return new WP_Error('validation_error', esc_html__('"start" filter is not correct', 'aesirx-consent'), ['status' => 400]);
                             }
                             break;
                         case 'end':
@@ -258,7 +258,7 @@ if (!class_exists('AesirxAnalyticsMysqlHelper')) {
                                 $bind[] = strtotime($list[0] . ' +1 day');
                             } catch (Exception $e) {
                                 error_log('Validation error: ' . $e->getMessage());
-                                return new WP_Error('validation_error', esc_html__('"end" filter is not correct', 'aesirx-analytics'), ['status' => 400]);
+                                return new WP_Error('validation_error', esc_html__('"end" filter is not correct', 'aesirx-consent'), ['status' => 400]);
                             }
                             break;
                         case 'event_name':
@@ -327,7 +327,7 @@ if (!class_exists('AesirxAnalyticsMysqlHelper')) {
             $parsed_url = wp_parse_url($url);
     
             if ($parsed_url === false || !isset($parsed_url['host'])) {
-                return new WP_Error('validation_error', esc_html__('Domain not found', 'aesirx-analytics'), ['status' => 400]);
+                return new WP_Error('validation_error', esc_html__('Domain not found', 'aesirx-consent'), ['status' => 400]);
             }
     
             $domain = $parsed_url['host'];
@@ -407,7 +407,7 @@ if (!class_exists('AesirxAnalyticsMysqlHelper')) {
                 return null;
             } catch (Exception $e) {
                 error_log('Query error: ' . $e->getMessage());
-                return new WP_Error('db_query_error', esc_html__('There was a problem with the database query.', 'aesirx-analytics'), ['status' => 500]);
+                return new WP_Error('db_query_error', esc_html__('There was a problem with the database query.', 'aesirx-consent'), ['status' => 500]);
             }
         }
     
@@ -470,7 +470,7 @@ if (!class_exists('AesirxAnalyticsMysqlHelper')) {
                 return true;
             } catch (Exception $e) {
                 error_log('Query error: ' . $e->getMessage());
-                return new WP_Error('db_query_error', esc_html__('There was a problem with the database query.', 'aesirx-analytics'), ['status' => 500]);
+                return new WP_Error('db_query_error', esc_html__('There was a problem with the database query.', 'aesirx-consent'), ['status' => 500]);
             }
         }
     
@@ -524,7 +524,7 @@ if (!class_exists('AesirxAnalyticsMysqlHelper')) {
                 return true;
             } catch (Exception $e) {
                 error_log('Query error: ' . $e->getMessage());
-                return new WP_Error('db_query_error', esc_html__('There was a problem with the database query.', 'aesirx-analytics'), ['status' => 500]);
+                return new WP_Error('db_query_error', esc_html__('There was a problem with the database query.', 'aesirx-consent'), ['status' => 500]);
             }
         }
     
@@ -550,7 +550,7 @@ if (!class_exists('AesirxAnalyticsMysqlHelper')) {
                 return true;
             } catch (Exception $e) {
                 error_log('Query error: ' . $e->getMessage());
-                return new WP_Error('db_query_error', esc_html__('There was a problem with the database query.', 'aesirx-analytics'), ['status' => 500]);
+                return new WP_Error('db_query_error', esc_html__('There was a problem with the database query.', 'aesirx-consent'), ['status' => 500]);
             }
         }
     
@@ -570,7 +570,7 @@ if (!class_exists('AesirxAnalyticsMysqlHelper')) {
     
             if ($wpdb->last_error) {
                 error_log('Query error: ' . $wpdb->last_error);
-                return new WP_Error('db_query_error', esc_html__('There was a problem with the database query.', 'aesirx-analytics'), ['status' => 500]);
+                return new WP_Error('db_query_error', esc_html__('There was a problem with the database query.', 'aesirx-consent'), ['status' => 500]);
             }
         }
     
@@ -591,7 +591,7 @@ if (!class_exists('AesirxAnalyticsMysqlHelper')) {
                                 $bind[] = strtotime($list[0]);
                             } catch (Exception $e) {
                                 error_log('Validation error: ' . $e->getMessage());
-                                return new WP_Error('validation_error', esc_html__('"start" filter is not correct', 'aesirx-analytics'), ['status' => 400]);
+                                return new WP_Error('validation_error', esc_html__('"start" filter is not correct', 'aesirx-consent'), ['status' => 400]);
                             }
                             break;
                         case 'end':
@@ -600,7 +600,7 @@ if (!class_exists('AesirxAnalyticsMysqlHelper')) {
                                 $bind[] = strtotime($list[0] . ' +1 day');
                             } catch (Exception $e) {
                                 error_log('Validation error: ' . $e->getMessage());
-                                return new WP_Error('validation_error', esc_html__('"end" filter is not correct', 'aesirx-analytics'), ['status' => 400]);
+                                return new WP_Error('validation_error', esc_html__('"end" filter is not correct', 'aesirx-consent'), ['status' => 400]);
                             }
                             break;
                         case 'domain':
@@ -625,7 +625,7 @@ if (!class_exists('AesirxAnalyticsMysqlHelper')) {
                             $bind[] = strtotime($list[0]);
                         } catch (Exception $e) {
                             error_log('Validation error: ' . $e->getMessage());
-                            return new WP_Error('validation_error', esc_html__('"start" filter is not correct', 'aesirx-analytics'), ['status' => 400]);
+                            return new WP_Error('validation_error', esc_html__('"start" filter is not correct', 'aesirx-consent'), ['status' => 400]);
                         }
                         break;
                     case 'end':
@@ -634,7 +634,7 @@ if (!class_exists('AesirxAnalyticsMysqlHelper')) {
                             $bind[] = strtotime($list[0] . ' +1 day');
                         } catch (Exception $e) {
                             error_log('Validation error: ' . $e->getMessage());
-                            return new WP_Error('validation_error', esc_html__('"end" filter is not correct', 'aesirx-analytics'), ['status' => 400]);
+                            return new WP_Error('validation_error', esc_html__('"end" filter is not correct', 'aesirx-consent'), ['status' => 400]);
                         }
                         break;
                     default:
@@ -656,7 +656,7 @@ if (!class_exists('AesirxAnalyticsMysqlHelper')) {
     
             if ($wpdb->last_error) {
                 error_log('Query error: ' . $wpdb->last_error);
-                return new WP_Error('db_query_error', esc_html__('There was a problem with the database query.', 'aesirx-analytics'), ['status' => 500]);
+                return new WP_Error('db_query_error', esc_html__('There was a problem with the database query.', 'aesirx-consent'), ['status' => 500]);
             }
     
             return $wallet;
@@ -681,7 +681,7 @@ if (!class_exists('AesirxAnalyticsMysqlHelper')) {
     
             if ($wpdb->last_error) {
                 error_log('Query error: ' . $wpdb->last_error);
-                return new WP_Error('db_query_error', esc_html__('There was a problem with the database query.', 'aesirx-analytics'), ['status' => 500]);
+                return new WP_Error('db_query_error', esc_html__('There was a problem with the database query.', 'aesirx-consent'), ['status' => 500]);
             }
         }
     
@@ -709,7 +709,7 @@ if (!class_exists('AesirxAnalyticsMysqlHelper')) {
     
             if ($wpdb->last_error) {
                 error_log('Query error: ' . $wpdb->last_error);
-                return new WP_Error('db_query_error', esc_html__('There was a problem with the database query.', 'aesirx-analytics'), ['status' => 500]);
+                return new WP_Error('db_query_error', esc_html__('There was a problem with the database query.', 'aesirx-consent'), ['status' => 500]);
             }
         }
     
@@ -750,7 +750,7 @@ if (!class_exists('AesirxAnalyticsMysqlHelper')) {
     
             if ($wpdb->last_error) {
                 error_log('Query error: ' . $wpdb->last_error);
-                return new WP_Error('db_query_error', esc_html__('There was a problem with the database query.', 'aesirx-analytics'), ['status' => 500]);
+                return new WP_Error('db_query_error', esc_html__('There was a problem with the database query.', 'aesirx-consent'), ['status' => 500]);
             }
         }
     
@@ -842,7 +842,7 @@ if (!class_exists('AesirxAnalyticsMysqlHelper')) {
     
             if ($wpdb->last_error) {
                 error_log('Query error: ' . $wpdb->last_error);
-                return new WP_Error('db_insert_error', esc_html__('Could not insert consent', 'aesirx-analytics'), ['status' => 500]);
+                return new WP_Error('db_insert_error', esc_html__('Could not insert consent', 'aesirx-consent'), ['status' => 500]);
             }
     
             return true;
@@ -904,7 +904,7 @@ if (!class_exists('AesirxAnalyticsMysqlHelper')) {
             if (is_wp_error($response)) {
                 $error_message = $response->get_error_message();
                 error_log('API error: ' . $error_message);
-                return new WP_Error('validation_error', esc_html__('Something went wrong', 'aesirx-analytics'));
+                return new WP_Error('validation_error', esc_html__('Something went wrong', 'aesirx-consent'));
             }
 
             $body = wp_remote_retrieve_body($response);
@@ -924,7 +924,7 @@ if (!class_exists('AesirxAnalyticsMysqlHelper')) {
             if (is_wp_error($response)) {
                 $error_message = $response->get_error_message();
                 error_log('API error: ' . $error_message);
-                return new WP_Error('validation_error', esc_html__('Something went wrong', 'aesirx-analytics'));
+                return new WP_Error('validation_error', esc_html__('Something went wrong', 'aesirx-consent'));
             }
 
             $body = wp_remote_retrieve_body($response);
@@ -945,7 +945,7 @@ if (!class_exists('AesirxAnalyticsMysqlHelper')) {
             if (is_wp_error($response)) {
                 $error_message = $response->get_error_message();
                 error_log('API error: ' . $error_message);
-                return new WP_Error('validation_error', esc_html__('Something went wrong', 'aesirx-analytics'));
+                return new WP_Error('validation_error', esc_html__('Something went wrong', 'aesirx-consent'));
             }
 
             $body = wp_remote_retrieve_body($response);
@@ -1008,7 +1008,7 @@ if (!class_exists('AesirxAnalyticsMysqlHelper')) {
                 return true;
             } catch (Exception $e) {
                 error_log("Query error: " . $e->getMessage());
-                return new WP_Error('db_update_error', esc_html__('There was a problem updating the data in the database.', 'aesirx-analytics'), ['status' => 500]);
+                return new WP_Error('db_update_error', esc_html__('There was a problem updating the data in the database.', 'aesirx-consent'), ['status' => 500]);
             }
         }
     
@@ -1083,7 +1083,7 @@ if (!class_exists('AesirxAnalyticsMysqlHelper')) {
                 }
             } catch (Exception $e) {
                 error_log("Query error: " . $e->getMessage());
-                return new WP_Error('db_query_error', esc_html__('There was a problem with the database query.', 'aesirx-analytics'), ['status' => 500]);
+                return new WP_Error('db_query_error', esc_html__('There was a problem with the database query.', 'aesirx-consent'), ['status' => 500]);
             }
         }
 
@@ -1287,7 +1287,7 @@ if (!class_exists('AesirxAnalyticsMysqlHelper')) {
             if (is_wp_error($response)) {
                 $error_message = $response->get_error_message();
                 error_log('API error: ' . $error_message);
-                return new WP_Error('validation_error', esc_html__('Something went wrong', 'aesirx-analytics'));
+                return new WP_Error('validation_error', esc_html__('Something went wrong', 'aesirx-consent'));
             }
 
             $body = wp_remote_retrieve_body($response);

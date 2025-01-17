@@ -9,34 +9,34 @@ Class AesirX_Analytics_Add_Consent_Level3or4 extends AesirxAnalyticsMysqlHelper
         // Decode signature
         $decoded = base64_decode($params['request']['signature'], true);
         if ($decoded === false) {
-            return new WP_Error('validation_error', esc_html__('Invalid signature', 'aesirx-analytics'));
+            return new WP_Error('validation_error', esc_html__('Invalid signature', 'aesirx-consent'));
         }
 
         // Find visitor by UUID
         $visitor = parent::aesirx_analytics_find_visitor_by_uuid($params['visitor_uuid']);
 
         if (!$visitor || is_wp_error($visitor)) {
-            return new WP_Error('validation_error', esc_html__('Visitor not found', 'aesirx-analytics'));
+            return new WP_Error('validation_error', esc_html__('Visitor not found', 'aesirx-consent'));
         }
 
         // Find wallet by network and wallet address
         $wallet = parent::aesirx_analytics_find_wallet($params['network'], $params['wallet']);
         
         if (!$wallet || is_wp_error($wallet)) {
-            return new WP_Error('validation_error', esc_html__('Wallet not found', 'aesirx-analytics'));
+            return new WP_Error('validation_error', esc_html__('Wallet not found', 'aesirx-consent'));
         }
 
         // Extract nonce from wallet
         $nonce = $wallet->nonce;
         if (!$nonce) {
-            return new WP_Error('validation_error', esc_html__('Wallet nonce not found', 'aesirx-analytics'));
+            return new WP_Error('validation_error', esc_html__('Wallet nonce not found', 'aesirx-consent'));
         }
 
         // Validate network using extracted details
         $validate_nonce = parent::aesirx_analytics_validate_string($nonce, $params['wallet'], $params['request']['signature']);
 
         if (!$validate_nonce || is_wp_error($validate_nonce)) {
-            return new WP_Error('validation_error', esc_html__('Nonce is not valid', 'aesirx-analytics'));
+            return new WP_Error('validation_error', esc_html__('Nonce is not valid', 'aesirx-consent'));
         }
 
         $web3id = null;
@@ -45,14 +45,14 @@ Class AesirX_Analytics_Add_Consent_Level3or4 extends AesirxAnalyticsMysqlHelper
             $validate_contract = parent::aesirx_analytics_validate_contract($params['token']);
 
             if (!$validate_contract || is_wp_error($validate_contract)) {
-                return new WP_Error('validation_error', esc_html__('Contract is not valid', 'aesirx-analytics'));
+                return new WP_Error('validation_error', esc_html__('Contract is not valid', 'aesirx-consent'));
             }
 
             // Extract web3id from jwt_payload
             $web3idObj = parent::aesirx_analytics_decode_web3id($params['token']) ?? '';
 
             if (!$web3idObj || !isset($web3idObj['web3id'])) {
-                return new WP_Error('validation_error', esc_html__('Invalid token', 'aesirx-analytics'));
+                return new WP_Error('validation_error', esc_html__('Invalid token', 'aesirx-consent'));
             }
 
             $web3id = $web3idObj['web3id'];
@@ -77,7 +77,7 @@ Class AesirX_Analytics_Add_Consent_Level3or4 extends AesirxAnalyticsMysqlHelper
                 if (in_array($params['visitor_uuid'], array_column($one_consent->visitor, 'uuid'))) {
                     foreach ($params['consents'] as $consent) {
                         if ((int)$consent === $one_consent->consent) {
-                            return new WP_Error('rejected', esc_html__("Previous consent still active", 'aesirx-analytics'));
+                            return new WP_Error('rejected', esc_html__("Previous consent still active", 'aesirx-consent'));
                         }
                     }
                 }
@@ -165,7 +165,7 @@ Class AesirX_Analytics_Add_Consent_Level3or4 extends AesirxAnalyticsMysqlHelper
             return parent::aesirx_analytics_list_consent_common($consents, $visitors, $flows);
         } catch (Exception $e) {
             error_log("Query error: " . $e->getMessage());
-            return new WP_Error('db_update_error', esc_html__('There was a problem querying the data in the database.', 'aesirx-analytics'), ['status' => 500]);
+            return new WP_Error('db_update_error', esc_html__('There was a problem querying the data in the database.', 'aesirx-consent'), ['status' => 500]);
         }
     }
 }

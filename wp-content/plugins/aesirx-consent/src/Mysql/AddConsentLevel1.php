@@ -2,7 +2,7 @@
 
 use AesirxAnalytics\AesirxAnalyticsMysqlHelper;
 
-include plugin_dir_path(__FILE__) . 'GetVisitorConsentList.php';
+include_once plugin_dir_path(__FILE__) . 'GetVisitorConsentList.php';
 
 Class AesirX_Analytics_Add_Consent_Level1 extends AesirxAnalyticsMysqlHelper
 {
@@ -20,11 +20,11 @@ Class AesirX_Analytics_Add_Consent_Level1 extends AesirxAnalyticsMysqlHelper
     {
         // Validate required parameters
         if (!isset($params['uuid']) || empty($params['uuid'])) {
-            return new WP_Error('missing_parameter', esc_html__('The uuid parameter is required.', 'aesirx-analytics'), ['status' => 400]);
+            return new WP_Error('missing_parameter', esc_html__('The uuid parameter is required.', 'aesirx-consent'), ['status' => 400]);
         }
 
         if (!isset($params['consent']) || !is_numeric($params['consent'])) {
-            return new WP_Error('invalid_parameter', esc_html__('The consent parameter is required and must be a number.', 'aesirx-analytics'), ['status' => 400]);
+            return new WP_Error('invalid_parameter', esc_html__('The consent parameter is required and must be a number.', 'aesirx-consent'), ['status' => 400]);
         }
 
         // Get the current date and time
@@ -50,7 +50,7 @@ Class AesirX_Analytics_Add_Consent_Level1 extends AesirxAnalyticsMysqlHelper
                     // Return an error if the previous consent has not expired
                     return new WP_Error(
                         'not_expired',
-                        esc_html__('Previous consent was not expired', 'aesirx-analytics'),
+                        esc_html__('Previous consent was not expired', 'aesirx-consent'),
                         ['status' => 400]
                     );
                 }
