@@ -262,7 +262,7 @@ function aesirx_analytics_display_update_notice(  ) {
             /* translators: %s: error message */
             // using custom function to escape HTML in error message
             error_log($notice->getMessage());
-            echo aesirx_analytics_escape_html('<div class="notice notice-error"><p>' . esc_html__('Problem with Aesirx Analytics plugin install', 'aesirx-consent') . '</p></div>');
+            echo wp_kses('<div class="notice notice-error"><p>' . esc_html__('Problem with Aesirx Analytics plugin install', 'aesirx-consent') . '</p></div>', aesirx_analytics_escape_html());
         }
 
         delete_transient( 'aesirx_analytics_update_notice' );

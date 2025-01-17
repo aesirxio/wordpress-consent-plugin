@@ -1,8 +1,8 @@
-=== AesirX Analytics ===
+=== AesirX Consent ===
 Contributors: aesirx,vikingtechguy,nixa999,nguyenbao10,vietnguyen1406,devphutran
 Tags: privacy, analytics, compliance, wordpress analytics, consent
 Requires at least: 5.9
-Tested up to: 6.6.2
+Tested up to: 6.7.1
 Stable tag: 1.0.0
 Requires PHP: 7.4
 License: GPL 3.0
@@ -50,12 +50,3 @@ The Terms of service can be found here https://aesirx.io/terms-conditions and th
 
 = 1.0.0 =
 * AesirX Consent
-
-== Screenshots ==
-1. Acquisition - See how visitors find and engage with the website.
-2. Behavior - Understand how people interact with the site.
-3. Tracking - Measure the performance of marketing campaigns.
-4. User Experience - Detailed analytics on customer journeys.
-5. Visitor - Gain insights into audience demographics and behaviors.
-6. Woo - Gain insights into e-commerce performance 1.
-7. Woo - Gain insights into e-commerce performance 2.
