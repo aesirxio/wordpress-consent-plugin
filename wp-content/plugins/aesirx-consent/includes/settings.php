@@ -43,9 +43,6 @@ add_action('admin_init', function () {
 
     return $value;
   });
-  register_setting('aesirx_analytics_plugin_options_datastream_gtag_id', 'aesirx_analytics_plugin_options_datastream_gtag_id');
-  register_setting('aesirx_analytics_plugin_options_datastream_gtm_id', 'aesirx_analytics_plugin_options_datastream_gtm_id');
-  register_setting('aesirx_analytics_plugin_options_datastream_template', 'aesirx_analytics_plugin_options_datastream_template');
 
   add_settings_section(
     'aesirx_analytics_settings',
@@ -136,21 +133,21 @@ add_action('admin_init', function () {
     __('Consent Template', 'aesirx-consent'),
     function () {
       $checked = 'checked="checked"';
-      $template = get_option('aesirx_analytics_plugin_options_datastream_template') ?? "default";
+      $template = get_option('aesirx_analytics_plugin_options', []);
       // using custom function to escape HTML
       echo '<table id="aesirx-consent-template">';
       echo  '<tr>';
       echo    '<td>';
-      echo "<img src='". esc_url(plugins_url( 'aesirx-consent/assets/images-plugin/consent_default.png'))."' />";
-      echo wp_kses('<label>' . esc_html__('Default template', 'aesirx-consent') . ' <input type="radio" class="analytic-consent-class" name="aesirx_analytics_plugin_options_datastream_template" ' .
-      ($template == 'default' ? $checked : '') .
+      echo "<img src='". plugins_url( 'aesirx-consent/assets/images-plugin/consent_default.png')."' />";
+      echo wp_kses('<label>' . esc_html__('Default template', 'aesirx-consent') . ' <input type="radio" class="analytic-consent-class" name="aesirx_analytics_plugin_options[datastream_template]" ' .
+      (!$template['datastream_template'] || $template['datastream_template'] == 'default' ? $checked : '') .
       ' value="default"  /></label>', aesirx_analytics_escape_html());
       echo wp_kses("<p class='description'><strong>".esc_html__('Description', 'aesirx-consent').": </strong>".esc_html__("AesirX Consent Management is improving Google Consent Mode 2.0 by not loading any tags until after consent is given reducing the compliance risk.", 'aesirx-consent')."</p>", aesirx_analytics_escape_html());
       echo    '</td>';
       echo    '<td>';
-      echo "<img src='". esc_url(plugins_url( 'aesirx-consent/assets/images-plugin/consent_simple_mode.png'))."' />";
-      echo wp_kses('<label>' . esc_html__('Simple Consent Mode', 'aesirx-consent') . ' <input type="radio" class="analytic-consent-class" name="aesirx_analytics_plugin_options_datastream_template" ' .
-      ($template == 'simple-consent-mode' ? $checked : '') .
+      echo "<img src='". plugins_url( 'aesirx-consent/assets/images-plugin/consent_simple_mode.png')."' />";
+      echo wp_kses('<label>' . esc_html__('Simple Consent Mode', 'aesirx-consent') . ' <input type="radio" class="analytic-consent-class" name="aesirx_analytics_plugin_options[datastream_template]" ' .
+      ($template['datastream_template'] == 'simple-consent-mode' ? $checked : '') .
       ' value="simple-consent-mode" /></label>', aesirx_analytics_escape_html());
       echo    '</td>';
       echo  '</tr>';
@@ -165,9 +162,9 @@ add_action('admin_init', function () {
     'aesirx_analytics_plugin_options_datastream_gtag_id',
     esc_html__('Gtag ID', 'aesirx-consent'),
     function () {
-      $options = get_option('aesirx_analytics_plugin_options_datastream_gtag_id');
-      echo wp_kses("<input id='aesirx_analytics_plugin_options_datastream_gtag_id' name='aesirx_analytics_plugin_options_datastream_gtag_id' type='text' value='" .
-      esc_attr($options ?? '') .
+      $options = get_option('aesirx_analytics_plugin_options',[]);
+      echo wp_kses("<input id='aesirx_analytics_plugin_options_datastream_gtag_id' name='aesirx_analytics_plugin_options[datastream_gtag_id]' type='text' value='" .
+      esc_attr($options['datastream_gtag_id'] ?? '') .
       "' />", aesirx_analytics_escape_html());
     },
     'aesirx_analytics_plugin',
@@ -178,9 +175,9 @@ add_action('admin_init', function () {
     'aesirx_analytics_plugin_options_datastream_gtm_id',
     esc_html__('GTM ID', 'aesirx-consent'),
     function () {
-      $options = get_option('aesirx_analytics_plugin_options_datastream_gtm_id');
-      echo wp_kses("<input id='aesirx_analytics_plugin_options_datastream_gtm_id' name='aesirx_analytics_plugin_options_datastream_gtm_id' type='text' value='" .
-      esc_attr($options ?? '') .
+      $options = get_option('aesirx_analytics_plugin_options',[]);
+      echo wp_kses("<input id='aesirx_analytics_plugin_options_datastream_gtm_id' name='aesirx_analytics_plugin_options[datastream_gtm_id]' type='text' value='" .
+      esc_attr($options['datastream_gtm_id'] ?? '') .
       "' />", aesirx_analytics_escape_html());
     },
     'aesirx_analytics_plugin',
@@ -300,9 +297,6 @@ add_action('admin_menu', function () {
 			<form action="options.php" method="post">
 				<?php
           settings_fields('aesirx_analytics_plugin_options');
-          settings_fields('aesirx_analytics_plugin_options_datastream_gtag_id');
-          settings_fields('aesirx_analytics_plugin_options_datastream_gtm_id');
-          settings_fields('aesirx_analytics_plugin_options_datastream_template');
 
           do_settings_sections('aesirx_analytics_plugin');
           wp_nonce_field('aesirx_analytics_settings_save', 'aesirx_analytics_settings_nonce');

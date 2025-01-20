@@ -7,12 +7,13 @@ Class AesirX_Analytics_Get_Datastream_Template extends AesirxAnalyticsMysqlHelpe
 {
     function aesirx_analytics_mysql_execute($params = [])
     {
+        $options = get_option('aesirx_analytics_plugin_options', []);
         return [
-            'domain' => get_option('aesirx_analytics_plugin_options_datastream_domain', ''),
-            'template' => get_option('aesirx_analytics_plugin_options_datastream_template', ''),
-            'gtag_id' => get_option('aesirx_analytics_plugin_options_datastream_gtag_id', ''),
-            'gtm_id' => get_option('aesirx_analytics_plugin_options_datastream_gtm_id', ''),
-            'consent' => get_option('aesirx_analytics_plugin_options_datastream_consent', ''),
+            'domain' => $options['datastream_domain'],
+            'template' => $options['datastream_template'],
+            'gtag_id' => $options['datastream_gtag_id'],
+            'gtm_id' => $options['datastream_gtm_id'],
+            'consent' => $options['datastream_consent'],
         ];
     }
 }
