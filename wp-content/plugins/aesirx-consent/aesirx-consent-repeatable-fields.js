@@ -10,4 +10,16 @@ jQuery(document).ready(function($) {
         e.preventDefault();
         $(this).parents('tr.aesirx-consent-cookie-row').remove();
     });
+
+    $(document).on('click', '#sign-up-button, .sign-up-link', function(e) {
+        e.preventDefault();
+        $('#wpbody-content').append('<div class="aesirx-modal-backdrop"></div>');
+        $('.aesirx_signup_modal').addClass('show');
+    });
+
+    $(document).on('click', '.aesirx-modal-backdrop', function(e) {
+        e.preventDefault();
+        $(this).remove();
+        $('.aesirx_signup_modal').removeClass('show');
+    });
 });

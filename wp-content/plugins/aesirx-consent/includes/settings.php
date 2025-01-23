@@ -56,18 +56,16 @@ add_action('admin_init', function () {
     'aesirx_analytics_plugin'
   );
 
-  function aesirx_analytics_warning_missing_license() {
-    $options = get_option('aesirx_analytics_plugin_options');
-
-    if (!$options || (empty($options['license']) && $options['storage'] === "internal")) {
-      ?>
-        <div class="notice-warning notice notice-bi" style="display: none;">
-            <p><?php echo esc_html__( 'Please register your license at signup.aesirx.io to enable decentralized consent functionality.', 'aesirx-consent' ); ?></p>
-        </div>
-      <?php
-    }
-  }
-  add_action( 'admin_notices', 'aesirx_analytics_warning_missing_license' );
+  add_settings_section(
+    'aesirx_analytics_settings',
+    'Aesirx Consent Management',
+    function () {
+      echo wp_kses_post(
+        sprintf('<p class= "description"><button class="cta-button" type="button" id="sign-up-button">'.esc_html__('Sign up', 'aesirx-consent').'</button></p>')
+      );
+    },
+    'aesirx_analytics_plugin'
+  );
 
 
   add_settings_field(
@@ -79,7 +77,7 @@ add_action('admin_init', function () {
       esc_attr($options['clientid'] ?? '') .
       "' />", aesirx_analytics_escape_html());
         echo wp_kses("<p class='description'><strong>".esc_html__('Description', 'aesirx-consent').": </strong>".sprintf(__("<p class= 'description'>
-		    Provided SSO CLIENT ID from <a href='%1\$s' target='_blank'>%1\$s</a>.</p>", 'aesirx-consent'), 'https://dapp.shield.aesirx.io/licenses')."</p>", aesirx_analytics_escape_html());
+		    Provided SSO CLIENT ID from <a href='%1\$s' target='_blank'>%1\$s</a>.</p>", 'aesirx-consent'), 'https://aesirx.io/licenses')."</p>", aesirx_analytics_escape_html());
         $manifest = json_decode(
           file_get_contents(plugin_dir_path(__DIR__) . 'assets-manifest.json', true)
         );
@@ -104,7 +102,7 @@ add_action('admin_init', function () {
       esc_attr($options['secret'] ?? '') .
       "' />", aesirx_analytics_escape_html());
       echo wp_kses("<p class='description'><strong>".esc_html__('Description', 'aesirx-consent').": </strong>".sprintf(__("<p class= 'description'>
-      Provided SSO Client Secret from <a href='%1\$s' target='_blank'>%1\$s</a>.</p>", 'aesirx-consent'), 'https://dapp.shield.aesirx.io/licenses')."</p>", aesirx_analytics_escape_html());  
+      Provided SSO Client Secret from <a href='%1\$s' target='_blank'>%1\$s</a>.</p>", 'aesirx-consent'), 'https://aesirx.io/licenses')."</p>", aesirx_analytics_escape_html());  
     },
     'aesirx_analytics_plugin',
     'aesirx_analytics_settings'
@@ -121,7 +119,7 @@ add_action('admin_init', function () {
       esc_attr($options['license'] ?? '') .
       "' /> <p class= 'description'><strong>".esc_html__('Description', 'aesirx-consent').": </strong>
       ".sprintf(__("<p class= 'description'>
-      Sign up on the AesirX platform to obtain your Shield of Privacy ID and free license, and activate support for decentralized consent at <a href='%1\$s' target='_blank'>%1\$s</a>.</p>", 'aesirx-consent'), 'https://signup.aesirx.io')."</p>", aesirx_analytics_escape_html());
+      Sign up on the AesirX platform to obtain your Shield of Privacy ID and buy license, and activate support for decentralized consent <span class='text-link sign-up-link'>here</span>.</p>", 'aesirx-consent'))."</p>", aesirx_analytics_escape_html());
     },
     'aesirx_analytics_plugin',
     'aesirx_analytics_settings'
@@ -284,6 +282,16 @@ add_action('admin_init', function () {
     'aesirx_consent_info'
   );
 
+
+  add_settings_section(
+    'aesirx_signup_modal',
+    '',
+    function () {
+      echo wp_kses("<div class='aesirx_signup_modal'><div class='aesirx_signup_modal_body'><iframe src='https://signup.aesirx.io/'></iframe></div></div>", aesirx_analytics_escape_html());
+    },
+    'aesirx_signup_modal'
+  );
+
 });
 
 add_action('admin_menu', function () {
@@ -305,15 +313,129 @@ add_action('admin_menu', function () {
 			</form>
 			<?php
         do_settings_sections('aesirx_consent_info');
+        do_settings_sections('aesirx_signup_modal');
     }
   );
 });
 
 add_action('admin_enqueue_scripts', function ($hook) {
   if ($hook === 'settings_page_aesirx-consent-management-plugin') {
-    wp_enqueue_script('aesirx_analytics_repeatable_fields', plugins_url('assets/vendor/aesirx-consent-repeatable-fields.js', __DIR__), array('jquery'), '1.0.0', true);
+    wp_enqueue_script('aesirx_analytics_repeatable_fields', plugins_url('assets/vendor/aesirx-consent-repeatable-fields.js', __DIR__), array('jquery'), true, true);
   }
 });
+function aesirx_analytics_get_api($url) {
+  $response = wp_remote_get( $url );
+  if ( is_wp_error( $response )) {
+    add_settings_error(
+      'aesirx_analytics_plugin_options',
+      'trial',
+      esc_html__('Something went wrong. Please contact the administrator', 'aesirx-analytics'),
+      'error'
+    );
+    return false;
+  } else {
+    return $response;
+  }
+}
+
+function aesirx_analytics_trigger_trial() {
+  $urlPost = 'https://api.aesirx.io/index.php?webserviceClient=site&webserviceVersion=1.0.0&option=member&task=validateWPDomain&api=hal';
+  $args = array(
+      'headers' => array(
+          'Content-Type' => 'application/json',
+      ),
+      'timeout' => 45,
+      'body' => json_encode( array( 'domain' => $_SERVER['SERVER_NAME'] ) ),
+  );
+
+  $responsePost = wp_remote_post( $urlPost, $args);
+  if ( $responsePost['response']['code'] === 200 ) {
+    $checkTrialAfterPost = aesirx_analytics_get_api('https://api.aesirx.io/index.php?webserviceClient=site&webserviceVersion=1.0.0&option=member&task=validateWPDomain&api=hal&domain='.$_SERVER['SERVER_NAME']);
+    $body = wp_remote_retrieve_body($checkTrialAfterPost);
+    if(json_decode($body)->result->success) {
+      $dateExpired = new DateTime(json_decode($body)->result->date_expired);
+      $currentDate = new DateTime();
+      $interval = $currentDate->diff($dateExpired);
+      $daysLeft = $interval->days;
+      add_settings_error(
+        'aesirx_analytics_plugin_options',
+        'trial',
+        wp_kses(sprintf(__("Your trial license ends in %1\$s days. Please update new license <a href='%2\$s' target='_blank'>%2\$s</a>.", 'aesirx-consent'), $daysLeft, 'https://aesirx.io/licenses'), aesirx_analytics_escape_html()),
+        'info'
+      );
+    }
+  } else {
+    $error_message = $responsePost['response']['message'];
+    add_settings_error(
+      'aesirx_analytics_plugin_options',
+      'trial',
+      esc_html__(sprintf(
+        __('Something went wrong: %s. Please contact the administrator', 'aesirx-analytics'),
+        $error_message
+      )),
+      'error'
+    );
+  }
+}
+
+function aesirx_analytics_license_info() {
+  $options = get_option('aesirx_analytics_plugin_options', []);
+  if (!empty($options['license'])) {
+    $response = aesirx_analytics_get_api('https://api.aesirx.io/index.php?webserviceClient=site&webserviceVersion=1.0.0&option=member&task=validateWPLicense&api=hal&license=' . $options['license']);
+    $bodyCheckLicense = wp_remote_retrieve_body($response);
+    if ($response['response']['code'] === 200 ) {
+      if(!json_decode($bodyCheckLicense)->result->success || json_decode($bodyCheckLicense)->result->subscription_product !== "product-aesirx-cmp") {
+        add_settings_error(
+          'aesirx_analytics_plugin_options',
+          'trial',
+          wp_kses(sprintf(__("Your license is expried or not found. Please update new license <a href='%1\$s' target='_blank'>%1\$s</a>.", 'aesirx-consent'), 'https://aesirx.io/licenses'), aesirx_analytics_escape_html()),
+          'error'
+        );
+      }
+    } else {
+      $error_message = $response['response']['message'];
+      add_settings_error(
+        'aesirx_analytics_plugin_options',
+        'trial',
+        esc_html__(sprintf(
+          __('Check license failed: %s. Please contact the administrator or update your license', 'aesirx-analytics'),
+          $error_message
+        )),
+        'error'
+      );
+    }
+  } else {
+    $checkTrial = aesirx_analytics_get_api('https://api.aesirx.io/index.php?webserviceClient=site&webserviceVersion=1.0.0&option=member&task=validateWPDomain&api=hal&domain='.$_SERVER['SERVER_NAME']);
+    $body = wp_remote_retrieve_body($checkTrial);
+    if($body) {
+      if(json_decode($body)->result->success) {
+        $dateExpired = new DateTime(json_decode($body)->result->date_expired);
+        $currentDate = new DateTime();
+        $interval = $currentDate->diff($dateExpired);
+        $daysLeft = $interval->days;
+        add_settings_error(
+          'aesirx_analytics_plugin_options',
+          'trial',
+          wp_kses(sprintf(__("Your trial license ends in %1\$s days. Please update new license <a href='%2\$s' target='_blank'>%2\$s</a>.", 'aesirx-consent'), $daysLeft, 'https://aesirx.io/licenses'), aesirx_analytics_escape_html()),
+          'info'
+        );
+      } else {
+        if(json_decode($body)->result->date_expired) {
+          add_settings_error(
+            'aesirx_analytics_plugin_options',
+            'trial',
+            wp_kses(sprintf(__("Your free trials has ended. Please update your license. <a href='%1\$s' target='_blank'>%1\$s</a>.", 'aesirx-consent'), 'https://aesirx.io/licenses'), aesirx_analytics_escape_html()),
+            'error'
+          );
+        } else {
+          aesirx_analytics_trigger_trial();
+        }
+      }
+    }
+  }
+}
+add_action( 'admin_notices', 'aesirx_analytics_license_info' );
+
 /**
  * Custom escape function for Aesirx Analytics.
  * Escapes HTML attributes in a string using a specified list of allowed HTML elements and attributes.
@@ -339,6 +461,12 @@ function aesirx_analytics_escape_html() {
      ),
      'p' => array(
       'class' => array(),
+      'span' => array(
+        'class' => array(),
+      ),
+     ),
+     'span' => array(
+      'class' => array(),
      ),
      'h3' => array(),
      'ul' => array(
@@ -347,6 +475,9 @@ function aesirx_analytics_escape_html() {
      'li' => array(),
      'br' => array(),
      'img' => array(
+      'src'  => array(),
+     ),
+     'iframe' => array(
       'src'  => array(),
      ),
      'div' => array(

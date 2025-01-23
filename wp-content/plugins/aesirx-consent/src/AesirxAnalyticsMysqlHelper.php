@@ -1330,5 +1330,20 @@ if (!class_exists('AesirxAnalyticsMysqlHelper')) {
         
             return $og_data;
         }
+
+        function aesirx_analytics_get_api($url) {
+            $response = wp_remote_get( $url );
+            if ( is_wp_error( $response )) {
+              add_settings_error(
+                'aesirx_analytics_plugin_options',
+                'trial',
+                esc_html__('Something went wrong. Please contact the administrator', 'aesirx-analytics'),
+                'error'
+              );
+              return false;
+            } else {
+              return $response;
+            }
+        }
     }
 }

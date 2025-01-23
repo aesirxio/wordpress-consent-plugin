@@ -6,6 +6,34 @@ Class AesirX_Analytics_Start_Fingerprint extends AesirxAnalyticsMysqlHelper
 {
     function aesirx_analytics_mysql_execute($params = [])
     {
+        $options = get_option('aesirx_analytics_plugin_options', []);
+        $license = $options['license'];
+        if (!empty($license)) {
+            $response = parent::aesirx_analytics_get_api('https://api.aesirx.io/index.php?webserviceClient=site&webserviceVersion=1.0.0&option=member&task=validateWPLicense&api=hal&license=' . $options['license']);
+            $bodyCheckLicense = wp_remote_retrieve_body($response);
+            if ($response['response']['code'] === 200 ) {
+                if(!json_decode($bodyCheckLicense)->result->success || json_decode($bodyCheckLicense)->result->subscription_product !== "product-aesirx-cmp") {
+                    $checkTrial = aesirx_analytics_get_api('https://api.aesirx.io/index.php?webserviceClient=site&webserviceVersion=1.0.0&option=member&task=validateWPDomain&api=hal&domain='.$_SERVER['SERVER_NAME']);
+                    $body = $checkTrial && wp_remote_retrieve_body($checkTrial);
+                    if(!json_decode($body)->result->success) {
+                        return new WP_Error('validation_error', esc_html__('License is expired or not found. Please update your license', 'aesirx-consent'));
+                    }
+                }
+            } else {
+                $error_message = $response['response']['message'];
+                return new WP_Error('validation_error', esc_html__(sprintf(
+                    __('Check license failed: %s. Please contact the administrator', 'aesirx-analytics'),
+                    $error_message
+                  )));
+            }
+        } else {
+            $checkTrial = aesirx_analytics_get_api('https://api.aesirx.io/index.php?webserviceClient=site&webserviceVersion=1.0.0&option=member&task=validateWPDomain&api=hal&domain='.$_SERVER['SERVER_NAME']);
+            $body = wp_remote_retrieve_body($checkTrial);
+            if(!json_decode($body)->result->success) {
+                return new WP_Error('validation_error', esc_html__('Your trial is ended. Please renew your license', 'aesirx-consent'));
+            }
+        }
+
         $start = gmdate('Y-m-d H:i:s');
         $domain = parent::aesirx_analytics_validate_domain($params['request']['url']);
 
