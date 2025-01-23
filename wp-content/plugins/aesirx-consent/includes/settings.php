@@ -60,6 +60,9 @@ add_action('admin_init', function () {
     'aesirx_analytics_settings',
     'Aesirx Consent Management',
     function () {
+      $options = get_option('aesirx_analytics_plugin_options', []);
+      echo wp_kses("<input id='aesirx_analytics_first_time_access' name='aesirx_analytics_plugin_options[first_time_access]' type='hidden' value='" .esc_attr($options['first_time_access'] ?? '') .
+      "' />", aesirx_analytics_escape_html());
       echo wp_kses_post(
         sprintf('<p class= "description"><button class="cta-button" type="button" id="sign-up-button">'.esc_html__('Sign up', 'aesirx-consent').'</button></p>')
       );
@@ -89,7 +92,10 @@ add_action('admin_init', function () {
         }
     },
     'aesirx_analytics_plugin',
-    'aesirx_analytics_settings'
+    'aesirx_analytics_settings',
+    [
+      'class' => 'aesirx_analytics_clientid_row',
+    ]
   );
 
   add_settings_field(
@@ -105,7 +111,10 @@ add_action('admin_init', function () {
       Provided SSO Client Secret from <a href='%1\$s' target='_blank'>%1\$s</a>.</p>", 'aesirx-consent'), 'https://aesirx.io/licenses')."</p>", aesirx_analytics_escape_html());  
     },
     'aesirx_analytics_plugin',
-    'aesirx_analytics_settings'
+    'aesirx_analytics_settings',
+    [
+      'class' => 'aesirx_analytics_secret_row',
+    ]
   );
  
 
@@ -122,7 +131,10 @@ add_action('admin_init', function () {
       Sign up on the AesirX platform to obtain your Shield of Privacy ID and buy license, and activate support for decentralized consent <span class='text-link sign-up-link'>here</span>.</p>", 'aesirx-consent'))."</p>", aesirx_analytics_escape_html());
     },
     'aesirx_analytics_plugin',
-    'aesirx_analytics_settings'
+    'aesirx_analytics_settings',
+    [
+      'class' => 'aesirx_analytics_license_row',
+    ]
   );
 
 
@@ -152,7 +164,10 @@ add_action('admin_init', function () {
       echo '</table>';
     }, 
     'aesirx_analytics_plugin',
-    'aesirx_analytics_settings'
+    'aesirx_analytics_settings',
+    [
+      'class' => 'aesirx_analytics_consent_template_row',
+    ]
   );
 
 
@@ -166,7 +181,10 @@ add_action('admin_init', function () {
       "' />", aesirx_analytics_escape_html());
     },
     'aesirx_analytics_plugin',
-    'aesirx_analytics_settings'
+    'aesirx_analytics_settings',
+    [
+      'class' => 'aesirx_analytics_plugin_options_datastream_gtag_id_row',
+    ]
   );
 
   add_settings_field(
@@ -179,7 +197,10 @@ add_action('admin_init', function () {
       "' />", aesirx_analytics_escape_html());
     },
     'aesirx_analytics_plugin',
-    'aesirx_analytics_settings'
+    'aesirx_analytics_settings',
+    [
+      'class' => 'aesirx_analytics_plugin_options_datastream_gtm_id_row',
+    ]
   );
 
   
@@ -214,7 +235,10 @@ add_action('admin_init', function () {
       For detailed guides, how-to videos, and API documentation, visit our Documentation Hub:  <a href='%1\$s' target='_blank'>%1\$s</a>.</p>", 'aesirx-consent'), 'https://aesirx.io/documentation').'</p>', aesirx_analytics_escape_html());
     },
     'aesirx_analytics_plugin',
-    'aesirx_analytics_settings'
+    'aesirx_analytics_settings',
+    [
+      'class' => 'aesirx_analytics_blocking_cookies_plugins_row',
+    ]
   );
 
   add_settings_field(
@@ -243,7 +267,10 @@ add_action('admin_init', function () {
       echo wp_kses('<p class="description"><strong>'.esc_html__('Disclaimer', 'aesirx-consent').': </strong>'.esc_html__('The AesirX Consent Shield has only just been released and still being adopted based on feedback and inputs from agencies, developers and users, if you experience any issues please contact our support.', 'aesirx-consent').'</p>', aesirx_analytics_escape_html());
     },
     'aesirx_analytics_plugin',
-    'aesirx_analytics_settings'
+    'aesirx_analytics_settings',
+    [
+      'class' => 'aesirx_analytics_blocking_cookies_row',
+    ]
   );
 
   add_settings_field(
@@ -266,7 +293,10 @@ add_action('admin_init', function () {
         echo wp_kses('<p class="description"><strong>'.esc_html__('Description', 'aesirx-consent').': </strong>'.esc_html__('Blocks JavaScript from both first-party and third-party domains for comprehensive script control, giving you the ability to block any JavaScript from internal or external sources based on user consent.', 'aesirx-consent').'</p>', aesirx_analytics_escape_html());
     },
     'aesirx_analytics_plugin',
-    'aesirx_analytics_settings'
+    'aesirx_analytics_settings',
+    [
+      'class' => 'aesirx_analytics_blocking_cookies_mode_row',
+    ]
   );
 
   add_settings_section(
@@ -287,7 +317,7 @@ add_action('admin_init', function () {
     'aesirx_signup_modal',
     '',
     function () {
-      echo wp_kses("<div class='aesirx_signup_modal'><div class='aesirx_signup_modal_body'><iframe src='https://signup.aesirx.io/'></iframe></div></div>", aesirx_analytics_escape_html());
+      echo wp_kses("<div class='aesirx_signup_modal'><div class='aesirx_signup_modal_body'><iframe id='aesirx_signup_iframe' src='https://signup.aesirx.io/?solution=product-aesirx-cmp'></iframe></div></div>", aesirx_analytics_escape_html());
     },
     'aesirx_signup_modal'
   );

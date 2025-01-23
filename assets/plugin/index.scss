@@ -39,6 +39,52 @@
     padding-left: 20px;
     color: #646970;
   }
+  table {
+    tbody {
+      display: flex;
+      flex-wrap: wrap;
+      tr {
+        width: 100%;
+        display: block;
+        &.aesirx_analytics_clientid_row,
+        &.aesirx_analytics_secret_row,
+        &.aesirx_analytics_license_row {
+          width: 33%;
+          input {
+            width: 90%;
+          }
+        }
+        &.aesirx_analytics_secret_row,
+        &.aesirx_analytics_license_row{
+          th {
+            width: 100px;
+          }
+        }
+        &.aesirx_analytics_plugin_options_datastream_gtag_id_row,
+        &.aesirx_analytics_plugin_options_datastream_gtm_id_row {
+          width: 33%;
+          display: flex;
+          flex-wrap: wrap;
+          input {
+            width: 90%;
+          }
+        }
+        &.aesirx_analytics_plugin_options_datastream_gtag_id_row {
+          td {
+            width: calc(100% - 240px);
+          }
+        }
+        &.aesirx_analytics_plugin_options_datastream_gtm_id_row {
+          td {
+            width: calc(100% - 175px);
+          }
+          th {
+            width: 100px;
+          }
+        }
+      }
+    }
+  }
 }
 .aesirx-consent-cookie-plugin {
   .aesirx-consent-cookie-plugin-item {
