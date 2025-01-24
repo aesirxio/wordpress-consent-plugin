@@ -198,9 +198,18 @@ add_action('admin_init', function () {
     esc_html__('Gtag ID', 'aesirx-consent'),
     function () {
       $options = get_option('aesirx_analytics_plugin_options',[]);
+      echo "<div class='input_container'>";
       echo wp_kses("<input id='aesirx_analytics_plugin_options_datastream_gtag_id' class='aesirx_consent_input' name='aesirx_analytics_plugin_options[datastream_gtag_id]' type='text' value='" .
       esc_attr($options['datastream_gtag_id'] ?? '') .
       "' />", aesirx_analytics_escape_html());
+      echo wp_kses("
+        <div class='input_information'>
+          <img width='20px' height='20px' src='". plugins_url( 'aesirx-consent/assets/images-plugin/infor_icon.png')."' />
+          ".sprintf(__("<div class='input_information_content'>
+          Remember to include the explicit purpose (e.g., analytics, marketing) in the consent text to inform users why GTM is being used</div>", 'aesirx-consent'))."
+        </div>
+      ", aesirx_analytics_escape_html());
+      echo "</div>";
     },
     'aesirx_analytics_plugin',
     'aesirx_analytics_settings',
@@ -214,9 +223,18 @@ add_action('admin_init', function () {
     esc_html__('GTM ID', 'aesirx-consent'),
     function () {
       $options = get_option('aesirx_analytics_plugin_options',[]);
+      echo '<div class="input_container">';
       echo wp_kses("<input id='aesirx_analytics_plugin_options_datastream_gtm_id' class='aesirx_consent_input' name='aesirx_analytics_plugin_options[datastream_gtm_id]' type='text' value='" .
       esc_attr($options['datastream_gtm_id'] ?? '') .
       "' />", aesirx_analytics_escape_html());
+      echo wp_kses("
+        <div class='input_information'>
+          <img width='20px' height='20px' src='". plugins_url( 'aesirx-consent/assets/images-plugin/infor_icon.png')."' />
+          ".sprintf(__("<div class='input_information_content'>
+          Remember to include the explicit purpose (e.g., analytics, marketing) in the consent text to inform users why GTM is being used</div>", 'aesirx-consent'))."
+        </div>
+      ", aesirx_analytics_escape_html());
+      echo '</div>';
     },
     'aesirx_analytics_plugin',
     'aesirx_analytics_settings',
@@ -375,7 +393,7 @@ add_action('admin_init', function () {
       // using custom function to escape HTML
       echo wp_kses("
       <div class='aesirx_consent_info'>
-        <img width='334px' height='200px' src='". plugins_url( 'aesirx-consent/assets/images-plugin/banner_2.png')."' />
+        <img class='aesirx_consent_banner' width='334px' height='175px' src='". plugins_url( 'aesirx-consent/assets/images-plugin/banner_3.png')."' />
         <div class='aesirx_diviner'></div>
         <div class='wrap'>
           <p class='aesirx_consent_title'>".esc_html__("Need Help? Access Our Comprehensive Documentation Hub", 'aesirx-consent')."</p>
@@ -406,17 +424,32 @@ add_action('admin_init', function () {
     '',
     function () {
       // using custom function to escape HTML
+      $options = get_option('aesirx_analytics_plugin_options', []);
+      $isRegisted = $options['secret'] && $options['clientid'] ? true : false;
       echo wp_kses("
       <div class='aesirx_consent_register_license'>
-        <img width='255px' height='96px' src='". plugins_url( 'aesirx-consent/assets/images-plugin/banner_1.png')."' />
+        ".($isRegisted ? "<img width='255px' height='96px' src='". plugins_url( 'aesirx-consent/assets/images-plugin/banner_1.png')."' />" :"")."
         <div class='aesirx_consent_register_license_notice'>
         ".aesirx_analytics_license_info()."
         </div>
-        <p>".esc_html__("Haven't got a license yet?", 'aesirx-consent')."</p>
-        <button class='aesirx_btn_success' class='cta-button' type='button' id='sign-up-button' href='https://aesirx.io/documentation'>
-          Register license now
-          <img width='20px' height='20px' src='". plugins_url( 'aesirx-consent/assets/images-plugin/external_link_icon.png')."' />
-        </button>
+        ".($isRegisted ? "
+          <p>".esc_html__("Haven't got a license yet?", 'aesirx-consent')."</p>
+        " :"
+          <p>".esc_html__("Haven't got Shield of Privacy ID yet?", 'aesirx-consent')."</p>
+        ")."
+        ".($isRegisted ? "
+          <a class='aesirx_btn_success cta-button' target='_blank' href='https://aesirx.io/licenses'>
+            Register license now
+            <img width='20px' height='20px' src='". plugins_url( 'aesirx-consent/assets/images-plugin/external_link_icon.png')."' />
+          </a>
+        " :"
+          <button class='aesirx_btn_success cta-button' type='button' id='sign-up-button'>
+            Sign up now
+            <img width='20px' height='20px' src='". plugins_url( 'aesirx-consent/assets/images-plugin/external_link_icon.png')."' />
+          </button>
+        ")."
+        
+        
       </div>", aesirx_analytics_escape_html());
     },
     'aesirx_consent_register_license'
@@ -429,12 +462,6 @@ add_action('admin_init', function () {
       // using custom function to escape HTML
       echo wp_kses("
       <div class='aesirx_consent_scanner'>
-        <p class='aesirx_consent_title'>".esc_html__("Learn how to use the Privacy Scanner with Consent Shield", 'aesirx-consent')."</p>
-        <a class='aesirx_btn_success_light' target='_blank' href='https://aesirx.io/documentation/scanner/how-to/use-aesirx-privacy-scanner-for-gdpr-and-eprivacy-compliance'>
-          Read the How-To Guide
-          <img width='20px' height='20px' src='". plugins_url( 'aesirx-consent/assets/images-plugin/book_icon.png')."' />
-        </a>
-        <div class='aesirx_diviner'></div>
         <p class='aesirx_consent_title'>".esc_html__("Scan Your Site for Privacy Risks", 'aesirx-consent')."</p>
         <div class='aesirx_consent_info_wrapper'>
           <img width='20px' height='20px' src='". plugins_url( 'aesirx-consent/assets/images-plugin/check_icon.png')."' />
@@ -451,6 +478,13 @@ add_action('admin_init', function () {
         <a class='aesirx_btn_success' target='_blank' href='https://privacyscanner.aesirx.io'>
           Run Privacy Scanner
           <img width='20px' height='20px' src='". plugins_url( 'aesirx-consent/assets/images-plugin/external_link_icon.png')."' />
+        </a>
+        <div class='aesirx_diviner'></div>
+        <img class='aesirx_consent_banner mb-20' width='334px' height='175px' src='". plugins_url( 'aesirx-consent/assets/images-plugin/banner_2.png')."' />
+        <p class='aesirx_consent_title'>".esc_html__("Learn how to use AesirX Privacy Scanner with Consent Shield to detect privacy-intrusive elements, using the JetPack plugin as an example.", 'aesirx-consent')."</p>
+        <a class='aesirx_btn_success_light' target='_blank' href='https://aesirx.io/documentation/analytics/how-to/gdpr-compliant-jetpack-setup-with-aesirx-analytics-cmp'>
+          Read the How-To Guide
+          <img width='20px' height='20px' src='". plugins_url( 'aesirx-consent/assets/images-plugin/book_icon.png')."' />
         </a>
       </div>", aesirx_analytics_escape_html());
     },
@@ -647,6 +681,7 @@ function aesirx_analytics_escape_html() {
      ),
      'img' => array(
       'src'  => array(),
+      'class'  => array(),
       'width'  => array(),
       'height'  => array(),
      ),

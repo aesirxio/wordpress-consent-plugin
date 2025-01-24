@@ -254,10 +254,11 @@
 }
 .aesirx_consent_info {
   margin-bottom: 0;
-  .banner {
-    border-radius: 16px;
-    box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.25);
-  }
+}
+.aesirx_consent_banner {
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.25);
 }
 .aesirx_diviner {
   margin: 30px 5px 30px 5px;
@@ -278,6 +279,7 @@
   }
   .aesirx_consent_info_content {
     width: calc(100% - 28px);
+    font-size: 14px;
   }
 }
 .aesirx_btn_success,
@@ -324,7 +326,8 @@
     margin: 0 auto;
     display: block;
   }
-  button {
+  button,
+  a {
     img {
       margin-left: 4px;
       margin-right: 0;

@@ -35,11 +35,25 @@ jQuery(document).ready(function ($) {
     (event) => {
       if (event.origin !== 'https://signup.aesirx.io') return;
       if (event.data) {
-        $('#aesirx_analytics_license').val(event.data);
+        const [key, value] = event.data.split('=');
+        switch (key) {
+          case 'license':
+            jQuery('#aesirx_analytics_license').val(value);
+            break;
+          case 'client_id':
+            jQuery('#aesirx_analytics_clientid').val(value);
+            break;
+          case 'client_secret':
+            jQuery('#aesirx_analytics_secret').val(value);
+            break;
+          default:
+            console.warn('Unknown message type:', key);
+        }
       }
     },
     false
   );
+
   $(document).on('click', '.aesirx_consent_template_item', function (e) {
     $(this).parent().find('.aesirx_consent_template_item').removeClass('active');
     $(this).addClass('active');

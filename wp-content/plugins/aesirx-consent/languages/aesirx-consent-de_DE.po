@@ -482,77 +482,77 @@ msgstr ""
 msgid "Gtag ID"
 msgstr ""
 
-#: includes/settings.php:214
+#: includes/settings.php:223
 msgid "GTM ID"
 msgstr ""
 
-#: includes/settings.php:231
+#: includes/settings.php:249
 msgid "AesirX Consent Shield for Third-Party Plugins "
 msgstr ""
 
-#: includes/settings.php:236
+#: includes/settings.php:254
 msgid "Blocks selected third-party plugins from loading until user consent is given."
 msgstr ""
 
-#: includes/settings.php:255
+#: includes/settings.php:273
 msgid "Completely prevents the loading and execution of chosen third-party plugins before consent."
 msgstr ""
 
-#: includes/settings.php:261
+#: includes/settings.php:279
 msgid "No network requests are made to third-party servers, enabling maximum compliance with privacy regulations like GDPR and the ePrivacy Directive."
 msgstr ""
 
-#: includes/settings.php:275
+#: includes/settings.php:293
 msgid "AesirX Consent Shield for Domain/Path-Based Blocking"
 msgstr ""
 
-#: includes/settings.php:285
-#: includes/settings.php:296
+#: includes/settings.php:303
+#: includes/settings.php:314
 msgid "Enter domain or path"
 msgstr ""
 
-#: includes/settings.php:278
+#: includes/settings.php:296
 msgid "Removes scripts matching specified domains or paths from the browser until user consent is given."
 msgstr ""
 
-#: includes/settings.php:312
+#: includes/settings.php:330
 msgid "Blocks or removes scripts from running in the user's browser before consent is given."
 msgstr ""
 
-#: includes/settings.php:318
+#: includes/settings.php:336
 msgid "While it prevents scripts from executing, initial network requests may still occur, so it enhances privacy compliance under GDPR but may not fully meet the ePrivacy Directive requirements."
 msgstr ""
 
-#: includes/settings.php:332
+#: includes/settings.php:350
 msgid "Script Blocking Options"
 msgstr ""
 
-#: includes/settings.php:346
+#: includes/settings.php:364
 msgid "Only Third-Party Hosts (default)"
 msgstr ""
 
-#: includes/settings.php:358
+#: includes/settings.php:376
 msgid "Both First and Third-Party Hosts"
 msgstr ""
 
-#: includes/settings.php:381
+#: includes/settings.php:399
 msgid "Need Help? Access Our Comprehensive Documentation Hub"
 msgstr ""
 
-#: includes/settings.php:475
+#: includes/settings.php:509
 msgid "Aesirx Consent Management"
 msgstr ""
 
-#: includes/settings.php:551
-#: includes/settings.php:587
+#: includes/settings.php:585
+#: includes/settings.php:627
 msgid "Your trial license ends in %1$s days. Please update new license <a href='%2$s' target='_blank'>%2$s</a>."
 msgstr ""
 
-#: includes/settings.php:569
+#: includes/settings.php:603
 msgid "Your license is expried or not found. Please update new license <a href='%1$s' target='_blank'>%1$s</a>."
 msgstr ""
 
-#: includes/settings.php:590
+#: includes/settings.php:630
 msgid "Your free trials has ended. Please update your license. <a href='%1$s' target='_blank'>%1$s</a>."
 msgstr ""
 
@@ -600,10 +600,6 @@ msgstr ""
 msgid "Your License Key"
 msgstr ""
 
-#: includes/settings.php:139
-msgid "Shield of Privacy ID"
-msgstr ""
-
 #: includes/settings.php:145
 msgid ""
 "<div class='input_information_content'>\n"
@@ -622,51 +618,70 @@ msgstr ""
 msgid "Aligns with Google’s Basic Consent Mode for straightforward compliance."
 msgstr ""
 
-#: includes/settings.php:284
-#: includes/settings.php:295
+#: includes/settings.php:302
+#: includes/settings.php:313
 msgid "Domain"
 msgstr ""
 
-#: includes/settings.php:338
+#: includes/settings.php:356
 msgid "Configure how JavaScript is blocked based on user consent preferences."
 msgstr ""
 
-#: includes/settings.php:347
+#: includes/settings.php:365
 msgid "Blocks JavaScript from third-party domains, allowing first-party scripts to run normally & keep essential site functions intact."
 msgstr ""
 
-#: includes/settings.php:359
+#: includes/settings.php:377
 msgid "Blocks JavaScript from both first-party & third-party domains for comprehensive script control, giving you the ability to block any JavaScript from internal or external sources based on user consent."
 msgstr ""
 
-#: includes/settings.php:385
+#: includes/settings.php:403
 msgid "Explore How-To Guides, instructions, and tutorials to get the most from AesirX Consent Shield. Whether you're a developer or admin, find all you need to configure and optimize your privacy setup."
 msgstr ""
 
-#: includes/settings.php:391
+#: includes/settings.php:409
 msgid "Discover the latest features & best practices."
 msgstr ""
 
-#: includes/settings.php:415
+#: includes/settings.php:436
 msgid "Haven't got a license yet?"
 msgstr ""
 
-#: includes/settings.php:432
-msgid "Learn how to use the Privacy Scanner with Consent Shield"
-msgstr ""
-
-#: includes/settings.php:438
+#: includes/settings.php:465
 msgid "Scan Your Site for Privacy Risks"
 msgstr ""
 
-#: includes/settings.php:442
+#: includes/settings.php:469
 msgid "Use the Privacy Scanner to quickly identify scripts, tags, & trackers running on your site that may compromise user privacy."
 msgstr ""
 
-#: includes/settings.php:448
+#: includes/settings.php:475
 msgid "Use Consent Shield to block those scripts by adding their domains or paths, ensuring quick & simple compliance."
 msgstr ""
 
-#: includes/settings.php:494
+#: includes/settings.php:528
 msgid "Save settings"
+msgstr ""
+
+#: includes/settings.php:139
+msgid "License Key"
+msgstr ""
+
+#: includes/settings.php:208
+#: includes/settings.php:233
+msgid ""
+"<div class='input_information_content'>\n"
+"          Remember to include the explicit purpose (e.g., analytics, marketing) in the consent text to inform users why GTM is being used</div>"
+msgstr ""
+
+#: includes/settings.php:438
+msgid "Haven't got Shield of Privacy ID yet?"
+msgstr ""
+
+#: includes/settings.php:484
+msgid "Learn how to use AesirX Privacy Scanner with Consent Shield to detect privacy-intrusive elements, using the JetPack plugin as an example."
+msgstr ""
+
+#: includes/settings.php:609
+msgid "Your license ends in %1$s days. Please update new license <a href='%2$s' target='_blank'>%2$s</a>."
 msgstr ""
