@@ -125,10 +125,16 @@
           display: flex;
           flex-wrap: wrap;
           padding-right: 40px;
-          margin-bottom: 30px;
           input {
             width: 100%;
           }
+        }
+        &.aesirx_analytics_plugin_options_datastream_gtm_id_general {
+          display: block;
+          th {
+            display: none;
+          }
+          margin-bottom: 30px;
         }
         &.aesirx_analytics_blocking_cookies_row,
         &.aesirx_analytics_blocking_cookies_mode_row {

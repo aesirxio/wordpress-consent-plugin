@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2025-01-24T10:15:55+00:00\n"
+"POT-Creation-Date: 2025-01-24T10:42:37+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.11.0\n"
 "X-Domain: aesirx-consent\n"
@@ -354,7 +354,7 @@ msgstr ""
 #: includes/settings.php:145
 msgid ""
 "<div class='input_information_content'>\n"
-"          Sign up to obtain your Shield of Privacy ID and purchase licenses <span class='text-link sign-up-link'>here</span>.</div>"
+"          Sign up to obtain your Shield of Privacy ID and purchase licenses <a href='https://aesirx.io/licenses' target='blank' class='text-link'>here</a>.</div>"
 msgstr ""
 
 #: includes/settings.php:161
@@ -392,130 +392,134 @@ msgstr ""
 msgid "GTM ID"
 msgstr ""
 
-#: includes/settings.php:249
+#: includes/settings.php:250
+msgid "To configure, input your Google Tag Manager Gtag ID & GTM ID in the designated fields. Once set up, Google Tag Manager will only load after the user provides consent."
+msgstr ""
+
+#: includes/settings.php:262
 msgid "AesirX Consent Shield for Third-Party Plugins "
 msgstr ""
 
-#: includes/settings.php:254
+#: includes/settings.php:267
 msgid "Blocks selected third-party plugins from loading until user consent is given."
 msgstr ""
 
-#: includes/settings.php:273
+#: includes/settings.php:286
 msgid "Completely prevents the loading and execution of chosen third-party plugins before consent."
 msgstr ""
 
-#: includes/settings.php:279
+#: includes/settings.php:292
 msgid "No network requests are made to third-party servers, enabling maximum compliance with privacy regulations like GDPR and the ePrivacy Directive."
 msgstr ""
 
-#: includes/settings.php:293
+#: includes/settings.php:306
 msgid "AesirX Consent Shield for Domain/Path-Based Blocking"
 msgstr ""
 
-#: includes/settings.php:296
+#: includes/settings.php:309
 msgid "Removes scripts matching specified domains or paths from the browser until user consent is given."
 msgstr ""
 
-#: includes/settings.php:302
-#: includes/settings.php:313
+#: includes/settings.php:315
+#: includes/settings.php:326
 msgid "Domain"
 msgstr ""
 
-#: includes/settings.php:303
-#: includes/settings.php:314
+#: includes/settings.php:316
+#: includes/settings.php:327
 msgid "Enter domain or path"
 msgstr ""
 
-#: includes/settings.php:330
+#: includes/settings.php:343
 msgid "Blocks or removes scripts from running in the user's browser before consent is given."
 msgstr ""
 
-#: includes/settings.php:336
+#: includes/settings.php:349
 msgid "While it prevents scripts from executing, initial network requests may still occur, so it enhances privacy compliance under GDPR but may not fully meet the ePrivacy Directive requirements."
 msgstr ""
 
-#: includes/settings.php:350
+#: includes/settings.php:363
 msgid "Script Blocking Options"
 msgstr ""
 
-#: includes/settings.php:356
+#: includes/settings.php:369
 msgid "Configure how JavaScript is blocked based on user consent preferences."
 msgstr ""
 
-#: includes/settings.php:364
+#: includes/settings.php:377
 msgid "Only Third-Party Hosts (default)"
 msgstr ""
 
-#: includes/settings.php:365
+#: includes/settings.php:378
 msgid "Blocks JavaScript from third-party domains, allowing first-party scripts to run normally & keep essential site functions intact."
 msgstr ""
 
-#: includes/settings.php:376
+#: includes/settings.php:389
 msgid "Both First and Third-Party Hosts"
 msgstr ""
 
-#: includes/settings.php:377
+#: includes/settings.php:390
 msgid "Blocks JavaScript from both first-party & third-party domains for comprehensive script control, giving you the ability to block any JavaScript from internal or external sources based on user consent."
 msgstr ""
 
-#: includes/settings.php:399
+#: includes/settings.php:412
 msgid "Need Help? Access Our Comprehensive Documentation Hub"
 msgstr ""
 
-#: includes/settings.php:403
+#: includes/settings.php:416
 msgid "Explore How-To Guides, instructions, and tutorials to get the most from AesirX Consent Shield. Whether you're a developer or admin, find all you need to configure and optimize your privacy setup."
 msgstr ""
 
-#: includes/settings.php:409
+#: includes/settings.php:422
 msgid "Discover the latest features & best practices."
 msgstr ""
 
-#: includes/settings.php:436
+#: includes/settings.php:449
 msgid "Haven't got a license yet?"
 msgstr ""
 
-#: includes/settings.php:438
+#: includes/settings.php:451
 msgid "Haven't got Shield of Privacy ID yet?"
 msgstr ""
 
-#: includes/settings.php:465
+#: includes/settings.php:478
 msgid "Scan Your Site for Privacy Risks"
 msgstr ""
 
-#: includes/settings.php:469
+#: includes/settings.php:482
 msgid "Use the Privacy Scanner to quickly identify scripts, tags, & trackers running on your site that may compromise user privacy."
 msgstr ""
 
-#: includes/settings.php:475
+#: includes/settings.php:488
 msgid "Use Consent Shield to block those scripts by adding their domains or paths, ensuring quick & simple compliance."
 msgstr ""
 
-#: includes/settings.php:484
+#: includes/settings.php:497
 msgid "Learn how to use AesirX Privacy Scanner with Consent Shield to detect privacy-intrusive elements, using the JetPack plugin as an example."
 msgstr ""
 
-#: includes/settings.php:509
+#: includes/settings.php:522
 msgid "Aesirx Consent Management"
 msgstr ""
 
-#: includes/settings.php:528
+#: includes/settings.php:541
 msgid "Save settings"
 msgstr ""
 
-#: includes/settings.php:585
-#: includes/settings.php:627
+#: includes/settings.php:598
+#: includes/settings.php:640
 msgid "Your trial license ends in %1$s days. Please update new license <a href='%2$s' target='_blank'>%2$s</a>."
 msgstr ""
 
-#: includes/settings.php:603
+#: includes/settings.php:616
 msgid "Your license is expried or not found. Please update new license <a href='%1$s' target='_blank'>%1$s</a>."
 msgstr ""
 
-#: includes/settings.php:609
+#: includes/settings.php:622
 msgid "Your license ends in %1$s days. Please update new license <a href='%2$s' target='_blank'>%2$s</a>."
 msgstr ""
 
-#: includes/settings.php:630
+#: includes/settings.php:643
 msgid "Your free trials has ended. Please update your license. <a href='%1$s' target='_blank'>%1$s</a>."
 msgstr ""
 

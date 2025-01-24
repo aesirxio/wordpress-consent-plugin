@@ -143,7 +143,7 @@ add_action('admin_init', function () {
         <div class='input_information'>
           <img width='20px' height='20px' src='". plugins_url( 'aesirx-consent/assets/images-plugin/infor_icon.png')."' />
           ".sprintf(__("<div class='input_information_content'>
-          Sign up to obtain your Shield of Privacy ID and purchase licenses <span class='text-link sign-up-link'>here</span>.</div>", 'aesirx-consent'))."
+          Sign up to obtain your Shield of Privacy ID and purchase licenses <a href='https://aesirx.io/licenses' target='blank' class='text-link'>here</a>.</div>", 'aesirx-consent'))."
         </div>
       ", aesirx_analytics_escape_html());
       echo "</div>";
@@ -240,6 +240,19 @@ add_action('admin_init', function () {
     'aesirx_analytics_settings',
     [
       'class' => 'aesirx_analytics_plugin_options_datastream_gtm_id_row',
+    ]
+  );
+
+  add_settings_field(
+    'aesirx_analytics_plugin_options_datastream_gtm_id_general',
+    esc_html__('', 'aesirx-consent'),
+    function () {
+      echo wp_kses('<p class="small-description mb-10">'.esc_html__('To configure, input your Google Tag Manager Gtag ID & GTM ID in the designated fields. Once set up, Google Tag Manager will only load after the user provides consent.', 'aesirx-consent').'</p>', aesirx_analytics_escape_html());
+    },
+    'aesirx_analytics_plugin',
+    'aesirx_analytics_settings',
+    [
+      'class' => 'aesirx_analytics_plugin_options_datastream_gtm_id_general',
     ]
   );
 
