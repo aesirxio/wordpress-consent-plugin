@@ -35,6 +35,12 @@ function moveRepeatableFieldsJSTask() {
     .pipe(gulp.dest(`${dist}/plugins/aesirx-consent/assets/vendor`));
 }
 
+function moveQuillJSTask() {
+  return gulp
+    .src(['./wp-content/plugins/aesirx-consent/aesirx-consent-quill.js'])
+    .pipe(gulp.dest(`${dist}/plugins/aesirx-consent/assets/vendor`));
+}
+
 function webpackBIApp() {
   return gulp
     .src('./assets/plugin/index.tsx')
@@ -75,6 +81,7 @@ exports.zip = series(
   movePluginFolderTask,
   moveAnalyticJSTask,
   moveRepeatableFieldsJSTask,
+  moveQuillJSTask,
   webpackBIApp,
   composerTask,
   cleanComposerTask,
@@ -88,6 +95,12 @@ exports.watch = function () {
   watch('./assets/**', series(webpackBIAppWatch));
   watch(
     './wp-content/plugins/aesirx-consent/**',
-    series(movePluginFolderTask, moveAnalyticJSTask, moveRepeatableFieldsJSTask, composerTask)
+    series(
+      movePluginFolderTask,
+      moveAnalyticJSTask,
+      moveRepeatableFieldsJSTask,
+      moveQuillJSTask,
+      composerTask
+    )
   );
 };

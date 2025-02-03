@@ -1,3 +1,4 @@
+@import './quill.snow.css';
 #aesirx-consent-blocking-cookies {
   .aesirx-consent-cookie-row {
     display: flex;
@@ -188,8 +189,50 @@
             }
           }
         }
+        &.aesirx_analytics_datastream_consent_row {
+          margin-bottom: 30px;
+          align-items: start;
+          width: 100%;
+        }
       }
     }
+  }
+}
+#datastream_consent {
+  .mb-1 {
+    margin-bottom: 4px;
+  }
+  .mt-0 {
+    margin-top: 0;
+  }
+  .ms-10px {
+    margin-left: 10px;
+  }
+  .text-black {
+    color: #000;
+  }
+  .fw-semibold {
+    font-weight: 600;
+  }
+  .d-flex {
+    display: flex;
+  }
+  .align-items-start {
+    align-items: start;
+  }
+  @media (min-width: 992px) {
+    .mb-lg-2 {
+      margin-bottom: 8px;
+    }
+    .mb-lg-3 {
+      margin-bottom: 16px;
+    }
+  }
+}
+.reset_consent_button {
+  &.aesirx_btn_success_light {
+    margin-top: 10px;
+    width: auto;
   }
 }
 .aesirx-consent-cookie-plugin {

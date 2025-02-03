@@ -160,26 +160,25 @@ add_action('admin_init', function () {
     'aesirx_analytics_consent_template',
     __('Choose your tailored template', 'aesirx-consent'),
     function () {
-      $checked = 'checked="checked"';
       $template = get_option('aesirx_analytics_plugin_options', []);
       // using custom function to escape HTML
       echo wp_kses("
         <div class='aesirx_consent_template'>
           <label class='aesirx_consent_template_item ".
-          (!$template['datastream_template'] || $template['datastream_template'] == 'default' ? 'active' : '') ."' for='default'>
+          (!$template['datastream_template'] || $template['datastream_template'] === 'default' ? 'active' : '') ."' for='default'>
             <img width='585px' height='388px' src='". plugins_url( 'aesirx-consent/assets/images-plugin/consent_default.png')."' />
-            <p class='title'>".esc_html__('Default template', 'aesirx-consent')."</p>
+            <p class='title'>".esc_html__('Default Template', 'aesirx-consent')."</p>
             <input type='radio' id='default' class='analytic-consent-class' name='aesirx_analytics_plugin_options[datastream_template]' " .
-            (!$template['datastream_template'] || $template['datastream_template'] == 'default' ? $checked : '') .
+            (!$template['datastream_template'] || $template['datastream_template'] === 'default' ? "checked='checked'" : '') .
             "value='default'  />
-            <p>".esc_html__("AesirX Consent Management is improving Google Consent Mode 2.0 by not loading any tags until after consent is given reducing the compliance risk.", 'aesirx-consent')."</p>
+            <p>".esc_html__("AesirX Consent Management is improving Google Consent Mode 2.0 by not loading any tags until after consent is given, reducing compliance risks.", 'aesirx-consent')."</p>
           </label>
-          <label class='aesirx_consent_template_item ".($template['datastream_template'] == 'simple-consent-mode' ? 'active' : '')."' for='simple-mode'>
+          <label class='aesirx_consent_template_item ".($template['datastream_template'] === 'simple-consent-mode' ? 'active' : '')."' for='simple-mode'>
             <img width='585px' height='388px' src='". plugins_url( 'aesirx-consent/assets/images-plugin/consent_simple_mode.png')."' />
-            <p class='title'>".esc_html__('Simple consent mode', 'aesirx-consent')."</p>
+            <p class='title'>".esc_html__('Simple Consent Mode', 'aesirx-consent')."</p>
             <input id='simple-mode' type='radio' class='analytic-consent-class' name='aesirx_analytics_plugin_options[datastream_template]' " .
-            ($template['datastream_template'] == 'simple-consent-mode' ? $checked : '') .
-            "value='simple-consent-mode'  />
+            ($template['datastream_template'] === 'simple-consent-mode' ? "checked='checked'" : '') .
+            " value='simple-consent-mode'  />
             <p>".esc_html__("Aligns with Google’s Basic Consent Mode for straightforward compliance.", 'aesirx-consent')."</p>
           </label>
         </div>
@@ -206,7 +205,7 @@ add_action('admin_init', function () {
         <div class='input_information'>
           <img width='20px' height='20px' src='". plugins_url( 'aesirx-consent/assets/images-plugin/infor_icon.png')."' />
           ".sprintf(__("<div class='input_information_content'>
-          Remember to include the explicit purpose (e.g., analytics, marketing) in the consent text to inform users why GTM is being used</div>", 'aesirx-consent'))."
+          Remember to include the explicit purpose (e.g., analytics, marketing) in the consent text to inform users why GTM is being used.</div>", 'aesirx-consent'))."
         </div>
       ", aesirx_analytics_escape_html());
       echo "</div>";
@@ -231,7 +230,7 @@ add_action('admin_init', function () {
         <div class='input_information'>
           <img width='20px' height='20px' src='". plugins_url( 'aesirx-consent/assets/images-plugin/infor_icon.png')."' />
           ".sprintf(__("<div class='input_information_content'>
-          Remember to include the explicit purpose (e.g., analytics, marketing) in the consent text to inform users why GTM is being used</div>", 'aesirx-consent'))."
+          Remember to include the explicit purpose (e.g., analytics, marketing) in the consent text to inform users why GTM is being used.</div>", 'aesirx-consent'))."
         </div>
       ", aesirx_analytics_escape_html());
       echo '</div>';
@@ -253,6 +252,31 @@ add_action('admin_init', function () {
     'aesirx_analytics_settings',
     [
       'class' => 'aesirx_analytics_plugin_options_datastream_gtm_id_general',
+    ]
+  );
+
+  add_settings_field(
+    'aesirx_analytics_datastream_consent',
+    esc_html__('Customize Consent Text ', 'aesirx-consent'),
+    function () {
+      $options = get_option('aesirx_analytics_plugin_options', []);
+      $decodedHtml = html_entity_decode($options['datastream_consent'], ENT_QUOTES, 'UTF-8');
+      echo wp_kses('<input id="aesirx_analytics_datastream_consent" class="aesirx_consent_input" name="aesirx_analytics_plugin_options[datastream_consent]" type="hidden" 
+      value="'.esc_attr($options['datastream_consent']).'" />', aesirx_analytics_escape_html());
+      echo wp_kses('
+      <div id="datastream_consent">
+        <div>'.$decodedHtml.'</div>'.'
+      </div>', aesirx_analytics_escape_html());
+      echo wp_kses('
+      <button type="button" class="reset_consent_button aesirx_btn_success_light">
+        <img width="20px" height="20px" src="'. plugins_url( 'aesirx-consent/assets/images-plugin/reset_icon.png').'" />
+        '.esc_html__("Reset Consent", 'aesirx-consent').'
+      </button>', aesirx_analytics_escape_html());
+    },
+    'aesirx_analytics_plugin',
+    'aesirx_analytics_settings',
+    [
+      'class' => 'aesirx_analytics_datastream_consent_row',
     ]
   );
 
@@ -413,7 +437,7 @@ add_action('admin_init', function () {
           <div class='aesirx_consent_info_wrapper'>
             <img class='banner' width='20px' height='20px' src='". plugins_url( 'aesirx-consent/assets/images-plugin/plus_icon.png')."' />
             <div class='aesirx_consent_info_content'>
-              ".sprintf(__("Explore How-To Guides, instructions, and tutorials to get the most from AesirX Consent Shield. Whether you're a developer or admin, find all you need to configure and optimize your privacy setup.", 'aesirx-consent'))."
+              ".sprintf(__("Explore How-To Guides, instructions, & tutorials to get the most from AesirX Consent Shield. Whether you're a developer or admin, find all you need to configure & optimize your privacy setup.", 'aesirx-consent'))."
             </div>
           </div>
           <div class='aesirx_consent_info_wrapper'>
@@ -452,12 +476,12 @@ add_action('admin_init', function () {
         ")."
         ".($isRegisted ? "
           <a class='aesirx_btn_success cta-button' target='_blank' href='https://aesirx.io/licenses'>
-            Register license now
+            ".esc_html__("Register Licence Here", 'aesirx-consent')."
             <img width='20px' height='20px' src='". plugins_url( 'aesirx-consent/assets/images-plugin/external_link_icon.png')."' />
           </a>
         " :"
           <button class='aesirx_btn_success cta-button' type='button' id='sign-up-button'>
-            Sign up now
+            ".esc_html__("Sign up now", 'aesirx-consent')."
             <img width='20px' height='20px' src='". plugins_url( 'aesirx-consent/assets/images-plugin/external_link_icon.png')."' />
           </button>
         ")."
@@ -559,6 +583,7 @@ add_action('admin_menu', function () {
 add_action('admin_enqueue_scripts', function ($hook) {
   if ($hook === 'settings_page_aesirx-consent-management-plugin') {
     wp_enqueue_script('aesirx_analytics_repeatable_fields', plugins_url('assets/vendor/aesirx-consent-repeatable-fields.js', __DIR__), array('jquery'), true, true);
+    wp_enqueue_script('aesirx_analytics_quill', plugins_url('assets/vendor/aesirx-consent-quill.js', __DIR__), array('jquery'), true, true);
   }
 });
 function aesirx_analytics_get_api($url) {
@@ -702,6 +727,7 @@ function aesirx_analytics_escape_html() {
       'src'  => array(),
      ),
      'div' => array(
+        'id' => array(),
         'class' => array(),
      ),
      'button' => array(
