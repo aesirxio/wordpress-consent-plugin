@@ -1,9 +1,14 @@
 @import './quill.snow.css';
 #aesirx-consent-blocking-cookies {
+  border-radius: 10px;
+  background: white;
+  overflow: hidden;
+  padding: 0 10px;
   .aesirx-consent-cookie-row {
     display: flex;
     align-items: center;
     border-top: 1px solid #3c3c435c;
+    background-color: #fff;
     padding: 5px 0;
     &:first-child {
       border-top: 0;
@@ -36,11 +41,12 @@
   display: block;
   width: 10%;
   text-align: center;
-  background: transparent;
+  background: #fff;
+  border-radius: 10px;
   border: 0;
   box-shadow: none;
   outline: 0;
-  padding: 0;
+  padding: 6px 0;
   cursor: pointer;
   margin: 20px 0 10px auto;
 }
@@ -87,8 +93,8 @@
           padding-right: 0;
         }
         &.aesirx_analytics_consent_template_row {
-          margin-top: 30px;
-          margin-bottom: 30px;
+          margin-top: 40px;
+          margin-bottom: 50px;
           .aesirx_consent_template {
             display: flex;
             flex-wrap: wrap;
@@ -135,12 +141,12 @@
           th {
             display: none;
           }
-          margin-bottom: 30px;
+          margin-bottom: 32px;
         }
         &.aesirx_analytics_blocking_cookies_row,
         &.aesirx_analytics_blocking_cookies_mode_row {
           width: calc(50% - 20px);
-          margin-top: 30px;
+          margin-top: 32px;
         }
         &.aesirx_analytics_blocking_cookies_row {
           padding-right: 40px;
@@ -158,6 +164,11 @@
             .input_content {
               width: calc(100% - 30px);
             }
+          }
+          .blocking_cookies_section {
+            background: #fff;
+            border-radius: 10px;
+            padding: 16px;
           }
           &.description {
             &:last-child {
@@ -190,7 +201,7 @@
           }
         }
         &.aesirx_analytics_datastream_consent_row {
-          margin-bottom: 30px;
+          margin-bottom: 32px;
           align-items: start;
           width: 100%;
         }
@@ -265,6 +276,11 @@
   color: rgba(60, 60, 67, 0.6);
   font-size: 14px;
   margin: 0;
+  display: flex;
+  align-items: center;
+  img {
+    margin-right: 5px;
+  }
 }
 .mb-10 {
   margin-bottom: 10px !important;
@@ -281,7 +297,7 @@
   .form_wrapper {
     width: calc(75% - 20px);
     form {
-      background: #fff;
+      background: rgba(255, 255, 255, 0.45);
       padding: 32px;
       border-radius: 16px;
       h2 {
@@ -308,6 +324,7 @@
   width: 100%;
   border-radius: 16px;
   box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.25);
+  margin-bottom: 5px;
 }
 .aesirx_diviner {
   margin: 30px 5px 30px 5px;
@@ -396,7 +413,7 @@
 .aesirx_heading {
   font-size: 28px;
   font-weight: 700;
-  margin: 10px 0 40px 12px;
+  margin: 20px 0 20px 12px;
 }
 .input_container {
   position: relative;

@@ -271,6 +271,24 @@ function aesirx_analytics_display_update_notice(  ) {
 
 add_action( 'admin_notices', 'aesirx_analytics_display_update_notice' );
 
+function aesirx_analytics_admin_notice() {
+    // If the permalink structure is empty, WordPress is using the default "Plain" format.
+    if ( get_option( 'permalink_structure' ) === '' ) {
+        ?>
+        <div class="notice notice-warning is-dismissible">
+            <p>
+                <strong><?php echo __('Important: Permalink Settings Required', 'aesirx-consent') ?></strong><br>
+                <?php echo __('Our plugin requires that your site use a pretty permalink structure (for example, <code>/%postname%/</code>) to work correctly.
+                It looks like your current settings are using the plain permalink format, which might cause issues.
+                Please <a href="'.esc_url( admin_url( 'options-permalink.php' ) ).'">click here</a> to open your Permalink Settings.
+                Once there, select the "Post name" option (or another pretty permalink structure) and click "Save Changes."', 'aesirx-consent') ?>
+            </p>
+        </div>
+        <?php
+    }
+}
+add_action( 'admin_notices', 'aesirx_analytics_admin_notice' );
+
 add_action('admin_init', function () {
     if (get_option('aesirx_analytics_do_activation_redirect', false)) {
 

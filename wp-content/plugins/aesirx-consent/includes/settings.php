@@ -48,18 +48,6 @@ add_action('admin_init', function () {
     'aesirx_analytics_settings',
     'Aesirx Consent Management',
     function () {
-      echo wp_kses_post(
-        /* translators: %s: URL to aesir.io read mor details */
-        sprintf('<p class= "description"><strong>'. esc_html__('Note: ', 'aesirx-consent') . '</strong>' . esc_html__('Please set Permalink Settings in WP so it is NOT set as plain.', 'aesirx-consent') .'</p>')
-      );
-    },
-    'aesirx_analytics_plugin'
-  );
-
-  add_settings_section(
-    'aesirx_analytics_settings',
-    'Aesirx Consent Management',
-    function () {
       $options = get_option('aesirx_analytics_plugin_options', []);
       echo wp_kses("<input id='aesirx_analytics_first_time_access' name='aesirx_analytics_plugin_options[first_time_access]' type='hidden' value='" .esc_attr($options['first_time_access'] ?? '') .
       "' />", aesirx_analytics_escape_html());
@@ -246,7 +234,8 @@ add_action('admin_init', function () {
     'aesirx_analytics_plugin_options_datastream_gtm_id_general',
     esc_html__('', 'aesirx-consent'),
     function () {
-      echo wp_kses('<p class="small-description mb-10">'.esc_html__('To configure, input your Google Tag Manager Gtag ID & GTM ID in the designated fields. Once set up, Google Tag Manager will only load after the user provides consent.', 'aesirx-consent').'</p>', aesirx_analytics_escape_html());
+      echo wp_kses('<p class="small-description mb-10">
+      <img width="18px" height="18px" src="'. plugins_url( 'aesirx-consent/assets/images-plugin/question_icon.png').'" />'.esc_html__('To configure, input your Google Tag Manager Gtag ID & GTM ID in the designated fields. Once set up, Google Tag Manager will only load after the user provides consent.', 'aesirx-consent').'</p>', aesirx_analytics_escape_html());
     },
     'aesirx_analytics_plugin',
     'aesirx_analytics_settings',
@@ -392,18 +381,18 @@ add_action('admin_init', function () {
         // using custom function to escape HTML
         echo wp_kses('<p class="small-description mb-10">'.esc_html__('Configure how JavaScript is blocked based on user consent preferences.', 'aesirx-consent').'</p>', aesirx_analytics_escape_html());
         echo wp_kses('
-        <div class="description">
-          <label>
-            <input type="radio" class="analytic-blocking_cookies_mode-class" name="aesirx_analytics_plugin_options[blocking_cookies_mode]" ' .
-        ($mode == '3rd_party' ? $checked : '') .
-        ' value="3rd_party"  />
-            <div class="input_content">
-              <p>'. esc_html__('Only Third-Party Hosts (default)', 'aesirx-consent') . '</p>
-              <p class="small-description">'. esc_html__('Blocks JavaScript from third-party domains, allowing first-party scripts to run normally & keep essential site functions intact.', 'aesirx-consent') . '</p>
-            </div>
-          </label>
-        </div>', aesirx_analytics_escape_html());
-        echo wp_kses('
+        <div class="blocking_cookies_section">
+          <div class="description">
+            <label>
+              <input type="radio" class="analytic-blocking_cookies_mode-class" name="aesirx_analytics_plugin_options[blocking_cookies_mode]" ' .
+          ($mode == '3rd_party' ? $checked : '') .
+          ' value="3rd_party"  />
+              <div class="input_content">
+                <p>'. esc_html__('Only Third-Party Hosts (default)', 'aesirx-consent') . '</p>
+                <p class="small-description">'. esc_html__('Blocks JavaScript from third-party domains, allowing first-party scripts to run normally & keep essential site functions intact.', 'aesirx-consent') . '</p>
+              </div>
+            </label>
+          </div>
           <div class="description">
             <label>
               <input type="radio" class="analytic-blocking_cookies_mode-class" name="aesirx_analytics_plugin_options[blocking_cookies_mode]" ' .
@@ -414,7 +403,9 @@ add_action('admin_init', function () {
                 <p class="small-description">'. esc_html__('Blocks JavaScript from both first-party & third-party domains for comprehensive script control, giving you the ability to block any JavaScript from internal or external sources based on user consent.', 'aesirx-consent') . '</p>
               </div>
               </label>
-          </div>', aesirx_analytics_escape_html());
+          </div>
+        </div>
+          ', aesirx_analytics_escape_html());
     },
     'aesirx_analytics_plugin',
     'aesirx_analytics_settings',
@@ -431,7 +422,6 @@ add_action('admin_init', function () {
       echo wp_kses("
       <div class='aesirx_consent_info'>
         <img class='aesirx_consent_banner' width='334px' height='175px' src='". plugins_url( 'aesirx-consent/assets/images-plugin/banner_3.png')."' />
-        <div class='aesirx_diviner'></div>
         <div class='wrap'>
           <p class='aesirx_consent_title'>".esc_html__("Need Help? Access Our Comprehensive Documentation Hub", 'aesirx-consent')."</p>
           <div class='aesirx_consent_info_wrapper'>
