@@ -33,7 +33,7 @@ jQuery(document).ready(function ($) {
   window.addEventListener(
     'message',
     (event) => {
-      if (event.origin !== 'https://signup.aesirx.io') return;
+      if (event.origin !== 'https://cmp.signup.aesirx.io') return;
       if (event.data) {
         const [key, value] = event.data.split('=');
         switch (key) {

@@ -523,7 +523,7 @@ add_action('admin_init', function () {
     'aesirx_signup_modal',
     '',
     function () {
-      echo wp_kses("<div class='aesirx_signup_modal'><div class='aesirx_signup_modal_body'><iframe id='aesirx_signup_iframe' src='https://signup.aesirx.io/?solution=product-aesirx-cmp'></iframe></div></div>", aesirx_analytics_escape_html());
+      echo wp_kses("<div class='aesirx_signup_modal'><div class='aesirx_signup_modal_body'><iframe id='aesirx_signup_iframe' src='https://cmp.signup.aesirx.io'></iframe></div></div>", aesirx_analytics_escape_html());
     },
     'aesirx_signup_modal'
   );
