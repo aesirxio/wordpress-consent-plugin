@@ -652,6 +652,18 @@ function aesirx_analytics_license_info() {
         $currentDate = new DateTime();
         $interval = $currentDate->diff($dateExpired);
         $daysLeft = $interval->days;
+        $hoursLeft = $interval->h;
+        if ($daysLeft === 0) {
+          $hoursLeft = max(1, $hoursLeft); // Ensure at least 1 hour is shown
+          return wp_kses(
+              sprintf(
+                  __("Your trial license ends in %1\$s hour(s). Please update your license <a href='%2\$s' target='_blank'>here</a>.", 'aesirx-consent'),
+                  $hoursLeft,
+                  'https://aesirx.io/licenses'
+              ),
+              aesirx_analytics_escape_html()
+          );
+        }
         return wp_kses(sprintf(__("Your trial license ends in %1\$s days. Please update new license <a href='%2\$s' target='_blank'>%2\$s</a>.", 'aesirx-consent'), $daysLeft, 'https://aesirx.io/licenses'), aesirx_analytics_escape_html());
       } else {
         if(json_decode($body)->result->date_expired) {

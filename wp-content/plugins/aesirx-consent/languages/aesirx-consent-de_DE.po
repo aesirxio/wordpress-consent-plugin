@@ -526,7 +526,7 @@ msgid "Aesirx Consent Management"
 msgstr ""
 
 #: includes/settings.php:613
-#: includes/settings.php:655
+#: includes/settings.php:667
 msgid "Your trial license ends in %1$s days. Please update new license <a href='%2$s' target='_blank'>%2$s</a>."
 msgstr ""
 
@@ -534,7 +534,7 @@ msgstr ""
 msgid "Your license is expried or not found. Please update new license <a href='%1$s' target='_blank'>%1$s</a>."
 msgstr ""
 
-#: includes/settings.php:658
+#: includes/settings.php:670
 msgid "Your free trials has ended. Please update your license. <a href='%1$s' target='_blank'>%1$s</a>."
 msgstr ""
 
@@ -705,4 +705,8 @@ msgid ""
 "Our plugin requires that your site use a pretty permalink structure (for example, <code>/%postname%/</code>) to work correctly.\n"
 "                It looks like your current settings are using the plain permalink format, which might cause issues.\n"
 "                Please <a href=\""
+msgstr ""
+
+#: includes/settings.php:660
+msgid "Your trial license ends in %1$s hour(s). Please update your license <a href='%2$s' target='_blank'>here</a>."
 msgstr ""
