@@ -54,11 +54,25 @@ Class AesirX_Analytics_Start_Fingerprint extends AesirxAnalyticsMysqlHelper
                 return new WP_Error('validation_error', esc_html__('License is expired or not found. Please update your license', 'aesirx-consent'));
             }
         } else {
-            $checkTrial = aesirx_analytics_get_api('https://api.aesirx.io/index.php?webserviceClient=site&webserviceVersion=1.0.0&option=member&task=validateWPDomain&api=hal&domain='.rawurlencode($serverName));
-            $body = wp_remote_retrieve_body($checkTrial);
-            if(!json_decode($body)->result->success) {
+            $current_time = new DateTime('now', new DateTimeZone('UTC')); // Current time in UTC
+            $expiry_time = new DateTime($options['trial_date_expired'], new DateTimeZone('UTC'));
+            if (!$options['checked_trial'] || ($current_time > $expiry_time && !$options['trial_end'])) {
+                $checkTrial = aesirx_analytics_get_api('https://api.aesirx.io/index.php?webserviceClient=site&webserviceVersion=1.0.0&option=member&task=validateWPDomain&api=hal&domain='.rawurlencode($serverName));
+                $body = wp_remote_retrieve_body($checkTrial);
+                $options['checked_trial'] = true;
+                if(!json_decode($body)->result->success) {
+                    $options['trial_end'] = true;
+                    update_option('aesirx_analytics_plugin_options', $options);
+                    return new WP_Error('validation_error', esc_html__('Your trial is ended. Please renew your license', 'aesirx-consent'));
+                } else {
+                    $options['trial_end'] = false;
+                    $options['trial_date_expired'] = json_decode($body)->result->date_expired;
+                }
+                update_option('aesirx_analytics_plugin_options', $options);
+            } else if ($options['trial_end']) {
                 return new WP_Error('validation_error', esc_html__('Your trial is ended. Please renew your license', 'aesirx-consent'));
             }
+            
         }
 
         $start = gmdate('Y-m-d H:i:s');

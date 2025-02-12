@@ -192,11 +192,11 @@ msgstr "Die Aktualisierung des Ablaufs des „Consent“ ist fehlgeschlagen."
 msgid "Failed to update nonce."
 msgstr "Aktualisierung des „Nonce“ fehlgeschlagen."
 
-#: src/Mysql/StartFingerprint.php:122
+#: src/Mysql/StartFingerprint.php:136
 msgid "Wrong URL format, domain not found"
 msgstr "Falsches URL-Format, Domain nicht gefunden"
 
-#: src/Mysql/StartFingerprint.php:126
+#: src/Mysql/StartFingerprint.php:140
 msgid "The domain sent in the new URL does not match the domain stored in the visitor document"
 msgstr "Die in der neuen URL gesendete Domain stimmt nicht mit der im Besucherdokument gespeicherten Domain überein"
 
@@ -548,7 +548,8 @@ msgstr ""
 msgid "License is expired or not found. Please update your license"
 msgstr ""
 
-#: src/Mysql/StartFingerprint.php:60
+#: src/Mysql/StartFingerprint.php:66
+#: src/Mysql/StartFingerprint.php:73
 msgid "Your trial is ended. Please renew your license"
 msgstr ""
 

@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2025-02-12T10:28:19+00:00\n"
+"POT-Creation-Date: 2025-02-12T10:40:56+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.11.0\n"
 "X-Domain: aesirx-consent\n"
@@ -716,15 +716,16 @@ msgstr ""
 msgid "Check license failed: %1\\$s. Please contact the administrator."
 msgstr ""
 
-#: src/Mysql/StartFingerprint.php:60
+#: src/Mysql/StartFingerprint.php:66
+#: src/Mysql/StartFingerprint.php:73
 msgid "Your trial is ended. Please renew your license"
 msgstr ""
 
-#: src/Mysql/StartFingerprint.php:122
+#: src/Mysql/StartFingerprint.php:136
 msgid "Wrong URL format, domain not found"
 msgstr ""
 
-#: src/Mysql/StartFingerprint.php:126
+#: src/Mysql/StartFingerprint.php:140
 msgid "The domain sent in the new URL does not match the domain stored in the visitor document"
 msgstr ""
 
