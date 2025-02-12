@@ -8,12 +8,14 @@ Class AesirX_Analytics_Start_Fingerprint extends AesirxAnalyticsMysqlHelper
     {
         $options = get_option('aesirx_analytics_plugin_options', []);
         $license = $options['license'];
+        $serverName = isset($_SERVER['SERVER_NAME']) ? sanitize_text_field($_SERVER['SERVER_NAME']) : '';
         if (!empty($license)) {
+           
             $response = parent::aesirx_analytics_get_api('https://api.aesirx.io/index.php?webserviceClient=site&webserviceVersion=1.0.0&option=member&task=validateWPLicense&api=hal&license=' . $options['license']);
             $bodyCheckLicense = wp_remote_retrieve_body($response);
             if ($response['response']['code'] === 200 ) {
                 if(!json_decode($bodyCheckLicense)->result->success || json_decode($bodyCheckLicense)->result->subscription_product !== "product-aesirx-cmp") {
-                    $checkTrial = aesirx_analytics_get_api('https://api.aesirx.io/index.php?webserviceClient=site&webserviceVersion=1.0.0&option=member&task=validateWPDomain&api=hal&domain='.$_SERVER['SERVER_NAME']);
+                    $checkTrial = aesirx_analytics_get_api('https://api.aesirx.io/index.php?webserviceClient=site&webserviceVersion=1.0.0&option=member&task=validateWPDomain&api=hal&domain='.rawurlencode($serverName));
                     $body = $checkTrial && wp_remote_retrieve_body($checkTrial);
                     if(!json_decode($body)->result->success) {
                         return new WP_Error('validation_error', esc_html__('License is expired or not found. Please update your license', 'aesirx-consent'));
@@ -21,13 +23,18 @@ Class AesirX_Analytics_Start_Fingerprint extends AesirxAnalyticsMysqlHelper
                 }
             } else {
                 $error_message = $response['response']['message'];
-                return new WP_Error('validation_error', esc_html__(sprintf(
-                    __('Check license failed: %s. Please contact the administrator', 'aesirx-analytics'),
-                    $error_message
-                  )));
+                return new WP_Error(
+                    'validation_error', 
+                    esc_html(
+                        sprintf(
+                            __('Check license failed: %1\$s. Please contact the administrator.', 'aesirx-consent'),
+                            $error_message
+                        )
+                    )
+                );
             }
         } else {
-            $checkTrial = aesirx_analytics_get_api('https://api.aesirx.io/index.php?webserviceClient=site&webserviceVersion=1.0.0&option=member&task=validateWPDomain&api=hal&domain='.$_SERVER['SERVER_NAME']);
+            $checkTrial = aesirx_analytics_get_api('https://api.aesirx.io/index.php?webserviceClient=site&webserviceVersion=1.0.0&option=member&task=validateWPDomain&api=hal&domain='.rawurlencode($serverName));
             $body = wp_remote_retrieve_body($checkTrial);
             if(!json_decode($body)->result->success) {
                 return new WP_Error('validation_error', esc_html__('Your trial is ended. Please renew your license', 'aesirx-consent'));
@@ -95,7 +102,7 @@ Class AesirX_Analytics_Start_Fingerprint extends AesirxAnalyticsMysqlHelper
                 return new WP_Error('validation_error', esc_html__('Wrong URL format, domain not found', 'aesirx-consent'));
             }
     
-            if ($url['host'] != $visitor['domain']) {
+            if ($url['host'] !== $visitor['domain']) {
                 return new WP_Error('validation_error', esc_html__('The domain sent in the new URL does not match the domain stored in the visitor document', 'aesirx-consent'));
             }
     
@@ -111,7 +118,7 @@ Class AesirX_Analytics_Start_Fingerprint extends AesirxAnalyticsMysqlHelper
             if ($params['request']['referer']) {
                 $referer = wp_parse_url($params['request']['referer']);
 
-                if ($referer && $referer['host'] == $url['host'] && $visitor['visitor_flows']) {
+                if ($referer && $referer['host'] === $url['host'] && $visitor['visitor_flows']) {
 
                     $list = $visitor['visitor_flows'];
     

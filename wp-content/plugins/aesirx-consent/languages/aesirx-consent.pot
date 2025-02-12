@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2025-02-06T07:42:25+00:00\n"
+"POT-Creation-Date: 2025-02-12T04:44:54+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.11.0\n"
 "X-Domain: aesirx-consent\n"
@@ -39,269 +39,274 @@ msgstr ""
 msgid "https://aesirx.io/"
 msgstr ""
 
-#: aesirx-consent.php:38
+#: aesirx-consent.php:39
 msgid "Shield of Privacy"
 msgstr ""
 
-#: aesirx-consent.php:39
+#: aesirx-consent.php:40
 msgid "Revoke your consent for data use whenever you wish."
 msgstr ""
 
-#: aesirx-consent.php:40
+#: aesirx-consent.php:41
 msgid "Manage Decentralized Consent"
 msgstr ""
 
-#: aesirx-consent.php:41
+#: aesirx-consent.php:42
 msgid "Revoke Consent"
 msgstr ""
 
-#: aesirx-consent.php:42
+#: aesirx-consent.php:43
 msgid "Consent"
 msgstr ""
 
-#: aesirx-consent.php:43
+#: aesirx-consent.php:44
 msgid "Reject"
 msgstr ""
 
-#: aesirx-consent.php:44
+#: aesirx-consent.php:45
 msgid "Please connect your Web3 wallet"
 msgstr ""
 
-#: aesirx-consent.php:45
+#: aesirx-consent.php:46
 msgid "Please sign the message on your wallet twice and wait for it to be saved."
 msgstr ""
 
-#: aesirx-consent.php:46
+#: aesirx-consent.php:47
 msgid "Saving..."
 msgstr ""
 
-#: aesirx-consent.php:47
+#: aesirx-consent.php:48
 msgid "Please connect to your wallet"
 msgstr ""
 
-#: aesirx-consent.php:48
+#: aesirx-consent.php:49
 msgid "Connecting"
 msgstr ""
 
-#: aesirx-consent.php:49
+#: aesirx-consent.php:50
 msgid "TRACKING AND DATA PRIVACY PREFERENCES"
 msgstr ""
 
-#: aesirx-consent.php:50
+#: aesirx-consent.php:51
 msgid "About"
 msgstr ""
 
-#: aesirx-consent.php:51
-#: aesirx-consent.php:100
+#: aesirx-consent.php:52
+#: aesirx-consent.php:101
 msgid "Details"
 msgstr ""
 
-#: aesirx-consent.php:52
-#: aesirx-consent.php:80
+#: aesirx-consent.php:53
+#: aesirx-consent.php:81
 msgid "Decentralized Consent"
 msgstr ""
 
-#: aesirx-consent.php:53
+#: aesirx-consent.php:54
 msgid "Manage Your Consent Preferences"
 msgstr ""
 
-#: aesirx-consent.php:54
+#: aesirx-consent.php:55
 msgid "Choose how we use your data: \"Reject\" data collection, allow tracking [\"Consent\"], or use \"Decentralized Consent\" for more control over your personal data & rewards."
 msgstr ""
 
-#: aesirx-consent.php:55
+#: aesirx-consent.php:56
 msgid "Choose how we use your data: \"Reject\" data collection, allow tracking [\"Consent\"]."
 msgstr ""
 
-#: aesirx-consent.php:56
+#: aesirx-consent.php:57
 msgid "By consenting, you allow us to collect & use your data for:"
 msgstr ""
 
-#: aesirx-consent.php:57
+#: aesirx-consent.php:58
 msgid "Analytics & Behavioral Data: To improve our services & personalize your experience."
 msgstr ""
 
-#: aesirx-consent.php:58
+#: aesirx-consent.php:59
 msgid "Form Data: When you contact us."
 msgstr ""
 
-#: aesirx-consent.php:59
+#: aesirx-consent.php:60
 msgid "Please note"
 msgstr ""
 
-#: aesirx-consent.php:60
+#: aesirx-consent.php:61
 msgid "We do not share your data with third parties without your explicit consent."
 msgstr ""
 
-#: aesirx-consent.php:61
+#: aesirx-consent.php:62
 msgid "You can opt-in later for specific features without giving blanket consent."
 msgstr ""
 
-#: aesirx-consent.php:62
+#: aesirx-consent.php:63
 msgid "For more details, refer to our <a class='text-success fw-semibold text-decoration-underline' href='https://aesirx.io/privacy-policy' target='_blank'>privacy policy.</a>"
 msgstr ""
 
-#: aesirx-consent.php:63
+#: aesirx-consent.php:64
 msgid "Benefits"
 msgstr ""
 
-#: aesirx-consent.php:64
+#: aesirx-consent.php:65
 msgid "<span class='fw-semibold text-primary'>Control your data:</span> Choose your preferred level of data collection & tracking."
 msgstr ""
 
-#: aesirx-consent.php:65
+#: aesirx-consent.php:66
 msgid "<span class='fw-semibold text-primary'>Earn rewards:</span> Participate in decentralized consent for privacy & rewards."
 msgstr ""
 
-#: aesirx-consent.php:66
+#: aesirx-consent.php:67
 msgid "<span class='fw-semibold text-primary'>Transparent data collection practices:</span> Understand how your data is collected & used."
 msgstr ""
 
-#: aesirx-consent.php:67
+#: aesirx-consent.php:68
 msgid "Understanding Your Privacy Choices"
 msgstr ""
 
-#: aesirx-consent.php:68
+#: aesirx-consent.php:69
 msgid "<span class='fw-semibold text-primary'>Reject:</span> No data will be collected or loaded except for anonymized page views & rejections. Some personalization features may be disabled."
 msgstr ""
 
-#: aesirx-consent.php:69
+#: aesirx-consent.php:70
 msgid "<span class='fw-semibold text-primary'>Consent:</span> First & third-party tracking data will be collected to enhance your experience."
 msgstr ""
 
-#: aesirx-consent.php:70
+#: aesirx-consent.php:71
 msgid "<span class='fw-semibold text-primary'>Decentralized Consent:</span> Choose Decentralized Wallets or Decentralized Wallet + Shield of Privacy. Both options let you manage & revoke consent on-site or through AesirX dApp, plus earn rewards from digital marketing activities."
 msgstr ""
 
-#: aesirx-consent.php:71
+#: aesirx-consent.php:72
 msgid "Our Commitment in Action"
 msgstr ""
 
-#: aesirx-consent.php:72
+#: aesirx-consent.php:73
 msgid "<span class='fw-semibold text-primary'>Privacy Protection:</span> Users have full control over their data, ensuring maximum privacy."
 msgstr ""
 
-#: aesirx-consent.php:73
+#: aesirx-consent.php:74
 msgid "<span class='fw-semibold text-primary'>Enables Compliance:</span> Using Shield of Privacy (SoP) ensures compliance with GDPR, CCPA, ePrivacy Directive, & other data protection regulations."
 msgstr ""
 
-#: aesirx-consent.php:74
+#: aesirx-consent.php:75
 msgid "<span class='fw-semibold text-primary'>Proactive Protection:</span> We enhance privacy measures to safeguard your data integrity."
 msgstr ""
 
-#: aesirx-consent.php:75
+#: aesirx-consent.php:76
 msgid "<span class='fw-semibold text-primary'>Flexible Consent:</span> You can withdraw your consent anytime on-site or via our <a class='text-success fw-semibold text-decoration-underline' href='https://dapp.shield.aesirx.io' target='_blank'>dApp</a> (Decentralized Application)."
 msgstr ""
 
-#: aesirx-consent.php:76
+#: aesirx-consent.php:77
 msgid "<span class='fw-semibold text-primary'>Learn More:</span> Discover our approach to data processing in our <a class='text-success fw-semibold text-decoration-underline' href='https://aesirx.io/privacy-policy' target='_blank'>Privacy Policy</a>."
 msgstr ""
 
-#: aesirx-consent.php:77
+#: aesirx-consent.php:78
 msgid "<span class='fw-semibold text-primary'>For Businesses:</span> Enhance trust, secure user identities, & prevent breaches."
 msgstr ""
 
-#: aesirx-consent.php:78
+#: aesirx-consent.php:79
 msgid "More info at <a class='text-success fw-semibold text-decoration-underline' href='https://shield.aesirx.io' target='_blank'>https://shield.aesirx.io</a>."
 msgstr ""
 
-#: aesirx-consent.php:79
+#: aesirx-consent.php:80
 msgid "Select your preferred decentralized consent option:"
 msgstr ""
 
-#: aesirx-consent.php:81
+#: aesirx-consent.php:82
 msgid "Decentralized consent will be loaded"
 msgstr ""
 
-#: aesirx-consent.php:82
+#: aesirx-consent.php:83
 msgid "Both first-party & third-party tracking data will be activated."
 msgstr ""
 
-#: aesirx-consent.php:83
+#: aesirx-consent.php:84
 msgid "All consented data will be collected."
 msgstr ""
 
-#: aesirx-consent.php:84
+#: aesirx-consent.php:85
 msgid "Users can revoke consent on-site at any time."
 msgstr ""
 
-#: aesirx-consent.php:85
+#: aesirx-consent.php:86
 msgid "Decentralized Consent + Shield of Privacy"
 msgstr ""
 
-#: aesirx-consent.php:86
+#: aesirx-consent.php:87
 msgid "Users can revoke consent on-site or from the AesirX dApp at any time."
 msgstr ""
 
-#: aesirx-consent.php:87
+#: aesirx-consent.php:88
 msgid "Users can earn rewards from digital marketing activities."
 msgstr ""
 
-#: aesirx-consent.php:88
+#: aesirx-consent.php:89
 msgid "Continue"
 msgstr ""
 
-#: aesirx-consent.php:89
+#: aesirx-consent.php:90
 msgid "Back"
 msgstr ""
 
-#: aesirx-consent.php:90
+#: aesirx-consent.php:91
 msgid "You've chosen to reject data collection:"
 msgstr ""
 
-#: aesirx-consent.php:91
+#: aesirx-consent.php:92
 msgid "Only anonymized page views & limited features will be available. To access all website features, including personalized content & enhanced functionality, please choose an option:"
 msgstr ""
 
-#: aesirx-consent.php:92
+#: aesirx-consent.php:93
 msgid "<span class='fw-semibold text-primary'>Consent:</span> Allow data collection for analytics, form data (when you contact us), & behavioral & event tracking, with the option to opt-in for specific features."
 msgstr ""
 
-#: aesirx-consent.php:93
+#: aesirx-consent.php:94
 msgid "<span class='fw-semibold text-primary'>Decentralized Consent:</span> Allow data collection for analytics, form data (when you contact us), & behavioral & event tracking, with the option to revoke consent, opt-in for specific features, & earn rewards from digital marketing activities."
 msgstr ""
 
-#: aesirx-consent.php:94
+#: aesirx-consent.php:95
 msgid "You can revoke consent on the site or any explicit opt-in consent, such as payment processing, at any time"
 msgstr ""
 
-#: aesirx-consent.php:95
+#: aesirx-consent.php:96
 msgid "Revoke Opt-In Consent"
 msgstr ""
 
-#: aesirx-consent.php:96
+#: aesirx-consent.php:97
 msgid "Revoke Opt-In Consent for Payment Processing"
 msgstr ""
 
-#: aesirx-consent.php:97
+#: aesirx-consent.php:98
 msgid "Revoke Opt-In Consent for AesirX Privacy Advisor AI"
 msgstr ""
 
-#: aesirx-consent.php:98
+#: aesirx-consent.php:99
 msgid "Revoke Consent for the site"
 msgstr ""
 
-#: aesirx-consent.php:99
+#: aesirx-consent.php:100
 msgid "Consent Management"
 msgstr ""
 
-#: aesirx-consent.php:150
+#: aesirx-consent.php:151
 msgid "Settings"
 msgstr ""
 
-#: aesirx-consent.php:265
+#: aesirx-consent.php:266
 msgid "Problem with Aesirx Analytics plugin install"
 msgstr ""
 
-#: aesirx-consent.php:280
+#: aesirx-consent.php:281
 msgid "Important: Permalink Settings Required"
 msgstr ""
 
-#: aesirx-consent.php:281
+#: aesirx-consent.php:285
 msgid ""
-"Our plugin requires that your site use a pretty permalink structure (for example, <code>/%postname%/</code>) to work correctly.\n"
-"                It looks like your current settings are using the plain permalink format, which might cause issues.\n"
-"                Please <a href=\""
+"Our plugin requires that your site use a pretty permalink structure (for example, %1$s) to work correctly.\n"
+"                            It looks like your current settings are using the plain permalink format, which might cause issues.\n"
+"                            Please %2$s to open your Permalink Settings.\n"
+"                            Once there, select the \"Post name\" option (or another pretty permalink structure) and click \"Save Changes.\""
+msgstr ""
+
+#: aesirx-consent.php:290
+msgid "click here"
 msgstr ""
 
 #: includes/settings.php:17
@@ -320,276 +325,289 @@ msgstr ""
 msgid "Your Client ID *"
 msgstr ""
 
-#: includes/settings.php:65
+#: includes/settings.php:68
 msgid "SSO Client ID"
 msgstr ""
 
-#: includes/settings.php:71
+#: includes/settings.php:74
 msgid ""
 "<div class='input_information_content'>\n"
 "          Provided SSO CLIENT ID from <a href='%1$s' target='_blank'>%1$s</a>.</div>"
 msgstr ""
 
-#: includes/settings.php:95
+#: includes/settings.php:98
 msgid "Your Client Secret *"
 msgstr ""
 
-#: includes/settings.php:100
+#: includes/settings.php:103
 msgid "SSO Client Secret"
 msgstr ""
 
-#: includes/settings.php:106
+#: includes/settings.php:109
 msgid ""
 "<div class='input_information_content'>\n"
 "          Provided SSO Client Secret from <a href='%1$s' target='_blank'>%1$s</a>.</div>"
 msgstr ""
 
-#: includes/settings.php:122
+#: includes/settings.php:125
 msgid "Your License Key"
 msgstr ""
 
-#: includes/settings.php:127
+#: includes/settings.php:130
 msgid "License Key"
 msgstr ""
 
-#: includes/settings.php:133
+#: includes/settings.php:136
 msgid ""
 "<div class='input_information_content'>\n"
 "          Sign up to obtain your Shield of Privacy ID and purchase licenses <a href='https://aesirx.io/licenses' target='blank' class='text-link'>here</a>.</div>"
 msgstr ""
 
-#: includes/settings.php:149
+#: includes/settings.php:152
 msgid "Choose your tailored template"
 msgstr ""
 
-#: includes/settings.php:158
+#: includes/settings.php:161
 msgid "Default Template"
 msgstr ""
 
-#: includes/settings.php:162
+#: includes/settings.php:165
 msgid "AesirX Consent Management is improving Google Consent Mode 2.0 by not loading any tags until after consent is given, reducing compliance risks."
 msgstr ""
 
-#: includes/settings.php:166
+#: includes/settings.php:169
 msgid "Simple Consent Mode"
 msgstr ""
 
-#: includes/settings.php:170
+#: includes/settings.php:173
 msgid "Aligns with Google’s Basic Consent Mode for straightforward compliance."
 msgstr ""
 
-#: includes/settings.php:185
+#: includes/settings.php:188
 msgid "Gtag ID"
 msgstr ""
 
-#: includes/settings.php:195
-#: includes/settings.php:220
+#: includes/settings.php:198
+#: includes/settings.php:223
 msgid ""
 "<div class='input_information_content'>\n"
 "          Remember to include the explicit purpose (e.g., analytics, marketing) in the consent text to inform users why GTM is being used.</div>"
 msgstr ""
 
-#: includes/settings.php:210
+#: includes/settings.php:213
 msgid "GTM ID"
 msgstr ""
 
 #: includes/settings.php:238
+msgid "GTM General"
+msgstr ""
+
+#: includes/settings.php:241
 msgid "To configure, input your Google Tag Manager Gtag ID & GTM ID in the designated fields. Once set up, Google Tag Manager will only load after the user provides consent."
 msgstr ""
 
-#: includes/settings.php:249
+#: includes/settings.php:252
 msgid "Customize Consent Text "
 msgstr ""
 
-#: includes/settings.php:262
+#: includes/settings.php:265
 msgid "Reset Consent"
 msgstr ""
 
-#: includes/settings.php:275
+#: includes/settings.php:278
 msgid "AesirX Consent Shield for Third-Party Plugins "
 msgstr ""
 
-#: includes/settings.php:280
+#: includes/settings.php:283
 msgid "Blocks selected third-party plugins from loading until user consent is given."
 msgstr ""
 
-#: includes/settings.php:299
+#: includes/settings.php:302
 msgid "Completely prevents the loading and execution of chosen third-party plugins before consent."
 msgstr ""
 
-#: includes/settings.php:305
+#: includes/settings.php:308
 msgid "No network requests are made to third-party servers, enabling maximum compliance with privacy regulations like GDPR and the ePrivacy Directive."
 msgstr ""
 
-#: includes/settings.php:319
+#: includes/settings.php:322
 msgid "AesirX Consent Shield for Domain/Path-Based Blocking"
 msgstr ""
 
-#: includes/settings.php:322
+#: includes/settings.php:325
 msgid "Removes scripts matching specified domains or paths from the browser until user consent is given."
 msgstr ""
 
-#: includes/settings.php:328
-#: includes/settings.php:339
+#: includes/settings.php:331
+#: includes/settings.php:342
 msgid "Domain"
 msgstr ""
 
-#: includes/settings.php:329
-#: includes/settings.php:340
+#: includes/settings.php:332
+#: includes/settings.php:343
 msgid "Enter domain or path"
 msgstr ""
 
-#: includes/settings.php:356
+#: includes/settings.php:359
 msgid "Blocks or removes scripts from running in the user's browser before consent is given."
 msgstr ""
 
-#: includes/settings.php:362
+#: includes/settings.php:365
 msgid "While it prevents scripts from executing, initial network requests may still occur, so it enhances privacy compliance under GDPR but may not fully meet the ePrivacy Directive requirements."
 msgstr ""
 
-#: includes/settings.php:376
+#: includes/settings.php:379
 msgid "Script Blocking Options"
 msgstr ""
 
-#: includes/settings.php:382
+#: includes/settings.php:385
 msgid "Configure how JavaScript is blocked based on user consent preferences."
 msgstr ""
 
-#: includes/settings.php:391
+#: includes/settings.php:394
 msgid "Only Third-Party Hosts (default)"
 msgstr ""
 
-#: includes/settings.php:392
+#: includes/settings.php:395
 msgid "Blocks JavaScript from third-party domains, allowing first-party scripts to run normally & keep essential site functions intact."
 msgstr ""
 
-#: includes/settings.php:402
+#: includes/settings.php:405
 msgid "Both First and Third-Party Hosts"
 msgstr ""
 
-#: includes/settings.php:403
+#: includes/settings.php:406
 msgid "Blocks JavaScript from both first-party & third-party domains for comprehensive script control, giving you the ability to block any JavaScript from internal or external sources based on user consent."
 msgstr ""
 
-#: includes/settings.php:426
+#: includes/settings.php:429
 msgid "Need Help? Access Our Comprehensive Documentation Hub"
 msgstr ""
 
-#: includes/settings.php:430
+#: includes/settings.php:433
 msgid "Explore How-To Guides, instructions, & tutorials to get the most from AesirX Consent Shield. Whether you're a developer or admin, find all you need to configure & optimize your privacy setup."
 msgstr ""
 
-#: includes/settings.php:436
+#: includes/settings.php:439
 msgid "Discover the latest features & best practices."
 msgstr ""
 
-#: includes/settings.php:463
+#: includes/settings.php:466
 msgid "Haven't got a license yet?"
 msgstr ""
 
-#: includes/settings.php:465
+#: includes/settings.php:468
 msgid "Haven't got Shield of Privacy ID yet?"
 msgstr ""
 
-#: includes/settings.php:469
+#: includes/settings.php:472
 msgid "Register Licence Here"
 msgstr ""
 
-#: includes/settings.php:474
+#: includes/settings.php:477
 msgid "Sign up now"
 msgstr ""
 
-#: includes/settings.php:492
+#: includes/settings.php:495
 msgid "Scan Your Site for Privacy Risks"
 msgstr ""
 
-#: includes/settings.php:496
+#: includes/settings.php:499
 msgid "Use the Privacy Scanner to quickly identify scripts, tags, & trackers running on your site that may compromise user privacy."
 msgstr ""
 
-#: includes/settings.php:502
+#: includes/settings.php:505
 msgid "Use Consent Shield to block those scripts by adding their domains or paths, ensuring quick & simple compliance."
 msgstr ""
 
-#: includes/settings.php:511
+#: includes/settings.php:514
 msgid "Learn how to use AesirX Privacy Scanner with Consent Shield to detect privacy-intrusive elements, using the JetPack plugin as an example."
 msgstr ""
 
-#: includes/settings.php:536
+#: includes/settings.php:538
+#: includes/settings.php:539
 msgid "Aesirx Consent Management"
 msgstr ""
 
-#: includes/settings.php:555
+#: includes/settings.php:558
 msgid "Save settings"
 msgstr ""
 
-#: includes/settings.php:613
-#: includes/settings.php:667
+#: includes/settings.php:620
+#: includes/settings.php:681
 msgid "Your trial license ends in %1$s days. Please update new license <a href='%2$s' target='_blank'>%2$s</a>."
 msgstr ""
 
-#: includes/settings.php:631
+#: includes/settings.php:626
+msgid "Something went wrong: %s. Please contact the administrator."
+msgstr ""
+
+#: includes/settings.php:642
 msgid "Your license is expried or not found. Please update new license <a href='%1$s' target='_blank'>%1$s</a>."
 msgstr ""
 
-#: includes/settings.php:637
+#: includes/settings.php:648
 msgid "Your license ends in %1$s days. Please update new license <a href='%2$s' target='_blank'>%2$s</a>."
 msgstr ""
 
-#: includes/settings.php:660
+#: includes/settings.php:654
+msgid "Check license failed: %s. Please contact the administrator or update your license."
+msgstr ""
+
+#: includes/settings.php:674
 msgid "Your trial license ends in %1$s hour(s). Please update your license <a href='%2$s' target='_blank'>here</a>."
 msgstr ""
 
-#: includes/settings.php:670
+#: includes/settings.php:684
 msgid "Your free trials has ended. Please update your license. <a href='%1$s' target='_blank'>%1$s</a>."
 msgstr ""
 
-#: src/AesirxAnalyticsMysqlHelper.php:97
+#: src/AesirxAnalyticsMysqlHelper.php:96
 msgid "Database error occurred."
 msgstr ""
 
-#: src/AesirxAnalyticsMysqlHelper.php:252
-#: src/AesirxAnalyticsMysqlHelper.php:594
-#: src/AesirxAnalyticsMysqlHelper.php:628
+#: src/AesirxAnalyticsMysqlHelper.php:250
+#: src/AesirxAnalyticsMysqlHelper.php:585
+#: src/AesirxAnalyticsMysqlHelper.php:617
 msgid "\"start\" filter is not correct"
 msgstr ""
 
-#: src/AesirxAnalyticsMysqlHelper.php:261
-#: src/AesirxAnalyticsMysqlHelper.php:603
-#: src/AesirxAnalyticsMysqlHelper.php:637
+#: src/AesirxAnalyticsMysqlHelper.php:258
+#: src/AesirxAnalyticsMysqlHelper.php:593
+#: src/AesirxAnalyticsMysqlHelper.php:625
 msgid "\"end\" filter is not correct"
 msgstr ""
 
-#: src/AesirxAnalyticsMysqlHelper.php:330
+#: src/AesirxAnalyticsMysqlHelper.php:327
 msgid "Domain not found"
 msgstr ""
 
-#: src/AesirxAnalyticsMysqlHelper.php:410
-#: src/AesirxAnalyticsMysqlHelper.php:473
-#: src/AesirxAnalyticsMysqlHelper.php:527
-#: src/AesirxAnalyticsMysqlHelper.php:553
-#: src/AesirxAnalyticsMysqlHelper.php:573
-#: src/AesirxAnalyticsMysqlHelper.php:659
-#: src/AesirxAnalyticsMysqlHelper.php:684
-#: src/AesirxAnalyticsMysqlHelper.php:712
-#: src/AesirxAnalyticsMysqlHelper.php:753
-#: src/AesirxAnalyticsMysqlHelper.php:1086
-#: src/Mysql/GetVisitorConsentList.php:61
+#: src/AesirxAnalyticsMysqlHelper.php:406
+#: src/AesirxAnalyticsMysqlHelper.php:468
+#: src/AesirxAnalyticsMysqlHelper.php:521
+#: src/AesirxAnalyticsMysqlHelper.php:546
+#: src/AesirxAnalyticsMysqlHelper.php:565
+#: src/AesirxAnalyticsMysqlHelper.php:646
+#: src/AesirxAnalyticsMysqlHelper.php:670
+#: src/AesirxAnalyticsMysqlHelper.php:697
+#: src/AesirxAnalyticsMysqlHelper.php:737
+#: src/AesirxAnalyticsMysqlHelper.php:1063
+#: src/Mysql/GetVisitorConsentList.php:60
 msgid "There was a problem with the database query."
 msgstr ""
 
-#: src/AesirxAnalyticsMysqlHelper.php:845
+#: src/AesirxAnalyticsMysqlHelper.php:828
 msgid "Could not insert consent"
 msgstr ""
 
-#: src/AesirxAnalyticsMysqlHelper.php:907
-#: src/AesirxAnalyticsMysqlHelper.php:927
-#: src/AesirxAnalyticsMysqlHelper.php:948
-#: src/AesirxAnalyticsMysqlHelper.php:1290
+#: src/AesirxAnalyticsMysqlHelper.php:889
+#: src/AesirxAnalyticsMysqlHelper.php:908
+#: src/AesirxAnalyticsMysqlHelper.php:928
+#: src/AesirxAnalyticsMysqlHelper.php:1266
 msgid "Something went wrong"
 msgstr ""
 
-#: src/AesirxAnalyticsMysqlHelper.php:1011
+#: src/AesirxAnalyticsMysqlHelper.php:989
 msgid "There was a problem updating the data in the database."
 msgstr ""
 
@@ -620,8 +638,8 @@ msgstr ""
 msgid "Previous consent still active"
 msgstr ""
 
-#: src/Mysql/AddConsentLevel2.php:125
-#: src/Mysql/AddConsentLevel3or4.php:168
+#: src/Mysql/AddConsentLevel2.php:124
+#: src/Mysql/AddConsentLevel3or4.php:167
 msgid "There was a problem querying the data in the database."
 msgstr ""
 
@@ -664,7 +682,7 @@ msgstr ""
 msgid "Failed to update analytics flows"
 msgstr ""
 
-#: src/Mysql/GetNonce.php:14
+#: src/Mysql/GetNonce.php:12
 msgid "Address is not valid"
 msgstr ""
 
@@ -688,19 +706,23 @@ msgstr ""
 msgid "Failed to update nonce."
 msgstr ""
 
-#: src/Mysql/StartFingerprint.php:19
+#: src/Mysql/StartFingerprint.php:21
 msgid "License is expired or not found. Please update your license"
 msgstr ""
 
-#: src/Mysql/StartFingerprint.php:33
+#: src/Mysql/StartFingerprint.php:30
+msgid "Check license failed: %s. Please contact the administrator."
+msgstr ""
+
+#: src/Mysql/StartFingerprint.php:40
 msgid "Your trial is ended. Please renew your license"
 msgstr ""
 
-#: src/Mysql/StartFingerprint.php:95
+#: src/Mysql/StartFingerprint.php:102
 msgid "Wrong URL format, domain not found"
 msgstr ""
 
-#: src/Mysql/StartFingerprint.php:99
+#: src/Mysql/StartFingerprint.php:106
 msgid "The domain sent in the new URL does not match the domain stored in the visitor document"
 msgstr ""
 
@@ -708,6 +730,6 @@ msgstr ""
 msgid "Permission denied!"
 msgstr ""
 
-#: src/Track/CliTracker.php:33
+#: src/Track/CliTracker.php:32
 msgid "Error in tracking"
 msgstr ""
