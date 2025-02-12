@@ -9,7 +9,7 @@ add_action('admin_init', function () {
     $valid = true;
     $input = (array) $value;
 
-    if ($input['storage'] == 'internal') {
+    if ($input['storage'] === 'internal') {
       if (empty($input['license'])) {
         add_settings_error(
           'aesirx_analytics_plugin_options',
@@ -18,7 +18,7 @@ add_action('admin_init', function () {
           'warning'
         );
       }
-    } elseif ($input['storage'] == 'external') {
+    } elseif ($input['storage'] === 'external') {
       if (empty($input['domain'])) {
         $valid = false;
         add_settings_error(
@@ -62,9 +62,12 @@ add_action('admin_init', function () {
     function () {
       $options = get_option('aesirx_analytics_plugin_options', []);
       echo "<div class='input_container'>";
-      echo wp_kses("<input id='aesirx_analytics_clientid' class='aesirx_consent_input'  placeholder='".esc_html__('SSO Client ID', 'aesirx-consent')."' name='aesirx_analytics_plugin_options[clientid]' type='text' value='" .
-      esc_attr($options['clientid'] ?? '') .
-      "' />", aesirx_analytics_escape_html());
+      echo wp_kses("
+        <input id='aesirx_analytics_clientid' 
+                class='aesirx_consent_input'
+                placeholder='" . esc_attr__('SSO Client ID', 'aesirx-consent') . "'
+                name='aesirx_analytics_plugin_options[clientid]'
+                type='text' value='" .esc_attr($options['clientid'] ?? '') ."' />", aesirx_analytics_escape_html());
       echo wp_kses("
         <div class='input_information'>
           <img width='20px' height='20px' src='". plugins_url( 'aesirx-consent/assets/images-plugin/infor_icon.png')."' />
@@ -97,7 +100,7 @@ add_action('admin_init', function () {
       $options = get_option('aesirx_analytics_plugin_options', []);
       // using custom function to escape HTML
       echo "<div class='input_container'>";
-      echo wp_kses("<input id='aesirx_analytics_secret' class='aesirx_consent_input'  placeholder='".esc_html__('SSO Client Secret', 'aesirx-consent')."' name='aesirx_analytics_plugin_options[secret]' type='text' value='" .
+      echo wp_kses("<input id='aesirx_analytics_secret' class='aesirx_consent_input'  placeholder='".esc_attr__('SSO Client Secret', 'aesirx-consent')."' name='aesirx_analytics_plugin_options[secret]' type='text' value='" .
       esc_attr($options['secret'] ?? '') .
       "' />", aesirx_analytics_escape_html());
       echo wp_kses("
@@ -124,7 +127,7 @@ add_action('admin_init', function () {
       $options = get_option('aesirx_analytics_plugin_options', []);
       // using custom function to escape HTML
       echo "<div class='input_container'>";
-      echo wp_kses("<input id='aesirx_analytics_license' class='aesirx_consent_input' placeholder='".esc_html__('License Key', 'aesirx-consent')."' name='aesirx_analytics_plugin_options[license]' type='text' value='" .
+      echo wp_kses("<input id='aesirx_analytics_license' class='aesirx_consent_input' placeholder='".esc_attr__('License Key', 'aesirx-consent')."' name='aesirx_analytics_plugin_options[license]' type='text' value='" .
       esc_attr($options['license'] ?? '') .
       "' />", aesirx_analytics_escape_html());
       echo wp_kses("
@@ -232,7 +235,7 @@ add_action('admin_init', function () {
 
   add_settings_field(
     'aesirx_analytics_plugin_options_datastream_gtm_id_general',
-    esc_html__('', 'aesirx-consent'),
+    esc_html__('GTM General', 'aesirx-consent'),
     function () {
       echo wp_kses('<p class="small-description mb-10">
       <img width="18px" height="18px" src="'. plugins_url( 'aesirx-consent/assets/images-plugin/question_icon.png').'" />'.esc_html__('To configure, input your Google Tag Manager Gtag ID & GTM ID in the designated fields. Once set up, Google Tag Manager will only load after the user provides consent.', 'aesirx-consent').'</p>', aesirx_analytics_escape_html());
@@ -281,13 +284,13 @@ add_action('admin_init', function () {
       echo '<div class="aesirx-consent-cookie-plugin mb-10">';
       foreach ($installed_plugins as $path => $plugin) {
 
-        if ($plugin['TextDomain'] === 'aesirx-consent' || $plugin['TextDomain'] === '' || !in_array($path, $active_plugins)) {
+        if ($plugin['TextDomain'] === 'aesirx-consent' || $plugin['TextDomain'] === '' || !in_array($path, $active_plugins, true)) {
           continue;
         }
         echo '<div class="aesirx-consent-cookie-plugin-item">';
         echo wp_kses("<input id='aesirx_analytics_blocking_cookies_plugins".esc_attr($plugin['TextDomain'])."' name='aesirx_analytics_plugin_options[blocking_cookies_plugins][]' 
         value='" . esc_attr($plugin['TextDomain']) . "' type='checkbox'" 
-        . (isset($options['blocking_cookies_plugins']) && in_array($plugin['TextDomain'], $options['blocking_cookies_plugins']) ? ' checked="checked"' : '') . "/>", aesirx_analytics_escape_html());
+        . (isset($options['blocking_cookies_plugins']) && in_array($plugin['TextDomain'], $options['blocking_cookies_plugins'], true) ? ' checked="checked"' : '') . "/>", aesirx_analytics_escape_html());
         echo '<label for="aesirx_analytics_blocking_cookies_plugins'.esc_attr($plugin['TextDomain']).'">' . esc_html($plugin['Name']) . '</label>';
         echo '</div>';
       }
@@ -326,7 +329,7 @@ add_action('admin_init', function () {
             echo wp_kses('
             <div class="aesirx-consent-cookie-row">
               <div class="title">'.esc_html__('Domain', 'aesirx-consent').'</div>
-              <input type="text" name="aesirx_analytics_plugin_options[blocking_cookies][]" placeholder="'.esc_html__('Enter domain or path', 'aesirx-consent').'" value="'.esc_attr($field).'">
+              <input type="text" name="aesirx_analytics_plugin_options[blocking_cookies][]" placeholder="'.esc_attr__('Enter domain or path', 'aesirx-consent').'" value="'.esc_attr($field).'">
               <button class="aesirx-consent-remove-cookies-row">
                 <img width="25px" height="30px" src="'. plugins_url( 'aesirx-consent/assets/images-plugin/trash_icon.png').'" />
               </button>
@@ -337,7 +340,7 @@ add_action('admin_init', function () {
         echo wp_kses('
         <div class="aesirx-consent-cookie-row">
           <div class="title">'.esc_html__('Domain', 'aesirx-consent').'</div>
-          <input type="text" name="aesirx_analytics_plugin_options[blocking_cookies][]" placeholder="'.esc_html__('Enter domain or path', 'aesirx-consent').'">
+          <input type="text" name="aesirx_analytics_plugin_options[blocking_cookies][]" placeholder="'.esc_attr__('Enter domain or path', 'aesirx-consent').'">
           <button class="aesirx-consent-remove-cookies-row">
             <img width="25px" height="30px" src="'. plugins_url( 'aesirx-consent/assets/images-plugin/trash_icon.png').'" />
           </button>
@@ -385,7 +388,7 @@ add_action('admin_init', function () {
           <div class="description">
             <label>
               <input type="radio" class="analytic-blocking_cookies_mode-class" name="aesirx_analytics_plugin_options[blocking_cookies_mode]" ' .
-          ($mode == '3rd_party' ? $checked : '') .
+          ($mode === '3rd_party' ? $checked : '') .
           ' value="3rd_party"  />
               <div class="input_content">
                 <p>'. esc_html__('Only Third-Party Hosts (default)', 'aesirx-consent') . '</p>
@@ -396,7 +399,7 @@ add_action('admin_init', function () {
           <div class="description">
             <label>
               <input type="radio" class="analytic-blocking_cookies_mode-class" name="aesirx_analytics_plugin_options[blocking_cookies_mode]" ' .
-            ($mode == 'both' ? $checked : '') .
+            ($mode === 'both' ? $checked : '') .
             ' value="both" />
               <div class="input_content">
                 <p>'. esc_html__('Both First and Third-Party Hosts', 'aesirx-consent') . '</p>
@@ -532,7 +535,7 @@ add_action('admin_init', function () {
 
 add_action('admin_menu', function () {
   add_options_page(
-    esc_html__('', 'aesirx-consent'),
+    esc_html__('Aesirx Consent Management', 'aesirx-consent'),
     esc_html__('Aesirx Consent Management', 'aesirx-consent'),
     'manage_options',
     'aesirx-consent-management-plugin',
@@ -593,17 +596,21 @@ function aesirx_analytics_get_api($url) {
 
 function aesirx_analytics_trigger_trial() {
   $urlPost = 'https://api.aesirx.io/index.php?webserviceClient=site&webserviceVersion=1.0.0&option=member&task=validateWPDomain&api=hal';
+  $domain = isset($_SERVER['SERVER_NAME']) ? sanitize_text_field($_SERVER['SERVER_NAME']) : '';
   $args = array(
       'headers' => array(
           'Content-Type' => 'application/json',
       ),
-      'timeout' => 45,
-      'body' => json_encode( array( 'domain' => $_SERVER['SERVER_NAME'] ) ),
+      'body' => wp_json_encode( array(
+        'domain' => $domain
+      ) ),
   );
 
   $responsePost = wp_remote_post( $urlPost, $args);
   if ( $responsePost['response']['code'] === 200 ) {
-    $checkTrialAfterPost = aesirx_analytics_get_api('https://api.aesirx.io/index.php?webserviceClient=site&webserviceVersion=1.0.0&option=member&task=validateWPDomain&api=hal&domain='.$_SERVER['SERVER_NAME']);
+    $checkTrialAfterPost = aesirx_analytics_get_api(
+        'https://api.aesirx.io/index.php?webserviceClient=site&webserviceVersion=1.0.0&option=member&task=validateWPDomain&api=hal&domain=' . rawurlencode($domain)
+    );
     $body = wp_remote_retrieve_body($checkTrialAfterPost);
     if(json_decode($body)->result->success) {
       $dateExpired = new DateTime(json_decode($body)->result->date_expired);
@@ -614,15 +621,19 @@ function aesirx_analytics_trigger_trial() {
     }
   } else {
     $error_message = $responsePost['response']['message'];
-    return  esc_html__(sprintf(
-      __('Something went wrong: %s. Please contact the administrator', 'aesirx-analytics'),
-      $error_message
-    ));
+    return wp_kses(
+        sprintf(
+            __("Something went wrong: %1\$s. Please contact the administrator.", 'aesirx-consent'),
+            $error_message,
+        ),
+        aesirx_analytics_escape_html()
+    );
   }
 }
 
 function aesirx_analytics_license_info() {
   $options = get_option('aesirx_analytics_plugin_options', []);
+  $domain = isset($_SERVER['SERVER_NAME']) ? sanitize_text_field($_SERVER['SERVER_NAME']) : '';
   if (!empty($options['license'])) {
     $response = aesirx_analytics_get_api('https://api.aesirx.io/index.php?webserviceClient=site&webserviceVersion=1.0.0&option=member&task=validateWPLicense&api=hal&license=' . $options['license']);
     $bodyCheckLicense = wp_remote_retrieve_body($response);
@@ -638,13 +649,16 @@ function aesirx_analytics_license_info() {
       }
     } else {
       $error_message = $response['response']['message'];
-      return  esc_html__(sprintf(
-        __('Check license failed: %s. Please contact the administrator or update your license', 'aesirx-analytics'),
-        $error_message
-      ));
+      return wp_kses(
+          sprintf(
+              __("Check license failed: %1\$s. Please contact the administrator or update your license.", 'aesirx-consent'),
+              $error_message,
+          ),
+          aesirx_analytics_escape_html()
+      );
     }
   } else {
-    $checkTrial = aesirx_analytics_get_api('https://api.aesirx.io/index.php?webserviceClient=site&webserviceVersion=1.0.0&option=member&task=validateWPDomain&api=hal&domain='.$_SERVER['SERVER_NAME']);
+    $checkTrial = aesirx_analytics_get_api('https://api.aesirx.io/index.php?webserviceClient=site&webserviceVersion=1.0.0&option=member&task=validateWPDomain&api=hal&domain='.rawurlencode($domain));
     $body = wp_remote_retrieve_body($checkTrial);
     if($body) {
       if(json_decode($body)->result->success) {
