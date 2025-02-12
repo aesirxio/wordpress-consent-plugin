@@ -192,11 +192,11 @@ msgstr "Die Aktualisierung des Ablaufs des „Consent“ ist fehlgeschlagen."
 msgid "Failed to update nonce."
 msgstr "Aktualisierung des „Nonce“ fehlgeschlagen."
 
-#: src/Mysql/StartFingerprint.php:102
+#: src/Mysql/StartFingerprint.php:122
 msgid "Wrong URL format, domain not found"
 msgstr "Falsches URL-Format, Domain nicht gefunden"
 
-#: src/Mysql/StartFingerprint.php:106
+#: src/Mysql/StartFingerprint.php:126
 msgid "The domain sent in the new URL does not match the domain stored in the visitor document"
 msgstr "Die in der neuen URL gesendete Domain stimmt nicht mit der im Besucherdokument gespeicherten Domain überein"
 
@@ -543,11 +543,12 @@ msgstr ""
 msgid "Could not insert consent"
 msgstr ""
 
-#: src/Mysql/StartFingerprint.php:21
+#: src/Mysql/StartFingerprint.php:31
+#: src/Mysql/StartFingerprint.php:54
 msgid "License is expired or not found. Please update your license"
 msgstr ""
 
-#: src/Mysql/StartFingerprint.php:40
+#: src/Mysql/StartFingerprint.php:60
 msgid "Your trial is ended. Please renew your license"
 msgstr ""
 
@@ -705,7 +706,8 @@ msgstr ""
 msgid "Your trial license ends in %1$s hour(s). Please update your license <a href='%2$s' target='_blank'>here</a>."
 msgstr ""
 
-#: aesirx-consent.php:285
+#. translators: 1: Permalink structure example, 2: Link to Permalink Settings page
+#: aesirx-consent.php:286
 msgid ""
 "Our plugin requires that your site use a pretty permalink structure (for example, %1$s) to work correctly.\n"
 "                            It looks like your current settings are using the plain permalink format, which might cause issues.\n"
@@ -713,7 +715,7 @@ msgid ""
 "                            Once there, select the \"Post name\" option (or another pretty permalink structure) and click \"Save Changes.\""
 msgstr ""
 
-#: aesirx-consent.php:290
+#: aesirx-consent.php:293
 msgid "click here"
 msgstr ""
 
@@ -722,13 +724,13 @@ msgid "GTM General"
 msgstr ""
 
 #: includes/settings.php:626
-msgid "Something went wrong: %s. Please contact the administrator."
+msgid "Something went wrong: %1$s. Please contact the administrator."
 msgstr ""
 
 #: includes/settings.php:654
-msgid "Check license failed: %s. Please contact the administrator or update your license."
+msgid "Check license failed: %1$s. Please contact the administrator or update your license."
 msgstr ""
 
-#: src/Mysql/StartFingerprint.php:30
-msgid "Check license failed: %s. Please contact the administrator."
+#: src/Mysql/StartFingerprint.php:47
+msgid "Check license failed: %1\\$s. Please contact the administrator."
 msgstr ""
