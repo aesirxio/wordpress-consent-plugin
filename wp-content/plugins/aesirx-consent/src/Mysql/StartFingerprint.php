@@ -8,18 +8,22 @@ Class AesirX_Analytics_Start_Fingerprint extends AesirxAnalyticsMysqlHelper
     {
         $options = get_option('aesirx_analytics_plugin_options', []);
         $license = $options['license'];
+        $verifyDomain = $options['verify_domain'];
         $serverName = isset($_SERVER['SERVER_NAME']) ? sanitize_text_field($_SERVER['SERVER_NAME']) : '';
         if (!empty($license)) {
             $current_time = new DateTime('now', new DateTimeZone('UTC')); // Current time in UTC
             $expiry_time = new DateTime($options['license_date_expired'], new DateTimeZone('UTC'));
-            if($license !== $options['current_license']) {
+            if($license !== $options['current_license'] || $verifyDomain !== $options['current_verify_domain']) {
                 $options['current_license'] = $license;
+                $options['current_verify_domain'] = $verifyDomain;
                 $options['require_change_license'] = true;
                 update_option('aesirx_analytics_plugin_options', $options);
             }
             if($options['require_change_license'] || ($current_time > $expiry_time && !$options['license_expired'])) {
                 $response = parent::aesirx_analytics_get_api('https://api.aesirx.io/index.php?webserviceClient=site&webserviceVersion=1.0.0&option=member&task=validateWPLicense&api=hal&license=' . $options['license']);
                 $bodyCheckLicense = wp_remote_retrieve_body($response);
+                $decodedDomains = json_decode($bodyCheckLicense)->result->domain_list->decoded ?? [];
+                $domainList = array_column($decodedDomains, 'domain');
                 if ($response['response']['code'] === 200 ) {
                     $options['require_change_license'] = false;
                     if(!json_decode($bodyCheckLicense)->result->success || json_decode($bodyCheckLicense)->result->subscription_product !== "product-aesirx-cmp") {
@@ -33,6 +37,10 @@ Class AesirX_Analytics_Start_Fingerprint extends AesirxAnalyticsMysqlHelper
                             $options['license_expired'] = false;
                             $options['license_date_expired'] = json_decode($body)->result->date_expired;
                         }
+                    } else if (!in_array($serverName, $domainList, true)) {
+                        $options['license_expired'] = true;
+                        update_option('aesirx_analytics_plugin_options', $options);
+                        return new WP_Error('validation_error', esc_html__('Your domain is not match with your license. Please update domain in your license', 'aesirx-consent'));
                     } else {
                         $options['license_date_expired'] = json_decode($bodyCheckLicense)->result->date_expired;
                         $options['license_expired'] = false;
@@ -50,6 +58,8 @@ Class AesirX_Analytics_Start_Fingerprint extends AesirxAnalyticsMysqlHelper
                         )
                     );
                 }
+            } else if ($options['isDomainValid'] === 'false') {
+                return new WP_Error('validation_error', esc_html__('Your domain is not match with your license. Please update domain in your license', 'aesirx-consent'));
             } else if ($options['license_expired']) {
                 return new WP_Error('validation_error', esc_html__('License is expired or not found. Please update your license', 'aesirx-consent'));
             }

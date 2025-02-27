@@ -26,6 +26,12 @@ jQuery(document).ready(function ($) {
     }
   });
 
+  $(document).on('click', '.verify_domain', function (e) {
+    e.preventDefault();
+    $('#aesirx_analytics_verify_domain').val(new Date().getTime());
+    $('.aesirx_consent_wrapper form').submit();
+  });
+
   if (!$('#aesirx_analytics_first_time_access').val()) {
     $('#sign-up-button').trigger('click');
   }
