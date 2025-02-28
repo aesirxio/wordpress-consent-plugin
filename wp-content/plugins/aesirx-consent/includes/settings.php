@@ -49,7 +49,10 @@ add_action('admin_init', function () {
     'Aesirx Consent Management',
     function () {
       $options = get_option('aesirx_analytics_plugin_options', []);
-      echo wp_kses("<input id='aesirx_analytics_first_time_access' name='aesirx_analytics_plugin_options[first_time_access]' type='hidden' value='" .esc_attr($options['first_time_access'] ?? '') .
+      echo wp_kses("
+      <input id='aesirx_analytics_first_time_access' name='aesirx_analytics_plugin_options[first_time_access]' type='hidden' value='" .esc_attr($options['first_time_access'] ?? '') .
+      "' />
+      <input id='aesirx_analytics_verify_domain' name='aesirx_analytics_plugin_options[verify_domain]' type='hidden' value='" .esc_attr($options['verify_domain'] ?? '') .
       "' />", aesirx_analytics_escape_html());
     },
     'aesirx_analytics_plugin'
@@ -162,7 +165,7 @@ add_action('admin_init', function () {
             <input type='radio' id='default' class='analytic-consent-class' name='aesirx_analytics_plugin_options[datastream_template]' " .
             (!$template['datastream_template'] || $template['datastream_template'] === 'default' ? "checked='checked'" : '') .
             "value='default'  />
-            <p>".esc_html__("AesirX Consent Management is improving Google Consent Mode 2.0 by not loading any tags until after consent is given, reducing compliance risks.", 'aesirx-consent')."</p>
+            <p>".esc_html__("The Default setup improves Google Consent Mode 2.0 by not loading any scripts, beacons, or tags until after consent is given, reducing compliance risks. It also includes Decentralized Consent, for more control over personal data and rewards.", 'aesirx-consent')."</p>
           </label>
           <label class='aesirx_consent_template_item ".($template['datastream_template'] === 'simple-consent-mode' ? 'active' : '')."' for='simple-mode'>
             <img width='585px' height='388px' src='". plugins_url( 'aesirx-consent/assets/images-plugin/consent_simple_mode.png')."' />
@@ -170,7 +173,7 @@ add_action('admin_init', function () {
             <input id='simple-mode' type='radio' class='analytic-consent-class' name='aesirx_analytics_plugin_options[datastream_template]' " .
             ($template['datastream_template'] === 'simple-consent-mode' ? "checked='checked'" : '') .
             " value='simple-consent-mode'  />
-            <p>".esc_html__("Aligns with Google’s Basic Consent Mode for straightforward compliance.", 'aesirx-consent')."</p>
+            <p>".esc_html__("Simple Consent Mode follows Google Consent Mode 2.0 by not loading any tags until after consent is given, reducing compliance risks.", 'aesirx-consent')."</p>
           </label>
         </div>
       ", aesirx_analytics_escape_html());
@@ -468,7 +471,7 @@ add_action('admin_init', function () {
           <p>".esc_html__("Haven't got Shield of Privacy ID yet?", 'aesirx-consent')."</p>
         ")."
         ".($isRegisted ? "
-          <a class='aesirx_btn_success cta-button' target='_blank' href='https://aesirx.io/licenses'>
+          <a class='aesirx_btn_success cta-button' target='_blank' href='https://aesirx.io/licenses/consent-management-platform'>
             ".esc_html__("Register Licence Here", 'aesirx-consent')."
             <img width='20px' height='20px' src='". plugins_url( 'aesirx-consent/assets/images-plugin/external_link_icon.png')."' />
           </a>
@@ -512,7 +515,7 @@ add_action('admin_init', function () {
         <div class='aesirx_diviner'></div>
         <img class='aesirx_consent_banner mb-20' width='334px' height='175px' src='". plugins_url( 'aesirx-consent/assets/images-plugin/banner_2.png')."' />
         <p class='aesirx_consent_title'>".esc_html__("Learn how to use AesirX Privacy Scanner with Consent Shield to detect privacy-intrusive elements, using the JetPack plugin as an example.", 'aesirx-consent')."</p>
-        <a class='aesirx_btn_success_light' target='_blank' href='https://aesirx.io/documentation/analytics/how-to/gdpr-compliant-jetpack-setup-with-aesirx-analytics-cmp'>
+        <a class='aesirx_btn_success_light' target='_blank' href='https://aesirx.io/documentation/cmp/how-to/jetpack-gdpr-compliance-with-aesirx-cmp'>
           Read the How-To Guide
           <img width='20px' height='20px' src='". plugins_url( 'aesirx-consent/assets/images-plugin/book_icon.png')."' />
         </a>
@@ -637,10 +640,29 @@ function aesirx_analytics_license_info() {
   if (!empty($options['license'])) {
     $response = aesirx_analytics_get_api('https://api.aesirx.io/index.php?webserviceClient=site&webserviceVersion=1.0.0&option=member&task=validateWPLicense&api=hal&license=' . $options['license']);
     $bodyCheckLicense = wp_remote_retrieve_body($response);
+    $decodedDomains = json_decode($bodyCheckLicense)->result->domain_list->decoded ?? [];
+    $domainList = array_column($decodedDomains, 'domain');
+
     if ($response['response']['code'] === 200 ) {
       if(!json_decode($bodyCheckLicense)->result->success || json_decode($bodyCheckLicense)->result->subscription_product !== "product-aesirx-cmp") {
+        if($options['current_license']) {
+          $options['current_license'] = '';
+          update_option('aesirx_analytics_plugin_options', $options);
+        }
         return  wp_kses(sprintf(__("Your license is expried or not found. Please update new license <a href='%1\$s' target='_blank'>%1\$s</a>.", 'aesirx-consent'), 'https://aesirx.io/licenses'), aesirx_analytics_escape_html());
+      } else if(!in_array($domain, $domainList, true)) {
+        if( $options['isDomainValid'] !== 'false') {
+          $options['isDomainValid'] = 'false';
+          $options['verify_domain'] = round(microtime(true) * 1000);
+          update_option('aesirx_analytics_plugin_options', $options);
+        }
+        return  wp_kses(sprintf(__("Your domain is not match with your license. Please update domain in your license <a href='%1\$s' target='_blank'>%1\$s</a> and click <span class='verify_domain'>here</span> to verify again.", 'aesirx-consent'), 'https://aesirx.io/licenses'), aesirx_analytics_escape_html());
       } else {
+        if($options['isDomainValid'] === 'false') {
+          $options['isDomainValid'] = 'true';
+          $options['verify_domain'] = round(microtime(true) * 1000);
+          update_option('aesirx_analytics_plugin_options', $options);
+        }
         $dateExpired = new DateTime(json_decode($bodyCheckLicense)->result->date_expired);
         $currentDate = new DateTime();
         $interval = $currentDate->diff($dateExpired);
