@@ -165,7 +165,7 @@ add_action('admin_init', function () {
             <input type='radio' id='default' class='analytic-consent-class' name='aesirx_analytics_plugin_options[datastream_template]' " .
             (!$template['datastream_template'] || $template['datastream_template'] === 'default' ? "checked='checked'" : '') .
             "value='default'  />
-            <p>".esc_html__("AesirX Consent Management is improving Google Consent Mode 2.0 by not loading any tags until after consent is given, reducing compliance risks.", 'aesirx-consent')."</p>
+            <p>".esc_html__("The Default setup improves Google Consent Mode 2.0 by not loading any scripts, beacons, or tags until after consent is given, reducing compliance risks. It also includes Decentralized Consent, for more control over personal data and rewards.", 'aesirx-consent')."</p>
           </label>
           <label class='aesirx_consent_template_item ".($template['datastream_template'] === 'simple-consent-mode' ? 'active' : '')."' for='simple-mode'>
             <img width='585px' height='388px' src='". plugins_url( 'aesirx-consent/assets/images-plugin/consent_simple_mode.png')."' />
@@ -173,7 +173,7 @@ add_action('admin_init', function () {
             <input id='simple-mode' type='radio' class='analytic-consent-class' name='aesirx_analytics_plugin_options[datastream_template]' " .
             ($template['datastream_template'] === 'simple-consent-mode' ? "checked='checked'" : '') .
             " value='simple-consent-mode'  />
-            <p>".esc_html__("Aligns with Google’s Basic Consent Mode for straightforward compliance.", 'aesirx-consent')."</p>
+            <p>".esc_html__("Simple Consent Mode follows Google Consent Mode 2.0 by not loading any tags until after consent is given, reducing compliance risks.", 'aesirx-consent')."</p>
           </label>
         </div>
       ", aesirx_analytics_escape_html());
@@ -515,7 +515,7 @@ add_action('admin_init', function () {
         <div class='aesirx_diviner'></div>
         <img class='aesirx_consent_banner mb-20' width='334px' height='175px' src='". plugins_url( 'aesirx-consent/assets/images-plugin/banner_2.png')."' />
         <p class='aesirx_consent_title'>".esc_html__("Learn how to use AesirX Privacy Scanner with Consent Shield to detect privacy-intrusive elements, using the JetPack plugin as an example.", 'aesirx-consent')."</p>
-        <a class='aesirx_btn_success_light' target='_blank' href='https://aesirx.io/documentation/analytics/how-to/gdpr-compliant-jetpack-setup-with-aesirx-analytics-cmp'>
+        <a class='aesirx_btn_success_light' target='_blank' href='https://aesirx.io/documentation/cmp/how-to/jetpack-gdpr-compliance-with-aesirx-cmp'>
           Read the How-To Guide
           <img width='20px' height='20px' src='". plugins_url( 'aesirx-consent/assets/images-plugin/book_icon.png')."' />
         </a>
