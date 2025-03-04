@@ -3143,10 +3143,10 @@ aesirx-analytics@^2.4.0:
     react-dom "18"
     react-toastify "^9.1.3"
 
-aesirx-consent@1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/aesirx-consent/-/aesirx-consent-1.0.1.tgz#a7210fed8b51c31a4351c63419bba1db02522fee"
-  integrity sha512-WWYS2pRlMDFfegqgQE3acOdMQ/J+TiXOcp9eMLofD46S7h/wtUrq7qxp5seLIdlUuBXy46TcCMOwFjHgVFMExg==
+aesirx-consent@1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/aesirx-consent/-/aesirx-consent-1.0.3.tgz#61fbf2b25cd5469d6ce042f7696ba0e8432e9409"
+  integrity sha512-HJklb4sqmaTSyOWZk3dvsicQmtMiSroIDs6Ga/RoyYjvo7I3PGHmMJwI+ZxkZeD5r1tWga+d5/sY+JWgSJ8mNg==
   dependencies:
     "@concordium/browser-wallet-api-helpers" "3.0.1"
     "@concordium/react-components" "0.6.1"
