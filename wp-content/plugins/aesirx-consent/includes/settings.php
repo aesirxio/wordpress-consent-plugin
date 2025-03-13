@@ -9,8 +9,13 @@ add_action('admin_init', function () {
     $valid = true;
     $input = (array) $value;
 
-    if ($input['storage'] === 'internal') {
-      if (empty($input['license'])) {
+    $existing_options = get_option('aesirx_analytics_plugin_options', []);
+
+    $merged_options = array_merge($existing_options, $input);
+
+
+    if ($merged_options['storage'] === 'internal') {
+      if (empty($merged_options['license'])) {
         add_settings_error(
           'aesirx_analytics_plugin_options',
           'license',
@@ -18,15 +23,15 @@ add_action('admin_init', function () {
           'warning'
         );
       }
-    } elseif ($input['storage'] === 'external') {
-      if (empty($input['domain'])) {
+    } elseif ($merged_options['storage'] === 'external') {
+      if (empty($merged_options['domain'])) {
         $valid = false;
         add_settings_error(
           'aesirx_analytics_plugin_options',
           'domain',
           esc_html__('Domain is empty.', 'aesirx-consent')
         );
-      } elseif (filter_var($input['domain'], FILTER_VALIDATE_URL) === false) {
+      } elseif (filter_var($merged_options['domain'], FILTER_VALIDATE_URL) === false) {
         $valid = false;
         add_settings_error(
           'aesirx_analytics_plugin_options',
@@ -38,10 +43,10 @@ add_action('admin_init', function () {
 
     // Ignore the user's changes and use the old database value.
     if (!$valid) {
-      $value = get_option('aesirx_analytics_plugin_options');
+      $merged_options = $existing_options;
     }
 
-    return $value;
+    return $merged_options;
   });
 
   add_settings_section(
@@ -154,30 +159,31 @@ add_action('admin_init', function () {
     'aesirx_analytics_consent_template',
     __('Choose your tailored template', 'aesirx-consent'),
     function () {
-      $template = get_option('aesirx_analytics_plugin_options', []);
+      $options = get_option('aesirx_analytics_plugin_options', []);
+      $options['datastream_template'] = $options['datastream_template'] ?? 'simple-consent-mode';
       // using custom function to escape HTML
       echo wp_kses("
         <div class='aesirx_consent_template'>
-          <label class='aesirx_consent_template_item ".
-          (!$template['datastream_template'] || $template['datastream_template'] === 'default' ? 'active' : '') ."' for='default'>
-            <img width='585px' height='388px' src='". plugins_url( 'aesirx-consent/assets/images-plugin/consent_default.png')."' />
-            <p class='title'>".esc_html__('Default Template', 'aesirx-consent')."</p>
-            <input type='radio' id='default' class='analytic-consent-class' name='aesirx_analytics_plugin_options[datastream_template]' " .
-            (!$template['datastream_template'] || $template['datastream_template'] === 'default' ? "checked='checked'" : '') .
-            "value='default'  />
-            <p>".esc_html__("The Default setup improves Google Consent Mode 2.0 by not loading any scripts, beacons, or tags until after consent is given, reducing compliance risks. It also includes Decentralized Consent, for more control over personal data and rewards.", 'aesirx-consent')."</p>
-          </label>
-          <label class='aesirx_consent_template_item ".($template['datastream_template'] === 'simple-consent-mode' ? 'active' : '')."' for='simple-mode'>
+          <label class='aesirx_consent_template_item ".($options['datastream_template'] === 'simple-consent-mode' ? 'active' : '')."' for='simple-mode'>
             <img width='585px' height='388px' src='". plugins_url( 'aesirx-consent/assets/images-plugin/consent_simple_mode.png')."' />
             <p class='title'>".esc_html__('Simple Consent Mode', 'aesirx-consent')."</p>
             <input id='simple-mode' type='radio' class='analytic-consent-class' name='aesirx_analytics_plugin_options[datastream_template]' " .
-            ($template['datastream_template'] === 'simple-consent-mode' ? "checked='checked'" : '') .
+            ($options['datastream_template'] === 'simple-consent-mode' ? "checked='checked'" : '') .
             " value='simple-consent-mode'  />
             <p>".esc_html__("Simple Consent Mode follows Google Consent Mode 2.0 by not loading any tags until after consent is given, reducing compliance risks.", 'aesirx-consent')."</p>
           </label>
+          <label class='aesirx_consent_template_item ".
+          ($options['datastream_template'] === 'default' ? 'active' : '') ."' for='default'>
+            <img width='585px' height='388px' src='". plugins_url( 'aesirx-consent/assets/images-plugin/consent_default.png')."' />
+            <p class='title'>".esc_html__('Decentralized Consent Mode', 'aesirx-consent')."</p>
+            <input type='radio' id='default' class='analytic-consent-class' name='aesirx_analytics_plugin_options[datastream_template]' " .
+            ($options['datastream_template'] === 'default' ? "checked='checked'" : '') .
+            "value='default'  />
+            <p>".esc_html__("The Default setup improves Google Consent Mode 2.0 by not loading any scripts, beacons, or tags until after consent is given, reducing compliance risks. It also includes Decentralized Consent, for more control over personal data and rewards.", 'aesirx-consent')."</p>
+          </label>
         </div>
       ", aesirx_analytics_escape_html());
-    }, 
+    },
     'aesirx_analytics_plugin',
     'aesirx_analytics_settings',
     [

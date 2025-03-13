@@ -32,7 +32,7 @@ require_once plugin_dir_path(__FILE__) . 'includes/settings.php';
 include_once(ABSPATH . 'wp-admin/includes/plugin.php');
 
 add_action('wp_enqueue_scripts', function (): void {
-    wp_register_script('aesirx-consent', plugins_url('assets/vendor/consent.js', __FILE__), [], true,  array(
+    wp_register_script('aesirx-consent', plugins_url('assets/vendor/consent.js', __FILE__), [], '1.3',  array(
         'in_footer' => false,
     ));
     $translation_array = array(
@@ -122,8 +122,21 @@ add_action('wp_enqueue_scripts', function (): void {
     $blockingCookiesPlugins =  isset($options['blocking_cookies_plugins']) &&  count($options['blocking_cookies_plugins']) > 0 ? array_map(function($value) use ($prefix) {
         return $prefix . $value;
     }, $arrayCookiesPlugins) : [];
+
     $blockingCookies = array_unique(array_merge($blockingCookiesPath, $blockingCookiesPlugins), SORT_REGULAR);
-    $blockingCookiesJSON = isset($options['blocking_cookies']) && count($options['blocking_cookies']) > 0 ? wp_json_encode($blockingCookies) : '[]';
+    $blockingCookiesObjects = array_map(function ($cookie, $key) {
+        return [
+            'domain' => $cookie,
+            'category' => $key === 0 ? 'essential' : ($key === 1 ? 'functional' : ($key === 2 ? 'advertising' :  ($key === 3 ? 'other' : 'analytics'))),
+            'name' => 'text'
+        ];
+    }, array_values($blockingCookies), array_keys(array_values($blockingCookies)));
+    
+    $blockingCookiesJSON = isset($options['blocking_cookies']) && count($options['blocking_cookies']) > 0
+        ? wp_json_encode($blockingCookiesObjects)
+        : '[]';
+
+
     $clientId = $options['clientid'] ?? '';
     $secret = $options['secret'] ?? '';
 
@@ -362,6 +375,8 @@ $consent = $wpdb->get_row( // phpcs:ignore WordPress.DB.DirectDatabaseQuery.Dire
     )
 );
 
+$disabled_block_domains = get_option('aesirx_analytics_plugin_options_disabled_block_domains');
+
 if (!$consent) {
     add_action( 'wp_enqueue_scripts', function (): void {
 
@@ -428,6 +443,61 @@ if (!$consent) {
             }
         }
 
+        return $deregistered_scripts;
+    }
+} else if ($disabled_block_domains && $consent) {
+    add_action( 'wp_enqueue_scripts', function (): void {
+
+		$deregistered_scripts = aesirx_analytics_block_disabled_domains();
+
+        wp_localize_script( 'aesirx-consent', 'aesirx_analytics_degistered_scripts', $deregistered_scripts );
+	}, 9999 );
+
+    add_action( 'wp_head', function (): void {
+
+        $deregistered_scripts = aesirx_analytics_block_disabled_domains();
+
+        ?>
+        <script type="text/javascript">
+            var deregistered_scripts_head = <?php echo wp_json_encode($deregistered_scripts); ?>;
+        </script>
+    <?php
+    }, 9999 );
+
+    add_action( 'wp_footer', function (): void {
+
+        $deregistered_scripts = aesirx_analytics_block_disabled_domains();
+
+        ?>
+        <script type="text/javascript">
+            var deregistered_scripts_footer = <?php echo wp_json_encode($deregistered_scripts); ?>;
+        </script>
+    <?php
+    }, 9999 );
+    function aesirx_analytics_block_disabled_domains() {
+        global $wp_scripts;
+        $deregistered_scripts = array();
+        $disabled_block_domains = get_option('aesirx_analytics_plugin_options_disabled_block_domains');
+    
+        $disabled_domains_list = is_string($disabled_block_domains) ? json_decode($disabled_block_domains, true) : [];
+   
+        if (!is_array($disabled_domains_list)) {
+            return $deregistered_scripts;
+        }
+        $queueScripts = $wp_scripts->queue;
+        foreach ($wp_scripts->registered as $handle => $script) {
+            if (!is_string($script->src) || !in_array($handle, $queueScripts, true)) {
+                continue;
+            }
+            foreach ($disabled_domains_list as $item) {
+                if (!empty($item['domain']) && stripos($script->src, $item['domain']) !== false) {
+                    $deregistered_scripts[$handle] = $script;
+                    wp_deregister_script($handle);
+                    wp_dequeue_script($handle);
+                    break;
+                }
+            }
+        }
         return $deregistered_scripts;
     }
 }
