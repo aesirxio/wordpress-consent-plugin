@@ -9,13 +9,8 @@ add_action('admin_init', function () {
     $valid = true;
     $input = (array) $value;
 
-    $existing_options = get_option('aesirx_analytics_plugin_options', []);
-
-    $merged_options = array_merge($existing_options, $input);
-
-
-    if ($merged_options['storage'] === 'internal') {
-      if (empty($merged_options['license'])) {
+    if ($input['storage'] === 'internal') {
+      if (empty($input['license'])) {
         add_settings_error(
           'aesirx_analytics_plugin_options',
           'license',
@@ -23,15 +18,15 @@ add_action('admin_init', function () {
           'warning'
         );
       }
-    } elseif ($merged_options['storage'] === 'external') {
-      if (empty($merged_options['domain'])) {
+    } elseif ($input['storage'] === 'external') {
+      if (empty($input['domain'])) {
         $valid = false;
         add_settings_error(
           'aesirx_analytics_plugin_options',
           'domain',
           esc_html__('Domain is empty.', 'aesirx-consent')
         );
-      } elseif (filter_var($merged_options['domain'], FILTER_VALIDATE_URL) === false) {
+      } elseif (filter_var($input['domain'], FILTER_VALIDATE_URL) === false) {
         $valid = false;
         add_settings_error(
           'aesirx_analytics_plugin_options',
@@ -43,10 +38,10 @@ add_action('admin_init', function () {
 
     // Ignore the user's changes and use the old database value.
     if (!$valid) {
-      $merged_options = $existing_options;
+      $value = get_option('aesirx_analytics_plugin_options');
     }
 
-    return $merged_options;
+    return $value;
   });
 
   add_settings_section(
@@ -159,31 +154,30 @@ add_action('admin_init', function () {
     'aesirx_analytics_consent_template',
     __('Choose your tailored template', 'aesirx-consent'),
     function () {
-      $options = get_option('aesirx_analytics_plugin_options', []);
-      $options['datastream_template'] = $options['datastream_template'] ?? 'simple-consent-mode';
+      $template = get_option('aesirx_analytics_plugin_options', []);
       // using custom function to escape HTML
       echo wp_kses("
         <div class='aesirx_consent_template'>
-          <label class='aesirx_consent_template_item ".($options['datastream_template'] === 'simple-consent-mode' ? 'active' : '')."' for='simple-mode'>
+          <label class='aesirx_consent_template_item ".($template['datastream_template'] === 'simple-consent-mode' ? 'active' : '')."' for='simple-mode'>
             <img width='585px' height='388px' src='". plugins_url( 'aesirx-consent/assets/images-plugin/consent_simple_mode.png')."' />
             <p class='title'>".esc_html__('Simple Consent Mode', 'aesirx-consent')."</p>
             <input id='simple-mode' type='radio' class='analytic-consent-class' name='aesirx_analytics_plugin_options[datastream_template]' " .
-            ($options['datastream_template'] === 'simple-consent-mode' ? "checked='checked'" : '') .
+            ($template['datastream_template'] === 'simple-consent-mode' ? "checked='checked'" : '') .
             " value='simple-consent-mode'  />
             <p>".esc_html__("Simple Consent Mode follows Google Consent Mode 2.0 by not loading any tags until after consent is given, reducing compliance risks.", 'aesirx-consent')."</p>
           </label>
           <label class='aesirx_consent_template_item ".
-          ($options['datastream_template'] === 'default' ? 'active' : '') ."' for='default'>
+          (!$template['datastream_template'] || $template['datastream_template'] === 'default' ? 'active' : '') ."' for='default'>
             <img width='585px' height='388px' src='". plugins_url( 'aesirx-consent/assets/images-plugin/consent_default.png')."' />
             <p class='title'>".esc_html__('Decentralized Consent Mode', 'aesirx-consent')."</p>
             <input type='radio' id='default' class='analytic-consent-class' name='aesirx_analytics_plugin_options[datastream_template]' " .
-            ($options['datastream_template'] === 'default' ? "checked='checked'" : '') .
+            (!$template['datastream_template'] || $template['datastream_template'] === 'default' ? "checked='checked'" : '') .
             "value='default'  />
             <p>".esc_html__("The Default setup improves Google Consent Mode 2.0 by not loading any scripts, beacons, or tags until after consent is given, reducing compliance risks. It also includes Decentralized Consent, for more control over personal data and rewards.", 'aesirx-consent')."</p>
           </label>
         </div>
       ", aesirx_analytics_escape_html());
-    },
+    }, 
     'aesirx_analytics_plugin',
     'aesirx_analytics_settings',
     [
@@ -304,12 +298,12 @@ add_action('admin_init', function () {
         echo '<label for="aesirx_analytics_blocking_cookies_plugins'.esc_attr($plugin['TextDomain']).'">' . esc_html($plugin['Name']) . '</label>';
         echo '</div>';
         echo wp_kses('
-        <select name="aesirx_analytics_plugin_options[blocking_cookies_plugins_category]['.esc_attr($plugin['TextDomain']).']">
-          <option value="essential" '.($options['blocking_cookies_plugins_category'][esc_attr($plugin['TextDomain'])] === 'essential' ? 'selected' : '').'>Essential</option>
-          <option value="functional" '.($options['blocking_cookies_plugins_category'][esc_attr($plugin['TextDomain'])] === 'functional' ? 'selected' : '').'>Functional</option>
-          <option value="analytics" '.($options['blocking_cookies_plugins_category'][esc_attr($plugin['TextDomain'])] === 'analytics' ? 'selected' : '').'>Analytics</option>
-          <option value="advertising" '.($options['blocking_cookies_plugins_category'][esc_attr($plugin['TextDomain'])] === 'advertising' ? 'selected' : '').'>Advertising</option>
-          <option value="custom" '.($options['blocking_cookies_plugins_category'][esc_attr($plugin['TextDomain'])] === 'custom' ? 'selected' : '').'>Custom</option>
+        <select name="aesirx_analytics_plugin_options[blocking_cookies_plugins_category]['.esc_attr($plugin['TextDomain']).']['.esc_html($plugin['Name']).']">
+          <option value="essential" '.($options['blocking_cookies_plugins_category'][esc_attr($plugin['TextDomain'])][esc_html($plugin['Name'])] === 'essential' ? 'selected' : '').'>Essential</option>
+          <option value="functional" '.($options['blocking_cookies_plugins_category'][esc_attr($plugin['TextDomain'])][esc_html($plugin['Name'])] === 'functional' ? 'selected' : '').'>Functional</option>
+          <option value="analytics" '.($options['blocking_cookies_plugins_category'][esc_attr($plugin['TextDomain'])][esc_html($plugin['Name'])] === 'analytics' ? 'selected' : '').'>Analytics</option>
+          <option value="advertising" '.($options['blocking_cookies_plugins_category'][esc_attr($plugin['TextDomain'])][esc_html($plugin['Name'])] === 'advertising' ? 'selected' : '').'>Advertising</option>
+          <option value="custom" '.($options['blocking_cookies_plugins_category'][esc_attr($plugin['TextDomain'])][esc_html($plugin['Name'])] === 'custom' ? 'selected' : '').'>Custom</option>
         </select>
       ', aesirx_analytics_escape_html());
         echo '</div>';

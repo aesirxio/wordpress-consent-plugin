@@ -32,7 +32,7 @@ require_once plugin_dir_path(__FILE__) . 'includes/settings.php';
 include_once(ABSPATH . 'wp-admin/includes/plugin.php');
 
 add_action('wp_enqueue_scripts', function (): void {
-    wp_register_script('aesirx-consent', plugins_url('assets/vendor/consent.js', __FILE__), [], '1.3',  array(
+    wp_register_script('aesirx-consent', plugins_url('assets/vendor/consent.js', __FILE__), [], true,  array(
         'in_footer' => false,
     ));
     $translation_array = array(
@@ -110,11 +110,6 @@ add_action('wp_enqueue_scripts', function (): void {
             ? get_bloginfo('url')
             : rtrim($options['domain'] ?? '', '/');
 
-    $consent =
-        ($options['consent'] ?? 'false') === 'true'
-            ? 'false'
-            : 'true';
-
     $trackEcommerce = ($options['track_ecommerce'] ?? 'true') === 'true' ? 'true': 'false';
     $blockingCookiesPath = isset($options['blocking_cookies']) && count($options['blocking_cookies']) > 0 ? $options['blocking_cookies'] : [];
     $blockingCookiesCategory = isset($options['blocking_cookies_category']) && count($options['blocking_cookies_category']) > 0 ? $options['blocking_cookies_category'] : [];
@@ -155,7 +150,6 @@ add_action('wp_enqueue_scripts', function (): void {
     wp_add_inline_script(
         'aesirx-consent',
         'window.aesirx1stparty="' . esc_attr($domain) . '";
-        window.disableAnalyticsConsent="' . esc_attr($consent) . '";
         window.aesirxClientID="' . esc_attr($clientId) . '";
         window.aesirxClientSecret="' . esc_attr($secret) . '";
         window.blockJSDomains=' . $blockingCookiesJSON . ';
