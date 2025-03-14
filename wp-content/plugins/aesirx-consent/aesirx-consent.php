@@ -117,25 +117,37 @@ add_action('wp_enqueue_scripts', function (): void {
 
     $trackEcommerce = ($options['track_ecommerce'] ?? 'true') === 'true' ? 'true': 'false';
     $blockingCookiesPath = isset($options['blocking_cookies']) && count($options['blocking_cookies']) > 0 ? $options['blocking_cookies'] : [];
+    $blockingCookiesCategory = isset($options['blocking_cookies_category']) && count($options['blocking_cookies_category']) > 0 ? $options['blocking_cookies_category'] : [];
     $arrayCookiesPlugins =  isset($options['blocking_cookies_plugins']) &&  count($options['blocking_cookies_plugins']) > 0 ? $options['blocking_cookies_plugins'] : [];
+    $arrayCookiesPluginsCategory =  isset($options['blocking_cookies_plugins_category']) &&  count($options['blocking_cookies_plugins_category']) > 0 ? $options['blocking_cookies_plugins_category'] : [];
     $prefix = "wp-content/plugins/";
     $blockingCookiesPlugins =  isset($options['blocking_cookies_plugins']) &&  count($options['blocking_cookies_plugins']) > 0 ? array_map(function($value) use ($prefix) {
         return $prefix . $value;
     }, $arrayCookiesPlugins) : [];
 
+    $blockingCookiesPluginsCategory = [];
+    $blockingCookiesPluginsName = [];
+    
+    foreach ($arrayCookiesPluginsCategory as $slug => $pluginData) {
+        foreach ($pluginData as $pluginName => $category) {
+            $blockingCookiesPluginsCategory[$prefix . $slug] = $category;
+            $blockingCookiesPluginsName[$prefix . $slug] = $pluginName;
+        }
+    }
+
     $blockingCookies = array_unique(array_merge($blockingCookiesPath, $blockingCookiesPlugins), SORT_REGULAR);
-    $blockingCookiesObjects = array_map(function ($cookie, $key) {
+    
+    $blockingCookiesObjects = array_map(function ($cookie, $key) use ($blockingCookiesCategory, $blockingCookiesPluginsCategory, $blockingCookiesPluginsName) {
         return [
             'domain' => $cookie,
-            'category' => $key === 0 ? 'essential' : ($key === 1 ? 'functional' : ($key === 2 ? 'advertising' :  ($key === 3 ? 'other' : 'analytics'))),
-            'name' => 'text'
+            'category' => $blockingCookiesCategory[$key] ?? ($blockingCookiesPluginsCategory[$cookie] ?? 'custom'),
+            'name' => $blockingCookiesPluginsName[$cookie] ?? ''
         ];
     }, array_values($blockingCookies), array_keys(array_values($blockingCookies)));
     
-    $blockingCookiesJSON = isset($options['blocking_cookies']) && count($options['blocking_cookies']) > 0
+    $blockingCookiesJSON = isset($options['blocking_cookies']) && count($options['blocking_cookies']) > 0 
         ? wp_json_encode($blockingCookiesObjects)
         : '[]';
-
 
     $clientId = $options['clientid'] ?? '';
     $secret = $options['secret'] ?? '';
