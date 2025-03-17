@@ -1,15 +1,8 @@
-# Wordpress analytics plugin
+# Wordpress AesirX Consent Management Platform
 
-WordPress plugin for tracking and storing the tracking data in the 1st party Aesirx Analytics server.
+Take full control of your users' consent with a truly first-party approach. 
+Comply with EU ePrivacy Directive and UK PECR by avoiding risky third-party consent services, all while promoting transparency, trust, and privacy-first technology.
 
-First you will need to set up the 1st party Analytics server.
-The instructions are here [AesirX 1st Party Server](https://github.com/aesirxio/analytics-1stparty).
-
-After you set up the server you will install the WordPress plugin and in the configuration you will need to enter
-the URL of the 1st party Aesirx Analytics server example [http://example.com:1000/] and publish the plugin.
-
-And this is all set.
-The tracking from your WordPress site will be stored in the Mongo database on the 1st party server.
 
 ## For local setup
 
