@@ -158,15 +158,6 @@ add_action('admin_init', function () {
       // using custom function to escape HTML
       echo wp_kses("
         <div class='aesirx_consent_template'>
-          <label class='aesirx_consent_template_item ".
-          (!$template['datastream_template'] || $template['datastream_template'] === 'default' ? 'active' : '') ."' for='default'>
-            <img width='585px' height='388px' src='". plugins_url( 'aesirx-consent/assets/images-plugin/consent_default.png')."' />
-            <p class='title'>".esc_html__('Default Template', 'aesirx-consent')."</p>
-            <input type='radio' id='default' class='analytic-consent-class' name='aesirx_analytics_plugin_options[datastream_template]' " .
-            (!$template['datastream_template'] || $template['datastream_template'] === 'default' ? "checked='checked'" : '') .
-            "value='default'  />
-            <p>".esc_html__("The Default setup improves Google Consent Mode 2.0 by not loading any scripts, beacons, or tags until after consent is given, reducing compliance risks. It also includes Decentralized Consent, for more control over personal data and rewards.", 'aesirx-consent')."</p>
-          </label>
           <label class='aesirx_consent_template_item ".($template['datastream_template'] === 'simple-consent-mode' ? 'active' : '')."' for='simple-mode'>
             <img width='585px' height='388px' src='". plugins_url( 'aesirx-consent/assets/images-plugin/consent_simple_mode.png')."' />
             <p class='title'>".esc_html__('Simple Consent Mode', 'aesirx-consent')."</p>
@@ -174,6 +165,15 @@ add_action('admin_init', function () {
             ($template['datastream_template'] === 'simple-consent-mode' ? "checked='checked'" : '') .
             " value='simple-consent-mode'  />
             <p>".esc_html__("Simple Consent Mode follows Google Consent Mode 2.0 by not loading any tags until after consent is given, reducing compliance risks.", 'aesirx-consent')."</p>
+          </label>
+          <label class='aesirx_consent_template_item ".
+          (!$template['datastream_template'] || $template['datastream_template'] === 'default' ? 'active' : '') ."' for='default'>
+            <img width='585px' height='388px' src='". plugins_url( 'aesirx-consent/assets/images-plugin/consent_default.png')."' />
+            <p class='title'>".esc_html__('Decentralized Consent Mode', 'aesirx-consent')."</p>
+            <input type='radio' id='default' class='analytic-consent-class' name='aesirx_analytics_plugin_options[datastream_template]' " .
+            (!$template['datastream_template'] || $template['datastream_template'] === 'default' ? "checked='checked'" : '') .
+            "value='default'  />
+            <p>".esc_html__("The Default setup improves Google Consent Mode 2.0 by not loading any scripts, beacons, or tags until after consent is given, reducing compliance risks. It also includes Decentralized Consent, for more control over personal data and rewards.", 'aesirx-consent')."</p>
           </label>
         </div>
       ", aesirx_analytics_escape_html());
@@ -285,16 +285,27 @@ add_action('admin_init', function () {
       $active_plugins = get_option('active_plugins');
       echo wp_kses('<p class="small-description mb-10">'.esc_html__('Blocks selected third-party plugins from loading until user consent is given.', 'aesirx-consent').'</p>', aesirx_analytics_escape_html());
       echo '<div class="aesirx-consent-cookie-plugin mb-10">';
-      foreach ($installed_plugins as $path => $plugin) {
 
+      foreach ($installed_plugins as $path => $plugin) {
         if ($plugin['TextDomain'] === 'aesirx-consent' || $plugin['TextDomain'] === '' || !in_array($path, $active_plugins, true)) {
           continue;
         }
         echo '<div class="aesirx-consent-cookie-plugin-item">';
+        echo '<div class="aesirx-consent-cookie-plugin-item-label">';
         echo wp_kses("<input id='aesirx_analytics_blocking_cookies_plugins".esc_attr($plugin['TextDomain'])."' name='aesirx_analytics_plugin_options[blocking_cookies_plugins][]' 
         value='" . esc_attr($plugin['TextDomain']) . "' type='checkbox'" 
-        . (isset($options['blocking_cookies_plugins']) && in_array($plugin['TextDomain'], $options['blocking_cookies_plugins'], true) ? ' checked="checked"' : '') . "/>", aesirx_analytics_escape_html());
+        . (isset($options['blocking_cookies_plugins']) && in_array($plugin['TextDomain'], $options['blocking_cookies_plugins'], true) ? ' checked="checked"' : '') . "/>", aesirx_analytics_escape_html()); 
         echo '<label for="aesirx_analytics_blocking_cookies_plugins'.esc_attr($plugin['TextDomain']).'">' . esc_html($plugin['Name']) . '</label>';
+        echo '</div>';
+        echo wp_kses('
+        <select name="aesirx_analytics_plugin_options[blocking_cookies_plugins_category]['.esc_attr($plugin['TextDomain']).']['.esc_html($plugin['Name']).']">
+          <option value="essential" '.($options['blocking_cookies_plugins_category'][esc_attr($plugin['TextDomain'])][esc_html($plugin['Name'])] === 'essential' ? 'selected' : '').'>Essential</option>
+          <option value="functional" '.($options['blocking_cookies_plugins_category'][esc_attr($plugin['TextDomain'])][esc_html($plugin['Name'])] === 'functional' ? 'selected' : '').'>Functional</option>
+          <option value="analytics" '.($options['blocking_cookies_plugins_category'][esc_attr($plugin['TextDomain'])][esc_html($plugin['Name'])] === 'analytics' ? 'selected' : '').'>Analytics</option>
+          <option value="advertising" '.($options['blocking_cookies_plugins_category'][esc_attr($plugin['TextDomain'])][esc_html($plugin['Name'])] === 'advertising' ? 'selected' : '').'>Advertising</option>
+          <option value="custom" '.($options['blocking_cookies_plugins_category'][esc_attr($plugin['TextDomain'])][esc_html($plugin['Name'])] === 'custom' ? 'selected' : '').'>Custom</option>
+        </select>
+      ', aesirx_analytics_escape_html());
         echo '</div>';
       }
       echo '</div>';
@@ -328,11 +339,18 @@ add_action('admin_init', function () {
       echo wp_kses('<p class="small-description mb-10">'.esc_html__('Removes scripts matching specified domains or paths from the browser until user consent is given.', 'aesirx-consent').'</p>', aesirx_analytics_escape_html());
       echo '<div id="aesirx-consent-blocking-cookies">';
       if (isset($options['blocking_cookies'])) {
-          foreach ($options['blocking_cookies'] as $field) {
+          foreach ($options['blocking_cookies'] as $key => $field) {
             echo wp_kses('
             <div class="aesirx-consent-cookie-row">
               <div class="title">'.esc_html__('Domain', 'aesirx-consent').'</div>
               <input type="text" name="aesirx_analytics_plugin_options[blocking_cookies][]" placeholder="'.esc_attr__('Enter domain or path', 'aesirx-consent').'" value="'.esc_attr($field).'">
+              <select name="aesirx_analytics_plugin_options[blocking_cookies_category][]">
+                <option value="essential" '.($options['blocking_cookies_category'][$key] === 'essential' ? 'selected' : '').'>Essential</option>
+                <option value="functional" '.($options['blocking_cookies_category'][$key] === 'functional' ? 'selected' : '').'>Functional</option>
+                <option value="analytics" '.($options['blocking_cookies_category'][$key] === 'analytics' ? 'selected' : '').'>Analytics</option>
+                <option value="advertising" '.($options['blocking_cookies_category'][$key] === 'advertising' ? 'selected' : '').'>Advertising</option>
+                <option value="custom" '.($options['blocking_cookies_category'][$key] === 'custom' ? 'selected' : '').'>Custom</option>
+              </select>
               <button class="aesirx-consent-remove-cookies-row">
                 <img width="25px" height="30px" src="'. plugins_url( 'aesirx-consent/assets/images-plugin/trash_icon.png').'" />
               </button>
@@ -344,6 +362,13 @@ add_action('admin_init', function () {
         <div class="aesirx-consent-cookie-row">
           <div class="title">'.esc_html__('Domain', 'aesirx-consent').'</div>
           <input type="text" name="aesirx_analytics_plugin_options[blocking_cookies][]" placeholder="'.esc_attr__('Enter domain or path', 'aesirx-consent').'">
+          <select name="aesirx_analytics_plugin_options[blocking_cookies_category][]">
+            <option value="essential" selected>Essential</option>
+            <option value="functional">Functional</option>
+            <option value="analytics">Analytics</option>
+            <option value="advertising">Advertising</option>
+            <option value="custom">Custom</option>
+          </select>
           <button class="aesirx-consent-remove-cookies-row">
             <img width="25px" height="30px" src="'. plugins_url( 'aesirx-consent/assets/images-plugin/trash_icon.png').'" />
           </button>
@@ -730,6 +755,17 @@ function aesirx_analytics_escape_html() {
         'checked' => array(),
         'placeholder' => array(),
      ),
+     'select' => array(
+        'id'    => array(),
+        'name'  => array(),
+        'class' => array(),
+      ),
+      'option' => array(
+        'name'  => array(),
+        'value' => array(),
+        'class' => array(),
+        'selected' => array(),
+      ),
      'strong' => array(),
      'a' => array(
       'href'  => array(),

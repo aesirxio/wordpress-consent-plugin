@@ -250,12 +250,22 @@
 .aesirx-consent-cookie-plugin {
   column-count: 3;
   .aesirx-consent-cookie-plugin-item {
+    display: flex;
+    align-items: center;
     padding: 8px 0;
+    .aesirx-consent-cookie-plugin-item-label {
+      width: 50%;
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+    }
     input {
       border: 0.5px solid rgba(0, 0, 0, 0.15);
       width: 18px;
       height: 18px;
       box-shadow: none;
+      margin-top: 0;
       &:checked {
         &::before {
           content: '';
