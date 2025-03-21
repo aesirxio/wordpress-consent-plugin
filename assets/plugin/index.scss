@@ -155,16 +155,9 @@
         &.aesirx_analytics_blocking_cookies_mode_row {
           align-content: start;
           label {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            font-size: 16px;
             border-bottom: 1px solid #3c3c435c;
             padding-bottom: 20px;
             margin-bottom: 20px;
-            .input_content {
-              width: calc(100% - 30px);
-            }
           }
           .blocking_cookies_section {
             background: #fff;
@@ -179,24 +172,6 @@
                   padding-bottom: 0;
                   margin-bottom: 0;
                 }
-              }
-            }
-          }
-
-          input {
-            height: 20px;
-            width: 20px;
-            &:checked {
-              border: 0;
-              outline: 0;
-              box-shadow: none;
-              &::before {
-                background: url('../images/check_radio.png') no-repeat center center;
-                border-radius: 100%;
-                width: 100%;
-                height: 100%;
-                margin: 0;
-                line-height: normal;
               }
             }
           }
@@ -521,5 +496,60 @@ input.aesirx_consent_input {
   img {
     margin-right: 4px;
     margin-left: 0;
+  }
+}
+.radio_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 16px;
+  .input_content {
+    width: calc(100% - 30px);
+  }
+  input {
+    height: 20px;
+    width: 20px;
+    &:checked {
+      border: 0;
+      outline: 0;
+      box-shadow: none;
+      &::before {
+        background: url('../images/check_radio.png') no-repeat center center;
+        border-radius: 100%;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        line-height: normal;
+      }
+    }
+  }
+}
+.aesirx_analytics_gpc_row {
+  margin-top: 10px;
+  .gpc_support_section {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+  }
+  .radio_wrapper {
+    width: 30%;
+    margin-right: 20px;
+    input {
+      margin-top: 0;
+    }
+    p {
+      margin-top: 0;
+    }
+  }
+  .example-content {
+    padding: 16px;
+    background-color: #f0f0f1;
+    border-radius: 10px;
+    &.code {
+      white-space: pre;
+    }
+  }
+  .download-button {
+    display: inline-block;
   }
 }

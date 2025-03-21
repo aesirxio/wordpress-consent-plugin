@@ -414,7 +414,7 @@ add_action('admin_init', function () {
         echo wp_kses('
         <div class="blocking_cookies_section">
           <div class="description">
-            <label>
+            <label class="radio_wrapper">
               <input type="radio" class="analytic-blocking_cookies_mode-class" name="aesirx_analytics_plugin_options[blocking_cookies_mode]" ' .
           ($mode === '3rd_party' ? $checked : '') .
           ' value="3rd_party"  />
@@ -425,7 +425,7 @@ add_action('admin_init', function () {
             </label>
           </div>
           <div class="description">
-            <label>
+            <label class="radio_wrapper">
               <input type="radio" class="analytic-blocking_cookies_mode-class" name="aesirx_analytics_plugin_options[blocking_cookies_mode]" ' .
             ($mode === 'both' ? $checked : '') .
             ' value="both" />
@@ -442,6 +442,57 @@ add_action('admin_init', function () {
     'aesirx_analytics_settings',
     [
       'class' => 'aesirx_analytics_blocking_cookies_mode_row',
+    ]
+  );
+  add_settings_field(
+    'aesirx_analytics_gpc',
+    esc_html__('GPC Compliance', 'aesirx-consent'),
+    function () {
+      $options = get_option('aesirx_analytics_plugin_options', []);
+      $checked = 'checked="checked"';
+      $mode = $options['gpc_support'] ?? 'yes';
+      // using custom function to escape HTML
+      echo wp_kses('
+      <div class="gpc_support_section">
+        <label class="radio_wrapper">
+          <input type="radio" class="analytic-gpc_support-class" name="aesirx_analytics_plugin_options[gpc_support]" ' .
+      ($mode === 'yes' ? $checked : '') .
+      ' value="yes"  />
+          <div class="input_content">
+            <p>'. esc_html__('Enable GPC Support', 'aesirx-consent') . '</p>
+          </div>
+        </label>
+        <label class="radio_wrapper">
+          <input type="radio" class="analytic-gpc_support-class" name="aesirx_analytics_plugin_options[gpc_support]" ' .
+        ($mode === 'no' ? $checked : '') .
+        ' value="no" />
+          <div class="input_content">
+            <p>'. esc_html__('Disable GPC Support', 'aesirx-consent') . '</p>
+          </div>
+          </label>
+      </div>
+        ', aesirx_analytics_escape_html());
+      $json_content = aesirx_generate_gpc_json();
+      $policy_url = get_option('aesirx_privacy_policy_url', get_site_url() . "/privacy-policy");
+      echo wp_kses('<p class="small-description mb-10">'.esc_html__('To comply with Global Privacy Control (GPC), please download and upload the following file:', 'aesirx-consent').'</p>', aesirx_analytics_escape_html());
+      echo wp_kses('<div class="example-content code">'.$json_content.'</div>', aesirx_analytics_escape_html());
+      echo wp_kses("<div class='download-button'><a href='data:application/json;charset=utf-8," . urlencode($json_content) . "' download='gpc.json' class='aesirx_btn_success'>Download gpc.json</a></div>", aesirx_analytics_escape_html());
+      echo wp_kses('<p class="mb-10">'.esc_html__('Upload Instructions:', 'aesirx-consent').'</p>', aesirx_analytics_escape_html());
+      echo wp_kses('<ol>
+          <li>'.esc_html__('Download the gpc.json file.', 'aesirx-consent').'</li>
+          <li>'.esc_html__('Connect to your website via FTP or File Manager.', 'aesirx-consent').'</li>
+          <li>'.sprintf(__('Upload the file to: <code>/public_html/.well-known/gpc.json</code>', 'aesirx-consent')).'</li>
+          <li>'.sprintf(__("Ensure the file is accessible by visiting: <a href='" . get_site_url() . "/.well-known/gpc.json' target='_blank'>" . get_site_url() . "/.well-known/gpc.json</a>", 'aesirx-consent')).'</li>
+      </ol>', aesirx_analytics_escape_html());
+      echo wp_kses('<h3 class="mb-10">Privacy Policy Update</h3>', aesirx_analytics_escape_html());
+      echo wp_kses('<p class="small-description mb-10">You must update your Privacy Policy to reflect GPC compliance. Below is a suggested update:</p>', aesirx_analytics_escape_html());
+      echo wp_kses("<div class='example-content'><div>Global Privacy Control (GPC)</div> Compliance Our website respects the Global Privacy Control (GPC) signal. If your browser sends a GPC signal, we automatically disable non-essential cookies and opt you out of data sharing. For more details, please visit our Privacy Policy: $policy_url.</div>", aesirx_analytics_escape_html());
+      
+    },
+    'aesirx_analytics_plugin',
+    'aesirx_analytics_settings',
+    [
+      'class' => 'aesirx_analytics_gpc_row',
     ]
   );
 
@@ -771,6 +822,7 @@ function aesirx_analytics_escape_html() {
       'href'  => array(),
       'target'    => array(),
       'class'    => array(),
+      'download'    => array(),
      ),
      'p' => array(
       'class' => array(),
@@ -781,7 +833,9 @@ function aesirx_analytics_escape_html() {
      'span' => array(
       'class' => array(),
      ),
-     'h3' => array(),
+     'h3' => array(
+      'class' => array(),
+     ),
      'ul' => array(
       'class' => array(),
      ),
@@ -811,7 +865,33 @@ function aesirx_analytics_escape_html() {
         'value' => array(),
         'class' => array(),
     ),
+    'textarea' => array(
+      'id' => array(),
+      'class' => array(),
+      'rows' => array(),
+      'cols' => array(),
+      'readonly' => array(),
+   ),
+   'code' => array(
+      'class' => array(),
+   )
   );
 
   return $allowed_html;
 }
+
+function aesirx_generate_gpc_json() {
+  $policy_url = get_option('aesirx_privacy_policy_url', get_site_url() . "/privacy-policy");
+
+  $gpc_data = array(
+      "gpc" => true,
+      "policy_url" => esc_url($policy_url)
+  );
+
+  return json_encode($gpc_data, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
+}
+function allow_data_protocol($protocols) {
+  $protocols[] = 'data'; // Add "data" to the allowed protocols list
+  return $protocols;
+}
+add_filter('kses_allowed_protocols', 'allow_data_protocol');

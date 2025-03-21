@@ -3,7 +3,7 @@
  * Plugin Name: AesirX Consent
  * Plugin URI: https://analytics.aesirx.io?utm_source=wpplugin&utm_medium=web&utm_campaign=wordpress&utm_id=aesirx&utm_term=wordpress&utm_content=analytics
  * Description: Aesirx Consent plugin. When you join forces with AesirX, you're not just becoming a Partner - you're also becoming a freedom fighter in the battle for privacy! Earn 25% Affiliate Commission <a href="https://aesirx.io/partner?utm_source=wpplugin&utm_medium=web&utm_campaign=wordpress&utm_id=aesirx&utm_term=wordpress&utm_content=analytics">[Click to Join]</a>
- * Version: 1.3.0
+ * Version: 1.4.0
  * Author: aesirx.io
  * Author URI: https://aesirx.io/
  * Domain Path: /languages
@@ -146,12 +146,14 @@ add_action('wp_enqueue_scripts', function (): void {
 
     $clientId = $options['clientid'] ?? '';
     $secret = $options['secret'] ?? '';
+    $disableGPCSupport = $options['gpc_support'] === 'no' ? "true" : "false";
 
     wp_add_inline_script(
         'aesirx-consent',
         'window.aesirx1stparty="' . esc_attr($domain) . '";
         window.aesirxClientID="' . esc_attr($clientId) . '";
         window.aesirxClientSecret="' . esc_attr($secret) . '";
+        window.disableGPCsupport="' . esc_attr($disableGPCSupport) . '";
         window.blockJSDomains=' . $blockingCookiesJSON . ';
         window.aesirxTrackEcommerce="' . esc_attr($trackEcommerce) . '";',
         'before');
