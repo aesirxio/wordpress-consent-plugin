@@ -28,11 +28,11 @@ msgstr "aesirx.io"
 msgid "https://aesirx.io/"
 msgstr "https://aesirx.io/"
 
-#: aesirx-consent.php:170
+#: aesirx-consent.php:172
 msgid "Settings"
 msgstr "Einstellungen"
 
-#: aesirx-consent.php:285
+#: aesirx-consent.php:287
 msgid "Problem with Aesirx Analytics plugin install"
 msgstr "Problem mit der Installation des Aesirx Analytics Plugins"
 
@@ -517,25 +517,25 @@ msgstr ""
 msgid "Both First and Third-Party Hosts"
 msgstr ""
 
-#: includes/settings.php:457
+#: includes/settings.php:508
 msgid "Need Help? Access Our Comprehensive Documentation Hub"
 msgstr ""
 
-#: includes/settings.php:566
-#: includes/settings.php:567
+#: includes/settings.php:617
+#: includes/settings.php:618
 msgid "Aesirx Consent Management"
 msgstr ""
 
-#: includes/settings.php:648
-#: includes/settings.php:728
+#: includes/settings.php:699
+#: includes/settings.php:779
 msgid "Your trial license ends in %1$s days. Please update new license <a href='%2$s' target='_blank'>%2$s</a>."
 msgstr ""
 
-#: includes/settings.php:677
+#: includes/settings.php:728
 msgid "Your license is expried or not found. Please update new license <a href='%1$s' target='_blank'>%1$s</a>."
 msgstr ""
 
-#: includes/settings.php:731
+#: includes/settings.php:782
 msgid "Your free trials has ended. Please update your license. <a href='%1$s' target='_blank'>%1$s</a>."
 msgstr ""
 
@@ -606,27 +606,27 @@ msgstr ""
 msgid "Blocks JavaScript from both first-party & third-party domains for comprehensive script control, giving you the ability to block any JavaScript from internal or external sources based on user consent."
 msgstr ""
 
-#: includes/settings.php:467
+#: includes/settings.php:518
 msgid "Discover the latest features & best practices."
 msgstr ""
 
-#: includes/settings.php:494
+#: includes/settings.php:545
 msgid "Haven't got a license yet?"
 msgstr ""
 
-#: includes/settings.php:523
+#: includes/settings.php:574
 msgid "Scan Your Site for Privacy Risks"
 msgstr ""
 
-#: includes/settings.php:527
+#: includes/settings.php:578
 msgid "Use the Privacy Scanner to quickly identify scripts, tags, & trackers running on your site that may compromise user privacy."
 msgstr ""
 
-#: includes/settings.php:533
+#: includes/settings.php:584
 msgid "Use Consent Shield to block those scripts by adding their domains or paths, ensuring quick & simple compliance."
 msgstr ""
 
-#: includes/settings.php:586
+#: includes/settings.php:637
 msgid "Save settings"
 msgstr ""
 
@@ -634,15 +634,15 @@ msgstr ""
 msgid "License Key"
 msgstr ""
 
-#: includes/settings.php:496
+#: includes/settings.php:547
 msgid "Haven't got Shield of Privacy ID yet?"
 msgstr ""
 
-#: includes/settings.php:542
+#: includes/settings.php:593
 msgid "Learn how to use AesirX Privacy Scanner with Consent Shield to detect privacy-intrusive elements, using the JetPack plugin as an example."
 msgstr ""
 
-#: includes/settings.php:695
+#: includes/settings.php:746
 msgid "Your license ends in %1$s days. Please update new license <a href='%2$s' target='_blank'>%2$s</a>."
 msgstr ""
 
@@ -667,15 +667,15 @@ msgid ""
 "          Remember to include the explicit purpose (e.g., analytics, marketing) in the consent text to inform users why GTM is being used.</div>"
 msgstr ""
 
-#: includes/settings.php:500
+#: includes/settings.php:551
 msgid "Register Licence Here"
 msgstr ""
 
-#: includes/settings.php:505
+#: includes/settings.php:556
 msgid "Sign up now"
 msgstr ""
 
-#: includes/settings.php:461
+#: includes/settings.php:512
 msgid "Explore How-To Guides, instructions, & tutorials to get the most from AesirX Consent Shield. Whether you're a developer or admin, find all you need to configure & optimize your privacy setup."
 msgstr ""
 
@@ -687,16 +687,16 @@ msgstr ""
 msgid "Reset Consent"
 msgstr ""
 
-#: aesirx-consent.php:300
+#: aesirx-consent.php:302
 msgid "Important: Permalink Settings Required"
 msgstr ""
 
-#: includes/settings.php:721
+#: includes/settings.php:772
 msgid "Your trial license ends in %1$s hour(s). Please update your license <a href='%2$s' target='_blank'>here</a>."
 msgstr ""
 
 #. translators: 1: Permalink structure example, 2: Link to Permalink Settings page
-#: aesirx-consent.php:305
+#: aesirx-consent.php:307
 msgid ""
 "Our plugin requires that your site use a pretty permalink structure (for example, %1$s) to work correctly.\n"
 "                            It looks like your current settings are using the plain permalink format, which might cause issues.\n"
@@ -704,7 +704,7 @@ msgid ""
 "                            Once there, select the \"Post name\" option (or another pretty permalink structure) and click \"Save Changes.\""
 msgstr ""
 
-#: aesirx-consent.php:312
+#: aesirx-consent.php:314
 msgid "click here"
 msgstr ""
 
@@ -712,11 +712,11 @@ msgstr ""
 msgid "GTM General"
 msgstr ""
 
-#: includes/settings.php:654
+#: includes/settings.php:705
 msgid "Something went wrong: %1$s. Please contact the administrator."
 msgstr ""
 
-#: includes/settings.php:701
+#: includes/settings.php:752
 msgid "Check license failed: %1$s. Please contact the administrator or update your license."
 msgstr ""
 
@@ -732,7 +732,7 @@ msgstr ""
 msgid "Simple Consent Mode follows Google Consent Mode 2.0 by not loading any tags until after consent is given, reducing compliance risks."
 msgstr ""
 
-#: includes/settings.php:684
+#: includes/settings.php:735
 msgid "Your domain is not match with your license. Please update domain in your license <a href='%1$s' target='_blank'>%1$s</a> and click <span class='verify_domain'>here</span> to verify again."
 msgstr ""
 
@@ -743,4 +743,40 @@ msgstr ""
 
 #: includes/settings.php:172
 msgid "Decentralized Consent Mode"
+msgstr ""
+
+#: includes/settings.php:449
+msgid "GPC Compliance"
+msgstr ""
+
+#: includes/settings.php:462
+msgid "Enable GPC Support"
+msgstr ""
+
+#: includes/settings.php:470
+msgid "Disable GPC Support"
+msgstr ""
+
+#: includes/settings.php:477
+msgid "To comply with Global Privacy Control (GPC), please download and upload the following file:"
+msgstr ""
+
+#: includes/settings.php:480
+msgid "Upload Instructions:"
+msgstr ""
+
+#: includes/settings.php:482
+msgid "Download the gpc.json file."
+msgstr ""
+
+#: includes/settings.php:483
+msgid "Connect to your website via FTP or File Manager."
+msgstr ""
+
+#: includes/settings.php:484
+msgid "Upload the file to: <code>/public_html/.well-known/gpc.json</code>"
+msgstr ""
+
+#: includes/settings.php:485
+msgid "Ensure the file is accessible by visiting: <a href='"
 msgstr ""
