@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2025-03-21T06:32:22+00:00\n"
+"POT-Creation-Date: 2025-04-01T07:58:56+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.11.0\n"
 "X-Domain: aesirx-consent\n"
@@ -570,36 +570,36 @@ msgstr ""
 msgid "Save settings"
 msgstr ""
 
-#: includes/settings.php:699
-#: includes/settings.php:779
+#: includes/settings.php:751
+#: includes/settings.php:831
 msgid "Your trial license ends in %1$s days. Please update new license <a href='%2$s' target='_blank'>%2$s</a>."
 msgstr ""
 
-#: includes/settings.php:705
+#: includes/settings.php:757
 msgid "Something went wrong: %1$s. Please contact the administrator."
 msgstr ""
 
-#: includes/settings.php:728
+#: includes/settings.php:780
 msgid "Your license is expried or not found. Please update new license <a href='%1$s' target='_blank'>%1$s</a>."
 msgstr ""
 
-#: includes/settings.php:735
+#: includes/settings.php:787
 msgid "Your domain is not match with your license. Please update domain in your license <a href='%1$s' target='_blank'>%1$s</a> and click <span class='verify_domain'>here</span> to verify again."
 msgstr ""
 
-#: includes/settings.php:746
+#: includes/settings.php:798
 msgid "Your license ends in %1$s days. Please update new license <a href='%2$s' target='_blank'>%2$s</a>."
 msgstr ""
 
-#: includes/settings.php:752
+#: includes/settings.php:804
 msgid "Check license failed: %1$s. Please contact the administrator or update your license."
 msgstr ""
 
-#: includes/settings.php:772
+#: includes/settings.php:824
 msgid "Your trial license ends in %1$s hour(s). Please update your license <a href='%2$s' target='_blank'>here</a>."
 msgstr ""
 
-#: includes/settings.php:782
+#: includes/settings.php:834
 msgid "Your free trials has ended. Please update your license. <a href='%1$s' target='_blank'>%1$s</a>."
 msgstr ""
 

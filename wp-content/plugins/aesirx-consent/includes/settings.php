@@ -650,12 +650,64 @@ add_action('admin_menu', function () {
         echo '</div>';
     }
   );
+
+  add_menu_page(
+    'Consent Log',
+    'Consent Log',
+    'manage_options',
+    'aesirx-bi-consents',
+    function () {
+      ?><div id="biapp" class="aesirxui"></div><?php
+    },
+    plugins_url( 'aesirx-consent/assets/images-plugin/AesirX_BI_icon.png'),
+    3
+  );
 });
 
 add_action('admin_enqueue_scripts', function ($hook) {
   if ($hook === 'settings_page_aesirx-consent-management-plugin') {
     wp_enqueue_script('aesirx_analytics_repeatable_fields', plugins_url('assets/vendor/aesirx-consent-repeatable-fields.js', __DIR__), array('jquery'), true, true);
     wp_enqueue_script('aesirx_analytics_quill', plugins_url('assets/vendor/aesirx-consent-quill.js', __DIR__), array('jquery'), true, true);
+  }
+  if ($hook === 'toplevel_page_aesirx-bi-consents' || $hook === 'aesirx-bi_page_aesirx-bi-consents') {
+
+    $options = get_option('aesirx_analytics_plugin_options');
+
+    $protocols = ['http://', 'https://'];
+    $domain = str_replace($protocols, '', site_url());
+    $streams = [['name' => get_bloginfo('name'), 'domain' => $domain]];
+    $endpoint = get_bloginfo('url');
+
+    $manifest = json_decode(
+      file_get_contents(plugin_dir_path(__DIR__) . 'assets-manifest.json', true)
+    );
+
+    if ($manifest->entrypoints->bi->assets) {
+      foreach ($manifest->entrypoints->bi->assets->js as $js) {
+        wp_enqueue_script('aesrix_bi' . md5($js), plugins_url($js, __DIR__), false, '1.0', true);
+      }
+    }
+
+    $clientId = $options['clientid'];
+    $clientSecret = $options['secret'];
+
+    $jwt = '';
+
+    wp_register_script( 'aesrix_bi_window', '', array(), '1.0', false );
+
+    wp_enqueue_script('aesrix_bi_window');
+
+    wp_add_inline_script(
+      'aesrix_bi_window',
+      'window.env = {};
+		  window.aesirxClientID = "' . esc_html($clientId) . '";
+		  window.aesirxClientSecret = "' . esc_html($clientSecret) . '";
+      window.env.REACT_APP_BI_ENDPOINT_URL = "' . esc_url($endpoint) . '";
+		  window.env.REACT_APP_DATA_STREAM = JSON.stringify(' . wp_json_encode($streams) . ');
+		  window.env.PUBLIC_URL= "' . esc_url(plugin_dir_url(__DIR__)) . '";
+      window.env.STORAGE= "internal";
+      ' . htmlspecialchars($jwt, ENT_NOQUOTES),
+    );
   }
 });
 function aesirx_analytics_get_api($url) {

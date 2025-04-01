@@ -43,14 +43,14 @@ function moveQuillJSTask() {
 
 function webpackBIApp() {
   return gulp
-    .src('./assets/plugin/index.tsx')
+    .src('./assets/bi/index.tsx')
     .pipe(webpack(require('./webpack.config.js')))
     .pipe(gulp.dest(`${dist}/plugins/aesirx-consent`));
 }
 
 function webpackBIAppWatch() {
   return gulp
-    .src('./assets/plugin/index.tsx')
+    .src('./assets/bi/index.tsx')
     .pipe(webpack(_.merge(require('./webpack.config.js'), { watch: true })))
     .pipe(gulp.dest(`${dist}/plugins/aesirx-consent`));
 }
