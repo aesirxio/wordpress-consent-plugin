@@ -275,6 +275,56 @@ add_action('admin_init', function () {
     ]
   );
 
+  add_settings_field(
+    'aesirx_analytics_datastream_detail',
+    esc_html__('Customize Detail Text ', 'aesirx-consent'),
+    function () {
+      $options = get_option('aesirx_analytics_plugin_options', []);
+      $decodedHtml = html_entity_decode($options['datastream_detail'], ENT_QUOTES, 'UTF-8');
+      echo wp_kses('<input id="aesirx_analytics_datastream_detail" class="aesirx_consent_input" name="aesirx_analytics_plugin_options[datastream_detail]" type="hidden" 
+      value="'.esc_attr($options['datastream_detail']).'" />', aesirx_analytics_escape_html());
+      echo wp_kses('
+      <div id="datastream_detail">
+        <div>'.$decodedHtml.'</div>'.'
+      </div>', aesirx_analytics_escape_html());
+      echo wp_kses('
+      <button type="button" class="reset_detail_button aesirx_btn_success_light">
+        <img width="20px" height="20px" src="'. plugins_url( 'aesirx-consent/assets/images-plugin/reset_icon.png').'" />
+        '.esc_html__("Reset Detail", 'aesirx-consent').'
+      </button>', aesirx_analytics_escape_html());
+    },
+    'aesirx_analytics_plugin',
+    'aesirx_analytics_settings',
+    [
+      'class' => 'aesirx_analytics_datastream_detail_row',
+    ]
+  );
+
+  add_settings_field(
+    'aesirx_analytics_datastream_reject',
+    esc_html__('Customize Reject Text ', 'aesirx-consent'),
+    function () {
+      $options = get_option('aesirx_analytics_plugin_options', []);
+      $decodedHtml = html_entity_decode($options['datastream_reject'], ENT_QUOTES, 'UTF-8');
+      echo wp_kses('<input id="aesirx_analytics_datastream_reject" class="aesirx_consent_input" name="aesirx_analytics_plugin_options[datastream_reject]" type="hidden" 
+      value="'.esc_attr($options['datastream_reject']).'" />', aesirx_analytics_escape_html());
+      echo wp_kses('
+      <div id="datastream_reject">
+        <div>'.$decodedHtml.'</div>'.'
+      </div>', aesirx_analytics_escape_html());
+      echo wp_kses('
+      <button type="button" class="reset_reject_button aesirx_btn_success_light">
+        <img width="20px" height="20px" src="'. plugins_url( 'aesirx-consent/assets/images-plugin/reset_icon.png').'" />
+        '.esc_html__("Reset Reject", 'aesirx-consent').'
+      </button>', aesirx_analytics_escape_html());
+    },
+    'aesirx_analytics_plugin',
+    'aesirx_analytics_settings',
+    [
+      'class' => 'aesirx_analytics_datastream_reject_row',
+    ]
+  );
+
   
   add_settings_field(
     'aesirx_analytics_blocking_cookies_plugins',
@@ -650,12 +700,131 @@ add_action('admin_menu', function () {
         echo '</div>';
     }
   );
+
+  add_menu_page(
+    'Consent Log',
+    'Consent Log',
+    'manage_options',
+    'aesirx-bi-consents',
+    function () {
+      ?><div id="biapp" class="aesirxui"></div><?php
+    },
+    plugins_url( 'aesirx-consent/assets/images-plugin/AesirX_BI_icon.png'),
+    3
+  );
 });
 
 add_action('admin_enqueue_scripts', function ($hook) {
   if ($hook === 'settings_page_aesirx-consent-management-plugin') {
-    wp_enqueue_script('aesirx_analytics_repeatable_fields', plugins_url('assets/vendor/aesirx-consent-repeatable-fields.js', __DIR__), array('jquery'), true, true);
-    wp_enqueue_script('aesirx_analytics_quill', plugins_url('assets/vendor/aesirx-consent-quill.js', __DIR__), array('jquery'), true, true);
+    wp_enqueue_script('aesirx_analytics_ckeditor', plugins_url('assets/vendor/aesirx-consent-ckeditor.js', __DIR__), array('jquery'), true, true);
+    wp_register_script('aesirx_analytics_repeatable_fields', plugins_url('assets/vendor/aesirx-consent-repeatable-fields.js', __DIR__), array('jquery'), true, true);
+    $translation_array = array(
+      'txt_shield_of_privacy' => __( 'Shield of Privacy', 'aesirx-consent' ),
+      'txt_you_can_revoke' => __( 'Revoke your consent for data use whenever you wish.', 'aesirx-consent' ),
+      'txt_manage_consent' => __( 'Manage Decentralized Consent', 'aesirx-consent' ),
+      'txt_revoke_consent' => __( 'Revoke Consent', 'aesirx-consent' ),
+      'txt_yes_i_consent' => __( 'Consent', 'aesirx-consent' ),
+      'txt_reject_consent' => __( 'Reject', 'aesirx-consent' ),
+      'txt_please_connect' => __( 'Please connect your Web3 wallet', 'aesirx-consent' ),
+      'txt_please_sign' => __( 'Please sign the message on your wallet twice and wait for it to be saved.', 'aesirx-consent' ),
+      'txt_saving' => __( 'Saving...', 'aesirx-consent' ),
+      'txt_please_connect_your_wallet' => __( 'Please connect to your wallet', 'aesirx-consent' ),
+      'txt_connecting' => __( 'Connecting', 'aesirx-consent' ),
+      'txt_tracking_data_privacy' => __( 'TRACKING AND DATA PRIVACY PREFERENCES', 'aesirx-consent' ),
+      'txt_about' => __( 'About', 'aesirx-consent' ),
+      'txt_detail' => __( 'Details', 'aesirx-consent' ),
+      'txt_change_consent' => __( 'Decentralized Consent', 'aesirx-consent' ),
+      'txt_manage_your_consent' => __( 'Manage Your Consent Preferences', 'aesirx-consent' ),
+      'txt_choose_how_we_use' => __( 'Choose how we use your data: "Reject" data collection, allow tracking ["Consent"], or use "Decentralized Consent" for more control over your personal data & rewards.', 'aesirx-consent' ),
+      'txt_choose_how_we_use_simple' => __( 'Choose how we use your data: "Reject" data collection, allow tracking ["Consent"].', 'aesirx-consent' ),
+      'txt_by_consenting' => __( 'By consenting, you allow us to collect & use your data for:', 'aesirx-consent' ),
+      'txt_analytics_behavioral' => __( 'Analytics & Behavioral Data: To improve our services & personalize your experience.', 'aesirx-consent' ),
+      'txt_form_data' => __( 'Form Data: When you contact us.', 'aesirx-consent' ),
+      'txt_please_note' => __( 'Please note', 'aesirx-consent' ),
+      'txt_we_do_not_share' => __( 'We do not share your data with third parties without your explicit consent.', 'aesirx-consent' ),
+      'txt_you_can_opt_in' => __( 'You can opt-in later for specific features without giving blanket consent.', 'aesirx-consent' ),
+      'txt_for_more_details' => __( "For more details, refer to our <a class='text-success fw-semibold text-decoration-underline' href='https://aesirx.io/privacy-policy' target='_blank'>privacy policy.</a>", 'aesirx-consent' ),
+      'txt_benefit' => __( 'Benefits', 'aesirx-consent' ),
+      'txt_control_your_data' => __( "<span class='fw-semibold text-primary'>Control your data:</span> Choose your preferred level of data collection & tracking.", 'aesirx-consent' ),
+      'txt_earn_rewards' => __( "<span class='fw-semibold text-primary'>Earn rewards:</span> Participate in decentralized consent for privacy & rewards.", 'aesirx-consent' ),
+      'txt_transparent_data' => __( "<span class='fw-semibold text-primary'>Transparent data collection practices:</span> Understand how your data is collected & used.", 'aesirx-consent' ),
+      'txt_understanding_your_privacy' => __( "Understanding Your Privacy Choices", 'aesirx-consent' ),
+      'txt_reject_no_data' => __( "<span class='fw-semibold text-primary'>Reject:</span> No data will be collected or loaded except for anonymized page views & rejections. Some personalization features may be disabled.", 'aesirx-consent' ),
+      'txt_consent_first_third_party' => __( "<span class='fw-semibold text-primary'>Consent:</span> First & third-party tracking data will be collected to enhance your experience.", 'aesirx-consent' ),
+      'txt_decentralizered_consent_choose' => __( "<span class='fw-semibold text-primary'>Decentralized Consent:</span> Choose Decentralized Wallets or Decentralized Wallet + Shield of Privacy. Both options let you manage & revoke consent on-site or through AesirX dApp, plus earn rewards from digital marketing activities.", 'aesirx-consent' ),
+      'txt_our_commitment_in_action' => __( "Our Commitment in Action", 'aesirx-consent' ),
+      'txt_private_protection' => __( "<span class='fw-semibold text-primary'>Privacy Protection:</span> Users have full control over their data, ensuring maximum privacy.", 'aesirx-consent' ),
+      'txt_enables_compliance' => __( "<span class='fw-semibold text-primary'>Enables Compliance:</span> Using Shield of Privacy (SoP) ensures compliance with GDPR, CCPA, ePrivacy Directive, & other data protection regulations.", 'aesirx-consent' ),
+      'txt_proactive_protection' => __( "<span class='fw-semibold text-primary'>Proactive Protection:</span> We enhance privacy measures to safeguard your data integrity.", 'aesirx-consent' ),
+      'txt_flexible_consent' => __( "<span class='fw-semibold text-primary'>Flexible Consent:</span> You can withdraw your consent anytime on-site or via our <a class='text-success fw-semibold text-decoration-underline' href='https://dapp.shield.aesirx.io' target='_blank'>dApp</a> (Decentralized Application).", 'aesirx-consent' ),
+      'txt_learn_more' => __( "<span class='fw-semibold text-primary'>Learn More:</span> Discover our approach to data processing in our <a class='text-success fw-semibold text-decoration-underline' href='https://aesirx.io/privacy-policy' target='_blank'>Privacy Policy</a>.", 'aesirx-consent' ),
+      'txt_for_business' => __( "<span class='fw-semibold text-primary'>For Businesses:</span> Enhance trust, secure user identities, & prevent breaches.", 'aesirx-consent' ),
+      'txt_more_info_at' => __( "More info at <a class='text-success fw-semibold text-decoration-underline' href='https://shield.aesirx.io' target='_blank'>https://shield.aesirx.io</a>.", 'aesirx-consent' ),
+      'txt_select_your_preferred' => __( "Select your preferred decentralized consent option:", 'aesirx-consent' ),
+      'txt_decentralized_wallet' => __( "Decentralized Consent", 'aesirx-consent' ),
+      'txt_decentralized_wallet_will_be_loaded' => __( "Decentralized consent will be loaded", 'aesirx-consent' ),
+      'txt_both_first_party_third_party' => __( "Both first-party & third-party tracking data will be activated.", 'aesirx-consent' ),
+      'txt_all_consented_data_will_be_collected' => __( "All consented data will be collected.", 'aesirx-consent' ),
+      'txt_users_can_revoke' => __( "Users can revoke consent on-site at any time.", 'aesirx-consent' ),
+      'txt_decentralized_wallet_shield' => __( "Decentralized Consent + Shield of Privacy", 'aesirx-consent' ),
+      'txt_users_can_revoke_dapp' => __( "Users can revoke consent on-site or from the AesirX dApp at any time.", 'aesirx-consent' ),
+      'txt_users_can_earn' => __( "Users can earn rewards from digital marketing activities.", 'aesirx-consent' ),
+      'txt_continue' => __( "Continue", 'aesirx-consent' ),
+      'txt_back' => __( "Back", 'aesirx-consent' ),
+      'txt_you_have_chosen' => __( "You've chosen to reject data collection:", 'aesirx-consent' ),
+      'txt_only_anonymized' => __( "Only anonymized page views & limited features will be available. To access all website features, including personalized content & enhanced functionality, please choose an option:", 'aesirx-consent' ),
+      'txt_consent_allow_data' => __( "<span class='fw-semibold text-primary'>Consent:</span> Allow data collection for analytics, form data (when you contact us), & behavioral & event tracking, with the option to opt-in for specific features.", 'aesirx-consent' ),
+      'txt_decentralized_consent_allow_data' => __( "<span class='fw-semibold text-primary'>Decentralized Consent:</span> Allow data collection for analytics, form data (when you contact us), & behavioral & event tracking, with the option to revoke consent, opt-in for specific features, & earn rewards from digital marketing activities.", 'aesirx-consent' ),
+      'txt_you_can_revoke_on_the_site' => __( "You can revoke consent on the site or any explicit opt-in consent, such as payment processing, at any time", 'aesirx-consent' ),
+      'txt_revoke_opt_in' => __( "Revoke Opt-In Consent", 'aesirx-consent' ),
+      'txt_revoke_opt_in_payment' => __( "Revoke Opt-In Consent for Payment Processing", 'aesirx-consent' ),
+      'txt_revoke_opt_in_advisor' => __( "Revoke Opt-In Consent for AesirX Privacy Advisor AI", 'aesirx-consent' ),
+      'txt_revoke_consent_for_the_site' => __( "Revoke Consent for the site", 'aesirx-consent' ),
+      'txt_consent_nanagement' => __( "Consent Management", 'aesirx-consent' ),
+      'txt_details' => __( "Details", 'aesirx-consent' )
+  );
+    wp_localize_script( 'aesirx_analytics_repeatable_fields', 'aesirx_analytics_translate', $translation_array );
+    wp_enqueue_script('aesirx_analytics_repeatable_fields');
+  }
+  if ($hook === 'toplevel_page_aesirx-bi-consents' || $hook === 'aesirx-bi_page_aesirx-bi-consents') {
+
+    $options = get_option('aesirx_analytics_plugin_options');
+
+    $protocols = ['http://', 'https://'];
+    $domain = str_replace($protocols, '', site_url());
+    $streams = [['name' => get_bloginfo('name'), 'domain' => $domain]];
+    $endpoint = get_bloginfo('url');
+
+    $manifest = json_decode(
+      file_get_contents(plugin_dir_path(__DIR__) . 'assets-manifest.json', true)
+    );
+
+    if ($manifest->entrypoints->bi->assets) {
+      foreach ($manifest->entrypoints->bi->assets->js as $js) {
+        wp_enqueue_script('aesrix_bi' . md5($js), plugins_url($js, __DIR__), false, '1.0', true);
+      }
+    }
+
+    $clientId = $options['clientid'];
+    $clientSecret = $options['secret'];
+
+    $jwt = '';
+
+    wp_register_script( 'aesrix_bi_window', '', array(), '1.0', false );
+
+    wp_enqueue_script('aesrix_bi_window');
+
+    wp_add_inline_script(
+      'aesrix_bi_window',
+      'window.env = {};
+		  window.aesirxClientID = "' . esc_html($clientId) . '";
+		  window.aesirxClientSecret = "' . esc_html($clientSecret) . '";
+      window.env.REACT_APP_BI_ENDPOINT_URL = "' . esc_url($endpoint) . '";
+		  window.env.REACT_APP_DATA_STREAM = JSON.stringify(' . wp_json_encode($streams) . ');
+		  window.env.PUBLIC_URL= "' . esc_url(plugin_dir_url(__DIR__)) . '";
+      window.env.STORAGE= "internal";
+      ' . htmlspecialchars($jwt, ENT_NOQUOTES),
+    );
   }
 });
 function aesirx_analytics_get_api($url) {

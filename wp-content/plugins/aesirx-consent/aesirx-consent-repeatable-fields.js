@@ -67,173 +67,254 @@ jQuery(document).ready(function ($) {
 
   const textConsent = `
     <p class='mt-0 mb-1 mb-lg-2 text-black fw-semibold'>
-      Manage Your Consent Preferences
+      ${window?.aesirx_analytics_translate?.txt_manage_your_consent}
     </p>
     <p class='mt-0 mb-1 mb-lg-3'>
-     ${
-       $('.aesirx_analytics_consent_template_row #simple-mode').attr('checked')
-         ? `Choose how we use your data: “Reject” data collection, allow tracking [“Consent”].`
-         : `Choose how we use your data: “Reject” data collection, allow tracking [“Consent”], or use “Decentralized Consent” for more control over your personal data & rewards.`
-     }
+      ${
+        $('.aesirx_analytics_consent_template_row #simple-mode').attr('checked')
+          ? `${window?.aesirx_analytics_translate?.txt_choose_how_we_use_simple}`
+          : `${window?.aesirx_analytics_translate?.txt_choose_how_we_use}`
+      }
     </p>
     <div class='mb-1 mb-lg-3'>
       <p class='mb-1 mb-lg-2 text-black'>
-        By consenting, you allow us to collect & use your data for:
+        ${window?.aesirx_analytics_translate?.txt_by_consenting}
       </p>
       <div class='d-flex align-items-start check-line'>
-        <span>
-          <img src='/wp-content/plugins/aesirx-consent/assets/images-plugin/check_circle.svg' width='14px' height='15px'>
-        </span>
+        <span><img src='/wp-content/plugins/aesirx-consent/assets/images-plugin/check_circle.svg' width='14px' height='15px'></span>
         <div class='ms-10px'>
-          <div>Analytics & Behavioral Data: To improve our services & personalize your experience.</div>
+          ${window?.aesirx_analytics_translate?.txt_analytics_behavioral}
         </div>
       </div>
       <div class='d-flex align-items-start check-line'>
-        <span>
-          <img src='/wp-content/plugins/aesirx-consent/assets/images-plugin/check_circle.svg' width='14px' height='15px'>
-        </span>
+        <span><img src='/wp-content/plugins/aesirx-consent/assets/images-plugin/check_circle.svg' width='14px' height='15px'></span>
         <div class='ms-10px'>
-          <div>Form Data: When you contact us.</div>
+          ${window?.aesirx_analytics_translate?.txt_form_data}
         </div>
       </div>
     </div>
     <div>
-      <p class='mb-1 mb-lg-2 text-black'>Please note</p>
+      <p class='mb-1 mb-lg-2 text-black'>${window?.aesirx_analytics_translate?.txt_please_note}</p>
       <div class='d-flex align-items-start check-line'>
-        <span>
-          <img src='/wp-content/plugins/aesirx-consent/assets/images-plugin/check_circle.svg' width='14px' height='15px'>
-        </span>
+        <span><img src='/wp-content/plugins/aesirx-consent/assets/images-plugin/check_circle.svg' width='14px' height='15px'></span>
         <div class='ms-10px'>
-          <div>We do not share your data with third parties without your explicit consent.</div>
+          ${window?.aesirx_analytics_translate?.txt_we_do_not_share}
         </div>
       </div>
       <div class='d-flex align-items-start check-line'>
-        <span>
-          <img src='/wp-content/plugins/aesirx-consent/assets/images-plugin/check_circle.svg' width='14px' height='15px'>
-        </span>
+        <span><img src='/wp-content/plugins/aesirx-consent/assets/images-plugin/check_circle.svg' width='14px' height='15px'></span>
         <div class='ms-10px'>
-          <div>You can opt-in later for specific features without giving blanket consent.</div>
+          ${window?.aesirx_analytics_translate?.txt_you_can_opt_in}
         </div>
       </div>
       <div class='d-flex align-items-start check-line'>
-        <span>
-          <img src='/wp-content/plugins/aesirx-consent/assets/images-plugin/check_circle.svg' width='14px' height='15px'>
-        </span>
+        <span><img src='/wp-content/plugins/aesirx-consent/assets/images-plugin/check_circle.svg' width='14px' height='15px'></span>
         <div class='ms-10px'>
-          For more details, refer to our <a class='text-success fw-semibold text-decoration-underline' href='https://aesirx.io/privacy-policy' target='_blank'>privacy policy.</a>
+          ${window?.aesirx_analytics_translate?.txt_for_more_details}
         </div>
       </div>
     </div>`;
-  const Block = Quill.import('blots/block');
-  const Inline = Quill.import('blots/inline');
-  const Image = Quill.import('formats/image');
-
-  class CustomImage extends Image {
-    static create(value) {
-      let node = super.create();
-      node.setAttribute('src', value.src || value); // Ensure src is set correctly
-      if (value.width) node.setAttribute('width', value.width);
-      if (value.height) node.setAttribute('height', value.height);
-      if (value.class) node.setAttribute('class', value.class);
-      return node;
+  const textDetail = `
+  <p class="mt-0 mb-1 mb-lg-2 text-black fw-semibold">
+    ${window?.aesirx_analytics_translate?.txt_manage_your_consent}
+  </p>
+  <p class="mt-0 mb-1 mb-lg-3">
+    ${
+      $('.aesirx_analytics_consent_template_row #simple-mode').attr('checked')
+        ? `${window?.aesirx_analytics_translate?.txt_choose_how_we_use_simple}`
+        : `${window?.aesirx_analytics_translate?.txt_choose_how_we_use}`
     }
-
-    static formats(node) {
-      return {
-        src: node.getAttribute('src'), // Ensure src is preserved
-        width: node.getAttribute('width'),
-        height: node.getAttribute('height'),
-        class: node.getAttribute('class'),
-      };
+  </p>
+  <div class="mb-1 mb-lg-3">
+    <p class="mb-1 mb-lg-2 text-black fw-semibold">
+      ${window?.aesirx_analytics_translate?.txt_benefit}
+    </p>
+    <div class="d-flex align-items-start check-line">
+      <span><img src='/wp-content/plugins/aesirx-consent/assets/images-plugin/check_circle.svg' width='14px' height='15px'></span>
+      <div class="ms-10px">
+      ${window?.aesirx_analytics_translate?.txt_control_your_data}
+      </div>
+    </div>
+    <div class="d-flex align-items-start check-line">
+      <span><img src='/wp-content/plugins/aesirx-consent/assets/images-plugin/check_circle.svg' width='14px' height='15px'></span>
+      <div class="ms-10px">
+      ${window?.aesirx_analytics_translate?.txt_earn_rewards}
+      </div>
+    </div>
+    <div class="d-flex align-items-start check-line">
+      <span><img src='/wp-content/plugins/aesirx-consent/assets/images-plugin/check_circle.svg' width='14px' height='15px'></span>
+      <div class="ms-10px">
+      ${window?.aesirx_analytics_translate?.txt_transparent_data}
+      </div>
+    </div>
+  </div>
+  <div class="mb-1 mb-lg-3">
+    <p class="mb-1 mb-lg-2 text-black fw-semibold">
+      ${window?.aesirx_analytics_translate?.txt_understanding_your_privacy}
+    </p>
+    <div class="d-flex align-items-start check-line">
+      <span><img src='/wp-content/plugins/aesirx-consent/assets/images-plugin/check_circle.svg' width='14px' height='15px'></span>
+      <div class="ms-10px">
+        ${window?.aesirx_analytics_translate?.txt_reject_no_data}
+      </div>
+    </div>
+    <div class="d-flex align-items-start check-line">
+      <span><img src='/wp-content/plugins/aesirx-consent/assets/images-plugin/check_circle.svg' width='14px' height='15px'></span>
+      <div class="ms-10px">
+        ${window?.aesirx_analytics_translate?.txt_consent_first_third_party}
+      </div>
+    </div>
+    ${
+      $('.aesirx_analytics_consent_template_row #simple-mode').attr('checked')
+        ? ``
+        : `
+        <div class="d-flex align-items-start check-line">
+          <span><img src='/wp-content/plugins/aesirx-consent/assets/images-plugin/check_circle.svg' width='14px' height='15px'></span>
+          <div class="ms-10px">
+            ${window?.aesirx_analytics_translate?.txt_decentralizered_consent_choose}
+          </div>
+        </div>
+        `
     }
+  </div>
+  `;
 
-    format(name, value) {
-      if (name === 'src' || name === 'width' || name === 'height' || name === 'class') {
-        if (value) {
-          this.domNode.setAttribute(name, value);
-        } else {
-          this.domNode.removeAttribute(name);
+  const textReject = `
+  <p class="mt-0 pt-4 mb-2">
+    ${window?.aesirx_analytics_translate?.txt_you_have_chosen}
+  </p>
+  <p class="mt-2 mb-3">
+    ${window?.aesirx_analytics_translate?.txt_only_anonymized}
+  </p>
+  <div class="d-flex align-items-start check-line">
+    <span><img src='/wp-content/plugins/aesirx-consent/assets/images-plugin/check_circle.svg' width='14px' height='15px'></span>
+    <div class="ms-10px">
+    ${window?.aesirx_analytics_translate?.txt_consent_allow_data}
+    </div>
+  </div>
+  <div class="d-flex align-items-start check-line">
+    <span><img src='/wp-content/plugins/aesirx-consent/assets/images-plugin/check_circle.svg' width='14px' height='15px'></span>
+    <div class="ms-10px">
+    ${window?.aesirx_analytics_translate?.txt_decentralized_consent_allow_data}
+    </div>
+  </div>`;
+  const editors = [
+    {
+      id: 'datastream_consent',
+      inputId: 'aesirx_analytics_datastream_consent',
+      text: textConsent,
+      resetClass: 'reset_consent_button',
+    },
+    {
+      id: 'datastream_detail',
+      inputId: 'aesirx_analytics_datastream_detail',
+      text: textDetail,
+      resetClass: 'reset_detail_button',
+    },
+    {
+      id: 'datastream_reject',
+      inputId: 'aesirx_analytics_datastream_reject',
+      text: textReject,
+      resetClass: 'reset_reject_button',
+    },
+  ];
+  const {
+    ClassicEditor,
+    Essentials,
+    Bold,
+    Italic,
+    Mention,
+    Paragraph,
+    Undo,
+    GeneralHtmlSupport,
+    Image,
+    ImageToolbar,
+    ImageCaption,
+    ImageStyle,
+    ImageResize,
+    LinkImage,
+    SourceEditing,
+    Link,
+    AutoLink,
+  } = CKEDITOR;
+  editors.forEach(({ id, inputId, text, resetClass }) => {
+    // Initialize CKEditor for each editor
+    ClassicEditor.create(document.querySelector(`#${id}`), {
+      licenseKey: 'GPL',
+      toolbar: {
+        items: ['sourceEditing', 'undo', 'redo', '|', 'bold', 'italic', 'link', 'insertImage'],
+      },
+      plugins: [
+        Bold,
+        Essentials,
+        Italic,
+        Mention,
+        Paragraph,
+        Undo,
+        GeneralHtmlSupport,
+        Image,
+        ImageToolbar,
+        ImageCaption,
+        ImageStyle,
+        ImageResize,
+        LinkImage,
+        SourceEditing,
+        Link,
+        AutoLink,
+      ],
+      htmlSupport: {
+        allow: [
+          {
+            name: 'div',
+            attributes: true,
+            classes: true,
+            styles: true,
+          },
+          {
+            name: 'p',
+            attributes: true,
+            classes: true,
+            styles: true,
+          },
+          {
+            name: 'span',
+            attributes: true,
+            classes: true,
+            styles: true,
+          },
+          {
+            name: 'a',
+            attributes: true,
+            classes: true,
+            styles: true,
+          },
+        ],
+      },
+    })
+      .then((editor) => {
+        // Set the initial content if the input field is empty
+        if (!$(`#${inputId}`).val()) {
+          editor.setData(text);
         }
-      } else {
-        super.format(name, value);
-      }
-    }
-  }
-  class CustomParagraph extends Block {
-    static create(value) {
-      let node = super.create();
-      if (value) node.setAttribute('class', value);
-      return node;
-    }
-    static formats(node) {
-      return node.getAttribute('class') || '';
-    }
-    format(name, value) {
-      if (name === 'class') {
-        if (value) {
-          this.domNode.setAttribute('class', value);
-        } else {
-          this.domNode.removeAttribute('class');
-        }
-      } else {
-        super.format(name, value);
-      }
-    }
-  }
-  class CustomDiv extends Block {
-    static create(value) {
-      let node = super.create();
-      if (value) node.setAttribute('class', value);
-      return node;
-    }
-    static formats(node) {
-      return node.getAttribute('class') || '';
-    }
-  }
-  class CustomSpan extends Inline {
-    static create(value) {
-      let node = super.create();
-      if (value) node.setAttribute('class', value);
-      return node;
-    }
-    static formats(node) {
-      return node.getAttribute('class') || '';
-    }
-  }
-  CustomImage.blotName = 'custom-image';
-  CustomImage.tagName = 'img';
-  CustomParagraph.blotName = 'custom-p';
-  CustomParagraph.tagName = 'p';
-  CustomDiv.blotName = 'custom-div';
-  CustomDiv.tagName = 'div';
-  CustomSpan.blotName = 'custom-span';
-  CustomSpan.tagName = 'span';
 
-  Quill.register(CustomImage);
-  Quill.register(CustomDiv);
-  Quill.register(CustomSpan);
-  Quill.register(CustomParagraph);
+        // Listen for changes and update the input field accordingly
+        editor.model.document.on('change:data', () => {
+          let content = editor.getData();
+          content = content.replace(/="([^"]*)"/g, "='$1'");
+          const hasText = content.replace(/(<([^>]+)>)/gi, '').length;
+          $(`#${inputId}`).val(hasText ? content : '');
+        });
 
-  const quill = new Quill('#datastream_consent', {
-    theme: 'snow',
-    formats: ['custom-div', 'custom-span', 'custom-p', 'custom-image'],
-  });
-  if (!$('#aesirx_analytics_datastream_consent').val()) {
-    quill.clipboard.dangerouslyPasteHTML(`${textConsent}`);
-  }
-  quill.on('text-change', () => {
-    let regex = /(<([^>]+)>)/gi;
-    let content = $('.ql-editor').html();
-    var modifiedHtml = content.replace(/"/g, "'");
-    let hasText = !!content.replace(regex, '').length;
-    if (hasText) {
-      $(`#aesirx_analytics_datastream_consent`).val(modifiedHtml);
-    } else {
-      $(`#aesirx_analytics_datastream_consent`).val('');
-    }
-  });
-  $(document).on('click', '.reset_consent_button', function (e) {
-    quill.clipboard.dangerouslyPasteHTML(`${textConsent}`);
-    $(`#aesirx_analytics_datastream_consent`).val('');
+        // Reset content when the reset button is clicked
+        $(document).on('click', `.${resetClass}`, function () {
+          editor.setData(text);
+          $(`#${inputId}`).val('');
+        });
+
+        console.log(`${id} initialized successfully!`);
+      })
+      .catch((error) => {
+        console.error(`Error initializing CKEditor for ${id}:`, error);
+      });
   });
 });

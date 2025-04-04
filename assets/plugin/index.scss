@@ -1,4 +1,4 @@
-@import './quill.snow.css';
+@import './ckeditor5.css';
 #aesirx-consent-blocking-cookies {
   border-radius: 10px;
   background: white;
@@ -176,7 +176,9 @@
             }
           }
         }
-        &.aesirx_analytics_datastream_consent_row {
+        &.aesirx_analytics_datastream_consent_row,
+        &.aesirx_analytics_datastream_detail_row,
+        &.aesirx_analytics_datastream_reject_row {
           margin-bottom: 32px;
           align-items: start;
           width: 100%;
@@ -185,7 +187,7 @@
     }
   }
 }
-#datastream_consent {
+.ck-editor {
   .mb-1 {
     margin-bottom: 4px;
   }
@@ -215,8 +217,24 @@
       margin-bottom: 16px;
     }
   }
+  .check-line {
+    & > img {
+      width: 14px;
+    }
+    & > div {
+      width: calc(100% - 24px);
+    }
+    p {
+      margin-top: 0;
+    }
+  }
+  .text-success {
+    color: #1ab394;
+  }
 }
-.reset_consent_button {
+.reset_consent_button,
+.reset_detail_button,
+.reset_reject_button {
   &.aesirx_btn_success_light {
     margin-top: 10px;
     width: auto;
