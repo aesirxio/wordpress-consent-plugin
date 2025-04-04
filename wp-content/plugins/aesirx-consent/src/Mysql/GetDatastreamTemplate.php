@@ -15,6 +15,8 @@ Class AesirX_Analytics_Get_Datastream_Template extends AesirxAnalyticsMysqlHelpe
             'gtag_id' => $options['datastream_gtag_id'],
             'gtm_id' => $options['datastream_gtm_id'],
             "consent_text" =>  $options['datastream_consent'],
+            "detail_text" =>  $options['datastream_detail'],
+            "reject_text" =>  $options['datastream_reject'],
             'disabled_block_domains' => $disabled_block_domains
         ];
     }
