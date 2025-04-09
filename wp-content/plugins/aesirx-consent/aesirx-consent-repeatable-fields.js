@@ -201,19 +201,19 @@ jQuery(document).ready(function ($) {
   const editors = [
     {
       id: 'datastream_consent',
-      inputId: 'aesirx_analytics_datastream_consent',
+      inputId: 'aesirx_consent_modal_datastream_consent',
       text: textConsent,
       resetClass: 'reset_consent_button',
     },
     {
       id: 'datastream_detail',
-      inputId: 'aesirx_analytics_datastream_detail',
+      inputId: 'aesirx_consent_modal_datastream_detail',
       text: textDetail,
       resetClass: 'reset_detail_button',
     },
     {
       id: 'datastream_reject',
-      inputId: 'aesirx_analytics_datastream_reject',
+      inputId: 'aesirx_consent_modal_datastream_reject',
       text: textReject,
       resetClass: 'reset_reject_button',
     },

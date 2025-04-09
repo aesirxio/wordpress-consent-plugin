@@ -11,7 +11,7 @@ Class AesirX_Analytics_Store_Datastream_Template extends AesirxAnalyticsMysqlHel
         foreach ($params as $key => $value) {
             if (is_string($key)) {
                 $new_value = sanitize_text_field($value);
-                update_option('aesirx_analytics_plugin_options[datastream_' . $key.']', $new_value);
+                update_option('aesirx_consent_modal_plugin_options[datastream_' . $key.']', $new_value);
                 $response[$key] = sanitize_text_field($new_value);
             }
         }

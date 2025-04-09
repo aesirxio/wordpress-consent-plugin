@@ -50,7 +50,7 @@
   cursor: pointer;
   margin: 20px 0 10px auto;
 }
-.settings_page_aesirx-consent-management-plugin {
+.toplevel_page_aesirx-consent-management-plugin {
   ul.description,
   p.description {
     max-width: 800px;
@@ -176,9 +176,9 @@
             }
           }
         }
-        &.aesirx_analytics_datastream_consent_row,
-        &.aesirx_analytics_datastream_detail_row,
-        &.aesirx_analytics_datastream_reject_row {
+        &.aesirx_consent_modal_datastream_consent_row,
+        &.aesirx_consent_modal_datastream_detail_row,
+        &.aesirx_consent_modal_datastream_reject_row {
           margin-bottom: 32px;
           align-items: start;
           width: 100%;
@@ -311,6 +311,13 @@
   }
   .aesirx_consent_info_section {
     width: calc(25% - 20px);
+  }
+}
+.aesirx-cmp_page_aesirx-cmp-modal {
+  .aesirx_consent_wrapper {
+    .form_wrapper {
+      width: 100%;
+    }
   }
 }
 .aesirx_consent_info,

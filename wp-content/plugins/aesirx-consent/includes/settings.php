@@ -44,6 +44,17 @@ add_action('admin_init', function () {
     return $value;
   });
 
+  register_setting('aesirx_consent_modal_plugin_options', 'aesirx_consent_modal_plugin_options', function (
+    $value
+  ) {
+    $valid = true;
+    // Ignore the user's changes and use the old database value.
+    if (!$valid) {
+      $value = get_option('aesirx_consent_modal_plugin_options');
+    }
+    return $value;
+  });
+
   add_settings_section(
     'aesirx_analytics_settings',
     'Aesirx Consent Management',
@@ -54,6 +65,15 @@ add_action('admin_init', function () {
       "' />
       <input id='aesirx_analytics_verify_domain' name='aesirx_analytics_plugin_options[verify_domain]' type='hidden' value='" .esc_attr($options['verify_domain'] ?? '') .
       "' />", aesirx_analytics_escape_html());
+      $manifest = json_decode(
+        file_get_contents(plugin_dir_path(__DIR__) . 'assets-manifest.json', true)
+      );
+
+      if ($manifest->entrypoints->plugin->assets) {
+        foreach ($manifest->entrypoints->plugin->assets->js as $js) {
+          wp_enqueue_script('aesrix_bi' . md5($js), plugins_url($js, __DIR__), false, '1.0', true);
+        }
+      }
     },
     'aesirx_analytics_plugin'
   );
@@ -79,15 +99,6 @@ add_action('admin_init', function () {
         </div>
       ", aesirx_analytics_escape_html());
       echo "</div>";
-        $manifest = json_decode(
-          file_get_contents(plugin_dir_path(__DIR__) . 'assets-manifest.json', true)
-        );
-  
-        if ($manifest->entrypoints->plugin->assets) {
-          foreach ($manifest->entrypoints->plugin->assets->js as $js) {
-            wp_enqueue_script('aesrix_bi' . md5($js), plugins_url($js, __DIR__), false, '1.0', true);
-          }
-        }
     },
     'aesirx_analytics_plugin',
     'aesirx_analytics_settings',
@@ -249,14 +260,29 @@ add_action('admin_init', function () {
       'class' => 'aesirx_analytics_plugin_options_datastream_gtm_id_general',
     ]
   );
+  add_settings_section(
+    'aesirx_consent_modal_settings',
+    'Consent Modal Management',
+    function () {
+      $manifest = json_decode(
+        file_get_contents(plugin_dir_path(__DIR__) . 'assets-manifest.json', true)
+      );
 
+      if ($manifest->entrypoints->plugin->assets) {
+        foreach ($manifest->entrypoints->plugin->assets->js as $js) {
+          wp_enqueue_script('aesrix_bi' . md5($js), plugins_url($js, __DIR__), false, '1.0', true);
+        }
+      }
+    },
+    'aesirx_consent_modal_plugin'
+  );
   add_settings_field(
-    'aesirx_analytics_datastream_consent',
+    'aesirx_consent_modal_datastream_consent',
     esc_html__('Customize Consent Text ', 'aesirx-consent'),
     function () {
-      $options = get_option('aesirx_analytics_plugin_options', []);
+      $options = get_option('aesirx_consent_modal_plugin_options', []);
       $decodedHtml = html_entity_decode($options['datastream_consent'], ENT_QUOTES, 'UTF-8');
-      echo wp_kses('<input id="aesirx_analytics_datastream_consent" class="aesirx_consent_input" name="aesirx_analytics_plugin_options[datastream_consent]" type="hidden" 
+      echo wp_kses('<input id="aesirx_consent_modal_datastream_consent" class="aesirx_consent_input" name="aesirx_consent_modal_plugin_options[datastream_consent]" type="hidden" 
       value="'.esc_attr($options['datastream_consent']).'" />', aesirx_analytics_escape_html());
       echo wp_kses('
       <div id="datastream_consent">
@@ -268,20 +294,20 @@ add_action('admin_init', function () {
         '.esc_html__("Reset Consent", 'aesirx-consent').'
       </button>', aesirx_analytics_escape_html());
     },
-    'aesirx_analytics_plugin',
-    'aesirx_analytics_settings',
+    'aesirx_consent_modal_plugin',
+    'aesirx_consent_modal_settings',
     [
-      'class' => 'aesirx_analytics_datastream_consent_row',
+      'class' => 'aesirx_consent_modal_datastream_consent_row',
     ]
   );
 
   add_settings_field(
-    'aesirx_analytics_datastream_detail',
+    'aesirx_consent_modal_datastream_detail',
     esc_html__('Customize Detail Text ', 'aesirx-consent'),
     function () {
-      $options = get_option('aesirx_analytics_plugin_options', []);
+      $options = get_option('aesirx_consent_modal_plugin_options', []);
       $decodedHtml = html_entity_decode($options['datastream_detail'], ENT_QUOTES, 'UTF-8');
-      echo wp_kses('<input id="aesirx_analytics_datastream_detail" class="aesirx_consent_input" name="aesirx_analytics_plugin_options[datastream_detail]" type="hidden" 
+      echo wp_kses('<input id="aesirx_consent_modal_datastream_detail" class="aesirx_consent_input" name="aesirx_consent_modal_plugin_options[datastream_detail]" type="hidden" 
       value="'.esc_attr($options['datastream_detail']).'" />', aesirx_analytics_escape_html());
       echo wp_kses('
       <div id="datastream_detail">
@@ -293,20 +319,20 @@ add_action('admin_init', function () {
         '.esc_html__("Reset Detail", 'aesirx-consent').'
       </button>', aesirx_analytics_escape_html());
     },
-    'aesirx_analytics_plugin',
-    'aesirx_analytics_settings',
+    'aesirx_consent_modal_plugin',
+    'aesirx_consent_modal_settings',
     [
-      'class' => 'aesirx_analytics_datastream_detail_row',
+      'class' => 'aesirx_consent_modal_datastream_detail_row',
     ]
   );
 
   add_settings_field(
-    'aesirx_analytics_datastream_reject',
+    'aesirx_consent_modal_datastream_reject',
     esc_html__('Customize Reject Text ', 'aesirx-consent'),
     function () {
-      $options = get_option('aesirx_analytics_plugin_options', []);
+      $options = get_option('aesirx_consent_modal_plugin_options', []);
       $decodedHtml = html_entity_decode($options['datastream_reject'], ENT_QUOTES, 'UTF-8');
-      echo wp_kses('<input id="aesirx_analytics_datastream_reject" class="aesirx_consent_input" name="aesirx_analytics_plugin_options[datastream_reject]" type="hidden" 
+      echo wp_kses('<input id="aesirx_consent_modal_datastream_reject" class="aesirx_consent_input" name="aesirx_consent_modal_plugin_options[datastream_reject]" type="hidden" 
       value="'.esc_attr($options['datastream_reject']).'" />', aesirx_analytics_escape_html());
       echo wp_kses('
       <div id="datastream_reject">
@@ -318,10 +344,10 @@ add_action('admin_init', function () {
         '.esc_html__("Reset Reject", 'aesirx-consent').'
       </button>', aesirx_analytics_escape_html());
     },
-    'aesirx_analytics_plugin',
-    'aesirx_analytics_settings',
+    'aesirx_consent_modal_plugin',
+    'aesirx_consent_modal_settings',
     [
-      'class' => 'aesirx_analytics_datastream_reject_row',
+      'class' => 'aesirx_consent_modal_datastream_reject_row',
     ]
   );
 
@@ -663,9 +689,9 @@ add_action('admin_init', function () {
 });
 
 add_action('admin_menu', function () {
-  add_options_page(
-    esc_html__('Aesirx Consent Management', 'aesirx-consent'),
-    esc_html__('Aesirx Consent Management', 'aesirx-consent'),
+  add_menu_page(
+    'AesirX CMP',
+    'AesirX CMP',
     'manage_options',
     'aesirx-consent-management-plugin',
     function () {
@@ -698,10 +724,23 @@ add_action('admin_menu', function () {
         do_settings_sections('aesirx_signup_modal');
         echo '</div>';
         echo '</div>';
-    }
+    },
+    plugins_url( 'aesirx-consent/assets/images-plugin/AesirX_BI_icon.png'),
+    3
   );
-
-  add_menu_page(
+  add_submenu_page(
+    'aesirx-consent-management-plugin',
+    'Consent Shield',
+    'Consent Shield',
+    'manage_options',
+    'aesirx-consent-management-plugin',
+    function () {
+      ?><?php
+    },
+    3
+  );
+  add_submenu_page(
+    'aesirx-consent-management-plugin',
     'Consent Log',
     'Consent Log',
     'manage_options',
@@ -709,15 +748,47 @@ add_action('admin_menu', function () {
     function () {
       ?><div id="biapp" class="aesirxui"></div><?php
     },
-    plugins_url( 'aesirx-consent/assets/images-plugin/AesirX_BI_icon.png'),
     3
   );
-});
+  add_submenu_page(
+    'aesirx-consent-management-plugin',
+    'Consent Modal',
+    'Consent Modal',
+    'manage_options',
+    'aesirx-cmp-modal',
+    function () {
+      ?>
+      <h2 class="aesirx_heading">Consent Modal Management</h2>
+      <div class="aesirx_consent_wrapper">
+      <div class="form_wrapper">
+        <form action="options.php" method="post">
+          <?php
+            settings_fields('aesirx_consent_modal_plugin_options');
+
+            do_settings_sections('aesirx_consent_modal_plugin');
+            wp_nonce_field('aesirx_analytics_settings_save', 'aesirx_analytics_settings_nonce');
+          ?>
+          <button type="submit" class="submit_button aesirx_btn_success">
+            <?php
+              echo wp_kses("
+                <img width='20px' height='20px' src='". plugins_url( 'aesirx-consent/assets/images-plugin/save_icon.png')."' />
+                ".esc_html__("Save settings", 'aesirx-consent')."
+              ", aesirx_analytics_escape_html()); 
+            ?>
+          </button>
+        </form>
+      </div>
+			<?php
+        echo '</div>';
+    },
+    3);
+  
+  });
 
 add_action('admin_enqueue_scripts', function ($hook) {
-  if ($hook === 'settings_page_aesirx-consent-management-plugin') {
+  if ($hook === 'toplevel_page_aesirx-consent-management-plugin' || $hook === "aesirx-cmp_page_aesirx-cmp-modal") {
     wp_enqueue_script('aesirx_analytics_ckeditor', plugins_url('assets/vendor/aesirx-consent-ckeditor.js', __DIR__), array('jquery'), true, true);
-    wp_register_script('aesirx_analytics_repeatable_fields', plugins_url('assets/vendor/aesirx-consent-repeatable-fields.js', __DIR__), array('jquery'), true, true);
+    wp_register_script('aesirx_analytics_repeatable_fields', plugins_url('assets/vendor/aesirx-consent-repeatable-fields.js', __DIR__), array('jquery'), false, true);
     $translation_array = array(
       'txt_shield_of_privacy' => __( 'Shield of Privacy', 'aesirx-consent' ),
       'txt_you_can_revoke' => __( 'Revoke your consent for data use whenever you wish.', 'aesirx-consent' ),
@@ -786,7 +857,7 @@ add_action('admin_enqueue_scripts', function ($hook) {
     wp_localize_script( 'aesirx_analytics_repeatable_fields', 'aesirx_analytics_translate', $translation_array );
     wp_enqueue_script('aesirx_analytics_repeatable_fields');
   }
-  if ($hook === 'toplevel_page_aesirx-bi-consents' || $hook === 'aesirx-bi_page_aesirx-bi-consents') {
+  if ($hook === 'aesirx-cmp_page_aesirx-bi-consents' || $hook === 'aesirx-bi_page_aesirx-bi-consents') {
 
     $options = get_option('aesirx_analytics_plugin_options');
 
