@@ -2,9 +2,8 @@
 
 use AesirxAnalytics\AesirxAnalyticsMysqlHelper;
 
-include_once plugin_dir_path( __FILE__ ) . 'GetVisitorConsentList.php';
 
-class AesirX_Analytics_Add_Consent_Level1 extends AesirxAnalyticsMysqlHelper {
+class AesirX_Analytics_Add_Consent_Level5 extends AesirxAnalyticsMysqlHelper {
 	/**
 	 * Executes analytics MySQL query and processes visitor consent.
 	 * This function handles the execution of a MySQL query to retrieve visitor consent data,
