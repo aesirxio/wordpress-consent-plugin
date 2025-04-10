@@ -80,13 +80,12 @@ class AesirX_Analytics_Get_All_Consents extends AesirxAnalyticsMysqlHelper {
 
 			$collection[] = (object) [
 				'uuid'       => $uuid,
-				'tier'       => $one->tier,
+				'tier'       => !empty($one->level) ? $one->level : 1,
 				'web3id'     => $one->web3id,
 				'consent'    => $one->consent,
 				'datetime'   => $one->datetime,
 				'expiration' => isset( $one->expiration ) ? $one->expiration : null,
 				'wallet'     => $wallet,
-				'level'      => $one->level,
 			];
 		}
 
