@@ -16,7 +16,7 @@ Class AesirX_Analytics_Get_Total_Consent_Tier extends AesirxAnalyticsMysqlHelper
             "SELECT 
             ROUND(COUNT(visitor_consent.uuid) / 2) AS total, 
             CASE 
-            WHEN visitor_consent.consent_uuid IS NULL THEN 1 
+            WHEN visitor_consent.tier = '5' THEN 5
             WHEN consent.web3id IS NOT NULL AND consent.wallet_uuid IS NOT NULL THEN 4 
             WHEN consent.web3id IS NULL AND consent.wallet_uuid IS NOT NULL THEN 3 
             WHEN consent.web3id IS NOT NULL AND consent.wallet_uuid IS NULL THEN 2 
@@ -30,6 +30,7 @@ Class AesirX_Analytics_Get_Total_Consent_Tier extends AesirxAnalyticsMysqlHelper
         $total_sql =
             "SELECT 
             COUNT(DISTINCT CASE 
+            WHEN visitor_consent.tier = '5' THEN 5
             WHEN visitor_consent.consent_uuid IS NULL THEN 1 
             WHEN consent.web3id IS NOT NULL AND consent.wallet_uuid IS NOT NULL THEN 4 
             WHEN consent.web3id IS NULL AND consent.wallet_uuid IS NOT NULL THEN 3 
