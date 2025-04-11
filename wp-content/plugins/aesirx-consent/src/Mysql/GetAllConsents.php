@@ -25,6 +25,7 @@ Class AesirX_Analytics_Get_All_Consents extends AesirxAnalyticsMysqlHelper
             wallet.address AS address, 
             wallet.network AS network, 
             CASE 
+            WHEN visitor_consent.tier = '5' THEN 5
             WHEN visitor_consent.consent_uuid IS NULL THEN 1 
             WHEN consent.web3id IS NOT NULL AND consent.wallet_uuid IS NOT NULL THEN 4 
             WHEN consent.web3id IS NULL AND consent.wallet_uuid IS NOT NULL THEN 3 
