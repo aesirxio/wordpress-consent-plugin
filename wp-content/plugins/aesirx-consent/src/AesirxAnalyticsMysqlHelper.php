@@ -48,7 +48,7 @@ if (!class_exists('AesirxAnalyticsMysqlHelper')) {
                         if (!empty($collection)) {
                             $collection = array_map(function ($row) {
                                 foreach ($row as $key => $value) {
-                                    if ( in_array($key, ['total', 'total_visitor', 'unique_visitor', 'total_number_of_visitors'], true) ) {
+                                    if ( in_array($key, ['total', 'total_visitor', 'unique_visitor', 'total_number_of_visitors', 'tier'], true) ) {
                                         $row[$key] = absint($row[$key]);
                                     }
                                 }
@@ -68,7 +68,7 @@ if (!class_exists('AesirxAnalyticsMysqlHelper')) {
                     if (!empty($collection)) {
                         $collection = array_map(function ($row) {
                             foreach ($row as $key => $value) {
-                                if ( in_array($key, ['total', 'total_visitor', 'unique_visitor', 'total_number_of_visitors'], true) ) {
+                                if ( in_array($key, ['total', 'total_visitor', 'unique_visitor', 'total_number_of_visitors', 'tier'], true) ) {
                                     $row[$key] = absint($row[$key]);
                                 }
                             }
@@ -738,7 +738,7 @@ if (!class_exists('AesirxAnalyticsMysqlHelper')) {
             }
         }
     
-        function aesirx_analytics_add_visitor_consent($visitor_uuid, $consent_uuid = null, $consent = null, $datetime = null, $expiration = null, $params = []) {
+        function aesirx_analytics_add_visitor_consent($visitor_uuid, $consent_uuid = null, $consent = null, $datetime = null, $expiration = null, $params = [], $tier = "level1") {
             global $wpdb;
     
             $data = array(
@@ -764,6 +764,20 @@ if (!class_exists('AesirxAnalyticsMysqlHelper')) {
             // Conditionally add expiration
             if (!empty($expiration)) {
                 $data['expiration'] = $expiration;
+            }
+
+            if (!empty($tier)) {
+                switch ($tier) {
+                    case "level1":
+                        $data['tier'] = 1;
+                        break;
+                    case "level5":
+                        $data['tier'] = 5;
+                        break;
+                    default:
+                        $data['tier'] = 1;
+                        break;
+                }
             }
             
             // Prepare the data types based on the keys
