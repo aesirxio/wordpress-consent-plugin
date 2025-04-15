@@ -82,31 +82,34 @@ msgstr "Domæne ikke fundet"
 #: src/AesirxAnalyticsMysqlHelper.php:670
 #: src/AesirxAnalyticsMysqlHelper.php:697
 #: src/AesirxAnalyticsMysqlHelper.php:737
-#: src/AesirxAnalyticsMysqlHelper.php:1063
+#: src/AesirxAnalyticsMysqlHelper.php:1077
 #: src/Mysql/GetVisitorConsentList.php:60
 msgid "There was a problem with the database query."
 msgstr "Der var et problem med databaseforespørgslen."
 
-#: src/AesirxAnalyticsMysqlHelper.php:889
-#: src/AesirxAnalyticsMysqlHelper.php:908
-#: src/AesirxAnalyticsMysqlHelper.php:928
-#: src/AesirxAnalyticsMysqlHelper.php:1266
+#: src/AesirxAnalyticsMysqlHelper.php:903
+#: src/AesirxAnalyticsMysqlHelper.php:922
+#: src/AesirxAnalyticsMysqlHelper.php:942
+#: src/AesirxAnalyticsMysqlHelper.php:1280
 msgid "Something went wrong"
 msgstr "Noget gik galt"
 
-#: src/AesirxAnalyticsMysqlHelper.php:989
+#: src/AesirxAnalyticsMysqlHelper.php:1003
 msgid "There was a problem updating the data in the database."
 msgstr "Der opstod et problem med at opdatere dataene i databasen."
 
 #: src/Mysql/AddConsentLevel1.php:23
+#: src/Mysql/AddConsentLevel5.php:23
 msgid "The uuid parameter is required."
 msgstr "Uuid-parameteren er påkrævet."
 
 #: src/Mysql/AddConsentLevel1.php:27
+#: src/Mysql/AddConsentLevel5.php:27
 msgid "The consent parameter is required and must be a number."
 msgstr "Samtykkeparameteren er påkrævet og skal være et tal."
 
 #: src/Mysql/AddConsentLevel1.php:53
+#: src/Mysql/AddConsentLevel5.php:53
 msgid "Previous consent was not expired"
 msgstr "Det tidligere samtykke var ikke udløbet"
 
@@ -597,7 +600,7 @@ msgstr "Din licens er udløbet eller ikke fundet. Opdater venligst din licens p�
 msgid "Your free trials has ended. Please update your license. <a href='%1$s' target='_blank'>%1$s</a>."
 msgstr "Din gratis prøveperiode er udløbet. Opdater venligst din licens. <a href='%1$s' target='_blank'>%1$s</a>."
 
-#: src/AesirxAnalyticsMysqlHelper.php:828
+#: src/AesirxAnalyticsMysqlHelper.php:842
 msgid "Could not insert consent"
 msgstr "Samtykke kunne ikke indsættes"
 
