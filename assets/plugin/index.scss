@@ -50,7 +50,8 @@
   cursor: pointer;
   margin: 20px 0 10px auto;
 }
-.toplevel_page_aesirx-consent-management-plugin {
+.toplevel_page_aesirx-consent-management-plugin,
+.aesirx-cmp_page_aesirx-cmp-modal {
   ul.description,
   p.description {
     max-width: 800px;
@@ -80,6 +81,14 @@
           width: 100%;
           padding: 0;
         }
+      }
+    }
+  }
+}
+.toplevel_page_aesirx-consent-management-plugin {
+  table {
+    tbody {
+      tr {
         &.aesirx_analytics_clientid_row,
         &.aesirx_analytics_secret_row,
         &.aesirx_analytics_license_row {
@@ -92,47 +101,13 @@
         &.aesirx_analytics_license_row {
           padding-right: 0;
         }
-        &.aesirx_analytics_consent_template_row {
-          margin-top: 40px;
-          margin-bottom: 50px;
-          .aesirx_consent_template {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            .aesirx_consent_template_item {
-              width: calc(50% - 20px);
-              img {
-                box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.25);
-                width: 100%;
-                height: auto;
-                border-radius: 12px;
-              }
-              &.active {
-                img {
-                  border: 1px solid rgba(26, 179, 148, 0.6);
-                }
-                p {
-                  color: #1ab394;
-                }
-              }
-              input {
-                display: none;
-              }
-            }
-            p {
-              font-size: 14px;
-              &.title {
-                font-size: 16px;
-              }
-            }
-          }
-        }
         &.aesirx_analytics_plugin_options_datastream_gtag_id_row,
         &.aesirx_analytics_plugin_options_datastream_gtm_id_row {
           width: calc(33% - 25px);
           display: flex;
           flex-wrap: wrap;
           padding-right: 40px;
+          margin-top: 40px;
           input {
             width: 100%;
           }
@@ -172,6 +147,49 @@
                   padding-bottom: 0;
                   margin-bottom: 0;
                 }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.aesirx-cmp_page_aesirx-cmp-modal {
+  table {
+    tbody {
+      tr {
+        &.aesirx_analytics_consent_template_row {
+          margin-bottom: 50px;
+          .aesirx_consent_template {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            .aesirx_consent_template_item {
+              width: calc(50% - 20px);
+              img {
+                box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.25);
+                width: 100%;
+                height: auto;
+                border-radius: 12px;
+              }
+              &.active {
+                img {
+                  border: 1px solid rgba(26, 179, 148, 0.6);
+                }
+                p {
+                  color: #1ab394;
+                }
+              }
+              input {
+                display: none;
+              }
+            }
+            p {
+              font-size: 14px;
+              &.title {
+                font-size: 16px;
               }
             }
           }
@@ -313,7 +331,9 @@
     width: calc(25% - 20px);
   }
 }
-.aesirx-cmp_page_aesirx-cmp-modal {
+
+.aesirx-cmp_page_aesirx-cmp-modal,
+.aesirx-cmp_page_aesirx-cmp-gpc {
   .aesirx_consent_wrapper {
     .form_wrapper {
       width: 100%;
@@ -549,18 +569,45 @@ input.aesirx_consent_input {
     }
   }
 }
-.aesirx_analytics_gpc_row {
+
+.aesirx_consent_gpc_consent_row {
   margin-top: 10px;
-  .gpc_support_section {
+  .gpc_consent_section {
+    display: flex;
+    align-items: start;
+    margin: 5px 0;
+  }
+  .radio_wrapper {
+    width: 50%;
+    margin-right: 20px;
+    align-items: start;
+    input {
+      margin-top: 2px;
+      margin-bottom: 0;
+    }
+    p {
+      margin-top: 0;
+      &.small-description {
+        display: block;
+      }
+    }
+  }
+}
+.aesirx_analytics_gpc_row,
+.aesirx_consent_gpc_consent_donotsell_row {
+  margin-top: 10px;
+  .gpc_support_section,
+  .gpc_consent_donotsell_section {
     display: flex;
     align-items: center;
-    margin: 10px 0;
+    margin: 5px 0;
   }
   .radio_wrapper {
     width: 30%;
     margin-right: 20px;
     input {
       margin-top: 0;
+      margin-bottom: 0;
     }
     p {
       margin-top: 0;

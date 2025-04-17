@@ -146,7 +146,10 @@ add_action('wp_enqueue_scripts', function (): void {
 
     $clientId = $options['clientid'] ?? '';
     $secret = $options['secret'] ?? '';
-    $disableGPCSupport = $options['gpc_support'] === 'no' ? "true" : "false";
+    $optionsGPC = get_option('aesirx_consent_gpc_plugin_options', []);
+    $disableGPCSupport = $optionsGPC['gpc_support'] === 'no' ? "true" : "false";
+    $configConsentGPC = $optionsGPC['gpc_consent'] === 'opt-out' ? "true" : "false";
+    $configConsentGPCDoNotSell = $optionsGPC['gpc_consent_donotsell'] === 'true' ? "true" : "false";
 
     wp_add_inline_script(
         'aesirx-consent',
@@ -155,7 +158,9 @@ add_action('wp_enqueue_scripts', function (): void {
         window.aesirxClientSecret="' . esc_attr($secret) . '";
         window.disableGPCsupport="' . esc_attr($disableGPCSupport) . '";
         window.blockJSDomains=' . $blockingCookiesJSON . ';
-        window.aesirxTrackEcommerce="' . esc_attr($trackEcommerce) . '";',
+        window.aesirxTrackEcommerce="' . esc_attr($trackEcommerce) . '";
+        window.aesirxOptOutMode="' . esc_attr($configConsentGPC) . '";
+        window.aesirxOptOutDoNotSell="' . esc_attr($configConsentGPCDoNotSell) . '";',
         'before');
 });
 

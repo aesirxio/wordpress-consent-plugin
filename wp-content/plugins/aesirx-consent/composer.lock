@@ -400,12 +400,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/aesirxio/aesirx-analytics-lib.git",
-                "reference": "b88086dd48d975807a0c4374dee48b50685e94c6"
+                "reference": "bd689f054d5cd09371e595dddbac6620b65cc470"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aesirxio/aesirx-analytics-lib/zipball/b88086dd48d975807a0c4374dee48b50685e94c6",
-                "reference": "b88086dd48d975807a0c4374dee48b50685e94c6",
+                "url": "https://api.github.com/repos/aesirxio/aesirx-analytics-lib/zipball/bd689f054d5cd09371e595dddbac6620b65cc470",
+                "reference": "bd689f054d5cd09371e595dddbac6620b65cc470",
                 "shasum": ""
             },
             "require": {
