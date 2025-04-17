@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: AesirX Consent 1.5.0\n"
+"Project-Id-Version: AesirX Consent 1.6.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/aesirx-consent\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -849,124 +849,124 @@ msgstr "Đảm bảo tệp có thể truy cập bằng cách truy cập: <a href
 
 #: includes/settings.php:317
 msgid "Customize Detail Text "
-msgstr ""
+msgstr "Tùy chỉnh Văn bản Chi tiết"
 
 #: includes/settings.php:330
 msgid "Reset Detail"
-msgstr ""
+msgstr "Đặt lại Chi tiết"
 
 #: includes/settings.php:342
 msgid "Customize Reject Text "
-msgstr ""
+msgstr "Tùy chỉnh Văn bản Từ chối"
 
 #: includes/settings.php:355
 msgid "Reset Reject"
-msgstr ""
+msgstr "Đặt lại Từ chối"
 
 #: aesirx-consent.php:102
 msgid "Customize"
-msgstr ""
+msgstr "Tùy chỉnh"
 
 #: aesirx-consent.php:103
 msgid "Save"
-msgstr ""
+msgstr "Lưu"
 
 #: aesirx-consent.php:104
 msgid "Always active"
-msgstr ""
+msgstr "Luôn hoạt động"
 
 #: aesirx-consent.php:105
 msgid "Domain/Path-Based"
-msgstr ""
+msgstr "Dựa trên Tên miền/Đường dẫn"
 
 #: aesirx-consent.php:106
 msgid "Third-Party Plugins"
-msgstr ""
+msgstr "Plugin của Bên thứ ba"
 
 #: aesirx-consent.php:107
 msgid "Essential Tracking"
-msgstr ""
+msgstr "Theo dõi Thiết yếu"
 
 #: aesirx-consent.php:108
 msgid "Required for the website to function (e.g, session cookies, security tracking)."
-msgstr ""
+msgstr "Bắt buộc để trang web hoạt động (ví dụ: cookie phiên, theo dõi bảo mật)."
 
 #: aesirx-consent.php:109
 msgid "Functional Tracking"
-msgstr ""
+msgstr "Theo dõi Chức năng"
 
 #: aesirx-consent.php:110
 msgid "User preferencese & site enhancements (e.g, language setting, live chat)."
-msgstr ""
+msgstr "Tùy chọn của Người dùng & cải tiến trang web (ví dụ: cài đặt ngôn ngữ, trò chuyện trực tiếp)."
 
 #: aesirx-consent.php:111
 msgid "Analytics Tracking"
-msgstr ""
+msgstr "Theo dõi Phân tích"
 
 #: aesirx-consent.php:112
 msgid "Visitor behavior monitoring (e.g, Google Analytics, Matomo)."
-msgstr ""
+msgstr "Theo dõi hành vi của Khách truy cập (ví dụ: Google Analytics, Matomo)."
 
 #: aesirx-consent.php:113
 msgid "Advertising Tracking"
-msgstr ""
+msgstr "Theo dõi Quảng cáo"
 
 #: aesirx-consent.php:114
 msgid "Targeted advertising & remarketing (e.g, Facebook Pixel, Google Ads)."
-msgstr ""
+msgstr "Quảng cáo & tiếp thị lại có mục tiêu (ví dụ: Facebook Pixel, Google Ads)."
 
 #: aesirx-consent.php:115
 msgid "Custom Tracking"
-msgstr ""
+msgstr "Theo dõi Tùy chỉnh"
 
 #: aesirx-consent.php:116
 msgid "Any additional third-party integrations (e.g, customer support tools, CDNS)."
-msgstr ""
+msgstr "Bất kỳ tích hợp nào của bên thứ ba bổ sung (ví dụ: công cụ hỗ trợ khách hàng, CDNS)."
 
 #: aesirx-consent.php:117
 msgid "Opt-Out of tracking"
-msgstr ""
+msgstr "Từ chối theo dõi"
 
 #: aesirx-consent.php:118
 msgid "This website uses tracking by default. You may opt out at any time."
-msgstr ""
+msgstr "Trang web này sử dụng theo dõi theo mặc định. Bạn có thể từ chối bất kỳ lúc nào."
 
 #: aesirx-consent.php:119
 msgid "Do Not Sell or Share My Personal Information (CCPA)"
-msgstr ""
+msgstr "Không Bán hoặc Chia sẻ Thông tin Cá nhân của Tôi (CCPA)"
 
 #: aesirx-consent.php:120
 msgid "Disables third-party data sharing for California users."
-msgstr ""
+msgstr "Vô hiệu hóa việc chia sẻ dữ liệu của bên thứ ba đối với người dùng California."
 
 #: includes/settings.php:552
 msgid "Configurable Consent Logic"
-msgstr ""
+msgstr "Logic đồng ý có thể cấu hình"
 
 #: includes/settings.php:565
 msgid "Opt-In Mode (EU)"
-msgstr ""
+msgstr "Chế độ chọn tham gia (EU)"
 
 #: includes/settings.php:566
 msgid "No tracking technologies are activated until a user explicitly gives consent. This is required by <strong>GDPR</strong> and <strong>ePrivacy Directive 5(3)</strong>."
-msgstr ""
+msgstr "Không có công nghệ theo dõi nào được kích hoạt cho đến khi người dùng đồng ý rõ ràng. Điều này được yêu cầu bởi <strong>GDPR</strong> và <strong>Chỉ thị ePrivacy 5(3)</strong>."
 
 #: includes/settings.php:574
 msgid "Opt-Out Mode (California)"
-msgstr ""
+msgstr "Chế độ chọn không tham gia (California)"
 
 #: includes/settings.php:575
 msgid "Tracking is allowed by default, but users must be able to opt out easily. This aligns with <strong>CCPA</strong> and similar U.S. privacy frameworks."
-msgstr ""
+msgstr "Theo mặc định, việc theo dõi được phép, nhưng người dùng phải có thể dễ dàng chọn không tham gia. Điều này phù hợp với <strong>CCPA</strong> và các khuôn khổ quyền riêng tư tương tự của Hoa Kỳ."
 
 #: includes/settings.php:606
 msgid "Do not sell or share options"
-msgstr ""
+msgstr "Không bán hoặc chia sẻ các tùy chọn"
 
 #: includes/settings.php:619
 msgid "Yes"
-msgstr ""
+msgstr "Có"
 
 #: includes/settings.php:627
 msgid "No"
-msgstr ""
+msgstr "Không"

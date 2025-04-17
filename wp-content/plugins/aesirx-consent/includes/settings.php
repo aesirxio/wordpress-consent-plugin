@@ -902,13 +902,13 @@ add_action('admin_menu', function () {
 
   add_submenu_page(
     'aesirx-consent-management-plugin',
-    'Global Privacy Control',
-    'Global Privacy Control',
+    'Consent Logic',
+    'Consent Logic',
     'manage_options',
     'aesirx-cmp-gpc',
     function () {
       ?>
-      <h2 class="aesirx_heading">Global Privacy Control</h2>
+      <h2 class="aesirx_heading">Consent Logic</h2>
       <div class="aesirx_consent_wrapper">
       <div class="form_wrapper">
         <form action="options.php" method="post">

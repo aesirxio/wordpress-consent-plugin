@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: AesirX Consent 1.5.0\n"
+"Project-Id-Version: AesirX Consent 1.6.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/aesirx-consent\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -865,108 +865,108 @@ msgstr "Zresetuj Odrzuć"
 
 #: aesirx-consent.php:102
 msgid "Customize"
-msgstr ""
+msgstr "Dostosuj"
 
 #: aesirx-consent.php:103
 msgid "Save"
-msgstr ""
+msgstr "Zapisz"
 
 #: aesirx-consent.php:104
 msgid "Always active"
-msgstr ""
+msgstr "Zawsze aktywne"
 
 #: aesirx-consent.php:105
 msgid "Domain/Path-Based"
-msgstr ""
+msgstr "Domena/ścieżka oparta"
 
 #: aesirx-consent.php:106
 msgid "Third-Party Plugins"
-msgstr ""
+msgstr "Wtyczki innych firm"
 
 #: aesirx-consent.php:107
 msgid "Essential Tracking"
-msgstr ""
+msgstr "Podstawowe śledzenie"
 
 #: aesirx-consent.php:108
 msgid "Required for the website to function (e.g, session cookies, security tracking)."
-msgstr ""
+msgstr "Wymagane do działania witryny (np. pliki cookie sesji, śledzenie bezpieczeństwa)."
 
 #: aesirx-consent.php:109
 msgid "Functional Tracking"
-msgstr ""
+msgstr "Śledzenie funkcjonalne"
 
 #: aesirx-consent.php:110
 msgid "User preferencese & site enhancements (e.g, language setting, live chat)."
-msgstr ""
+msgstr "Preferencje użytkownika i ulepszenia witryny (np. ustawienia języka, czat na żywo)."
 
 #: aesirx-consent.php:111
 msgid "Analytics Tracking"
-msgstr ""
+msgstr "Śledzenie analityczne"
 
 #: aesirx-consent.php:112
 msgid "Visitor behavior monitoring (e.g, Google Analytics, Matomo)."
-msgstr ""
+msgstr "Monitorowanie zachowań odwiedzających (np. Google Analytics, Matomo)."
 
 #: aesirx-consent.php:113
 msgid "Advertising Tracking"
-msgstr ""
+msgstr "Śledzenie reklam"
 
 #: aesirx-consent.php:114
 msgid "Targeted advertising & remarketing (e.g, Facebook Pixel, Google Ads)."
-msgstr ""
+msgstr "Reklama ukierunkowana i remarketing (np. Facebook Pixel, Google Ads)."
 
 #: aesirx-consent.php:115
 msgid "Custom Tracking"
-msgstr ""
+msgstr "Śledzenie niestandardowe"
 
 #: aesirx-consent.php:116
 msgid "Any additional third-party integrations (e.g, customer support tools, CDNS)."
-msgstr ""
+msgstr "Wszelkie dodatkowe integracje innych firm (np. narzędzia obsługi klienta, CDNS)."
 
 #: aesirx-consent.php:117
 msgid "Opt-Out of tracking"
-msgstr ""
+msgstr "Rezygnacja ze śledzenia"
 
 #: aesirx-consent.php:118
 msgid "This website uses tracking by default. You may opt out at any time."
-msgstr ""
+msgstr "Ta witryna domyślnie używa śledzenia. Możesz zrezygnować w dowolnym momencie."
 
 #: aesirx-consent.php:119
 msgid "Do Not Sell or Share My Personal Information (CCPA)"
-msgstr ""
+msgstr "Nie sprzedawaj ani nie udostępniaj moich danych osobowych (CCPA)"
 
 #: aesirx-consent.php:120
 msgid "Disables third-party data sharing for California users."
-msgstr ""
+msgstr "Wyłącza udostępnianie danych stronom trzecim dla użytkowników z Kalifornii."
 
 #: includes/settings.php:552
 msgid "Configurable Consent Logic"
-msgstr ""
+msgstr "Konfigurowalna logika zgody"
 
 #: includes/settings.php:565
 msgid "Opt-In Mode (EU)"
-msgstr ""
+msgstr "Tryb Opt-In (UE)"
 
 #: includes/settings.php:566
 msgid "No tracking technologies are activated until a user explicitly gives consent. This is required by <strong>GDPR</strong> and <strong>ePrivacy Directive 5(3)</strong>."
-msgstr ""
+msgstr "Żadne technologie śledzenia nie są aktywowane, dopóki użytkownik wyraźnie nie wyrazi zgody. Jest to wymagane przez <strong>GDPR</strong> i <strong>ePrivacy Directive 5(3)</strong>."
 
 #: includes/settings.php:574
 msgid "Opt-Out Mode (California)"
-msgstr ""
+msgstr "Tryb Opt-Out (Kalifornia)"
 
 #: includes/settings.php:575
 msgid "Tracking is allowed by default, but users must be able to opt out easily. This aligns with <strong>CCPA</strong> and similar U.S. privacy frameworks."
-msgstr ""
+msgstr "Śledzenie jest domyślnie dozwolone, ale użytkownicy muszą mieć możliwość łatwej rezygnacji. Jest to zgodne z <strong>CCPA</strong> i podobnymi amerykańskimi ramami prywatności."
 
 #: includes/settings.php:606
 msgid "Do not sell or share options"
-msgstr ""
+msgstr "Nie sprzedawaj ani nie udostępniaj opcji"
 
 #: includes/settings.php:619
 msgid "Yes"
-msgstr ""
+msgstr "Tak"
 
 #: includes/settings.php:627
 msgid "No"
-msgstr ""
+msgstr "Nie"

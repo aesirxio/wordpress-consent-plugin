@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: AesirX Consent 1.5.0\n"
+"Project-Id-Version: AesirX Consent 1.6.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/aesirx-consent\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -865,108 +865,108 @@ msgstr "รีเซ็ตปฏิเสธ"
 
 #: aesirx-consent.php:102
 msgid "Customize"
-msgstr ""
+msgstr "ปรับแต่ง"
 
 #: aesirx-consent.php:103
 msgid "Save"
-msgstr ""
+msgstr "บันทึก"
 
 #: aesirx-consent.php:104
 msgid "Always active"
-msgstr ""
+msgstr "เปิดใช้งานตลอดเวลา"
 
 #: aesirx-consent.php:105
 msgid "Domain/Path-Based"
-msgstr ""
+msgstr "ตามโดเมน/เส้นทาง"
 
 #: aesirx-consent.php:106
 msgid "Third-Party Plugins"
-msgstr ""
+msgstr "ปลั๊กอินของบุคคลที่สาม"
 
 #: aesirx-consent.php:107
 msgid "Essential Tracking"
-msgstr ""
+msgstr "การติดตามที่จำเป็น"
 
 #: aesirx-consent.php:108
 msgid "Required for the website to function (e.g, session cookies, security tracking)."
-msgstr ""
+msgstr "จำเป็นสำหรับการทำงานของเว็บไซต์ (เช่น คุกกี้เซสชัน การติดตามความปลอดภัย)"
 
 #: aesirx-consent.php:109
 msgid "Functional Tracking"
-msgstr ""
+msgstr "การติดตามการทำงาน"
 
 #: aesirx-consent.php:110
 msgid "User preferencese & site enhancements (e.g, language setting, live chat)."
-msgstr ""
+msgstr "การตั้งค่าผู้ใช้และการปรับปรุงไซต์ (เช่น การตั้งค่าภาษา แชทสด)"
 
 #: aesirx-consent.php:111
 msgid "Analytics Tracking"
-msgstr ""
+msgstr "การติดตามการวิเคราะห์"
 
 #: aesirx-consent.php:112
 msgid "Visitor behavior monitoring (e.g, Google Analytics, Matomo)."
-msgstr ""
+msgstr "การติดตามพฤติกรรมของผู้เยี่ยมชม (เช่น Google Analytics, Matomo)"
 
 #: aesirx-consent.php:113
 msgid "Advertising Tracking"
-msgstr ""
+msgstr "การติดตามการโฆษณา"
 
 #: aesirx-consent.php:114
 msgid "Targeted advertising & remarketing (e.g, Facebook Pixel, Google Ads)."
-msgstr ""
+msgstr "การโฆษณาแบบกำหนดเป้าหมายและการตลาดซ้ำ (เช่น Facebook Pixel, Google Ads)"
 
 #: aesirx-consent.php:115
 msgid "Custom Tracking"
-msgstr ""
+msgstr "การติดตามที่กำหนดเอง"
 
 #: aesirx-consent.php:116
 msgid "Any additional third-party integrations (e.g, customer support tools, CDNS)."
-msgstr ""
+msgstr "การผสานรวมของบุคคลที่สามเพิ่มเติม (เช่น เครื่องมือสนับสนุนลูกค้า CDNS)"
 
 #: aesirx-consent.php:117
 msgid "Opt-Out of tracking"
-msgstr ""
+msgstr "การเลือกไม่ติดตาม"
 
 #: aesirx-consent.php:118
 msgid "This website uses tracking by default. You may opt out at any time."
-msgstr ""
+msgstr "เว็บไซต์นี้ใช้การติดตามตามค่าเริ่มต้น คุณสามารถเลือกไม่ติดตามได้ตลอดเวลา"
 
 #: aesirx-consent.php:119
 msgid "Do Not Sell or Share My Personal Information (CCPA)"
-msgstr ""
+msgstr "ห้ามขายหรือแบ่งปันข้อมูลส่วนบุคคลของฉัน (CCPA)"
 
 #: aesirx-consent.php:120
 msgid "Disables third-party data sharing for California users."
-msgstr ""
+msgstr "ปิดการใช้งานการแบ่งปันข้อมูลของบุคคลที่สามสำหรับผู้ใช้ในแคลิฟอร์เนีย"
 
 #: includes/settings.php:552
 msgid "Configurable Consent Logic"
-msgstr ""
+msgstr "ตรรกะการยินยอมที่กำหนดค่าได้"
 
 #: includes/settings.php:565
 msgid "Opt-In Mode (EU)"
-msgstr ""
+msgstr "โหมดเลือกเข้าร่วม (EU)"
 
 #: includes/settings.php:566
 msgid "No tracking technologies are activated until a user explicitly gives consent. This is required by <strong>GDPR</strong> and <strong>ePrivacy Directive 5(3)</strong>."
-msgstr ""
+msgstr "ไม่มีการเปิดใช้งานเทคโนโลยีการติดตามจนกว่าผู้ใช้จะให้ความยินยอมอย่างชัดเจน ซึ่งสิ่งนี้จำเป็นตามข้อกำหนดของ <strong>GDPR</strong> และ <strong>ePrivacy Directive 5(3)</strong>"
 
 #: includes/settings.php:574
 msgid "Opt-Out Mode (California)"
-msgstr ""
+msgstr "โหมดเลือกไม่เข้าร่วม (แคลิฟอร์เนีย)"
 
 #: includes/settings.php:575
 msgid "Tracking is allowed by default, but users must be able to opt out easily. This aligns with <strong>CCPA</strong> and similar U.S. privacy frameworks."
-msgstr ""
+msgstr "อนุญาตให้ติดตามได้ตามค่าเริ่มต้น แต่ผู้ใช้ต้องเลือกไม่เข้าร่วมได้โดยง่าย ซึ่งสอดคล้องกับ <strong>CCPA</strong> และกรอบความเป็นส่วนตัวที่คล้ายกันของสหรัฐฯ"
 
 #: includes/settings.php:606
 msgid "Do not sell or share options"
-msgstr ""
+msgstr "ห้ามขายหรือแบ่งปันตัวเลือก"
 
 #: includes/settings.php:619
 msgid "Yes"
-msgstr ""
+msgstr "ใช่"
 
 #: includes/settings.php:627
 msgid "No"
-msgstr ""
+msgstr "ไม่"

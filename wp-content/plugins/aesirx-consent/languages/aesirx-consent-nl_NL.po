@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: AesirX Consent 1.5.0\n"
+"Project-Id-Version: AesirX Consent 1.6.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/aesirx-consent\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -849,124 +849,124 @@ msgstr "Zorg ervoor dat het bestand toegankelijk is door te bezoeken: <a href='"
 
 #: includes/settings.php:317
 msgid "Customize Detail Text "
-msgstr ""
+msgstr "Detailtekst aanpassen"
 
 #: includes/settings.php:330
 msgid "Reset Detail"
-msgstr ""
+msgstr "Details resetten"
 
 #: includes/settings.php:342
 msgid "Customize Reject Text "
-msgstr ""
+msgstr "Weigeringstekst aanpassen"
 
 #: includes/settings.php:355
 msgid "Reset Reject"
-msgstr ""
+msgstr "Weigeringstekst resetten"
 
 #: aesirx-consent.php:102
 msgid "Customize"
-msgstr ""
+msgstr "Aanpassen"
 
 #: aesirx-consent.php:103
 msgid "Save"
-msgstr ""
+msgstr "Opslaan"
 
 #: aesirx-consent.php:104
 msgid "Always active"
-msgstr ""
+msgstr "Altijd actief"
 
 #: aesirx-consent.php:105
 msgid "Domain/Path-Based"
-msgstr ""
+msgstr "Domein-/padgebaseerd"
 
 #: aesirx-consent.php:106
 msgid "Third-Party Plugins"
-msgstr ""
+msgstr "Plug-ins van derden"
 
 #: aesirx-consent.php:107
 msgid "Essential Tracking"
-msgstr ""
+msgstr "Essentiële tracking"
 
 #: aesirx-consent.php:108
 msgid "Required for the website to function (e.g, session cookies, security tracking)."
-msgstr ""
+msgstr "Vereist voor de werking van de website (bijv. sessiecookies, beveiligingstracking)."
 
 #: aesirx-consent.php:109
 msgid "Functional Tracking"
-msgstr ""
+msgstr "Functionele tracking"
 
 #: aesirx-consent.php:110
 msgid "User preferencese & site enhancements (e.g, language setting, live chat)."
-msgstr ""
+msgstr "Gebruikersvoorkeuren en siteverbeteringen (bijv. taalinstelling, livechat)."
 
 #: aesirx-consent.php:111
 msgid "Analytics Tracking"
-msgstr ""
+msgstr "Analytische tracking"
 
 #: aesirx-consent.php:112
 msgid "Visitor behavior monitoring (e.g, Google Analytics, Matomo)."
-msgstr ""
+msgstr "Monitoring van bezoekersgedrag (bijv. Google Analytics, Matomo)."
 
 #: aesirx-consent.php:113
 msgid "Advertising Tracking"
-msgstr ""
+msgstr "Advertentietracking"
 
 #: aesirx-consent.php:114
 msgid "Targeted advertising & remarketing (e.g, Facebook Pixel, Google Ads)."
-msgstr ""
+msgstr "Gerichte advertenties en remarketing (bijv. Facebook Pixel, Google Ads)."
 
 #: aesirx-consent.php:115
 msgid "Custom Tracking"
-msgstr ""
+msgstr "Aangepaste tracking"
 
 #: aesirx-consent.php:116
 msgid "Any additional third-party integrations (e.g, customer support tools, CDNS)."
-msgstr ""
+msgstr "Alle aanvullende integraties van derden (bijv. klantenservicetools, CDNS)."
 
 #: aesirx-consent.php:117
 msgid "Opt-Out of tracking"
-msgstr ""
+msgstr "Afmelden voor tracking"
 
 #: aesirx-consent.php:118
 msgid "This website uses tracking by default. You may opt out at any time."
-msgstr ""
+msgstr "Deze website maakt standaard gebruik van tracking. U kunt zich op elk moment afmelden."
 
 #: aesirx-consent.php:119
 msgid "Do Not Sell or Share My Personal Information (CCPA)"
-msgstr ""
+msgstr "Mijn persoonlijke gegevens niet verkopen of delen (CCPA)"
 
 #: aesirx-consent.php:120
 msgid "Disables third-party data sharing for California users."
-msgstr ""
+msgstr "Schakelt het delen van gegevens door derden uit voor gebruikers in Californië."
 
 #: includes/settings.php:552
 msgid "Configurable Consent Logic"
-msgstr ""
+msgstr "Configureerbare toestemmingslogica"
 
 #: includes/settings.php:565
 msgid "Opt-In Mode (EU)"
-msgstr ""
+msgstr "Opt-in-modus (EU)"
 
 #: includes/settings.php:566
 msgid "No tracking technologies are activated until a user explicitly gives consent. This is required by <strong>GDPR</strong> and <strong>ePrivacy Directive 5(3)</strong>."
-msgstr ""
+msgstr "Er worden geen trackingtechnologieën geactiveerd totdat een gebruiker expliciet toestemming geeft. Dit is vereist door de <strong>GDPR</strong> en <strong>ePrivacy Directive 5(3)</strong>."
 
 #: includes/settings.php:574
 msgid "Opt-Out Mode (California)"
-msgstr ""
+msgstr "Opt-out-modus (Californië)"
 
 #: includes/settings.php:575
 msgid "Tracking is allowed by default, but users must be able to opt out easily. This aligns with <strong>CCPA</strong> and similar U.S. privacy frameworks."
-msgstr ""
+msgstr "Tracking is standaard toegestaan, maar gebruikers moeten zich eenvoudig kunnen afmelden. Dit is in lijn met de <strong>CCPA</strong> en vergelijkbare Amerikaanse privacykaders."
 
 #: includes/settings.php:606
 msgid "Do not sell or share options"
-msgstr ""
+msgstr "Opties niet verkopen of delen"
 
 #: includes/settings.php:619
 msgid "Yes"
-msgstr ""
+msgstr "Ja"
 
 #: includes/settings.php:627
 msgid "No"
-msgstr ""
+msgstr "Nee"

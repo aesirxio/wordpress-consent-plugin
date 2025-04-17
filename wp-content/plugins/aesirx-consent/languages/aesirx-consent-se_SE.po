@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: AesirX Consent 1.5.0\n"
+"Project-Id-Version: AesirX Consent 1.6.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/aesirx-consent\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -849,124 +849,124 @@ msgstr "Se till att filen är tillgänglig genom att besöka: <a href='"
 
 #: includes/settings.php:317
 msgid "Customize Detail Text "
-msgstr ""
+msgstr "Anpassa detaljtext"
 
 #: includes/settings.php:330
 msgid "Reset Detail"
-msgstr ""
+msgstr "Återställ detalj"
 
 #: includes/settings.php:342
 msgid "Customize Reject Text "
-msgstr ""
+msgstr "Anpassa avvisande text"
 
 #: includes/settings.php:355
 msgid "Reset Reject"
-msgstr ""
+msgstr "Återställ Avvisa"
 
 #: aesirx-consent.php:102
 msgid "Customize"
-msgstr ""
+msgstr "Anpassa"
 
 #: aesirx-consent.php:103
 msgid "Save"
-msgstr ""
+msgstr "Spara"
 
 #: aesirx-consent.php:104
 msgid "Always active"
-msgstr ""
+msgstr "Alltid aktiv"
 
 #: aesirx-consent.php:105
 msgid "Domain/Path-Based"
-msgstr ""
+msgstr "Domän-/sökvägsbaserad"
 
 #: aesirx-consent.php:106
 msgid "Third-Party Plugins"
-msgstr ""
+msgstr "Tredjeparts plugins"
 
 #: aesirx-consent.php:107
 msgid "Essential Tracking"
-msgstr ""
+msgstr "Viktig spårning"
 
 #: aesirx-consent.php:108
 msgid "Required for the website to function (e.g, session cookies, security tracking)."
-msgstr ""
+msgstr "Krävs för att webbplatsen ska fungera (t.ex. sessionscookies, säkerhetsspårning)."
 
 #: aesirx-consent.php:109
 msgid "Functional Tracking"
-msgstr ""
+msgstr "Funktionell spårning"
 
 #: aesirx-consent.php:110
 msgid "User preferencese & site enhancements (e.g, language setting, live chat)."
-msgstr ""
+msgstr "Användarpreferenser och webbplatsförbättringar (t.ex. språkinställning, livechatt)."
 
 #: aesirx-consent.php:111
 msgid "Analytics Tracking"
-msgstr ""
+msgstr "Analytics spårning"
 
 #: aesirx-consent.php:112
 msgid "Visitor behavior monitoring (e.g, Google Analytics, Matomo)."
-msgstr ""
+msgstr "Övervakning av besökarnas beteende (t.ex. Google Analytics, Matomo)."
 
 #: aesirx-consent.php:113
 msgid "Advertising Tracking"
-msgstr ""
+msgstr "Annonsspårning"
 
 #: aesirx-consent.php:114
 msgid "Targeted advertising & remarketing (e.g, Facebook Pixel, Google Ads)."
-msgstr ""
+msgstr "Riktad annonsering och remarketing (t.ex. Facebook Pixel, Google Ads)."
 
 #: aesirx-consent.php:115
 msgid "Custom Tracking"
-msgstr ""
+msgstr "Anpassad spårning"
 
 #: aesirx-consent.php:116
 msgid "Any additional third-party integrations (e.g, customer support tools, CDNS)."
-msgstr ""
+msgstr "Eventuella ytterligare tredjepartsintegrationer (t.ex. kundsupportverktyg, CDNS)."
 
 #: aesirx-consent.php:117
 msgid "Opt-Out of tracking"
-msgstr ""
+msgstr "Välja bort spårning"
 
 #: aesirx-consent.php:118
 msgid "This website uses tracking by default. You may opt out at any time."
-msgstr ""
+msgstr "Denna webbplats använder spårning som standard. Du kan välja bort det när som helst."
 
 #: aesirx-consent.php:119
 msgid "Do Not Sell or Share My Personal Information (CCPA)"
-msgstr ""
+msgstr "Sälj eller dela inte min personliga information (CCPA)"
 
 #: aesirx-consent.php:120
 msgid "Disables third-party data sharing for California users."
-msgstr ""
+msgstr "Inaktiverar datadelning från tredje part för användare i Kalifornien."
 
 #: includes/settings.php:552
 msgid "Configurable Consent Logic"
-msgstr ""
+msgstr "Konfigurerbar samtyckeslogik"
 
 #: includes/settings.php:565
 msgid "Opt-In Mode (EU)"
-msgstr ""
+msgstr "Opt-in-läge (EU)"
 
 #: includes/settings.php:566
 msgid "No tracking technologies are activated until a user explicitly gives consent. This is required by <strong>GDPR</strong> and <strong>ePrivacy Directive 5(3)</strong>."
-msgstr ""
+msgstr "Inga spårningstekniker aktiveras förrän en användare uttryckligen ger sitt samtycke. Detta krävs enligt <strong>GDPR</strong> och <strong>ePrivacy Directive 5(3)</strong>."
 
 #: includes/settings.php:574
 msgid "Opt-Out Mode (California)"
-msgstr ""
+msgstr "Opt-out-läge (Kalifornien)"
 
 #: includes/settings.php:575
 msgid "Tracking is allowed by default, but users must be able to opt out easily. This aligns with <strong>CCPA</strong> and similar U.S. privacy frameworks."
-msgstr ""
+msgstr "Spårning är tillåtet som standard, men användare måste kunna välja bort det enkelt. Detta är i linje med <strong>CCPA</strong> och liknande amerikanska sekretessramar."
 
 #: includes/settings.php:606
 msgid "Do not sell or share options"
-msgstr ""
+msgstr "Sälj eller dela inte optioner"
 
 #: includes/settings.php:619
 msgid "Yes"
-msgstr ""
+msgstr "Ja"
 
 #: includes/settings.php:627
 msgid "No"
-msgstr ""
+msgstr "Inga"

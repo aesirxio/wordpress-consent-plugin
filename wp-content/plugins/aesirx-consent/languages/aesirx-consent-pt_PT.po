@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: AesirX Consent 1.5.0\n"
+"Project-Id-Version: AesirX Consent 1.6.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/aesirx-consent\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -865,108 +865,108 @@ msgstr "Redefinir Rejeitar"
 
 #: aesirx-consent.php:102
 msgid "Customize"
-msgstr ""
+msgstr "Personalizar"
 
 #: aesirx-consent.php:103
 msgid "Save"
-msgstr ""
+msgstr "Salvar"
 
 #: aesirx-consent.php:104
 msgid "Always active"
-msgstr ""
+msgstr "Sempre ativo"
 
 #: aesirx-consent.php:105
 msgid "Domain/Path-Based"
-msgstr ""
+msgstr "Baseado em Domínio/Caminho"
 
 #: aesirx-consent.php:106
 msgid "Third-Party Plugins"
-msgstr ""
+msgstr "Plugins de Terceiros"
 
 #: aesirx-consent.php:107
 msgid "Essential Tracking"
-msgstr ""
+msgstr "Rastreamento Essencial"
 
 #: aesirx-consent.php:108
 msgid "Required for the website to function (e.g, session cookies, security tracking)."
-msgstr ""
+msgstr "Necessário para o funcionamento do site (por exemplo, cookies de sessão, rastreamento de segurança)."
 
 #: aesirx-consent.php:109
 msgid "Functional Tracking"
-msgstr ""
+msgstr "Rastreamento Funcional"
 
 #: aesirx-consent.php:110
 msgid "User preferencese & site enhancements (e.g, language setting, live chat)."
-msgstr ""
+msgstr "Preferências do usuário e melhorias no site (por exemplo, configuração de idioma, chat ao vivo)."
 
 #: aesirx-consent.php:111
 msgid "Analytics Tracking"
-msgstr ""
+msgstr "Rastreamento Analítico"
 
 #: aesirx-consent.php:112
 msgid "Visitor behavior monitoring (e.g, Google Analytics, Matomo)."
-msgstr ""
+msgstr "Monitoramento do comportamento do visitante (por exemplo, Google Analytics, Matomo)."
 
 #: aesirx-consent.php:113
 msgid "Advertising Tracking"
-msgstr ""
+msgstr "Rastreamento de Publicidade"
 
 #: aesirx-consent.php:114
 msgid "Targeted advertising & remarketing (e.g, Facebook Pixel, Google Ads)."
-msgstr ""
+msgstr "Publicidade direcionada e remarketing (por exemplo, Facebook Pixel, Google Ads)."
 
 #: aesirx-consent.php:115
 msgid "Custom Tracking"
-msgstr ""
+msgstr "Rastreamento Personalizado"
 
 #: aesirx-consent.php:116
 msgid "Any additional third-party integrations (e.g, customer support tools, CDNS)."
-msgstr ""
+msgstr "Quaisquer integrações adicionais de terceiros (por exemplo, ferramentas de suporte ao cliente, CDNS)."
 
 #: aesirx-consent.php:117
 msgid "Opt-Out of tracking"
-msgstr ""
+msgstr "Desativar o rastreamento"
 
 #: aesirx-consent.php:118
 msgid "This website uses tracking by default. You may opt out at any time."
-msgstr ""
+msgstr "Este site usa rastreamento por padrão. Você pode desativar o rastreamento a qualquer momento."
 
 #: aesirx-consent.php:119
 msgid "Do Not Sell or Share My Personal Information (CCPA)"
-msgstr ""
+msgstr "Não Venda ou Compartilhe Minhas Informações Pessoais (CCPA)"
 
 #: aesirx-consent.php:120
 msgid "Disables third-party data sharing for California users."
-msgstr ""
+msgstr "Desativa o compartilhamento de dados de terceiros para usuários da Califórnia."
 
 #: includes/settings.php:552
 msgid "Configurable Consent Logic"
-msgstr ""
+msgstr "Lógica de Consentimento Configurável"
 
 #: includes/settings.php:565
 msgid "Opt-In Mode (EU)"
-msgstr ""
+msgstr "Modo de Aceitação (UE)"
 
 #: includes/settings.php:566
 msgid "No tracking technologies are activated until a user explicitly gives consent. This is required by <strong>GDPR</strong> and <strong>ePrivacy Directive 5(3)</strong>."
-msgstr ""
+msgstr "Nenhuma tecnologia de rastreamento é ativada até que o usuário dê consentimento explícito. Isso é exigido pelo <strong>GDPR</strong> e pela <strong>ePrivacy Directive 5(3)</strong>."
 
 #: includes/settings.php:574
 msgid "Opt-Out Mode (California)"
-msgstr ""
+msgstr "Modo de Desativação (Califórnia)"
 
 #: includes/settings.php:575
 msgid "Tracking is allowed by default, but users must be able to opt out easily. This aligns with <strong>CCPA</strong> and similar U.S. privacy frameworks."
-msgstr ""
+msgstr "O rastreamento é permitido por padrão, mas os usuários devem poder optar por não participar facilmente. Isso está em conformidade com a <strong>CCPA</strong> e estruturas de privacidade semelhantes dos EUA."
 
 #: includes/settings.php:606
 msgid "Do not sell or share options"
-msgstr ""
+msgstr "Não vender ou compartilhar opções"
 
 #: includes/settings.php:619
 msgid "Yes"
-msgstr ""
+msgstr "Sim"
 
 #: includes/settings.php:627
 msgid "No"
-msgstr ""
+msgstr "Não"

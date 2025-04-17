@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: AesirX Consent 1.5.0\n"
+"Project-Id-Version: AesirX Consent 1.6.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/aesirx-consent\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -865,108 +865,108 @@ msgstr "リセット拒否"
 
 #: aesirx-consent.php:102
 msgid "Customize"
-msgstr ""
+msgstr "カスタマイズ"
 
 #: aesirx-consent.php:103
 msgid "Save"
-msgstr ""
+msgstr "保存"
 
 #: aesirx-consent.php:104
 msgid "Always active"
-msgstr ""
+msgstr "常に有効"
 
 #: aesirx-consent.php:105
 msgid "Domain/Path-Based"
-msgstr ""
+msgstr "ドメイン/パスベース"
 
 #: aesirx-consent.php:106
 msgid "Third-Party Plugins"
-msgstr ""
+msgstr "サードパーティ製プラグイン"
 
 #: aesirx-consent.php:107
 msgid "Essential Tracking"
-msgstr ""
+msgstr "必須トラッキング"
 
 #: aesirx-consent.php:108
 msgid "Required for the website to function (e.g, session cookies, security tracking)."
-msgstr ""
+msgstr "ウェブサイトの動作に必要なもの（例：セッションCookie、セキュリティトラッキング）。"
 
 #: aesirx-consent.php:109
 msgid "Functional Tracking"
-msgstr ""
+msgstr "機能トラッキング"
 
 #: aesirx-consent.php:110
 msgid "User preferencese & site enhancements (e.g, language setting, live chat)."
-msgstr ""
+msgstr "ユーザー設定とサイトの機能強化（例：言語設定、ライブチャット）。"
 
 #: aesirx-consent.php:111
 msgid "Analytics Tracking"
-msgstr ""
+msgstr "アナリティクストラッキング"
 
 #: aesirx-consent.php:112
 msgid "Visitor behavior monitoring (e.g, Google Analytics, Matomo)."
-msgstr ""
+msgstr "訪問者の行動モニタリング（例：Googleアナリティクス、Matomo）。"
 
 #: aesirx-consent.php:113
 msgid "Advertising Tracking"
-msgstr ""
+msgstr "広告トラッキング"
 
 #: aesirx-consent.php:114
 msgid "Targeted advertising & remarketing (e.g, Facebook Pixel, Google Ads)."
-msgstr ""
+msgstr "ターゲティング広告とリマーケティング（例：Facebook Pixel、Google Ads）。"
 
 #: aesirx-consent.php:115
 msgid "Custom Tracking"
-msgstr ""
+msgstr "カスタムトラッキング"
 
 #: aesirx-consent.php:116
 msgid "Any additional third-party integrations (e.g, customer support tools, CDNS)."
-msgstr ""
+msgstr "その他のサードパーティ統合（例：カスタマーサポートツール、CDNS）。"
 
 #: aesirx-consent.php:117
 msgid "Opt-Out of tracking"
-msgstr ""
+msgstr "トラッキングのオプトアウト"
 
 #: aesirx-consent.php:118
 msgid "This website uses tracking by default. You may opt out at any time."
-msgstr ""
+msgstr "このウェブサイトはデフォルトでトラッキングを使用しています。いつでもオプトアウトできます。"
 
 #: aesirx-consent.php:119
 msgid "Do Not Sell or Share My Personal Information (CCPA)"
-msgstr ""
+msgstr "個人情報の販売または共有禁止（CCPA）"
 
 #: aesirx-consent.php:120
 msgid "Disables third-party data sharing for California users."
-msgstr ""
+msgstr "カリフォルニア州のユーザーに対して、サードパーティによるデータ共有を無効にします。"
 
 #: includes/settings.php:552
 msgid "Configurable Consent Logic"
-msgstr ""
+msgstr "設定可能な同意ロジック"
 
 #: includes/settings.php:565
 msgid "Opt-In Mode (EU)"
-msgstr ""
+msgstr "オプトインモード（EU）"
 
 #: includes/settings.php:566
 msgid "No tracking technologies are activated until a user explicitly gives consent. This is required by <strong>GDPR</strong> and <strong>ePrivacy Directive 5(3)</strong>."
-msgstr ""
+msgstr "ユーザーが明示的に同意するまで、トラッキング技術は有効化されません。これは、<strong>GDPR</strong>および<strong>eプライバシー指令5(3)</strong>で義務付けられています。"
 
 #: includes/settings.php:574
 msgid "Opt-Out Mode (California)"
-msgstr ""
+msgstr "オプトアウトモード（カリフォルニア州）"
 
 #: includes/settings.php:575
 msgid "Tracking is allowed by default, but users must be able to opt out easily. This aligns with <strong>CCPA</strong> and similar U.S. privacy frameworks."
-msgstr ""
+msgstr "トラッキングはデフォルトで許可されていますが、ユーザーは簡単にオプトアウトできる必要があります。これは、<strong>CCPA</strong>などの米国のプライバシー保護の枠組みに準拠しています。"
 
 #: includes/settings.php:606
 msgid "Do not sell or share options"
-msgstr ""
+msgstr "オプションの販売または共有を禁止します"
 
 #: includes/settings.php:619
 msgid "Yes"
-msgstr ""
+msgstr "はい"
 
 #: includes/settings.php:627
 msgid "No"
-msgstr ""
+msgstr "いいえ"
