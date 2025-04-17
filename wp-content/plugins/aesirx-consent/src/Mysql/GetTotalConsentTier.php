@@ -13,20 +13,26 @@ Class AesirX_Analytics_Get_Total_Consent_Tier extends AesirxAnalyticsMysqlHelper
         parent::aesirx_analytics_add_consent_filters($params, $where_clause, $bind);
 
         $sql =
-            "SELECT 
-            ROUND(COUNT(visitor_consent.uuid) / 2) AS total, 
+        "SELECT 
+            tier,
+            ROUND(COUNT(*) / 2) AS total
+        FROM (
+            SELECT
             CASE 
-            WHEN visitor_consent.tier = '5' THEN 5
-            WHEN visitor_consent.tier = '6' THEN 6
-            WHEN consent.web3id IS NOT NULL AND consent.wallet_uuid IS NOT NULL THEN 4 
-            WHEN consent.web3id IS NULL AND consent.wallet_uuid IS NOT NULL THEN 3 
-            WHEN consent.web3id IS NOT NULL AND consent.wallet_uuid IS NULL THEN 2 
-            ELSE 1 END AS tier 
+                WHEN visitor_consent.tier = '5' THEN 5
+                WHEN visitor_consent.tier = '6' THEN 6
+                WHEN consent.web3id IS NOT NULL AND consent.wallet_uuid IS NOT NULL THEN 4 
+                WHEN consent.web3id IS NULL AND consent.wallet_uuid IS NOT NULL THEN 3 
+                WHEN consent.web3id IS NOT NULL AND consent.wallet_uuid IS NULL THEN 2 
+                ELSE 1 
+            END AS tier
             FROM `#__analytics_visitor_consent` AS visitor_consent 
             LEFT JOIN `#__analytics_visitors` AS visitors ON visitors.uuid = visitor_consent.visitor_uuid 
-            LEFT JOIN `#__analytics_consent` AS consent ON consent.uuid = visitor_consent.consent_uuid 
-            WHERE " . implode(" AND ", $where_clause) .
-            " GROUP BY tier";
+            LEFT JOIN `#__analytics_consent` AS consent ON consent.uuid = visitor_consent.consent_uuid
+            WHERE " . implode(' AND ', $where_clause) ."
+        )
+        AS tier_data 
+        GROUP BY tier";
 
         $total_sql =
             "SELECT 

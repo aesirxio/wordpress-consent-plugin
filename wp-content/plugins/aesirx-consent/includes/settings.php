@@ -588,7 +588,6 @@ add_action('admin_init', function () {
               }
             }
             jQuery("input.gpc_consent_class").click(function() {
-              console.log("activenee");
               switch_radio(jQuery(this).val())
             });
             switch_radio("' . esc_html($mode) . '");

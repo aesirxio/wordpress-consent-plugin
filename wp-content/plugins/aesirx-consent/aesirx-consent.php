@@ -98,7 +98,26 @@ add_action('wp_enqueue_scripts', function (): void {
         'txt_revoke_opt_in_advisor' => __( "Revoke Opt-In Consent for AesirX Privacy Advisor AI", 'aesirx-consent' ),
         'txt_revoke_consent_for_the_site' => __( "Revoke Consent for the site", 'aesirx-consent' ),
         'txt_consent_nanagement' => __( "Consent Management", 'aesirx-consent' ),
-        'txt_details' => __( "Details", 'aesirx-consent' )
+        'txt_details' => __( "Details", 'aesirx-consent' ),
+        "txt_customize" => __( "Customize", 'aesirx-consent' ),
+        "txt_save" => __( "Save", 'aesirx-consent' ),
+        "txt_always_active" => __( "Always active", 'aesirx-consent' ),
+        "txt_domain_path_based" => __( "Domain/Path-Based", 'aesirx-consent' ),
+        "txt_third_party_plugins" => __( "Third-Party Plugins", 'aesirx-consent' ),
+        "txt_essential_tracking" =>  __( "Essential Tracking", 'aesirx-consent' ),
+        "txt_essential_tracking_desc" => __( "Required for the website to function (e.g, session cookies, security tracking).", 'aesirx-consent' ),
+        "txt_functional_tracking" => __( "Functional Tracking", 'aesirx-consent' ),
+        "txt_functional_tracking_desc" => __( "User preferencese & site enhancements (e.g, language setting, live chat).", 'aesirx-consent' ),
+        "txt_analytics_tracking" => __( "Analytics Tracking", 'aesirx-consent' ),
+        "txt_analytics_tracking_desc" => __( "Visitor behavior monitoring (e.g, Google Analytics, Matomo).", 'aesirx-consent' ),
+        "txt_advertising_tracking" => __( "Advertising Tracking", 'aesirx-consent' ),
+        "txt_advertising_tracking_desc" => __( "Targeted advertising & remarketing (e.g, Facebook Pixel, Google Ads).", 'aesirx-consent' ),
+        "txt_custom_tracking" => __( "Custom Tracking", 'aesirx-consent' ),
+        "txt_custom_tracking_desc" => __( "Any additional third-party integrations (e.g, customer support tools, CDNS).", 'aesirx-consent' ),
+        "txt_opt_out_tracking" => __( "Opt-Out of tracking", 'aesirx-consent' ),
+        "txt_tracking_default" => __( "This website uses tracking by default. You may opt out at any time.", 'aesirx-consent' ),
+        "txt_do_not_sell" => __( "Do Not Sell or Share My Personal Information (CCPA)", 'aesirx-consent' ),
+        "txt_disables_third_party" => __( "Disables third-party data sharing for California users.", 'aesirx-consent' )
     );
     wp_localize_script( 'aesirx-consent', 'aesirx_analytics_translate', $translation_array );
     wp_enqueue_script('aesirx-consent');
@@ -149,7 +168,7 @@ add_action('wp_enqueue_scripts', function (): void {
     $optionsGPC = get_option('aesirx_consent_gpc_plugin_options', []);
     $disableGPCSupport = $optionsGPC['gpc_support'] === 'no' ? "true" : "false";
     $configConsentGPC = $optionsGPC['gpc_consent'] === 'opt-out' ? "true" : "false";
-    $configConsentGPCDoNotSell = $optionsGPC['gpc_consent_donotsell'] === 'true' ? "true" : "false";
+    $configConsentGPCDoNotSell = $optionsGPC['gpc_consent_donotsell'] === 'yes' ? "true" : "false";
 
     wp_add_inline_script(
         'aesirx-consent',
