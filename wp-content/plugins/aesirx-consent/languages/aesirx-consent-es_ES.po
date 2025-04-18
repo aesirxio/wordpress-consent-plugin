@@ -82,31 +82,34 @@ msgstr "Dominio no encontrado"
 #: src/AesirxAnalyticsMysqlHelper.php:670
 #: src/AesirxAnalyticsMysqlHelper.php:697
 #: src/AesirxAnalyticsMysqlHelper.php:737
-#: src/AesirxAnalyticsMysqlHelper.php:1063
+#: src/AesirxAnalyticsMysqlHelper.php:1077
 #: src/Mysql/GetVisitorConsentList.php:60
 msgid "There was a problem with the database query."
 msgstr "Hubo un problema con la consulta a la base de datos."
 
-#: src/AesirxAnalyticsMysqlHelper.php:889
-#: src/AesirxAnalyticsMysqlHelper.php:908
-#: src/AesirxAnalyticsMysqlHelper.php:928
-#: src/AesirxAnalyticsMysqlHelper.php:1266
+#: src/AesirxAnalyticsMysqlHelper.php:903
+#: src/AesirxAnalyticsMysqlHelper.php:922
+#: src/AesirxAnalyticsMysqlHelper.php:942
+#: src/AesirxAnalyticsMysqlHelper.php:1280
 msgid "Something went wrong"
 msgstr "Algo salió mal"
 
-#: src/AesirxAnalyticsMysqlHelper.php:989
+#: src/AesirxAnalyticsMysqlHelper.php:1003
 msgid "There was a problem updating the data in the database."
 msgstr "Hubo un problema al actualizar los datos en la base de datos."
 
 #: src/Mysql/AddConsentLevel1.php:23
+#: src/Mysql/AddConsentLevel5.php:23
 msgid "The uuid parameter is required."
 msgstr "El parámetro uuid es obligatorio."
 
 #: src/Mysql/AddConsentLevel1.php:27
+#: src/Mysql/AddConsentLevel5.php:27
 msgid "The consent parameter is required and must be a number."
 msgstr "El parámetro de consentimiento es obligatorio y debe ser un número."
 
 #: src/Mysql/AddConsentLevel1.php:53
+#: src/Mysql/AddConsentLevel5.php:53
 msgid "Previous consent was not expired"
 msgstr "El consentimiento anterior no había expirado"
 
@@ -597,7 +600,7 @@ msgstr "Su licencia ha expirado o no se encuentra. Por favor, actualice su licen
 msgid "Your free trials has ended. Please update your license. <a href='%1$s' target='_blank'>%1$s</a>."
 msgstr "Su periodo de prueba gratuito ha terminado. Por favor, actualice su licencia. <a href='%1$s' target='_blank'>%1$s</a>."
 
-#: src/AesirxAnalyticsMysqlHelper.php:828
+#: src/AesirxAnalyticsMysqlHelper.php:842
 msgid "Could not insert consent"
 msgstr "No se pudo insertar el consentimiento"
 

@@ -82,31 +82,34 @@ msgstr "Domain nicht gefunden"
 #: src/AesirxAnalyticsMysqlHelper.php:670
 #: src/AesirxAnalyticsMysqlHelper.php:697
 #: src/AesirxAnalyticsMysqlHelper.php:737
-#: src/AesirxAnalyticsMysqlHelper.php:1063
+#: src/AesirxAnalyticsMysqlHelper.php:1077
 #: src/Mysql/GetVisitorConsentList.php:60
 msgid "There was a problem with the database query."
 msgstr "Es gab ein Problem mit der Datenbankabfrage."
 
-#: src/AesirxAnalyticsMysqlHelper.php:889
-#: src/AesirxAnalyticsMysqlHelper.php:908
-#: src/AesirxAnalyticsMysqlHelper.php:928
-#: src/AesirxAnalyticsMysqlHelper.php:1266
+#: src/AesirxAnalyticsMysqlHelper.php:903
+#: src/AesirxAnalyticsMysqlHelper.php:922
+#: src/AesirxAnalyticsMysqlHelper.php:942
+#: src/AesirxAnalyticsMysqlHelper.php:1280
 msgid "Something went wrong"
 msgstr "Etwas ist schiefgelaufen"
 
-#: src/AesirxAnalyticsMysqlHelper.php:989
+#: src/AesirxAnalyticsMysqlHelper.php:1003
 msgid "There was a problem updating the data in the database."
 msgstr "Es gab ein Problem bei der Aktualisierung der Daten in der Datenbank."
 
 #: src/Mysql/AddConsentLevel1.php:23
+#: src/Mysql/AddConsentLevel5.php:23
 msgid "The uuid parameter is required."
 msgstr "Der Parameter uuid ist erforderlich."
 
 #: src/Mysql/AddConsentLevel1.php:27
+#: src/Mysql/AddConsentLevel5.php:27
 msgid "The consent parameter is required and must be a number."
 msgstr "Der Consent-Parameter ist erforderlich und muss eine Zahl sein."
 
 #: src/Mysql/AddConsentLevel1.php:53
+#: src/Mysql/AddConsentLevel5.php:53
 msgid "Previous consent was not expired"
 msgstr "Die vorherige Zustimmung war noch nicht abgelaufen"
 
@@ -597,7 +600,7 @@ msgstr "Ihre Lizenz ist abgelaufen oder wurde nicht gefunden. Bitte aktualisiere
 msgid "Your free trials has ended. Please update your license. <a href='%1$s' target='_blank'>%1$s</a>."
 msgstr "Ihre kostenlose Testversion ist abgelaufen. Bitte aktualisieren Sie Ihre Lizenz. <a href='%1$s' target='_blank'>%1$s</a>."
 
-#: src/AesirxAnalyticsMysqlHelper.php:828
+#: src/AesirxAnalyticsMysqlHelper.php:842
 msgid "Could not insert consent"
 msgstr "Einwilligung konnte nicht eingefügt werden"
 
