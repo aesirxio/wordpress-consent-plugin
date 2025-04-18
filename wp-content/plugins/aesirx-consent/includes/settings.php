@@ -55,6 +55,17 @@ add_action('admin_init', function () {
     return $value;
   });
 
+  register_setting('aesirx_consent_gpc_plugin_options', 'aesirx_consent_gpc_plugin_options', function (
+    $value
+  ) {
+    $valid = true;
+    // Ignore the user's changes and use the old database value.
+    if (!$valid) {
+      $value = get_option('aesirx_consent_gpc_plugin_options');
+    }
+    return $value;
+  });
+
   add_settings_section(
     'aesirx_analytics_settings',
     'Aesirx Consent Management',
@@ -165,14 +176,14 @@ add_action('admin_init', function () {
     'aesirx_analytics_consent_template',
     __('Choose your tailored template', 'aesirx-consent'),
     function () {
-      $template = get_option('aesirx_analytics_plugin_options', []);
+      $template = get_option('aesirx_consent_modal_plugin_options', []);
       // using custom function to escape HTML
       echo wp_kses("
         <div class='aesirx_consent_template'>
           <label class='aesirx_consent_template_item ".($template['datastream_template'] === 'simple-consent-mode' ? 'active' : '')."' for='simple-mode'>
             <img width='585px' height='388px' src='". plugins_url( 'aesirx-consent/assets/images-plugin/consent_simple_mode.png')."' />
             <p class='title'>".esc_html__('Simple Consent Mode', 'aesirx-consent')."</p>
-            <input id='simple-mode' type='radio' class='analytic-consent-class' name='aesirx_analytics_plugin_options[datastream_template]' " .
+            <input id='simple-mode' type='radio' class='analytic-consent-class' name='aesirx_consent_modal_plugin_options[datastream_template]' " .
             ($template['datastream_template'] === 'simple-consent-mode' ? "checked='checked'" : '') .
             " value='simple-consent-mode'  />
             <p>".esc_html__("Simple Consent Mode follows Google Consent Mode 2.0 by not loading any tags until after consent is given, reducing compliance risks.", 'aesirx-consent')."</p>
@@ -181,7 +192,7 @@ add_action('admin_init', function () {
           (!$template['datastream_template'] || $template['datastream_template'] === 'default' ? 'active' : '') ."' for='default'>
             <img width='585px' height='388px' src='". plugins_url( 'aesirx-consent/assets/images-plugin/consent_default.png')."' />
             <p class='title'>".esc_html__('Decentralized Consent Mode', 'aesirx-consent')."</p>
-            <input type='radio' id='default' class='analytic-consent-class' name='aesirx_analytics_plugin_options[datastream_template]' " .
+            <input type='radio' id='default' class='analytic-consent-class' name='aesirx_consent_modal_plugin_options[datastream_template]' " .
             (!$template['datastream_template'] || $template['datastream_template'] === 'default' ? "checked='checked'" : '') .
             "value='default'  />
             <p>".esc_html__("The Default setup improves Google Consent Mode 2.0 by not loading any scripts, beacons, or tags until after consent is given, reducing compliance risks. It also includes Decentralized Consent, for more control over personal data and rewards.", 'aesirx-consent')."</p>
@@ -189,8 +200,8 @@ add_action('admin_init', function () {
         </div>
       ", aesirx_analytics_escape_html());
     }, 
-    'aesirx_analytics_plugin',
-    'aesirx_analytics_settings',
+    'aesirx_consent_modal_plugin',
+    'aesirx_consent_modal_settings',
     [
       'class' => 'aesirx_analytics_consent_template_row',
     ]
@@ -520,18 +531,124 @@ add_action('admin_init', function () {
       'class' => 'aesirx_analytics_blocking_cookies_mode_row',
     ]
   );
+  add_settings_section(
+    'aesirx_consent_gpc_settings',
+    'Consent Modal Management',
+    function () {
+      $manifest = json_decode(
+        file_get_contents(plugin_dir_path(__DIR__) . 'assets-manifest.json', true)
+      );
+
+      if ($manifest->entrypoints->plugin->assets) {
+        foreach ($manifest->entrypoints->plugin->assets->js as $js) {
+          wp_enqueue_script('aesrix_bi' . md5($js), plugins_url($js, __DIR__), false, '1.0', true);
+        }
+      }
+    },
+    'aesirx_consent_gpc_plugin'
+  );
+  add_settings_field(
+    'aesirx_consent_config_consent',
+    esc_html__('Configurable Consent Logic', 'aesirx-consent'),
+    function () {
+      $options = get_option('aesirx_consent_gpc_plugin_options', []);
+      $checked = 'checked="checked"';
+      $mode = $options['gpc_consent'] ?? 'opt-in';
+      // using custom function to escape HTML
+      echo wp_kses('
+      <div class="gpc_consent_section">
+        <label class="radio_wrapper">
+          <input type="radio" class="gpc_consent_class" name="aesirx_consent_gpc_plugin_options[gpc_consent]" ' .
+      ($mode === 'opt-in' ? $checked : '') .
+      ' value="opt-in"  />
+          <div class="input_content">
+            <p>'. esc_html__('Opt-In Mode (EU)', 'aesirx-consent') . '</p>
+            <p class="small-description">'. sprintf(__('No tracking technologies are activated until a user explicitly gives consent. This is required by <strong>GDPR</strong> and <strong>ePrivacy Directive 5(3)</strong>.', 'aesirx-consent')) . '</p>
+          </div>
+        </label>
+        <label class="radio_wrapper">
+          <input type="radio" class="gpc_consent_class" name="aesirx_consent_gpc_plugin_options[gpc_consent]" ' .
+        ($mode === 'opt-out' ? $checked : '') .
+        ' value="opt-out" />
+          <div class="input_content">
+            <p>'. esc_html__('Opt-Out Mode (California)', 'aesirx-consent') . '</p>
+            <p class="small-description">'. sprintf(__('Tracking is allowed by default, but users must be able to opt out easily. This aligns with <strong>CCPA</strong> and similar U.S. privacy frameworks.', 'aesirx-consent')) . '</p>
+          </div>
+          </label>
+      </div>
+        ', aesirx_analytics_escape_html());
+        echo '
+        <script>
+          jQuery(document).ready(function() {
+            function switch_radio(val) {
+              if (val === "opt-out") {
+                jQuery(".aesirx_consent_gpc_consent_donotsell_row").show();
+              } else {
+                jQuery(".aesirx_consent_gpc_consent_donotsell_row").hide();
+              }
+            }
+            jQuery("input.gpc_consent_class").click(function() {
+              switch_radio(jQuery(this).val())
+            });
+            switch_radio("' . esc_html($mode) . '");
+          });
+        </script>';
+    },
+    'aesirx_consent_gpc_plugin',
+    'aesirx_consent_gpc_settings',
+    [
+      'class' => 'aesirx_consent_gpc_consent_row',
+    ]
+  );
+
+  add_settings_field(
+    'aesirx_consent_config_consent_donotsell',
+    esc_html__('Do not sell or share options', 'aesirx-consent'),
+    function () {
+      $options = get_option('aesirx_consent_gpc_plugin_options', []);
+      $checked = 'checked="checked"';
+      $mode = $options['gpc_consent_donotsell'] ?? 'yes';
+      // using custom function to escape HTML
+      echo wp_kses('
+      <div class="gpc_consent_donotsell_section">
+        <label class="radio_wrapper">
+          <input type="radio" class="gpc_consent_donotsell_class" name="aesirx_consent_gpc_plugin_options[gpc_consent_donotsell]" ' .
+      ($mode === 'yes' ? $checked : '') .
+      ' value="yes"  />
+          <div class="input_content">
+            <p>'. esc_html__('Yes', 'aesirx-consent') . '</p>
+          </div>
+        </label>
+        <label class="radio_wrapper">
+          <input type="radio" class="gpc_consent_donotsell_class" name="aesirx_consent_gpc_plugin_options[gpc_consent_donotsell]" ' .
+        ($mode === 'no' ? $checked : '') .
+        ' value="no" />
+          <div class="input_content">
+            <p>'. esc_html__('No', 'aesirx-consent') . '</p>
+          </div>
+          </label>
+      </div>
+        ', aesirx_analytics_escape_html());
+    },
+    'aesirx_consent_gpc_plugin',
+    'aesirx_consent_gpc_settings',
+    [
+      'class' => 'aesirx_consent_gpc_consent_donotsell_row',
+    ]
+  );
+
   add_settings_field(
     'aesirx_analytics_gpc',
     esc_html__('GPC Compliance', 'aesirx-consent'),
     function () {
-      $options = get_option('aesirx_analytics_plugin_options', []);
+      $options = get_option('aesirx_consent_gpc_plugin_options', []);
       $checked = 'checked="checked"';
       $mode = $options['gpc_support'] ?? 'yes';
       // using custom function to escape HTML
       echo wp_kses('
       <div class="gpc_support_section">
         <label class="radio_wrapper">
-          <input type="radio" class="analytic-gpc_support-class" name="aesirx_analytics_plugin_options[gpc_support]" ' .
+          <input type="radio" class="analytic-gpc_support-class" name="aesirx_consent_gpc_plugin_options[gpc_support]" ' .
       ($mode === 'yes' ? $checked : '') .
       ' value="yes"  />
           <div class="input_content">
@@ -539,7 +656,7 @@ add_action('admin_init', function () {
           </div>
         </label>
         <label class="radio_wrapper">
-          <input type="radio" class="analytic-gpc_support-class" name="aesirx_analytics_plugin_options[gpc_support]" ' .
+          <input type="radio" class="analytic-gpc_support-class" name="aesirx_consent_gpc_plugin_options[gpc_support]" ' .
         ($mode === 'no' ? $checked : '') .
         ' value="no" />
           <div class="input_content">
@@ -565,8 +682,8 @@ add_action('admin_init', function () {
       echo wp_kses("<div class='example-content'><div>Global Privacy Control (GPC)</div> Compliance Our website respects the Global Privacy Control (GPC) signal. If your browser sends a GPC signal, we automatically disable non-essential cookies and opt you out of data sharing. For more details, please visit our Privacy Policy: $policy_url.</div>", aesirx_analytics_escape_html());
       
     },
-    'aesirx_analytics_plugin',
-    'aesirx_analytics_settings',
+    'aesirx_consent_gpc_plugin',
+    'aesirx_consent_gpc_settings',
     [
       'class' => 'aesirx_analytics_gpc_row',
     ]
@@ -781,7 +898,40 @@ add_action('admin_menu', function () {
 			<?php
         echo '</div>';
     },
-    3);
+  3);
+
+  add_submenu_page(
+    'aesirx-consent-management-plugin',
+    'Consent Logic',
+    'Consent Logic',
+    'manage_options',
+    'aesirx-cmp-gpc',
+    function () {
+      ?>
+      <h2 class="aesirx_heading">Consent Logic</h2>
+      <div class="aesirx_consent_wrapper">
+      <div class="form_wrapper">
+        <form action="options.php" method="post">
+          <?php
+            settings_fields('aesirx_consent_gpc_plugin_options');
+
+            do_settings_sections('aesirx_consent_gpc_plugin');
+            wp_nonce_field('aesirx_analytics_settings_save', 'aesirx_analytics_settings_nonce');
+          ?>
+          <button type="submit" class="submit_button aesirx_btn_success">
+            <?php
+              echo wp_kses("
+                <img width='20px' height='20px' src='". plugins_url( 'aesirx-consent/assets/images-plugin/save_icon.png')."' />
+                ".esc_html__("Save settings", 'aesirx-consent')."
+              ", aesirx_analytics_escape_html()); 
+            ?>
+          </button>
+        </form>
+      </div>
+			<?php
+        echo '</div>';
+    },
+  3);
   
   });
 

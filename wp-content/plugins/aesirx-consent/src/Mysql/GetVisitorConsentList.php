@@ -100,6 +100,7 @@ Class AesirX_Analytics_Get_Visitor_Consent_List extends AesirxAnalyticsMysqlHelp
                 $res['visitor_consents'][] = [
                     'consent_uuid' => $consent->consent_uuid,
                     'consent' => $consent->consent_from_consent ?? $consent->consent ?? null,
+                    'tier' => $consent->tier ?? $consent->tier ?? null,
                     'datetime' => $consent->consent_datetime ?? $consent->datetime ? $consent->consent_datetime ?? $consent->datetime : null,
                     'expiration' => $consent->consent_expiration ?? $consent->expiration ? $consent->consent_expiration ?? $consent->expiration : null,
                     'address' => $consent->address,

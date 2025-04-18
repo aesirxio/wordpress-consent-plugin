@@ -3,7 +3,7 @@
  * Plugin Name: AesirX Consent
  * Plugin URI: https://analytics.aesirx.io?utm_source=wpplugin&utm_medium=web&utm_campaign=wordpress&utm_id=aesirx&utm_term=wordpress&utm_content=analytics
  * Description: Aesirx Consent plugin. When you join forces with AesirX, you're not just becoming a Partner - you're also becoming a freedom fighter in the battle for privacy! Earn 25% Affiliate Commission <a href="https://aesirx.io/partner?utm_source=wpplugin&utm_medium=web&utm_campaign=wordpress&utm_id=aesirx&utm_term=wordpress&utm_content=analytics">[Click to Join]</a>
- * Version: 1.5.0
+ * Version: 1.6.0
  * Author: aesirx.io
  * Author URI: https://aesirx.io/
  * Domain Path: /languages
@@ -98,7 +98,26 @@ add_action('wp_enqueue_scripts', function (): void {
         'txt_revoke_opt_in_advisor' => __( "Revoke Opt-In Consent for AesirX Privacy Advisor AI", 'aesirx-consent' ),
         'txt_revoke_consent_for_the_site' => __( "Revoke Consent for the site", 'aesirx-consent' ),
         'txt_consent_nanagement' => __( "Consent Management", 'aesirx-consent' ),
-        'txt_details' => __( "Details", 'aesirx-consent' )
+        'txt_details' => __( "Details", 'aesirx-consent' ),
+        "txt_customize" => __( "Customize", 'aesirx-consent' ),
+        "txt_save" => __( "Save", 'aesirx-consent' ),
+        "txt_always_active" => __( "Always active", 'aesirx-consent' ),
+        "txt_domain_path_based" => __( "Domain/Path-Based", 'aesirx-consent' ),
+        "txt_third_party_plugins" => __( "Third-Party Plugins", 'aesirx-consent' ),
+        "txt_essential_tracking" =>  __( "Essential Tracking", 'aesirx-consent' ),
+        "txt_essential_tracking_desc" => __( "Required for the website to function (e.g, session cookies, security tracking).", 'aesirx-consent' ),
+        "txt_functional_tracking" => __( "Functional Tracking", 'aesirx-consent' ),
+        "txt_functional_tracking_desc" => __( "User preferencese & site enhancements (e.g, language setting, live chat).", 'aesirx-consent' ),
+        "txt_analytics_tracking" => __( "Analytics Tracking", 'aesirx-consent' ),
+        "txt_analytics_tracking_desc" => __( "Visitor behavior monitoring (e.g, Google Analytics, Matomo).", 'aesirx-consent' ),
+        "txt_advertising_tracking" => __( "Advertising Tracking", 'aesirx-consent' ),
+        "txt_advertising_tracking_desc" => __( "Targeted advertising & remarketing (e.g, Facebook Pixel, Google Ads).", 'aesirx-consent' ),
+        "txt_custom_tracking" => __( "Custom Tracking", 'aesirx-consent' ),
+        "txt_custom_tracking_desc" => __( "Any additional third-party integrations (e.g, customer support tools, CDNS).", 'aesirx-consent' ),
+        "txt_opt_out_tracking" => __( "Opt-Out of tracking", 'aesirx-consent' ),
+        "txt_tracking_default" => __( "This website uses tracking by default. You may opt out at any time.", 'aesirx-consent' ),
+        "txt_do_not_sell" => __( "Do Not Sell or Share My Personal Information (CCPA)", 'aesirx-consent' ),
+        "txt_disables_third_party" => __( "Disables third-party data sharing for California users.", 'aesirx-consent' )
     );
     wp_localize_script( 'aesirx-consent', 'aesirx_analytics_translate', $translation_array );
     wp_enqueue_script('aesirx-consent');
@@ -146,7 +165,10 @@ add_action('wp_enqueue_scripts', function (): void {
 
     $clientId = $options['clientid'] ?? '';
     $secret = $options['secret'] ?? '';
-    $disableGPCSupport = $options['gpc_support'] === 'no' ? "true" : "false";
+    $optionsGPC = get_option('aesirx_consent_gpc_plugin_options', []);
+    $disableGPCSupport = $optionsGPC['gpc_support'] === 'no' ? "true" : "false";
+    $configConsentGPC = $optionsGPC['gpc_consent'] === 'opt-out' ? "true" : "false";
+    $configConsentGPCDoNotSell = $optionsGPC['gpc_consent_donotsell'] === 'yes' ? "true" : "false";
 
     wp_add_inline_script(
         'aesirx-consent',
@@ -155,7 +177,9 @@ add_action('wp_enqueue_scripts', function (): void {
         window.aesirxClientSecret="' . esc_attr($secret) . '";
         window.disableGPCsupport="' . esc_attr($disableGPCSupport) . '";
         window.blockJSDomains=' . $blockingCookiesJSON . ';
-        window.aesirxTrackEcommerce="' . esc_attr($trackEcommerce) . '";',
+        window.aesirxTrackEcommerce="' . esc_attr($trackEcommerce) . '";
+        window.aesirxOptOutMode="' . esc_attr($configConsentGPC) . '";
+        window.aesirxOptOutDoNotSell="' . esc_attr($configConsentGPCDoNotSell) . '";',
         'before');
 });
 

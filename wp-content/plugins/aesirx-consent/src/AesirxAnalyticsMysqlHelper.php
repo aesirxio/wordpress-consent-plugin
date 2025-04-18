@@ -774,6 +774,9 @@ if (!class_exists('AesirxAnalyticsMysqlHelper')) {
                     case "level5":
                         $data['tier'] = 5;
                         break;
+                    case "level6":
+                        $data['tier'] = 6;
+                        break;
                     default:
                         $data['tier'] = 1;
                         break;
