@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: AesirX Consent 1.6.0\n"
+"Project-Id-Version: AesirX Consent 1.7.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/aesirx-consent\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -28,11 +28,11 @@ msgstr "aesirx.io"
 msgid "https://aesirx.io/"
 msgstr "https://aesirx.io/"
 
-#: aesirx-consent.php:196
+#: aesirx-consent.php:221
 msgid "Settings"
 msgstr "Inställningar"
 
-#: aesirx-consent.php:311
+#: aesirx-consent.php:336
 msgid "Problem with Aesirx Analytics plugin install"
 msgstr "Problem med installationen av Aesirx Analytics plugin"
 
@@ -49,7 +49,7 @@ msgid "Invalid domain format."
 msgstr "Ogiltigt domänformat."
 
 #: aesirx-consent.php:43
-#: includes/settings.php:947
+#: includes/settings.php:1225
 msgid "Consent"
 msgstr "Samtycke"
 
@@ -226,380 +226,380 @@ msgid "Aesirx Consent plugin. When you join forces with AesirX, you're not just 
 msgstr "AesirX samtycke-plugin. När du går samman med AesirX blir du inte bara en partner - du blir också en frihetskämpe i kampen för integritet! Tjäna 25% affiliate provision <a href=\"https://aesirx.io/partner?utm_source=wpplugin&utm_medium=web&utm_campaign=wordpress&utm_id=aesirx&utm_term=wordpress&utm_content=analytics\">[Klicka för att gå med]</a>"
 
 #: aesirx-consent.php:39
-#: includes/settings.php:943
+#: includes/settings.php:1221
 msgid "Shield of Privacy"
-msgstr "Integritetssköld"
+msgstr "Shield of Privacy"
 
 #: aesirx-consent.php:40
-#: includes/settings.php:944
+#: includes/settings.php:1222
 msgid "Revoke your consent for data use whenever you wish."
 msgstr "Återkalla ditt samtycke till användning av data när du önskar."
 
 #: aesirx-consent.php:41
-#: includes/settings.php:945
+#: includes/settings.php:1223
 msgid "Manage Decentralized Consent"
 msgstr "Hantera decentraliserat samtycke"
 
 #: aesirx-consent.php:42
-#: includes/settings.php:946
+#: includes/settings.php:1224
 msgid "Revoke Consent"
 msgstr "Återkalla samtycke"
 
 #: aesirx-consent.php:44
-#: includes/settings.php:948
+#: includes/settings.php:1226
 msgid "Reject"
 msgstr "Avvisa"
 
 #: aesirx-consent.php:45
-#: includes/settings.php:949
+#: includes/settings.php:1227
 msgid "Please connect your Web3 wallet"
 msgstr "Vänligen anslut din Web3-plånbok"
 
 #: aesirx-consent.php:46
-#: includes/settings.php:950
+#: includes/settings.php:1228
 msgid "Please sign the message on your wallet twice and wait for it to be saved."
 msgstr "Var vänlig signera meddelandet i din plånbok två gånger och vänta tills det har sparats."
 
 #: aesirx-consent.php:47
-#: includes/settings.php:951
+#: includes/settings.php:1229
 msgid "Saving..."
 msgstr "Sparar..."
 
 #: aesirx-consent.php:48
-#: includes/settings.php:952
+#: includes/settings.php:1230
 msgid "Please connect to your wallet"
 msgstr "Vänligen anslut till din plånbok"
 
 #: aesirx-consent.php:49
-#: includes/settings.php:953
+#: includes/settings.php:1231
 msgid "Connecting"
 msgstr "Ansluter"
 
 #: aesirx-consent.php:50
-#: includes/settings.php:954
+#: includes/settings.php:1232
 msgid "TRACKING AND DATA PRIVACY PREFERENCES"
 msgstr "SPÅRNING OCH DATASEKRETESSINSTÄLLNINGAR"
 
 #: aesirx-consent.php:51
-#: includes/settings.php:955
+#: includes/settings.php:1233
 msgid "About"
 msgstr "Om"
 
 #: aesirx-consent.php:52
 #: aesirx-consent.php:101
-#: includes/settings.php:956
-#: includes/settings.php:1005
+#: includes/settings.php:1234
+#: includes/settings.php:1283
 msgid "Details"
 msgstr "Detaljer"
 
 #: aesirx-consent.php:53
 #: aesirx-consent.php:81
-#: includes/settings.php:957
-#: includes/settings.php:985
+#: includes/settings.php:1235
+#: includes/settings.php:1263
 msgid "Decentralized Consent"
 msgstr "Decentraliserat samtycke"
 
 #: aesirx-consent.php:54
-#: includes/settings.php:958
+#: includes/settings.php:1236
 msgid "Manage Your Consent Preferences"
 msgstr "Hantera dina samtyckesinställningar"
 
 #: aesirx-consent.php:55
-#: includes/settings.php:959
+#: includes/settings.php:1237
 msgid "Choose how we use your data: \"Reject\" data collection, allow tracking [\"Consent\"], or use \"Decentralized Consent\" for more control over your personal data & rewards."
 msgstr "Välj hur vi använder dina data: 'Avvisa' datainsamling, tillåt spårning ['Samtycke'], eller använd 'Decentraliserat Samtycke' för mer kontroll över dina personuppgifter & belöningar."
 
 #: aesirx-consent.php:56
-#: includes/settings.php:960
+#: includes/settings.php:1238
 msgid "Choose how we use your data: \"Reject\" data collection, allow tracking [\"Consent\"]."
 msgstr "Välj hur vi använder dina data: \"Avvisa\" datainsamling, tillåt spårning [\"Samtycke\"]."
 
 #: aesirx-consent.php:57
-#: includes/settings.php:961
+#: includes/settings.php:1239
 msgid "By consenting, you allow us to collect & use your data for:"
 msgstr "Genom att samtycka tillåter du oss att samla in & använda dina uppgifter för:"
 
 #: aesirx-consent.php:58
-#: includes/settings.php:962
+#: includes/settings.php:1240
 msgid "Analytics & Behavioral Data: To improve our services & personalize your experience."
 msgstr "Analys & beteendedata: För att förbättra våra tjänster & anpassa din upplevelse."
 
 #: aesirx-consent.php:59
-#: includes/settings.php:963
+#: includes/settings.php:1241
 msgid "Form Data: When you contact us."
 msgstr "Formulärdata: När du kontaktar oss."
 
 #: aesirx-consent.php:60
-#: includes/settings.php:964
+#: includes/settings.php:1242
 msgid "Please note"
 msgstr "Observera"
 
 #: aesirx-consent.php:61
-#: includes/settings.php:965
+#: includes/settings.php:1243
 msgid "We do not share your data with third parties without your explicit consent."
 msgstr "Vi delar inte dina uppgifter med tredje part utan ditt uttryckliga samtycke."
 
 #: aesirx-consent.php:62
-#: includes/settings.php:966
+#: includes/settings.php:1244
 msgid "You can opt-in later for specific features without giving blanket consent."
 msgstr "Du kan välja att delta senare för specifika funktioner utan att ge generellt samtycke."
 
 #: aesirx-consent.php:63
-#: includes/settings.php:967
+#: includes/settings.php:1245
 msgid "For more details, refer to our <a class='text-success fw-semibold text-decoration-underline' href='https://aesirx.io/privacy-policy' target='_blank'>privacy policy.</a>"
 msgstr "För mer information, se vår <a class='text-success fw-semibold text-decoration-underline' href='https://aesirx.io/privacy-policy' target='_blank'>integritetspolicy.</a>"
 
 #: aesirx-consent.php:64
-#: includes/settings.php:968
+#: includes/settings.php:1246
 msgid "Benefits"
 msgstr "Fördelar"
 
 #: aesirx-consent.php:65
-#: includes/settings.php:969
+#: includes/settings.php:1247
 msgid "<span class='fw-semibold text-primary'>Control your data:</span> Choose your preferred level of data collection & tracking."
 msgstr "<span class='fw-semibold text-primary'>Kontrollera dina data:</span> Välj din föredragna nivå av datainsamling och spårning."
 
 #: aesirx-consent.php:66
-#: includes/settings.php:970
+#: includes/settings.php:1248
 msgid "<span class='fw-semibold text-primary'>Earn rewards:</span> Participate in decentralized consent for privacy & rewards."
 msgstr "<span class='fw-semibold text-primary'>Tjäna belöningar:</span> Delta i decentraliserat samtycke för integritet och belöningar."
 
 #: aesirx-consent.php:67
-#: includes/settings.php:971
+#: includes/settings.php:1249
 msgid "<span class='fw-semibold text-primary'>Transparent data collection practices:</span> Understand how your data is collected & used."
 msgstr "<span class='fw-semibold text-primary'>Transparenta datainsamlingspraxis:</span> Förstå hur dina data samlas in & används."
 
 #: aesirx-consent.php:68
-#: includes/settings.php:972
+#: includes/settings.php:1250
 msgid "Understanding Your Privacy Choices"
 msgstr "Förstå dina integritetsval"
 
 #: aesirx-consent.php:69
-#: includes/settings.php:973
+#: includes/settings.php:1251
 msgid "<span class='fw-semibold text-primary'>Reject:</span> No data will be collected or loaded except for anonymized page views & rejections. Some personalization features may be disabled."
 msgstr "<span class='fw-semibold text-primary'>Avvisa:</span> Inga data kommer att samlas in eller laddas upp förutom anonymiserade sidvisningar & avvisningar. Vissa personaliseringsfunktioner kan vara inaktiverade."
 
 #: aesirx-consent.php:70
-#: includes/settings.php:974
+#: includes/settings.php:1252
 msgid "<span class='fw-semibold text-primary'>Consent:</span> First & third-party tracking data will be collected to enhance your experience."
 msgstr "<span class='fw-semibold text-primary'>Samtycke:</span> Spårningsdata från första och tredje part kommer att samlas in för att förbättra din upplevelse."
 
 #: aesirx-consent.php:71
-#: includes/settings.php:975
+#: includes/settings.php:1253
 msgid "<span class='fw-semibold text-primary'>Decentralized Consent:</span> Choose Decentralized Wallets or Decentralized Wallet + Shield of Privacy. Both options let you manage & revoke consent on-site or through AesirX dApp, plus earn rewards from digital marketing activities."
 msgstr "<span class='fw-semibold text-primary'>Decentraliserat Samtycke:</span> Välj Decentraliserade Plånböcker eller Decentraliserad Plånbok + Sekretesskydd. Båda alternativen låter dig hantera och återkalla samtycke på plats eller genom AesirX dApp, plus tjäna belöningar från digitala marknadsföringsaktiviteter."
 
 #: aesirx-consent.php:72
-#: includes/settings.php:976
+#: includes/settings.php:1254
 msgid "Our Commitment in Action"
 msgstr "Vårt engagemang i handling"
 
 #: aesirx-consent.php:73
-#: includes/settings.php:977
+#: includes/settings.php:1255
 msgid "<span class='fw-semibold text-primary'>Privacy Protection:</span> Users have full control over their data, ensuring maximum privacy."
 msgstr "<span class='fw-semibold text-primary'>Integritetsskydd:</span> Användare har full kontroll över sina data, vilket säkerställer maximal integritet."
 
 #: aesirx-consent.php:74
-#: includes/settings.php:978
+#: includes/settings.php:1256
 msgid "<span class='fw-semibold text-primary'>Enables Compliance:</span> Using Shield of Privacy (SoP) ensures compliance with GDPR, CCPA, ePrivacy Directive, & other data protection regulations."
 msgstr "<span class='fw-semibold text-primary'>Möjliggör Efterlevnad:</span> Användning av Privacy Shield (SoP) säkerställer efterlevnad av GDPR, CCPA, ePrivacy-direktivet och andra dataskyddsförordningar."
 
 #: aesirx-consent.php:75
-#: includes/settings.php:979
+#: includes/settings.php:1257
 msgid "<span class='fw-semibold text-primary'>Proactive Protection:</span> We enhance privacy measures to safeguard your data integrity."
 msgstr "<span class='fw-semibold text-primary'>Proaktivt Skydd:</span> Vi förbättrar integritetsskyddet för att säkra dina data."
 
 #: aesirx-consent.php:76
-#: includes/settings.php:980
+#: includes/settings.php:1258
 msgid "<span class='fw-semibold text-primary'>Flexible Consent:</span> You can withdraw your consent anytime on-site or via our <a class='text-success fw-semibold text-decoration-underline' href='https://dapp.shield.aesirx.io' target='_blank'>dApp</a> (Decentralized Application)."
 msgstr "<span class='fw-semibold text-primary'>Flexibelt samtycke:</span> Du kan återkalla ditt samtycke när som helst på plats eller via vår <a class='text-success fw-semibold text-decoration-underline' href='https://dapp.shield.aesirx.io' target='_blank'>dApp</a> (Decentraliserad Applikation)."
 
 #: aesirx-consent.php:77
-#: includes/settings.php:981
+#: includes/settings.php:1259
 msgid "<span class='fw-semibold text-primary'>Learn More:</span> Discover our approach to data processing in our <a class='text-success fw-semibold text-decoration-underline' href='https://aesirx.io/privacy-policy' target='_blank'>Privacy Policy</a>."
 msgstr "<span class='fw-semibold text-primary'>Lär dig mer:</span> Upptäck vårt tillvägagångssätt för databehandling i vår <a class='text-success fw-semibold text-decoration-underline' href='https://aesirx.io/privacy-policy' target='_blank'>Integritetspolicy</a>."
 
 #: aesirx-consent.php:78
-#: includes/settings.php:982
+#: includes/settings.php:1260
 msgid "<span class='fw-semibold text-primary'>For Businesses:</span> Enhance trust, secure user identities, & prevent breaches."
 msgstr "<span class='fw-semibold text-primary'>För företag:</span> Förstärk förtroende, säkra användaridentiteter & förebygg intrång."
 
 #: aesirx-consent.php:79
-#: includes/settings.php:983
+#: includes/settings.php:1261
 msgid "More info at <a class='text-success fw-semibold text-decoration-underline' href='https://shield.aesirx.io' target='_blank'>https://shield.aesirx.io</a>."
 msgstr "Mer information på <a class='text-success fw-semibold text-decoration-underline' href='https://shield.aesirx.io' target='_blank'>https://shield.aesirx.io</a>."
 
 #: aesirx-consent.php:80
-#: includes/settings.php:984
+#: includes/settings.php:1262
 msgid "Select your preferred decentralized consent option:"
 msgstr "Välj ditt föredragna decentraliserade samtyckesalternativ:"
 
 #: aesirx-consent.php:82
-#: includes/settings.php:986
+#: includes/settings.php:1264
 msgid "Decentralized consent will be loaded"
 msgstr "Decentraliserat samtycke laddas"
 
 #: aesirx-consent.php:83
-#: includes/settings.php:987
+#: includes/settings.php:1265
 msgid "Both first-party & third-party tracking data will be activated."
 msgstr "Både första parts och tredje parts spårningsdata kommer att aktiveras."
 
 #: aesirx-consent.php:84
-#: includes/settings.php:988
+#: includes/settings.php:1266
 msgid "All consented data will be collected."
 msgstr "Allt samtyckt data kommer att samlas in."
 
 #: aesirx-consent.php:85
-#: includes/settings.php:989
+#: includes/settings.php:1267
 msgid "Users can revoke consent on-site at any time."
 msgstr "Användare kan återkalla sitt samtycke på plats när som helst."
 
 #: aesirx-consent.php:86
-#: includes/settings.php:990
+#: includes/settings.php:1268
 msgid "Decentralized Consent + Shield of Privacy"
 msgstr "Decentraliserat Samtycke + Integritetssköld"
 
 #: aesirx-consent.php:87
-#: includes/settings.php:991
+#: includes/settings.php:1269
 msgid "Users can revoke consent on-site or from the AesirX dApp at any time."
 msgstr "Användare kan återkalla sitt samtycke på plats eller från AesirX dApp när som helst."
 
 #: aesirx-consent.php:88
-#: includes/settings.php:992
+#: includes/settings.php:1270
 msgid "Users can earn rewards from digital marketing activities."
 msgstr "Användare kan tjäna belöningar från digitala marknadsföringsaktiviteter."
 
 #: aesirx-consent.php:89
-#: includes/settings.php:993
+#: includes/settings.php:1271
 msgid "Continue"
 msgstr "Fortsätt"
 
 #: aesirx-consent.php:90
-#: includes/settings.php:994
+#: includes/settings.php:1272
 msgid "Back"
 msgstr "Tillbaka"
 
 #: aesirx-consent.php:91
-#: includes/settings.php:995
+#: includes/settings.php:1273
 msgid "You've chosen to reject data collection:"
 msgstr "Du har valt att avvisa datainsamling:"
 
 #: aesirx-consent.php:92
-#: includes/settings.php:996
+#: includes/settings.php:1274
 msgid "Only anonymized page views & limited features will be available. To access all website features, including personalized content & enhanced functionality, please choose an option:"
 msgstr "Endast anonymiserade sidvisningar och begränsade funktioner kommer att vara tillgängliga. För att få tillgång till alla webbplatsens funktioner, inklusive personligt innehåll och förbättrad funktionalitet, välj ett alternativ:"
 
 #: aesirx-consent.php:93
-#: includes/settings.php:997
+#: includes/settings.php:1275
 msgid "<span class='fw-semibold text-primary'>Consent:</span> Allow data collection for analytics, form data (when you contact us), & behavioral & event tracking, with the option to opt-in for specific features."
 msgstr "<span class='fw-semibold text-primary'>Samtycke:</span> Tillåt insamling av data för analyser, formulärdata (när du kontaktar oss) och beteende- och händelsespårning, med möjlighet att välja in specifika funktioner."
 
 #: aesirx-consent.php:94
-#: includes/settings.php:998
+#: includes/settings.php:1276
 msgid "<span class='fw-semibold text-primary'>Decentralized Consent:</span> Allow data collection for analytics, form data (when you contact us), & behavioral & event tracking, with the option to revoke consent, opt-in for specific features, & earn rewards from digital marketing activities."
 msgstr "<span class='fw-semibold text-primary'>Decentraliserat samtycke:</span> Tillåt insamling av data för analys, formulärdata (när du kontaktar oss) och beteende- och händelsespårning, med möjlighet att återkalla samtycke, välja in specifika funktioner och tjäna belöningar från digitala marknadsföringsaktiviteter."
 
 #: aesirx-consent.php:95
-#: includes/settings.php:999
+#: includes/settings.php:1277
 msgid "You can revoke consent on the site or any explicit opt-in consent, such as payment processing, at any time"
 msgstr "Du kan återkalla samtycke på webbplatsen eller något uttryckligt medgivande, såsom betalningshantering, när som helst"
 
 #: aesirx-consent.php:96
-#: includes/settings.php:1000
+#: includes/settings.php:1278
 msgid "Revoke Opt-In Consent"
 msgstr "Återkalla samtycke"
 
 #: aesirx-consent.php:97
-#: includes/settings.php:1001
+#: includes/settings.php:1279
 msgid "Revoke Opt-In Consent for Payment Processing"
 msgstr "Återkalla samtycke till betalningshantering"
 
 #: aesirx-consent.php:98
-#: includes/settings.php:1002
+#: includes/settings.php:1280
 msgid "Revoke Opt-In Consent for AesirX Privacy Advisor AI"
 msgstr "Återkalla samtycke till opt-in för AesirX Privacy Advisor AI"
 
 #: aesirx-consent.php:99
-#: includes/settings.php:1003
+#: includes/settings.php:1281
 msgid "Revoke Consent for the site"
 msgstr "Återkalla samtycke för webbplatsen"
 
 #: aesirx-consent.php:100
-#: includes/settings.php:1004
+#: includes/settings.php:1282
 msgid "Consent Management"
 msgstr "Samtyckeshantering"
 
-#: includes/settings.php:213
+#: includes/settings.php:224
 msgid "Gtag ID"
 msgstr "Gtag-ID"
 
-#: includes/settings.php:238
+#: includes/settings.php:249
 msgid "GTM ID"
 msgstr "GTM-ID"
 
-#: includes/settings.php:368
+#: includes/settings.php:379
 msgid "AesirX Consent Shield for Third-Party Plugins "
 msgstr ""
 
-#: includes/settings.php:373
+#: includes/settings.php:384
 msgid "Blocks selected third-party plugins from loading until user consent is given."
 msgstr "Blockerar valda tredjepartsplugins från att laddas tills användarens samtycke har givits."
 
-#: includes/settings.php:403
+#: includes/settings.php:414
 msgid "Completely prevents the loading and execution of chosen third-party plugins before consent."
 msgstr "Förhindrar helt laddning och exekvering av utvalda tredjepartsplugins innan samtycke."
 
-#: includes/settings.php:409
+#: includes/settings.php:420
 msgid "No network requests are made to third-party servers, enabling maximum compliance with privacy regulations like GDPR and the ePrivacy Directive."
 msgstr "Inga nätverksförfrågningar görs till tredjepartsservrar, vilket möjliggör maximal efterlevnad av integritetsregler som GDPR och ePrivacy-direktivet."
 
-#: includes/settings.php:423
+#: includes/settings.php:434
 msgid "AesirX Consent Shield for Domain/Path-Based Blocking"
 msgstr "AesirX Medgivande Sköld för Domän/Sökvägsbaserad Blockering"
 
-#: includes/settings.php:433
-#: includes/settings.php:451
+#: includes/settings.php:444
+#: includes/settings.php:462
 msgid "Enter domain or path"
 msgstr "Ange domän eller sökväg"
 
-#: includes/settings.php:426
+#: includes/settings.php:437
 msgid "Removes scripts matching specified domains or paths from the browser until user consent is given."
 msgstr "Tar bort skript som matchar angivna domäner eller sökvägar från webbläsaren tills användarens samtycke ges."
 
-#: includes/settings.php:474
+#: includes/settings.php:485
 msgid "Blocks or removes scripts from running in the user's browser before consent is given."
 msgstr "Blockerar eller tar bort skript från att köras i användarens webbläsare innan samtycke har givits."
 
-#: includes/settings.php:480
+#: includes/settings.php:491
 msgid "While it prevents scripts from executing, initial network requests may still occur, so it enhances privacy compliance under GDPR but may not fully meet the ePrivacy Directive requirements."
 msgstr "Även om det förhindrar skript från att köras, kan initiala nätverksförfrågningar fortfarande inträffa, så det förbättrar integritetsskyddet enligt GDPR men kanske inte helt uppfyller kraven i ePrivacy-direktivet."
 
-#: includes/settings.php:494
+#: includes/settings.php:505
 msgid "Script Blocking Options"
 msgstr "Skriptblockeringsalternativ"
 
-#: includes/settings.php:509
+#: includes/settings.php:520
 msgid "Only Third-Party Hosts (default)"
 msgstr "Endast tredjepartsvärdar (standard)"
 
-#: includes/settings.php:520
+#: includes/settings.php:531
 msgid "Both First and Third-Party Hosts"
 msgstr "Både första- och tredjepartsvärdar"
 
-#: includes/settings.php:701
+#: includes/settings.php:926
 msgid "Need Help? Access Our Comprehensive Documentation Hub"
 msgstr "Behöver du hjälp? Tillgång till vår omfattande dokumentationshub"
 
-#: includes/settings.php:1089
-#: includes/settings.php:1169
+#: includes/settings.php:1367
+#: includes/settings.php:1447
 msgid "Your trial license ends in %1$s days. Please update new license <a href='%2$s' target='_blank'>%2$s</a>."
 msgstr "Din provlicens går ut om %1$s dagar. Vänligen uppdatera din licens på <a href='%2$s' target='_blank'>%2$s</a>."
 
-#: includes/settings.php:1118
+#: includes/settings.php:1396
 msgid "Your license is expried or not found. Please update new license <a href='%1$s' target='_blank'>%1$s</a>."
 msgstr "Din licens har gått ut eller hittades inte. Vänligen uppdatera din licens på <a href='%1$s' target='_blank'>%1$s</a>."
 
-#: includes/settings.php:1172
+#: includes/settings.php:1450
 msgid "Your free trials has ended. Please update your license. <a href='%1$s' target='_blank'>%1$s</a>."
 msgstr "Din kostnadsfria provperiod har avslutats. Vänligen uppdatera din licens. <a href='%1$s' target='_blank'>%1$s</a>."
 
@@ -617,152 +617,153 @@ msgstr "Licensen har gått ut eller hittas inte. Vänligen uppdatera din licens"
 msgid "Your trial is ended. Please renew your license"
 msgstr "Din provperiod har avslutats. Vänligen förnya din licens"
 
-#: includes/settings.php:95
+#: includes/settings.php:106
 msgid "Your Client ID *"
 msgstr "Ditt klient-ID *"
 
-#: includes/settings.php:102
+#: includes/settings.php:113
 msgid "SSO Client ID"
 msgstr "SSO-klient-ID"
 
-#: includes/settings.php:108
+#: includes/settings.php:119
 msgid ""
 "<div class='input_information_content'>\n"
 "          Provided SSO CLIENT ID from <a href='%1$s' target='_blank'>%1$s</a>.</div>"
 msgstr "<div class='input_information_content'>Angivet SSO KLIENT-ID från <a href='%1$s' target='_blank'>%1$s</a>.</div>"
 
-#: includes/settings.php:123
+#: includes/settings.php:134
 msgid "Your Client Secret *"
 msgstr "Din klienthemlighet *"
 
-#: includes/settings.php:128
+#: includes/settings.php:139
 msgid "SSO Client Secret"
 msgstr "SSO-klienthemlighet"
 
-#: includes/settings.php:134
+#: includes/settings.php:145
 msgid ""
 "<div class='input_information_content'>\n"
 "          Provided SSO Client Secret from <a href='%1$s' target='_blank'>%1$s</a>.</div>"
 msgstr "<div class='input_information_content'>Tillhandahållen SSO-klienthemlighet från <a href='%1$s' target='_blank'>%1$s</a>.</div>"
 
-#: includes/settings.php:150
+#: includes/settings.php:161
 msgid "Your License Key"
 msgstr "Din licensnyckel"
 
-#: includes/settings.php:177
+#: includes/settings.php:188
 msgid "Choose your tailored template"
 msgstr "Välj din anpassade mall"
 
-#: includes/settings.php:432
-#: includes/settings.php:450
+#: includes/settings.php:443
+#: includes/settings.php:461
 msgid "Domain"
 msgstr "Domän"
 
-#: includes/settings.php:500
+#: includes/settings.php:511
 msgid "Configure how JavaScript is blocked based on user consent preferences."
 msgstr "Konfigurera hur JavaScript blockeras baserat på användarens samtyckespreferenser."
 
-#: includes/settings.php:510
+#: includes/settings.php:521
 msgid "Blocks JavaScript from third-party domains, allowing first-party scripts to run normally & keep essential site functions intact."
 msgstr "Blockerar JavaScript från tredjepartsdomäner, tillåter förstapartsskript att köras normalt och behåller nödvändiga webbplatsfunktioner intakta."
 
-#: includes/settings.php:521
+#: includes/settings.php:532
 msgid "Blocks JavaScript from both first-party & third-party domains for comprehensive script control, giving you the ability to block any JavaScript from internal or external sources based on user consent."
 msgstr "Blockerar JavaScript från både första parts och tredje parts domäner för omfattande skriptkontroll, vilket ger dig möjligheten att blockera all JavaScript från interna eller externa källor baserat på användarens samtycke."
 
-#: includes/settings.php:711
+#: includes/settings.php:936
 msgid "Discover the latest features & best practices."
 msgstr "Upptäck de senaste funktionerna och bästa praxis."
 
-#: includes/settings.php:738
+#: includes/settings.php:963
 msgid "Haven't got a license yet?"
 msgstr "Har du inte fått en licens ännu?"
 
-#: includes/settings.php:767
+#: includes/settings.php:992
 msgid "Scan Your Site for Privacy Risks"
 msgstr "Skanna din webbplats för integritetsrisker"
 
-#: includes/settings.php:771
+#: includes/settings.php:996
 msgid "Use the Privacy Scanner to quickly identify scripts, tags, & trackers running on your site that may compromise user privacy."
 msgstr "Använd integritetsskannern för att snabbt identifiera skript, taggar och spårare på din webbplats som kan kompromissa användarnas integritet."
 
-#: includes/settings.php:777
+#: includes/settings.php:1002
 msgid "Use Consent Shield to block those scripts by adding their domains or paths, ensuring quick & simple compliance."
 msgstr "Använd Consent Shield för att blockera dessa skript genom att lägga till deras domäner eller sökvägar, vilket säkerställer snabb och enkel efterlevnad."
 
-#: includes/settings.php:830
-#: includes/settings.php:892
-#: includes/settings.php:925
+#: includes/settings.php:1055
+#: includes/settings.php:1117
+#: includes/settings.php:1150
+#: includes/settings.php:1183
 msgid "Save settings"
 msgstr "Spara inställningar"
 
-#: includes/settings.php:155
+#: includes/settings.php:166
 msgid "License Key"
 msgstr "Licensnyckel"
 
-#: includes/settings.php:740
+#: includes/settings.php:965
 msgid "Haven't got Shield of Privacy ID yet?"
 msgstr "Har du inte fått Shield of Privacy ID ännu?"
 
-#: includes/settings.php:786
+#: includes/settings.php:1011
 msgid "Learn how to use AesirX Privacy Scanner with Consent Shield to detect privacy-intrusive elements, using the JetPack plugin as an example."
 msgstr "Lär dig hur du använder AesirX Privacy Scanner med Consent Shield för att upptäcka integritetsintrångande element, med JetPack-plugin som exempel."
 
-#: includes/settings.php:1136
+#: includes/settings.php:1414
 msgid "Your license ends in %1$s days. Please update new license <a href='%2$s' target='_blank'>%2$s</a>."
 msgstr "Din licens går ut om %1$s dagar. Vänligen uppdatera din licens på <a href='%2$s' target='_blank'>%2$s</a>."
 
-#: includes/settings.php:161
+#: includes/settings.php:172
 msgid ""
 "<div class='input_information_content'>\n"
 "          Sign up to obtain your Shield of Privacy ID and purchase licenses <a href='https://aesirx.io/licenses' target='blank' class='text-link'>here</a>.</div>"
 msgstr "<div class='input_information_content'>Registrera dig för att få ditt Shield of Privacy ID och köp licenser <a href='https://aesirx.io/licenses' target='blank' class='text-link'>här</a>.</div>"
 
-#: includes/settings.php:266
+#: includes/settings.php:277
 msgid "To configure, input your Google Tag Manager Gtag ID & GTM ID in the designated fields. Once set up, Google Tag Manager will only load after the user provides consent."
 msgstr "För att konfigurera, ange din Google Tag Manager Gtag-ID och GTM-ID i de angivna fälten. När det är inställt kommer Google Tag Manager endast att laddas efter att användaren har gett sitt samtycke."
 
-#: includes/settings.php:185
+#: includes/settings.php:196
 msgid "Simple Consent Mode"
 msgstr "Enkelt samtyckesläge"
 
-#: includes/settings.php:223
-#: includes/settings.php:248
+#: includes/settings.php:234
+#: includes/settings.php:259
 msgid ""
 "<div class='input_information_content'>\n"
 "          Remember to include the explicit purpose (e.g., analytics, marketing) in the consent text to inform users why GTM is being used.</div>"
 msgstr "<div class='input_information_content'>Kom ihåg att inkludera det uttryckliga syftet (t.ex. analys, marknadsföring) i samtyckestexten för att informera användarna om varför GTM används.</div>"
 
-#: includes/settings.php:744
+#: includes/settings.php:969
 msgid "Register Licence Here"
 msgstr "Registrera licens här"
 
-#: includes/settings.php:749
+#: includes/settings.php:974
 msgid "Sign up now"
 msgstr "Registrera dig nu"
 
-#: includes/settings.php:705
+#: includes/settings.php:930
 msgid "Explore How-To Guides, instructions, & tutorials to get the most from AesirX Consent Shield. Whether you're a developer or admin, find all you need to configure & optimize your privacy setup."
 msgstr "Utforska guider, instruktioner och handledningar för att få ut det mesta av AesirX Consent Shield. Oavsett om du är utvecklare eller administratör, hitta allt du behöver för att konfigurera och optimera din integritetsinställning."
 
-#: includes/settings.php:292
+#: includes/settings.php:303
 msgid "Customize Consent Text "
 msgstr ""
 
-#: includes/settings.php:305
+#: includes/settings.php:316
 msgid "Reset Consent"
 msgstr "Återställ samtycke"
 
-#: aesirx-consent.php:326
+#: aesirx-consent.php:351
 msgid "Important: Permalink Settings Required"
 msgstr "Viktigt: Inställningar för permalänkar krävs"
 
-#: includes/settings.php:1162
+#: includes/settings.php:1440
 msgid "Your trial license ends in %1$s hour(s). Please update your license <a href='%2$s' target='_blank'>here</a>."
 msgstr "Din provlicens går ut om %1$s timme/timmar. Vänligen uppdatera din licens <a href='%2$s' target='_blank'>här</a>."
 
 #. translators: 1: Permalink structure example, 2: Link to Permalink Settings page
-#: aesirx-consent.php:331
+#: aesirx-consent.php:356
 msgid ""
 "Our plugin requires that your site use a pretty permalink structure (for example, %1$s) to work correctly.\n"
 "                            It looks like your current settings are using the plain permalink format, which might cause issues.\n"
@@ -770,19 +771,19 @@ msgid ""
 "                            Once there, select the \"Post name\" option (or another pretty permalink structure) and click \"Save Changes.\""
 msgstr "Vårt plugin kräver att din webbplats använder en snygg permalänkstruktur (till exempel %1$s) för att fungera korrekt. Det verkar som att dina nuvarande inställningar använder det enkla permalänkformatet, vilket kan orsaka problem. Vänligen %2$s för att öppna dina Permalänk-inställningar. Välj där \"Inläggsnamn\"-alternativet (eller en annan snygg permalänkstruktur) och klicka på \"Spara ändringar.\""
 
-#: aesirx-consent.php:338
+#: aesirx-consent.php:363
 msgid "click here"
 msgstr "Klicka här"
 
-#: includes/settings.php:263
+#: includes/settings.php:274
 msgid "GTM General"
 msgstr "Allmän GTM"
 
-#: includes/settings.php:1095
+#: includes/settings.php:1373
 msgid "Something went wrong: %1$s. Please contact the administrator."
 msgstr "Något gick fel: %1$s. Vänligen kontakta administratören."
 
-#: includes/settings.php:1142
+#: includes/settings.php:1420
 msgid "Check license failed: %1$s. Please contact the administrator or update your license."
 msgstr "Licenskontroll misslyckades: %1$s. Vänligen kontakta administratören eller uppdatera din licens."
 
@@ -790,15 +791,15 @@ msgstr "Licenskontroll misslyckades: %1$s. Vänligen kontakta administratören e
 msgid "Check license failed: %1\\$s. Please contact the administrator."
 msgstr ""
 
-#: includes/settings.php:198
+#: includes/settings.php:209
 msgid "The Default setup improves Google Consent Mode 2.0 by not loading any scripts, beacons, or tags until after consent is given, reducing compliance risks. It also includes Decentralized Consent, for more control over personal data and rewards."
 msgstr "Standardinställningen förbättrar Google Consent Mode 2.0 genom att inte ladda några skript, beacons eller taggar förrän efter att samtycke har getts, vilket minskar efterlevnadsriskerna. Den inkluderar också decentraliserat samtycke, för mer kontroll över personuppgifter och belöningar."
 
-#: includes/settings.php:189
+#: includes/settings.php:200
 msgid "Simple Consent Mode follows Google Consent Mode 2.0 by not loading any tags until after consent is given, reducing compliance risks."
 msgstr "Enkelt samtyckesläge följer Google Consent Mode 2.0 genom att inte ladda några taggar förrän efter att samtycke har givits, vilket minskar efterlevnadsrisker."
 
-#: includes/settings.php:1125
+#: includes/settings.php:1403
 msgid "Your domain is not match with your license. Please update domain in your license <a href='%1$s' target='_blank'>%1$s</a> and click <span class='verify_domain'>here</span> to verify again."
 msgstr "Ditt domän matchar inte din licens. Vänligen uppdatera domänen i din licens <a href='%1$s' target='_blank'>%1$s</a> och klicka <span class='verify_domain'>här</span> för att verifiera igen."
 
@@ -807,59 +808,59 @@ msgstr "Ditt domän matchar inte din licens. Vänligen uppdatera domänen i din 
 msgid "Your domain is not match with your license. Please update domain in your license"
 msgstr "Ditt domän matchar inte din licens. Vänligen uppdatera domänen i din licens"
 
-#: includes/settings.php:194
+#: includes/settings.php:205
 msgid "Decentralized Consent Mode"
 msgstr "Decentraliserat samtyckesläge"
 
-#: includes/settings.php:642
+#: includes/settings.php:653
 msgid "GPC Compliance"
 msgstr "GPC-efterlevnad"
 
-#: includes/settings.php:655
+#: includes/settings.php:666
 msgid "Enable GPC Support"
 msgstr "Aktivera GPC-stöd"
 
-#: includes/settings.php:663
+#: includes/settings.php:674
 msgid "Disable GPC Support"
 msgstr "Inaktivera GPC-stöd"
 
-#: includes/settings.php:670
+#: includes/settings.php:681
 msgid "To comply with Global Privacy Control (GPC), please download and upload the following file:"
 msgstr "För att följa Global Privacy Control (GPC), vänligen ladda ner och ladda upp följande fil:"
 
-#: includes/settings.php:673
+#: includes/settings.php:684
 msgid "Upload Instructions:"
 msgstr "Uppladdningsinstruktioner:"
 
-#: includes/settings.php:675
+#: includes/settings.php:686
 msgid "Download the gpc.json file."
 msgstr "Ladda ner gpc.json-filen."
 
-#: includes/settings.php:676
+#: includes/settings.php:687
 msgid "Connect to your website via FTP or File Manager."
 msgstr "Anslut till din webbplats via FTP eller Filhanterare."
 
-#: includes/settings.php:677
+#: includes/settings.php:688
 msgid "Upload the file to: <code>/public_html/.well-known/gpc.json</code>"
 msgstr "Ladda upp filen till: <code>/public_html/.well-known/gpc.json</code>"
 
-#: includes/settings.php:678
+#: includes/settings.php:689
 msgid "Ensure the file is accessible by visiting: <a href='"
 msgstr "Se till att filen är tillgänglig genom att besöka: <a href='"
 
-#: includes/settings.php:317
+#: includes/settings.php:328
 msgid "Customize Detail Text "
 msgstr "Anpassa detaljtext"
 
-#: includes/settings.php:330
+#: includes/settings.php:341
 msgid "Reset Detail"
 msgstr "Återställ detalj"
 
-#: includes/settings.php:342
+#: includes/settings.php:353
 msgid "Customize Reject Text "
 msgstr "Anpassa avvisande text"
 
-#: includes/settings.php:355
+#: includes/settings.php:366
 msgid "Reset Reject"
 msgstr "Återställ Avvisa"
 
@@ -939,34 +940,76 @@ msgstr "Sälj eller dela inte min personliga information (CCPA)"
 msgid "Disables third-party data sharing for California users."
 msgstr "Inaktiverar datadelning från tredje part för användare i Kalifornien."
 
-#: includes/settings.php:552
+#: includes/settings.php:563
 msgid "Configurable Consent Logic"
 msgstr "Konfigurerbar samtyckeslogik"
 
-#: includes/settings.php:565
+#: includes/settings.php:576
 msgid "Opt-In Mode (EU)"
 msgstr "Opt-in-läge (EU)"
 
-#: includes/settings.php:566
+#: includes/settings.php:577
 msgid "No tracking technologies are activated until a user explicitly gives consent. This is required by <strong>GDPR</strong> and <strong>ePrivacy Directive 5(3)</strong>."
 msgstr "Inga spårningstekniker aktiveras förrän en användare uttryckligen ger sitt samtycke. Detta krävs enligt <strong>GDPR</strong> och <strong>ePrivacy Directive 5(3)</strong>."
 
-#: includes/settings.php:574
+#: includes/settings.php:585
 msgid "Opt-Out Mode (California)"
 msgstr "Opt-out-läge (Kalifornien)"
 
-#: includes/settings.php:575
+#: includes/settings.php:586
 msgid "Tracking is allowed by default, but users must be able to opt out easily. This aligns with <strong>CCPA</strong> and similar U.S. privacy frameworks."
 msgstr "Spårning är tillåtet som standard, men användare måste kunna välja bort det enkelt. Detta är i linje med <strong>CCPA</strong> och liknande amerikanska sekretessramar."
 
-#: includes/settings.php:606
+#: includes/settings.php:617
 msgid "Do not sell or share options"
 msgstr "Sälj eller dela inte optioner"
 
-#: includes/settings.php:619
+#: includes/settings.php:630
+#: includes/settings.php:736
 msgid "Yes"
 msgstr "Ja"
 
-#: includes/settings.php:627
+#: includes/settings.php:638
+#: includes/settings.php:744
 msgid "No"
 msgstr "Inga"
+
+#: includes/settings.php:723
+msgid "Enable Geo-handling for Consent Mode"
+msgstr "Aktivera geohantering för samtyckesläge"
+
+#: includes/settings.php:759
+msgid "Geo-Based Consent Rules"
+msgstr "Geobaserade samtyckesregler"
+
+#: includes/settings.php:858
+msgid "Browser Language"
+msgstr "Webbläsarspråk"
+
+#: includes/settings.php:859
+#: includes/settings.php:871
+#: includes/settings.php:888
+msgid "Time Zone"
+msgstr "Tidszon"
+
+#: includes/settings.php:861
+msgid "Consent Mode"
+msgstr "Samtyckesläge"
+
+#: includes/settings.php:862
+msgid "Allow Override"
+msgstr "Tillåt åsidosättande"
+
+#: includes/settings.php:870
+#: includes/settings.php:887
+msgid "Language"
+msgstr "Språk"
+
+#: includes/settings.php:873
+#: includes/settings.php:890
+msgid "Select Mode"
+msgstr "Välj Läge"
+
+#: includes/settings.php:891
+msgid "Override"
+msgstr "Åsidosätta"
