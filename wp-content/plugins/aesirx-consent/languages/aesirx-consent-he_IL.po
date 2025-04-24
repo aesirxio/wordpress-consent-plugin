@@ -9,14 +9,14 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "POT-Creation-Date: 2024-07-25T03:47:45+00:00\n"
 "PO-Revision-Date: 2024-07-26 17:10+0200\n"
-"Language: se\n"
+"Language: he\n"
 "X-Domain: aesirx-consent\n"
 "X-Generator: Poedit 3.4.4\n"
 
 #. Plugin URI of the plugin
 #: aesirx-consent.php
 msgid "https://analytics.aesirx.io?utm_source=wpplugin&utm_medium=web&utm_campaign=wordpress&utm_id=aesirx&utm_term=wordpress&utm_content=analytics"
-msgstr "https://analytics.aesirx.io?utm_source=wpplugin&utm_medium=web&utm_campaign=wordpress&utm_id=aesirx&utm_term=wordpress&utm_content=analys"
+msgstr "https://analytics.aesirx.io?utm_source=wpplugin&utm_medium=web&utm_campaign=wordpress&utm_id=aesirx&utm_term=wordpress&utm_content=analytics"
 
 #. Author of the plugin
 #: aesirx-consent.php
@@ -30,48 +30,48 @@ msgstr "https://aesirx.io/"
 
 #: aesirx-consent.php:221
 msgid "Settings"
-msgstr "Inställningar"
+msgstr "הגדרות"
 
 #: aesirx-consent.php:336
 msgid "Problem with Aesirx Analytics plugin install"
-msgstr "Problem med installationen av Aesirx Analytics plugin"
+msgstr "בעיה בהתקנת תוסף Aesirx Analytics"
 
 #: includes/settings.php:17
 msgid "Please register your license at Signup.aesirx.io to enable the external first-party server."
-msgstr "Vänligen registrera din licens på Signup.aesirx.io för att aktivera den externa förstapartsservern."
+msgstr "אנא רשום את הרישיון שלך ב-Signup.aesirx.io כדי להפעיל את השרת החיצוני של צד ראשון."
 
 #: includes/settings.php:27
 msgid "Domain is empty."
-msgstr "Domänen får inte vara tom."
+msgstr "הדומיין ריק"
 
 #: includes/settings.php:34
 msgid "Invalid domain format."
-msgstr "Ogiltigt domänformat."
+msgstr "פורמט דומיין לא חוקי."
 
 #: aesirx-consent.php:43
 #: includes/settings.php:1225
 msgid "Consent"
-msgstr "Samtycke"
+msgstr "הסכמה"
 
 #: src/AesirxAnalyticsMysqlHelper.php:96
 msgid "Database error occurred."
-msgstr "Ett databasfel har inträffat."
+msgstr "אירעה שגיאת מסד נתונים."
 
 #: src/AesirxAnalyticsMysqlHelper.php:250
 #: src/AesirxAnalyticsMysqlHelper.php:585
 #: src/AesirxAnalyticsMysqlHelper.php:617
 msgid "\"start\" filter is not correct"
-msgstr "\"Start\"-filtret är inte korrekt"
+msgstr "\"המסנן \\\"התחלה\\\" אינו נכון\""
 
 #: src/AesirxAnalyticsMysqlHelper.php:258
 #: src/AesirxAnalyticsMysqlHelper.php:593
 #: src/AesirxAnalyticsMysqlHelper.php:625
 msgid "\"end\" filter is not correct"
-msgstr "\"Slut\"-filtret är inte korrekt"
+msgstr "\"סינון \"סוף\" אינו נכון\""
 
 #: src/AesirxAnalyticsMysqlHelper.php:327
 msgid "Domain not found"
-msgstr "Domän hittades inte"
+msgstr "הדומיין לא נמצא"
 
 #: src/AesirxAnalyticsMysqlHelper.php:406
 #: src/AesirxAnalyticsMysqlHelper.php:468
@@ -85,682 +85,682 @@ msgstr "Domän hittades inte"
 #: src/AesirxAnalyticsMysqlHelper.php:1080
 #: src/Mysql/GetVisitorConsentList.php:60
 msgid "There was a problem with the database query."
-msgstr "Det uppstod ett problem med databasfrågan."
+msgstr "הייתה בעיה בשאילתת מסד הנתונים."
 
 #: src/AesirxAnalyticsMysqlHelper.php:906
 #: src/AesirxAnalyticsMysqlHelper.php:925
 #: src/AesirxAnalyticsMysqlHelper.php:945
 #: src/AesirxAnalyticsMysqlHelper.php:1283
 msgid "Something went wrong"
-msgstr "Något gick fel"
+msgstr "משהו השתבש"
 
 #: src/AesirxAnalyticsMysqlHelper.php:1006
 msgid "There was a problem updating the data in the database."
-msgstr "Det uppstod ett problem med att uppdatera datan i databasen."
+msgstr "אירעה בעיה בעדכון הנתונים במסד הנתונים."
 
 #: src/Mysql/AddConsentLevel1.php:23
 #: src/Mysql/AddConsentLevel5.php:23
 #: src/Mysql/AddConsentLevel6.php:23
 msgid "The uuid parameter is required."
-msgstr "Uuid-parametern är obligatorisk."
+msgstr "הפרמטר uuid נדרש."
 
 #: src/Mysql/AddConsentLevel1.php:27
 #: src/Mysql/AddConsentLevel5.php:27
 #: src/Mysql/AddConsentLevel6.php:27
 msgid "The consent parameter is required and must be a number."
-msgstr "Samtyckesparametern är obligatorisk och måste vara ett nummer."
+msgstr "פרמטר ההסכמה נדרש וחייב להיות מספר."
 
 #: src/Mysql/AddConsentLevel1.php:53
 #: src/Mysql/AddConsentLevel5.php:53
 #: src/Mysql/AddConsentLevel6.php:53
 msgid "Previous consent was not expired"
-msgstr "Det tidigare samtycket hade inte löpt ut"
+msgstr "ההסכמה הקודמת לא פגה"
 
 #: src/Mysql/AddConsentLevel2.php:16
 #: src/Mysql/AddConsentLevel3or4.php:55
 msgid "Invalid token"
-msgstr "Ogiltig token"
+msgstr "אסימון לא חוקי"
 
 #: src/Mysql/AddConsentLevel2.php:24
 #: src/Mysql/AddConsentLevel3or4.php:19
 msgid "Visitor not found"
-msgstr "Besökaren hittades inte"
+msgstr "המבקר לא נמצא"
 
 #: src/Mysql/AddConsentLevel2.php:41
 #: src/Mysql/AddConsentLevel3or4.php:80
 msgid "Previous consent still active"
-msgstr "Tidigare samtycke fortfarande aktivt"
+msgstr "הסכמה קודמת עדיין פעילה"
 
 #: src/Mysql/AddConsentLevel2.php:124
 #: src/Mysql/AddConsentLevel3or4.php:167
 msgid "There was a problem querying the data in the database."
-msgstr "Det uppstod ett problem med att hämta data från databasen."
+msgstr "אירעה בעיה בשאילתת הנתונים במסד הנתונים."
 
 #: src/Mysql/AddConsentLevel3or4.php:12
 msgid "Invalid signature"
-msgstr "Ogiltig signatur"
+msgstr "חתימה לא חוקית"
 
 #: src/Mysql/AddConsentLevel3or4.php:26
 msgid "Wallet not found"
-msgstr "Plånbok inte hittad"
+msgstr "הארנק לא נמצא"
 
 #: src/Mysql/AddConsentLevel3or4.php:32
 msgid "Wallet nonce not found"
-msgstr "Plånbokens nonce hittades inte"
+msgstr "לא נמצא nonce של הארנק"
 
 #: src/Mysql/AddConsentLevel3or4.php:39
 #: src/Mysql/RevokeConsentLevel3or4.php:37
 msgid "Nonce is not valid"
-msgstr "Nonce är inte giltig"
+msgstr "ה-Nonce אינו תקף"
 
 #: src/Mysql/AddConsentLevel3or4.php:48
 #: src/Mysql/RevokeConsentLevel3or4.php:44
 msgid "Contract is not valid"
-msgstr "Kontraktet är inte giltigt"
+msgstr "החוזה אינו תקף"
 
 #: src/Mysql/CloseVisitorEvent.php:14
 #: src/Mysql/CloseVisitorEvent.php:18
 msgid "The event uuid parameter is required."
-msgstr "Eventets uuid-parameter är obligatorisk."
+msgstr "נדרש פרמטר uuid של האירוע."
 
 #: src/Mysql/CloseVisitorEvent.php:36
 msgid "Failed to update analytics events."
-msgstr "Misslyckades med att uppdatera analyshändelser."
+msgstr "נכשל בעדכון אירועי האנליטיקה."
 
 #: src/Mysql/CloseVisitorEvent.php:43
 msgid "Visitor event not found."
-msgstr "Besökarhändelse hittades inte."
+msgstr "אירוע המבקר לא נמצא."
 
 #: src/Mysql/CloseVisitorEvent.php:55
 msgid "Failed to update analytics flows"
-msgstr "Uppdatering av analysflöden misslyckades"
+msgstr "עדכון זרימות הניתוח נכשל"
 
 #: src/Mysql/GetNonce.php:12
 msgid "Address is not valid"
-msgstr "Adressen är inte giltig"
+msgstr "הכתובת אינה חוקית"
 
 #: src/Mysql/RevokeConsentLevel3or4.php:14
 msgid "Invalid signature."
-msgstr "Ogiltig signatur."
+msgstr "חתימה לא חוקית."
 
 #: src/Mysql/RevokeConsentLevel3or4.php:24
 msgid "Wallet not found."
-msgstr "Plånbok hittades inte."
+msgstr "הארנק לא נמצא."
 
 #: src/Mysql/RevokeConsentLevel3or4.php:30
 msgid "Nonce not found."
-msgstr "Nonce hittades inte."
+msgstr "Nonce לא נמצא."
 
 #: src/Mysql/RevokeConsentLevel3or4.php:55
 msgid "Failed to update consent expiration."
-msgstr "Uppdatering av samtyckets utgång misslyckades."
+msgstr "נכשל בעדכון פקיעת תוקף ההסכמה."
 
 #: src/Mysql/RevokeConsentLevel3or4.php:62
 msgid "Failed to update nonce."
-msgstr "Uppdatering av nonce misslyckades."
+msgstr "נכשל בעדכון ה-nonce."
 
 #: src/Mysql/StartFingerprint.php:146
 msgid "Wrong URL format, domain not found"
-msgstr "Felaktigt URL-format, domän hittades inte"
+msgstr "פורמט URL שגוי, הדומיין לא נמצא"
 
 #: src/Mysql/StartFingerprint.php:150
 msgid "The domain sent in the new URL does not match the domain stored in the visitor document"
-msgstr "Domänen som skickats i den nya URL:en matchar inte med domänen som är lagrad i besöksdokumentet"
+msgstr "הדומיין שנשלח ב-URL החדש אינו תואם את הדומיין המאוחסן במסמך המבקר"
 
 #: src/Route/Middleware/IsBackendMiddleware.php:18
 msgid "Permission denied!"
-msgstr "Åtkomst nekad!"
+msgstr "ההרשאה נדחתה!"
 
 #: src/Track/CliTracker.php:32
 msgid "Error in tracking"
-msgstr "Fel i spårning"
+msgstr "שגיאה במעקב"
 
 #. Plugin Name of the plugin
 #: aesirx-consent.php
 msgid "AesirX Consent"
-msgstr "AesirX Samtycke"
+msgstr "הסכמת AesirX"
 
 #. Description of the plugin
 #: aesirx-consent.php
 msgid "Aesirx Consent plugin. When you join forces with AesirX, you're not just becoming a Partner - you're also becoming a freedom fighter in the battle for privacy! Earn 25% Affiliate Commission <a href=\"https://aesirx.io/partner?utm_source=wpplugin&utm_medium=web&utm_campaign=wordpress&utm_id=aesirx&utm_term=wordpress&utm_content=analytics\">[Click to Join]</a>"
-msgstr "AesirX samtycke-plugin. När du går samman med AesirX blir du inte bara en partner - du blir också en frihetskämpe i kampen för integritet! Tjäna 25% affiliate provision <a href=\"https://aesirx.io/partner?utm_source=wpplugin&utm_medium=web&utm_campaign=wordpress&utm_id=aesirx&utm_term=wordpress&utm_content=analytics\">[Klicka för att gå med]</a>"
+msgstr "תוסף הסכמה של AesirX. כשאתה מצטרף ל-AesirX, אתה לא רק הופך לשותף - אתה גם הופך ללוחם חופש במאבק על הפרטיות! הרווח 25% עמלת שותפים <a href=\"https://aesirx.io/partner?utm_source=wpplugin&utm_medium=web&utm_campaign=wordpress&utm_id=aesirx&utm_term=wordpress&utm_content=analytics\">[לחץ כדי להצטרף]</a>"
 
 #: aesirx-consent.php:39
 #: includes/settings.php:1221
 msgid "Shield of Privacy"
-msgstr "Shield of Privacy"
+msgstr "מגן פרטיות"
 
 #: aesirx-consent.php:40
 #: includes/settings.php:1222
 msgid "Revoke your consent for data use whenever you wish."
-msgstr "Återkalla ditt samtycke till användning av data när du önskar."
+msgstr "בטל את הסכמתך לשימוש בנתונים בכל עת שתרצה."
 
 #: aesirx-consent.php:41
 #: includes/settings.php:1223
 msgid "Manage Decentralized Consent"
-msgstr "Hantera decentraliserat samtycke"
+msgstr "נהל הסכמה מבוזרת"
 
 #: aesirx-consent.php:42
 #: includes/settings.php:1224
 msgid "Revoke Consent"
-msgstr "Återkalla samtycke"
+msgstr "בטל הסכמה"
 
 #: aesirx-consent.php:44
 #: includes/settings.php:1226
 msgid "Reject"
-msgstr "Avvisa"
+msgstr "דחה"
 
 #: aesirx-consent.php:45
 #: includes/settings.php:1227
 msgid "Please connect your Web3 wallet"
-msgstr "Vänligen anslut din Web3-plånbok"
+msgstr "אנא חבר את ארנק ה-Web3 שלך"
 
 #: aesirx-consent.php:46
 #: includes/settings.php:1228
 msgid "Please sign the message on your wallet twice and wait for it to be saved."
-msgstr "Var vänlig signera meddelandet i din plånbok två gånger och vänta tills det har sparats."
+msgstr "אנא חתום על ההודעה בארנק שלך פעמיים והמתן שהיא תישמר."
 
 #: aesirx-consent.php:47
 #: includes/settings.php:1229
 msgid "Saving..."
-msgstr "Sparar..."
+msgstr "חִסָכוֹן..."
 
 #: aesirx-consent.php:48
 #: includes/settings.php:1230
 msgid "Please connect to your wallet"
-msgstr "Vänligen anslut till din plånbok"
+msgstr "אנא התחבר לארנק שלך"
 
 #: aesirx-consent.php:49
 #: includes/settings.php:1231
 msgid "Connecting"
-msgstr "Ansluter"
+msgstr "מתחבר"
 
 #: aesirx-consent.php:50
 #: includes/settings.php:1232
 msgid "TRACKING AND DATA PRIVACY PREFERENCES"
-msgstr "SPÅRNING OCH DATASEKRETESSINSTÄLLNINGAR"
+msgstr "העדפות מעקב ופרטיות נתונים"
 
 #: aesirx-consent.php:51
 #: includes/settings.php:1233
 msgid "About"
-msgstr "Om"
+msgstr "אוֹדוֹת"
 
 #: aesirx-consent.php:52
 #: aesirx-consent.php:101
 #: includes/settings.php:1234
 #: includes/settings.php:1283
 msgid "Details"
-msgstr "Detaljer"
+msgstr "פרטים"
 
 #: aesirx-consent.php:53
 #: aesirx-consent.php:81
 #: includes/settings.php:1235
 #: includes/settings.php:1263
 msgid "Decentralized Consent"
-msgstr "Decentraliserat samtycke"
+msgstr "הסכמה מבוזרת"
 
 #: aesirx-consent.php:54
 #: includes/settings.php:1236
 msgid "Manage Your Consent Preferences"
-msgstr "Hantera dina samtyckesinställningar"
+msgstr "נהל את העדפות ההסכמה שלך"
 
 #: aesirx-consent.php:55
 #: includes/settings.php:1237
 msgid "Choose how we use your data: \"Reject\" data collection, allow tracking [\"Consent\"], or use \"Decentralized Consent\" for more control over your personal data & rewards."
-msgstr "Välj hur vi använder dina data: 'Avvisa' datainsamling, tillåt spårning ['Samtycke'], eller använd 'Decentraliserat Samtycke' för mer kontroll över dina personuppgifter & belöningar."
+msgstr "בחר כיצד אנו משתמשים בנתונים שלך: 'דחה' איסוף נתונים, אפשר מעקב ['הסכמה'], או השתמש ב'הסכמה מבוזרת' לשליטה רבה יותר על הנתונים האישיים והתגמולים שלך."
 
 #: aesirx-consent.php:56
 #: includes/settings.php:1238
 msgid "Choose how we use your data: \"Reject\" data collection, allow tracking [\"Consent\"]."
-msgstr "Välj hur vi använder dina data: \"Avvisa\" datainsamling, tillåt spårning [\"Samtycke\"]."
+msgstr "בחר כיצד אנו משתמשים בנתונים שלך: \"דחה\" איסוף נתונים, אפשר מעקב [\"הסכמה\"]."
 
 #: aesirx-consent.php:57
 #: includes/settings.php:1239
 msgid "By consenting, you allow us to collect & use your data for:"
-msgstr "Genom att samtycka tillåter du oss att samla in & använda dina uppgifter för:"
+msgstr "בהסכמה, אתה מאפשר לנו לאסוף ולהשתמש בנתונים שלך עבור:"
 
 #: aesirx-consent.php:58
 #: includes/settings.php:1240
 msgid "Analytics & Behavioral Data: To improve our services & personalize your experience."
-msgstr "Analys & beteendedata: För att förbättra våra tjänster & anpassa din upplevelse."
+msgstr "ניתוח ונתוני התנהגות: לשיפור השירותים שלנו והתאמת החוויה שלך."
 
 #: aesirx-consent.php:59
 #: includes/settings.php:1241
 msgid "Form Data: When you contact us."
-msgstr "Formulärdata: När du kontaktar oss."
+msgstr "נתוני טופס: כאשר אתה יוצר איתנו קשר."
 
 #: aesirx-consent.php:60
 #: includes/settings.php:1242
 msgid "Please note"
-msgstr "Observera"
+msgstr "אנא שים לב"
 
 #: aesirx-consent.php:61
 #: includes/settings.php:1243
 msgid "We do not share your data with third parties without your explicit consent."
-msgstr "Vi delar inte dina uppgifter med tredje part utan ditt uttryckliga samtycke."
+msgstr "איננו חולקים את הנתונים שלך עם צדדים שלישיים ללא הסכמתך המפורשת."
 
 #: aesirx-consent.php:62
 #: includes/settings.php:1244
 msgid "You can opt-in later for specific features without giving blanket consent."
-msgstr "Du kan välja att delta senare för specifika funktioner utan att ge generellt samtycke."
+msgstr "תוכל לבחור מאוחר יותר בתכונות ספציפיות מבלי לתת הסכמה כללית."
 
 #: aesirx-consent.php:63
 #: includes/settings.php:1245
 msgid "For more details, refer to our <a class='text-success fw-semibold text-decoration-underline' href='https://aesirx.io/privacy-policy' target='_blank'>privacy policy.</a>"
-msgstr "För mer information, se vår <a class='text-success fw-semibold text-decoration-underline' href='https://aesirx.io/privacy-policy' target='_blank'>integritetspolicy.</a>"
+msgstr "למידע נוסף, עיין ב<a class='text-success fw-semibold text-decoration-underline' href='https://aesirx.io/privacy-policy' target='_blank'>מדיניות הפרטיות</a> שלנו."
 
 #: aesirx-consent.php:64
 #: includes/settings.php:1246
 msgid "Benefits"
-msgstr "Fördelar"
+msgstr "יתרונות"
 
 #: aesirx-consent.php:65
 #: includes/settings.php:1247
 msgid "<span class='fw-semibold text-primary'>Control your data:</span> Choose your preferred level of data collection & tracking."
-msgstr "<span class='fw-semibold text-primary'>Kontrollera dina data:</span> Välj din föredragna nivå av datainsamling och spårning."
+msgstr "<span class='fw-semibold text-primary'>שלוט בנתונים שלך:</span> בחר את רמת איסוף ומעקב הנתונים המועדפת עליך."
 
 #: aesirx-consent.php:66
 #: includes/settings.php:1248
 msgid "<span class='fw-semibold text-primary'>Earn rewards:</span> Participate in decentralized consent for privacy & rewards."
-msgstr "<span class='fw-semibold text-primary'>Tjäna belöningar:</span> Delta i decentraliserat samtycke för integritet och belöningar."
+msgstr "<span class='fw-semibold text-primary'>הרוויחו תגמולים:</span> השתתפו בהסכמה מבוזרת לפרטיות ותגמולים."
 
 #: aesirx-consent.php:67
 #: includes/settings.php:1249
 msgid "<span class='fw-semibold text-primary'>Transparent data collection practices:</span> Understand how your data is collected & used."
-msgstr "<span class='fw-semibold text-primary'>Transparenta datainsamlingspraxis:</span> Förstå hur dina data samlas in & används."
+msgstr "<span class='fw-semibold text-primary'>Gennemsigtige dataindsamlingspraksisser:</span> הבן כיצד הנתונים שלך נאספים ומשתמשים בהם."
 
 #: aesirx-consent.php:68
 #: includes/settings.php:1250
 msgid "Understanding Your Privacy Choices"
-msgstr "Förstå dina integritetsval"
+msgstr "הבנת אפשרויות הפרטיות שלך"
 
 #: aesirx-consent.php:69
 #: includes/settings.php:1251
 msgid "<span class='fw-semibold text-primary'>Reject:</span> No data will be collected or loaded except for anonymized page views & rejections. Some personalization features may be disabled."
-msgstr "<span class='fw-semibold text-primary'>Avvisa:</span> Inga data kommer att samlas in eller laddas upp förutom anonymiserade sidvisningar & avvisningar. Vissa personaliseringsfunktioner kan vara inaktiverade."
+msgstr "<span class='fw-semibold text-primary'>דחייה:</span> לא ייאספו או ייטענו נתונים מלבד צפיות בעמודים אנונימיים ודחיות. ייתכן שחלק מתכונות ההתאמה האישית יושבתו."
 
 #: aesirx-consent.php:70
 #: includes/settings.php:1252
 msgid "<span class='fw-semibold text-primary'>Consent:</span> First & third-party tracking data will be collected to enhance your experience."
-msgstr "<span class='fw-semibold text-primary'>Samtycke:</span> Spårningsdata från första och tredje part kommer att samlas in för att förbättra din upplevelse."
+msgstr "<span class='fw-semibold text-primary'>הסכמה:</span> נתוני מעקב של צד ראשון ושלישי ייאספו כדי לשפר את חווייתך."
 
 #: aesirx-consent.php:71
 #: includes/settings.php:1253
 msgid "<span class='fw-semibold text-primary'>Decentralized Consent:</span> Choose Decentralized Wallets or Decentralized Wallet + Shield of Privacy. Both options let you manage & revoke consent on-site or through AesirX dApp, plus earn rewards from digital marketing activities."
-msgstr "<span class='fw-semibold text-primary'>Decentraliserat Samtycke:</span> Välj Decentraliserade Plånböcker eller Decentraliserad Plånbok + Sekretesskydd. Båda alternativen låter dig hantera och återkalla samtycke på plats eller genom AesirX dApp, plus tjäna belöningar från digitala marknadsföringsaktiviteter."
+msgstr "<span class='fw-semibold text-primary'>הסכמה מבוזרת:</span> בחר ארנקים מבוזרים או ארנק מבוזר + מגן פרטיות. שתי האפשרויות מאפשרות לך לנהל ולבטל הסכמה באתר או דרך אפליקציית AesirX dApp, בנוסף להרוויח תגמולים מפעילויות שיווק דיגיטלי."
 
 #: aesirx-consent.php:72
 #: includes/settings.php:1254
 msgid "Our Commitment in Action"
-msgstr "Vårt engagemang i handling"
+msgstr "המחויבות שלנו בפעולה"
 
 #: aesirx-consent.php:73
 #: includes/settings.php:1255
 msgid "<span class='fw-semibold text-primary'>Privacy Protection:</span> Users have full control over their data, ensuring maximum privacy."
-msgstr "<span class='fw-semibold text-primary'>Integritetsskydd:</span> Användare har full kontroll över sina data, vilket säkerställer maximal integritet."
+msgstr "<span class='fw-semibold text-primary'>הגנת פרטיות:</span> למשתמשים יש שליטה מלאה על הנתונים שלהם, מה שמבטיח פרטיות מרבית."
 
 #: aesirx-consent.php:74
 #: includes/settings.php:1256
 msgid "<span class='fw-semibold text-primary'>Enables Compliance:</span> Using Shield of Privacy (SoP) ensures compliance with GDPR, CCPA, ePrivacy Directive, & other data protection regulations."
-msgstr "<span class='fw-semibold text-primary'>Möjliggör Efterlevnad:</span> Användning av Privacy Shield (SoP) säkerställer efterlevnad av GDPR, CCPA, ePrivacy-direktivet och andra dataskyddsförordningar."
+msgstr "<span class='fw-semibold text-primary'>מאפשר תאימות:</span> השימוש ב-Privacy Shield (SoP) מבטיח תאימות ל-GDPR, CCPA, דירקטיבת ePrivacy ותקנות הגנת נתונים אחרות."
 
 #: aesirx-consent.php:75
 #: includes/settings.php:1257
 msgid "<span class='fw-semibold text-primary'>Proactive Protection:</span> We enhance privacy measures to safeguard your data integrity."
-msgstr "<span class='fw-semibold text-primary'>Proaktivt Skydd:</span> Vi förbättrar integritetsskyddet för att säkra dina data."
+msgstr "<span class='fw-semibold text-primary'>הגנה פרואקטיבית:</span> אנו משפרים את אמצעי הפרטיות כדי להגן על שלמות הנתונים שלך."
 
 #: aesirx-consent.php:76
 #: includes/settings.php:1258
 msgid "<span class='fw-semibold text-primary'>Flexible Consent:</span> You can withdraw your consent anytime on-site or via our <a class='text-success fw-semibold text-decoration-underline' href='https://dapp.shield.aesirx.io' target='_blank'>dApp</a> (Decentralized Application)."
-msgstr "<span class='fw-semibold text-primary'>Flexibelt samtycke:</span> Du kan återkalla ditt samtycke när som helst på plats eller via vår <a class='text-success fw-semibold text-decoration-underline' href='https://dapp.shield.aesirx.io' target='_blank'>dApp</a> (Decentraliserad Applikation)."
+msgstr "<span class='fw-semibold text-primary'>הסכמה גמישה:</span> באפשרותך לבטל את הסכמתך בכל עת באתר או דרך <a class='text-success fw-semibold text-decoration-underline' href='https://dapp.shield.aesirx.io' target='_blank'>dApp</a> (יישום מבוזר) שלנו."
 
 #: aesirx-consent.php:77
 #: includes/settings.php:1259
 msgid "<span class='fw-semibold text-primary'>Learn More:</span> Discover our approach to data processing in our <a class='text-success fw-semibold text-decoration-underline' href='https://aesirx.io/privacy-policy' target='_blank'>Privacy Policy</a>."
-msgstr "<span class='fw-semibold text-primary'>Lär dig mer:</span> Upptäck vårt tillvägagångssätt för databehandling i vår <a class='text-success fw-semibold text-decoration-underline' href='https://aesirx.io/privacy-policy' target='_blank'>Integritetspolicy</a>."
+msgstr "<span class='fw-semibold text-primary'>למידע נוסף:</span> גלו את הגישה שלנו לעיבוד נתונים ב<a class='text-success fw-semibold text-decoration-underline' href='https://aesirx.io/privacy-policy' target='_blank'>מדיניות הפרטיות</a> שלנו."
 
 #: aesirx-consent.php:78
 #: includes/settings.php:1260
 msgid "<span class='fw-semibold text-primary'>For Businesses:</span> Enhance trust, secure user identities, & prevent breaches."
-msgstr "<span class='fw-semibold text-primary'>För företag:</span> Förstärk förtroende, säkra användaridentiteter & förebygg intrång."
+msgstr "<span class='fw-semibold text-primary'>לעסקים:</span> שפר את האמון, אבטח את זהויות המשתמש ומניעת הפרות."
 
 #: aesirx-consent.php:79
 #: includes/settings.php:1261
 msgid "More info at <a class='text-success fw-semibold text-decoration-underline' href='https://shield.aesirx.io' target='_blank'>https://shield.aesirx.io</a>."
-msgstr "Mer information på <a class='text-success fw-semibold text-decoration-underline' href='https://shield.aesirx.io' target='_blank'>https://shield.aesirx.io</a>."
+msgstr "מידע נוסף ב-<a class='text-success fw-semibold text-decoration-underline' href='https://shield.aesirx.io' target='_blank'>https://shield.aesirx.io</a>."
 
 #: aesirx-consent.php:80
 #: includes/settings.php:1262
 msgid "Select your preferred decentralized consent option:"
-msgstr "Välj ditt föredragna decentraliserade samtyckesalternativ:"
+msgstr "בחר את אפשרות ההסכמה המבוזרת המועדפת עליך:"
 
 #: aesirx-consent.php:82
 #: includes/settings.php:1264
 msgid "Decentralized consent will be loaded"
-msgstr "Decentraliserat samtycke laddas"
+msgstr "הסכמה מבוזרת תיטען"
 
 #: aesirx-consent.php:83
 #: includes/settings.php:1265
 msgid "Both first-party & third-party tracking data will be activated."
-msgstr "Både första parts och tredje parts spårningsdata kommer att aktiveras."
+msgstr "נתוני מעקב של צד ראשון וגם של צד שלישי יופעלו."
 
 #: aesirx-consent.php:84
 #: includes/settings.php:1266
 msgid "All consented data will be collected."
-msgstr "Allt samtyckt data kommer att samlas in."
+msgstr "כל הנתונים בהסכמה ייאספו."
 
 #: aesirx-consent.php:85
 #: includes/settings.php:1267
 msgid "Users can revoke consent on-site at any time."
-msgstr "Användare kan återkalla sitt samtycke på plats när som helst."
+msgstr "משתמשים יכולים לבטל את ההסכמה באתר בכל עת."
 
 #: aesirx-consent.php:86
 #: includes/settings.php:1268
 msgid "Decentralized Consent + Shield of Privacy"
-msgstr "Decentraliserat Samtycke + Integritetssköld"
+msgstr "הסכמה מבוזרת + מגן פרטיות"
 
 #: aesirx-consent.php:87
 #: includes/settings.php:1269
 msgid "Users can revoke consent on-site or from the AesirX dApp at any time."
-msgstr "Användare kan återkalla sitt samtycke på plats eller från AesirX dApp när som helst."
+msgstr "משתמשים יכולים לבטל הסכמה באתר או מאפליקציית AesirX dApp בכל עת."
 
 #: aesirx-consent.php:88
 #: includes/settings.php:1270
 msgid "Users can earn rewards from digital marketing activities."
-msgstr "Användare kan tjäna belöningar från digitala marknadsföringsaktiviteter."
+msgstr "משתמשים יכולים להרוויח תגמולים מפעילויות שיווק דיגיטלי."
 
 #: aesirx-consent.php:89
 #: includes/settings.php:1271
 msgid "Continue"
-msgstr "Fortsätt"
+msgstr "המשך"
 
 #: aesirx-consent.php:90
 #: includes/settings.php:1272
 msgid "Back"
-msgstr "Tillbaka"
+msgstr "חזרה"
 
 #: aesirx-consent.php:91
 #: includes/settings.php:1273
 msgid "You've chosen to reject data collection:"
-msgstr "Du har valt att avvisa datainsamling:"
+msgstr "בחרת לדחות איסוף נתונים:"
 
 #: aesirx-consent.php:92
 #: includes/settings.php:1274
 msgid "Only anonymized page views & limited features will be available. To access all website features, including personalized content & enhanced functionality, please choose an option:"
-msgstr "Endast anonymiserade sidvisningar och begränsade funktioner kommer att vara tillgängliga. För att få tillgång till alla webbplatsens funktioner, inklusive personligt innehåll och förbättrad funktionalitet, välj ett alternativ:"
+msgstr "רק תצוגות עמודים אנונימיות ותכונות מוגבלות יהיו זמינות. כדי לגשת לכל התכונות של האתר, כולל תוכן מותאם אישית ופונקציונליות משופרת, אנא בחר אפשרות:"
 
 #: aesirx-consent.php:93
 #: includes/settings.php:1275
 msgid "<span class='fw-semibold text-primary'>Consent:</span> Allow data collection for analytics, form data (when you contact us), & behavioral & event tracking, with the option to opt-in for specific features."
-msgstr "<span class='fw-semibold text-primary'>Samtycke:</span> Tillåt insamling av data för analyser, formulärdata (när du kontaktar oss) och beteende- och händelsespårning, med möjlighet att välja in specifika funktioner."
+msgstr "<span class='fw-semibold text-primary'>הסכמה:</span> אפשר איסוף נתונים לניתוח, נתוני טופס (כאשר אתה יוצר קשר איתנו), ומעקב אחר התנהגות ואירועים, עם אפשרות להצטרף לתכונות מסוימות."
 
 #: aesirx-consent.php:94
 #: includes/settings.php:1276
 msgid "<span class='fw-semibold text-primary'>Decentralized Consent:</span> Allow data collection for analytics, form data (when you contact us), & behavioral & event tracking, with the option to revoke consent, opt-in for specific features, & earn rewards from digital marketing activities."
-msgstr "<span class='fw-semibold text-primary'>Decentraliserat samtycke:</span> Tillåt insamling av data för analys, formulärdata (när du kontaktar oss) och beteende- och händelsespårning, med möjlighet att återkalla samtycke, välja in specifika funktioner och tjäna belöningar från digitala marknadsföringsaktiviteter."
+msgstr "<span class='fw-semibold text-primary'>הסכמה מבוזרת:</span> אפשר איסוף נתונים לניתוח, נתוני טפסים (כאשר אתה יוצר קשר איתנו), ומעקב אחר התנהגות ואירועים, עם אפשרות לבטל הסכמה, להירשם לתכונות מסוימות ולהרוויח תגמולים מפעילויות שיווק דיגיטליות."
 
 #: aesirx-consent.php:95
 #: includes/settings.php:1277
 msgid "You can revoke consent on the site or any explicit opt-in consent, such as payment processing, at any time"
-msgstr "Du kan återkalla samtycke på webbplatsen eller något uttryckligt medgivande, såsom betalningshantering, när som helst"
+msgstr "ניתן לבטל את ההסכמה באתר או כל הסכמה מפורשת, כגון עיבוד תשלומים, בכל עת"
 
 #: aesirx-consent.php:96
 #: includes/settings.php:1278
 msgid "Revoke Opt-In Consent"
-msgstr "Återkalla samtycke"
+msgstr "בטל את הסכמת ההצטרפות"
 
 #: aesirx-consent.php:97
 #: includes/settings.php:1279
 msgid "Revoke Opt-In Consent for Payment Processing"
-msgstr "Återkalla samtycke till betalningshantering"
+msgstr "ביטול הסכמה לעיבוד תשלומים"
 
 #: aesirx-consent.php:98
 #: includes/settings.php:1280
 msgid "Revoke Opt-In Consent for AesirX Privacy Advisor AI"
-msgstr "Återkalla samtycke till opt-in för AesirX Privacy Advisor AI"
+msgstr "בטל את הסכמת ההצטרפות ל-AesirX Privacy Advisor AI"
 
 #: aesirx-consent.php:99
 #: includes/settings.php:1281
 msgid "Revoke Consent for the site"
-msgstr "Återkalla samtycke för webbplatsen"
+msgstr "ביטול הסכמה לאתר"
 
 #: aesirx-consent.php:100
 #: includes/settings.php:1282
 msgid "Consent Management"
-msgstr "Samtyckeshantering"
+msgstr "ניהול הסכמה"
 
 #: includes/settings.php:224
 msgid "Gtag ID"
-msgstr "Gtag-ID"
+msgstr "מזהה Gtag"
 
 #: includes/settings.php:249
 msgid "GTM ID"
-msgstr "GTM-ID"
+msgstr "GTM ID"
 
 #: includes/settings.php:379
 msgid "AesirX Consent Shield for Third-Party Plugins "
-msgstr ""
+msgstr "AesirX Consent Shield עבור תוספים של צד שלישי"
 
 #: includes/settings.php:384
 msgid "Blocks selected third-party plugins from loading until user consent is given."
-msgstr "Blockerar valda tredjepartsplugins från att laddas tills användarens samtycke har givits."
+msgstr "חוסם טעינת תוספים של צד שלישי שנבחרו עד לקבלת הסכמת המשתמש."
 
 #: includes/settings.php:414
 msgid "Completely prevents the loading and execution of chosen third-party plugins before consent."
-msgstr "Förhindrar helt laddning och exekvering av utvalda tredjepartsplugins innan samtycke."
+msgstr "מונע לחלוטין את הטעינה והביצוע של תוספים מצד שלישי נבחרים לפני מתן הסכמה."
 
 #: includes/settings.php:420
 msgid "No network requests are made to third-party servers, enabling maximum compliance with privacy regulations like GDPR and the ePrivacy Directive."
-msgstr "Inga nätverksförfrågningar görs till tredjepartsservrar, vilket möjliggör maximal efterlevnad av integritetsregler som GDPR och ePrivacy-direktivet."
+msgstr "לא מתבצעות בקשות רשת לשרתים של צד שלישי, מה שמאפשר תאימות מרבית לתקנות פרטיות כמו ה-GDPR וההנחיה לפרטיות אלקטרונית."
 
 #: includes/settings.php:434
 msgid "AesirX Consent Shield for Domain/Path-Based Blocking"
-msgstr "AesirX Medgivande Sköld för Domän/Sökvägsbaserad Blockering"
+msgstr "AesirX Consent Shield לחסימה מבוססת תחום/נתיב"
 
 #: includes/settings.php:444
 #: includes/settings.php:462
 msgid "Enter domain or path"
-msgstr "Ange domän eller sökväg"
+msgstr "הזן דומיין או נתיב"
 
 #: includes/settings.php:437
 msgid "Removes scripts matching specified domains or paths from the browser until user consent is given."
-msgstr "Tar bort skript som matchar angivna domäner eller sökvägar från webbläsaren tills användarens samtycke ges."
+msgstr "מסיר סקריפטים התואמים לדומיינים או נתיבים שצוינו מהדפדפן עד למתן הסכמת המשתמש."
 
 #: includes/settings.php:485
 msgid "Blocks or removes scripts from running in the user's browser before consent is given."
-msgstr "Blockerar eller tar bort skript från att köras i användarens webbläsare innan samtycke har givits."
+msgstr "חוסם או מסיר סקריפטים מהרצתם בדפדפן המשתמש לפני מתן הסכמה."
 
 #: includes/settings.php:491
 msgid "While it prevents scripts from executing, initial network requests may still occur, so it enhances privacy compliance under GDPR but may not fully meet the ePrivacy Directive requirements."
-msgstr "Även om det förhindrar skript från att köras, kan initiala nätverksförfrågningar fortfarande inträffa, så det förbättrar integritetsskyddet enligt GDPR men kanske inte helt uppfyller kraven i ePrivacy-direktivet."
+msgstr "בעוד שהוא מונע מהסקריפטים לפעול, בקשות רשת ראשוניות עשויות עדיין להתרחש, כך שהוא משפר את תאימות הפרטיות תחת ה-GDPR אך עשוי שלא לעמוד במלוא הדרישות של דירקטיבת הפרטיות האלקטרונית."
 
 #: includes/settings.php:505
 msgid "Script Blocking Options"
-msgstr "Skriptblockeringsalternativ"
+msgstr "אפשרויות חסימת סקריפטים"
 
 #: includes/settings.php:520
 msgid "Only Third-Party Hosts (default)"
-msgstr "Endast tredjepartsvärdar (standard)"
+msgstr "רק מארחים של צד שלישי (ברירת מחדל)"
 
 #: includes/settings.php:531
 msgid "Both First and Third-Party Hosts"
-msgstr "Både första- och tredjepartsvärdar"
+msgstr "גם מארחים של צד ראשון וגם של צד שלישי"
 
 #: includes/settings.php:926
 msgid "Need Help? Access Our Comprehensive Documentation Hub"
-msgstr "Behöver du hjälp? Tillgång till vår omfattande dokumentationshub"
+msgstr "צריך עזרה? גש למרכז התיעוד המקיף שלנו"
 
 #: includes/settings.php:1367
 #: includes/settings.php:1447
 msgid "Your trial license ends in %1$s days. Please update new license <a href='%2$s' target='_blank'>%2$s</a>."
-msgstr "Din provlicens går ut om %1$s dagar. Vänligen uppdatera din licens på <a href='%2$s' target='_blank'>%2$s</a>."
+msgstr "רישיון הניסיון שלך יסתיים בעוד %1$s ימים. אנא עדכן את הרישיון החדש ב<a href='%2$s' target='_blank'>%2$s</a>."
 
 #: includes/settings.php:1396
 msgid "Your license is expried or not found. Please update new license <a href='%1$s' target='_blank'>%1$s</a>."
-msgstr "Din licens har gått ut eller hittades inte. Vänligen uppdatera din licens på <a href='%1$s' target='_blank'>%1$s</a>."
+msgstr "הרישיון שלך פג או לא נמצא. אנא עדכן רישיון חדש <a href='%1$s' target='_blank'>%1$s</a>."
 
 #: includes/settings.php:1450
 msgid "Your free trials has ended. Please update your license. <a href='%1$s' target='_blank'>%1$s</a>."
-msgstr "Din kostnadsfria provperiod har avslutats. Vänligen uppdatera din licens. <a href='%1$s' target='_blank'>%1$s</a>."
+msgstr "תקופת הניסיון החינמית שלך הסתיימה. אנא עדכן את הרישיון שלך. <a href='%1$s' target='_blank'>%1$s</a>."
 
 #: src/AesirxAnalyticsMysqlHelper.php:845
 msgid "Could not insert consent"
-msgstr "Kunde inte infoga samtycke"
+msgstr "לא ניתן היה להוסיף את ההסכמה"
 
 #: src/Mysql/StartFingerprint.php:35
 #: src/Mysql/StartFingerprint.php:64
 msgid "License is expired or not found. Please update your license"
-msgstr "Licensen har gått ut eller hittas inte. Vänligen uppdatera din licens"
+msgstr "הרישיון פג תוקף או לא נמצא. אנא עדכן את הרישיון שלך"
 
 #: src/Mysql/StartFingerprint.php:76
 #: src/Mysql/StartFingerprint.php:83
 msgid "Your trial is ended. Please renew your license"
-msgstr "Din provperiod har avslutats. Vänligen förnya din licens"
+msgstr "תקופת הניסיון שלך הסתיימה. אנא חידש את הרישיון שלך"
 
 #: includes/settings.php:106
 msgid "Your Client ID *"
-msgstr "Ditt klient-ID *"
+msgstr "מזהה הלקוח שלך *"
 
 #: includes/settings.php:113
 msgid "SSO Client ID"
-msgstr "SSO-klient-ID"
+msgstr "מזהה לקוח SSO"
 
 #: includes/settings.php:119
 msgid ""
 "<div class='input_information_content'>\n"
 "          Provided SSO CLIENT ID from <a href='%1$s' target='_blank'>%1$s</a>.</div>"
-msgstr "<div class='input_information_content'>Angivet SSO KLIENT-ID från <a href='%1$s' target='_blank'>%1$s</a>.</div>"
+msgstr "<div class='input_information_content'>מזהה לקוח SSO שסופק מ-<a href='%1$s' target='_blank'>%1$s</a>.</div>"
 
 #: includes/settings.php:134
 msgid "Your Client Secret *"
-msgstr "Din klienthemlighet *"
+msgstr "סוד הלקוח שלך *"
 
 #: includes/settings.php:139
 msgid "SSO Client Secret"
-msgstr "SSO-klienthemlighet"
+msgstr "סוד לקוח SSO"
 
 #: includes/settings.php:145
 msgid ""
 "<div class='input_information_content'>\n"
 "          Provided SSO Client Secret from <a href='%1$s' target='_blank'>%1$s</a>.</div>"
-msgstr "<div class='input_information_content'>Tillhandahållen SSO-klienthemlighet från <a href='%1$s' target='_blank'>%1$s</a>.</div>"
+msgstr "<div class='input_information_content'>סוד לקוח SSO שסופק מ-<a href='%1$s' target='_blank'>%1$s</a>.</div>"
 
 #: includes/settings.php:161
 msgid "Your License Key"
-msgstr "Din licensnyckel"
+msgstr "מפתח הרישיון שלך"
 
 #: includes/settings.php:188
 msgid "Choose your tailored template"
-msgstr "Välj din anpassade mall"
+msgstr "בחר את התבנית המותאמת אישית שלך"
 
 #: includes/settings.php:443
 #: includes/settings.php:461
 msgid "Domain"
-msgstr "Domän"
+msgstr "תְחוּם"
 
 #: includes/settings.php:511
 msgid "Configure how JavaScript is blocked based on user consent preferences."
-msgstr "Konfigurera hur JavaScript blockeras baserat på användarens samtyckespreferenser."
+msgstr "הגדר כיצד JavaScript נחסם על סמך העדפות הסכמת המשתמש."
 
 #: includes/settings.php:521
 msgid "Blocks JavaScript from third-party domains, allowing first-party scripts to run normally & keep essential site functions intact."
-msgstr "Blockerar JavaScript från tredjepartsdomäner, tillåter förstapartsskript att köras normalt och behåller nödvändiga webbplatsfunktioner intakta."
+msgstr "חוסם JavaScript מתחומים של צד שלישי, מאפשר לסקריפטים של צד ראשון לפעול כרגיל ושומר על תפקודי האתר החיוניים שלמים."
 
 #: includes/settings.php:532
 msgid "Blocks JavaScript from both first-party & third-party domains for comprehensive script control, giving you the ability to block any JavaScript from internal or external sources based on user consent."
-msgstr "Blockerar JavaScript från både första parts och tredje parts domäner för omfattande skriptkontroll, vilket ger dig möjligheten att blockera all JavaScript från interna eller externa källor baserat på användarens samtycke."
+msgstr "חוסם JavaScript מדומיינים של צד ראשון ושלישי לשליטה מקיפה בסקריפטים, ומאפשר לך לחסום כל JavaScript ממקורות פנימיים או חיצוניים בהתבסס על הסכמת המשתמש."
 
 #: includes/settings.php:936
 msgid "Discover the latest features & best practices."
-msgstr "Upptäck de senaste funktionerna och bästa praxis."
+msgstr "גלה את התכונות האחרונות והשיטות המומלצות."
 
 #: includes/settings.php:963
 msgid "Haven't got a license yet?"
-msgstr "Har du inte fått en licens ännu?"
+msgstr "עדיין אין לך רישיון?"
 
 #: includes/settings.php:992
 msgid "Scan Your Site for Privacy Risks"
-msgstr "Skanna din webbplats för integritetsrisker"
+msgstr "סרוק את האתר שלך לאיתור סיכוני פרטיות"
 
 #: includes/settings.php:996
 msgid "Use the Privacy Scanner to quickly identify scripts, tags, & trackers running on your site that may compromise user privacy."
-msgstr "Använd integritetsskannern för att snabbt identifiera skript, taggar och spårare på din webbplats som kan kompromissa användarnas integritet."
+msgstr "השתמש בסורק הפרטיות כדי לזהות במהירות סקריפטים, תגים ומעקבים הפועלים באתר שלך שעלולים לסכן את פרטיות המשתמש."
 
 #: includes/settings.php:1002
 msgid "Use Consent Shield to block those scripts by adding their domains or paths, ensuring quick & simple compliance."
-msgstr "Använd Consent Shield för att blockera dessa skript genom att lägga till deras domäner eller sökvägar, vilket säkerställer snabb och enkel efterlevnad."
+msgstr "השתמש ב-Consent Shield כדי לחסום את הסקריפטים הללו על ידי הוספת הדומיינים או הנתיבים שלהם, מה שמבטיח תאימות מהירה ופשוטה."
 
 #: includes/settings.php:1055
 #: includes/settings.php:1117
 #: includes/settings.php:1150
 #: includes/settings.php:1183
 msgid "Save settings"
-msgstr "Spara inställningar"
+msgstr "שמור הגדרות"
 
 #: includes/settings.php:166
 msgid "License Key"
-msgstr "Licensnyckel"
+msgstr "מפתח רישיון"
 
 #: includes/settings.php:965
 msgid "Haven't got Shield of Privacy ID yet?"
-msgstr "Har du inte fått Shield of Privacy ID ännu?"
+msgstr "עדיין אין לך מזהה Shield of Privacy?"
 
 #: includes/settings.php:1011
 msgid "Learn how to use AesirX Privacy Scanner with Consent Shield to detect privacy-intrusive elements, using the JetPack plugin as an example."
-msgstr "Lär dig hur du använder AesirX Privacy Scanner med Consent Shield för att upptäcka integritetsintrångande element, med JetPack-plugin som exempel."
+msgstr "למד כיצד להשתמש ב-AesirX Privacy Scanner עם Consent Shield כדי לזהות אלמנטים הפוגעים בפרטיות, באמצעות תוסף JetPack כדוגמה."
 
 #: includes/settings.php:1414
 msgid "Your license ends in %1$s days. Please update new license <a href='%2$s' target='_blank'>%2$s</a>."
-msgstr "Din licens går ut om %1$s dagar. Vänligen uppdatera din licens på <a href='%2$s' target='_blank'>%2$s</a>."
+msgstr "הרישיון שלך יפוג בעוד %1$s ימים. אנא עדכן את הרישיון החדש ב-<a href='%2$s' target='_blank'>%2$s</a>."
 
 #: includes/settings.php:172
 msgid ""
 "<div class='input_information_content'>\n"
 "          Sign up to obtain your Shield of Privacy ID and purchase licenses <a href='https://aesirx.io/licenses' target='blank' class='text-link'>here</a>.</div>"
-msgstr "<div class='input_information_content'>Registrera dig för att få ditt Shield of Privacy ID och köp licenser <a href='https://aesirx.io/licenses' target='blank' class='text-link'>här</a>.</div>"
+msgstr "<div class='input_information_content'>הירשם כדי לקבל את ה-ID של Shield of Privacy ולרכוש רישיונות <a href='https://aesirx.io/licenses' target='blank' class='text-link'>כאן</a>.</div>"
 
 #: includes/settings.php:277
 msgid "To configure, input your Google Tag Manager Gtag ID & GTM ID in the designated fields. Once set up, Google Tag Manager will only load after the user provides consent."
-msgstr "För att konfigurera, ange din Google Tag Manager Gtag-ID och GTM-ID i de angivna fälten. När det är inställt kommer Google Tag Manager endast att laddas efter att användaren har gett sitt samtycke."
+msgstr "כדי להגדיר, הזן את מזהה Gtag ומזהה GTM של Google Tag Manager בשדות המיועדים. לאחר ההגדרה, Google Tag Manager ייטען רק לאחר שהמשתמש יספק הסכמה."
 
 #: includes/settings.php:196
 msgid "Simple Consent Mode"
-msgstr "Enkelt samtyckesläge"
+msgstr "מצב הסכמה פשוט"
 
 #: includes/settings.php:234
 #: includes/settings.php:259
 msgid ""
 "<div class='input_information_content'>\n"
 "          Remember to include the explicit purpose (e.g., analytics, marketing) in the consent text to inform users why GTM is being used.</div>"
-msgstr "<div class='input_information_content'>Kom ihåg att inkludera det uttryckliga syftet (t.ex. analys, marknadsföring) i samtyckestexten för att informera användarna om varför GTM används.</div>"
+msgstr "<div class='input_information_content'>זכור לכלול את המטרה המפורשת (למשל, ניתוחים, שיווק) בטקסט ההסכמה כדי ליידע את המשתמשים מדוע נעשה שימוש ב-GTM.</div>"
 
 #: includes/settings.php:969
 msgid "Register Licence Here"
-msgstr "Registrera licens här"
+msgstr "רשום רישיון כאן"
 
 #: includes/settings.php:974
 msgid "Sign up now"
-msgstr "Registrera dig nu"
+msgstr "הירשם עכשיו"
 
 #: includes/settings.php:930
 msgid "Explore How-To Guides, instructions, & tutorials to get the most from AesirX Consent Shield. Whether you're a developer or admin, find all you need to configure & optimize your privacy setup."
-msgstr "Utforska guider, instruktioner och handledningar för att få ut det mesta av AesirX Consent Shield. Oavsett om du är utvecklare eller administratör, hitta allt du behöver för att konfigurera och optimera din integritetsinställning."
+msgstr "חקור מדריכים, הוראות ומדריכי הדרכה כדי להפיק את המרב מ-AesirX Consent Shield. בין אם אתה מפתח או מנהל, מצא את כל מה שאתה צריך כדי להגדיר ולבצע אופטימיזציה של הגדרות הפרטיות שלך."
 
 #: includes/settings.php:303
 msgid "Customize Consent Text "
-msgstr ""
+msgstr "התאמה אישית של טקסט הסכמה "
 
 #: includes/settings.php:316
 msgid "Reset Consent"
-msgstr "Återställ samtycke"
+msgstr "איפוס הסכמה"
 
 #: aesirx-consent.php:351
 msgid "Important: Permalink Settings Required"
-msgstr "Viktigt: Inställningar för permalänkar krävs"
+msgstr "חשוב: נדרשות הגדרות קישורים קבועים"
 
 #: includes/settings.php:1440
 msgid "Your trial license ends in %1$s hour(s). Please update your license <a href='%2$s' target='_blank'>here</a>."
-msgstr "Din provlicens går ut om %1$s timme/timmar. Vänligen uppdatera din licens <a href='%2$s' target='_blank'>här</a>."
+msgstr "רישיון הניסיון שלך יסתיים בעוד %1$s שעה/שעות. אנא עדכן את הרישיון שלך <a href='%2$s' target='_blank'>כאן</a>."
 
 #. translators: 1: Permalink structure example, 2: Link to Permalink Settings page
 #: aesirx-consent.php:356
@@ -769,247 +769,247 @@ msgid ""
 "                            It looks like your current settings are using the plain permalink format, which might cause issues.\n"
 "                            Please %2$s to open your Permalink Settings.\n"
 "                            Once there, select the \"Post name\" option (or another pretty permalink structure) and click \"Save Changes.\""
-msgstr "Vårt plugin kräver att din webbplats använder en snygg permalänkstruktur (till exempel %1$s) för att fungera korrekt. Det verkar som att dina nuvarande inställningar använder det enkla permalänkformatet, vilket kan orsaka problem. Vänligen %2$s för att öppna dina Permalänk-inställningar. Välj där \"Inläggsnamn\"-alternativet (eller en annan snygg permalänkstruktur) och klicka på \"Spara ändringar.\""
+msgstr "התוסף שלנו דורש שהאתר שלך ישתמש במבנה קישורים קבועים יפה (לדוגמה, %1$s) כדי לפעול כראוי. נראה שההגדרות הנוכחיות שלך משתמשות בפורמט הקישורים הקבועים הפשוט, מה שעלול לגרום לבעיות. אנא %2$s כדי לפתוח את הגדרות הקישורים הקבועים שלך. ברגע שתגיע לשם, בחר באפשרות \"שם הפוסט\" (או מבנה קישורים קבועים יפה אחר) ולחץ על \"שמור שינויים.\""
 
 #: aesirx-consent.php:363
 msgid "click here"
-msgstr "Klicka här"
+msgstr "לחץ כאן"
 
 #: includes/settings.php:274
 msgid "GTM General"
-msgstr "Allmän GTM"
+msgstr "GTM כללי"
 
 #: includes/settings.php:1373
 msgid "Something went wrong: %1$s. Please contact the administrator."
-msgstr "Något gick fel: %1$s. Vänligen kontakta administratören."
+msgstr "משהו השתבש: %1$s. אנא פנה למנהל המערכת."
 
 #: includes/settings.php:1420
 msgid "Check license failed: %1$s. Please contact the administrator or update your license."
-msgstr "Licenskontroll misslyckades: %1$s. Vänligen kontakta administratören eller uppdatera din licens."
+msgstr "בדיקת הרישיון נכשלה: %1$s. אנא פנה למנהל או עדכן את הרישיון שלך."
 
 #: src/Mysql/StartFingerprint.php:55
 msgid "Check license failed: %1\\$s. Please contact the administrator."
-msgstr ""
+msgstr "בדיקת הרישיון נכשלה: %1$s. אנא פנה למנהל המערכת."
 
 #: includes/settings.php:209
 msgid "The Default setup improves Google Consent Mode 2.0 by not loading any scripts, beacons, or tags until after consent is given, reducing compliance risks. It also includes Decentralized Consent, for more control over personal data and rewards."
-msgstr "Standardinställningen förbättrar Google Consent Mode 2.0 genom att inte ladda några skript, beacons eller taggar förrän efter att samtycke har getts, vilket minskar efterlevnadsriskerna. Den inkluderar också decentraliserat samtycke, för mer kontroll över personuppgifter och belöningar."
+msgstr "ההגדרה המוגדרת כברירת מחדל משפרת את מצב ההסכמה של Google 2.0 בכך שאינה טוענת סקריפטים, משואות או תגיות עד לאחר מתן הסכמה, מה שמפחית את סיכוני הציות. היא כוללת גם הסכמה מבוזרת, לשליטה רבה יותר על נתונים אישיים ותגמולים."
 
 #: includes/settings.php:200
 msgid "Simple Consent Mode follows Google Consent Mode 2.0 by not loading any tags until after consent is given, reducing compliance risks."
-msgstr "Enkelt samtyckesläge följer Google Consent Mode 2.0 genom att inte ladda några taggar förrän efter att samtycke har givits, vilket minskar efterlevnadsrisker."
+msgstr "מצב הסכמה פשוט עוקב אחר מצב ההסכמה של Google 2.0 על ידי אי טעינת תגיות עד לאחר מתן הסכמה, מה שמפחית את סיכוני הציות."
 
 #: includes/settings.php:1403
 msgid "Your domain is not match with your license. Please update domain in your license <a href='%1$s' target='_blank'>%1$s</a> and click <span class='verify_domain'>here</span> to verify again."
-msgstr "Ditt domän matchar inte din licens. Vänligen uppdatera domänen i din licens <a href='%1$s' target='_blank'>%1$s</a> och klicka <span class='verify_domain'>här</span> för att verifiera igen."
+msgstr "הדומיין שלך אינו תואם את הרישיון שלך. אנא עדכן את הדומיין ברישיון שלך <a href='%1$s' target='_blank'>%1$s</a> ולחץ <span class='verify_domain'>כאן</span> כדי לאמת שוב."
 
 #: src/Mysql/StartFingerprint.php:43
 #: src/Mysql/StartFingerprint.php:62
 msgid "Your domain is not match with your license. Please update domain in your license"
-msgstr "Ditt domän matchar inte din licens. Vänligen uppdatera domänen i din licens"
+msgstr "הדומיין שלך לא תואם לרישיון שלך. אנא עדכן את הדומיין ברישיון שלך"
 
 #: includes/settings.php:205
 msgid "Decentralized Consent Mode"
-msgstr "Decentraliserat samtyckesläge"
+msgstr "מצב הסכמה מבוזר"
 
 #: includes/settings.php:653
 msgid "GPC Compliance"
-msgstr "GPC-efterlevnad"
+msgstr "תאימות GPC"
 
 #: includes/settings.php:666
 msgid "Enable GPC Support"
-msgstr "Aktivera GPC-stöd"
+msgstr "הפעל את תמיכת GPC"
 
 #: includes/settings.php:674
 msgid "Disable GPC Support"
-msgstr "Inaktivera GPC-stöd"
+msgstr "השבת תמיכת GPC"
 
 #: includes/settings.php:681
 msgid "To comply with Global Privacy Control (GPC), please download and upload the following file:"
-msgstr "För att följa Global Privacy Control (GPC), vänligen ladda ner och ladda upp följande fil:"
+msgstr "כדי לציית ל-Global Privacy Control (GPC), אנא הורד והעלה את הקובץ הבא:"
 
 #: includes/settings.php:684
 msgid "Upload Instructions:"
-msgstr "Uppladdningsinstruktioner:"
+msgstr "הוראות העלאה:"
 
 #: includes/settings.php:686
 msgid "Download the gpc.json file."
-msgstr "Ladda ner gpc.json-filen."
+msgstr "הורד את הקובץ gpc.json."
 
 #: includes/settings.php:687
 msgid "Connect to your website via FTP or File Manager."
-msgstr "Anslut till din webbplats via FTP eller Filhanterare."
+msgstr "התחבר לאתר שלך דרך FTP או מנהל קבצים."
 
 #: includes/settings.php:688
 msgid "Upload the file to: <code>/public_html/.well-known/gpc.json</code>"
-msgstr "Ladda upp filen till: <code>/public_html/.well-known/gpc.json</code>"
+msgstr "העלה את הקובץ ל-: <code>/public_html/.well-known/gpc.json</code>"
 
 #: includes/settings.php:689
 msgid "Ensure the file is accessible by visiting: <a href='"
-msgstr "Se till att filen är tillgänglig genom att besöka: <a href='"
+msgstr "וודא שהקובץ נגיש על ידי ביקור ב: <a href='"
 
 #: includes/settings.php:328
 msgid "Customize Detail Text "
-msgstr "Anpassa detaljtext"
+msgstr "התאמה אישית של טקסט פרט"
 
 #: includes/settings.php:341
 msgid "Reset Detail"
-msgstr "Återställ detalj"
+msgstr "איפוס פרטים"
 
 #: includes/settings.php:353
 msgid "Customize Reject Text "
-msgstr "Anpassa avvisande text"
+msgstr "התאמה אישית של טקסט דחייה"
 
 #: includes/settings.php:366
 msgid "Reset Reject"
-msgstr "Återställ Avvisa"
+msgstr "אפס דחייה"
 
 #: aesirx-consent.php:102
 msgid "Customize"
-msgstr "Anpassa"
+msgstr "התאם אישית"
 
 #: aesirx-consent.php:103
 msgid "Save"
-msgstr "Spara"
+msgstr "לְהַצִיל"
 
 #: aesirx-consent.php:104
 msgid "Always active"
-msgstr "Alltid aktiv"
+msgstr "תמיד פעיל"
 
 #: aesirx-consent.php:105
 msgid "Domain/Path-Based"
-msgstr "Domän-/sökvägsbaserad"
+msgstr "מבוסס דומיין/נתיב"
 
 #: aesirx-consent.php:106
 msgid "Third-Party Plugins"
-msgstr "Tredjeparts plugins"
+msgstr "תוספים של צד שלישי"
 
 #: aesirx-consent.php:107
 msgid "Essential Tracking"
-msgstr "Viktig spårning"
+msgstr "מעקב חיוני"
 
 #: aesirx-consent.php:108
 msgid "Required for the website to function (e.g, session cookies, security tracking)."
-msgstr "Krävs för att webbplatsen ska fungera (t.ex. sessionscookies, säkerhetsspårning)."
+msgstr "נדרש לפעילות האתר (למשל, עוגיות סשן, מעקב אבטחה)."
 
 #: aesirx-consent.php:109
 msgid "Functional Tracking"
-msgstr "Funktionell spårning"
+msgstr "מעקב פונקציונלי"
 
 #: aesirx-consent.php:110
 msgid "User preferencese & site enhancements (e.g, language setting, live chat)."
-msgstr "Användarpreferenser och webbplatsförbättringar (t.ex. språkinställning, livechatt)."
+msgstr "העדפות משתמש ושיפורי אתר (למשל, הגדרות שפה, צ'אט חי)."
 
 #: aesirx-consent.php:111
 msgid "Analytics Tracking"
-msgstr "Analytics spårning"
+msgstr "מעקב אנליטיקות"
 
 #: aesirx-consent.php:112
 msgid "Visitor behavior monitoring (e.g, Google Analytics, Matomo)."
-msgstr "Övervakning av besökarnas beteende (t.ex. Google Analytics, Matomo)."
+msgstr "ניטור התנהגות מבקרים (למשל, Google Analytics, Matomo)."
 
 #: aesirx-consent.php:113
 msgid "Advertising Tracking"
-msgstr "Annonsspårning"
+msgstr "מעקב פרסומות"
 
 #: aesirx-consent.php:114
 msgid "Targeted advertising & remarketing (e.g, Facebook Pixel, Google Ads)."
-msgstr "Riktad annonsering och remarketing (t.ex. Facebook Pixel, Google Ads)."
+msgstr "פרסום ממוקד ושיווק מחדש (למשל, Facebook Pixel, Google Ads)."
 
 #: aesirx-consent.php:115
 msgid "Custom Tracking"
-msgstr "Anpassad spårning"
+msgstr "Tilpasset sporing"
 
 #: aesirx-consent.php:116
 msgid "Any additional third-party integrations (e.g, customer support tools, CDNS)."
-msgstr "Eventuella ytterligare tredjepartsintegrationer (t.ex. kundsupportverktyg, CDNS)."
+msgstr "כל אינטגרציה נוספת עם צד שלישי (למשל, כלי תמיכת לקוחות, CDNS)."
 
 #: aesirx-consent.php:117
 msgid "Opt-Out of tracking"
-msgstr "Välja bort spårning"
+msgstr "ביטול מעקב"
 
 #: aesirx-consent.php:118
 msgid "This website uses tracking by default. You may opt out at any time."
-msgstr "Denna webbplats använder spårning som standard. Du kan välja bort det när som helst."
+msgstr "אתר זה משתמש במעקב כברירת מחדל. תוכל לבטל את ההרשמה בכל עת."
 
 #: aesirx-consent.php:119
 msgid "Do Not Sell or Share My Personal Information (CCPA)"
-msgstr "Sälj eller dela inte min personliga information (CCPA)"
+msgstr "אל תמכור או שתף את המידע האישי שלי (CCPA)"
 
 #: aesirx-consent.php:120
 msgid "Disables third-party data sharing for California users."
-msgstr "Inaktiverar datadelning från tredje part för användare i Kalifornien."
+msgstr "משבית שיתוף נתונים של צד שלישי עבור משתמשי קליפורניה."
 
 #: includes/settings.php:563
 msgid "Configurable Consent Logic"
-msgstr "Konfigurerbar samtyckeslogik"
+msgstr "לוגיקה הסכמה ניתנת להגדרה"
 
 #: includes/settings.php:576
 msgid "Opt-In Mode (EU)"
-msgstr "Opt-in-läge (EU)"
+msgstr "מצב הרשמה (האיחוד האירופי)"
 
 #: includes/settings.php:577
 msgid "No tracking technologies are activated until a user explicitly gives consent. This is required by <strong>GDPR</strong> and <strong>ePrivacy Directive 5(3)</strong>."
-msgstr "Inga spårningstekniker aktiveras förrän en användare uttryckligen ger sitt samtycke. Detta krävs enligt <strong>GDPR</strong> och <strong>ePrivacy Directive 5(3)</strong>."
+msgstr "לא מופעלות טכנולוגיות מעקב עד שמשתמש נותן הסכמה מפורשת. זה נדרש על פי <strong>GDPR</strong> וה<strong>הנחיית פרטיות אלקטרונית 5(3)</strong>."
 
 #: includes/settings.php:585
 msgid "Opt-Out Mode (California)"
-msgstr "Opt-out-läge (Kalifornien)"
+msgstr "מצב ביטול הרשמה (קליפורניה)"
 
 #: includes/settings.php:586
 msgid "Tracking is allowed by default, but users must be able to opt out easily. This aligns with <strong>CCPA</strong> and similar U.S. privacy frameworks."
-msgstr "Spårning är tillåtet som standard, men användare måste kunna välja bort det enkelt. Detta är i linje med <strong>CCPA</strong> och liknande amerikanska sekretessramar."
+msgstr "מעקב מותר כברירת מחדל, אך על המשתמשים להיות מסוגלים לבטל בקלות. זה תואם את <strong>CCPA</strong> ומסגרות פרטיות דומות בארה\"ב."
 
 #: includes/settings.php:617
 msgid "Do not sell or share options"
-msgstr "Sälj eller dela inte optioner"
+msgstr "אל תמכור או שתף אפשרויות"
 
 #: includes/settings.php:630
 #: includes/settings.php:736
 msgid "Yes"
-msgstr "Ja"
+msgstr "כן"
 
 #: includes/settings.php:638
 #: includes/settings.php:744
 msgid "No"
-msgstr "Inga"
+msgstr "לא"
 
 #: includes/settings.php:723
 msgid "Enable Geo-handling for Consent Mode"
-msgstr "Aktivera geohantering för samtyckesläge"
+msgstr "הפעלת טיפול גיאוגרפי למצב הסכמה"
 
 #: includes/settings.php:759
 msgid "Geo-Based Consent Rules"
-msgstr "Geobaserade samtyckesregler"
+msgstr "חוקי הסכמה מבוססי מיקום גיאוגרפי"
 
 #: includes/settings.php:858
 msgid "Browser Language"
-msgstr "Webbläsarspråk"
+msgstr "שפת הדפדפן"
 
 #: includes/settings.php:859
 #: includes/settings.php:871
 #: includes/settings.php:888
 msgid "Time Zone"
-msgstr "Tidszon"
+msgstr "אזור זמן"
 
 #: includes/settings.php:861
 msgid "Consent Mode"
-msgstr "Samtyckesläge"
+msgstr "מצב הסכמה"
 
 #: includes/settings.php:862
 msgid "Allow Override"
-msgstr "Tillåt åsidosättande"
+msgstr "אפשר עקיפה"
 
 #: includes/settings.php:870
 #: includes/settings.php:887
 msgid "Language"
-msgstr "Språk"
+msgstr "שפה"
 
 #: includes/settings.php:873
 #: includes/settings.php:890
 msgid "Select Mode"
-msgstr "Välj Läge"
+msgstr "בחר מצב"
 
 #: includes/settings.php:891
 msgid "Override"
-msgstr "Åsidosätta"
+msgstr "ביטול"

@@ -16,7 +16,7 @@ msgstr ""
 #. Plugin URI of the plugin
 #: aesirx-consent.php
 msgid "https://analytics.aesirx.io?utm_source=wpplugin&utm_medium=web&utm_campaign=wordpress&utm_id=aesirx&utm_term=wordpress&utm_content=analytics"
-msgstr "https://analytics.aesirx.io?utm_source=wpplugin&utm_medium=web&utm_campaign=wordpress&utm_id=aesirx&utm_term=wordpress&utm_content=analiz"
+msgstr "https://analytics.aesirx.io?utm_source=wpplugin&utm_medium=web&utm_campaign=wordpress&utm_id=aesirx&utm_term=wordpress&utm_content=analytics"
 
 #. Author of the plugin
 #: aesirx-consent.php
@@ -1013,4 +1013,3 @@ msgstr "Mod Seç"
 #: includes/settings.php:891
 msgid "Override"
 msgstr "Geçersiz Kılma"
-

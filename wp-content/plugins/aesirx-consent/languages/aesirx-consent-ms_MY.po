@@ -9,7 +9,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "POT-Creation-Date: 2024-07-25T03:47:45+00:00\n"
 "PO-Revision-Date: 2024-07-26 17:10+0200\n"
-"Language: pt\n"
+"Language: ms\n"
 "X-Domain: aesirx-consent\n"
 "X-Generator: Poedit 3.4.4\n"
 
@@ -30,48 +30,48 @@ msgstr "https://aesirx.io/"
 
 #: aesirx-consent.php:221
 msgid "Settings"
-msgstr "Configurações"
+msgstr "Tetapan"
 
 #: aesirx-consent.php:336
 msgid "Problem with Aesirx Analytics plugin install"
-msgstr "Problema com a instalação do plugin Aesirx Analytics"
+msgstr "Masalah dengan pemasangan plugin Aesirx Analytics"
 
 #: includes/settings.php:17
 msgid "Please register your license at Signup.aesirx.io to enable the external first-party server."
-msgstr "Por favor, registre sua licença em Signup.aesirx.io para habilitar o servidor externo de primeira parte."
+msgstr "Sila daftar lesen anda di Signup.aesirx.io untuk mengaktifkan pelayan pihak pertama luaran."
 
 #: includes/settings.php:27
 msgid "Domain is empty."
-msgstr "O domínio está vazio."
+msgstr "Domain kosong."
 
 #: includes/settings.php:34
 msgid "Invalid domain format."
-msgstr "Formato de domínio inválido."
+msgstr "Format domain tidak sah."
 
 #: aesirx-consent.php:43
 #: includes/settings.php:1225
 msgid "Consent"
-msgstr "Consentimento"
+msgstr "Persetujuan"
 
 #: src/AesirxAnalyticsMysqlHelper.php:96
 msgid "Database error occurred."
-msgstr "Ocorreu um erro de banco de dados."
+msgstr "Ralat pangkalan data berlaku."
 
 #: src/AesirxAnalyticsMysqlHelper.php:250
 #: src/AesirxAnalyticsMysqlHelper.php:585
 #: src/AesirxAnalyticsMysqlHelper.php:617
 msgid "\"start\" filter is not correct"
-msgstr "\"start\" filtro não está correto"
+msgstr "\"Penapis \\\"mula\\\" tidak betul\""
 
 #: src/AesirxAnalyticsMysqlHelper.php:258
 #: src/AesirxAnalyticsMysqlHelper.php:593
 #: src/AesirxAnalyticsMysqlHelper.php:625
 msgid "\"end\" filter is not correct"
-msgstr "\"Filtro de 'fim' não está correto\""
+msgstr "Penapis \"akhir\" tidak betul"
 
 #: src/AesirxAnalyticsMysqlHelper.php:327
 msgid "Domain not found"
-msgstr "Domínio não encontrado"
+msgstr "Domain tidak dijumpai"
 
 #: src/AesirxAnalyticsMysqlHelper.php:406
 #: src/AesirxAnalyticsMysqlHelper.php:468
@@ -85,682 +85,682 @@ msgstr "Domínio não encontrado"
 #: src/AesirxAnalyticsMysqlHelper.php:1080
 #: src/Mysql/GetVisitorConsentList.php:60
 msgid "There was a problem with the database query."
-msgstr "Houve um problema com a consulta ao banco de dados."
+msgstr "Terdapat masalah dengan pertanyaan pangkalan data."
 
 #: src/AesirxAnalyticsMysqlHelper.php:906
 #: src/AesirxAnalyticsMysqlHelper.php:925
 #: src/AesirxAnalyticsMysqlHelper.php:945
 #: src/AesirxAnalyticsMysqlHelper.php:1283
 msgid "Something went wrong"
-msgstr "Algo deu errado"
+msgstr "Ada yang tidak kena"
 
 #: src/AesirxAnalyticsMysqlHelper.php:1006
 msgid "There was a problem updating the data in the database."
-msgstr "Houve um problema ao atualizar os dados no banco de dados."
+msgstr "Terdapat masalah semasa mengemas kini data dalam pangkalan data."
 
 #: src/Mysql/AddConsentLevel1.php:23
 #: src/Mysql/AddConsentLevel5.php:23
 #: src/Mysql/AddConsentLevel6.php:23
 msgid "The uuid parameter is required."
-msgstr "O parâmetro uuid é obrigatório."
+msgstr "Parameter uuid diperlukan."
 
 #: src/Mysql/AddConsentLevel1.php:27
 #: src/Mysql/AddConsentLevel5.php:27
 #: src/Mysql/AddConsentLevel6.php:27
 msgid "The consent parameter is required and must be a number."
-msgstr "O parâmetro de consentimento é obrigatório e deve ser um número."
+msgstr "Parameter persetujuan diperlukan dan mesti berupa nombor."
 
 #: src/Mysql/AddConsentLevel1.php:53
 #: src/Mysql/AddConsentLevel5.php:53
 #: src/Mysql/AddConsentLevel6.php:53
 msgid "Previous consent was not expired"
-msgstr "O consentimento anterior não estava expirado"
+msgstr "Persetujuan sebelumnya belum tamat tempoh"
 
 #: src/Mysql/AddConsentLevel2.php:16
 #: src/Mysql/AddConsentLevel3or4.php:55
 msgid "Invalid token"
-msgstr "Token inválido"
+msgstr "Token tidak sah"
 
 #: src/Mysql/AddConsentLevel2.php:24
 #: src/Mysql/AddConsentLevel3or4.php:19
 msgid "Visitor not found"
-msgstr "Visitante não encontrado"
+msgstr "Pelawat tidak dijumpai"
 
 #: src/Mysql/AddConsentLevel2.php:41
 #: src/Mysql/AddConsentLevel3or4.php:80
 msgid "Previous consent still active"
-msgstr "Consentimento anterior ainda ativo"
+msgstr "Persetujuan sebelumnya masih aktif"
 
 #: src/Mysql/AddConsentLevel2.php:124
 #: src/Mysql/AddConsentLevel3or4.php:167
 msgid "There was a problem querying the data in the database."
-msgstr "Houve um problema ao consultar os dados no banco de dados."
+msgstr "Terdapat masalah dalam membuat pertanyaan data dalam pangkalan data."
 
 #: src/Mysql/AddConsentLevel3or4.php:12
 msgid "Invalid signature"
-msgstr "Assinatura inválida"
+msgstr "Tandatangan tidak sah"
 
 #: src/Mysql/AddConsentLevel3or4.php:26
 msgid "Wallet not found"
-msgstr "Carteira não encontrada"
+msgstr "Dompet tidak ditemui"
 
 #: src/Mysql/AddConsentLevel3or4.php:32
 msgid "Wallet nonce not found"
-msgstr "Nonce da carteira não encontrado"
+msgstr "Nonce dompet tidak dijumpai"
 
 #: src/Mysql/AddConsentLevel3or4.php:39
 #: src/Mysql/RevokeConsentLevel3or4.php:37
 msgid "Nonce is not valid"
-msgstr "Nonce não é válido"
+msgstr "Nonce tidak sah"
 
 #: src/Mysql/AddConsentLevel3or4.php:48
 #: src/Mysql/RevokeConsentLevel3or4.php:44
 msgid "Contract is not valid"
-msgstr "O contrato não é válido"
+msgstr "Kontrak tidak sah"
 
 #: src/Mysql/CloseVisitorEvent.php:14
 #: src/Mysql/CloseVisitorEvent.php:18
 msgid "The event uuid parameter is required."
-msgstr "O parâmetro uuid do evento é obrigatório."
+msgstr "Parameter uuid acara diperlukan."
 
 #: src/Mysql/CloseVisitorEvent.php:36
 msgid "Failed to update analytics events."
-msgstr "Falha ao atualizar eventos analíticos."
+msgstr "Gagal mengemas kini acara analitik."
 
 #: src/Mysql/CloseVisitorEvent.php:43
 msgid "Visitor event not found."
-msgstr "Evento de visitante não encontrado."
+msgstr "Acara pelawat tidak dijumpai."
 
 #: src/Mysql/CloseVisitorEvent.php:55
 msgid "Failed to update analytics flows"
-msgstr "Falha ao atualizar fluxos de análise"
+msgstr "Gagal mengemas kini aliran analitis"
 
 #: src/Mysql/GetNonce.php:12
 msgid "Address is not valid"
-msgstr "O endereço não é válido"
+msgstr "Alamat tidak sah"
 
 #: src/Mysql/RevokeConsentLevel3or4.php:14
 msgid "Invalid signature."
-msgstr "Assinatura inválida."
+msgstr "Tandatangan tidak sah."
 
 #: src/Mysql/RevokeConsentLevel3or4.php:24
 msgid "Wallet not found."
-msgstr "Carteira não encontrada."
+msgstr "Dompet tidak dijumpai."
 
 #: src/Mysql/RevokeConsentLevel3or4.php:30
 msgid "Nonce not found."
-msgstr "Nonce não encontrado."
+msgstr "Nonce tidak dijumpai."
 
 #: src/Mysql/RevokeConsentLevel3or4.php:55
 msgid "Failed to update consent expiration."
-msgstr "Falha ao atualizar o prazo de validade do consentimento."
+msgstr "Gagal mengemas kini tamat tempoh persetujuan."
 
 #: src/Mysql/RevokeConsentLevel3or4.php:62
 msgid "Failed to update nonce."
-msgstr "Falha ao atualizar o nonce."
+msgstr "Gagal mengemas kini nonce."
 
 #: src/Mysql/StartFingerprint.php:146
 msgid "Wrong URL format, domain not found"
-msgstr "Formato de URL incorreto, domínio não encontrado"
+msgstr "Format URL salah, domain tidak dijumpai"
 
 #: src/Mysql/StartFingerprint.php:150
 msgid "The domain sent in the new URL does not match the domain stored in the visitor document"
-msgstr "O domínio enviado na nova URL não corresponde ao domínio armazenado no documento do visitante"
+msgstr "Domain yang dihantar dalam URL baru tidak sepadan dengan domain yang disimpan dalam dokumen pelawat"
 
 #: src/Route/Middleware/IsBackendMiddleware.php:18
 msgid "Permission denied!"
-msgstr "Permissão negada!"
+msgstr "Kebenaran ditolak!"
 
 #: src/Track/CliTracker.php:32
 msgid "Error in tracking"
-msgstr "Erro no rastreamento"
+msgstr "Ralat dalam penjejakan"
 
 #. Plugin Name of the plugin
 #: aesirx-consent.php
 msgid "AesirX Consent"
-msgstr "Consentimento AesirX"
+msgstr "Persetujuan AesirX"
 
 #. Description of the plugin
 #: aesirx-consent.php
 msgid "Aesirx Consent plugin. When you join forces with AesirX, you're not just becoming a Partner - you're also becoming a freedom fighter in the battle for privacy! Earn 25% Affiliate Commission <a href=\"https://aesirx.io/partner?utm_source=wpplugin&utm_medium=web&utm_campaign=wordpress&utm_id=aesirx&utm_term=wordpress&utm_content=analytics\">[Click to Join]</a>"
-msgstr "Plugin de Consentimento AesirX. Ao unir-se à AesirX, você não se torna apenas um Parceiro - você também se torna um defensor da liberdade na batalha pela privacidade! Ganhe 25% de Comissão de Afiliado <a href=\"https://aesirx.io/partner?utm_source=wpplugin&utm_medium=web&utm_campaign=wordpress&utm_id=aesirx&utm_term=wordpress&utm_content=analytics\">[Clique para Participar]</a>"
+msgstr "Plugin Persetujuan AesirX. Apabila anda menyertai AesirX, anda bukan sahaja menjadi Rakan Kongsi - anda juga menjadi pejuang kebebasan dalam pertempuran untuk privasi! Dapatkan Komisen Afiliasi 25% <a href=\"https://aesirx.io/partner?utm_source=wpplugin&utm_medium=web&utm_campaign=wordpress&utm_id=aesirx&utm_term=wordpress&utm_content=analytics\">[Klik untuk Sertai]</a>"
 
 #: aesirx-consent.php:39
 #: includes/settings.php:1221
 msgid "Shield of Privacy"
-msgstr "Shield of Privacy"
+msgstr "Perisai Privasi"
 
 #: aesirx-consent.php:40
 #: includes/settings.php:1222
 msgid "Revoke your consent for data use whenever you wish."
-msgstr "Revogue seu consentimento para uso de dados sempre que desejar."
+msgstr "Tarik balik persetujuan anda untuk penggunaan data bila-bila masa."
 
 #: aesirx-consent.php:41
 #: includes/settings.php:1223
 msgid "Manage Decentralized Consent"
-msgstr "Gerenciar Consentimento Descentralizado"
+msgstr "Urus Persetujuan Terdesentralisasi"
 
 #: aesirx-consent.php:42
 #: includes/settings.php:1224
 msgid "Revoke Consent"
-msgstr "Revogar Consentimento"
+msgstr "Batalkan Persetujuan"
 
 #: aesirx-consent.php:44
 #: includes/settings.php:1226
 msgid "Reject"
-msgstr "Rejeitar"
+msgstr "Tolak"
 
 #: aesirx-consent.php:45
 #: includes/settings.php:1227
 msgid "Please connect your Web3 wallet"
-msgstr "Por favor, conecte sua carteira Web3"
+msgstr "Sila sambungkan dompet Web3 anda"
 
 #: aesirx-consent.php:46
 #: includes/settings.php:1228
 msgid "Please sign the message on your wallet twice and wait for it to be saved."
-msgstr "Por favor, assine a mensagem na sua carteira duas vezes e aguarde para que ela seja salva."
+msgstr "Sila tandatangan mesej di dompet anda dua kali dan tunggu sehingga ia disimpan."
 
 #: aesirx-consent.php:47
 #: includes/settings.php:1229
 msgid "Saving..."
-msgstr "Salvando..."
+msgstr "Menyimpan..."
 
 #: aesirx-consent.php:48
 #: includes/settings.php:1230
 msgid "Please connect to your wallet"
-msgstr "Por favor, ligue-se à sua carteira"
+msgstr "Sila sambung ke dompet anda"
 
 #: aesirx-consent.php:49
 #: includes/settings.php:1231
 msgid "Connecting"
-msgstr "Conectando"
+msgstr "Menyambung"
 
 #: aesirx-consent.php:50
 #: includes/settings.php:1232
 msgid "TRACKING AND DATA PRIVACY PREFERENCES"
-msgstr "PREFERÊNCIAS DE RASTREAMENTO E PRIVACIDADE DE DADOS"
+msgstr "PENGESAN DAN KEUTAMAAN PRIVASI DATA"
 
 #: aesirx-consent.php:51
 #: includes/settings.php:1233
 msgid "About"
-msgstr "Sobre"
+msgstr "Tentang"
 
 #: aesirx-consent.php:52
 #: aesirx-consent.php:101
 #: includes/settings.php:1234
 #: includes/settings.php:1283
 msgid "Details"
-msgstr "Detalhes"
+msgstr "Butiran"
 
 #: aesirx-consent.php:53
 #: aesirx-consent.php:81
 #: includes/settings.php:1235
 #: includes/settings.php:1263
 msgid "Decentralized Consent"
-msgstr "Consentimento Descentralizado"
+msgstr "Persetujuan terdesentralisasi"
 
 #: aesirx-consent.php:54
 #: includes/settings.php:1236
 msgid "Manage Your Consent Preferences"
-msgstr "Gerencie suas preferências de consentimento"
+msgstr "Urus pilihan persetujuan anda"
 
 #: aesirx-consent.php:55
 #: includes/settings.php:1237
 msgid "Choose how we use your data: \"Reject\" data collection, allow tracking [\"Consent\"], or use \"Decentralized Consent\" for more control over your personal data & rewards."
-msgstr "Escolha como usamos seus dados: 'Rejeitar' a coleta de dados, permitir rastreamento ['Consentimento'], ou usar 'Consentimento Descentralizado' para mais controle sobre seus dados pessoais e recompensas."
+msgstr "Pilih cara kami menggunakan data anda: 'Tolak' pengumpulan data, benarkan penjejakan ['Persetujuan'], atau gunakan 'Persetujuan Terdesentralisasi' untuk lebih kawalan ke atas data peribadi dan ganjaran anda."
 
 #: aesirx-consent.php:56
 #: includes/settings.php:1238
 msgid "Choose how we use your data: \"Reject\" data collection, allow tracking [\"Consent\"]."
-msgstr "Escolha como usamos seus dados: \"Rejeitar\" a coleta de dados, permitir rastreamento [\"Consentimento\"]."
+msgstr "Pilih cara kami menggunakan data anda: \"Tolak\" pengumpulan data, benarkan penjejakan [\"Persetujuan\"]."
 
 #: aesirx-consent.php:57
 #: includes/settings.php:1239
 msgid "By consenting, you allow us to collect & use your data for:"
-msgstr "Ao consentir, você nos permite coletar e usar seus dados para:"
+msgstr "Dengan memberi persetujuan, anda membenarkan kami mengumpul dan menggunakan data anda untuk:"
 
 #: aesirx-consent.php:58
 #: includes/settings.php:1240
 msgid "Analytics & Behavioral Data: To improve our services & personalize your experience."
-msgstr "Dados Analíticos e de Comportamento: Para melhorar nossos serviços e personalizar sua experiência."
+msgstr "Analisis & Data Tingkah Laku: Untuk meningkatkan perkhidmatan kami & memperibadikan pengalaman anda."
 
 #: aesirx-consent.php:59
 #: includes/settings.php:1241
 msgid "Form Data: When you contact us."
-msgstr "Dados do Formulário: Quando você nos contata."
+msgstr "Data Borang: Apabila anda menghubungi kami."
 
 #: aesirx-consent.php:60
 #: includes/settings.php:1242
 msgid "Please note"
-msgstr "Por favor, note"
+msgstr "Sila ambil perhatian"
 
 #: aesirx-consent.php:61
 #: includes/settings.php:1243
 msgid "We do not share your data with third parties without your explicit consent."
-msgstr "Não compartilhamos seus dados com terceiros sem o seu consentimento explícito."
+msgstr "Kami tidak berkongsi data anda dengan pihak ketiga tanpa kebenaran anda yang jelas."
 
 #: aesirx-consent.php:62
 #: includes/settings.php:1244
 msgid "You can opt-in later for specific features without giving blanket consent."
-msgstr "Você pode optar por participar mais tarde de recursos específicos sem dar consentimento geral."
+msgstr "Anda boleh memilih kemudian untuk ciri-ciri tertentu tanpa memberikan persetujuan menyeluruh."
 
 #: aesirx-consent.php:63
 #: includes/settings.php:1245
 msgid "For more details, refer to our <a class='text-success fw-semibold text-decoration-underline' href='https://aesirx.io/privacy-policy' target='_blank'>privacy policy.</a>"
-msgstr "Para mais detalhes, consulte a nossa <a class='text-success fw-semibold text-decoration-underline' href='https://aesirx.io/privacy-policy' target='_blank'>política de privacidade.</a>"
+msgstr "Untuk maklumat lanjut, rujuk <a class='text-success fw-semibold text-decoration-underline' href='https://aesirx.io/privacy-policy' target='_blank'>dasar privasi</a> kami."
 
 #: aesirx-consent.php:64
 #: includes/settings.php:1246
 msgid "Benefits"
-msgstr "Benefícios"
+msgstr "Faedah"
 
 #: aesirx-consent.php:65
 #: includes/settings.php:1247
 msgid "<span class='fw-semibold text-primary'>Control your data:</span> Choose your preferred level of data collection & tracking."
-msgstr "<span class='fw-semibold text-primary'>Controle seus dados:</span> Escolha seu nível preferido de coleta e rastreamento de dados."
+msgstr "<span class='fw-semibold text-primary'>Kawal data anda:</span> Pilih tahap pengumpulan dan penjejakan data pilihan anda."
 
 #: aesirx-consent.php:66
 #: includes/settings.php:1248
 msgid "<span class='fw-semibold text-primary'>Earn rewards:</span> Participate in decentralized consent for privacy & rewards."
-msgstr "<span class='fw-semibold text-primary'>Ganhe recompensas:</span> Participe no consentimento descentralizado para privacidade e recompensas."
+msgstr "<span class='fw-semibold text-primary'>Dapatkan ganjaran:</span> Sertai persetujuan terdesentralisasi untuk privasi dan ganjaran."
 
 #: aesirx-consent.php:67
 #: includes/settings.php:1249
 msgid "<span class='fw-semibold text-primary'>Transparent data collection practices:</span> Understand how your data is collected & used."
-msgstr "<span class='fw-semibold text-primary'>Práticas transparentes de coleta de dados:</span> Entenda como seus dados são coletados e utilizados."
+msgstr "<span class='fw-semibold text-primary'>Amalan pengumpulan data yang telus::</span> Fahami cara data anda dikumpul & digunakan."
 
 #: aesirx-consent.php:68
 #: includes/settings.php:1250
 msgid "Understanding Your Privacy Choices"
-msgstr "Compreendendo Suas Escolhas de Privacidade"
+msgstr "Memahami Pilihan Privasi Anda"
 
 #: aesirx-consent.php:69
 #: includes/settings.php:1251
 msgid "<span class='fw-semibold text-primary'>Reject:</span> No data will be collected or loaded except for anonymized page views & rejections. Some personalization features may be disabled."
-msgstr "<span class='fw-semibold text-primary'>Rejeitar:</span> Nenhum dado será coletado ou carregado, exceto visualizações de página anonimizadas e rejeições. Algumas funcionalidades de personalização podem ser desativadas."
+msgstr "<span class='fw-semibold text-primary'>Tolak:</span> Tiada data akan dikumpul atau dimuatkan kecuali paparan halaman tanpa nama & penolakan. Beberapa ciri personalisasi mungkin dinyahaktifkan."
 
 #: aesirx-consent.php:70
 #: includes/settings.php:1252
 msgid "<span class='fw-semibold text-primary'>Consent:</span> First & third-party tracking data will be collected to enhance your experience."
-msgstr "<span class='fw-semibold text-primary'>Consentimento:</span> Dados de rastreamento de primeira e terceira partes serão coletados para melhorar sua experiência."
+msgstr "<span class='fw-semibold text-primary'>Persetujuan:</span> Data penjejakan pihak pertama dan ketiga akan dikumpulkan untuk meningkatkan pengalaman anda."
 
 #: aesirx-consent.php:71
 #: includes/settings.php:1253
 msgid "<span class='fw-semibold text-primary'>Decentralized Consent:</span> Choose Decentralized Wallets or Decentralized Wallet + Shield of Privacy. Both options let you manage & revoke consent on-site or through AesirX dApp, plus earn rewards from digital marketing activities."
-msgstr "<span class='fw-semibold text-primary'>Consentimento Descentralizado:</span> Escolha Carteiras Descentralizadas ou Carteira Descentralizada + Escudo de Privacidade. Ambas as opções permitem que você gerencie e revogue o consentimento no local ou por meio do AesirX dApp, além de ganhar recompensas de atividades de marketing digital."
+msgstr "<span class='fw-semibold text-primary'>Persetujuan Terdesentralisasi:</span> Pilih Dompet Terdesentralisasi atau Dompet Terdesentralisasi + Perisai Privasi. Kedua-dua pilihan membolehkan anda mengurus & menarik balik persetujuan di tapak atau melalui AesirX dApp, serta memperoleh ganjaran daripada aktiviti pemasaran digital."
 
 #: aesirx-consent.php:72
 #: includes/settings.php:1254
 msgid "Our Commitment in Action"
-msgstr "Nosso Compromisso em Ação"
+msgstr "Komitmen Kami dalam Tindakan"
 
 #: aesirx-consent.php:73
 #: includes/settings.php:1255
 msgid "<span class='fw-semibold text-primary'>Privacy Protection:</span> Users have full control over their data, ensuring maximum privacy."
-msgstr "<span class='fw-semibold text-primary'>Proteção de Privacidade:</span> Os usuários têm controle total sobre seus dados, garantindo a máxima privacidade."
+msgstr "<span class='fw-semibold text-primary'>Perlindungan Privasi:</span> Pengguna mempunyai kawalan penuh ke atas data mereka, memastikan privasi maksimum."
 
 #: aesirx-consent.php:74
 #: includes/settings.php:1256
 msgid "<span class='fw-semibold text-primary'>Enables Compliance:</span> Using Shield of Privacy (SoP) ensures compliance with GDPR, CCPA, ePrivacy Directive, & other data protection regulations."
-msgstr "<span class='fw-semibold text-primary'>Habilita Conformidade:</span> O uso do Escudo de Privacidade (SoP) garante conformidade com o GDPR, CCPA, Diretiva ePrivacy e outras regulamentações de proteção de dados."
+msgstr "<span class='fw-semibold text-primary'>Memungkinkan Pematuhan:</span> Penggunaan Privacy Shield (SoP) memastikan pematuhan terhadap GDPR, CCPA, Arahan ePrivacy, dan peraturan perlindungan data lain."
 
 #: aesirx-consent.php:75
 #: includes/settings.php:1257
 msgid "<span class='fw-semibold text-primary'>Proactive Protection:</span> We enhance privacy measures to safeguard your data integrity."
-msgstr "<span class='fw-semibold text-primary'>Proteção Proativa:</span> Aumentamos as medidas de privacidade para proteger a integridade dos seus dados."
+msgstr "<span class='fw-semibold text-primary'>Perlindungan Proaktif:</span> Kami meningkatkan langkah privasi untuk melindungi integriti data anda."
 
 #: aesirx-consent.php:76
 #: includes/settings.php:1258
 msgid "<span class='fw-semibold text-primary'>Flexible Consent:</span> You can withdraw your consent anytime on-site or via our <a class='text-success fw-semibold text-decoration-underline' href='https://dapp.shield.aesirx.io' target='_blank'>dApp</a> (Decentralized Application)."
-msgstr "<span class='fw-semibold text-primary'>Consentimento Flexível:</span> Você pode retirar seu consentimento a qualquer momento no local ou através do nosso <a class='text-success fw-semibold text-decoration-underline' href='https://dapp.shield.aesirx.io' target='_blank'>dApp</a> (Aplicação Descentralizada)."
+msgstr "<span class='fw-semibold text-primary'>Persetujuan Fleksibel:</span> Anda boleh menarik balik persetujuan anda pada bila-bila masa di tapak atau melalui <a class='text-success fw-semibold text-decoration-underline' href='https://dapp.shield.aesirx.io' target='_blank'>dApp</a> (Aplikasi Terdesentralisasi) kami."
 
 #: aesirx-consent.php:77
 #: includes/settings.php:1259
 msgid "<span class='fw-semibold text-primary'>Learn More:</span> Discover our approach to data processing in our <a class='text-success fw-semibold text-decoration-underline' href='https://aesirx.io/privacy-policy' target='_blank'>Privacy Policy</a>."
-msgstr "<span class='fw-semibold text-primary'>Saiba mais:</span> Descubra nossa abordagem ao processamento de dados em nossa <a class='text-success fw-semibold text-decoration-underline' href='https://aesirx.io/privacy-policy' target='_blank'>Política de Privacidade</a>."
+msgstr "<span class='fw-semibold text-primary'>Ketahui Lebih Lanjut:</span> Temui pendekatan kami terhadap pemprosesan data dalam <a class='text-success fw-semibold text-decoration-underline' href='https://aesirx.io/privacy-policy' target='_blank'>Dasar Privasi</a> kami."
 
 #: aesirx-consent.php:78
 #: includes/settings.php:1260
 msgid "<span class='fw-semibold text-primary'>For Businesses:</span> Enhance trust, secure user identities, & prevent breaches."
-msgstr "<span class='fw-semibold text-primary'>Para Empresas:</span> Aumente a confiança, proteja identidades de usuários e previna violações."
+msgstr "<span class='fw-semibold text-primary'>Untuk Perniagaan:</span> Tingkatkan kepercayaan, selamatkan identiti pengguna & cegah pelanggaran."
 
 #: aesirx-consent.php:79
 #: includes/settings.php:1261
 msgid "More info at <a class='text-success fw-semibold text-decoration-underline' href='https://shield.aesirx.io' target='_blank'>https://shield.aesirx.io</a>."
-msgstr "Mais informações em <a class='text-success fw-semibold text-decoration-underline' href='https://shield.aesirx.io' target='_blank'>https://shield.aesirx.io</a>."
+msgstr "Maklumat lanjut di <a class='text-success fw-semibold text-decoration-underline' href='https://shield.aesirx.io' target='_blank'>https://shield.aesirx.io</a>."
 
 #: aesirx-consent.php:80
 #: includes/settings.php:1262
 msgid "Select your preferred decentralized consent option:"
-msgstr "Selecione sua opção de consentimento descentralizado preferida:"
+msgstr "Pilih pilihan persetujuan terdesentralisasi pilihan anda:"
 
 #: aesirx-consent.php:82
 #: includes/settings.php:1264
 msgid "Decentralized consent will be loaded"
-msgstr "O consentimento descentralizado será carregado"
+msgstr "Persetujuan terdesentralisasi akan dimuatkan"
 
 #: aesirx-consent.php:83
 #: includes/settings.php:1265
 msgid "Both first-party & third-party tracking data will be activated."
-msgstr "Tanto os dados de rastreamento de primeira parte quanto de terceira parte serão ativados."
+msgstr "Kedua-dua data penjejakan pihak pertama & pihak ketiga akan diaktifkan."
 
 #: aesirx-consent.php:84
 #: includes/settings.php:1266
 msgid "All consented data will be collected."
-msgstr "Todos os dados consentidos serão coletados."
+msgstr "Semua data yang dipersetujui akan dikumpul."
 
 #: aesirx-consent.php:85
 #: includes/settings.php:1267
 msgid "Users can revoke consent on-site at any time."
-msgstr "Os utilizadores podem revogar o consentimento no site a qualquer momento."
+msgstr "Pengguna boleh membatalkan persetujuan di tapak pada bila-bila masa."
 
 #: aesirx-consent.php:86
 #: includes/settings.php:1268
 msgid "Decentralized Consent + Shield of Privacy"
-msgstr "Consentimento Descentralizado + Escudo de Privacidade"
+msgstr "Persetujuan Terdesentralisasi + Perisai Privasi"
 
 #: aesirx-consent.php:87
 #: includes/settings.php:1269
 msgid "Users can revoke consent on-site or from the AesirX dApp at any time."
-msgstr "Os usuários podem revogar o consentimento no site ou no AesirX dApp a qualquer momento."
+msgstr "Pengguna boleh menarik balik persetujuan di tapak atau dari AesirX dApp pada bila-bila masa."
 
 #: aesirx-consent.php:88
 #: includes/settings.php:1270
 msgid "Users can earn rewards from digital marketing activities."
-msgstr "Os usuários podem ganhar recompensas com atividades de marketing digital."
+msgstr "Pengguna boleh memperoleh ganjaran daripada aktiviti pemasaran digital."
 
 #: aesirx-consent.php:89
 #: includes/settings.php:1271
 msgid "Continue"
-msgstr "Continuar"
+msgstr "Teruskan"
 
 #: aesirx-consent.php:90
 #: includes/settings.php:1272
 msgid "Back"
-msgstr "Voltar"
+msgstr "Kembali"
 
 #: aesirx-consent.php:91
 #: includes/settings.php:1273
 msgid "You've chosen to reject data collection:"
-msgstr "Você optou por rejeitar a coleta de dados:"
+msgstr "Anda telah memilih untuk menolak pengumpulan data:"
 
 #: aesirx-consent.php:92
 #: includes/settings.php:1274
 msgid "Only anonymized page views & limited features will be available. To access all website features, including personalized content & enhanced functionality, please choose an option:"
-msgstr "Apenas visualizações de página anonimizadas e recursos limitados estarão disponíveis. Para acessar todos os recursos do site, incluindo conteúdo personalizado e funcionalidade aprimorada, por favor, escolha uma opção:"
+msgstr "Hanya paparan halaman tanpa nama dan ciri terhad yang akan tersedia. Untuk mengakses semua ciri laman web, termasuk kandungan yang diperibadikan dan fungsi yang dipertingkatkan, sila pilih pilihan:"
 
 #: aesirx-consent.php:93
 #: includes/settings.php:1275
 msgid "<span class='fw-semibold text-primary'>Consent:</span> Allow data collection for analytics, form data (when you contact us), & behavioral & event tracking, with the option to opt-in for specific features."
-msgstr "<span class='fw-semibold text-primary'>Consentimento:</span> Permitir a coleta de dados para análises, dados de formulários (quando você nos contata) e rastreamento de comportamento e eventos, com a opção de adesão para funcionalidades específicas."
+msgstr "<span class='fw-semibold text-primary'>Kebenaran:</span> Benarkan pengumpulan data untuk analitik, data borang (apabila anda menghubungi kami), dan penjejakan tingkah laku dan acara, dengan pilihan untuk memilih ciri tertentu."
 
 #: aesirx-consent.php:94
 #: includes/settings.php:1276
 msgid "<span class='fw-semibold text-primary'>Decentralized Consent:</span> Allow data collection for analytics, form data (when you contact us), & behavioral & event tracking, with the option to revoke consent, opt-in for specific features, & earn rewards from digital marketing activities."
-msgstr "<span class='fw-semibold text-primary'>Consentimento Descentralizado:</span> Permitir a coleta de dados para análises, dados de formulários (quando você nos contata) e rastreamento de comportamento e eventos, com a opção de revogar o consentimento, optar por funcionalidades específicas e ganhar recompensas de atividades de marketing digital."
+msgstr "<span class='fw-semibold text-primary'>Persetujuan Terdesentralisasi:</span> Benarkan pengumpulan data untuk analitik, data borang (apabila anda menghubungi kami), dan penjejakan tingkah laku & acara, dengan pilihan untuk membatalkan persetujuan, memilih ciri tertentu, & memperoleh ganjaran daripada aktiviti pemasaran digital."
 
 #: aesirx-consent.php:95
 #: includes/settings.php:1277
 msgid "You can revoke consent on the site or any explicit opt-in consent, such as payment processing, at any time"
-msgstr "Você pode revogar o consentimento no site ou qualquer consentimento explícito, como o processamento de pagamentos, a qualquer momento"
+msgstr "Anda boleh menarik balik persetujuan di laman web atau sebarang persetujuan eksplisit, seperti pemprosesan pembayaran, pada bila-bila masa"
 
 #: aesirx-consent.php:96
 #: includes/settings.php:1278
 msgid "Revoke Opt-In Consent"
-msgstr "Revogar Consentimento de Opt-In"
+msgstr "Batalkan Persetujuan Ikut serta"
 
 #: aesirx-consent.php:97
 #: includes/settings.php:1279
 msgid "Revoke Opt-In Consent for Payment Processing"
-msgstr "Revogar o consentimento de opt-in para o processamento de pagamentos"
+msgstr "Tarik Balik Persetujuan Opt-In untuk Pemprosesan Pembayaran"
 
 #: aesirx-consent.php:98
 #: includes/settings.php:1280
 msgid "Revoke Opt-In Consent for AesirX Privacy Advisor AI"
-msgstr "Revogar Consentimento de Opt-In para AesirX Privacy Advisor AI"
+msgstr "Batalkan Persetujuan Ikut serta untuk AI Penasihat Privasi AesirX"
 
 #: aesirx-consent.php:99
 #: includes/settings.php:1281
 msgid "Revoke Consent for the site"
-msgstr "Revogar o consentimento para o site"
+msgstr "Batalkan Persetujuan untuk laman web"
 
 #: aesirx-consent.php:100
 #: includes/settings.php:1282
 msgid "Consent Management"
-msgstr "Gestão de Consentimento"
+msgstr "Pengurusan Persetujuan"
 
 #: includes/settings.php:224
 msgid "Gtag ID"
-msgstr "ID do Gtag"
+msgstr "ID Gtag"
 
 #: includes/settings.php:249
 msgid "GTM ID"
-msgstr "ID do GTM"
+msgstr "GTM ID"
 
 #: includes/settings.php:379
 msgid "AesirX Consent Shield for Third-Party Plugins "
-msgstr "Escudo de Consentimento AesirX para Plugins de Terceiros"
+msgstr "AesirX Consent Shield untuk Pemalam Pihak Ketiga"
 
 #: includes/settings.php:384
 msgid "Blocks selected third-party plugins from loading until user consent is given."
-msgstr "Bloqueia o carregamento de plugins de terceiros selecionados até que o consentimento do usuário seja concedido."
+msgstr "Menyekat pemuatan plugin pihak ketiga yang dipilih sehingga persetujuan pengguna diberikan."
 
 #: includes/settings.php:414
 msgid "Completely prevents the loading and execution of chosen third-party plugins before consent."
-msgstr "Impede completamente o carregamento e execução de plugins de terceiros escolhidos antes do consentimento."
+msgstr "Sepenuhnya menghalang pemuatan dan pelaksanaan plugin pihak ketiga yang dipilih sebelum persetujuan."
 
 #: includes/settings.php:420
 msgid "No network requests are made to third-party servers, enabling maximum compliance with privacy regulations like GDPR and the ePrivacy Directive."
-msgstr "Não são feitas solicitações de rede a servidores de terceiros, garantindo a máxima conformidade com regulamentos de privacidade como o GDPR e a Diretiva ePrivacy."
+msgstr "Tiada permintaan rangkaian dibuat kepada pelayan pihak ketiga, membolehkan pematuhan maksimum dengan peraturan privasi seperti GDPR dan Arahan ePrivacy."
 
 #: includes/settings.php:434
 msgid "AesirX Consent Shield for Domain/Path-Based Blocking"
-msgstr "Escudo de Consentimento AesirX para Bloqueio Baseado em Domínio/Caminho"
+msgstr "AesirX Consent Shield untuk Penyekatan Berasaskan Domain/Laluan"
 
 #: includes/settings.php:444
 #: includes/settings.php:462
 msgid "Enter domain or path"
-msgstr "Insira o domínio ou caminho"
+msgstr "Masukkan domain atau laluan"
 
 #: includes/settings.php:437
 msgid "Removes scripts matching specified domains or paths from the browser until user consent is given."
-msgstr "Remove scripts que correspondem a domínios ou caminhos especificados do navegador até que o usuário dê consentimento."
+msgstr "Mengalih keluar skrip yang sepadan dengan domain atau laluan tertentu daripada penyemak imbas sehingga kebenaran pengguna diberikan."
 
 #: includes/settings.php:485
 msgid "Blocks or removes scripts from running in the user's browser before consent is given."
-msgstr "Bloqueia ou remove scripts no navegador do usuário antes que o consentimento seja dado."
+msgstr "Menyekat atau menghapus skrip daripada berjalan di penyemak imbas pengguna sebelum persetujuan diberikan."
 
 #: includes/settings.php:491
 msgid "While it prevents scripts from executing, initial network requests may still occur, so it enhances privacy compliance under GDPR but may not fully meet the ePrivacy Directive requirements."
-msgstr "Embora impeça a execução de scripts, solicitações de rede iniciais ainda podem ocorrer, portanto, melhora a conformidade com a privacidade sob o GDPR, mas pode não atender totalmente aos requisitos da Diretiva de ePrivacy."
+msgstr "Walaupun ia menghalang skrip daripada dilaksanakan, permintaan rangkaian awal mungkin masih berlaku, jadi ia meningkatkan pematuhan privasi di bawah GDPR tetapi mungkin tidak sepenuhnya memenuhi keperluan Arahan ePrivacy."
 
 #: includes/settings.php:505
 msgid "Script Blocking Options"
-msgstr "Opções de Bloqueio de Scripts"
+msgstr "Pilihan Penyekatan Skrip"
 
 #: includes/settings.php:520
 msgid "Only Third-Party Hosts (default)"
-msgstr "Apenas Hosts de Terceiros (padrão)"
+msgstr "Hanya Hos Pihak Ketiga (lalai)"
 
 #: includes/settings.php:531
 msgid "Both First and Third-Party Hosts"
-msgstr "Hosts de Primeira e Terceira Parte"
+msgstr "Kedua-dua Hos Pihak Pertama dan Ketiga"
 
 #: includes/settings.php:926
 msgid "Need Help? Access Our Comprehensive Documentation Hub"
-msgstr "Precisa de ajuda? Acesse nosso Hub de Documentação Abrangente"
+msgstr "Perlu Bantuan? Akses Hab Dokumentasi Komprehensif Kami"
 
 #: includes/settings.php:1367
 #: includes/settings.php:1447
 msgid "Your trial license ends in %1$s days. Please update new license <a href='%2$s' target='_blank'>%2$s</a>."
-msgstr "Sua licença de teste termina em %1$s dias. Por favor, atualize a nova licença <a href='%2$s' target='_blank'>%2$s</a>."
+msgstr "Lesen percubaan anda akan tamat dalam %1$s hari. Sila kemas kini lesen baru di <a href='%2$s' target='_blank'>%2$s</a>."
 
 #: includes/settings.php:1396
 msgid "Your license is expried or not found. Please update new license <a href='%1$s' target='_blank'>%1$s</a>."
-msgstr "Sua licença expirou ou não foi encontrada. Por favor, atualize a nova licença em <a href='%1$s' target='_blank'>%1$s</a>."
+msgstr "Lesen anda telah tamat tempoh atau tidak dijumpai. Sila kemas kini lesen baharu <a href='%1$s' target='_blank'>%1$s</a>."
 
 #: includes/settings.php:1450
 msgid "Your free trials has ended. Please update your license. <a href='%1$s' target='_blank'>%1$s</a>."
-msgstr "Seu período de teste gratuito terminou. Por favor, atualize sua licença. <a href='%1$s' target='_blank'>%1$s</a>."
+msgstr "Percubaan percuma anda telah berakhir. Sila kemas kini lesen anda. <a href='%1$s' target='_blank'>%1$s</a>."
 
 #: src/AesirxAnalyticsMysqlHelper.php:845
 msgid "Could not insert consent"
-msgstr "Não foi possível inserir o consentimento"
+msgstr "Tidak dapat memasukkan persetujuan"
 
 #: src/Mysql/StartFingerprint.php:35
 #: src/Mysql/StartFingerprint.php:64
 msgid "License is expired or not found. Please update your license"
-msgstr "A licença expirou ou não foi encontrada. Por favor, atualize sua licença"
+msgstr "Lesen telah tamat tempoh atau tidak dijumpai. Sila kemas kini lesen anda"
 
 #: src/Mysql/StartFingerprint.php:76
 #: src/Mysql/StartFingerprint.php:83
 msgid "Your trial is ended. Please renew your license"
-msgstr "Seu período de teste terminou. Por favor, renove sua licença"
+msgstr "Percubaan anda telah tamat. Sila perbaharui lesen anda"
 
 #: includes/settings.php:106
 msgid "Your Client ID *"
-msgstr "Seu ID de Cliente *"
+msgstr "ID Pelanggan Anda *"
 
 #: includes/settings.php:113
 msgid "SSO Client ID"
-msgstr "ID do cliente SSO"
+msgstr "ID Klien SSO"
 
 #: includes/settings.php:119
 msgid ""
 "<div class='input_information_content'>\n"
 "          Provided SSO CLIENT ID from <a href='%1$s' target='_blank'>%1$s</a>.</div>"
-msgstr "<div class='input_information_content'>ID do CLIENTE SSO fornecido de <a href='%1$s' target='_blank'>%1$s</a>.</div>"
+msgstr "<div class='input_information_content'>ID KLIEN SSO yang disediakan dari <a href='%1$s' target='_blank'>%1$s</a>.</div>"
 
 #: includes/settings.php:134
 msgid "Your Client Secret *"
-msgstr "Seu Segredo do Cliente *"
+msgstr "Rahsia Pelanggan Anda *"
 
 #: includes/settings.php:139
 msgid "SSO Client Secret"
-msgstr "Segredo do Cliente SSO"
+msgstr "Rahsia Klien SSO"
 
 #: includes/settings.php:145
 msgid ""
 "<div class='input_information_content'>\n"
 "          Provided SSO Client Secret from <a href='%1$s' target='_blank'>%1$s</a>.</div>"
-msgstr "<div class='input_information_content'>Chave secreta do cliente SSO fornecida por <a href='%1$s' target='_blank'>%1$s</a>.</div>"
+msgstr "<div class='input_information_content'>Rahsia Klien SSO yang disediakan dari <a href='%1$s' target='_blank'>%1$s</a>.</div>"
 
 #: includes/settings.php:161
 msgid "Your License Key"
-msgstr "Sua Chave de Licença"
+msgstr "Kunci Lesen Anda"
 
 #: includes/settings.php:188
 msgid "Choose your tailored template"
-msgstr "Escolha seu modelo personalizado"
+msgstr "Pilih templat yang disesuaikan"
 
 #: includes/settings.php:443
 #: includes/settings.php:461
 msgid "Domain"
-msgstr "Domínio"
+msgstr "Domain"
 
 #: includes/settings.php:511
 msgid "Configure how JavaScript is blocked based on user consent preferences."
-msgstr "Configure como o JavaScript é bloqueado com base nas preferências de consentimento do usuário."
+msgstr "Konfigurasikan cara JavaScript disekat berdasarkan pilihan persetujuan pengguna."
 
 #: includes/settings.php:521
 msgid "Blocks JavaScript from third-party domains, allowing first-party scripts to run normally & keep essential site functions intact."
-msgstr "Bloqueia JavaScript de domínios de terceiros, permitindo que scripts de primeira parte funcionem normalmente e mantenham as funções essenciais do site intactas."
+msgstr "Menyekat JavaScript dari domain pihak ketiga, membolehkan skrip pihak pertama berjalan dengan normal dan memastikan fungsi penting laman web tetap utuh."
 
 #: includes/settings.php:532
 msgid "Blocks JavaScript from both first-party & third-party domains for comprehensive script control, giving you the ability to block any JavaScript from internal or external sources based on user consent."
-msgstr "Bloqueia JavaScript tanto de domínios primários quanto de terceiros para controle abrangente de scripts, permitindo que você bloqueie qualquer JavaScript de fontes internas ou externas com base no consentimento do usuário."
+msgstr "Menyekat JavaScript dari domain pihak pertama dan ketiga untuk kawalan skrip yang komprehensif, memberi anda keupayaan untuk menyekat mana-mana JavaScript dari sumber dalaman atau luaran berdasarkan persetujuan pengguna."
 
 #: includes/settings.php:936
 msgid "Discover the latest features & best practices."
-msgstr "Descubra as últimas funcionalidades e melhores práticas."
+msgstr "Terokai ciri terkini dan amalan terbaik."
 
 #: includes/settings.php:963
 msgid "Haven't got a license yet?"
-msgstr "Ainda não tem uma licença?"
+msgstr "Belum dapat lesen?"
 
 #: includes/settings.php:992
 msgid "Scan Your Site for Privacy Risks"
-msgstr "Verifique seu site para riscos de privacidade"
+msgstr "Imbas Laman Anda untuk Risiko Privasi"
 
 #: includes/settings.php:996
 msgid "Use the Privacy Scanner to quickly identify scripts, tags, & trackers running on your site that may compromise user privacy."
-msgstr "Use o Scanner de Privacidade para identificar rapidamente scripts, tags e rastreadores em seu site que podem comprometer a privacidade do usuário."
+msgstr "Gunakan Pengimbas Privasi untuk mengenal pasti skrip, teg & penjejak dengan pantas yang dijalankan di tapak anda yang mungkin menjejaskan privasi pengguna."
 
 #: includes/settings.php:1002
 msgid "Use Consent Shield to block those scripts by adding their domains or paths, ensuring quick & simple compliance."
-msgstr "Use o Consent Shield para bloquear esses scripts adicionando seus domínios ou caminhos, garantindo conformidade rápida e simples."
+msgstr "Gunakan Consent Shield untuk menyekat skrip tersebut dengan menambah domain atau laluan mereka, memastikan pematuhan yang cepat dan mudah."
 
 #: includes/settings.php:1055
 #: includes/settings.php:1117
 #: includes/settings.php:1150
 #: includes/settings.php:1183
 msgid "Save settings"
-msgstr "Salvar configurações"
+msgstr "Simpan tetapan"
 
 #: includes/settings.php:166
 msgid "License Key"
-msgstr "Chave de Licença"
+msgstr "Kunci Lesen"
 
 #: includes/settings.php:965
 msgid "Haven't got Shield of Privacy ID yet?"
-msgstr "Ainda não tem o ID do Escudo de Privacidade?"
+msgstr "Belum dapatkan ID Shield of Privacy?"
 
 #: includes/settings.php:1011
 msgid "Learn how to use AesirX Privacy Scanner with Consent Shield to detect privacy-intrusive elements, using the JetPack plugin as an example."
-msgstr "Aprenda a usar o AesirX Privacy Scanner com o Consent Shield para detectar elementos que invadem a privacidade, usando o plugin JetPack como exemplo."
+msgstr "Pelajari cara menggunakan AesirX Privacy Scanner dengan Consent Shield untuk mengesan elemen yang mengganggu privasi, menggunakan plugin JetPack sebagai contoh."
 
 #: includes/settings.php:1414
 msgid "Your license ends in %1$s days. Please update new license <a href='%2$s' target='_blank'>%2$s</a>."
-msgstr "Sua licença termina em %1$s dias. Por favor, atualize a nova licença <a href='%2$s' target='_blank'>%2$s</a>."
+msgstr "Lesen anda akan tamat dalam %1$s hari. Sila kemas kini lesen baru di <a href='%2$s' target='_blank'>%2$s</a>."
 
 #: includes/settings.php:172
 msgid ""
 "<div class='input_information_content'>\n"
 "          Sign up to obtain your Shield of Privacy ID and purchase licenses <a href='https://aesirx.io/licenses' target='blank' class='text-link'>here</a>.</div>"
-msgstr "<div class='input_information_content'>Cadastre-se para obter seu ID Shield of Privacy e comprar licenças <a href='https://aesirx.io/licenses' target='blank' class='text-link'>aqui</a>.</div>"
+msgstr "<div class='input_information_content'>Daftar untuk mendapatkan ID Shield of Privacy anda dan membeli lesen <a href='https://aesirx.io/licenses' target='blank' class='text-link'>di sini</a>.</div>"
 
 #: includes/settings.php:277
 msgid "To configure, input your Google Tag Manager Gtag ID & GTM ID in the designated fields. Once set up, Google Tag Manager will only load after the user provides consent."
-msgstr "Para configurar, insira seu ID do Gtag do Google Tag Manager e o ID do GTM nos campos designados. Uma vez configurado, o Google Tag Manager será carregado apenas após o usuário fornecer consentimento."
+msgstr "Untuk mengkonfigurasi, masukkan ID Gtag dan ID GTM Google Tag Manager anda dalam medan yang ditentukan. Setelah diset, Google Tag Manager hanya akan dimuat selepas pengguna memberikan persetujuan."
 
 #: includes/settings.php:196
 msgid "Simple Consent Mode"
-msgstr "Modo de Consentimento Simples"
+msgstr "Mod Persetujuan Mudah"
 
 #: includes/settings.php:234
 #: includes/settings.php:259
 msgid ""
 "<div class='input_information_content'>\n"
 "          Remember to include the explicit purpose (e.g., analytics, marketing) in the consent text to inform users why GTM is being used.</div>"
-msgstr "<div class='input_information_content'>Lembre-se de incluir o propósito explícito (por exemplo, análise, marketing) no texto de consentimento para informar os usuários sobre o motivo do uso do GTM.</div>"
+msgstr "<div class='input_information_content'>Ingat untuk memasukkan tujuan eksplisit (contohnya, analitik, pemasaran) dalam teks persetujuan untuk memaklumkan pengguna mengapa GTM digunakan.</div>"
 
 #: includes/settings.php:969
 msgid "Register Licence Here"
-msgstr "Registrar licença aqui"
+msgstr "Daftar Lesen Di Sini"
 
 #: includes/settings.php:974
 msgid "Sign up now"
-msgstr "Inscreva-se agora"
+msgstr "Daftar sekarang"
 
 #: includes/settings.php:930
 msgid "Explore How-To Guides, instructions, & tutorials to get the most from AesirX Consent Shield. Whether you're a developer or admin, find all you need to configure & optimize your privacy setup."
-msgstr "Explore guias práticos, instruções e tutoriais para aproveitar ao máximo o AesirX Consent Shield. Seja você um desenvolvedor ou administrador, encontre tudo o que precisa para configurar e otimizar sua configuração de privacidade."
+msgstr "Terokai Panduan Cara, arahan & tutorial untuk memanfaatkan sepenuhnya daripada AesirX Consent Shield. Sama ada anda seorang pembangun atau pentadbir, cari semua yang anda perlukan untuk mengkonfigurasi & mengoptimumkan persediaan privasi anda."
 
 #: includes/settings.php:303
 msgid "Customize Consent Text "
-msgstr "Personalizar texto de consentimento "
+msgstr "Sesuaikan Teks Persetujuan "
 
 #: includes/settings.php:316
 msgid "Reset Consent"
-msgstr "Redefinir Consentimento"
+msgstr "Tetapkan Semula Persetujuan"
 
 #: aesirx-consent.php:351
 msgid "Important: Permalink Settings Required"
-msgstr "Importante: Configurações de Links Permanentes Necessárias"
+msgstr "Penting: Tetapan pautan kekal diperlukan"
 
 #: includes/settings.php:1440
 msgid "Your trial license ends in %1$s hour(s). Please update your license <a href='%2$s' target='_blank'>here</a>."
-msgstr "Sua licença de teste termina em %1$s hora(s). Por favor, atualize sua licença <a href='%2$s' target='_blank'>aqui</a>."
+msgstr "Lesen percubaan anda akan tamat dalam %1$s jam. Sila kemas kini lesen anda <a href='%2$s' target='_blank'>di sini</a>."
 
 #. translators: 1: Permalink structure example, 2: Link to Permalink Settings page
 #: aesirx-consent.php:356
@@ -769,247 +769,247 @@ msgid ""
 "                            It looks like your current settings are using the plain permalink format, which might cause issues.\n"
 "                            Please %2$s to open your Permalink Settings.\n"
 "                            Once there, select the \"Post name\" option (or another pretty permalink structure) and click \"Save Changes.\""
-msgstr "Nosso plugin requer que seu site use uma estrutura de permalink amigável (por exemplo, %1$s) para funcionar corretamente. Parece que suas configurações atuais estão usando o formato de permalink simples, o que pode causar problemas. Por favor, %2$s para abrir suas Configurações de Permalink. Uma vez lá, selecione a opção \"Nome do post\" (ou outra estrutura de permalink amigável) e clique em \"Salvar alterações.\""
+msgstr "Plugin kami memerlukan laman web anda menggunakan struktur pautan kekal yang cantik (contohnya, %1$s) untuk berfungsi dengan betul. Nampaknya tetapan semasa anda menggunakan format pautan kekal biasa, yang mungkin menyebabkan masalah. Sila %2$s untuk membuka Tetapan Pautan Kekal anda. Setelah di sana, pilih pilihan \"Nama Pos\" (atau struktur pautan kekal cantik lain) dan klik \"Simpan Perubahan.\""
 
 #: aesirx-consent.php:363
 msgid "click here"
-msgstr "clique aqui"
+msgstr "klik sini"
 
 #: includes/settings.php:274
 msgid "GTM General"
-msgstr "GTM Geral"
+msgstr "GTM Am"
 
 #: includes/settings.php:1373
 msgid "Something went wrong: %1$s. Please contact the administrator."
-msgstr "Algo deu errado: %1$s. Por favor, entre em contato com o administrador."
+msgstr "Sesuatu telah berlaku: %1$s. Sila hubungi pentadbir."
 
 #: includes/settings.php:1420
 msgid "Check license failed: %1$s. Please contact the administrator or update your license."
-msgstr "Falha na verificação da licença: %1$s. Por favor, contacte o administrador ou atualize sua licença."
+msgstr "Pemeriksaan lesen gagal: %1$s. Sila hubungi pentadbir atau kemas kini lesen anda."
 
 #: src/Mysql/StartFingerprint.php:55
 msgid "Check license failed: %1\\$s. Please contact the administrator."
-msgstr "Falha na verificação da licença: %1\\$s. Kontakt venligst administratoren."
+msgstr "Pemeriksaan lesen gagal: %1$s. Sila hubungi pentadbir."
 
 #: includes/settings.php:209
 msgid "The Default setup improves Google Consent Mode 2.0 by not loading any scripts, beacons, or tags until after consent is given, reducing compliance risks. It also includes Decentralized Consent, for more control over personal data and rewards."
-msgstr "A configuração padrão melhora o Modo de Consentimento do Google 2.0 ao não carregar scripts, beacons ou tags até que o consentimento seja dado, reduzindo os riscos de conformidade. Também inclui Consentimento Descentralizado, para mais controle sobre dados pessoais e recompensas."
+msgstr "Tetapan Lalai meningkatkan Mod Persetujuan Google 2.0 dengan tidak memuat sebarang skrip, suar, atau tag sehingga persetujuan diberikan, mengurangkan risiko pematuhan. Ia juga termasuk Persetujuan Terdesentralisasi, untuk lebih kawalan ke atas data peribadi dan ganjaran."
 
 #: includes/settings.php:200
 msgid "Simple Consent Mode follows Google Consent Mode 2.0 by not loading any tags until after consent is given, reducing compliance risks."
-msgstr "O Modo de Consentimento Simples segue o Modo de Consentimento do Google 2.0 ao não carregar nenhuma tag até que o consentimento seja dado, reduzindo os riscos de conformidade."
+msgstr "Mod Persetujuan Mudah mengikuti Mod Persetujuan Google 2.0 dengan tidak memuat sebarang tag sehingga persetujuan diberikan, mengurangkan risiko pematuhan."
 
 #: includes/settings.php:1403
 msgid "Your domain is not match with your license. Please update domain in your license <a href='%1$s' target='_blank'>%1$s</a> and click <span class='verify_domain'>here</span> to verify again."
-msgstr "Seu domínio não corresponde à sua licença. Por favor, atualize o domínio na sua licença <a href='%1$s' target='_blank'>%1$s</a> e clique <span class='verify_domain'>aqui</span> para verificar novamente."
+msgstr "Domain anda tidak sepadan dengan lesen anda. Sila kemas kini domain dalam lesen anda <a href='%1$s' target='_blank'>%1$s</a> dan klik <span class='verify_domain'>di sini</span> untuk mengesahkan semula."
 
 #: src/Mysql/StartFingerprint.php:43
 #: src/Mysql/StartFingerprint.php:62
 msgid "Your domain is not match with your license. Please update domain in your license"
-msgstr "O seu domínio não corresponde à sua licença. Por favor, atualize o domínio na sua licença."
+msgstr "Domain anda tidak sepadan dengan lesen anda. Sila kemas kini domain dalam lesen anda"
 
 #: includes/settings.php:205
 msgid "Decentralized Consent Mode"
-msgstr "Modo de Consentimento Descentralizado"
+msgstr "Mod Persetujuan Terdesentralisasi"
 
 #: includes/settings.php:653
 msgid "GPC Compliance"
-msgstr "Conformidade GPC"
+msgstr "Pematuhan GPC"
 
 #: includes/settings.php:666
 msgid "Enable GPC Support"
-msgstr "Ativar suporte a GPC"
+msgstr "Dayakan Sokongan GPC"
 
 #: includes/settings.php:674
 msgid "Disable GPC Support"
-msgstr "Desativar suporte a GPC"
+msgstr "Nyahdayakan sokongan GPC"
 
 #: includes/settings.php:681
 msgid "To comply with Global Privacy Control (GPC), please download and upload the following file:"
-msgstr "Para cumprir com o Global Privacy Control (GPC), por favor, baixe e faça o upload do seguinte arquivo:"
+msgstr "Untuk mematuhi Kawalan Privasi Global (GPC), sila muat turun dan muat naik fail berikut:"
 
 #: includes/settings.php:684
 msgid "Upload Instructions:"
-msgstr "Instruções de Upload:"
+msgstr "Arahan muat naik:"
 
 #: includes/settings.php:686
 msgid "Download the gpc.json file."
-msgstr "Baixe o arquivo gpc.json."
+msgstr "Muat turun fail gpc.json."
 
 #: includes/settings.php:687
 msgid "Connect to your website via FTP or File Manager."
-msgstr "Conecte-se ao seu site via FTP ou Gerenciador de Arquivos."
+msgstr "Sambungkan ke laman web anda melalui FTP atau Pengurus Fail."
 
 #: includes/settings.php:688
 msgid "Upload the file to: <code>/public_html/.well-known/gpc.json</code>"
-msgstr "Carregue o arquivo para: <code>/public_html/.well-known/gpc.json</code>"
+msgstr "Muat naik fail ke: <code>/public_html/.well-known/gpc.json</code>"
 
 #: includes/settings.php:689
 msgid "Ensure the file is accessible by visiting: <a href='"
-msgstr "Certifique-se de que o arquivo está acessível visitando: <a href='"
+msgstr "Pastikan fail boleh diakses dengan melawat: <a href='"
 
 #: includes/settings.php:328
 msgid "Customize Detail Text "
-msgstr "Personalizar texto detalhado"
+msgstr "Sesuaikan Teks Butiran"
 
 #: includes/settings.php:341
 msgid "Reset Detail"
-msgstr "Redefinir Detalhe"
+msgstr "Tetapkan Semula Butiran"
 
 #: includes/settings.php:353
 msgid "Customize Reject Text "
-msgstr "Personalizar texto de rejeição"
+msgstr "Sesuaikan Teks Tolak"
 
 #: includes/settings.php:366
 msgid "Reset Reject"
-msgstr "Redefinir Rejeitar"
+msgstr "Tetapkan semula Tolak"
 
 #: aesirx-consent.php:102
 msgid "Customize"
-msgstr "Personalizar"
+msgstr "Sesuaikan"
 
 #: aesirx-consent.php:103
 msgid "Save"
-msgstr "Salvar"
+msgstr "Jimat"
 
 #: aesirx-consent.php:104
 msgid "Always active"
-msgstr "Sempre ativo"
+msgstr "Sentiasa aktif"
 
 #: aesirx-consent.php:105
 msgid "Domain/Path-Based"
-msgstr "Baseado em Domínio/Caminho"
+msgstr "Berdasarkan Domain/Laluan"
 
 #: aesirx-consent.php:106
 msgid "Third-Party Plugins"
-msgstr "Plugins de Terceiros"
+msgstr "Pemalam Pihak Ketiga"
 
 #: aesirx-consent.php:107
 msgid "Essential Tracking"
-msgstr "Rastreamento Essencial"
+msgstr "Penjejakan Penting"
 
 #: aesirx-consent.php:108
 msgid "Required for the website to function (e.g, session cookies, security tracking)."
-msgstr "Necessário para o funcionamento do site (por exemplo, cookies de sessão, rastreamento de segurança)."
+msgstr "Diperlukan untuk laman web berfungsi (contohnya, kuki sesi, penjejakan keselamatan)."
 
 #: aesirx-consent.php:109
 msgid "Functional Tracking"
-msgstr "Rastreamento Funcional"
+msgstr "Penjejakan Fungsional"
 
 #: aesirx-consent.php:110
 msgid "User preferencese & site enhancements (e.g, language setting, live chat)."
-msgstr "Preferências do usuário e melhorias no site (por exemplo, configuração de idioma, chat ao vivo)."
+msgstr "Keutamaan pengguna & penambahbaikan laman (contohnya, tetapan bahasa, sembang langsung)."
 
 #: aesirx-consent.php:111
 msgid "Analytics Tracking"
-msgstr "Rastreamento Analítico"
+msgstr "Penjejakan Analitik"
 
 #: aesirx-consent.php:112
 msgid "Visitor behavior monitoring (e.g, Google Analytics, Matomo)."
-msgstr "Monitoramento do comportamento do visitante (por exemplo, Google Analytics, Matomo)."
+msgstr "Pemantauan tingkah laku pelawat (cth, Analitis Google, Matomo)."
 
 #: aesirx-consent.php:113
 msgid "Advertising Tracking"
-msgstr "Rastreamento de Publicidade"
+msgstr "Penjejakan Iklan"
 
 #: aesirx-consent.php:114
 msgid "Targeted advertising & remarketing (e.g, Facebook Pixel, Google Ads)."
-msgstr "Publicidade direcionada e remarketing (por exemplo, Facebook Pixel, Google Ads)."
+msgstr "Pengiklanan berfokus & pemasaran semula (cth., Facebook Pixel, Google Ads)."
 
 #: aesirx-consent.php:115
 msgid "Custom Tracking"
-msgstr "Rastreamento Personalizado"
+msgstr "Tilpasset sporing"
 
 #: aesirx-consent.php:116
 msgid "Any additional third-party integrations (e.g, customer support tools, CDNS)."
-msgstr "Quaisquer integrações adicionais de terceiros (por exemplo, ferramentas de suporte ao cliente, CDNS)."
+msgstr "Sebarang integrasi pihak ketiga tambahan (contohnya, alat sokongan pelanggan, CDNS)."
 
 #: aesirx-consent.php:117
 msgid "Opt-Out of tracking"
-msgstr "Desativar o rastreamento"
+msgstr "Berhenti jejak"
 
 #: aesirx-consent.php:118
 msgid "This website uses tracking by default. You may opt out at any time."
-msgstr "Este site usa rastreamento por padrão. Você pode desativar o rastreamento a qualquer momento."
+msgstr "Laman web ini menggunakan penjejakan secara lalai. Anda boleh memilih untuk keluar pada bila-bila masa."
 
 #: aesirx-consent.php:119
 msgid "Do Not Sell or Share My Personal Information (CCPA)"
-msgstr "Não Venda ou Compartilhe Minhas Informações Pessoais (CCPA)"
+msgstr "Jangan jual atau kongsi maklumat peribadi saya (CCPA)"
 
 #: aesirx-consent.php:120
 msgid "Disables third-party data sharing for California users."
-msgstr "Desativa o compartilhamento de dados de terceiros para usuários da Califórnia."
+msgstr "Melumpuhkan perkongsian data pihak ketiga untuk pengguna California."
 
 #: includes/settings.php:563
 msgid "Configurable Consent Logic"
-msgstr "Lógica de Consentimento Configurável"
+msgstr "Logik Persetujuan Boleh Dikonfigurasikan"
 
 #: includes/settings.php:576
 msgid "Opt-In Mode (EU)"
-msgstr "Modo de Aceitação (UE)"
+msgstr "Mod Opt-In (EU)"
 
 #: includes/settings.php:577
 msgid "No tracking technologies are activated until a user explicitly gives consent. This is required by <strong>GDPR</strong> and <strong>ePrivacy Directive 5(3)</strong>."
-msgstr "Nenhuma tecnologia de rastreamento é ativada até que o usuário dê consentimento explícito. Isso é exigido pelo <strong>GDPR</strong> e pela <strong>ePrivacy Directive 5(3)</strong>."
+msgstr "Tiada teknologi penjejakan diaktifkan sehingga pengguna memberikan persetujuan secara jelas. Ini diperlukan oleh <strong>GDPR</strong> dan <strong>Direktif ePrivacy 5(3)</strong>."
 
 #: includes/settings.php:585
 msgid "Opt-Out Mode (California)"
-msgstr "Modo de Desativação (Califórnia)"
+msgstr "Mod Nyah Langgan (California)"
 
 #: includes/settings.php:586
 msgid "Tracking is allowed by default, but users must be able to opt out easily. This aligns with <strong>CCPA</strong> and similar U.S. privacy frameworks."
-msgstr "O rastreamento é permitido por padrão, mas os usuários devem poder optar por não participar facilmente. Isso está em conformidade com a <strong>CCPA</strong> e estruturas de privacidade semelhantes dos EUA."
+msgstr "Penjejakan dibenarkan secara lalai, tetapi pengguna mesti dapat memilih keluar dengan mudah. Ini selaras dengan <strong>CCPA</strong> dan kerangka privasi AS yang serupa."
 
 #: includes/settings.php:617
 msgid "Do not sell or share options"
-msgstr "Não vender ou compartilhar opções"
+msgstr "Jangan jual atau kongsi pilihan"
 
 #: includes/settings.php:630
 #: includes/settings.php:736
 msgid "Yes"
-msgstr "Sim"
+msgstr "Ya"
 
 #: includes/settings.php:638
 #: includes/settings.php:744
 msgid "No"
-msgstr "Não"
+msgstr "Tidak"
 
 #: includes/settings.php:723
 msgid "Enable Geo-handling for Consent Mode"
-msgstr "Ativar o tratamento geográfico para o modo de consentimento"
+msgstr "Aktifkan pengendalian geo untuk Mod Persetujuan"
 
 #: includes/settings.php:759
 msgid "Geo-Based Consent Rules"
-msgstr "Regras de consentimento baseadas na localização geográfica"
+msgstr "Peraturan Persetujuan Berasaskan Geo"
 
 #: includes/settings.php:858
 msgid "Browser Language"
-msgstr "Idioma do navegador"
+msgstr "Bahasa Penyemak Imbas"
 
 #: includes/settings.php:859
 #: includes/settings.php:871
 #: includes/settings.php:888
 msgid "Time Zone"
-msgstr "Fuso horário"
+msgstr "Zon waktu"
 
 #: includes/settings.php:861
 msgid "Consent Mode"
-msgstr "Modo de Consentimento"
+msgstr "Mod Persetujuan"
 
 #: includes/settings.php:862
 msgid "Allow Override"
-msgstr "Permitir a substituição"
+msgstr "Benarkan penggantian"
 
 #: includes/settings.php:870
 #: includes/settings.php:887
 msgid "Language"
-msgstr "Linguagem"
+msgstr "Bahasa"
 
 #: includes/settings.php:873
 #: includes/settings.php:890
 msgid "Select Mode"
-msgstr "Selecionar modo"
+msgstr "Pilih Mod"
 
 #: includes/settings.php:891
 msgid "Override"
-msgstr "Substituir"
+msgstr "Mengatasi"
