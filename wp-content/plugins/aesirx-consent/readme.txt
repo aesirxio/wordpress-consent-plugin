@@ -51,6 +51,7 @@ The Terms of service can be found here https://aesirx.io/terms-conditions and th
 = 1.7.0 =
 * Regional Handling: Multi-Language and Time Zone-Aware Consent Logic
 * 8 More Languages: FI, RO, HU, ID, HE, CS, EL, MS
+* Privacy Scanner Menu
 
 = 1.6.0 =
 * Configurable Consent Logic: Opt-In / Opt-Out Control
