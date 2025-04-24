@@ -3,7 +3,7 @@
  * Plugin Name: AesirX Consent
  * Plugin URI: https://analytics.aesirx.io?utm_source=wpplugin&utm_medium=web&utm_campaign=wordpress&utm_id=aesirx&utm_term=wordpress&utm_content=analytics
  * Description: Aesirx Consent plugin. When you join forces with AesirX, you're not just becoming a Partner - you're also becoming a freedom fighter in the battle for privacy! Earn 25% Affiliate Commission <a href="https://aesirx.io/partner?utm_source=wpplugin&utm_medium=web&utm_campaign=wordpress&utm_id=aesirx&utm_term=wordpress&utm_content=analytics">[Click to Join]</a>
- * Version: 1.6.0
+ * Version: 1.7.0
  * Author: aesirx.io
  * Author URI: https://aesirx.io/
  * Domain Path: /languages
@@ -166,10 +166,34 @@ add_action('wp_enqueue_scripts', function (): void {
     $clientId = $options['clientid'] ?? '';
     $secret = $options['secret'] ?? '';
     $optionsGPC = get_option('aesirx_consent_gpc_plugin_options', []);
+    $optionsGEO = get_option('aesirx_consent_geo_plugin_options', []);
     $disableGPCSupport = $optionsGPC['gpc_support'] === 'no' ? "true" : "false";
     $configConsentGPC = $optionsGPC['gpc_consent'] === 'opt-out' ? "true" : "false";
     $configConsentGPCDoNotSell = $optionsGPC['gpc_consent_donotsell'] === 'yes' ? "true" : "false";
+    $configGeoHandling = $optionsGEO['geo_handling'] === 'yes' ? true : false;
 
+    function transformGeoOptions(array $optionsGEO): array {
+        $keys = [
+            'geo_rules_language',
+            'geo_rules_timezone',
+            'geo_rules_logic',
+            'geo_rules_consent_mode',
+            'geo_rules_override',
+        ];
+        $count = count($optionsGEO['geo_rules_language'] ?? []);
+    
+        $result = [];
+    
+        for ($i = 0; $i < $count; $i++) {
+            $item = [];
+            foreach ($keys as $key) {
+                $item[$key] = $optionsGEO[$key][$i] ?? null;
+            }
+            $result[] = $item;
+        }
+        return $result;
+    }
+    $geoRules =  $configGeoHandling ? transformGeoOptions($optionsGEO) : null;
     wp_add_inline_script(
         'aesirx-consent',
         'window.aesirx1stparty="' . esc_attr($domain) . '";
@@ -179,7 +203,8 @@ add_action('wp_enqueue_scripts', function (): void {
         window.blockJSDomains=' . $blockingCookiesJSON . ';
         window.aesirxTrackEcommerce="' . esc_attr($trackEcommerce) . '";
         window.aesirxOptOutMode="' . esc_attr($configConsentGPC) . '";
-        window.aesirxOptOutDoNotSell="' . esc_attr($configConsentGPCDoNotSell) . '";',
+        window.aesirxOptOutDoNotSell="' . esc_attr($configConsentGPCDoNotSell) . '";
+        window.geoRules=' . wp_json_encode($geoRules) . ';',
         'before');
 });
 

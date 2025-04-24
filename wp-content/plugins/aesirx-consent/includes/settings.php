@@ -66,6 +66,17 @@ add_action('admin_init', function () {
     return $value;
   });
 
+  register_setting('aesirx_consent_geo_plugin_options', 'aesirx_consent_geo_plugin_options', function (
+    $value
+  ) {
+    $valid = true;
+    // Ignore the user's changes and use the old database value.
+    if (!$valid) {
+      $value = get_option('aesirx_consent_geo_plugin_options');
+    }
+    return $value;
+  });
+
   add_settings_section(
     'aesirx_analytics_settings',
     'Aesirx Consent Management',
@@ -556,7 +567,7 @@ add_action('admin_init', function () {
       $mode = $options['gpc_consent'] ?? 'opt-in';
       // using custom function to escape HTML
       echo wp_kses('
-      <div class="gpc_consent_section">
+      <div class="gpc_consent_section list_radio">
         <label class="radio_wrapper">
           <input type="radio" class="gpc_consent_class" name="aesirx_consent_gpc_plugin_options[gpc_consent]" ' .
       ($mode === 'opt-in' ? $checked : '') .
@@ -610,7 +621,7 @@ add_action('admin_init', function () {
       $mode = $options['gpc_consent_donotsell'] ?? 'yes';
       // using custom function to escape HTML
       echo wp_kses('
-      <div class="gpc_consent_donotsell_section">
+      <div class="gpc_consent_donotsell_section list_radio">
         <label class="radio_wrapper">
           <input type="radio" class="gpc_consent_donotsell_class" name="aesirx_consent_gpc_plugin_options[gpc_consent_donotsell]" ' .
       ($mode === 'yes' ? $checked : '') .
@@ -646,7 +657,7 @@ add_action('admin_init', function () {
       $mode = $options['gpc_support'] ?? 'yes';
       // using custom function to escape HTML
       echo wp_kses('
-      <div class="gpc_support_section">
+      <div class="gpc_support_section list_radio">
         <label class="radio_wrapper">
           <input type="radio" class="analytic-gpc_support-class" name="aesirx_consent_gpc_plugin_options[gpc_support]" ' .
       ($mode === 'yes' ? $checked : '') .
@@ -688,6 +699,220 @@ add_action('admin_init', function () {
       'class' => 'aesirx_analytics_gpc_row',
     ]
   );
+
+  add_settings_section(
+    'aesirx_consent_geo_settings',
+    'Consent GEO',
+    function () {
+      $manifest = json_decode(
+        file_get_contents(plugin_dir_path(__DIR__) . 'assets-manifest.json', true)
+      );
+
+      if ($manifest->entrypoints->plugin->assets) {
+        foreach ($manifest->entrypoints->plugin->assets->js as $js) {
+          wp_enqueue_script('aesrix_bi' . md5($js), plugins_url($js, __DIR__), false, '1.0', true);
+        }
+      }
+    },
+    'aesirx_consent_geo_plugin'
+  );
+
+
+  add_settings_field(
+    'aesirx_consent_geo_handling',
+    esc_html__('Enable Geo-handling for Consent Mode', 'aesirx-consent'),
+    function () {
+      $options = get_option('aesirx_consent_geo_plugin_options', []);
+      $checked = 'checked="checked"';
+      $mode = $options['geo_handling'] ?? 'yes';
+      // using custom function to escape HTML
+      echo wp_kses('
+      <div class="geo_handling_section list_radio">
+        <label class="radio_wrapper">
+          <input type="radio" class="geo_handling_class" name="aesirx_consent_geo_plugin_options[geo_handling]" ' .
+      ($mode === 'yes' ? $checked : '') .
+      ' value="yes"  />
+          <div class="input_content">
+            <p>'. esc_html__('Yes', 'aesirx-consent') . '</p>
+          </div>
+        </label>
+        <label class="radio_wrapper">
+          <input type="radio" class="geo_handling_class" name="aesirx_consent_geo_plugin_options[geo_handling]" ' .
+        ($mode === 'no' ? $checked : '') .
+        ' value="no" />
+          <div class="input_content">
+            <p>'. esc_html__('No', 'aesirx-consent') . '</p>
+          </div>
+          </label>
+      </div>
+        ', aesirx_analytics_escape_html());
+    },
+    'aesirx_consent_geo_plugin',
+    'aesirx_consent_geo_settings',
+    [
+      'class' => 'aesirx_consent_geo_handling_row',
+    ]
+  );
+
+  add_settings_field(
+    'aesirx_consent_geo_rules',
+    esc_html__('Geo-Based Consent Rules', 'aesirx-consent'),
+    function () {
+      $options = get_option('aesirx_consent_geo_plugin_options', []);
+  
+      // Define your option values
+      $languages = [
+        'en-US' => 'en-US',
+        'ar-SA' => 'ar-SA',
+        'cs-CZ' => 'cs-CZ',
+        'el-GR' => 'el-GR',
+        'es-ES' => 'es-ES',
+        'de-DE' => 'de-DE',
+        'da-DK' => 'da-DK',
+        'fr-FR' => 'fr-FR',
+        'fi-FI' => 'fi-FI',
+        'he-IL' => 'he-IL',
+        'hu-HU' => 'hu-HU',
+        'id-ID' => 'id-ID',
+        'it-IT' => 'it-IT',
+        'ja-JP' => 'ja-JP',
+        'ko-KR' => 'ko-KR',
+        'nl-NL' => 'nl-NL',
+        'no-NO' => 'no-NO',
+        'pl-PL' => 'pl-PL',
+        'pt-PT' => 'pt-PT',
+        'ms-MY' => 'ms-MY',
+        'ro-RO' => 'ro-RO',
+        'sv-SE' => 'sv-SE',
+        'th-TH' => 'th-TH',
+        'tr-TR' => 'tr-TR',
+        'vi-VN' => 'vi-VN',
+      ];
+      $timezones = [
+        'america/new_york' => 'America/New_York',       // en-US
+        'asia/riyadh' => 'Asia/Riyadh',                 // ar-SA
+        'europe/prague' => 'Europe/Prague',             // cs-CZ
+        'europe/athens' => 'Europe/Athens',             // el-GR
+        'europe/madrid' => 'Europe/Madrid',             // es-ES
+        'europe/berlin' => 'Europe/Berlin',             // de-DE
+        'europe/copenhagen' => 'Europe/Copenhagen',     // da-DK
+        'europe/paris' => 'Europe/Paris',               // fr-FR
+        'europe/helsinki' => 'Europe/Helsinki',         // fi-FI
+        'asia/jerusalem' => 'Asia/Jerusalem',           // he-IL
+        'europe/budapest' => 'Europe/Budapest',         // hu-HU
+        'asia/jakarta' => 'Asia/Jakarta',               // id-ID
+        'europe/rome' => 'Europe/Rome',                 // it-IT
+        'asia/tokyo' => 'Asia/Tokyo',                   // ja-JP
+        'asia/seoul' => 'Asia/Seoul',                   // ko-KR
+        'europe/amsterdam' => 'Europe/Amsterdam',       // nl-NL
+        'europe/oslo' => 'Europe/Oslo',                 // no-NO
+        'europe/warsaw' => 'Europe/Warsaw',             // pl-PL
+        'europe/lisbon' => 'Europe/Lisbon',             // pt-PT
+        'asia/kuala_lumpur' => 'Asia/Kuala_Lumpur',     // ms-MY
+        'europe/bucharest' => 'Europe/Bucharest',       // ro-RO
+        'europe/stockholm' => 'Europe/Stockholm',       // sv-SE
+        'asia/bangkok' => 'Asia/Bangkok',               // th-TH
+        'europe/istanbul' => 'Europe/Istanbul',         // tr-TR
+        'asia/ho_chi_minh' => 'Asia/Ho_Chi_Minh',       // vi-VN
+        'asia/saigon' => 'Asia/Saigon',                 // vi-VN
+      ];
+      $logics = [
+        'and' => 'AND',
+        'or' => 'OR',
+      ];
+      $modes = [
+        'opt-in' => 'Opt-In',
+        'opt-out' => 'Opt-Out',
+      ];
+      $overrides = [
+        'yes' => 'Yes',
+        'no' => 'No',
+      ];
+
+      function render_select($name, $values, $selected = '', $placeholder = null, $allowPlaceholder = false) {
+        $html = "<select name='{$name}'>";
+        if ($placeholder) {
+          $html .= "<option value='' ".($allowPlaceholder ? '' : 'disabled hidden')." ".($selected === '' ? 'selected' : '').">{$placeholder}</option>";
+        }
+        foreach ($values as $value => $label) {
+          $val = is_int($value) ? $label : $value;
+          $sel = $val === $selected ? 'selected' : '';
+          $html .= "<option value='{$val}' {$sel}>{$label}</option>";
+        }
+        $html .= '</select>';
+        return wp_kses($html, aesirx_analytics_escape_html());
+      }
+
+      if (empty($options['geo_rules_language'])) {
+        $options['geo_rules_language'] = array_keys($languages);
+        $options['geo_rules_timezone'] = array_fill(0, count($languages), ''); // empty timezone
+        $options['geo_rules_logic'] = array_fill(0, count($languages), 'and');
+        $options['geo_rules_consent_mode'] = array_fill(0, count($languages), ''); // empty consent mode
+        $options['geo_rules_override'] = array_fill(0, count($languages), 'no');
+        update_option('aesirx_consent_geo_plugin_options', $options);
+      }
+  
+      echo '<div id="aesirx-consent-geo-rules">';
+      echo wp_kses('
+        <div class="aesirx-consent-rule-header">
+          <div>'.esc_html__('Browser Language', 'aesirx-consent').'</div>
+          <div>'.esc_html__('Time Zone', 'aesirx-consent').'</div>
+          <div>AND / OR</div>
+          <div>'.esc_html__('Consent Mode', 'aesirx-consent').'</div>
+          <div>'.esc_html__('Allow Override', 'aesirx-consent').'</div>
+          <div></div>
+        </div>', aesirx_analytics_escape_html());
+  
+      if (!empty($options['geo_rules_language'])) {
+        foreach ($options['geo_rules_language'] as $key => $field) {
+          echo wp_kses(
+            '<div class="aesirx-consent-rule-row">'
+              . '<div>' . render_select('aesirx_consent_geo_plugin_options[geo_rules_language][]', $languages, $field, '-- '.esc_html__('Language', 'aesirx-consent').'') . '</div>'
+              . '<div>' . render_select('aesirx_consent_geo_plugin_options[geo_rules_timezone][]', $timezones, $options['geo_rules_timezone'][$key], '-- '.esc_html__('Time Zone', 'aesirx-consent').'', true) . '</div>'
+              . '<div>' . render_select('aesirx_consent_geo_plugin_options[geo_rules_logic][]', $logics, $options['geo_rules_logic'][$key],'-- AND/OR') . '</div>'
+              . '<div>' . render_select('aesirx_consent_geo_plugin_options[geo_rules_consent_mode][]', $modes, $options['geo_rules_consent_mode'][$key],'-- '.esc_html__('Select Mode', 'aesirx-consent').'', true) . '</div>'
+              . '<div>' . render_select('aesirx_consent_geo_plugin_options[geo_rules_override][]', $overrides, $options['geo_rules_override'][$key],'-- Override') . '</div>'
+              . '<div>
+                  <button class="aesirx-consent-remove-rules-row">
+                    <img width="25px" height="30px" src="' . plugins_url('aesirx-consent/assets/images-plugin/trash_icon.png') . '" />
+                  </button>
+                </div>'
+            . '</div>',
+            aesirx_analytics_escape_html()
+          );
+        }
+      } else {
+        echo wp_kses(
+          '<div class="aesirx-consent-rule-row">'
+            . '<div>' . render_select('aesirx_consent_geo_plugin_options[geo_rules_language][]', $languages, '', '-- '.esc_html__('Language', 'aesirx-consent').'') . '</div>'
+            . '<div>' . render_select('aesirx_consent_geo_plugin_options[geo_rules_timezone][]', $timezones, '', '-- '.esc_html__('Time Zone', 'aesirx-consent').'', true) . '</div>'
+            . '<div>' . render_select('aesirx_consent_geo_plugin_options[geo_rules_logic][]', $logics, '', '-- AND/OR') . '</div>'
+            . '<div>' . render_select('aesirx_consent_geo_plugin_options[geo_rules_consent_mode][]', $modes, '', '-- '.esc_html__('Select Mode', 'aesirx-consent').'', true) . '</div>'
+            . '<div>' . render_select('aesirx_consent_geo_plugin_options[geo_rules_override][]', $overrides, '', '-- '.esc_html__('Override', 'aesirx-consent').'') . '</div>'
+            . '<div>
+                <button class="aesirx-consent-remove-rules-row">
+                  <img width="25px" height="30px" src="' . plugins_url('aesirx-consent/assets/images-plugin/trash_icon.png') . '" />
+                </button>
+              </div>'
+          . '</div>',
+          aesirx_analytics_escape_html()
+        );
+      }
+      echo '</div>';
+
+      echo wp_kses(
+        "<button id='aesirx-consent-add-rules-row'>
+          <img width='23px' height='30px' src='" . plugins_url('aesirx-consent/assets/images-plugin/plus_icon_green.png') . "' />
+          Add New Rule
+        </button>",
+        aesirx_analytics_escape_html()
+      );
+    },
+    'aesirx_consent_geo_plugin',
+    'aesirx_consent_geo_settings',
+    ['class' => 'aesirx_consent_geo_rules_row']
+  );
+  
 
   add_settings_section(
     'aesirx_consent_info',
@@ -932,10 +1157,63 @@ add_action('admin_menu', function () {
         echo '</div>';
     },
   3);
+
+  add_submenu_page(
+    'aesirx-consent-management-plugin',
+    'Geo-Handling',
+    'Geo-Handling',
+    'manage_options',
+    'aesirx-cmp-geo',
+    function () {
+      ?>
+      <h2 class="aesirx_heading">Geo-Handling</h2>
+      <div class="aesirx_consent_wrapper">
+      <div class="form_wrapper">
+        <form action="options.php" method="post">
+          <?php
+            settings_fields('aesirx_consent_geo_plugin_options');
+
+            do_settings_sections('aesirx_consent_geo_plugin');
+            wp_nonce_field('aesirx_analytics_settings_save', 'aesirx_analytics_settings_nonce');
+          ?>
+          <button type="submit" class="submit_button aesirx_btn_success">
+            <?php
+              echo wp_kses("
+                <img width='20px' height='20px' src='". plugins_url( 'aesirx-consent/assets/images-plugin/save_icon.png')."' />
+                ".esc_html__("Save settings", 'aesirx-consent')."
+              ", aesirx_analytics_escape_html()); 
+            ?>
+          </button>
+        </form>
+      </div>
+			<?php
+        echo '</div>';
+    },
+  4);
+
+  add_submenu_page(
+    'aesirx-consent-management-plugin',
+    'Privacy Scanner',
+    'Privacy Scanner',
+    'manage_options',
+    'aesirx-cmp-scanner',
+    function () {
+      ?>
+      <h2 class="aesirx_heading">Privacy Scanner</h2>
+      <div class="">
+      <iframe style="width: calc(100% - 20px); height: calc(90vh - 20px);" src="https://aesirx.io/services/privacy-scanner"></iframe>
+			<?php
+        echo '</div>';
+    },
+  5);
   
   });
 
 add_action('admin_enqueue_scripts', function ($hook) {
+  if ($hook === "aesirx-cmp_page_aesirx-cmp-geo") {
+    wp_register_script('aesirx_analytics_geo', plugins_url('assets/vendor/aesirx-consent-geo.js', __DIR__), array('jquery'), false, true);
+    wp_enqueue_script('aesirx_analytics_geo');
+  }
   if ($hook === 'toplevel_page_aesirx-consent-management-plugin' || $hook === "aesirx-cmp_page_aesirx-cmp-modal") {
     wp_enqueue_script('aesirx_analytics_ckeditor', plugins_url('assets/vendor/aesirx-consent-ckeditor.js', __DIR__), array('jquery'), true, true);
     wp_register_script('aesirx_analytics_repeatable_fields', plugins_url('assets/vendor/aesirx-consent-repeatable-fields.js', __DIR__), array('jquery'), false, true);
@@ -1206,6 +1484,8 @@ function aesirx_analytics_escape_html() {
         'value' => array(),
         'class' => array(),
         'selected' => array(),
+        'disabled' => array(),
+        'hidden' => array(),
       ),
      'strong' => array(),
      'a' => array(

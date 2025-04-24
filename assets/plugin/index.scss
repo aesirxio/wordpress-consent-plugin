@@ -333,7 +333,8 @@
 }
 
 .aesirx-cmp_page_aesirx-cmp-modal,
-.aesirx-cmp_page_aesirx-cmp-gpc {
+.aesirx-cmp_page_aesirx-cmp-gpc,
+.aesirx-cmp_page_aesirx-cmp-geo {
   .aesirx_consent_wrapper {
     .form_wrapper {
       width: 100%;
@@ -572,7 +573,7 @@ input.aesirx_consent_input {
 
 .aesirx_consent_gpc_consent_row {
   margin-top: 10px;
-  .gpc_consent_section {
+  .list_radio {
     display: flex;
     align-items: start;
     margin: 5px 0;
@@ -594,10 +595,10 @@ input.aesirx_consent_input {
   }
 }
 .aesirx_analytics_gpc_row,
-.aesirx_consent_gpc_consent_donotsell_row {
+.aesirx_consent_gpc_consent_donotsell_row,
+.aesirx_consent_geo_handling_row {
   margin-top: 10px;
-  .gpc_support_section,
-  .gpc_consent_donotsell_section {
+  .list_radio {
     display: flex;
     align-items: center;
     margin: 5px 0;
@@ -623,5 +624,49 @@ input.aesirx_consent_input {
   }
   .download-button {
     display: inline-block;
+  }
+}
+.aesirx_consent_geo_rules_row {
+  button {
+    background: #fff;
+    border-radius: 10px;
+    border: 0;
+    box-shadow: none;
+    outline: 0;
+    cursor: pointer;
+    padding: 5px 10px;
+    &#aesirx-consent-add-rules-row {
+      display: flex;
+      align-items: center;
+      margin-top: 10px;
+      img {
+        margin-right: 5px;
+      }
+    }
+  }
+  .aesirx-consent-rule-row,
+  .aesirx-consent-rule-header {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    & div {
+      width: 16.666666%;
+      text-align: end;
+      padding: 0 10px;
+      select {
+        width: 100%;
+      }
+    }
+  }
+  .aesirx-consent-rule-header {
+    font-weight: 600;
+    & div {
+      text-align: start;
+    }
+  }
+  #aesirx-consent-geo-rules {
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 10px;
   }
 }

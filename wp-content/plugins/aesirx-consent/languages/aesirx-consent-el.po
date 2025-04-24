@@ -1,0 +1,1015 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: AesirX Consent 1.7.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/aesirx-consent\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2024-07-25T03:47:45+00:00\n"
+"PO-Revision-Date: 2024-07-26 17:10+0200\n"
+"Language: el\n"
+"X-Domain: aesirx-consent\n"
+"X-Generator: Poedit 3.4.4\n"
+
+#. Plugin URI of the plugin
+#: aesirx-consent.php
+msgid "https://analytics.aesirx.io?utm_source=wpplugin&utm_medium=web&utm_campaign=wordpress&utm_id=aesirx&utm_term=wordpress&utm_content=analytics"
+msgstr "https://analytics.aesirx.io?utm_source=wpplugin&utm_medium=web&utm_campaign=wordpress&utm_id=aesirx&utm_term=wordpress&utm_content=analytics"
+
+#. Author of the plugin
+#: aesirx-consent.php
+msgid "aesirx.io"
+msgstr "aesirx.io"
+
+#. Author URI of the plugin
+#: aesirx-consent.php
+msgid "https://aesirx.io/"
+msgstr "https://aesirx.io/"
+
+#: aesirx-consent.php:221
+msgid "Settings"
+msgstr "Ρυθμίσεις"
+
+#: aesirx-consent.php:336
+msgid "Problem with Aesirx Analytics plugin install"
+msgstr "Πρόβλημα με την εγκατάσταση του πρόσθετου Aesirx Analytics"
+
+#: includes/settings.php:17
+msgid "Please register your license at Signup.aesirx.io to enable the external first-party server."
+msgstr "Παρακαλώ καταχωρήστε την άδειά σας στο Signup.aesirx.io για να ενεργοποιήσετε τον εξωτερικό διακομιστή πρώτου μέρους."
+
+#: includes/settings.php:27
+msgid "Domain is empty."
+msgstr "Ο τομέας είναι κενός."
+
+#: includes/settings.php:34
+msgid "Invalid domain format."
+msgstr "Μη έγκυρη μορφή τομέα."
+
+#: aesirx-consent.php:43
+#: includes/settings.php:1225
+msgid "Consent"
+msgstr "Συγκατάθεση"
+
+#: src/AesirxAnalyticsMysqlHelper.php:96
+msgid "Database error occurred."
+msgstr "Παρουσιάστηκε σφάλμα βάσης δεδομένων."
+
+#: src/AesirxAnalyticsMysqlHelper.php:250
+#: src/AesirxAnalyticsMysqlHelper.php:585
+#: src/AesirxAnalyticsMysqlHelper.php:617
+msgid "\"start\" filter is not correct"
+msgstr "\"Το φίλτρο \\\"έναρξη\\\" δεν είναι σωστό\""
+
+#: src/AesirxAnalyticsMysqlHelper.php:258
+#: src/AesirxAnalyticsMysqlHelper.php:593
+#: src/AesirxAnalyticsMysqlHelper.php:625
+msgid "\"end\" filter is not correct"
+msgstr "\"Τέλος\" φίλτρο δεν είναι σωστό"
+
+#: src/AesirxAnalyticsMysqlHelper.php:327
+msgid "Domain not found"
+msgstr "Τομέας δεν βρέθηκε"
+
+#: src/AesirxAnalyticsMysqlHelper.php:406
+#: src/AesirxAnalyticsMysqlHelper.php:468
+#: src/AesirxAnalyticsMysqlHelper.php:521
+#: src/AesirxAnalyticsMysqlHelper.php:546
+#: src/AesirxAnalyticsMysqlHelper.php:565
+#: src/AesirxAnalyticsMysqlHelper.php:646
+#: src/AesirxAnalyticsMysqlHelper.php:670
+#: src/AesirxAnalyticsMysqlHelper.php:697
+#: src/AesirxAnalyticsMysqlHelper.php:737
+#: src/AesirxAnalyticsMysqlHelper.php:1080
+#: src/Mysql/GetVisitorConsentList.php:60
+msgid "There was a problem with the database query."
+msgstr "Παρουσιάστηκε πρόβλημα με το ερώτημα της βάσης δεδομένων."
+
+#: src/AesirxAnalyticsMysqlHelper.php:906
+#: src/AesirxAnalyticsMysqlHelper.php:925
+#: src/AesirxAnalyticsMysqlHelper.php:945
+#: src/AesirxAnalyticsMysqlHelper.php:1283
+msgid "Something went wrong"
+msgstr "Κάτι πήγε στραβά"
+
+#: src/AesirxAnalyticsMysqlHelper.php:1006
+msgid "There was a problem updating the data in the database."
+msgstr "Προέκυψε πρόβλημα κατά την ενημέρωση των δεδομένων στη βάση δεδομένων."
+
+#: src/Mysql/AddConsentLevel1.php:23
+#: src/Mysql/AddConsentLevel5.php:23
+#: src/Mysql/AddConsentLevel6.php:23
+msgid "The uuid parameter is required."
+msgstr "Η παράμετρος uuid είναι απαραίτητη."
+
+#: src/Mysql/AddConsentLevel1.php:27
+#: src/Mysql/AddConsentLevel5.php:27
+#: src/Mysql/AddConsentLevel6.php:27
+msgid "The consent parameter is required and must be a number."
+msgstr "Η παράμετρος συγκατάθεσης είναι απαραίτητη και πρέπει να είναι αριθμός."
+
+#: src/Mysql/AddConsentLevel1.php:53
+#: src/Mysql/AddConsentLevel5.php:53
+#: src/Mysql/AddConsentLevel6.php:53
+msgid "Previous consent was not expired"
+msgstr "Η προηγούμενη συγκατάθεση δεν είχε λήξει"
+
+#: src/Mysql/AddConsentLevel2.php:16
+#: src/Mysql/AddConsentLevel3or4.php:55
+msgid "Invalid token"
+msgstr "Μη έγκυρο διακριτικό"
+
+#: src/Mysql/AddConsentLevel2.php:24
+#: src/Mysql/AddConsentLevel3or4.php:19
+msgid "Visitor not found"
+msgstr "Ο επισκέπτης δεν βρέθηκε"
+
+#: src/Mysql/AddConsentLevel2.php:41
+#: src/Mysql/AddConsentLevel3or4.php:80
+msgid "Previous consent still active"
+msgstr "Η προηγούμενη συγκατάθεση είναι ακόμα ενεργή"
+
+#: src/Mysql/AddConsentLevel2.php:124
+#: src/Mysql/AddConsentLevel3or4.php:167
+msgid "There was a problem querying the data in the database."
+msgstr "Προέκυψε πρόβλημα κατά την αναζήτηση των δεδομένων στη βάση δεδομένων."
+
+#: src/Mysql/AddConsentLevel3or4.php:12
+msgid "Invalid signature"
+msgstr "Μη έγκυρη υπογραφή"
+
+#: src/Mysql/AddConsentLevel3or4.php:26
+msgid "Wallet not found"
+msgstr "Το πορτοφόλι δεν βρέθηκε"
+
+#: src/Mysql/AddConsentLevel3or4.php:32
+msgid "Wallet nonce not found"
+msgstr "Δεν βρέθηκε το nonce του πορτοφολιού"
+
+#: src/Mysql/AddConsentLevel3or4.php:39
+#: src/Mysql/RevokeConsentLevel3or4.php:37
+msgid "Nonce is not valid"
+msgstr "Το nonce δεν είναι έγκυρο"
+
+#: src/Mysql/AddConsentLevel3or4.php:48
+#: src/Mysql/RevokeConsentLevel3or4.php:44
+msgid "Contract is not valid"
+msgstr "Η σύμβαση δεν είναι έγκυρη"
+
+#: src/Mysql/CloseVisitorEvent.php:14
+#: src/Mysql/CloseVisitorEvent.php:18
+msgid "The event uuid parameter is required."
+msgstr "Η παράμετρος uuid του συμβάντος είναι απαραίτητη."
+
+#: src/Mysql/CloseVisitorEvent.php:36
+msgid "Failed to update analytics events."
+msgstr "Αποτυχία ενημέρωσης των γεγονότων αναλύσεων."
+
+#: src/Mysql/CloseVisitorEvent.php:43
+msgid "Visitor event not found."
+msgstr "Η εκδήλωση επισκέπτη δεν βρέθηκε."
+
+#: src/Mysql/CloseVisitorEvent.php:55
+msgid "Failed to update analytics flows"
+msgstr "Αποτυχία ενημέρωσης των ροών αναλυτικών στοιχείων"
+
+#: src/Mysql/GetNonce.php:12
+msgid "Address is not valid"
+msgstr "Η διεύθυνση δεν είναι έγκυρη"
+
+#: src/Mysql/RevokeConsentLevel3or4.php:14
+msgid "Invalid signature."
+msgstr "Άκυρη υπογραφή."
+
+#: src/Mysql/RevokeConsentLevel3or4.php:24
+msgid "Wallet not found."
+msgstr "Το πορτοφόλι δεν βρέθηκε."
+
+#: src/Mysql/RevokeConsentLevel3or4.php:30
+msgid "Nonce not found."
+msgstr "Δεν βρέθηκε το nonce."
+
+#: src/Mysql/RevokeConsentLevel3or4.php:55
+msgid "Failed to update consent expiration."
+msgstr "Η ενημέρωση της λήξης της συγκατάθεσης απέτυχε."
+
+#: src/Mysql/RevokeConsentLevel3or4.php:62
+msgid "Failed to update nonce."
+msgstr "Αποτυχία ενημέρωσης του nonce."
+
+#: src/Mysql/StartFingerprint.php:146
+msgid "Wrong URL format, domain not found"
+msgstr "Λάθος μορφή URL, τομέας δεν βρέθηκε"
+
+#: src/Mysql/StartFingerprint.php:150
+msgid "The domain sent in the new URL does not match the domain stored in the visitor document"
+msgstr "Ο τομέας που στάλθηκε στη νέα διεύθυνση URL δεν ταιριάζει με τον τομέα που είναι αποθηκευμένος στο έγγραφο επισκέπτη"
+
+#: src/Route/Middleware/IsBackendMiddleware.php:18
+msgid "Permission denied!"
+msgstr "Άρνηση άδειας!"
+
+#: src/Track/CliTracker.php:32
+msgid "Error in tracking"
+msgstr "Σφάλμα στην παρακολούθηση"
+
+#. Plugin Name of the plugin
+#: aesirx-consent.php
+msgid "AesirX Consent"
+msgstr "Συγκατάθεση AesirX"
+
+#. Description of the plugin
+#: aesirx-consent.php
+msgid "Aesirx Consent plugin. When you join forces with AesirX, you're not just becoming a Partner - you're also becoming a freedom fighter in the battle for privacy! Earn 25% Affiliate Commission <a href=\"https://aesirx.io/partner?utm_source=wpplugin&utm_medium=web&utm_campaign=wordpress&utm_id=aesirx&utm_term=wordpress&utm_content=analytics\">[Click to Join]</a>"
+msgstr "Πρόσθετο συγκατάθεσης AesirX. Όταν συνεργάζεστε με το AesirX, δεν γίνεστε μόνο συνεργάτης - γίνεστε επίσης μαχητής της ελευθερίας στη μάχη για την ιδιωτικότητα! Κερδίστε 25% προμήθεια συνεργατών <a href=\"https://aesirx.io/partner?utm_source=wpplugin&utm_medium=web&utm_campaign=wordpress&utm_id=aesirx&utm_term=wordpress&utm_content=analytics\">[Κάντε κλικ για να συμμετάσχετε]</a>"
+
+#: aesirx-consent.php:39
+#: includes/settings.php:1221
+msgid "Shield of Privacy"
+msgstr "Ασπίδα Ιδιωτικότητας"
+
+#: aesirx-consent.php:40
+#: includes/settings.php:1222
+msgid "Revoke your consent for data use whenever you wish."
+msgstr "Ανακαλέστε τη συγκατάθεσή σας για τη χρήση δεδομένων όποτε το επιθυμείτε."
+
+#: aesirx-consent.php:41
+#: includes/settings.php:1223
+msgid "Manage Decentralized Consent"
+msgstr "Διαχείριση Αποκεντρωμένης Συναίνεσης"
+
+#: aesirx-consent.php:42
+#: includes/settings.php:1224
+msgid "Revoke Consent"
+msgstr "Ανάκληση συγκατάθεσης"
+
+#: aesirx-consent.php:44
+#: includes/settings.php:1226
+msgid "Reject"
+msgstr "Απόρριψη"
+
+#: aesirx-consent.php:45
+#: includes/settings.php:1227
+msgid "Please connect your Web3 wallet"
+msgstr "Συνδέστε το πορτοφόλι σας Web3"
+
+#: aesirx-consent.php:46
+#: includes/settings.php:1228
+msgid "Please sign the message on your wallet twice and wait for it to be saved."
+msgstr "Παρακαλώ υπογράψτε το μήνυμα στο πορτοφόλι σας δύο φορές και περιμένετε να αποθηκευτεί."
+
+#: aesirx-consent.php:47
+#: includes/settings.php:1229
+msgid "Saving..."
+msgstr "Οικονομία..."
+
+#: aesirx-consent.php:48
+#: includes/settings.php:1230
+msgid "Please connect to your wallet"
+msgstr "Συνδεθείτε στο πορτοφόλι σας"
+
+#: aesirx-consent.php:49
+#: includes/settings.php:1231
+msgid "Connecting"
+msgstr "Σύνδεση"
+
+#: aesirx-consent.php:50
+#: includes/settings.php:1232
+msgid "TRACKING AND DATA PRIVACY PREFERENCES"
+msgstr "ΠΡΟΤΙΜΗΣΕΙΣ ΑΠΟΡΡΗΤΟΥ ΠΑΡΑΚΟΛΟΥΘΗΣΗΣ ΚΑΙ ΔΕΔΟΜΕΝΩΝ"
+
+#: aesirx-consent.php:51
+#: includes/settings.php:1233
+msgid "About"
+msgstr "Για"
+
+#: aesirx-consent.php:52
+#: aesirx-consent.php:101
+#: includes/settings.php:1234
+#: includes/settings.php:1283
+msgid "Details"
+msgstr "Λεπτομέρειες"
+
+#: aesirx-consent.php:53
+#: aesirx-consent.php:81
+#: includes/settings.php:1235
+#: includes/settings.php:1263
+msgid "Decentralized Consent"
+msgstr "Αποκεντρωμένη συναίνεση"
+
+#: aesirx-consent.php:54
+#: includes/settings.php:1236
+msgid "Manage Your Consent Preferences"
+msgstr "Διαχειριστείτε τις προτιμήσεις συγκατάθεσής σας"
+
+#: aesirx-consent.php:55
+#: includes/settings.php:1237
+msgid "Choose how we use your data: \"Reject\" data collection, allow tracking [\"Consent\"], or use \"Decentralized Consent\" for more control over your personal data & rewards."
+msgstr "Επιλέξτε πώς χρησιμοποιούμε τα δεδομένα σας: 'Απόρριψη' συλλογής δεδομένων, επιτρέψτε την παρακολούθηση ['Συναίνεση'], ή χρησιμοποιήστε 'Αποκεντρωμένη Συναίνεση' για περισσότερο έλεγχο των προσωπικών σας δεδομένων και ανταμοιβών."
+
+#: aesirx-consent.php:56
+#: includes/settings.php:1238
+msgid "Choose how we use your data: \"Reject\" data collection, allow tracking [\"Consent\"]."
+msgstr "Επιλέξτε πώς χρησιμοποιούμε τα δεδομένα σας: \"Απόρριψη\" συλλογής δεδομένων, επιτρέψτε την παρακολούθηση [\"Συναίνεση\"]."
+
+#: aesirx-consent.php:57
+#: includes/settings.php:1239
+msgid "By consenting, you allow us to collect & use your data for:"
+msgstr "Με τη συγκατάθεσή σας, μας επιτρέπετε να συλλέγουμε και να χρησιμοποιούμε τα δεδομένα σας για:"
+
+#: aesirx-consent.php:58
+#: includes/settings.php:1240
+msgid "Analytics & Behavioral Data: To improve our services & personalize your experience."
+msgstr "Αναλυτικά στοιχεία και δεδομένα συμπεριφοράς: Για να βελτιώσουμε τις υπηρεσίες μας και να εξατομικεύσουμε την εμπειρία σας."
+
+#: aesirx-consent.php:59
+#: includes/settings.php:1241
+msgid "Form Data: When you contact us."
+msgstr "Δεδομένα φόρμας: Όταν επικοινωνείτε μαζί μας."
+
+#: aesirx-consent.php:60
+#: includes/settings.php:1242
+msgid "Please note"
+msgstr "Παρακαλώ σημειώστε"
+
+#: aesirx-consent.php:61
+#: includes/settings.php:1243
+msgid "We do not share your data with third parties without your explicit consent."
+msgstr "Δεν μοιραζόμαστε τα δεδομένα σας με τρίτα μέρη χωρίς τη ρητή συγκατάθεσή σας."
+
+#: aesirx-consent.php:62
+#: includes/settings.php:1244
+msgid "You can opt-in later for specific features without giving blanket consent."
+msgstr "Μπορείτε να επιλέξετε αργότερα συγκεκριμένες λειτουργίες χωρίς να δώσετε γενική συγκατάθεση."
+
+#: aesirx-consent.php:63
+#: includes/settings.php:1245
+msgid "For more details, refer to our <a class='text-success fw-semibold text-decoration-underline' href='https://aesirx.io/privacy-policy' target='_blank'>privacy policy.</a>"
+msgstr "Για περισσότερες λεπτομέρειες, ανατρέξτε στην <a class='text-success fw-semibold text-decoration-underline' href='https://aesirx.io/privacy-policy' target='_blank'>πολιτική απορρήτου</a> μας."
+
+#: aesirx-consent.php:64
+#: includes/settings.php:1246
+msgid "Benefits"
+msgstr "Οφέλη"
+
+#: aesirx-consent.php:65
+#: includes/settings.php:1247
+msgid "<span class='fw-semibold text-primary'>Control your data:</span> Choose your preferred level of data collection & tracking."
+msgstr "<span class='fw-semibold text-primary'>Ελέγξτε τα δεδομένα σας:</span> Επιλέξτε το προτιμώμενο επίπεδο συλλογής και παρακολούθησης δεδομένων."
+
+#: aesirx-consent.php:66
+#: includes/settings.php:1248
+msgid "<span class='fw-semibold text-primary'>Earn rewards:</span> Participate in decentralized consent for privacy & rewards."
+msgstr "<span class='fw-semibold text-primary'>Κερδίστε ανταμοιβές:</span> Συμμετάσχετε σε αποκεντρωμένη συναίνεση για την ιδιωτικότητα και τις ανταμοιβές."
+
+#: aesirx-consent.php:67
+#: includes/settings.php:1249
+msgid "<span class='fw-semibold text-primary'>Transparent data collection practices:</span> Understand how your data is collected & used."
+msgstr "<span class='fw-semibold text-primary'>Διαφανείς πρακτικές συλλογής δεδομένων::</span> Κατανοήστε πώς συλλέγονται και χρησιμοποιούνται τα δεδομένα σας."
+
+#: aesirx-consent.php:68
+#: includes/settings.php:1250
+msgid "Understanding Your Privacy Choices"
+msgstr "Κατανόηση των επιλογών απορρήτου σας"
+
+#: aesirx-consent.php:69
+#: includes/settings.php:1251
+msgid "<span class='fw-semibold text-primary'>Reject:</span> No data will be collected or loaded except for anonymized page views & rejections. Some personalization features may be disabled."
+msgstr "<span class='fw-semibold text-primary'>Απόρριψη:</span> Δεν θα συλλεχθούν ή φορτωθούν δεδομένα εκτός από ανώνυμες προβολές σελίδων και απορρίψεις. Ορισμένες δυνατότητες εξατομίκευσης ενδέχεται να απενεργοποιηθούν."
+
+#: aesirx-consent.php:70
+#: includes/settings.php:1252
+msgid "<span class='fw-semibold text-primary'>Consent:</span> First & third-party tracking data will be collected to enhance your experience."
+msgstr "<span class='fw-semibold text-primary'>Συναίνεση:</span> Τα δεδομένα παρακολούθησης πρώτου και τρίτου μέρους θα συλλεχθούν για να βελτιώσουν την εμπειρία σας."
+
+#: aesirx-consent.php:71
+#: includes/settings.php:1253
+msgid "<span class='fw-semibold text-primary'>Decentralized Consent:</span> Choose Decentralized Wallets or Decentralized Wallet + Shield of Privacy. Both options let you manage & revoke consent on-site or through AesirX dApp, plus earn rewards from digital marketing activities."
+msgstr "<span class='fw-semibold text-primary'>Αποκεντρωμένη Συγκατάθεση:</span> Επιλέξτε Αποκεντρωμένα Πορτοφόλια ή Αποκεντρωμένο Πορτοφόλι + Ασπίδα Ιδιωτικότητας. Και οι δύο επιλογές σας επιτρέπουν να διαχειρίζεστε και να ανακαλείτε τη συγκατάθεση επιτόπου ή μέσω της εφαρμογής AesirX dApp, καθώς και να κερδίζετε ανταμοιβές από δραστηριότητες ψηφιακού μάρκετινγκ."
+
+#: aesirx-consent.php:72
+#: includes/settings.php:1254
+msgid "Our Commitment in Action"
+msgstr "Η δέσμευσή μας σε δράση"
+
+#: aesirx-consent.php:73
+#: includes/settings.php:1255
+msgid "<span class='fw-semibold text-primary'>Privacy Protection:</span> Users have full control over their data, ensuring maximum privacy."
+msgstr "<span class='fw-semibold text-primary'>Προστασία Προσωπικών Δεδομένων:</span> Οι χρήστες έχουν πλήρη έλεγχο των δεδομένων τους, εξασφαλίζοντας τη μέγιστη ιδιωτικότητα."
+
+#: aesirx-consent.php:74
+#: includes/settings.php:1256
+msgid "<span class='fw-semibold text-primary'>Enables Compliance:</span> Using Shield of Privacy (SoP) ensures compliance with GDPR, CCPA, ePrivacy Directive, & other data protection regulations."
+msgstr "<span class='fw-semibold text-primary'>Ενεργοποιεί τη Συμμόρφωση:</span> Η χρήση του Privacy Shield (SoP) εξασφαλίζει συμμόρφωση με το GDPR, CCPA, την Οδηγία ePrivacy και άλλους κανονισμούς προστασίας δεδομένων."
+
+#: aesirx-consent.php:75
+#: includes/settings.php:1257
+msgid "<span class='fw-semibold text-primary'>Proactive Protection:</span> We enhance privacy measures to safeguard your data integrity."
+msgstr "<span class='fw-semibold text-primary'>Προληπτική Προστασία:</span> Ενισχύουμε τα μέτρα απορρήτου για τη διασφάλιση της ακεραιότητας των δεδομένων σας."
+
+#: aesirx-consent.php:76
+#: includes/settings.php:1258
+msgid "<span class='fw-semibold text-primary'>Flexible Consent:</span> You can withdraw your consent anytime on-site or via our <a class='text-success fw-semibold text-decoration-underline' href='https://dapp.shield.aesirx.io' target='_blank'>dApp</a> (Decentralized Application)."
+msgstr "<span class='fw-semibold text-primary'>Ευέλικτη Συγκατάθεση:</span> Μπορείτε να αποσύρετε τη συγκατάθεσή σας οποιαδήποτε στιγμή στον ιστότοπο ή μέσω της <a class='text-success fw-semibold text-decoration-underline' href='https://dapp.shield.aesirx.io' target='_blank'>dApp</a> (Αποκεντρωμένη Εφαρμογή) μας."
+
+#: aesirx-consent.php:77
+#: includes/settings.php:1259
+msgid "<span class='fw-semibold text-primary'>Learn More:</span> Discover our approach to data processing in our <a class='text-success fw-semibold text-decoration-underline' href='https://aesirx.io/privacy-policy' target='_blank'>Privacy Policy</a>."
+msgstr "<span class='fw-semibold text-primary'>Μάθετε περισσότερα:</span> Ανακαλύψτε την προσέγγισή μας στην επεξεργασία δεδομένων στην <a class='text-success fw-semibold text-decoration-underline' href='https://aesirx.io/privacy-policy' target='_blank'>Πολιτική Απορρήτου</a> μας."
+
+#: aesirx-consent.php:78
+#: includes/settings.php:1260
+msgid "<span class='fw-semibold text-primary'>For Businesses:</span> Enhance trust, secure user identities, & prevent breaches."
+msgstr "<span class='fw-semibold text-primary'>Για Επιχειρήσεις:</span> Ενισχύστε την εμπιστοσύνη, ασφαλίστε τις ταυτότητες των χρηστών και αποτρέψτε τις παραβιάσεις."
+
+#: aesirx-consent.php:79
+#: includes/settings.php:1261
+msgid "More info at <a class='text-success fw-semibold text-decoration-underline' href='https://shield.aesirx.io' target='_blank'>https://shield.aesirx.io</a>."
+msgstr "Περισσότερες πληροφορίες στο <a class='text-success fw-semibold text-decoration-underline' href='https://shield.aesirx.io' target='_blank'>https://shield.aesirx.io</a>."
+
+#: aesirx-consent.php:80
+#: includes/settings.php:1262
+msgid "Select your preferred decentralized consent option:"
+msgstr "Επιλέξτε την προτιμώμενη αποκεντρωμένη επιλογή συγκατάθεσης:"
+
+#: aesirx-consent.php:82
+#: includes/settings.php:1264
+msgid "Decentralized consent will be loaded"
+msgstr "Θα φορτωθεί η αποκεντρωμένη συναίνεση"
+
+#: aesirx-consent.php:83
+#: includes/settings.php:1265
+msgid "Both first-party & third-party tracking data will be activated."
+msgstr "Θα ενεργοποιηθούν τόσο τα δεδομένα παρακολούθησης πρώτου μέρους όσο και τρίτων."
+
+#: aesirx-consent.php:84
+#: includes/settings.php:1266
+msgid "All consented data will be collected."
+msgstr "Θα συλλεχθούν όλα τα δεδομένα που έχουν συναινέσει."
+
+#: aesirx-consent.php:85
+#: includes/settings.php:1267
+msgid "Users can revoke consent on-site at any time."
+msgstr "Οι χρήστες μπορούν να ανακαλέσουν τη συγκατάθεσή τους επιτόπου ανά πάσα στιγμή."
+
+#: aesirx-consent.php:86
+#: includes/settings.php:1268
+msgid "Decentralized Consent + Shield of Privacy"
+msgstr "Αποκεντρωμένη συναίνεση + Ασπίδα απορρήτου"
+
+#: aesirx-consent.php:87
+#: includes/settings.php:1269
+msgid "Users can revoke consent on-site or from the AesirX dApp at any time."
+msgstr "Οι χρήστες μπορούν να ανακαλέσουν τη συγκατάθεσή τους στον ιστότοπο ή από την εφαρμογή AesirX dApp ανά πάσα στιγμή."
+
+#: aesirx-consent.php:88
+#: includes/settings.php:1270
+msgid "Users can earn rewards from digital marketing activities."
+msgstr "Οι χρήστες μπορούν να κερδίσουν ανταμοιβές από δραστηριότητες ψηφιακού μάρκετινγκ."
+
+#: aesirx-consent.php:89
+#: includes/settings.php:1271
+msgid "Continue"
+msgstr "Συνέχεια"
+
+#: aesirx-consent.php:90
+#: includes/settings.php:1272
+msgid "Back"
+msgstr "Πίσω"
+
+#: aesirx-consent.php:91
+#: includes/settings.php:1273
+msgid "You've chosen to reject data collection:"
+msgstr "Έχετε επιλέξει να απορρίψετε τη συλλογή δεδομένων:"
+
+#: aesirx-consent.php:92
+#: includes/settings.php:1274
+msgid "Only anonymized page views & limited features will be available. To access all website features, including personalized content & enhanced functionality, please choose an option:"
+msgstr "Μόνο ανώνυμες προβολές σελίδων και περιορισμένες λειτουργίες θα είναι διαθέσιμες. Για πρόσβαση σε όλες τις δυνατότητες του ιστότοπου, συμπεριλαμβανομένου του εξατομικευμένου περιεχομένου και της βελτιωμένης λειτουργικότητας, επιλέξτε μια επιλογή:"
+
+#: aesirx-consent.php:93
+#: includes/settings.php:1275
+msgid "<span class='fw-semibold text-primary'>Consent:</span> Allow data collection for analytics, form data (when you contact us), & behavioral & event tracking, with the option to opt-in for specific features."
+msgstr "<span class='fw-semibold text-primary'>Συναίνεση:</span> Επιτρέψτε τη συλλογή δεδομένων για αναλύσεις, δεδομένα φόρμας (όταν επικοινωνείτε μαζί μας) και παρακολούθηση συμπεριφοράς και γεγονότων, με τη δυνατότητα επιλογής συγκεκριμένων λειτουργιών."
+
+#: aesirx-consent.php:94
+#: includes/settings.php:1276
+msgid "<span class='fw-semibold text-primary'>Decentralized Consent:</span> Allow data collection for analytics, form data (when you contact us), & behavioral & event tracking, with the option to revoke consent, opt-in for specific features, & earn rewards from digital marketing activities."
+msgstr "<span class='fw-semibold text-primary'>Αποκεντρωμένη συγκατάθεση:</span> Επιτρέψτε τη συλλογή δεδομένων για αναλύσεις, δεδομένα φόρμας (όταν επικοινωνείτε μαζί μας) και παρακολούθηση συμπεριφοράς και γεγονότων, με την επιλογή ανάκλησης συγκατάθεσης, εγγραφής σε συγκεκριμένες λειτουργίες και κέρδους ανταμοιβών από ψηφιακές δραστηριότητες μάρκετινγκ."
+
+#: aesirx-consent.php:95
+#: includes/settings.php:1277
+msgid "You can revoke consent on the site or any explicit opt-in consent, such as payment processing, at any time"
+msgstr "Μπορείτε να ανακαλέσετε τη συγκατάθεσή σας στον ιστότοπο ή οποιαδήποτε ρητή συγκατάθεση, όπως η επεξεργασία πληρωμών, ανά πάσα στιγμή"
+
+#: aesirx-consent.php:96
+#: includes/settings.php:1278
+msgid "Revoke Opt-In Consent"
+msgstr "Ανάκληση συγκατάθεσης συμμετοχής"
+
+#: aesirx-consent.php:97
+#: includes/settings.php:1279
+msgid "Revoke Opt-In Consent for Payment Processing"
+msgstr "Ανάκληση συγκατάθεσης για επεξεργασία πληρωμών"
+
+#: aesirx-consent.php:98
+#: includes/settings.php:1280
+msgid "Revoke Opt-In Consent for AesirX Privacy Advisor AI"
+msgstr "Ανάκληση της συγκατάθεσης συμμετοχής για το AesirX Privacy Advisor AI"
+
+#: aesirx-consent.php:99
+#: includes/settings.php:1281
+msgid "Revoke Consent for the site"
+msgstr "Ανάκληση συγκατάθεσης για τον ιστότοπο"
+
+#: aesirx-consent.php:100
+#: includes/settings.php:1282
+msgid "Consent Management"
+msgstr "Διαχείριση συγκατάθεσης"
+
+#: includes/settings.php:224
+msgid "Gtag ID"
+msgstr "Αναγνωριστικό Gtag"
+
+#: includes/settings.php:249
+msgid "GTM ID"
+msgstr "GTM ID"
+
+#: includes/settings.php:379
+msgid "AesirX Consent Shield for Third-Party Plugins "
+msgstr "AesirX Consent Shield για πρόσθετα τρίτων"
+
+#: includes/settings.php:384
+msgid "Blocks selected third-party plugins from loading until user consent is given."
+msgstr "Αποκλείει τη φόρτωση επιλεγμένων προσθέτων τρίτων μέχρι να δοθεί η συγκατάθεση του χρήστη."
+
+#: includes/settings.php:414
+msgid "Completely prevents the loading and execution of chosen third-party plugins before consent."
+msgstr "Αποτρέπει εντελώς τη φόρτωση και εκτέλεση επιλεγμένων προσθέτων τρίτων πριν από τη συγκατάθεση."
+
+#: includes/settings.php:420
+msgid "No network requests are made to third-party servers, enabling maximum compliance with privacy regulations like GDPR and the ePrivacy Directive."
+msgstr "Δεν γίνονται αιτήματα δικτύου σε διακομιστές τρίτων, επιτρέποντας τη μέγιστη συμμόρφωση με κανονισμούς απορρήτου όπως το GDPR και την Οδηγία για την Ηλεκτρονική Ιδιωτικότητα."
+
+#: includes/settings.php:434
+msgid "AesirX Consent Shield for Domain/Path-Based Blocking"
+msgstr "AesirX Consent Shield για αποκλεισμό τομέα/διαδρομών"
+
+#: includes/settings.php:444
+#: includes/settings.php:462
+msgid "Enter domain or path"
+msgstr "Εισαγάγετε τομέα ή διαδρομή"
+
+#: includes/settings.php:437
+msgid "Removes scripts matching specified domains or paths from the browser until user consent is given."
+msgstr "Καταργεί σενάρια που ταιριάζουν με καθορισμένους τομείς ή διαδρομές από το πρόγραμμα περιήγησης μέχρι να δοθεί η συναίνεση του χρήστη."
+
+#: includes/settings.php:485
+msgid "Blocks or removes scripts from running in the user's browser before consent is given."
+msgstr "Αποκλείει ή αφαιρεί σενάρια από την εκτέλεση στον περιηγητή του χρήστη πριν δοθεί συγκατάθεση."
+
+#: includes/settings.php:491
+msgid "While it prevents scripts from executing, initial network requests may still occur, so it enhances privacy compliance under GDPR but may not fully meet the ePrivacy Directive requirements."
+msgstr "Ενώ αποτρέπει την εκτέλεση σεναρίων, ενδέχεται να εξακολουθούν να πραγματοποιούνται αρχικά αιτήματα δικτύου, επομένως ενισχύει τη συμμόρφωση με την προστασία της ιδιωτικής ζωής σύμφωνα με το GDPR, αλλά ενδέχεται να μην πληροί πλήρως τις απαιτήσεις της Οδηγίας για την ηλεκτρονική ιδιωτικότητα."
+
+#: includes/settings.php:505
+msgid "Script Blocking Options"
+msgstr "Επιλογές αποκλεισμού σεναρίων"
+
+#: includes/settings.php:520
+msgid "Only Third-Party Hosts (default)"
+msgstr "Μόνο τρίτοι οικοδεσπότες (προεπιλογή)"
+
+#: includes/settings.php:531
+msgid "Both First and Third-Party Hosts"
+msgstr "Και οι οικοδεσπότες πρώτου και τρίτου μέρους"
+
+#: includes/settings.php:926
+msgid "Need Help? Access Our Comprehensive Documentation Hub"
+msgstr "Χρειάζεστε βοήθεια; Πρόσβαση στο ολοκληρωμένο κέντρο τεκμηρίωσής μας"
+
+#: includes/settings.php:1367
+#: includes/settings.php:1447
+msgid "Your trial license ends in %1$s days. Please update new license <a href='%2$s' target='_blank'>%2$s</a>."
+msgstr "Η δοκιμαστική σας άδεια λήγει σε %1$s ημέρες. Ενημερώστε τη νέα άδεια στο <a href='%2$s' target='_blank'>%2$s</a>."
+
+#: includes/settings.php:1396
+msgid "Your license is expried or not found. Please update new license <a href='%1$s' target='_blank'>%1$s</a>."
+msgstr "Η άδεια σας έχει λήξει ή δεν βρέθηκε. Ενημερώστε τη νέα άδεια <a href='%1$s' target='_blank'>%1$s</a>."
+
+#: includes/settings.php:1450
+msgid "Your free trials has ended. Please update your license. <a href='%1$s' target='_blank'>%1$s</a>."
+msgstr "Η δωρεάν δοκιμή σας έληξε. Παρακαλώ ενημερώστε την άδειά σας. <a href='%1$s' target='_blank'>%1$s</a>."
+
+#: src/AesirxAnalyticsMysqlHelper.php:845
+msgid "Could not insert consent"
+msgstr "Δεν ήταν δυνατή η εισαγωγή της συγκατάθεσης"
+
+#: src/Mysql/StartFingerprint.php:35
+#: src/Mysql/StartFingerprint.php:64
+msgid "License is expired or not found. Please update your license"
+msgstr "Η άδεια έχει λήξει ή δεν βρέθηκε. Παρακαλώ ενημερώστε την άδειά σας"
+
+#: src/Mysql/StartFingerprint.php:76
+#: src/Mysql/StartFingerprint.php:83
+msgid "Your trial is ended. Please renew your license"
+msgstr "Η δοκιμαστική σας περίοδος έληξε. Παρακαλώ ανανεώστε την άδειά σας"
+
+#: includes/settings.php:106
+msgid "Your Client ID *"
+msgstr "Το αναγνωριστικό πελάτη σας *"
+
+#: includes/settings.php:113
+msgid "SSO Client ID"
+msgstr "Ταυτότητα Πελάτη SSO"
+
+#: includes/settings.php:119
+msgid ""
+"<div class='input_information_content'>\n"
+"          Provided SSO CLIENT ID from <a href='%1$s' target='_blank'>%1$s</a>.</div>"
+msgstr "<div class='input_information_content'>Παρεχόμενο SSO CLIENT ID από <a href='%1$s' target='_blank'>%1$s</a>.</div>"
+
+#: includes/settings.php:134
+msgid "Your Client Secret *"
+msgstr "Το μυστικό του πελάτη σας *"
+
+#: includes/settings.php:139
+msgid "SSO Client Secret"
+msgstr "Μυστικό πελάτη SSO"
+
+#: includes/settings.php:145
+msgid ""
+"<div class='input_information_content'>\n"
+"          Provided SSO Client Secret from <a href='%1$s' target='_blank'>%1$s</a>.</div>"
+msgstr "<div class='input_information_content'>Παρεχόμενο SSO Client Secret από <a href='%1$s' target='_blank'>%1$s</a>.</div>"
+
+#: includes/settings.php:161
+msgid "Your License Key"
+msgstr "Το κλειδί άδειας χρήσης σας"
+
+#: includes/settings.php:188
+msgid "Choose your tailored template"
+msgstr "Επιλέξτε το προσαρμοσμένο πρότυπό σας"
+
+#: includes/settings.php:443
+#: includes/settings.php:461
+msgid "Domain"
+msgstr "Πεδίο ορισμού"
+
+#: includes/settings.php:511
+msgid "Configure how JavaScript is blocked based on user consent preferences."
+msgstr "Διαμορφώστε τον τρόπο με τον οποίο αποκλείεται η JavaScript με βάση τις προτιμήσεις συναίνεσης του χρήστη."
+
+#: includes/settings.php:521
+msgid "Blocks JavaScript from third-party domains, allowing first-party scripts to run normally & keep essential site functions intact."
+msgstr "Αποκλείει το JavaScript από τρίτους τομείς, επιτρέποντας στα σενάρια πρώτου μέρους να λειτουργούν κανονικά και διατηρώντας τις βασικές λειτουργίες του ιστότοπου ανέπαφες."
+
+#: includes/settings.php:532
+msgid "Blocks JavaScript from both first-party & third-party domains for comprehensive script control, giving you the ability to block any JavaScript from internal or external sources based on user consent."
+msgstr "Αποκλείει το JavaScript από τομείς πρώτου και τρίτου μέρους για ολοκληρωμένο έλεγχο σεναρίων, δίνοντάς σας τη δυνατότητα να αποκλείσετε οποιοδήποτε JavaScript από εσωτερικές ή εξωτερικές πηγές βάσει της συγκατάθεσης του χρήστη."
+
+#: includes/settings.php:936
+msgid "Discover the latest features & best practices."
+msgstr "Ανακαλύψτε τις τελευταίες δυνατότητες και τις καλύτερες πρακτικές."
+
+#: includes/settings.php:963
+msgid "Haven't got a license yet?"
+msgstr "Δεν έχετε αποκτήσει άδεια ακόμα;"
+
+#: includes/settings.php:992
+msgid "Scan Your Site for Privacy Risks"
+msgstr "Σαρώστε τον ιστότοπό σας για κινδύνους απορρήτου"
+
+#: includes/settings.php:996
+msgid "Use the Privacy Scanner to quickly identify scripts, tags, & trackers running on your site that may compromise user privacy."
+msgstr "Χρησιμοποιήστε τον Σαρωτή απορρήτου για να προσδιορίσετε γρήγορα σενάρια, ετικέτες και ιχνηλάτες που εκτελούνται στον ιστότοπό σας και ενδέχεται να θέσουν σε κίνδυνο το απόρρητο των χρηστών."
+
+#: includes/settings.php:1002
+msgid "Use Consent Shield to block those scripts by adding their domains or paths, ensuring quick & simple compliance."
+msgstr "Χρησιμοποιήστε το Consent Shield για να αποκλείσετε αυτά τα σενάρια προσθέτοντας τους τομείς ή τις διαδρομές τους, εξασφαλίζοντας γρήγορη και απλή συμμόρφωση."
+
+#: includes/settings.php:1055
+#: includes/settings.php:1117
+#: includes/settings.php:1150
+#: includes/settings.php:1183
+msgid "Save settings"
+msgstr "Αποθήκευση ρυθμίσεων"
+
+#: includes/settings.php:166
+msgid "License Key"
+msgstr "Κλειδί άδειας"
+
+#: includes/settings.php:965
+msgid "Haven't got Shield of Privacy ID yet?"
+msgstr "Δεν έχετε αποκτήσει ακόμα το ID Shield of Privacy;"
+
+#: includes/settings.php:1011
+msgid "Learn how to use AesirX Privacy Scanner with Consent Shield to detect privacy-intrusive elements, using the JetPack plugin as an example."
+msgstr "Μάθετε πώς να χρησιμοποιείτε το AesirX Privacy Scanner με το Consent Shield για να εντοπίζετε στοιχεία που παραβιάζουν την ιδιωτικότητα, χρησιμοποιώντας το πρόσθετο JetPack ως παράδειγμα."
+
+#: includes/settings.php:1414
+msgid "Your license ends in %1$s days. Please update new license <a href='%2$s' target='_blank'>%2$s</a>."
+msgstr "Η άδειά σας λήγει σε %1$s ημέρες. Παρακαλώ ενημερώστε τη νέα άδεια στο <a href='%2$s' target='_blank'>%2$s</a>."
+
+#: includes/settings.php:172
+msgid ""
+"<div class='input_information_content'>\n"
+"          Sign up to obtain your Shield of Privacy ID and purchase licenses <a href='https://aesirx.io/licenses' target='blank' class='text-link'>here</a>.</div>"
+msgstr "<div class='input_information_content'>Εγγραφείτε για να αποκτήσετε το Shield of Privacy ID σας και να αγοράσετε άδειες <a href='https://aesirx.io/licenses' target='blank' class='text-link'>εδώ</a>.</div>"
+
+#: includes/settings.php:277
+msgid "To configure, input your Google Tag Manager Gtag ID & GTM ID in the designated fields. Once set up, Google Tag Manager will only load after the user provides consent."
+msgstr "Για να διαμορφώσετε, εισάγετε το Gtag ID και το GTM ID του Google Tag Manager στα καθορισμένα πεδία. Μόλις ρυθμιστεί, ο Google Tag Manager θα φορτωθεί μόνο μετά την παροχή συγκατάθεσης από τον χρήστη."
+
+#: includes/settings.php:196
+msgid "Simple Consent Mode"
+msgstr "Απλή λειτουργία συγκατάθεσης"
+
+#: includes/settings.php:234
+#: includes/settings.php:259
+msgid ""
+"<div class='input_information_content'>\n"
+"          Remember to include the explicit purpose (e.g., analytics, marketing) in the consent text to inform users why GTM is being used.</div>"
+msgstr "<div class='input_information_content'>Θυμηθείτε να συμπεριλάβετε τον σαφή σκοπό (π.χ. αναλυτικά στοιχεία, μάρκετινγκ) στο κείμενο συγκατάθεσης για να ενημερώσετε τους χρήστες γιατί χρησιμοποιείται το GTM.</div>"
+
+#: includes/settings.php:969
+msgid "Register Licence Here"
+msgstr "Εγγραφή άδειας εδώ"
+
+#: includes/settings.php:974
+msgid "Sign up now"
+msgstr "Εγγραφείτε τώρα"
+
+#: includes/settings.php:930
+msgid "Explore How-To Guides, instructions, & tutorials to get the most from AesirX Consent Shield. Whether you're a developer or admin, find all you need to configure & optimize your privacy setup."
+msgstr "Εξερευνήστε Οδηγούς, οδηγίες και σεμινάρια για να αξιοποιήσετε στο έπακρο το AesirX Consent Shield. Είτε είστε προγραμματιστής είτε διαχειριστής, βρείτε όλα όσα χρειάζεστε για να διαμορφώσετε και να βελτιστοποιήσετε τη ρύθμιση απορρήτου σας."
+
+#: includes/settings.php:303
+msgid "Customize Consent Text "
+msgstr "Προσαρμογή κειμένου συναίνεσης "
+
+#: includes/settings.php:316
+msgid "Reset Consent"
+msgstr "Επαναφορά συγκατάθεσης"
+
+#: aesirx-consent.php:351
+msgid "Important: Permalink Settings Required"
+msgstr "Σημαντικό: Απαιτούνται ρυθμίσεις μόνιμων συνδέσμων"
+
+#: includes/settings.php:1440
+msgid "Your trial license ends in %1$s hour(s). Please update your license <a href='%2$s' target='_blank'>here</a>."
+msgstr "Η δοκιμαστική σας άδεια λήγει σε %1$s ώρα/ώρες. Ενημερώστε την άδειά σας <a href='%2$s' target='_blank'>εδώ</a>."
+
+#. translators: 1: Permalink structure example, 2: Link to Permalink Settings page
+#: aesirx-consent.php:356
+msgid ""
+"Our plugin requires that your site use a pretty permalink structure (for example, %1$s) to work correctly.\n"
+"                            It looks like your current settings are using the plain permalink format, which might cause issues.\n"
+"                            Please %2$s to open your Permalink Settings.\n"
+"                            Once there, select the \"Post name\" option (or another pretty permalink structure) and click \"Save Changes.\""
+msgstr "Το πρόσθετό μας απαιτεί ο ιστότοπός σας να χρησιμοποιεί μια όμορφη δομή μόνιμων συνδέσμων (για παράδειγμα, %1$s) για να λειτουργεί σωστά. Φαίνεται ότι οι τρέχουσες ρυθμίσεις σας χρησιμοποιούν την απλή μορφή μόνιμων συνδέσμων, κάτι που μπορεί να προκαλέσει προβλήματα. Παρακαλώ %2$s για να ανοίξετε τις Ρυθμίσεις Μόνιμων Συνδέσμων σας. Μόλις φτάσετε εκεί, επιλέξτε την επιλογή \"Όνομα ανάρτησης\" (ή άλλη όμορφη δομή μόνιμων συνδέσμων) και κάντε κλικ στο \"Αποθήκευση αλλαγών.\""
+
+#: aesirx-consent.php:363
+msgid "click here"
+msgstr "κάντε κλικ εδώ"
+
+#: includes/settings.php:274
+msgid "GTM General"
+msgstr "GTM General"
+
+#: includes/settings.php:1373
+msgid "Something went wrong: %1$s. Please contact the administrator."
+msgstr "Κάτι πήγε στραβά: %1$s. Παρακαλώ επικοινωνήστε με τον διαχειριστή."
+
+#: includes/settings.php:1420
+msgid "Check license failed: %1$s. Please contact the administrator or update your license."
+msgstr "Η επαλήθευση άδειας απέτυχε: %1$s. Παρακαλώ επικοινωνήστε με τον διαχειριστή ή ενημερώστε την άδειά σας."
+
+#: src/Mysql/StartFingerprint.php:55
+msgid "Check license failed: %1\\$s. Please contact the administrator."
+msgstr "Η επαλήθευση άδειας απέτυχε: %1$s. Παρακαλώ επικοινωνήστε με τον διαχειριστή."
+
+#: includes/settings.php:209
+msgid "The Default setup improves Google Consent Mode 2.0 by not loading any scripts, beacons, or tags until after consent is given, reducing compliance risks. It also includes Decentralized Consent, for more control over personal data and rewards."
+msgstr "Η προεπιλεγμένη ρύθμιση βελτιώνει τη Λειτουργία Συναίνεσης Google 2.0, μη φορτώνοντας σενάρια, φάρους ή ετικέτες μέχρι να δοθεί συναίνεση, μειώνοντας τους κινδύνους συμμόρφωσης. Περιλαμβάνει επίσης Αποκεντρωμένη Συναίνεση, για περισσότερο έλεγχο στα προσωπικά δεδομένα και ανταμοιβές."
+
+#: includes/settings.php:200
+msgid "Simple Consent Mode follows Google Consent Mode 2.0 by not loading any tags until after consent is given, reducing compliance risks."
+msgstr "Η απλή λειτουργία συγκατάθεσης ακολουθεί τη Λειτουργία Συγκατάθεσης Google 2.0, μη φορτώνοντας καμία ετικέτα μέχρι να δοθεί συγκατάθεση, μειώνοντας τους κινδύνους συμμόρφωσης."
+
+#: includes/settings.php:1403
+msgid "Your domain is not match with your license. Please update domain in your license <a href='%1$s' target='_blank'>%1$s</a> and click <span class='verify_domain'>here</span> to verify again."
+msgstr "Το domain σας δεν ταιριάζει με την άδειά σας. Παρακαλώ ενημερώστε το domain στην άδειά σας <a href='%1$s' target='_blank'>%1$s</a> και κάντε κλικ <span class='verify_domain'>εδώ</span> για να επαληθεύσετε ξανά."
+
+#: src/Mysql/StartFingerprint.php:43
+#: src/Mysql/StartFingerprint.php:62
+msgid "Your domain is not match with your license. Please update domain in your license"
+msgstr "Ο τομέας σας δεν ταιριάζει με την άδειά σας. Ενημερώστε τον τομέα στην άδειά σας"
+
+#: includes/settings.php:205
+msgid "Decentralized Consent Mode"
+msgstr "Λειτουργία αποκεντρωμένης συναίνεσης"
+
+#: includes/settings.php:653
+msgid "GPC Compliance"
+msgstr "Συμμόρφωση GPC"
+
+#: includes/settings.php:666
+msgid "Enable GPC Support"
+msgstr "Ενεργοποιήστε την υποστήριξη GPC"
+
+#: includes/settings.php:674
+msgid "Disable GPC Support"
+msgstr "Απενεργοποίηση υποστήριξης GPC"
+
+#: includes/settings.php:681
+msgid "To comply with Global Privacy Control (GPC), please download and upload the following file:"
+msgstr "Για να συμμορφωθείτε με τον Παγκόσμιο Έλεγχο Απορρήτου (GPC), πραγματοποιήστε λήψη και μεταφόρτωση του παρακάτω αρχείου:"
+
+#: includes/settings.php:684
+msgid "Upload Instructions:"
+msgstr "Οδηγίες μεταφόρτωσης:"
+
+#: includes/settings.php:686
+msgid "Download the gpc.json file."
+msgstr "Κάντε λήψη του αρχείου gpc.json."
+
+#: includes/settings.php:687
+msgid "Connect to your website via FTP or File Manager."
+msgstr "Συνδεθείτε στον ιστότοπό σας μέσω FTP ή Διαχειριστή Αρχείων."
+
+#: includes/settings.php:688
+msgid "Upload the file to: <code>/public_html/.well-known/gpc.json</code>"
+msgstr "Ανεβάστε το αρχείο στο: <code>/public_html/.well-known/gpc.json</code>"
+
+#: includes/settings.php:689
+msgid "Ensure the file is accessible by visiting: <a href='"
+msgstr "Βεβαιωθείτε ότι το αρχείο είναι προσβάσιμο επισκεπτόμενοι: <a href='"
+
+#: includes/settings.php:328
+msgid "Customize Detail Text "
+msgstr "Προσαρμογή κειμένου λεπτομερειών"
+
+#: includes/settings.php:341
+msgid "Reset Detail"
+msgstr "Επαναφορά λεπτομέρειας"
+
+#: includes/settings.php:353
+msgid "Customize Reject Text "
+msgstr "Προσαρμογή απόρριψης κειμένου"
+
+#: includes/settings.php:366
+msgid "Reset Reject"
+msgstr "Επαναφορά Απόρριψη"
+
+#: aesirx-consent.php:102
+msgid "Customize"
+msgstr "Προσαρμογή"
+
+#: aesirx-consent.php:103
+msgid "Save"
+msgstr "Εκτός"
+
+#: aesirx-consent.php:104
+msgid "Always active"
+msgstr "Πάντα ενεργό"
+
+#: aesirx-consent.php:105
+msgid "Domain/Path-Based"
+msgstr "Βασισμένο σε τομέα/διαδρομή"
+
+#: aesirx-consent.php:106
+msgid "Third-Party Plugins"
+msgstr "Πρόσθετα τρίτων"
+
+#: aesirx-consent.php:107
+msgid "Essential Tracking"
+msgstr "Βασική παρακολούθηση"
+
+#: aesirx-consent.php:108
+msgid "Required for the website to function (e.g, session cookies, security tracking)."
+msgstr "Απαιτείται για τη λειτουργία του ιστότοπου (π.χ. cookies συνεδρίας, παρακολούθηση ασφαλείας)."
+
+#: aesirx-consent.php:109
+msgid "Functional Tracking"
+msgstr "Λειτουργική παρακολούθηση"
+
+#: aesirx-consent.php:110
+msgid "User preferencese & site enhancements (e.g, language setting, live chat)."
+msgstr "Προτιμήσεις χρήστη και βελτιώσεις ιστότοπου (π.χ. ρυθμίσεις γλώσσας, ζωντανή συνομιλία)."
+
+#: aesirx-consent.php:111
+msgid "Analytics Tracking"
+msgstr "Παρακολούθηση Αναλυτικών Στοιχείων"
+
+#: aesirx-consent.php:112
+msgid "Visitor behavior monitoring (e.g, Google Analytics, Matomo)."
+msgstr "Παρακολούθηση συμπεριφοράς επισκεπτών (π.χ. Google Analytics, Matomo)."
+
+#: aesirx-consent.php:113
+msgid "Advertising Tracking"
+msgstr "Παρακολούθηση διαφημίσεων"
+
+#: aesirx-consent.php:114
+msgid "Targeted advertising & remarketing (e.g, Facebook Pixel, Google Ads)."
+msgstr "Στοχευμένη διαφήμιση και επαναληπτικό μάρκετινγκ (π.χ. Facebook Pixel, Google Ads)."
+
+#: aesirx-consent.php:115
+msgid "Custom Tracking"
+msgstr "Tilpasset sporing"
+
+#: aesirx-consent.php:116
+msgid "Any additional third-party integrations (e.g, customer support tools, CDNS)."
+msgstr "Οποιαδήποτε πρόσθετη ενσωμάτωση τρίτων (π.χ. εργαλεία υποστήριξης πελατών, CDNS)."
+
+#: aesirx-consent.php:117
+msgid "Opt-Out of tracking"
+msgstr "Απενεργοποίηση παρακολούθησης"
+
+#: aesirx-consent.php:118
+msgid "This website uses tracking by default. You may opt out at any time."
+msgstr "Αυτός ο ιστότοπος χρησιμοποιεί παρακολούθηση από προεπιλογή. Μπορείτε να εξαιρεθείτε ανά πάσα στιγμή."
+
+#: aesirx-consent.php:119
+msgid "Do Not Sell or Share My Personal Information (CCPA)"
+msgstr "Μην πουλάτε ή μοιράζεστε τα προσωπικά μου δεδομένα (CCPA)"
+
+#: aesirx-consent.php:120
+msgid "Disables third-party data sharing for California users."
+msgstr "Απενεργοποιεί την κοινή χρήση δεδομένων από τρίτους για χρήστες της Καλιφόρνια."
+
+#: includes/settings.php:563
+msgid "Configurable Consent Logic"
+msgstr "Λογική συναίνεσης με δυνατότητα διαμόρφωσης"
+
+#: includes/settings.php:576
+msgid "Opt-In Mode (EU)"
+msgstr "Λειτουργία εγγραφής (ΕΕ)"
+
+#: includes/settings.php:577
+msgid "No tracking technologies are activated until a user explicitly gives consent. This is required by <strong>GDPR</strong> and <strong>ePrivacy Directive 5(3)</strong>."
+msgstr "Καμία τεχνολογία παρακολούθησης δεν ενεργοποιείται μέχρι ο χρήστης να δώσει ρητά τη συγκατάθεσή του. Αυτό απαιτείται από τον <strong>GDPR</strong> και την <strong>Οδηγία ePrivacy 5(3)</strong>."
+
+#: includes/settings.php:585
+msgid "Opt-Out Mode (California)"
+msgstr "Λειτουργία εξαίρεσης (Καλιφόρνια)"
+
+#: includes/settings.php:586
+msgid "Tracking is allowed by default, but users must be able to opt out easily. This aligns with <strong>CCPA</strong> and similar U.S. privacy frameworks."
+msgstr "Η παρακολούθηση επιτρέπεται από προεπιλογή, αλλά οι χρήστες πρέπει να μπορούν να εξαιρεθούν εύκολα. Αυτό ευθυγραμμίζεται με το <strong>CCPA</strong> και παρόμοια πλαίσια απορρήτου των Η.Π.Α."
+
+#: includes/settings.php:617
+msgid "Do not sell or share options"
+msgstr "Μην πουλάτε ή μοιράζεστε επιλογές"
+
+#: includes/settings.php:630
+#: includes/settings.php:736
+msgid "Yes"
+msgstr "Ναι"
+
+#: includes/settings.php:638
+#: includes/settings.php:744
+msgid "No"
+msgstr "Όχι"
+
+#: includes/settings.php:723
+msgid "Enable Geo-handling for Consent Mode"
+msgstr "Ενεργοποίηση γεωγραφικού χειρισμού για τη λειτουργία συναίνεσης"
+
+#: includes/settings.php:759
+msgid "Geo-Based Consent Rules"
+msgstr "Κανόνες συγκατάθεσης βάσει γεωγραφικής θέσης"
+
+#: includes/settings.php:858
+msgid "Browser Language"
+msgstr "Γλώσσα προγράμματος περιήγησης"
+
+#: includes/settings.php:859
+#: includes/settings.php:871
+#: includes/settings.php:888
+msgid "Time Zone"
+msgstr "Ζώνη ώρας"
+
+#: includes/settings.php:861
+msgid "Consent Mode"
+msgstr "Λειτουργία συγκατάθεσης"
+
+#: includes/settings.php:862
+msgid "Allow Override"
+msgstr "Επιτρέψτε την παράκαμψη"
+
+#: includes/settings.php:870
+#: includes/settings.php:887
+msgid "Language"
+msgstr "Γλώσσα"
+
+#: includes/settings.php:873
+#: includes/settings.php:890
+msgid "Select Mode"
+msgstr "Επιλέξτε λειτουργία"
+
+#: includes/settings.php:891
+msgid "Override"
+msgstr "Καταπατώ"
