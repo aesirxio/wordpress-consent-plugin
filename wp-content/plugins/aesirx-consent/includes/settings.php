@@ -193,11 +193,11 @@ add_action('admin_init', function () {
         <div class='aesirx_consent_template'>
           <label class='aesirx_consent_template_item ".($template['datastream_template'] === 'simple-consent-mode' ? 'active' : '')."' for='simple-mode'>
             <img width='585px' height='388px' src='". plugins_url( 'aesirx-consent/assets/images-plugin/consent_simple_mode.png')."' />
-            <p class='title'>".esc_html__('Simple Consent Mode', 'aesirx-consent')."</p>
+            <p class='title'>".esc_html__('Default Consent Mode', 'aesirx-consent')."</p>
             <input id='simple-mode' type='radio' class='analytic-consent-class' name='aesirx_consent_modal_plugin_options[datastream_template]' " .
             ($template['datastream_template'] === 'simple-consent-mode' ? "checked='checked'" : '') .
             " value='simple-consent-mode'  />
-            <p>".esc_html__("Simple Consent Mode follows Google Consent Mode 2.0 by not loading any tags until after consent is given, reducing compliance risks.", 'aesirx-consent')."</p>
+            <p>".esc_html__("Default Consent Mode improves Google Consent Mode 2.0 by not loading any tags until after consent is given, reducing compliance risks.", 'aesirx-consent')."</p>
           </label>
           <label class='aesirx_consent_template_item ".
           (!$template['datastream_template'] || $template['datastream_template'] === 'default' ? 'active' : '') ."' for='default'>
@@ -206,7 +206,7 @@ add_action('admin_init', function () {
             <input type='radio' id='default' class='analytic-consent-class' name='aesirx_consent_modal_plugin_options[datastream_template]' " .
             (!$template['datastream_template'] || $template['datastream_template'] === 'default' ? "checked='checked'" : '') .
             "value='default'  />
-            <p>".esc_html__("The Default setup improves Google Consent Mode 2.0 by not loading any scripts, beacons, or tags until after consent is given, reducing compliance risks. It also includes Decentralized Consent, for more control over personal data and rewards.", 'aesirx-consent')."</p>
+            <p>".esc_html__("Decentralized Consent Mode setup improves Google Consent Mode 2.0 by not loading any scripts, beacons, or tags until after consent is given, reducing compliance risks. It also includes Decentralized Consent, for more control over personal data and rewards.", 'aesirx-consent')."</p>
           </label>
         </div>
       ", aesirx_analytics_escape_html());
@@ -857,7 +857,19 @@ add_action('admin_init', function () {
         <div class="aesirx-consent-rule-header">
           <div>'.esc_html__('Browser Language', 'aesirx-consent').'</div>
           <div>'.esc_html__('Time Zone', 'aesirx-consent').'</div>
-          <div>AND / OR</div>
+          <div class="infor_wrapper">
+            AND / OR
+            <div class="input_information">
+              <img width="20px" height="20px" src="'. plugins_url( 'aesirx-consent/assets/images-plugin/infor_icon.png').'" />
+              <div class="input_information_content">
+                <div>'.esc_html__('Choose how browser language and time zone are combined to determine consent rules:', 'aesirx-consent').'</div>
+                <ul>
+                  <li>'.sprintf(__('<strong>AND Logic (Stricter Match):</strong> Both language and time zone must match a region for its consent model to apply. Ideal for high-accuracy targeting.', 'aesirx-consent')).'</li>
+                  <li>'.sprintf(__('<strong>OR Logic (More Flexible):</strong> Either language or time zone can match to apply a region’s consent model. Best for broader coverage based on user preferences.', 'aesirx-consent')).'</li>
+                </ul>
+              </div>
+            </div>
+          </div>
           <div>'.esc_html__('Consent Mode', 'aesirx-consent').'</div>
           <div>'.esc_html__('Allow Override', 'aesirx-consent').'</div>
           <div></div>
