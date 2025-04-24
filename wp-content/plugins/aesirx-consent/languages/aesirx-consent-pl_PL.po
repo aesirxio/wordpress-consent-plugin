@@ -49,7 +49,7 @@ msgid "Invalid domain format."
 msgstr "Nieprawidłowy format domeny."
 
 #: aesirx-consent.php:43
-#: includes/settings.php:1225
+#: includes/settings.php:1237
 msgid "Consent"
 msgstr "Zgoda"
 
@@ -226,306 +226,306 @@ msgid "Aesirx Consent plugin. When you join forces with AesirX, you're not just 
 msgstr "Wtyczka zgody AesirX. Dołączając do AesirX, nie zostajesz tylko Partnerem - stajesz się również obrońcą wolności w walce o prywatność! Zarób 25% prowizji partnerskiej <a href=\"https://aesirx.io/partner?utm_source=wpplugin&utm_medium=web&utm_campaign=wordpress&utm_id=aesirx&utm_term=wordpress&utm_content=analytics\">[Kliknij, aby dołączyć]</a>"
 
 #: aesirx-consent.php:39
-#: includes/settings.php:1221
+#: includes/settings.php:1233
 msgid "Shield of Privacy"
 msgstr "Shield of Privacy"
 
 #: aesirx-consent.php:40
-#: includes/settings.php:1222
+#: includes/settings.php:1234
 msgid "Revoke your consent for data use whenever you wish."
 msgstr "Cofnij swoją zgodę na wykorzystanie danych, kiedy tylko zechcesz."
 
 #: aesirx-consent.php:41
-#: includes/settings.php:1223
+#: includes/settings.php:1235
 msgid "Manage Decentralized Consent"
 msgstr "Zarządzaj zdecentralizowaną zgodą"
 
 #: aesirx-consent.php:42
-#: includes/settings.php:1224
+#: includes/settings.php:1236
 msgid "Revoke Consent"
 msgstr "Cofnij zgodę"
 
 #: aesirx-consent.php:44
-#: includes/settings.php:1226
+#: includes/settings.php:1238
 msgid "Reject"
 msgstr "Odrzuć"
 
 #: aesirx-consent.php:45
-#: includes/settings.php:1227
+#: includes/settings.php:1239
 msgid "Please connect your Web3 wallet"
 msgstr "Proszę połączyć swój portfel Web3"
 
 #: aesirx-consent.php:46
-#: includes/settings.php:1228
+#: includes/settings.php:1240
 msgid "Please sign the message on your wallet twice and wait for it to be saved."
 msgstr "Proszę podpisać wiadomość w portfelu dwa razy i poczekać, aż zostanie zapisana."
 
 #: aesirx-consent.php:47
-#: includes/settings.php:1229
+#: includes/settings.php:1241
 msgid "Saving..."
 msgstr "Zapisywanie..."
 
 #: aesirx-consent.php:48
-#: includes/settings.php:1230
+#: includes/settings.php:1242
 msgid "Please connect to your wallet"
 msgstr "Połącz się ze swoim portfelem"
 
 #: aesirx-consent.php:49
-#: includes/settings.php:1231
+#: includes/settings.php:1243
 msgid "Connecting"
 msgstr "Łączenie"
 
 #: aesirx-consent.php:50
-#: includes/settings.php:1232
+#: includes/settings.php:1244
 msgid "TRACKING AND DATA PRIVACY PREFERENCES"
 msgstr "PREFERENCJE ŚLEDZENIA I PRYWATNOŚCI DANYCH"
 
 #: aesirx-consent.php:51
-#: includes/settings.php:1233
+#: includes/settings.php:1245
 msgid "About"
 msgstr "O programie"
 
 #: aesirx-consent.php:52
 #: aesirx-consent.php:101
-#: includes/settings.php:1234
-#: includes/settings.php:1283
+#: includes/settings.php:1246
+#: includes/settings.php:1295
 msgid "Details"
 msgstr "Szczegóły"
 
 #: aesirx-consent.php:53
 #: aesirx-consent.php:81
-#: includes/settings.php:1235
-#: includes/settings.php:1263
+#: includes/settings.php:1247
+#: includes/settings.php:1275
 msgid "Decentralized Consent"
 msgstr "Zdecentralizowana zgoda"
 
 #: aesirx-consent.php:54
-#: includes/settings.php:1236
+#: includes/settings.php:1248
 msgid "Manage Your Consent Preferences"
 msgstr "Zarządzaj swoimi preferencjami zgody"
 
 #: aesirx-consent.php:55
-#: includes/settings.php:1237
+#: includes/settings.php:1249
 msgid "Choose how we use your data: \"Reject\" data collection, allow tracking [\"Consent\"], or use \"Decentralized Consent\" for more control over your personal data & rewards."
 msgstr "Wybierz, jak używamy Twoich danych: 'Odrzuć' zbieranie danych, zezwól na śledzenie ['Zgoda'], lub użyj 'Zdecentralizowanej Zgody' dla większej kontroli nad Twoimi danymi osobistymi i nagrodami."
 
 #: aesirx-consent.php:56
-#: includes/settings.php:1238
+#: includes/settings.php:1250
 msgid "Choose how we use your data: \"Reject\" data collection, allow tracking [\"Consent\"]."
 msgstr "Wybierz, jak używamy Twoich danych: \"Odrzuć\" zbieranie danych, zezwól na śledzenie [\"Zgoda\"]."
 
 #: aesirx-consent.php:57
-#: includes/settings.php:1239
+#: includes/settings.php:1251
 msgid "By consenting, you allow us to collect & use your data for:"
 msgstr "Wyrażając zgodę, pozwalasz nam zbierać i używać Twoich danych do:"
 
 #: aesirx-consent.php:58
-#: includes/settings.php:1240
+#: includes/settings.php:1252
 msgid "Analytics & Behavioral Data: To improve our services & personalize your experience."
 msgstr "Dane analityczne i behawioralne: Aby ulepszyć nasze usługi i spersonalizować Twoje doświadczenie."
 
 #: aesirx-consent.php:59
-#: includes/settings.php:1241
+#: includes/settings.php:1253
 msgid "Form Data: When you contact us."
 msgstr "Dane formularza: Gdy się z nami kontaktujesz."
 
 #: aesirx-consent.php:60
-#: includes/settings.php:1242
+#: includes/settings.php:1254
 msgid "Please note"
 msgstr "Proszę zauważyć"
 
 #: aesirx-consent.php:61
-#: includes/settings.php:1243
+#: includes/settings.php:1255
 msgid "We do not share your data with third parties without your explicit consent."
 msgstr "Nie udostępniamy twoich danych osobom trzecim bez twojej wyraźnej zgody."
 
 #: aesirx-consent.php:62
-#: includes/settings.php:1244
+#: includes/settings.php:1256
 msgid "You can opt-in later for specific features without giving blanket consent."
 msgstr "Możesz później wyrazić zgodę na konkretne funkcje bez udzielania ogólnej zgody."
 
 #: aesirx-consent.php:63
-#: includes/settings.php:1245
+#: includes/settings.php:1257
 msgid "For more details, refer to our <a class='text-success fw-semibold text-decoration-underline' href='https://aesirx.io/privacy-policy' target='_blank'>privacy policy.</a>"
 msgstr "Aby uzyskać więcej informacji, zapoznaj się z naszą <a class='text-success fw-semibold text-decoration-underline' href='https://aesirx.io/privacy-policy' target='_blank'>polityką prywatności.</a>"
 
 #: aesirx-consent.php:64
-#: includes/settings.php:1246
+#: includes/settings.php:1258
 msgid "Benefits"
 msgstr "Korzyści"
 
 #: aesirx-consent.php:65
-#: includes/settings.php:1247
+#: includes/settings.php:1259
 msgid "<span class='fw-semibold text-primary'>Control your data:</span> Choose your preferred level of data collection & tracking."
 msgstr "<span class='fw-semibold text-primary'>Kontroluj swoje dane:</span> Wybierz preferowany poziom zbierania i śledzenia danych."
 
 #: aesirx-consent.php:66
-#: includes/settings.php:1248
+#: includes/settings.php:1260
 msgid "<span class='fw-semibold text-primary'>Earn rewards:</span> Participate in decentralized consent for privacy & rewards."
 msgstr "<span class='fw-semibold text-primary'>Zarabiaj nagrody:</span> Uczestnicz w zdecentralizowanej zgodzie na prywatność i nagrody."
 
 #: aesirx-consent.php:67
-#: includes/settings.php:1249
+#: includes/settings.php:1261
 msgid "<span class='fw-semibold text-primary'>Transparent data collection practices:</span> Understand how your data is collected & used."
 msgstr "<span class='fw-semibold text-primary'>Przejrzyste praktyki zbierania danych:</span> Zrozum, jak są zbierane i wykorzystywane Twoje dane."
 
 #: aesirx-consent.php:68
-#: includes/settings.php:1250
+#: includes/settings.php:1262
 msgid "Understanding Your Privacy Choices"
 msgstr "Zrozumienie Twoich Wybórów Prywatności"
 
 #: aesirx-consent.php:69
-#: includes/settings.php:1251
+#: includes/settings.php:1263
 msgid "<span class='fw-semibold text-primary'>Reject:</span> No data will be collected or loaded except for anonymized page views & rejections. Some personalization features may be disabled."
 msgstr "<span class='fw-semibold text-primary'>Odrzuć:</span> Nie będą zbierane ani ładowane żadne dane, poza anonimizowanymi wyświetleniami stron i odrzuceniami. Niektóre funkcje personalizacji mogą być wyłączone."
 
 #: aesirx-consent.php:70
-#: includes/settings.php:1252
+#: includes/settings.php:1264
 msgid "<span class='fw-semibold text-primary'>Consent:</span> First & third-party tracking data will be collected to enhance your experience."
 msgstr "<span class='fw-semibold text-primary'>Zgoda:</span> Dane śledzenia stron pierwszej i trzeciej będą zbierane w celu poprawy Twojego doświadczenia."
 
 #: aesirx-consent.php:71
-#: includes/settings.php:1253
+#: includes/settings.php:1265
 msgid "<span class='fw-semibold text-primary'>Decentralized Consent:</span> Choose Decentralized Wallets or Decentralized Wallet + Shield of Privacy. Both options let you manage & revoke consent on-site or through AesirX dApp, plus earn rewards from digital marketing activities."
 msgstr "<span class='fw-semibold text-primary'>Zdecentralizowana Zgoda:</span> Wybierz Zdecentralizowane Portfele lub Zdecentralizowany Portfel + Tarcza Prywatności. Obydwie opcje pozwalają zarządzać i cofać zgodę na miejscu lub za pomocą aplikacji AesirX dApp, a także zdobywać nagrody z działań marketingowych online."
 
 #: aesirx-consent.php:72
-#: includes/settings.php:1254
+#: includes/settings.php:1266
 msgid "Our Commitment in Action"
 msgstr "Nasze Zaangażowanie w Działaniu"
 
 #: aesirx-consent.php:73
-#: includes/settings.php:1255
+#: includes/settings.php:1267
 msgid "<span class='fw-semibold text-primary'>Privacy Protection:</span> Users have full control over their data, ensuring maximum privacy."
 msgstr "<span class='fw-semibold text-primary'>Ochrona prywatności:</span> Użytkownicy mają pełną kontrolę nad swoimi danymi, co zapewnia maksymalną prywatność."
 
 #: aesirx-consent.php:74
-#: includes/settings.php:1256
+#: includes/settings.php:1268
 msgid "<span class='fw-semibold text-primary'>Enables Compliance:</span> Using Shield of Privacy (SoP) ensures compliance with GDPR, CCPA, ePrivacy Directive, & other data protection regulations."
 msgstr "<span class='fw-semibold text-primary'>Umożliwia Zgodność:</span> Używanie Tarczy Prywatności (SoP) zapewnia zgodność z GDPR, CCPA, dyrektywą ePrivacy oraz innymi regulacjami ochrony danych."
 
 #: aesirx-consent.php:75
-#: includes/settings.php:1257
+#: includes/settings.php:1269
 msgid "<span class='fw-semibold text-primary'>Proactive Protection:</span> We enhance privacy measures to safeguard your data integrity."
 msgstr "<span class='fw-semibold text-primary'>Proaktywna Ochrona:</span> Wzmacniamy środki ochrony prywatności, aby zabezpieczyć integralność Twoich danych."
 
 #: aesirx-consent.php:76
-#: includes/settings.php:1258
+#: includes/settings.php:1270
 msgid "<span class='fw-semibold text-primary'>Flexible Consent:</span> You can withdraw your consent anytime on-site or via our <a class='text-success fw-semibold text-decoration-underline' href='https://dapp.shield.aesirx.io' target='_blank'>dApp</a> (Decentralized Application)."
 msgstr "<span class='fw-semibold text-primary'>Elastyczna zgoda:</span> Możesz wycofać swoją zgodę w dowolnym momencie na miejscu lub za pośrednictwem naszej <a class='text-success fw-semibold text-decoration-underline' href='https://dapp.shield.aesirx.io' target='_blank'>dApp</a> (Zdecentralizowana Aplikacja)."
 
 #: aesirx-consent.php:77
-#: includes/settings.php:1259
+#: includes/settings.php:1271
 msgid "<span class='fw-semibold text-primary'>Learn More:</span> Discover our approach to data processing in our <a class='text-success fw-semibold text-decoration-underline' href='https://aesirx.io/privacy-policy' target='_blank'>Privacy Policy</a>."
 msgstr "<span class='fw-semibold text-primary'>Dowiedz się więcej:</span> Poznaj nasze podejście do przetwarzania danych w naszej <a class='text-success fw-semibold text-decoration-underline' href='https://aesirx.io/privacy-policy' target='_blank'>Polityce Prywatności</a>."
 
 #: aesirx-consent.php:78
-#: includes/settings.php:1260
+#: includes/settings.php:1272
 msgid "<span class='fw-semibold text-primary'>For Businesses:</span> Enhance trust, secure user identities, & prevent breaches."
 msgstr "<span class='fw-semibold text-primary'>Dla firm:</span> Zwiększ zaufanie, zabezpiecz tożsamości użytkowników i zapobiegaj naruszeniom."
 
 #: aesirx-consent.php:79
-#: includes/settings.php:1261
+#: includes/settings.php:1273
 msgid "More info at <a class='text-success fw-semibold text-decoration-underline' href='https://shield.aesirx.io' target='_blank'>https://shield.aesirx.io</a>."
 msgstr "Więcej informacji na <a class='text-success fw-semibold text-decoration-underline' href='https://shield.aesirx.io' target='_blank'>https://shield.aesirx.io</a>."
 
 #: aesirx-consent.php:80
-#: includes/settings.php:1262
+#: includes/settings.php:1274
 msgid "Select your preferred decentralized consent option:"
 msgstr "Wybierz preferowaną opcję zdecentralizowanej zgody:"
 
 #: aesirx-consent.php:82
-#: includes/settings.php:1264
+#: includes/settings.php:1276
 msgid "Decentralized consent will be loaded"
 msgstr "Zostanie załadowana zdecentralizowana zgoda"
 
 #: aesirx-consent.php:83
-#: includes/settings.php:1265
+#: includes/settings.php:1277
 msgid "Both first-party & third-party tracking data will be activated."
 msgstr "Dane śledzenia zarówno pierwszej, jak i trzeciej strony zostaną aktywowane."
 
 #: aesirx-consent.php:84
-#: includes/settings.php:1266
+#: includes/settings.php:1278
 msgid "All consented data will be collected."
 msgstr "Wszystkie dane, na które wyrażono zgodę, zostaną zebrane."
 
 #: aesirx-consent.php:85
-#: includes/settings.php:1267
+#: includes/settings.php:1279
 msgid "Users can revoke consent on-site at any time."
 msgstr "Użytkownicy mogą w każdej chwili odwołać zgodę na stronie."
 
 #: aesirx-consent.php:86
-#: includes/settings.php:1268
+#: includes/settings.php:1280
 msgid "Decentralized Consent + Shield of Privacy"
 msgstr "Zdecentralizowana zgoda + Tarcza prywatności"
 
 #: aesirx-consent.php:87
-#: includes/settings.php:1269
+#: includes/settings.php:1281
 msgid "Users can revoke consent on-site or from the AesirX dApp at any time."
 msgstr "Użytkownicy mogą w każdej chwili cofnąć zgodę na stronie lub z aplikacji AesirX dApp."
 
 #: aesirx-consent.php:88
-#: includes/settings.php:1270
+#: includes/settings.php:1282
 msgid "Users can earn rewards from digital marketing activities."
 msgstr "Użytkownicy mogą zdobywać nagrody z działań marketingu cyfrowego."
 
 #: aesirx-consent.php:89
-#: includes/settings.php:1271
+#: includes/settings.php:1283
 msgid "Continue"
 msgstr "Kontynuuj"
 
 #: aesirx-consent.php:90
-#: includes/settings.php:1272
+#: includes/settings.php:1284
 msgid "Back"
 msgstr "Wstecz"
 
 #: aesirx-consent.php:91
-#: includes/settings.php:1273
+#: includes/settings.php:1285
 msgid "You've chosen to reject data collection:"
 msgstr "Wybrałeś odrzucenie zbierania danych:"
 
 #: aesirx-consent.php:92
-#: includes/settings.php:1274
+#: includes/settings.php:1286
 msgid "Only anonymized page views & limited features will be available. To access all website features, including personalized content & enhanced functionality, please choose an option:"
 msgstr "Dostępne będą tylko zanonimizowane odsłony stron i ograniczone funkcje. Aby uzyskać dostęp do wszystkich funkcji witryny, w tym spersonalizowanych treści i rozszerzonej funkcjonalności, wybierz opcję:"
 
 #: aesirx-consent.php:93
-#: includes/settings.php:1275
+#: includes/settings.php:1287
 msgid "<span class='fw-semibold text-primary'>Consent:</span> Allow data collection for analytics, form data (when you contact us), & behavioral & event tracking, with the option to opt-in for specific features."
 msgstr "<span class='fw-semibold text-primary'>Zgoda:</span> Zezwól na zbieranie danych do analiz, danych z formularzy (gdy się z nami kontaktujesz) oraz śledzenie zachowań i zdarzeń, z opcją wyboru dla określonych funkcji."
 
 #: aesirx-consent.php:94
-#: includes/settings.php:1276
+#: includes/settings.php:1288
 msgid "<span class='fw-semibold text-primary'>Decentralized Consent:</span> Allow data collection for analytics, form data (when you contact us), & behavioral & event tracking, with the option to revoke consent, opt-in for specific features, & earn rewards from digital marketing activities."
 msgstr "<span class='fw-semibold text-primary'>Zdecentralizowana zgoda:</span> Zezwalaj na zbieranie danych do analiz, danych z formularzy (gdy się z nami kontaktujesz) oraz śledzenie zachowań i zdarzeń, z opcją wycofania zgody, wyboru określonych funkcji i zdobywania nagród z działań marketingowych."
 
 #: aesirx-consent.php:95
-#: includes/settings.php:1277
+#: includes/settings.php:1289
 msgid "You can revoke consent on the site or any explicit opt-in consent, such as payment processing, at any time"
 msgstr "Możesz cofnąć zgodę na stronie lub jakąkolwiek wyraźną zgodę, taką jak przetwarzanie płatności, w dowolnym momencie"
 
 #: aesirx-consent.php:96
-#: includes/settings.php:1278
+#: includes/settings.php:1290
 msgid "Revoke Opt-In Consent"
 msgstr "Cofnij zgodę na Opt-In"
 
 #: aesirx-consent.php:97
-#: includes/settings.php:1279
+#: includes/settings.php:1291
 msgid "Revoke Opt-In Consent for Payment Processing"
 msgstr "Odwołaj zgodę Opt-In na przetwarzanie płatności"
 
 #: aesirx-consent.php:98
-#: includes/settings.php:1280
+#: includes/settings.php:1292
 msgid "Revoke Opt-In Consent for AesirX Privacy Advisor AI"
 msgstr "Cofnij zgodę na opt-in dla AesirX Privacy Advisor AI"
 
 #: aesirx-consent.php:99
-#: includes/settings.php:1281
+#: includes/settings.php:1293
 msgid "Revoke Consent for the site"
 msgstr "Odwołaj zgodę dla strony"
 
 #: aesirx-consent.php:100
-#: includes/settings.php:1282
+#: includes/settings.php:1294
 msgid "Consent Management"
 msgstr "Zarządzanie Zgodami"
 
@@ -586,20 +586,20 @@ msgstr "Tylko hosty zewnętrzne (domyślnie)"
 msgid "Both First and Third-Party Hosts"
 msgstr "Hosty Pierwszej i Trzeciej Strony"
 
-#: includes/settings.php:926
+#: includes/settings.php:938
 msgid "Need Help? Access Our Comprehensive Documentation Hub"
 msgstr "Potrzebujesz pomocy? Skorzystaj z naszego Obszernego Centrum Dokumentacji"
 
-#: includes/settings.php:1367
-#: includes/settings.php:1447
+#: includes/settings.php:1379
+#: includes/settings.php:1459
 msgid "Your trial license ends in %1$s days. Please update new license <a href='%2$s' target='_blank'>%2$s</a>."
 msgstr "Twoja licencja próbna kończy się za %1$s dni. Proszę zaktualizować nową licencję <a href='%2$s' target='_blank'>%2$s</a>."
 
-#: includes/settings.php:1396
+#: includes/settings.php:1408
 msgid "Your license is expried or not found. Please update new license <a href='%1$s' target='_blank'>%1$s</a>."
 msgstr "Twoja licencja wygasła lub nie została znaleziona. Zaktualizuj nową licencję na <a href='%1$s' target='_blank'>%1$s</a>."
 
-#: includes/settings.php:1450
+#: includes/settings.php:1462
 msgid "Your free trials has ended. Please update your license. <a href='%1$s' target='_blank'>%1$s</a>."
 msgstr "Twój darmowy okres próbny dobiegł końca. Proszę zaktualizować licencję. <a href='%1$s' target='_blank'>%1$s</a>."
 
@@ -670,30 +670,30 @@ msgstr "Blokowanie JavaScriptu z domen stron trzecich, umożliwiając normalne d
 msgid "Blocks JavaScript from both first-party & third-party domains for comprehensive script control, giving you the ability to block any JavaScript from internal or external sources based on user consent."
 msgstr "Blokowanie JavaScript zarówno z domen pierwszej, jak i trzeciej strony dla kompleksowej kontroli skryptów, umożliwiając blokowanie dowolnego JavaScript z wewnętrznych lub zewnętrznych źródeł na podstawie zgody użytkownika."
 
-#: includes/settings.php:936
+#: includes/settings.php:948
 msgid "Discover the latest features & best practices."
 msgstr "Odkryj najnowsze funkcje i najlepsze praktyki."
 
-#: includes/settings.php:963
+#: includes/settings.php:975
 msgid "Haven't got a license yet?"
 msgstr "Nie masz jeszcze licencji?"
 
-#: includes/settings.php:992
+#: includes/settings.php:1004
 msgid "Scan Your Site for Privacy Risks"
 msgstr "Skanuj swoją stronę pod kątem zagrożeń prywatności"
 
-#: includes/settings.php:996
+#: includes/settings.php:1008
 msgid "Use the Privacy Scanner to quickly identify scripts, tags, & trackers running on your site that may compromise user privacy."
 msgstr "Użyj Skanera Prywatności, aby szybko zidentyfikować skrypty, tagi i trackery działające na Twojej stronie, które mogą naruszać prywatność użytkowników."
 
-#: includes/settings.php:1002
+#: includes/settings.php:1014
 msgid "Use Consent Shield to block those scripts by adding their domains or paths, ensuring quick & simple compliance."
 msgstr "Użyj Consent Shield, aby zablokować te skrypty, dodając ich domeny lub ścieżki, co zapewnia szybkie i proste przestrzeganie przepisów."
 
-#: includes/settings.php:1055
-#: includes/settings.php:1117
-#: includes/settings.php:1150
-#: includes/settings.php:1183
+#: includes/settings.php:1067
+#: includes/settings.php:1129
+#: includes/settings.php:1162
+#: includes/settings.php:1195
 msgid "Save settings"
 msgstr "Zapisz ustawienia"
 
@@ -701,15 +701,15 @@ msgstr "Zapisz ustawienia"
 msgid "License Key"
 msgstr "Klucz licencyjny"
 
-#: includes/settings.php:965
+#: includes/settings.php:977
 msgid "Haven't got Shield of Privacy ID yet?"
 msgstr "Nie masz jeszcze ID Tarczy Prywatności?"
 
-#: includes/settings.php:1011
+#: includes/settings.php:1023
 msgid "Learn how to use AesirX Privacy Scanner with Consent Shield to detect privacy-intrusive elements, using the JetPack plugin as an example."
 msgstr "Dowiedz się, jak używać AesirX Privacy Scanner z Consent Shield do wykrywania elementów naruszających prywatność, używając wtyczki JetPack jako przykładu."
 
-#: includes/settings.php:1414
+#: includes/settings.php:1426
 msgid "Your license ends in %1$s days. Please update new license <a href='%2$s' target='_blank'>%2$s</a>."
 msgstr "Twoja licencja kończy się za %1$s dni. Proszę zaktualizować nową licencję <a href='%2$s' target='_blank'>%2$s</a>."
 
@@ -723,10 +723,6 @@ msgstr "<div class='input_information_content'>Zarejestruj się, aby uzyskać id
 msgid "To configure, input your Google Tag Manager Gtag ID & GTM ID in the designated fields. Once set up, Google Tag Manager will only load after the user provides consent."
 msgstr "Aby skonfigurować, wprowadź swój identyfikator Gtag i identyfikator GTM Google Tag Manager w wyznaczonych polach. Po skonfigurowaniu, Google Tag Manager załaduje się tylko po wyrażeniu zgody przez użytkownika."
 
-#: includes/settings.php:196
-msgid "Simple Consent Mode"
-msgstr "Prosty Tryb Zgody"
-
 #: includes/settings.php:234
 #: includes/settings.php:259
 msgid ""
@@ -734,15 +730,15 @@ msgid ""
 "          Remember to include the explicit purpose (e.g., analytics, marketing) in the consent text to inform users why GTM is being used.</div>"
 msgstr "<div class='input_information_content'>Pamiętaj, aby dołączyć wyraźny cel (np. analiza, marketing) w tekście zgody, aby informować użytkowników, dlaczego używany jest GTM.</div>"
 
-#: includes/settings.php:969
+#: includes/settings.php:981
 msgid "Register Licence Here"
 msgstr "Zarejestruj licencję tutaj"
 
-#: includes/settings.php:974
+#: includes/settings.php:986
 msgid "Sign up now"
 msgstr "Zarejestruj się teraz"
 
-#: includes/settings.php:930
+#: includes/settings.php:942
 msgid "Explore How-To Guides, instructions, & tutorials to get the most from AesirX Consent Shield. Whether you're a developer or admin, find all you need to configure & optimize your privacy setup."
 msgstr "Odkryj poradniki, instrukcje i tutoriale, aby w pełni wykorzystać AesirX Consent Shield. Niezależnie od tego, czy jesteś deweloperem, czy administratorem, znajdziesz wszystko, co potrzebne do skonfigurowania i optymalizacji ustawień prywatności."
 
@@ -758,7 +754,7 @@ msgstr "Zresetuj zgodę"
 msgid "Important: Permalink Settings Required"
 msgstr "Ważne: Wymagane ustawienia linków stałych"
 
-#: includes/settings.php:1440
+#: includes/settings.php:1452
 msgid "Your trial license ends in %1$s hour(s). Please update your license <a href='%2$s' target='_blank'>here</a>."
 msgstr "Twoja licencja próbna kończy się za %1$s godzinę/godziny/godzin. Zaktualizuj swoją licencję <a href='%2$s' target='_blank'>tutaj</a>."
 
@@ -779,11 +775,11 @@ msgstr "kliknij tutaj"
 msgid "GTM General"
 msgstr "Ogólny GTM"
 
-#: includes/settings.php:1373
+#: includes/settings.php:1385
 msgid "Something went wrong: %1$s. Please contact the administrator."
 msgstr "Coś poszło nie tak: %1$s. Proszę skontaktować się z administratorem."
 
-#: includes/settings.php:1420
+#: includes/settings.php:1432
 msgid "Check license failed: %1$s. Please contact the administrator or update your license."
 msgstr "Nie udało się sprawdzić licencji: %1$s. Proszę skontaktować się z administratorem lub zaktualizować licencję."
 
@@ -791,15 +787,7 @@ msgstr "Nie udało się sprawdzić licencji: %1$s. Proszę skontaktować się z 
 msgid "Check license failed: %1\\$s. Please contact the administrator."
 msgstr "Sprawdź licencję, która nie powiodła się: %1\\$s. Kontakt venligst administratoren."
 
-#: includes/settings.php:209
-msgid "The Default setup improves Google Consent Mode 2.0 by not loading any scripts, beacons, or tags until after consent is given, reducing compliance risks. It also includes Decentralized Consent, for more control over personal data and rewards."
-msgstr "Domyślna konfiguracja poprawia Google Consent Mode 2.0, nie ładując skryptów, beaconów ani tagów do momentu wyrażenia zgody, co zmniejsza ryzyko niezgodności. Zawiera również Zdecentralizowaną Zgodę, dla większej kontroli nad danymi osobowymi i nagrodami."
-
-#: includes/settings.php:200
-msgid "Simple Consent Mode follows Google Consent Mode 2.0 by not loading any tags until after consent is given, reducing compliance risks."
-msgstr "Prosty Tryb Zgody stosuje się do Google Consent Mode 2.0, nie ładując żadnych znaczników do momentu wyrażenia zgody, co zmniejsza ryzyko niezgodności."
-
-#: includes/settings.php:1403
+#: includes/settings.php:1415
 msgid "Your domain is not match with your license. Please update domain in your license <a href='%1$s' target='_blank'>%1$s</a> and click <span class='verify_domain'>here</span> to verify again."
 msgstr "Twoja domena nie pasuje do Twojej licencji. Zaktualizuj domenę w swojej licencji <a href='%1$s' target='_blank'>%1$s</a> i kliknij <span class='verify_domain'>tutaj</span>, aby zweryfikować ponownie."
 
@@ -987,29 +975,53 @@ msgid "Browser Language"
 msgstr "Język przeglądarki"
 
 #: includes/settings.php:859
-#: includes/settings.php:871
-#: includes/settings.php:888
+#: includes/settings.php:883
+#: includes/settings.php:900
 msgid "Time Zone"
 msgstr "Strefa czasowa"
 
-#: includes/settings.php:861
+#: includes/settings.php:873
 msgid "Consent Mode"
 msgstr "Tryb zgody"
 
-#: includes/settings.php:862
+#: includes/settings.php:874
 msgid "Allow Override"
 msgstr "Zezwól na zastąpienie"
 
-#: includes/settings.php:870
-#: includes/settings.php:887
+#: includes/settings.php:882
+#: includes/settings.php:899
 msgid "Language"
 msgstr "Język"
 
-#: includes/settings.php:873
-#: includes/settings.php:890
+#: includes/settings.php:885
+#: includes/settings.php:902
 msgid "Select Mode"
 msgstr "Wybierz tryb"
 
-#: includes/settings.php:891
+#: includes/settings.php:903
 msgid "Override"
 msgstr "Zastąp"
+
+#: includes/settings.php:196
+msgid "Default Consent Mode"
+msgstr "Domyślny tryb zgody"
+
+#: includes/settings.php:200
+msgid "Default Consent Mode improves Google Consent Mode 2.0 by not loading any tags until after consent is given, reducing compliance risks."
+msgstr "Domyślny tryb zgody ulepsza tryb zgody Google 2.0, nie ładując żadnych tagów do momentu wyrażenia zgody, co zmniejsza ryzyko niezgodności."
+
+#: includes/settings.php:209
+msgid "Decentralized Consent Mode setup improves Google Consent Mode 2.0 by not loading any scripts, beacons, or tags until after consent is given, reducing compliance risks. It also includes Decentralized Consent, for more control over personal data and rewards."
+msgstr "Konfiguracja zdecentralizowanego trybu zgody ulepsza tryb zgody Google 2.0, nie ładując żadnych skryptów, sygnałów nawigacyjnych ani tagów do momentu wyrażenia zgody, co zmniejsza ryzyko niezgodności. Obejmuje również zdecentralizowaną zgodę, zapewniając większą kontrolę nad danymi osobowymi i nagrodami."
+
+#: includes/settings.php:865
+msgid "Choose how browser language and time zone are combined to determine consent rules:"
+msgstr "Wybierz sposób łączenia języka przeglądarki i strefy czasowej w celu określenia reguł zgody:"
+
+#: includes/settings.php:867
+msgid "<strong>AND Logic (Stricter Match):</strong> Both language and time zone must match a region for its consent model to apply. Ideal for high-accuracy targeting."
+msgstr "<strong>Logika AND (ściślejsze dopasowanie):</strong> Zarówno język, jak i strefa czasowa muszą być zgodne z regionem, aby można było zastosować model zgody. Idealne do kierowania o wysokiej dokładności."
+
+#: includes/settings.php:868
+msgid "<strong>OR Logic (More Flexible):</strong> Either language or time zone can match to apply a region’s consent model. Best for broader coverage based on user preferences."
+msgstr "<strong>Logika OR (bardziej elastyczna):</strong> Można dopasować język lub strefę czasową, aby zastosować model zgody regionu. Najlepiej nadaje się do szerszego zasięgu w oparciu o preferencje użytkownika."
