@@ -17,6 +17,7 @@ Class AesirX_Analytics_Get_All_Consents extends AesirxAnalyticsMysqlHelper
         $sql =
             "SELECT 
             visitor_consent.consent_uuid AS uuid, 
+            visitor_consent.ip_consent AS ip, 
             consent.web3id, 
             COALESCE(consent.consent, visitor_consent.consent) AS consent, 
             COALESCE(consent.datetime, visitor_consent.datetime) AS datetime, 
@@ -76,6 +77,7 @@ Class AesirX_Analytics_Get_All_Consents extends AesirxAnalyticsMysqlHelper
         foreach ($list as $one) {
             $one = (object) $one;
             $uuid = isset($one->uuid) ? $one->uuid : null;
+            $ip = isset($one->ip) ? $one->ip : null;
             $wallet = isset($one->wallet_uuid) ? (object)[
                 'uuid' => $one->wallet_uuid,
                 'address' => $one->address,
@@ -84,6 +86,7 @@ Class AesirX_Analytics_Get_All_Consents extends AesirxAnalyticsMysqlHelper
             
             $collection[] = (object)[
                 'uuid' => $uuid,
+                'ip' => $ip,
                 'tier' => $one->tier,
                 'web3id' => $one->web3id,
                 'consent' => $one->consent,

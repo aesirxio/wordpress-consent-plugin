@@ -782,6 +782,11 @@ if (!class_exists('AesirxAnalyticsMysqlHelper')) {
                         break;
                 }
             }
+
+            $ip = get_real_ip();
+            if (!empty($ip)) {
+                $data['ip_consent'] = $ip;
+            }
             
             // Prepare the data types based on the keys
             $data_types = array_fill(0, count($data), '%s'); // Default to '%s' for all
