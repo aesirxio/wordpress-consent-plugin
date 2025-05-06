@@ -130,14 +130,18 @@ add_action('wp_enqueue_scripts', function (): void {
             : rtrim($options['domain'] ?? '', '/');
 
     $trackEcommerce = ($options['track_ecommerce'] ?? 'true') === 'true' ? 'true': 'false';
-    $blockingCookiesPath = isset($options['blocking_cookies']) && count($options['blocking_cookies']) > 0 ? $options['blocking_cookies'] : [];
+    $blockingCookiesPath =  isset($options['blocking_cookies']) 
+        ? array_filter($options['blocking_cookies'], fn($v) => trim($v) !== '') 
+        : [];
     $blockingCookiesCategory = isset($options['blocking_cookies_category']) && count($options['blocking_cookies_category']) > 0 ? $options['blocking_cookies_category'] : [];
     $arrayCookiesPlugins =  isset($options['blocking_cookies_plugins']) &&  count($options['blocking_cookies_plugins']) > 0 ? $options['blocking_cookies_plugins'] : [];
     $arrayCookiesPluginsCategory =  isset($options['blocking_cookies_plugins_category']) &&  count($options['blocking_cookies_plugins_category']) > 0 ? $options['blocking_cookies_plugins_category'] : [];
     $prefix = "wp-content/plugins/";
-    $blockingCookiesPlugins =  isset($options['blocking_cookies_plugins']) &&  count($options['blocking_cookies_plugins']) > 0 ? array_map(function($value) use ($prefix) {
-        return $prefix . $value;
-    }, $arrayCookiesPlugins) : [];
+    $blockingCookiesPlugins = isset($options['blocking_cookies_plugins']) && count($options['blocking_cookies_plugins']) > 0
+        ? array_map(function($value) use ($prefix) {
+            return $prefix . $value;
+        }, array_filter($arrayCookiesPlugins, fn($v) => trim($v) !== ''))
+        : [];
 
     $blockingCookiesPluginsCategory = [];
     $blockingCookiesPluginsName = [];
@@ -159,7 +163,7 @@ add_action('wp_enqueue_scripts', function (): void {
         ];
     }, array_values($blockingCookies), array_keys(array_values($blockingCookies)));
     
-    $blockingCookiesJSON = isset($options['blocking_cookies']) && count($options['blocking_cookies']) > 0 
+    $blockingCookiesJSON = (isset($options['blocking_cookies']) && count($options['blocking_cookies']) > 0  || isset($options['blocking_cookies_plugins']) && count($options['blocking_cookies_plugins']) > 0 )
         ? wp_json_encode($blockingCookiesObjects)
         : '[]';
 
@@ -468,11 +472,17 @@ if (!$consent) {
         global $wp_scripts;
         $deregistered_scripts = array();
         $options = get_option('aesirx_analytics_plugin_options');
-        $blockingCookiesPaths = isset($options['blocking_cookies']) && count($options['blocking_cookies']) > 0 ? $options['blocking_cookies'] : [];
+        $blockingCookiesPaths = isset($options['blocking_cookies']) 
+            ? array_filter($options['blocking_cookies'], fn($v) => trim($v) !== '') 
+            : [];
         $arrayCookiesPlugins =  isset($options['blocking_cookies_plugins']) &&  count($options['blocking_cookies_plugins']) > 0 ? $options['blocking_cookies_plugins'] : [];
-        $blockingCookiesPlugins =  isset($options['blocking_cookies_plugins']) &&  count($options['blocking_cookies_plugins']) > 0 ? array_map(function($value) {
-            return "wp-content/plugins/" . $value;
-        }, $arrayCookiesPlugins) : [];
+        $prefix = "wp-content/plugins/";
+        $blockingCookiesPlugins = isset($options['blocking_cookies_plugins']) && count($options['blocking_cookies_plugins']) > 0
+        ? array_map(function($value) use ($prefix) {
+            return $prefix . $value;
+        }, array_filter($arrayCookiesPlugins, fn($v) => trim($v) !== ''))
+        : [];
+
         $blockingCookies = array_unique(array_merge($blockingCookiesPaths, $blockingCookiesPlugins), SORT_REGULAR);
         $queueScripts = $wp_scripts->queue;
         $blockingCookiesMode = isset($options['blocking_cookies_mode']) ? $options['blocking_cookies_mode'] : '3rd_party';
