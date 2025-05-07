@@ -382,6 +382,7 @@ add_action('admin_init', function () {
       $installed_plugins = get_plugins();
       $active_plugins = get_option('active_plugins');
       echo wp_kses('<p class="small-description mb-10">'.esc_html__('Blocks selected third-party plugins from loading until user consent is given.', 'aesirx-consent').'</p>', aesirx_analytics_escape_html());
+      echo wp_kses("<input name='aesirx_analytics_plugin_options[blocking_cookies_plugins][]' value='' type='hidden' />", aesirx_analytics_escape_html()); 
       echo '<div class="aesirx-consent-cookie-plugin mb-10">';
 
       foreach ($installed_plugins as $path => $plugin) {

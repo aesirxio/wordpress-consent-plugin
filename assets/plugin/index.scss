@@ -166,6 +166,7 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
+            width: 75%;
             .aesirx_consent_template_item {
               width: calc(50% - 20px);
               img {
@@ -649,7 +650,26 @@ input.aesirx_consent_input {
     display: flex;
     align-items: center;
     padding: 10px 0;
-    & div {
+    .infor_wrapper {
+      display: flex;
+      align-items: center;
+      position: relative;
+      .input_information {
+        position: unset;
+        margin-left: 10px;
+        .input_information_content {
+          width: 500px;
+          font-weight: 400;
+          ul {
+            list-style: disc;
+            padding-left: 20px;
+            margin: 0;
+            margin-top: 10px;
+          }
+        }
+      }
+    }
+    & > div {
       width: 16.666666%;
       text-align: end;
       padding: 0 10px;
