@@ -204,7 +204,7 @@ add_action('wp_enqueue_scripts', function (): void {
         window.aesirxClientID="' . esc_attr($clientId) . '";
         window.aesirxClientSecret="' . esc_attr($secret) . '";
         window.disableGPCsupport="' . esc_attr($disableGPCSupport) . '";
-        window.blockJSDomains=' . $blockingCookiesJSON . ';
+        window.aesirxBlockJSDomains=' . $blockingCookiesJSON . ';
         window.aesirxTrackEcommerce="' . esc_attr($trackEcommerce) . '";
         window.aesirxOptOutMode="' . esc_attr($configConsentGPC) . '";
         window.aesirxOptOutDoNotSell="' . esc_attr($configConsentGPCDoNotSell) . '";
