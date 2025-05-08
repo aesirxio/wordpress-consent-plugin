@@ -9,7 +9,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "POT-Creation-Date: 2024-07-25T03:47:45+00:00\n"
 "PO-Revision-Date: 2024-07-26 17:10+0200\n"
-"Language: fi\n"
+"Language: zh_HK\n"
 "X-Domain: aesirx-consent\n"
 "X-Generator: Poedit 3.4.4\n"
 
@@ -30,48 +30,48 @@ msgstr "https://aesirx.io/"
 
 #: aesirx-consent.php:225
 msgid "Settings"
-msgstr "Asetukset"
+msgstr "設定"
 
 #: aesirx-consent.php:340
 msgid "Problem with Aesirx Analytics plugin install"
-msgstr "Ongelma Aesirx Analytics -lisäosan asennuksessa"
+msgstr "安裝 Aesirx Analytics 外掛時發生問題"
 
 #: includes/settings.php:17
 msgid "Please register your license at Signup.aesirx.io to enable the external first-party server."
-msgstr "Rekisteröi lisenssisi osoitteessa Signup.aesirx.io aktivoidaksesi ulkoisen ensimmäisen osapuolen palvelimen."
+msgstr "請到 Signup.aesirx.io 註冊您的許可證，以啟用外部第一方伺服器。"
 
 #: includes/settings.php:27
 msgid "Domain is empty."
-msgstr "Verkkotunnus on tyhjä"
+msgstr "網域為空。"
 
 #: includes/settings.php:34
 msgid "Invalid domain format."
-msgstr "Virheellinen verkkotunnuksen muoto."
+msgstr "網域格式無效。"
 
 #: aesirx-consent.php:43
 #: includes/settings.php:1238
 msgid "Consent"
-msgstr "Suostumus"
+msgstr "同意"
 
 #: src/AesirxAnalyticsMysqlHelper.php:96
 msgid "Database error occurred."
-msgstr "Tietokantavirhe tapahtui."
+msgstr "發生數據庫錯誤。"
 
 #: src/AesirxAnalyticsMysqlHelper.php:250
 #: src/AesirxAnalyticsMysqlHelper.php:585
 #: src/AesirxAnalyticsMysqlHelper.php:617
 msgid "\"start\" filter is not correct"
-msgstr "\"\\\"Aloitus\\\"-suodatin ei ole oikea\""
+msgstr "「start」篩選器不正確"
 
 #: src/AesirxAnalyticsMysqlHelper.php:258
 #: src/AesirxAnalyticsMysqlHelper.php:593
 #: src/AesirxAnalyticsMysqlHelper.php:625
 msgid "\"end\" filter is not correct"
-msgstr "\"Loppu\"-suodatin ei ole oikea"
+msgstr "「end」篩選器不正確"
 
 #: src/AesirxAnalyticsMysqlHelper.php:327
 msgid "Domain not found"
-msgstr "Verkkotunnusta ei löydy"
+msgstr "找不到網域"
 
 #: src/AesirxAnalyticsMysqlHelper.php:406
 #: src/AesirxAnalyticsMysqlHelper.php:468
@@ -85,453 +85,453 @@ msgstr "Verkkotunnusta ei löydy"
 #: src/AesirxAnalyticsMysqlHelper.php:1085
 #: src/Mysql/GetVisitorConsentList.php:60
 msgid "There was a problem with the database query."
-msgstr "Tietokantakyselyssä oli ongelma."
+msgstr "數據庫查詢時出現問題。"
 
 #: src/AesirxAnalyticsMysqlHelper.php:911
 #: src/AesirxAnalyticsMysqlHelper.php:930
 #: src/AesirxAnalyticsMysqlHelper.php:950
 #: src/AesirxAnalyticsMysqlHelper.php:1288
 msgid "Something went wrong"
-msgstr "Jokin meni pieleen"
+msgstr "發生錯誤"
 
 #: src/AesirxAnalyticsMysqlHelper.php:1011
 msgid "There was a problem updating the data in the database."
-msgstr "Tietojen päivittämisessä tietokantaan ilmeni ongelma."
+msgstr "更新數據庫中的數據時出現問題。"
 
 #: src/Mysql/AddConsentLevel1.php:23
 #: src/Mysql/AddConsentLevel5.php:23
 #: src/Mysql/AddConsentLevel6.php:23
 msgid "The uuid parameter is required."
-msgstr "Uuid-parametri on pakollinen."
+msgstr "uuid 參數是必需的。"
 
 #: src/Mysql/AddConsentLevel1.php:27
 #: src/Mysql/AddConsentLevel5.php:27
 #: src/Mysql/AddConsentLevel6.php:27
 msgid "The consent parameter is required and must be a number."
-msgstr "Suostumusparametri on pakollinen ja sen on oltava numero."
+msgstr "同意參數是必需的，且必須是數字。"
 
 #: src/Mysql/AddConsentLevel1.php:53
 #: src/Mysql/AddConsentLevel5.php:53
 #: src/Mysql/AddConsentLevel6.php:53
 msgid "Previous consent was not expired"
-msgstr "Aikaisempi suostumus ei ollut vanhentunut"
+msgstr "之前的同意尚未到期"
 
 #: src/Mysql/AddConsentLevel2.php:16
 #: src/Mysql/AddConsentLevel3or4.php:55
 msgid "Invalid token"
-msgstr "Virheellinen tunnus"
+msgstr "無效的 token"
 
 #: src/Mysql/AddConsentLevel2.php:24
 #: src/Mysql/AddConsentLevel3or4.php:19
 msgid "Visitor not found"
-msgstr "Vierailijaa ei löydy"
+msgstr "找不到訪客"
 
 #: src/Mysql/AddConsentLevel2.php:41
 #: src/Mysql/AddConsentLevel3or4.php:80
 msgid "Previous consent still active"
-msgstr "Aiempi suostumus on edelleen voimassa"
+msgstr "之前的同意仍然有效"
 
 #: src/Mysql/AddConsentLevel2.php:124
 #: src/Mysql/AddConsentLevel3or4.php:167
 msgid "There was a problem querying the data in the database."
-msgstr "Tietokannan tietojen kyselyssä tapahtui ongelma."
+msgstr "查詢數據庫中的數據時出現問題。"
 
 #: src/Mysql/AddConsentLevel3or4.php:12
 msgid "Invalid signature"
-msgstr "Virheellinen allekirjoitus"
+msgstr "無效的簽名"
 
 #: src/Mysql/AddConsentLevel3or4.php:26
 msgid "Wallet not found"
-msgstr "Lompakkoa ei löydy"
+msgstr "找不到錢包"
 
 #: src/Mysql/AddConsentLevel3or4.php:32
 msgid "Wallet nonce not found"
-msgstr "Lompakon noncea ei löytynyt"
+msgstr "找不到錢包 Nonce"
 
 #: src/Mysql/AddConsentLevel3or4.php:39
 #: src/Mysql/RevokeConsentLevel3or4.php:37
 msgid "Nonce is not valid"
-msgstr "Nonce ei ole kelvollinen"
+msgstr "Nonce 無效"
 
 #: src/Mysql/AddConsentLevel3or4.php:48
 #: src/Mysql/RevokeConsentLevel3or4.php:44
 msgid "Contract is not valid"
-msgstr "Sopimus ei ole voimassa"
+msgstr "合約無效"
 
 #: src/Mysql/CloseVisitorEvent.php:14
 #: src/Mysql/CloseVisitorEvent.php:18
 msgid "The event uuid parameter is required."
-msgstr "Tapahtuman uuid-parametri on pakollinen."
+msgstr "事件 uuid 參數是必需的。"
 
 #: src/Mysql/CloseVisitorEvent.php:36
 msgid "Failed to update analytics events."
-msgstr "Analytiikkatapahtumien päivittäminen epäonnistui."
+msgstr "更新分析事件失敗。"
 
 #: src/Mysql/CloseVisitorEvent.php:43
 msgid "Visitor event not found."
-msgstr "Vierailijan tapahtumaa ei löytynyt."
+msgstr "找不到訪客事件。"
 
 #: src/Mysql/CloseVisitorEvent.php:55
 msgid "Failed to update analytics flows"
-msgstr "Analytiikkavirtojen päivittäminen epäonnistui"
+msgstr "更新分析流程失敗"
 
 #: src/Mysql/GetNonce.php:12
 msgid "Address is not valid"
-msgstr "Osoite ei kelpaa"
+msgstr "地址無效"
 
 #: src/Mysql/RevokeConsentLevel3or4.php:14
 msgid "Invalid signature."
-msgstr "Virheellinen allekirjoitus."
+msgstr "無效的簽名。"
 
 #: src/Mysql/RevokeConsentLevel3or4.php:24
 msgid "Wallet not found."
-msgstr "Lompakkoa ei löytynyt."
+msgstr "找不到錢包。"
 
 #: src/Mysql/RevokeConsentLevel3or4.php:30
 msgid "Nonce not found."
-msgstr "Noncea ei löytynyt."
+msgstr "找不到 Nonce。"
 
 #: src/Mysql/RevokeConsentLevel3or4.php:55
 msgid "Failed to update consent expiration."
-msgstr "Suostumuksen vanhenemisen päivitys epäonnistui."
+msgstr "更新同意到期時間失敗。"
 
 #: src/Mysql/RevokeConsentLevel3or4.php:62
 msgid "Failed to update nonce."
-msgstr "Nonce-päivitys epäonnistui."
+msgstr "更新 Nonce 失敗。"
 
 #: src/Mysql/StartFingerprint.php:146
 msgid "Wrong URL format, domain not found"
-msgstr "Väärä URL-muoto, verkkotunnusta ei löydy"
+msgstr "URL 格式錯誤，找不到網域"
 
 #: src/Mysql/StartFingerprint.php:150
 msgid "The domain sent in the new URL does not match the domain stored in the visitor document"
-msgstr "Uudessa URL-osoitteessa lähetetty verkkotunnus ei vastaa vierailijadokumenttiin tallennettua verkkotunnusta"
+msgstr "在新 URL 中發送的網域與訪客文件中的網域不匹配"
 
 #: src/Route/Middleware/IsBackendMiddleware.php:18
 msgid "Permission denied!"
-msgstr "Lupa evätty!"
+msgstr "權限被拒絕！"
 
 #: src/Track/CliTracker.php:32
 msgid "Error in tracking"
-msgstr "Virhe seurannassa"
+msgstr "追蹤時發生錯誤"
 
 #. Plugin Name of the plugin
 #: aesirx-consent.php
 msgid "AesirX Consent"
-msgstr "AesirX Suostumus"
+msgstr "AesirX 同意"
 
 #. Description of the plugin
 #: aesirx-consent.php
 msgid "Aesirx Consent plugin. When you join forces with AesirX, you're not just becoming a Partner - you're also becoming a freedom fighter in the battle for privacy! Earn 25% Affiliate Commission <a href=\"https://aesirx.io/partner?utm_source=wpplugin&utm_medium=web&utm_campaign=wordpress&utm_id=aesirx&utm_term=wordpress&utm_content=analytics\">[Click to Join]</a>"
-msgstr "AesirX Consent -lisäosa. Kun liityt AesirX:ään, et vain tule kumppaniksi - sinusta tulee myös vapaustaistelija yksityisyyden puolesta! Ansaitse 25% kumppanuuskomissio <a href=\"https://aesirx.io/partner?utm_source=wpplugin&utm_medium=web&utm_campaign=wordpress&utm_id=aesirx&utm_term=wordpress&utm_content=analytics\">[Napsauta liittyäksesi]</a>"
+msgstr "Aesirx 同意外掛。當您與 AesirX 合作時，您不僅成為合作夥伴，更成為爭取隱私自由的鬥士！賺取 25% 聯盟佣金 <a href=\"https://aesirx.io/partner?utm_source=wpplugin&utm_medium=web&utm_campaign=wordpress&utm_id=aesirx&utm_term=wordpress&utm_content=analytics\">[點擊加入]</a>"
 
 #: aesirx-consent.php:39
 #: includes/settings.php:1234
 msgid "Shield of Privacy"
-msgstr "Yksityisyyden kilpi"
+msgstr "隱私之盾"
 
 #: aesirx-consent.php:40
 #: includes/settings.php:1235
 msgid "Revoke your consent for data use whenever you wish."
-msgstr "Peruuta suostumuksesi tietojen käyttöön milloin haluat."
+msgstr "您可以在任何時候撤銷您對數據使用的同意。"
 
 #: aesirx-consent.php:41
 #: includes/settings.php:1236
 msgid "Manage Decentralized Consent"
-msgstr "Hallinnoi hajautettua suostumusta"
+msgstr "管理去中心化同意"
 
 #: aesirx-consent.php:42
 #: includes/settings.php:1237
 msgid "Revoke Consent"
-msgstr "Peruuta suostumus"
+msgstr "撤銷同意"
 
 #: aesirx-consent.php:44
 #: includes/settings.php:1239
 msgid "Reject"
-msgstr "Hylkää"
+msgstr "拒絕"
 
 #: aesirx-consent.php:45
 #: includes/settings.php:1240
 msgid "Please connect your Web3 wallet"
-msgstr "Liitä Web3-lompakkosi"
+msgstr "請連接您的 Web3 錢包"
 
 #: aesirx-consent.php:46
 #: includes/settings.php:1241
 msgid "Please sign the message on your wallet twice and wait for it to be saved."
-msgstr "Allekirjoita viesti lompakossasi kahdesti ja odota, että se tallennetaan."
+msgstr "請在您的錢包上簽名兩次，並等待儲存完成。"
 
 #: aesirx-consent.php:47
 #: includes/settings.php:1242
 msgid "Saving..."
-msgstr "Tallennetaan..."
+msgstr "正在儲存..."
 
 #: aesirx-consent.php:48
 #: includes/settings.php:1243
 msgid "Please connect to your wallet"
-msgstr "Yhdistä lompakkoosi"
+msgstr "請連接您的錢包"
 
 #: aesirx-consent.php:49
 #: includes/settings.php:1244
 msgid "Connecting"
-msgstr "Yhdistetään"
+msgstr "正在連接"
 
 #: aesirx-consent.php:50
 #: includes/settings.php:1245
 msgid "TRACKING AND DATA PRIVACY PREFERENCES"
-msgstr "SEURANTA JA TIETOJEN YKSITYISYYDEN ASETUKSET"
+msgstr "追蹤和數據隱私偏好"
 
 #: aesirx-consent.php:51
 #: includes/settings.php:1246
 msgid "About"
-msgstr "Noin"
+msgstr "關於"
 
 #: aesirx-consent.php:52
 #: aesirx-consent.php:101
 #: includes/settings.php:1247
 #: includes/settings.php:1296
 msgid "Details"
-msgstr "Tiedot"
+msgstr "詳細資料"
 
 #: aesirx-consent.php:53
 #: aesirx-consent.php:81
 #: includes/settings.php:1248
 #: includes/settings.php:1276
 msgid "Decentralized Consent"
-msgstr "Hajautettu suostumus"
+msgstr "去中心化同意"
 
 #: aesirx-consent.php:54
 #: includes/settings.php:1249
 msgid "Manage Your Consent Preferences"
-msgstr "Hallitse suostumusasetuksiasi"
+msgstr "管理您的同意偏好設定"
 
 #: aesirx-consent.php:55
 #: includes/settings.php:1250
 msgid "Choose how we use your data: \"Reject\" data collection, allow tracking [\"Consent\"], or use \"Decentralized Consent\" for more control over your personal data & rewards."
-msgstr "Valitse, miten käytämme tietojasi: 'Hylkää' tietojen keruu, salli seuranta ['Suostumus'], tai käytä 'Hajautettua Suostumusta' saadaksesi enemmän hallintaa henkilökohtaisiin tietoihisi ja palkkioihisi."
+msgstr "選擇我們如何使用您的數據：「拒絕」數據收集，允許追蹤 [「同意」]，或使用「去中心化同意」以更好地控制您的個人數據和獎勵。"
 
 #: aesirx-consent.php:56
 #: includes/settings.php:1251
 msgid "Choose how we use your data: \"Reject\" data collection, allow tracking [\"Consent\"]."
-msgstr "Valitse, miten käytämme tietojasi: \"Hylkää\" tietojen keruu, salli seuranta [\"Suostumus\"]."
+msgstr "選擇我們如何使用您的數據：「拒絕」數據收集，允許追蹤 [「同意」]。"
 
 #: aesirx-consent.php:57
 #: includes/settings.php:1252
 msgid "By consenting, you allow us to collect & use your data for:"
-msgstr "Antamalla suostumuksen sallit meidän kerätä ja käyttää tietojasi:"
+msgstr "透過同意，您允許我們收集和使用您的數據用於："
 
 #: aesirx-consent.php:58
 #: includes/settings.php:1253
 msgid "Analytics & Behavioral Data: To improve our services & personalize your experience."
-msgstr "Analytiikka ja käyttäytymistiedot: Palveluidemme parantamiseksi ja kokemuksesi henkilökohtaistamiseksi."
+msgstr "分析與行為數據：用於改善我們的服務並個人化您的體驗。"
 
 #: aesirx-consent.php:59
 #: includes/settings.php:1254
 msgid "Form Data: When you contact us."
-msgstr "Lomaketiedot: Kun otat meihin yhteyttä."
+msgstr "表單數據：當您聯繫我們時。"
 
 #: aesirx-consent.php:60
 #: includes/settings.php:1255
 msgid "Please note"
-msgstr "Huomioithan"
+msgstr "請注意"
 
 #: aesirx-consent.php:61
 #: includes/settings.php:1256
 msgid "We do not share your data with third parties without your explicit consent."
-msgstr "Emme jaa tietojasi kolmansille osapuolille ilman nimenomaista suostumustasi."
+msgstr "未經您明確同意，我們不會與第三方共享您的數據。"
 
 #: aesirx-consent.php:62
 #: includes/settings.php:1257
 msgid "You can opt-in later for specific features without giving blanket consent."
-msgstr "Voit myöhemmin valita tiettyjä ominaisuuksia ilman yleistä suostumusta."
+msgstr "您可以稍後選擇加入特定功能，而無需給予全面同意。"
 
 #: aesirx-consent.php:63
 #: includes/settings.php:1258
 msgid "For more details, refer to our <a class='text-success fw-semibold text-decoration-underline' href='https://aesirx.io/privacy-policy' target='_blank'>privacy policy.</a>"
-msgstr "Lisätietoja saat tutustumalla <a class='text-success fw-semibold text-decoration-underline' href='https://aesirx.io/privacy-policy' target='_blank'>tietosuojakäytäntöömme.</a>"
+msgstr "更多詳細資訊，請參閱我們的<a class='text-success fw-semibold text-decoration-underline' href='https://aesirx.io/privacy-policy' target='_blank'>隱私政策。</a>"
 
 #: aesirx-consent.php:64
 #: includes/settings.php:1259
 msgid "Benefits"
-msgstr "Hyödyt"
+msgstr "好處"
 
 #: aesirx-consent.php:65
 #: includes/settings.php:1260
 msgid "<span class='fw-semibold text-primary'>Control your data:</span> Choose your preferred level of data collection & tracking."
-msgstr "<span class='fw-semibold text-primary'>Hallitse tietojasi:</span> Valitse haluamasi tietojen keräys- ja seurantasuojaustaso."
+msgstr "<span class='fw-semibold text-primary'>控制您的數據：</span> 選擇您偏好的數據收集和追蹤級別。"
 
 #: aesirx-consent.php:66
 #: includes/settings.php:1261
 msgid "<span class='fw-semibold text-primary'>Earn rewards:</span> Participate in decentralized consent for privacy & rewards."
-msgstr "<span class='fw-semibold text-primary'>Ansaitse palkintoja:</span> Osallistu hajautettuun suostumukseen yksityisyyden ja palkintojen puolesta."
+msgstr "<span class='fw-semibold text-primary'>賺取獎勵：</span> 參與去中心化同意以獲得隱私和獎勵。"
 
 #: aesirx-consent.php:67
 #: includes/settings.php:1262
 msgid "<span class='fw-semibold text-primary'>Transparent data collection practices:</span> Understand how your data is collected & used."
-msgstr "<span class='fw-semibold text-primary'>Läpinäkyvät tiedonkeruukäytännöt::</span> Ymmärrä, kuinka tietojasi kerätään ja käytetään."
+msgstr "<span class='fw-semibold text-primary'>透明的數據收集實踐：</span> 了解您的數據如何被收集和使用。"
 
 #: aesirx-consent.php:68
 #: includes/settings.php:1263
 msgid "Understanding Your Privacy Choices"
-msgstr "Ymmärrä tietosuoja-asetuksesi"
+msgstr "了解您的隱私選擇"
 
 #: aesirx-consent.php:69
 #: includes/settings.php:1264
 msgid "<span class='fw-semibold text-primary'>Reject:</span> No data will be collected or loaded except for anonymized page views & rejections. Some personalization features may be disabled."
-msgstr "<span class='fw-semibold text-primary'>Hylkää:</span> Mitään tietoja ei kerätä tai ladata paitsi anonymisoidut sivunäkymät ja hylkäykset. Jotkin personointiominaisuudet voivat olla poissa käytöstä."
+msgstr "<span class='fw-semibold text-primary'>拒絕：</span> 除了匿名頁面瀏覽和拒絕外，不會收集或載入任何數據。某些個人化功能可能會被停用。"
 
 #: aesirx-consent.php:70
 #: includes/settings.php:1265
 msgid "<span class='fw-semibold text-primary'>Consent:</span> First & third-party tracking data will be collected to enhance your experience."
-msgstr "<span class='fw-semibold text-primary'>Suostumus:</span> Ensimmäisen ja kolmannen osapuolen seurantatiedot kerätään parantaaksesi kokemustasi."
+msgstr "<span class='fw-semibold text-primary'>同意：</span> 將收集第一方和第三方追蹤數據，以提升您的體驗。"
 
 #: aesirx-consent.php:71
 #: includes/settings.php:1266
 msgid "<span class='fw-semibold text-primary'>Decentralized Consent:</span> Choose Decentralized Wallets or Decentralized Wallet + Shield of Privacy. Both options let you manage & revoke consent on-site or through AesirX dApp, plus earn rewards from digital marketing activities."
-msgstr "<span class='fw-semibold text-primary'>Hajautettu Suostumus:</span> Valitse Hajautetut Lompakot tai Hajautettu Lompakko + Yksityisyyden Suoja. Molemmat vaihtoehdot antavat sinun hallita ja peruuttaa suostumuksen paikan päällä tai AesirX dAppin kautta, sekä ansaita palkintoja digitaalisista markkinointitoiminnoista."
+msgstr "<span class='fw-semibold text-primary'>去中心化同意：</span> 選擇去中心化錢包或去中心化錢包 + 隱私之盾。這兩個選項都允許您在網站上或透過 AesirX dApp 管理和撤銷同意，並從數位行銷活動中賺取獎勵。"
 
 #: aesirx-consent.php:72
 #: includes/settings.php:1267
 msgid "Our Commitment in Action"
-msgstr "Sitoutumisemme toiminnassa"
+msgstr "我們的承諾在行動中"
 
 #: aesirx-consent.php:73
 #: includes/settings.php:1268
 msgid "<span class='fw-semibold text-primary'>Privacy Protection:</span> Users have full control over their data, ensuring maximum privacy."
-msgstr "<span class='fw-semibold text-primary'>Yksityisyyden suoja:</span> Käyttäjillä on täysi hallinta tietoihinsa, mikä takaa maksimaalisen yksityisyyden."
+msgstr "<span class='fw-semibold text-primary'>隱私保護：</span> 用戶對其數據擁有完全控制權，確保最高隱私。"
 
 #: aesirx-consent.php:74
 #: includes/settings.php:1269
 msgid "<span class='fw-semibold text-primary'>Enables Compliance:</span> Using Shield of Privacy (SoP) ensures compliance with GDPR, CCPA, ePrivacy Directive, & other data protection regulations."
-msgstr "<span class='fw-semibold text-primary'>Mahdollistaa Yhteensopivuuden:</span> Privacy Shieldin (SoP) käyttö varmistaa GDPR:n, CCPA:n, ePrivacy-direktiivin ja muiden tietosuojasäädösten noudattamisen."
+msgstr "<span class='fw-semibold text-primary'>實現合規性：</span> 使用隱私之盾 (SoP) 確保符合 GDPR、CCPA、電子隱私指令及其他數據保護法規。"
 
 #: aesirx-consent.php:75
 #: includes/settings.php:1270
 msgid "<span class='fw-semibold text-primary'>Proactive Protection:</span> We enhance privacy measures to safeguard your data integrity."
-msgstr "<span class='fw-semibold text-primary'>Ennakoiva suojaus:</span> Parannamme tietosuojatoimenpiteitä tietojesi eheyden turvaamiseksi."
+msgstr "<span class='fw-semibold text-primary'>主動保護：</span> 我們加強隱私措施以保護您的數據完整性。"
 
 #: aesirx-consent.php:76
 #: includes/settings.php:1271
 msgid "<span class='fw-semibold text-primary'>Flexible Consent:</span> You can withdraw your consent anytime on-site or via our <a class='text-success fw-semibold text-decoration-underline' href='https://dapp.shield.aesirx.io' target='_blank'>dApp</a> (Decentralized Application)."
-msgstr "<span class='fw-semibold text-primary'>Joustava suostumus:</span> Voit peruuttaa suostumuksesi milloin tahansa paikan päällä tai <a class='text-success fw-semibold text-decoration-underline' href='https://dapp.shield.aesirx.io' target='_blank'>dApp</a> (Hajautettu sovellus) kautta."
+msgstr "<span class='fw-semibold text-primary'>靈活同意：</span> 您可以隨時在網站上或透過我們的 <a class='text-success fw-semibold text-decoration-underline' href='https://dapp.shield.aesirx.io' target='_blank'>dApp</a> (去中心化應用程式) 撤回您的同意。"
 
 #: aesirx-consent.php:77
 #: includes/settings.php:1272
 msgid "<span class='fw-semibold text-primary'>Learn More:</span> Discover our approach to data processing in our <a class='text-success fw-semibold text-decoration-underline' href='https://aesirx.io/privacy-policy' target='_blank'>Privacy Policy</a>."
-msgstr "<span class='fw-semibold text-primary'>Lisätietoja:</span> Tutustu tietojenkäsittelytapamme <a class='text-success fw-semibold text-decoration-underline' href='https://aesirx.io/privacy-policy' target='_blank'>Tietosuojakäytännössämme</a>."
+msgstr "<span class='fw-semibold text-primary'>了解更多：</span> 在我們的 <a class='text-success fw-semibold text-decoration-underline' href='https://aesirx.io/privacy-policy' target='_blank'>隱私政策</a> 中了解我們處理數據的方法。"
 
 #: aesirx-consent.php:78
 #: includes/settings.php:1273
 msgid "<span class='fw-semibold text-primary'>For Businesses:</span> Enhance trust, secure user identities, & prevent breaches."
-msgstr "<span class='fw-semibold text-primary'>Yrityksille:</span> Lisää luottamusta, suojaa käyttäjien identiteetit ja estä tietomurrot."
+msgstr "<span class='fw-semibold text-primary'>對於企業：</span> 增強信任、保護使用者身份並預防洩漏。"
 
 #: aesirx-consent.php:79
 #: includes/settings.php:1274
 msgid "More info at <a class='text-success fw-semibold text-decoration-underline' href='https://shield.aesirx.io' target='_blank'>https://shield.aesirx.io</a>."
-msgstr "Lisätietoja osoitteessa <a class='text-success fw-semibold text-decoration-underline' href='https://shield.aesirx.io' target='_blank'>https://shield.aesirx.io</a>."
+msgstr "更多資訊請訪問 <a class='text-success fw-semibold text-decoration-underline' href='https://shield.aesirx.io' target='_blank'>https://shield.aesirx.io</a>。"
 
 #: aesirx-consent.php:80
 #: includes/settings.php:1275
 msgid "Select your preferred decentralized consent option:"
-msgstr "Valitse haluamasi hajautettu suostumusvaihtoehto:"
+msgstr "選擇您偏好的去中心化同意選項："
 
 #: aesirx-consent.php:82
 #: includes/settings.php:1277
 msgid "Decentralized consent will be loaded"
-msgstr "Hajautettu suostumus ladataan"
+msgstr "將載入去中心化同意"
 
 #: aesirx-consent.php:83
 #: includes/settings.php:1278
 msgid "Both first-party & third-party tracking data will be activated."
-msgstr "Sekä ensimmäisen että kolmannen osapuolen seurantatiedot aktivoidaan."
+msgstr "第一方和第三方追蹤數據都將被啟用。"
 
 #: aesirx-consent.php:84
 #: includes/settings.php:1279
 msgid "All consented data will be collected."
-msgstr "Kaikki hyväksytyt tiedot kerätään."
+msgstr "所有已同意的數據將會被收集。"
 
 #: aesirx-consent.php:85
 #: includes/settings.php:1280
 msgid "Users can revoke consent on-site at any time."
-msgstr "Käyttäjät voivat peruuttaa suostumuksensa paikan päällä milloin tahansa."
+msgstr "使用者可以在任何時候在網站上撤銷同意。"
 
 #: aesirx-consent.php:86
 #: includes/settings.php:1281
 msgid "Decentralized Consent + Shield of Privacy"
-msgstr "Hajautettu suostumus + Shield of Privacy"
+msgstr "去中心化同意 + 隱私之盾"
 
 #: aesirx-consent.php:87
 #: includes/settings.php:1282
 msgid "Users can revoke consent on-site or from the AesirX dApp at any time."
-msgstr "Käyttäjät voivat peruuttaa suostumuksensa paikan päällä tai AesirX dAppista milloin tahansa."
+msgstr "使用者可以隨時在網站上或從 AesirX dApp 撤銷同意。"
 
 #: aesirx-consent.php:88
 #: includes/settings.php:1283
 msgid "Users can earn rewards from digital marketing activities."
-msgstr "Käyttäjät voivat ansaita palkintoja digitaalisista markkinointitoiminnoista."
+msgstr "使用者可以從數位行銷活動中賺取獎勵。"
 
 #: aesirx-consent.php:89
 #: includes/settings.php:1284
 msgid "Continue"
-msgstr "Jatka"
+msgstr "繼續"
 
 #: aesirx-consent.php:90
 #: includes/settings.php:1285
 msgid "Back"
-msgstr "Takaisin"
+msgstr "返回"
 
 #: aesirx-consent.php:91
 #: includes/settings.php:1286
 msgid "You've chosen to reject data collection:"
-msgstr "Olet päättänyt hylätä tiedonkeruun:"
+msgstr "您已選擇拒絕數據收集："
 
 #: aesirx-consent.php:92
 #: includes/settings.php:1287
 msgid "Only anonymized page views & limited features will be available. To access all website features, including personalized content & enhanced functionality, please choose an option:"
-msgstr "Vain anonymisoidut sivunäkymät ja rajoitetut ominaisuudet ovat käytettävissä. Päästäksesi kaikkiin verkkosivuston ominaisuuksiin, mukaan lukien henkilökohtainen sisältö ja parannettu toiminnallisuus, valitse vaihtoehto:"
+msgstr "僅提供匿名頁面瀏覽和有限的功能。要存取所有網站功能，包括個人化內容和增強功能，請選擇一個選項："
 
 #: aesirx-consent.php:93
 #: includes/settings.php:1288
 msgid "<span class='fw-semibold text-primary'>Consent:</span> Allow data collection for analytics, form data (when you contact us), & behavioral & event tracking, with the option to opt-in for specific features."
-msgstr "<span class='fw-semibold text-primary'>Suostumus:</span> Salli tietojen kerääminen analytiikkaa, lomaketietoja (kun otat meihin yhteyttä) ja käyttäytymisen ja tapahtumien seuranta varten, mahdollisuus valita tiettyjä ominaisuuksia."
+msgstr "<span class='fw-semibold text-primary'>同意：</span> 允許收集數據用於分析、表單數據（當您聯繫我們時），以及行為和事件追蹤，並可選擇加入特定功能。"
 
 #: aesirx-consent.php:94
 #: includes/settings.php:1289
 msgid "<span class='fw-semibold text-primary'>Decentralized Consent:</span> Allow data collection for analytics, form data (when you contact us), & behavioral & event tracking, with the option to revoke consent, opt-in for specific features, & earn rewards from digital marketing activities."
-msgstr "<span class='fw-semibold text-primary'>Hajautettu suostumus:</span> Salli tietojen kerääminen analytiikkaa, lomaketietoja (kun otat meihin yhteyttä) sekä käyttäytymisen ja tapahtumien seurantaa varten, mahdollisuus peruuttaa suostumus, valita tiettyjä ominaisuuksia ja ansaita palkintoja digitaalisista markkinointitoiminnoista."
+msgstr "<span class='fw-semibold text-primary'>去中心化同意：</span> 允許收集數據用於分析、表單數據（當您聯繫我們時），以及行為和事件追蹤，並可選擇撤銷同意、加入特定功能，以及從數位行銷活動中賺取獎勵。"
 
 #: aesirx-consent.php:95
 #: includes/settings.php:1290
 msgid "You can revoke consent on the site or any explicit opt-in consent, such as payment processing, at any time"
-msgstr "Voit peruuttaa suostumuksen sivustolla tai minkä tahansa nimenomaisen suostumuksen, kuten maksujen käsittelyn, milloin tahansa"
+msgstr "您可以隨時在網站上撤銷同意，或任何明確的選擇加入同意，例如支付處理"
 
 #: aesirx-consent.php:96
 #: includes/settings.php:1291
 msgid "Revoke Opt-In Consent"
-msgstr "Peruuta suostumus"
+msgstr "撤銷選擇加入同意"
 
 #: aesirx-consent.php:97
 #: includes/settings.php:1292
 msgid "Revoke Opt-In Consent for Payment Processing"
-msgstr "Peruuta maksunkäsittelyn suostumus"
+msgstr "撤銷支付處理的選擇加入同意"
 
 #: aesirx-consent.php:98
 #: includes/settings.php:1293
 msgid "Revoke Opt-In Consent for AesirX Privacy Advisor AI"
-msgstr "Peruuta AesirX Privacy Advisor AI:n suostumus"
+msgstr "撤銷 AesirX 隱私顧問 AI 的選擇加入同意"
 
 #: aesirx-consent.php:99
 #: includes/settings.php:1294
 msgid "Revoke Consent for the site"
-msgstr "Peruuta suostumus sivustolle"
+msgstr "撤銷網站的同意"
 
 #: aesirx-consent.php:100
 #: includes/settings.php:1295
 msgid "Consent Management"
-msgstr "Suostumuksen hallinta"
+msgstr "同意管理"
 
 #: includes/settings.php:224
 msgid "Gtag ID"
-msgstr "Gtag-tunnus"
+msgstr "Gtag ID"
 
 #: includes/settings.php:249
 msgid "GTM ID"
@@ -539,224 +539,454 @@ msgstr "GTM ID"
 
 #: includes/settings.php:379
 msgid "AesirX Consent Shield for Third-Party Plugins "
-msgstr "AesirX Consent Shield for tredjeparts plugins"
+msgstr "AesirX 第三方外掛同意護盾"
 
 #: includes/settings.php:384
 msgid "Blocks selected third-party plugins from loading until user consent is given."
-msgstr "Estää valittujen kolmannen osapuolen lisäosien lataamisen, kunnes käyttäjän suostumus on annettu."
+msgstr "阻止選定的第三方外掛載入，直到用戶給予同意。"
 
 #: includes/settings.php:415
 msgid "Completely prevents the loading and execution of chosen third-party plugins before consent."
-msgstr "Estää täysin valittujen kolmannen osapuolen lisäosien lataamisen ja suorittamisen ennen suostumusta."
+msgstr "在同意之前完全阻止選定的第三方外掛載入和執行。"
 
 #: includes/settings.php:421
 msgid "No network requests are made to third-party servers, enabling maximum compliance with privacy regulations like GDPR and the ePrivacy Directive."
-msgstr "Kolmannen osapuolen palvelimille ei tehdä verkkopyyntöjä, mikä mahdollistaa maksimaalisen yksityisyydensuojamääräysten, kuten GDPR:n ja ePrivacy-direktiivin, noudattamisen."
+msgstr "不向第三方伺服器發送網絡請求，從而最大限度地符合 GDPR 和電子隱私指令等隱私法規。"
 
 #: includes/settings.php:435
 msgid "AesirX Consent Shield for Domain/Path-Based Blocking"
-msgstr "AesirX Consent Shield verkkotunnuksen/polkupohjaiseen estoon"
+msgstr "AesirX 基於網域/路徑的阻擋同意護盾"
 
 #: includes/settings.php:445
 #: includes/settings.php:463
 msgid "Enter domain or path"
-msgstr "Anna verkkotunnus tai polku"
+msgstr "輸入網域或路徑"
 
 #: includes/settings.php:438
 msgid "Removes scripts matching specified domains or paths from the browser until user consent is given."
-msgstr "Poistaa tiettyjä verkkotunnuksia tai polkuja vastaavat komentosarjat selaimesta, kunnes käyttäjä on antanut suostumuksensa."
+msgstr "從瀏覽器中移除與指定網域或路徑匹配的腳本，直到使用者給予同意。"
 
 #: includes/settings.php:486
 msgid "Blocks or removes scripts from running in the user's browser before consent is given."
-msgstr "Estää tai poistaa skriptit käyttäjän selaimesta ennen suostumuksen antamista."
+msgstr "在給予同意之前阻止或移除腳本在使用者瀏覽器中執行。"
 
 #: includes/settings.php:492
 msgid "While it prevents scripts from executing, initial network requests may still occur, so it enhances privacy compliance under GDPR but may not fully meet the ePrivacy Directive requirements."
-msgstr "Vaikka se estää skriptien suorittamisen, alkuperäisiä verkkopyyntöjä voi silti tapahtua, joten se parantaa tietosuojan noudattamista GDPR:n mukaisesti, mutta ei välttämättä täytä täysin ePrivacy-direktiivin vaatimuksia."
+msgstr "雖然它阻止腳本執行，但最初的網絡請求仍然可能發生，因此它增強了 GDPR 下的隱私合規性，但可能無法完全滿足電子隱私指令的要求。"
 
 #: includes/settings.php:506
 msgid "Script Blocking Options"
-msgstr "Skriptien estovaihtoehdot"
+msgstr "腳本阻擋選項"
 
 #: includes/settings.php:521
 msgid "Only Third-Party Hosts (default)"
-msgstr "Vain kolmannen osapuolen isännät (oletus)"
+msgstr "僅限第三方主機 (預設)"
 
 #: includes/settings.php:532
 msgid "Both First and Third-Party Hosts"
-msgstr "Sekä ensimmäisen että kolmannen osapuolen isännät"
+msgstr "第一方和第三方主機"
 
 #: includes/settings.php:939
 msgid "Need Help? Access Our Comprehensive Documentation Hub"
-msgstr "Tarvitsetko apua? Käytä kattavaa dokumentaatiohubiamme"
+msgstr "需要協助？存取我們的全面文件中心"
 
 #: includes/settings.php:1380
 #: includes/settings.php:1460
 msgid "Your trial license ends in %1$s days. Please update new license <a href='%2$s' target='_blank'>%2$s</a>."
-msgstr "Kokeilulisenssisi päättyy %1$s päivän kuluttua. Päivitä uusi lisenssi osoitteessa <a href='%2$s' target='_blank'>%2$s</a>."
+msgstr "您的試用許可證將於 %1$s 天後到期。請更新新許可證 <a href='%2$s' target='_blank'>%2$s</a>。"
 
 #: includes/settings.php:1409
 msgid "Your license is expried or not found. Please update new license <a href='%1$s' target='_blank'>%1$s</a>."
-msgstr "Lisenssisi on vanhentunut tai sitä ei löydy. Päivitä uusi lisenssi <a href='%1$s' target='_blank'>%1$s</a>."
+msgstr "您的許可證已過期或找不到。請更新新許可證 <a href='%1$s' target='_blank'>%1$s</a>。"
 
 #: includes/settings.php:1463
 msgid "Your free trials has ended. Please update your license. <a href='%1$s' target='_blank'>%1$s</a>."
-msgstr "Ilmainen kokeilujakso on päättynyt. Päivitä lisenssisi. <a href='%1$s' target='_blank'>%1$s</a>."
+msgstr "您的免費試用已結束。請更新您的許可證。 <a href='%1$s' target='_blank'>%1$s</a>。"
 
 #: src/AesirxAnalyticsMysqlHelper.php:850
 msgid "Could not insert consent"
-msgstr "Suostumusta ei voitu lisätä"
+msgstr "無法插入同意"
 
 #: src/Mysql/StartFingerprint.php:35
 #: src/Mysql/StartFingerprint.php:64
 msgid "License is expired or not found. Please update your license"
-msgstr "Lisenssi on vanhentunut tai sitä ei löydy. Päivitä lisenssisi"
+msgstr "許可證已過期或找不到。請更新您的許可證"
 
 #: src/Mysql/StartFingerprint.php:76
 #: src/Mysql/StartFingerprint.php:83
 msgid "Your trial is ended. Please renew your license"
-msgstr "Kokeilujakso on päättynyt. Uudista lisenssisi"
+msgstr "您的試用已結束。請續訂您的許可證"
 
 #: includes/settings.php:106
 msgid "Your Client ID *"
-msgstr "Asiakastunnuksesi *"
+msgstr "您的客戶端 ID *"
 
 #: includes/settings.php:113
 msgid "SSO Client ID"
-msgstr "SSO-asiakastunnus"
-
-#: includes/settings.php:119
-msgid ""
-"<div class='input_information_content'>\n"
-"          Provided SSO CLIENT ID from <a href='%1$s' target='_blank'>%1$s</a>.</div>"
-msgstr "<div class='input_information_content'>Annettu SSO CLIENT ID osoitteesta <a href='%1$s' target='_blank'>%1$s</a>.</div>"
+msgstr "SSO 客戶端 ID"
 
 #: includes/settings.php:134
 msgid "Your Client Secret *"
-msgstr "Asiakkaasi salaisuus *"
+msgstr "您的客戶端密鑰 *"
 
 #: includes/settings.php:139
 msgid "SSO Client Secret"
-msgstr "SSO-asiakassalaisuus"
-
-#: includes/settings.php:145
-msgid ""
-"<div class='input_information_content'>\n"
-"          Provided SSO Client Secret from <a href='%1$s' target='_blank'>%1$s</a>.</div>"
-msgstr "<div class='input_information_content'>Toimitettu SSO-asiakassalaisuus osoitteesta <a href='%1$s' target='_blank'>%1$s</a>.</div>"
+msgstr "SSO 客戶端密鑰"
 
 #: includes/settings.php:161
 msgid "Your License Key"
-msgstr "Lisenssiavaimesi"
+msgstr "您的許可證金鑰"
 
 #: includes/settings.php:188
 msgid "Choose your tailored template"
-msgstr "Valitse mukautettu mallisi"
+msgstr "選擇您的客製化範本"
 
 #: includes/settings.php:444
 #: includes/settings.php:462
 msgid "Domain"
-msgstr "Verkkotunnus"
+msgstr "網域"
 
 #: includes/settings.php:512
 msgid "Configure how JavaScript is blocked based on user consent preferences."
-msgstr "Määritä, miten JavaScript estetään käyttäjän suostumusasetusten perusteella."
+msgstr "根據用戶同意偏好設定 JavaScript 如何被阻擋。"
 
 #: includes/settings.php:522
 msgid "Blocks JavaScript from third-party domains, allowing first-party scripts to run normally & keep essential site functions intact."
-msgstr "Estää JavaScriptin kolmannen osapuolen verkkotunnuksista, sallii ensimmäisen osapuolen skriptien toimia normaalisti ja pitää sivuston olennaiset toiminnot ehjinä."
+msgstr "阻止來自第三方網域的 JavaScript，允許第一方腳本正常運行並保持網站基本功能完好無損。"
 
 #: includes/settings.php:533
 msgid "Blocks JavaScript from both first-party & third-party domains for comprehensive script control, giving you the ability to block any JavaScript from internal or external sources based on user consent."
-msgstr "Estää JavaScriptin sekä ensimmäisen että kolmannen osapuolen verkkotunnuksista kattavaa skriptien hallintaa varten, antaen sinulle mahdollisuuden estää minkä tahansa JavaScriptin sisäisistä tai ulkoisista lähteistä käyttäjän suostumuksen perusteella."
+msgstr "阻止來自第一方和第三方網域的 JavaScript，實現全面的腳本控制，讓您能夠根據用戶同意阻止來自內部或外部來源的任何 JavaScript。"
 
 #: includes/settings.php:949
 msgid "Discover the latest features & best practices."
-msgstr "Tutustu uusimpiin ominaisuuksiin ja parhaisiin käytäntöihin."
+msgstr "探索最新功能和最佳實踐。"
 
 #: includes/settings.php:976
 msgid "Haven't got a license yet?"
-msgstr "Etkö ole vielä saanut lisenssiä?"
+msgstr "還沒有許可證？"
 
 #: includes/settings.php:1005
 msgid "Scan Your Site for Privacy Risks"
-msgstr "Skannaa sivustosi yksityisyysriskejä varten"
+msgstr "掃描您的網站以查找隱私風險"
 
 #: includes/settings.php:1009
 msgid "Use the Privacy Scanner to quickly identify scripts, tags, & trackers running on your site that may compromise user privacy."
-msgstr "Käytä Privacy Scanneria tunnistaaksesi nopeasti sivustollasi käynnissä olevat komentosarjat, tunnisteet ja seurantalaitteet, jotka voivat vaarantaa käyttäjien yksityisyyden."
+msgstr "使用隱私掃描器快速識別在您的網站上運行的可能損害用戶隱私的腳本、標籤和追蹤器。"
 
 #: includes/settings.php:1015
 msgid "Use Consent Shield to block those scripts by adding their domains or paths, ensuring quick & simple compliance."
-msgstr "Käytä Consent Shieldiä estämään nämä skriptit lisäämällä niiden verkkotunnukset tai polut, mikä varmistaa nopean ja yksinkertaisen noudattamisen."
+msgstr "使用同意護盾通過添加其域名或路徑來阻止這些腳本，確保快速簡單的合規性。"
 
 #: includes/settings.php:1068
 #: includes/settings.php:1130
 #: includes/settings.php:1163
 #: includes/settings.php:1196
 msgid "Save settings"
-msgstr "Tallenna asetukset"
+msgstr "儲存設定"
 
 #: includes/settings.php:166
 msgid "License Key"
-msgstr "Lisenssiavain"
+msgstr "許可證金鑰"
 
 #: includes/settings.php:978
 msgid "Haven't got Shield of Privacy ID yet?"
-msgstr "Etkö ole vielä saanut Shield of Privacy -tunnusta?"
-
-#: includes/settings.php:1024
-msgid "Learn how to use AesirX Privacy Scanner with Consent Shield to detect privacy-intrusive elements, using the JetPack plugin as an example."
-msgstr "Opi käyttämään AesirX Privacy Scanneria Consent Shieldin kanssa havaitaksesi yksityisyyttä loukkaavia elementtejä, käyttäen JetPack-laajennusta esimerkkinä."
+msgstr "還沒有隱私之盾 ID？"
 
 #: includes/settings.php:1427
 msgid "Your license ends in %1$s days. Please update new license <a href='%2$s' target='_blank'>%2$s</a>."
-msgstr "Lisenssisi päättyy %1$s päivän kuluttua. Päivitä uusi lisenssi osoitteessa <a href='%2$s' target='_blank'>%2$s</a>."
-
-#: includes/settings.php:172
-msgid ""
-"<div class='input_information_content'>\n"
-"          Sign up to obtain your Shield of Privacy ID and purchase licenses <a href='https://aesirx.io/licenses' target='blank' class='text-link'>here</a>.</div>"
-msgstr "<div class='input_information_content'>Rekisteröidy saadaksesi Shield of Privacy ID:si ja ostaaksesi lisenssejä <a href='https://aesirx.io/licenses' target='blank' class='text-link'>täältä</a>.</div>"
+msgstr "您的許可證將於 %1$s 天後到期。請更新新許可證 <a href='%2$s' target='_blank'>%2$s</a>。"
 
 #: includes/settings.php:277
 msgid "To configure, input your Google Tag Manager Gtag ID & GTM ID in the designated fields. Once set up, Google Tag Manager will only load after the user provides consent."
-msgstr "Määrittääksesi syötä Google Tag Managerin Gtag ID ja GTM ID annettuihin kenttiin. Kun asetukset on tehty, Google Tag Manager latautuu vasta, kun käyttäjä on antanut suostumuksensa."
-
-#: includes/settings.php:234
-#: includes/settings.php:259
-msgid ""
-"<div class='input_information_content'>\n"
-"          Remember to include the explicit purpose (e.g., analytics, marketing) in the consent text to inform users why GTM is being used.</div>"
-msgstr "<div class='input_information_content'>Muista sisällyttää nimenomainen tarkoitus (esim. analytiikka, markkinointi) suostumustekstiin, jotta käyttäjät tietävät, miksi GTM:ää käytetään.</div>"
+msgstr "若要設定，請在指定欄位中輸入您的 Google 代碼管理工具 Gtag ID 和 GTM ID。設定完成後，Google 代碼管理工具將只會在使用者提供同意後載入。"
 
 #: includes/settings.php:982
 msgid "Register Licence Here"
-msgstr "Rekisteröi lisenssi täällä"
+msgstr "在此註冊許可證"
 
 #: includes/settings.php:987
 msgid "Sign up now"
-msgstr "Rekisteröidy nyt"
+msgstr "立即註冊"
 
 #: includes/settings.php:943
 msgid "Explore How-To Guides, instructions, & tutorials to get the most from AesirX Consent Shield. Whether you're a developer or admin, find all you need to configure & optimize your privacy setup."
-msgstr "Tutustu oppaisiin, ohjeisiin ja opetusohjelmiin saadaksesi kaiken irti AesirX Consent Shieldistä. Olitpa kehittäjä tai järjestelmänvalvoja, löydät kaiken, mitä tarvitset yksityisyysasetusten määrittämiseen ja optimointiin."
+msgstr "瀏覽操作指南、說明和教學，以充分利用 AesirX 同意護盾。無論您是開發人員或管理員，都可以在這裡找到配置和最佳化隱私設定所需的一切。"
 
 #: includes/settings.php:303
 msgid "Customize Consent Text "
-msgstr "Muokkaa suostumustekstiä "
+msgstr "自訂同意文字"
 
 #: includes/settings.php:316
 msgid "Reset Consent"
-msgstr "Nollaa suostumus"
+msgstr "重設同意"
 
 #: aesirx-consent.php:355
 msgid "Important: Permalink Settings Required"
-msgstr "Tärkeää: Permalinkkien asetukset vaaditaan"
+msgstr "重要：需要永久連結設定"
 
 #: includes/settings.php:1453
 msgid "Your trial license ends in %1$s hour(s). Please update your license <a href='%2$s' target='_blank'>here</a>."
-msgstr "Kokeilulisenssisi päättyy %1$s tunnin kuluttua. Päivitä lisenssisi <a href='%2$s' target='_blank'>tästä</a>."
+msgstr "您的試用許可證將於 %1$s 小時後到期。請<a href='%2$s' target='_blank'>在此</a>更新您的許可證。"
+
+#: aesirx-consent.php:367
+msgid "click here"
+msgstr "點擊這裡"
+
+#: includes/settings.php:274
+msgid "GTM General"
+msgstr "GTM 一般"
+
+#: includes/settings.php:1386
+msgid "Something went wrong: %1$s. Please contact the administrator."
+msgstr "發生錯誤：%1$s。請聯繫管理員。"
+
+#: includes/settings.php:1433
+msgid "Check license failed: %1$s. Please contact the administrator or update your license."
+msgstr "檢查許可證失敗：%1$s。請聯繫管理員或更新您的許可證。"
+
+#: src/Mysql/StartFingerprint.php:55
+msgid "Check license failed: %1\\$s. Please contact the administrator."
+msgstr "檢查許可證失敗：%1\\$s。請聯繫管理員。"
+
+#: includes/settings.php:1416
+msgid "Your domain is not match with your license. Please update domain in your license <a href='%1$s' target='_blank'>%1$s</a> and click <span class='verify_domain'>here</span> to verify again."
+msgstr "您的網域與您的許可證不匹配。請更新您的許可證中的網域 <a href='%1$s' target='_blank'>%1$s</a>，然後點擊 <span class='verify_domain'>這裡</span> 再次驗證。"
+
+#: src/Mysql/StartFingerprint.php:43
+#: src/Mysql/StartFingerprint.php:62
+msgid "Your domain is not match with your license. Please update domain in your license"
+msgstr "您的網域與您的許可證不匹配。請更新您的許可證中的網域"
+
+#: includes/settings.php:205
+msgid "Decentralized Consent Mode"
+msgstr "去中心化同意模式"
+
+#: includes/settings.php:654
+msgid "GPC Compliance"
+msgstr "GPC 合規性"
+
+#: includes/settings.php:667
+msgid "Enable GPC Support"
+msgstr "啟用 GPC 支援"
+
+#: includes/settings.php:675
+msgid "Disable GPC Support"
+msgstr "停用 GPC 支援"
+
+#: includes/settings.php:682
+msgid "To comply with Global Privacy Control (GPC), please download and upload the following file:"
+msgstr "為符合全球隱私控制 (GPC)，請下載並上傳以下檔案："
+
+#: includes/settings.php:685
+msgid "Upload Instructions:"
+msgstr "上傳指示："
+
+#: includes/settings.php:687
+msgid "Download the gpc.json file."
+msgstr "下載 gpc.json 檔案。"
+
+#: includes/settings.php:688
+msgid "Connect to your website via FTP or File Manager."
+msgstr "透過 FTP 或檔案管理員連接到您的網站。"
+
+#: includes/settings.php:689
+msgid "Upload the file to: <code>/public_html/.well-known/gpc.json</code>"
+msgstr "將檔案上傳到：<code>/public_html/.well-known/gpc.json</code>"
+
+#: includes/settings.php:690
+msgid "Ensure the file is accessible by visiting: <a href='"
+msgstr "請確保通過訪問以下網址可以訪問該文件：<a href='"
+
+#: includes/settings.php:328
+msgid "Customize Detail Text "
+msgstr "自訂詳細資訊文字"
+
+#: includes/settings.php:341
+msgid "Reset Detail"
+msgstr "重設詳細資料"
+
+#: includes/settings.php:353
+msgid "Customize Reject Text "
+msgstr "自訂拒絕文字"
+
+#: includes/settings.php:366
+msgid "Reset Reject"
+msgstr "重設拒絕"
+
+#: aesirx-consent.php:102
+msgid "Customize"
+msgstr "自訂"
+
+#: aesirx-consent.php:103
+msgid "Save"
+msgstr "儲存"
+
+#: aesirx-consent.php:104
+msgid "Always active"
+msgstr "始終啟用"
+
+#: aesirx-consent.php:105
+msgid "Domain/Path-Based"
+msgstr "基於網域/路徑"
+
+#: aesirx-consent.php:106
+msgid "Third-Party Plugins"
+msgstr "第三方外掛"
+
+#: aesirx-consent.php:107
+msgid "Essential Tracking"
+msgstr "基本追蹤"
+
+#: aesirx-consent.php:108
+msgid "Required for the website to function (e.g, session cookies, security tracking)."
+msgstr "網站正常運作所需（例如，Session cookies、安全追蹤）。"
+
+#: aesirx-consent.php:109
+msgid "Functional Tracking"
+msgstr "功能追蹤"
+
+#: aesirx-consent.php:110
+msgid "User preferencese & site enhancements (e.g, language setting, live chat)."
+msgstr "用戶偏好與網站增強（例如，語言設定、即時聊天）。"
+
+#: aesirx-consent.php:111
+msgid "Analytics Tracking"
+msgstr "分析追蹤"
+
+#: aesirx-consent.php:112
+msgid "Visitor behavior monitoring (e.g, Google Analytics, Matomo)."
+msgstr "訪客行為監控（例如，Google Analytics、Matomo）。"
+
+#: aesirx-consent.php:113
+msgid "Advertising Tracking"
+msgstr "廣告追蹤"
+
+#: aesirx-consent.php:114
+msgid "Targeted advertising & remarketing (e.g, Facebook Pixel, Google Ads)."
+msgstr "目標式廣告與再行銷（例如，Facebook Pixel、Google Ads）。"
+
+#: aesirx-consent.php:115
+msgid "Custom Tracking"
+msgstr "自訂追蹤"
+
+#: aesirx-consent.php:116
+msgid "Any additional third-party integrations (e.g, customer support tools, CDNS)."
+msgstr "任何額外的第三方整合（例如，客戶支援工具、CDNS）。"
+
+#: aesirx-consent.php:117
+msgid "Opt-Out of tracking"
+msgstr "退出追蹤"
+
+#: aesirx-consent.php:118
+msgid "This website uses tracking by default. You may opt out at any time."
+msgstr "本網站預設使用追蹤功能。您可以隨時選擇退出。"
+
+#: aesirx-consent.php:119
+msgid "Do Not Sell or Share My Personal Information (CCPA)"
+msgstr "不要出售或分享我的個人資訊 (CCPA)"
+
+#: aesirx-consent.php:120
+msgid "Disables third-party data sharing for California users."
+msgstr "對於加州用戶，停用第三方數據分享。"
+
+#: includes/settings.php:564
+msgid "Configurable Consent Logic"
+msgstr "可配置的同意邏輯"
+
+#: includes/settings.php:577
+msgid "Opt-In Mode (EU)"
+msgstr "選擇加入模式 (歐盟)"
+
+#: includes/settings.php:578
+msgid "No tracking technologies are activated until a user explicitly gives consent. This is required by <strong>GDPR</strong> and <strong>ePrivacy Directive 5(3)</strong>."
+msgstr "在用戶明確給予同意之前，不會激活任何追蹤技術。這是 <strong>GDPR</strong> 和 <strong>電子隱私指令 5(3)</strong> 所要求的。"
+
+#: includes/settings.php:586
+msgid "Opt-Out Mode (California)"
+msgstr "選擇退出模式 (加州)"
+
+#: includes/settings.php:587
+msgid "Tracking is allowed by default, but users must be able to opt out easily. This aligns with <strong>CCPA</strong> and similar U.S. privacy frameworks."
+msgstr "預設允許追蹤，但用戶必須能夠輕鬆選擇退出。這與 <strong>CCPA</strong> 和類似的美國隱私框架一致。"
+
+#: includes/settings.php:618
+msgid "Do not sell or share options"
+msgstr "不要出售或分享選項"
+
+#: includes/settings.php:631
+#: includes/settings.php:737
+msgid "Yes"
+msgstr "是"
+
+#: includes/settings.php:639
+#: includes/settings.php:745
+msgid "No"
+msgstr "否"
+
+#: includes/settings.php:724
+msgid "Enable Geo-handling for Consent Mode"
+msgstr "啟用同意模式的地理位置處理"
+
+#: includes/settings.php:760
+msgid "Geo-Based Consent Rules"
+msgstr "基於地理位置的同意規則"
+
+#: includes/settings.php:859
+msgid "Browser Language"
+msgstr "瀏覽器語言"
+
+#: includes/settings.php:860
+#: includes/settings.php:884
+#: includes/settings.php:901
+msgid "Time Zone"
+msgstr "時區"
+
+#: includes/settings.php:874
+msgid "Consent Mode"
+msgstr "同意模式"
+
+#: includes/settings.php:875
+msgid "Allow Override"
+msgstr "允許覆寫"
+
+#: includes/settings.php:883
+#: includes/settings.php:900
+msgid "Language"
+msgstr "語言"
+
+#: includes/settings.php:886
+#: includes/settings.php:903
+msgid "Select Mode"
+msgstr "選擇模式"
+
+#: includes/settings.php:904
+msgid "Override"
+msgstr "覆寫"
+
+#: includes/settings.php:196
+msgid "Default Consent Mode"
+msgstr "預設同意模式"
+
+#: includes/settings.php:200
+msgid "Default Consent Mode improves Google Consent Mode 2.0 by not loading any tags until after consent is given, reducing compliance risks."
+msgstr "預設同意模式透過在給予同意之前不載入任何標籤來改善 Google Consent Mode 2.0，降低合規風險。"
+
+#: includes/settings.php:209
+msgid "Decentralized Consent Mode setup improves Google Consent Mode 2.0 by not loading any scripts, beacons, or tags until after consent is given, reducing compliance risks. It also includes Decentralized Consent, for more control over personal data and rewards."
+msgstr "去中心化同意模式設定通過在給予同意之前不載入任何腳本、信標或標籤來改善 Google Consent Mode 2.0，降低合規風險。它還包括去中心化同意，以便更好地控制個人數據和獎勵。"
+
+#: includes/settings.php:866
+msgid "Choose how browser language and time zone are combined to determine consent rules:"
+msgstr "選擇如何結合瀏覽器語言和時區來確定同意規則："
+
+#: includes/settings.php:868
+msgid "<strong>AND Logic (Stricter Match):</strong> Both language and time zone must match a region for its consent model to apply. Ideal for high-accuracy targeting."
+msgstr "<strong>AND 邏輯（更嚴格匹配）：</strong>語言和時區都必須與區域匹配，其同意模式才會適用。適合高準確度目標設定。"
+
+#: includes/settings.php:869
+msgid "<strong>OR Logic (More Flexible):</strong> Either language or time zone can match to apply a region’s consent model. Best for broader coverage based on user preferences."
+msgstr "<strong>OR 邏輯（更靈活）：</strong>語言或時區之一匹配即可應用區域的同意模式。最適合根據用戶偏好實現更廣泛的覆蓋。"
 
 #. translators: 1: Permalink structure example, 2: Link to Permalink Settings page
 #: aesirx-consent.php:360
@@ -765,263 +995,33 @@ msgid ""
 "                            It looks like your current settings are using the plain permalink format, which might cause issues.\n"
 "                            Please %2$s to open your Permalink Settings.\n"
 "                            Once there, select the \"Post name\" option (or another pretty permalink structure) and click \"Save Changes.\""
-msgstr "Lisäosamme vaatii, että sivustosi käyttää kaunista pysyvän linkin rakennetta (esimerkiksi %1$s) toimiakseen oikein. Näyttää siltä, että nykyiset asetuksesi käyttävät yksinkertaista pysyvän linkin muotoa, mikä saattaa aiheuttaa ongelmia. Ole hyvä ja %2$s avataksesi pysyvien linkkien asetukset. Valitse siellä \"Artikkelin nimi\" -vaihtoehto (tai muu kaunis pysyvän linkin rakenne) ja napsauta \"Tallenna muutokset.\""
+msgstr ""
 
-#: aesirx-consent.php:367
-msgid "click here"
-msgstr "klikkaa tästä"
+#: includes/settings.php:119
+msgid ""
+"<div class='input_information_content'>\n"
+"          Provided SSO CLIENT ID from <a href='%1$s' target='_blank'>%1$s</a>.</div>"
+msgstr ""
 
-#: includes/settings.php:274
-msgid "GTM General"
-msgstr "GTM yleinen"
+#: includes/settings.php:145
+msgid ""
+"<div class='input_information_content'>\n"
+"          Provided SSO Client Secret from <a href='%1$s' target='_blank'>%1$s</a>.</div>"
+msgstr ""
 
-#: includes/settings.php:1386
-msgid "Something went wrong: %1$s. Please contact the administrator."
-msgstr "Jokin meni pieleen: %1$s. Ota yhteyttä ylläpitäjään."
+#: includes/settings.php:172
+msgid ""
+"<div class='input_information_content'>\n"
+"          Sign up to obtain your Shield of Privacy ID and purchase licenses <a href='https://aesirx.io/licenses' target='blank' class='text-link'>here</a>.</div>"
+msgstr ""
 
-#: includes/settings.php:1433
-msgid "Check license failed: %1$s. Please contact the administrator or update your license."
-msgstr "Lisenssin tarkistus epäonnistui: %1$s. Ota yhteyttä ylläpitäjään tai päivitä lisenssisi."
+#: includes/settings.php:234
+#: includes/settings.php:259
+msgid ""
+"<div class='input_information_content'>\n"
+"          Remember to include the explicit purpose (e.g., analytics, marketing) in the consent text to inform users why GTM is being used.</div>"
+msgstr ""
 
-#: src/Mysql/StartFingerprint.php:55
-msgid "Check license failed: %1\\$s. Please contact the administrator."
-msgstr "Lisenssin tarkistus epäonnistui: %1$s. Ota yhteyttä järjestelmänvalvojaan."
-
-#: includes/settings.php:1416
-msgid "Your domain is not match with your license. Please update domain in your license <a href='%1$s' target='_blank'>%1$s</a> and click <span class='verify_domain'>here</span> to verify again."
-msgstr "Verkkotunnuksesi ei vastaa lisenssiäsi. Päivitä verkkotunnus lisenssissäsi <a href='%1$s' target='_blank'>%1$s</a> ja napsauta <span class='verify_domain'>tästä</span> vahvistaaksesi uudelleen."
-
-#: src/Mysql/StartFingerprint.php:43
-#: src/Mysql/StartFingerprint.php:62
-msgid "Your domain is not match with your license. Please update domain in your license"
-msgstr "Verkkotunnuksesi ei vastaa lisenssiäsi. Päivitä verkkotunnus lisenssissäsi"
-
-#: includes/settings.php:205
-msgid "Decentralized Consent Mode"
-msgstr "Hajautettu suostumustila"
-
-#: includes/settings.php:654
-msgid "GPC Compliance"
-msgstr "GPC-yhteensopivuus"
-
-#: includes/settings.php:667
-msgid "Enable GPC Support"
-msgstr "Ota GPC-tuki käyttöön"
-
-#: includes/settings.php:675
-msgid "Disable GPC Support"
-msgstr "Poista GPC-tuki käytöstä"
-
-#: includes/settings.php:682
-msgid "To comply with Global Privacy Control (GPC), please download and upload the following file:"
-msgstr "Noudata Global Privacy Controlia (GPC) lataamalla ja lähettämällä seuraava tiedosto:"
-
-#: includes/settings.php:685
-msgid "Upload Instructions:"
-msgstr "Latausohjeet:"
-
-#: includes/settings.php:687
-msgid "Download the gpc.json file."
-msgstr "Lataa gpc.json-tiedosto."
-
-#: includes/settings.php:688
-msgid "Connect to your website via FTP or File Manager."
-msgstr "Yhdistä verkkosivustoosi FTP:n tai Tiedostonhallinnan kautta."
-
-#: includes/settings.php:689
-msgid "Upload the file to: <code>/public_html/.well-known/gpc.json</code>"
-msgstr "Lataa tiedosto: <code>/public_html/.well-known/gpc.json</code>"
-
-#: includes/settings.php:690
-msgid "Ensure the file is accessible by visiting: <a href='"
-msgstr "Varmista, että tiedosto on saatavilla käymällä: <a href='"
-
-#: includes/settings.php:328
-msgid "Customize Detail Text "
-msgstr "Mukauta yksityiskohtatekstiä"
-
-#: includes/settings.php:341
-msgid "Reset Detail"
-msgstr "Nollaa yksityiskohdat"
-
-#: includes/settings.php:353
-msgid "Customize Reject Text "
-msgstr "Mukauta hylkäystekstiä"
-
-#: includes/settings.php:366
-msgid "Reset Reject"
-msgstr "Palauta Hylkää"
-
-#: aesirx-consent.php:102
-msgid "Customize"
-msgstr "Mukauta"
-
-#: aesirx-consent.php:103
-msgid "Save"
-msgstr "Tallentaa"
-
-#: aesirx-consent.php:104
-msgid "Always active"
-msgstr "Aina aktiivinen"
-
-#: aesirx-consent.php:105
-msgid "Domain/Path-Based"
-msgstr "Toimialue/polkupohjainen"
-
-#: aesirx-consent.php:106
-msgid "Third-Party Plugins"
-msgstr "Kolmannen osapuolen laajennukset"
-
-#: aesirx-consent.php:107
-msgid "Essential Tracking"
-msgstr "Olennaiset seurannat"
-
-#: aesirx-consent.php:108
-msgid "Required for the website to function (e.g, session cookies, security tracking)."
-msgstr "Tarvitaan verkkosivuston toimintaan (esim. istuntokoekit, turvallisuuden seuranta)."
-
-#: aesirx-consent.php:109
-msgid "Functional Tracking"
-msgstr "Toiminnallinen seuranta"
-
-#: aesirx-consent.php:110
-msgid "User preferencese & site enhancements (e.g, language setting, live chat)."
-msgstr "Käyttäjän asetukset ja sivuston parannukset (esim. kieliasetukset, live-chat)."
-
-#: aesirx-consent.php:111
-msgid "Analytics Tracking"
-msgstr "Analytiikan seuranta"
-
-#: aesirx-consent.php:112
-msgid "Visitor behavior monitoring (e.g, Google Analytics, Matomo)."
-msgstr "Vierailijoiden käyttäytymisen seuranta (esim. Google Analytics, Matomo)."
-
-#: aesirx-consent.php:113
-msgid "Advertising Tracking"
-msgstr "Mainosten seuranta"
-
-#: aesirx-consent.php:114
-msgid "Targeted advertising & remarketing (e.g, Facebook Pixel, Google Ads)."
-msgstr "Kohdennettu mainonta ja uudelleenmarkkinointi (esim. Facebook Pixel, Google Ads)."
-
-#: aesirx-consent.php:115
-msgid "Custom Tracking"
-msgstr "Tilpasset sporing"
-
-#: aesirx-consent.php:116
-msgid "Any additional third-party integrations (e.g, customer support tools, CDNS)."
-msgstr "Kaikki lisäkolmannen osapuolen integroinnit (esim. asiakastukityökalut, CDNS)."
-
-#: aesirx-consent.php:117
-msgid "Opt-Out of tracking"
-msgstr "Poistu seurannasta"
-
-#: aesirx-consent.php:118
-msgid "This website uses tracking by default. You may opt out at any time."
-msgstr "Tämä verkkosivusto käyttää oletuksena seurantaa. Voit kieltäytyä milloin tahansa."
-
-#: aesirx-consent.php:119
-msgid "Do Not Sell or Share My Personal Information (CCPA)"
-msgstr "Älä myy tai jaa henkilökohtaisia tietojani (CCPA)"
-
-#: aesirx-consent.php:120
-msgid "Disables third-party data sharing for California users."
-msgstr "Poistaa käytöstä kolmannen osapuolen tietojen jakamisen Kalifornian käyttäjiltä."
-
-#: includes/settings.php:564
-msgid "Configurable Consent Logic"
-msgstr "Konfigurerbar samtykkelogik"
-
-#: includes/settings.php:577
-msgid "Opt-In Mode (EU)"
-msgstr "Valintatila (EU)"
-
-#: includes/settings.php:578
-msgid "No tracking technologies are activated until a user explicitly gives consent. This is required by <strong>GDPR</strong> and <strong>ePrivacy Directive 5(3)</strong>."
-msgstr "Seurantateknologioita ei aktivoida ennen kuin käyttäjä antaa nimenomaisen suostumuksensa. Tämä on vaatimuksena <strong>GDPR</strong>:n ja <strong>ePrivacy-direktiivin 5(3)</strong> mukaan."
-
-#: includes/settings.php:586
-msgid "Opt-Out Mode (California)"
-msgstr "Poissulkemistila (Kalifornia)"
-
-#: includes/settings.php:587
-msgid "Tracking is allowed by default, but users must be able to opt out easily. This aligns with <strong>CCPA</strong> and similar U.S. privacy frameworks."
-msgstr "Seuranta on oletusarvoisesti sallittu, mutta käyttäjien on voitava kieltäytyä helposti. Tämä on linjassa <strong>CCPA</strong>:n ja vastaavien Yhdysvaltain tietosuojakehysten kanssa."
-
-#: includes/settings.php:618
-msgid "Do not sell or share options"
-msgstr "Älä myy tai jaa vaihtoehtoja"
-
-#: includes/settings.php:631
-#: includes/settings.php:737
-msgid "Yes"
-msgstr "Kyllä"
-
-#: includes/settings.php:639
-#: includes/settings.php:745
-msgid "No"
-msgstr "Ei"
-
-#: includes/settings.php:724
-msgid "Enable Geo-handling for Consent Mode"
-msgstr "Ota käyttöön maantieteellinen käsittely suostumustilassa"
-
-#: includes/settings.php:760
-msgid "Geo-Based Consent Rules"
-msgstr "Maantieteelliset suostumusäännöt"
-
-#: includes/settings.php:859
-msgid "Browser Language"
-msgstr "Selaimen kieli"
-
-#: includes/settings.php:860
-#: includes/settings.php:884
-#: includes/settings.php:901
-msgid "Time Zone"
-msgstr "Aikavyöhyke"
-
-#: includes/settings.php:874
-msgid "Consent Mode"
-msgstr "Suostumustila"
-
-#: includes/settings.php:875
-msgid "Allow Override"
-msgstr "Salli ohitus"
-
-#: includes/settings.php:883
-#: includes/settings.php:900
-msgid "Language"
-msgstr "Kieli"
-
-#: includes/settings.php:886
-#: includes/settings.php:903
-msgid "Select Mode"
-msgstr "Valitse tila"
-
-#: includes/settings.php:904
-msgid "Override"
-msgstr "Muokattava suostumuslogiikka"
-
-#: includes/settings.php:196
-msgid "Default Consent Mode"
-msgstr "Oletussuostumustila"
-
-#: includes/settings.php:200
-msgid "Default Consent Mode improves Google Consent Mode 2.0 by not loading any tags until after consent is given, reducing compliance risks."
-msgstr "Oletussuostumustila parantaa Google Consent Mode 2.0:aa lataamalla tunnisteita vasta suostumuksen antamisen jälkeen, mikä vähentää vaatimustenmukaisuusriskejä."
-
-#: includes/settings.php:209
-msgid "Decentralized Consent Mode setup improves Google Consent Mode 2.0 by not loading any scripts, beacons, or tags until after consent is given, reducing compliance risks. It also includes Decentralized Consent, for more control over personal data and rewards."
-msgstr "Hajautetun suostumustilan määritys parantaa Google Consent Mode 2.0:aa, koska se ei lataa komentosarjoja, majakoita tai tageja ennen kuin suostumus on annettu, mikä vähentää vaatimustenmukaisuusriskejä. Se sisältää myös hajautetun suostumuksen, jonka avulla voit hallita paremmin henkilötietoja ja palkintoja."
-
-#: includes/settings.php:866
-msgid "Choose how browser language and time zone are combined to determine consent rules:"
-msgstr "Valitse, miten selaimen kieli ja aikavyöhyke yhdistetään suostumussääntöjen määrittämiseksi:"
-
-#: includes/settings.php:868
-msgid "<strong>AND Logic (Stricter Match):</strong> Both language and time zone must match a region for its consent model to apply. Ideal for high-accuracy targeting."
-msgstr "<strong>AND Logiikka (tiukempi haku):</strong> Sekä kielen että aikavyöhykkeen on vastattava aluetta, jotta suostumusmallia voidaan soveltaa. Ihanteellinen erittäin tarkkaan kohdistukseen."
-
-#: includes/settings.php:869
-msgid "<strong>OR Logic (More Flexible):</strong> Either language or time zone can match to apply a region’s consent model. Best for broader coverage based on user preferences."
-msgstr "<strong>OR Logiikka (joustavampi):</strong> Kumpikin kieli tai aikavyöhyke voi vastata alueen suostumusmallia. Paras laajempaan kattamiseen käyttäjien mieltymysten perusteella."
+#: includes/settings.php:1024
+msgid "Learn how to use AesirX Privacy Scanner with Consent Shield to detect privacy-intrusive elements, using the JetPack plugin as an example."
+msgstr ""
