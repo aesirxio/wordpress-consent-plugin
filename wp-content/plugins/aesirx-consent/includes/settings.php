@@ -1107,6 +1107,17 @@ add_action('admin_menu', function () {
   );
   add_submenu_page(
     'aesirx-consent-management-plugin',
+    'Advance Consent',
+    'Advance Consent',
+    'manage_options',
+    'aesirx-bi-consents-advance',
+    function () {
+      ?><div id="biapp" class="aesirxui"></div><?php
+    },
+    3
+  );
+  add_submenu_page(
+    'aesirx-consent-management-plugin',
     'Consent Modal',
     'Consent Modal',
     'manage_options',
@@ -1298,7 +1309,7 @@ add_action('admin_enqueue_scripts', function ($hook) {
     wp_localize_script( 'aesirx_analytics_repeatable_fields', 'aesirx_analytics_translate', $translation_array );
     wp_enqueue_script('aesirx_analytics_repeatable_fields');
   }
-  if ($hook === 'aesirx-cmp_page_aesirx-bi-consents' || $hook === 'aesirx-bi_page_aesirx-bi-consents') {
+  if ($hook === 'aesirx-cmp_page_aesirx-bi-consents' || $hook === 'aesirx-bi_page_aesirx-bi-consents' || $hook === 'aesirx-cmp_page_aesirx-bi-consents-advance') {
 
     $options = get_option('aesirx_analytics_plugin_options');
 

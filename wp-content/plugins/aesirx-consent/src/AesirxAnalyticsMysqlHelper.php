@@ -48,7 +48,7 @@ if (!class_exists('AesirxAnalyticsMysqlHelper')) {
                         if (!empty($collection)) {
                             $collection = array_map(function ($row) {
                                 foreach ($row as $key => $value) {
-                                    if ( in_array($key, ['total', 'total_visitor', 'unique_visitor', 'total_number_of_visitors', 'tier'], true) ) {
+                                    if ( in_array($key, ['total', 'total_visitor', 'unique_visitor', 'total_number_of_visitors', 'tier', 'allow', 'reject'], true) ) {
                                         $row[$key] = absint($row[$key]);
                                     }
                                 }
@@ -64,11 +64,10 @@ if (!class_exists('AesirxAnalyticsMysqlHelper')) {
                         $wpdb->prepare($sql, $bind) // phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared
                         , ARRAY_A
                     );
-
                     if (!empty($collection)) {
                         $collection = array_map(function ($row) {
                             foreach ($row as $key => $value) {
-                                if ( in_array($key, ['total', 'total_visitor', 'unique_visitor', 'total_number_of_visitors', 'tier'], true) ) {
+                                if ( in_array($key, ['total', 'total_visitor', 'unique_visitor', 'total_number_of_visitors', 'tier', 'allow', 'reject'], true) ) {
                                     $row[$key] = absint($row[$key]);
                                 }
                             }
@@ -588,6 +587,44 @@ if (!class_exists('AesirxAnalyticsMysqlHelper')) {
                         case 'end':
                             try {
                                 $where_clause[] = "UNIX_TIMESTAMP(visitor_consent.datetime) < %d";
+                                $bind[] = strtotime($list[0] . ' +1 day');
+                            } catch (Exception $e) {
+                                return new WP_Error('validation_error', esc_html__('"end" filter is not correct', 'aesirx-consent'), ['status' => 400]);
+                            }
+                            break;
+                        case 'domain':
+                            $where_clause[] = 'domain ' . ($is_not ? 'NOT ' : '') . 'IN (%s)';
+                            $bind[] = implode(', ', $list);
+                            break;
+                        default:
+                            break;
+                    }
+                }
+            }
+        }
+
+        function aesirx_analytics_add_category_consent_filters($params, &$where_clause, &$bind) {
+            foreach ([$params['filter'] ?? null, $params['filter_not'] ?? null] as $filter_array) {
+                $is_not = $filter_array === (isset($params['filter_not']) ? $params['filter_not'] : null);
+                if (empty($filter_array)) {
+                    continue;
+                }
+    
+                foreach ($filter_array as $key => $vals) {
+                    $list = is_array($vals) ? $vals : [$vals];
+    
+                    switch ($key) {
+                        case 'start':
+                            try {
+                                $where_clause[] = "UNIX_TIMESTAMP(category_consent.datetime) >= %d";
+                                $bind[] = strtotime($list[0]);
+                            } catch (Exception $e) {
+                                return new WP_Error('validation_error', esc_html__('"start" filter is not correct', 'aesirx-consent'), ['status' => 400]);
+                            }
+                            break;
+                        case 'end':
+                            try {
+                                $where_clause[] = "UNIX_TIMESTAMP(category_consent.datetime) < %d";
                                 $bind[] = strtotime($list[0] . ' +1 day');
                             } catch (Exception $e) {
                                 return new WP_Error('validation_error', esc_html__('"end" filter is not correct', 'aesirx-consent'), ['status' => 400]);
