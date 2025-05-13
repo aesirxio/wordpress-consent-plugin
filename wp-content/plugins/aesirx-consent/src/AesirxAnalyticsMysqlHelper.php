@@ -48,7 +48,9 @@ if (!class_exists('AesirxAnalyticsMysqlHelper')) {
                         if (!empty($collection)) {
                             $collection = array_map(function ($row) {
                                 foreach ($row as $key => $value) {
-                                    if ( in_array($key, ['total', 'total_visitor', 'unique_visitor', 'total_number_of_visitors', 'tier', 'allow', 'reject'], true) ) {
+                                    if ( in_array($key, ['total', 'total_visitor', 'unique_visitor', 'total_number_of_visitors', 'tier', 'allow', 'reject',
+                                    'allow_analytics', 'allow_advertising', 'allow_functional', 'allow_custom',
+                                    'reject_analytics', 'reject_advertising', 'reject_functional', 'reject_custom'], true) ) {
                                         $row[$key] = absint($row[$key]);
                                     }
                                 }
@@ -67,7 +69,9 @@ if (!class_exists('AesirxAnalyticsMysqlHelper')) {
                     if (!empty($collection)) {
                         $collection = array_map(function ($row) {
                             foreach ($row as $key => $value) {
-                                if ( in_array($key, ['total', 'total_visitor', 'unique_visitor', 'total_number_of_visitors', 'tier', 'allow', 'reject'], true) ) {
+                                if ( in_array($key, ['total', 'total_visitor', 'unique_visitor', 'total_number_of_visitors', 'tier', 
+                                    'allow', 'reject', 'allow_analytics', 'allow_advertising', 'allow_functional', 'allow_custom',
+                                    'reject_analytics', 'reject_advertising', 'reject_functional', 'reject_custom'], true) ) {
                                     $row[$key] = absint($row[$key]);
                                 }
                             }

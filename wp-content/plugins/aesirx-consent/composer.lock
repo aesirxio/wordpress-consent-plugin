@@ -400,12 +400,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/vietredweb/aesirx-analytics-lib.git",
-                "reference": "7c453216597c777b472c345f84a8dd0d0a4c033e"
+                "reference": "1de5281d03bb70532e45ca3c46f7e791cda64db9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vietredweb/aesirx-analytics-lib/zipball/7c453216597c777b472c345f84a8dd0d0a4c033e",
-                "reference": "7c453216597c777b472c345f84a8dd0d0a4c033e",
+                "url": "https://api.github.com/repos/vietredweb/aesirx-analytics-lib/zipball/1de5281d03bb70532e45ca3c46f7e791cda64db9",
+                "reference": "1de5281d03bb70532e45ca3c46f7e791cda64db9",
                 "shasum": ""
             },
             "require": {
