@@ -50,7 +50,8 @@ if (!class_exists('AesirxAnalyticsMysqlHelper')) {
                                 foreach ($row as $key => $value) {
                                     if ( in_array($key, ['total', 'total_visitor', 'unique_visitor', 'total_number_of_visitors', 'tier', 'allow', 'reject',
                                     'allow_analytics', 'allow_advertising', 'allow_functional', 'allow_custom',
-                                    'reject_analytics', 'reject_advertising', 'reject_functional', 'reject_custom'], true) ) {
+                                    'reject_analytics', 'reject_advertising', 'reject_functional', 'reject_custom',
+                                    'total_consent_region', 'opt_in_consent_region', 'opt_out_consent_region', 'total_consent', 'user_override', 'not_override'], true) ) {
                                         $row[$key] = absint($row[$key]);
                                     }
                                 }
@@ -71,7 +72,8 @@ if (!class_exists('AesirxAnalyticsMysqlHelper')) {
                             foreach ($row as $key => $value) {
                                 if ( in_array($key, ['total', 'total_visitor', 'unique_visitor', 'total_number_of_visitors', 'tier', 
                                     'allow', 'reject', 'allow_analytics', 'allow_advertising', 'allow_functional', 'allow_custom',
-                                    'reject_analytics', 'reject_advertising', 'reject_functional', 'reject_custom'], true) ) {
+                                    'reject_analytics', 'reject_advertising', 'reject_functional', 'reject_custom',
+                                    'total_consent_region', 'opt_in_consent_region', 'opt_out_consent_region', 'total_consent', 'user_override', 'not_override'], true) ) {
                                     $row[$key] = absint($row[$key]);
                                 }
                             }
@@ -89,7 +91,7 @@ if (!class_exists('AesirxAnalyticsMysqlHelper')) {
                     'total_elements' => $total_elements,
                 ];
     
-                if ($params[1] === "metrics") {
+                if ($params[1] === "metrics" || $params[1] === "total-consent-override-language") {
                     $list_response = $list_response['collection'][0];
                 }
     
@@ -275,6 +277,7 @@ if (!class_exists('AesirxAnalyticsMysqlHelper')) {
                         case 'browser_name':
                         case 'browser_version':
                         case 'device':
+                        case 'timezone':
                         case 'lang':
                             $where_clause[] = '#__analytics_visitors.' . $key . ' ' . ($is_not ? 'NOT ' : '') . 'IN (%s)';
                             $bind[] = implode(', ', $list);
@@ -364,6 +367,7 @@ if (!class_exists('AesirxAnalyticsMysqlHelper')) {
                         'browser_version' => $visitor->browser_version,
                         'domain' => $visitor->domain,
                         'lang' => $visitor->lang,
+                        'timezone' => $visitor->timezone,
                         'visitor_flows' => null,
                         'geo' => null,
                         'visitor_consents' => [],
@@ -427,7 +431,8 @@ if (!class_exists('AesirxAnalyticsMysqlHelper')) {
                             'browser_name'     => sanitize_text_field($visitor['browser_name']),
                             'browser_version'  => sanitize_text_field($visitor['browser_version']),
                             'domain'           => sanitize_text_field($visitor['domain']),
-                            'lang'             => sanitize_text_field($visitor['lang'])
+                            'lang'             => sanitize_text_field($visitor['lang']),
+                            'timezone'         => sanitize_text_field($visitor['timezone'])
                         ],
                         [
                             '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s'
@@ -448,6 +453,7 @@ if (!class_exists('AesirxAnalyticsMysqlHelper')) {
                             'browser_version'  => sanitize_text_field($visitor['browser_version']),
                             'domain'           => sanitize_text_field($visitor['domain']),
                             'lang'             => sanitize_text_field($visitor['lang']),
+                            'timezone'         => sanitize_text_field($visitor['timezone']),
                             'country_code'     => sanitize_text_field($geo['country']['code']),
                             'country_name'     => sanitize_text_field($geo['country']['name']),
                             'city'             => sanitize_text_field($geo['city']),
@@ -644,6 +650,47 @@ if (!class_exists('AesirxAnalyticsMysqlHelper')) {
                 }
             }
         }
+
+        function aesirx_analytics_add_region_consent_filters($params, &$where_clause, &$bind, &$where_clause_2) {
+            foreach ([$params['filter'] ?? null, $params['filter_not'] ?? null] as $filter_array) {
+                $is_not = $filter_array === (isset($params['filter_not']) ? $params['filter_not'] : null);
+                if (empty($filter_array)) {
+                    continue;
+                }
+    
+                foreach ($filter_array as $key => $vals) {
+                    $list = is_array($vals) ? $vals : [$vals];
+    
+                    switch ($key) {
+                        case 'start':
+                            try {
+                                $where_clause[] = "UNIX_TIMESTAMP(c.datetime) >= %d";
+                                $where_clause_2[] = "UNIX_TIMESTAMP(category_consent.datetime) >= %d";
+                                $bind[] = strtotime($list[0]);
+                            } catch (Exception $e) {
+                                return new WP_Error('validation_error', esc_html__('"start" filter is not correct', 'aesirx-consent'), ['status' => 400]);
+                            }
+                            break;
+                        case 'end':
+                            try {
+                                $where_clause[] = "UNIX_TIMESTAMP(c.datetime) < %d";
+                                $where_clause_2[] = "UNIX_TIMESTAMP(category_consent.datetime) < %d";
+                                $bind[] = strtotime($list[0] . ' +1 day');
+                            } catch (Exception $e) {
+                                return new WP_Error('validation_error', esc_html__('"end" filter is not correct', 'aesirx-consent'), ['status' => 400]);
+                            }
+                            break;
+                        case 'domain':
+                            $where_clause[] = 'v.domain ' . ($is_not ? 'NOT ' : '') . 'IN (%s)';
+                            $where_clause_2[] = 'visitor.domain ' . ($is_not ? 'NOT ' : '') . 'IN (%s)';
+                            $bind[] = implode(', ', $list);
+                            break;
+                        default:
+                            break;
+                    }
+                }
+            }
+        }
     
         function aesirx_analytics_add_conversion_filters($params, &$where_clause, &$bind) {
             foreach ($params['filter'] as $key => $vals) {
@@ -828,6 +875,10 @@ if (!class_exists('AesirxAnalyticsMysqlHelper')) {
             if (!empty($ip)) {
                 $data['ip_consent'] = $ip;
             }
+
+            if (!empty($override_language)) {
+                $data['override_language'] = $override_language;
+            }
             
             // Prepare the data types based on the keys
             $data_types = array_fill(0, count($data), '%s'); // Default to '%s' for all
@@ -875,6 +926,10 @@ if (!class_exists('AesirxAnalyticsMysqlHelper')) {
 
             if ($visitor_data->lang === '') {
                 $updated_data['lang'] = isset($params['request']['lang']) ? $params['request']['lang'] : '';
+            }
+
+            if ($visitor_data->timezone === '') {
+                $updated_data['timezone'] = isset($params['request']['timezone']) ? $params['request']['timezone'] : '';
             }
 
             if (!empty($updated_data)) {
@@ -1039,7 +1094,8 @@ if (!class_exists('AesirxAnalyticsMysqlHelper')) {
                         'browser_version' => '',
                         'browser_name' => '',
                         'device' => '',
-                        'user_agent' => ''
+                        'user_agent' => '',
+                        'timezone' => ''
                     ],
                     ['uuid' => $visitor_data->visitor_uuid],
                 );
@@ -1087,6 +1143,7 @@ if (!class_exists('AesirxAnalyticsMysqlHelper')) {
                         'browser_version' => $visitor_result->browser_version,
                         'domain' => $visitor_result->domain,
                         'lang' => $visitor_result->lang,
+                        'timezone' => $visitor_result->timezone,
                         'visitor_flows' => null,
                         'geo' => null,
                         'visitor_consents' => [],
@@ -1221,6 +1278,7 @@ if (!class_exists('AesirxAnalyticsMysqlHelper')) {
                     'browser_version' => $visitor['browser_version'],
                     'domain' => $visitor['domain'],
                     'lang' => $visitor['lang'],
+                    'timezone' => $visitor['timezone'],
                     'visitor_flows' => isset($list_flows[$visitor['uuid']]) ? $list_flows[$visitor['uuid']] : null,
                     'geo' => $geo_created_at ? array(
                         $visitor['code'] ?? null,
