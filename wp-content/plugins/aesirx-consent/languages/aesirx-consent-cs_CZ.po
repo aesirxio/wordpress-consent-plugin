@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: AesirX Consent 1.7.0\n"
+"Project-Id-Version: AesirX Consent 1.8.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/aesirx-consent\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -49,52 +49,56 @@ msgid "Invalid domain format."
 msgstr "Neplatný formát domény."
 
 #: aesirx-consent.php:43
-#: includes/settings.php:1238
+#: includes/settings.php:1252
 msgid "Consent"
 msgstr "Souhlas"
 
-#: src/AesirxAnalyticsMysqlHelper.php:96
+#: src/AesirxAnalyticsMysqlHelper.php:101
 msgid "Database error occurred."
 msgstr "Došlo k chybě databáze."
 
-#: src/AesirxAnalyticsMysqlHelper.php:250
-#: src/AesirxAnalyticsMysqlHelper.php:585
-#: src/AesirxAnalyticsMysqlHelper.php:617
+#: src/AesirxAnalyticsMysqlHelper.php:255
+#: src/AesirxAnalyticsMysqlHelper.php:594
+#: src/AesirxAnalyticsMysqlHelper.php:632
+#: src/AesirxAnalyticsMysqlHelper.php:671
+#: src/AesirxAnalyticsMysqlHelper.php:705
 msgid "\"start\" filter is not correct"
 msgstr "\"Filtr \\\"start\\\" není správný\""
 
-#: src/AesirxAnalyticsMysqlHelper.php:258
-#: src/AesirxAnalyticsMysqlHelper.php:593
-#: src/AesirxAnalyticsMysqlHelper.php:625
+#: src/AesirxAnalyticsMysqlHelper.php:263
+#: src/AesirxAnalyticsMysqlHelper.php:602
+#: src/AesirxAnalyticsMysqlHelper.php:640
+#: src/AesirxAnalyticsMysqlHelper.php:680
+#: src/AesirxAnalyticsMysqlHelper.php:713
 msgid "\"end\" filter is not correct"
 msgstr "\"Konec\" filtr není správný"
 
-#: src/AesirxAnalyticsMysqlHelper.php:327
+#: src/AesirxAnalyticsMysqlHelper.php:333
 msgid "Domain not found"
 msgstr "Doména nenalezena"
 
-#: src/AesirxAnalyticsMysqlHelper.php:406
-#: src/AesirxAnalyticsMysqlHelper.php:468
-#: src/AesirxAnalyticsMysqlHelper.php:521
-#: src/AesirxAnalyticsMysqlHelper.php:546
-#: src/AesirxAnalyticsMysqlHelper.php:565
-#: src/AesirxAnalyticsMysqlHelper.php:646
-#: src/AesirxAnalyticsMysqlHelper.php:670
-#: src/AesirxAnalyticsMysqlHelper.php:697
-#: src/AesirxAnalyticsMysqlHelper.php:737
-#: src/AesirxAnalyticsMysqlHelper.php:1085
+#: src/AesirxAnalyticsMysqlHelper.php:413
+#: src/AesirxAnalyticsMysqlHelper.php:477
+#: src/AesirxAnalyticsMysqlHelper.php:530
+#: src/AesirxAnalyticsMysqlHelper.php:555
+#: src/AesirxAnalyticsMysqlHelper.php:574
+#: src/AesirxAnalyticsMysqlHelper.php:734
+#: src/AesirxAnalyticsMysqlHelper.php:758
+#: src/AesirxAnalyticsMysqlHelper.php:785
+#: src/AesirxAnalyticsMysqlHelper.php:825
+#: src/AesirxAnalyticsMysqlHelper.php:1183
 #: src/Mysql/GetVisitorConsentList.php:60
 msgid "There was a problem with the database query."
 msgstr "Došlo k problému s dotazem na databázi."
 
-#: src/AesirxAnalyticsMysqlHelper.php:911
-#: src/AesirxAnalyticsMysqlHelper.php:930
-#: src/AesirxAnalyticsMysqlHelper.php:950
-#: src/AesirxAnalyticsMysqlHelper.php:1288
+#: src/AesirxAnalyticsMysqlHelper.php:1007
+#: src/AesirxAnalyticsMysqlHelper.php:1026
+#: src/AesirxAnalyticsMysqlHelper.php:1046
+#: src/AesirxAnalyticsMysqlHelper.php:1387
 msgid "Something went wrong"
 msgstr "Něco se pokazilo"
 
-#: src/AesirxAnalyticsMysqlHelper.php:1011
+#: src/AesirxAnalyticsMysqlHelper.php:1108
 msgid "There was a problem updating the data in the database."
 msgstr "Došlo k problému při aktualizaci dat v databázi."
 
@@ -199,11 +203,11 @@ msgstr "Nepodařilo se aktualizovat vypršení platnosti souhlasu."
 msgid "Failed to update nonce."
 msgstr "Nepodařilo se aktualizovat nonce."
 
-#: src/Mysql/StartFingerprint.php:146
+#: src/Mysql/StartFingerprint.php:147
 msgid "Wrong URL format, domain not found"
 msgstr "Špatný formát URL, doména nenalezena"
 
-#: src/Mysql/StartFingerprint.php:150
+#: src/Mysql/StartFingerprint.php:151
 msgid "The domain sent in the new URL does not match the domain stored in the visitor document"
 msgstr "Doména odeslaná v nové URL neodpovídá doméně uložené v dokumentu návštěvníka"
 
@@ -226,306 +230,306 @@ msgid "Aesirx Consent plugin. When you join forces with AesirX, you're not just 
 msgstr "Plugin AesirX Consent. Když se připojíte k AesirX, nestanete se jen partnerem - stanete se také bojovníkem za svobodu v boji za soukromí! Získejte 25% provizi z affiliate <a href=\"https://aesirx.io/partner?utm_source=wpplugin&utm_medium=web&utm_campaign=wordpress&utm_id=aesirx&utm_term=wordpress&utm_content=analytics\">[Klikněte pro připojení]</a>"
 
 #: aesirx-consent.php:39
-#: includes/settings.php:1234
+#: includes/settings.php:1248
 msgid "Shield of Privacy"
 msgstr "Štít soukromí"
 
 #: aesirx-consent.php:40
-#: includes/settings.php:1235
+#: includes/settings.php:1249
 msgid "Revoke your consent for data use whenever you wish."
 msgstr "Kdykoli si přejete, odvolejte svůj souhlas s používáním dat."
 
 #: aesirx-consent.php:41
-#: includes/settings.php:1236
+#: includes/settings.php:1250
 msgid "Manage Decentralized Consent"
 msgstr "Správa decentralizovaného souhlasu"
 
 #: aesirx-consent.php:42
-#: includes/settings.php:1237
+#: includes/settings.php:1251
 msgid "Revoke Consent"
 msgstr "Odvolat souhlas"
 
 #: aesirx-consent.php:44
-#: includes/settings.php:1239
+#: includes/settings.php:1253
 msgid "Reject"
 msgstr "Odmítnout"
 
 #: aesirx-consent.php:45
-#: includes/settings.php:1240
+#: includes/settings.php:1254
 msgid "Please connect your Web3 wallet"
 msgstr "Připojte prosím svou Web3 peněženku"
 
 #: aesirx-consent.php:46
-#: includes/settings.php:1241
+#: includes/settings.php:1255
 msgid "Please sign the message on your wallet twice and wait for it to be saved."
 msgstr "Prosím, podepište zprávu ve své peněžence dvakrát a počkejte, až bude uložena."
 
 #: aesirx-consent.php:47
-#: includes/settings.php:1242
+#: includes/settings.php:1256
 msgid "Saving..."
 msgstr "Ukládání..."
 
 #: aesirx-consent.php:48
-#: includes/settings.php:1243
+#: includes/settings.php:1257
 msgid "Please connect to your wallet"
 msgstr "Připojte se ke své peněžence"
 
 #: aesirx-consent.php:49
-#: includes/settings.php:1244
+#: includes/settings.php:1258
 msgid "Connecting"
 msgstr "Připojování"
 
 #: aesirx-consent.php:50
-#: includes/settings.php:1245
+#: includes/settings.php:1259
 msgid "TRACKING AND DATA PRIVACY PREFERENCES"
 msgstr "PŘEDVOLBY SLEDOVÁNÍ A OCHRANY OSOBNÍCH ÚDAJŮ"
 
 #: aesirx-consent.php:51
-#: includes/settings.php:1246
+#: includes/settings.php:1260
 msgid "About"
 msgstr "O"
 
 #: aesirx-consent.php:52
 #: aesirx-consent.php:101
-#: includes/settings.php:1247
-#: includes/settings.php:1296
+#: includes/settings.php:1261
+#: includes/settings.php:1310
 msgid "Details"
 msgstr "Podrobnosti"
 
 #: aesirx-consent.php:53
 #: aesirx-consent.php:81
-#: includes/settings.php:1248
-#: includes/settings.php:1276
+#: includes/settings.php:1262
+#: includes/settings.php:1290
 msgid "Decentralized Consent"
 msgstr "Decentralizovaný souhlas"
 
 #: aesirx-consent.php:54
-#: includes/settings.php:1249
+#: includes/settings.php:1263
 msgid "Manage Your Consent Preferences"
 msgstr "Spravujte své preference souhlasu"
 
 #: aesirx-consent.php:55
-#: includes/settings.php:1250
+#: includes/settings.php:1264
 msgid "Choose how we use your data: \"Reject\" data collection, allow tracking [\"Consent\"], or use \"Decentralized Consent\" for more control over your personal data & rewards."
 msgstr "Vyberte, jak používáme vaše data: 'Odmítnout' sběr dat, povolit sledování ['Souhlas'], nebo použít 'Decentralizovaný souhlas' pro větší kontrolu nad vašimi osobními údaji a odměnami."
 
 #: aesirx-consent.php:56
-#: includes/settings.php:1251
+#: includes/settings.php:1265
 msgid "Choose how we use your data: \"Reject\" data collection, allow tracking [\"Consent\"]."
 msgstr "Zvolte, jak používáme vaše data: \"Odmítnout\" sběr dat, povolit sledování [\"Souhlas\"]."
 
 #: aesirx-consent.php:57
-#: includes/settings.php:1252
+#: includes/settings.php:1266
 msgid "By consenting, you allow us to collect & use your data for:"
 msgstr "Souhlasem nám umožňujete shromažďovat a používat vaše data pro:"
 
 #: aesirx-consent.php:58
-#: includes/settings.php:1253
+#: includes/settings.php:1267
 msgid "Analytics & Behavioral Data: To improve our services & personalize your experience."
 msgstr "Analytika a behaviorální data: Pro zlepšení našich služeb a personalizaci vaší zkušenosti."
 
 #: aesirx-consent.php:59
-#: includes/settings.php:1254
+#: includes/settings.php:1268
 msgid "Form Data: When you contact us."
 msgstr "Údaje formuláře: Když nás kontaktujete."
 
 #: aesirx-consent.php:60
-#: includes/settings.php:1255
+#: includes/settings.php:1269
 msgid "Please note"
 msgstr "Vezměte prosím na vědomí"
 
 #: aesirx-consent.php:61
-#: includes/settings.php:1256
+#: includes/settings.php:1270
 msgid "We do not share your data with third parties without your explicit consent."
 msgstr "Vaše údaje nesdílíme se třetími stranami bez vašeho výslovného souhlasu."
 
 #: aesirx-consent.php:62
-#: includes/settings.php:1257
+#: includes/settings.php:1271
 msgid "You can opt-in later for specific features without giving blanket consent."
 msgstr "Můžete se později přihlásit k určitým funkcím, aniž byste dávali obecný souhlas."
 
 #: aesirx-consent.php:63
-#: includes/settings.php:1258
+#: includes/settings.php:1272
 msgid "For more details, refer to our <a class='text-success fw-semibold text-decoration-underline' href='https://aesirx.io/privacy-policy' target='_blank'>privacy policy.</a>"
 msgstr "Pro více podrobností se podívejte na naše <a class='text-success fw-semibold text-decoration-underline' href='https://aesirx.io/privacy-policy' target='_blank'>zásady ochrany osobních údajů.</a>"
 
 #: aesirx-consent.php:64
-#: includes/settings.php:1259
+#: includes/settings.php:1273
 msgid "Benefits"
 msgstr "Výhody"
 
 #: aesirx-consent.php:65
-#: includes/settings.php:1260
+#: includes/settings.php:1274
 msgid "<span class='fw-semibold text-primary'>Control your data:</span> Choose your preferred level of data collection & tracking."
 msgstr "<span class='fw-semibold text-primary'>Ovládejte svá data:</span> Vyberte si preferovanou úroveň sběru a sledování dat."
 
 #: aesirx-consent.php:66
-#: includes/settings.php:1261
+#: includes/settings.php:1275
 msgid "<span class='fw-semibold text-primary'>Earn rewards:</span> Participate in decentralized consent for privacy & rewards."
 msgstr "<span class='fw-semibold text-primary'>Získejte odměny:</span> Zapojte se do decentralizovaného souhlasu pro ochranu soukromí a odměny."
 
 #: aesirx-consent.php:67
-#: includes/settings.php:1262
+#: includes/settings.php:1276
 msgid "<span class='fw-semibold text-primary'>Transparent data collection practices:</span> Understand how your data is collected & used."
 msgstr "<span class='fw-semibold text-primary'>Transparentní postupy sběru dat:</span> Pochopte, jak jsou vaše data shromažďována a používána."
 
 #: aesirx-consent.php:68
-#: includes/settings.php:1263
+#: includes/settings.php:1277
 msgid "Understanding Your Privacy Choices"
 msgstr "Pochopení vašich možností ochrany soukromí"
 
 #: aesirx-consent.php:69
-#: includes/settings.php:1264
+#: includes/settings.php:1278
 msgid "<span class='fw-semibold text-primary'>Reject:</span> No data will be collected or loaded except for anonymized page views & rejections. Some personalization features may be disabled."
 msgstr "<span class='fw-semibold text-primary'>Odmítnout:</span> Nebudou shromažďována ani načítána žádná data kromě anonymních zobrazení stránek a odmítnutí. Některé personalizační funkce mohou být deaktivovány."
 
 #: aesirx-consent.php:70
-#: includes/settings.php:1265
+#: includes/settings.php:1279
 msgid "<span class='fw-semibold text-primary'>Consent:</span> First & third-party tracking data will be collected to enhance your experience."
 msgstr "<span class='fw-semibold text-primary'>Souhlas:</span> Data sledování první a třetí strany budou shromažďována pro zlepšení vašeho zážitku."
 
 #: aesirx-consent.php:71
-#: includes/settings.php:1266
+#: includes/settings.php:1280
 msgid "<span class='fw-semibold text-primary'>Decentralized Consent:</span> Choose Decentralized Wallets or Decentralized Wallet + Shield of Privacy. Both options let you manage & revoke consent on-site or through AesirX dApp, plus earn rewards from digital marketing activities."
 msgstr "<span class='fw-semibold text-primary'>Decentralizovaný souhlas:</span> Vyberte Decentralizované peněženky nebo Decentralizovanou peněženku + Štít soukromí. Obě možnosti vám umožňují spravovat a odvolávat souhlas na místě nebo prostřednictvím AesirX dApp, a navíc získávat odměny z digitálních marketingových aktivit."
 
 #: aesirx-consent.php:72
-#: includes/settings.php:1267
+#: includes/settings.php:1281
 msgid "Our Commitment in Action"
 msgstr "Naše závazky v akci"
 
 #: aesirx-consent.php:73
-#: includes/settings.php:1268
+#: includes/settings.php:1282
 msgid "<span class='fw-semibold text-primary'>Privacy Protection:</span> Users have full control over their data, ensuring maximum privacy."
 msgstr "<span class='fw-semibold text-primary'>Ochrana soukromí:</span> Uživatelé mají plnou kontrolu nad svými daty, což zajišťuje maximální soukromí."
 
 #: aesirx-consent.php:74
-#: includes/settings.php:1269
+#: includes/settings.php:1283
 msgid "<span class='fw-semibold text-primary'>Enables Compliance:</span> Using Shield of Privacy (SoP) ensures compliance with GDPR, CCPA, ePrivacy Directive, & other data protection regulations."
 msgstr "<span class='fw-semibold text-primary'>Umožňuje soulad:</span> Použití Privacy Shield (SoP) zajišťuje soulad s GDPR, CCPA, směrnicí o ePrivacy a dalšími předpisy o ochraně dat."
 
 #: aesirx-consent.php:75
-#: includes/settings.php:1270
+#: includes/settings.php:1284
 msgid "<span class='fw-semibold text-primary'>Proactive Protection:</span> We enhance privacy measures to safeguard your data integrity."
 msgstr "<span class='fw-semibold text-primary'>Proaktivní ochrana:</span> Vylepšujeme opatření na ochranu soukromí, abychom zajistili integritu vašich dat."
 
 #: aesirx-consent.php:76
-#: includes/settings.php:1271
+#: includes/settings.php:1285
 msgid "<span class='fw-semibold text-primary'>Flexible Consent:</span> You can withdraw your consent anytime on-site or via our <a class='text-success fw-semibold text-decoration-underline' href='https://dapp.shield.aesirx.io' target='_blank'>dApp</a> (Decentralized Application)."
 msgstr "<span class='fw-semibold text-primary'>Flexibilní souhlas:</span> Svůj souhlas můžete kdykoli odvolat na místě nebo prostřednictvím naší <a class='text-success fw-semibold text-decoration-underline' href='https://dapp.shield.aesirx.io' target='_blank'>dApp</a> (Decentralizovaná aplikace)."
 
 #: aesirx-consent.php:77
-#: includes/settings.php:1272
+#: includes/settings.php:1286
 msgid "<span class='fw-semibold text-primary'>Learn More:</span> Discover our approach to data processing in our <a class='text-success fw-semibold text-decoration-underline' href='https://aesirx.io/privacy-policy' target='_blank'>Privacy Policy</a>."
 msgstr "<span class='fw-semibold text-primary'>Zjistěte více:</span> Objevte náš přístup ke zpracování dat v našich <a class='text-success fw-semibold text-decoration-underline' href='https://aesirx.io/privacy-policy' target='_blank'>Zásadách ochrany osobních údajů</a>."
 
 #: aesirx-consent.php:78
-#: includes/settings.php:1273
+#: includes/settings.php:1287
 msgid "<span class='fw-semibold text-primary'>For Businesses:</span> Enhance trust, secure user identities, & prevent breaches."
 msgstr "<span class='fw-semibold text-primary'>Pro firmy:</span> Zvyšte důvěru, zabezpečte uživatelské identity a zabraňte narušení."
 
 #: aesirx-consent.php:79
-#: includes/settings.php:1274
+#: includes/settings.php:1288
 msgid "More info at <a class='text-success fw-semibold text-decoration-underline' href='https://shield.aesirx.io' target='_blank'>https://shield.aesirx.io</a>."
 msgstr "Více informací na <a class='text-success fw-semibold text-decoration-underline' href='https://shield.aesirx.io' target='_blank'>https://shield.aesirx.io</a>."
 
 #: aesirx-consent.php:80
-#: includes/settings.php:1275
+#: includes/settings.php:1289
 msgid "Select your preferred decentralized consent option:"
 msgstr "Vyberte svou preferovanou možnost decentralizovaného souhlasu:"
 
 #: aesirx-consent.php:82
-#: includes/settings.php:1277
+#: includes/settings.php:1291
 msgid "Decentralized consent will be loaded"
 msgstr "Decentralizovaný souhlas bude načten"
 
 #: aesirx-consent.php:83
-#: includes/settings.php:1278
+#: includes/settings.php:1292
 msgid "Both first-party & third-party tracking data will be activated."
 msgstr "Budou aktivována data sledování první i třetí strany."
 
 #: aesirx-consent.php:84
-#: includes/settings.php:1279
+#: includes/settings.php:1293
 msgid "All consented data will be collected."
 msgstr "Budou shromažďovány všechny údaje se souhlasem."
 
 #: aesirx-consent.php:85
-#: includes/settings.php:1280
+#: includes/settings.php:1294
 msgid "Users can revoke consent on-site at any time."
 msgstr "Uživatelé mohou souhlas kdykoli odvolat na místě."
 
 #: aesirx-consent.php:86
-#: includes/settings.php:1281
+#: includes/settings.php:1295
 msgid "Decentralized Consent + Shield of Privacy"
 msgstr "Decentralizovaný souhlas + štít soukromí"
 
 #: aesirx-consent.php:87
-#: includes/settings.php:1282
+#: includes/settings.php:1296
 msgid "Users can revoke consent on-site or from the AesirX dApp at any time."
 msgstr "Uživatelé mohou kdykoli odvolat souhlas na místě nebo z AesirX dApp."
 
 #: aesirx-consent.php:88
-#: includes/settings.php:1283
+#: includes/settings.php:1297
 msgid "Users can earn rewards from digital marketing activities."
 msgstr "Uživatelé mohou získat odměny z digitálních marketingových aktivit."
 
 #: aesirx-consent.php:89
-#: includes/settings.php:1284
+#: includes/settings.php:1298
 msgid "Continue"
 msgstr "Pokračovat"
 
 #: aesirx-consent.php:90
-#: includes/settings.php:1285
+#: includes/settings.php:1299
 msgid "Back"
 msgstr "Zpět"
 
 #: aesirx-consent.php:91
-#: includes/settings.php:1286
+#: includes/settings.php:1300
 msgid "You've chosen to reject data collection:"
 msgstr "Rozhodli jste se odmítnout shromažďování dat:"
 
 #: aesirx-consent.php:92
-#: includes/settings.php:1287
+#: includes/settings.php:1301
 msgid "Only anonymized page views & limited features will be available. To access all website features, including personalized content & enhanced functionality, please choose an option:"
 msgstr "K dispozici budou pouze anonymizované zobrazení stránek a omezené funkce. Chcete-li získat přístup ke všem funkcím webu, včetně personalizovaného obsahu a rozšířené funkčnosti, vyberte prosím možnost:"
 
 #: aesirx-consent.php:93
-#: includes/settings.php:1288
+#: includes/settings.php:1302
 msgid "<span class='fw-semibold text-primary'>Consent:</span> Allow data collection for analytics, form data (when you contact us), & behavioral & event tracking, with the option to opt-in for specific features."
 msgstr "<span class='fw-semibold text-primary'>Souhlas:</span> Povolit sběr dat pro analýzy, data z formulářů (když nás kontaktujete) a sledování chování a událostí, s možností přihlásit se k určitým funkcím."
 
 #: aesirx-consent.php:94
-#: includes/settings.php:1289
+#: includes/settings.php:1303
 msgid "<span class='fw-semibold text-primary'>Decentralized Consent:</span> Allow data collection for analytics, form data (when you contact us), & behavioral & event tracking, with the option to revoke consent, opt-in for specific features, & earn rewards from digital marketing activities."
 msgstr "<span class='fw-semibold text-primary'>Decentralizovaný souhlas:</span> Povolit sběr dat pro analytiku, data z formulářů (když nás kontaktujete) a sledování chování a událostí, s možností odvolat souhlas, přihlásit se k určitým funkcím a získat odměny z digitálních marketingových aktivit."
 
 #: aesirx-consent.php:95
-#: includes/settings.php:1290
+#: includes/settings.php:1304
 msgid "You can revoke consent on the site or any explicit opt-in consent, such as payment processing, at any time"
 msgstr "Souhlas na webu nebo jakýkoli výslovný souhlas, jako je zpracování plateb, můžete kdykoli odvolat"
 
 #: aesirx-consent.php:96
-#: includes/settings.php:1291
+#: includes/settings.php:1305
 msgid "Revoke Opt-In Consent"
 msgstr "Odvolat souhlas s přihlášením"
 
 #: aesirx-consent.php:97
-#: includes/settings.php:1292
+#: includes/settings.php:1306
 msgid "Revoke Opt-In Consent for Payment Processing"
 msgstr "Odvolat souhlas s platbou"
 
 #: aesirx-consent.php:98
-#: includes/settings.php:1293
+#: includes/settings.php:1307
 msgid "Revoke Opt-In Consent for AesirX Privacy Advisor AI"
 msgstr "Zrušte souhlas k přihlášení pro AesirX Privacy Advisor AI"
 
 #: aesirx-consent.php:99
-#: includes/settings.php:1294
+#: includes/settings.php:1308
 msgid "Revoke Consent for the site"
 msgstr "Odvolat souhlas pro tento web"
 
 #: aesirx-consent.php:100
-#: includes/settings.php:1295
+#: includes/settings.php:1309
 msgid "Consent Management"
 msgstr "Správa souhlasů"
 
@@ -590,20 +594,20 @@ msgstr "Hostitelé první i třetí strany"
 msgid "Need Help? Access Our Comprehensive Documentation Hub"
 msgstr "Potřebujete pomoc? Přistupte k našemu komplexnímu dokumentačnímu centru"
 
-#: includes/settings.php:1380
-#: includes/settings.php:1460
+#: includes/settings.php:1394
+#: includes/settings.php:1474
 msgid "Your trial license ends in %1$s days. Please update new license <a href='%2$s' target='_blank'>%2$s</a>."
 msgstr "Vaše zkušební licence končí za %1$s dní. Aktualizujte prosím novou licenci na <a href='%2$s' target='_blank'>%2$s</a>."
 
-#: includes/settings.php:1409
+#: includes/settings.php:1423
 msgid "Your license is expried or not found. Please update new license <a href='%1$s' target='_blank'>%1$s</a>."
 msgstr "Vaše licence vypršela nebo nebyla nalezena. Aktualizujte prosím novou licenci <a href='%1$s' target='_blank'>%1$s</a>."
 
-#: includes/settings.php:1463
+#: includes/settings.php:1477
 msgid "Your free trials has ended. Please update your license. <a href='%1$s' target='_blank'>%1$s</a>."
 msgstr "Vaše zkušební verze skončila. Aktualizujte prosím svou licenci. <a href='%1$s' target='_blank'>%1$s</a>."
 
-#: src/AesirxAnalyticsMysqlHelper.php:850
+#: src/AesirxAnalyticsMysqlHelper.php:946
 msgid "Could not insert consent"
 msgstr "Nelze vložit souhlas"
 
@@ -678,22 +682,22 @@ msgstr "Objevte nejnovější funkce a osvědčené postupy."
 msgid "Haven't got a license yet?"
 msgstr "Ještě nemáte licenci?"
 
-#: includes/settings.php:1005
+#: includes/settings.php:1006
 msgid "Scan Your Site for Privacy Risks"
 msgstr "Prohledejte svůj web na rizika soukromí"
 
-#: includes/settings.php:1009
+#: includes/settings.php:1010
 msgid "Use the Privacy Scanner to quickly identify scripts, tags, & trackers running on your site that may compromise user privacy."
 msgstr "Pomocí nástroje Privacy Scanner můžete rychle identifikovat skripty, značky a sledovače spuštěné na vašem webu, které mohou ohrozit soukromí uživatelů."
 
-#: includes/settings.php:1015
+#: includes/settings.php:1016
 msgid "Use Consent Shield to block those scripts by adding their domains or paths, ensuring quick & simple compliance."
 msgstr "Použijte Consent Shield k blokování těchto skriptů přidáním jejich domén nebo cest, což zajišťuje rychlou a jednoduchou shodu."
 
-#: includes/settings.php:1068
-#: includes/settings.php:1130
-#: includes/settings.php:1163
-#: includes/settings.php:1196
+#: includes/settings.php:1069
+#: includes/settings.php:1132
+#: includes/settings.php:1165
+#: includes/settings.php:1210
 msgid "Save settings"
 msgstr "Uložte nastavení"
 
@@ -705,11 +709,11 @@ msgstr "Licenční klíč"
 msgid "Haven't got Shield of Privacy ID yet?"
 msgstr "Ještě nemáte ID Shield of Privacy?"
 
-#: includes/settings.php:1024
+#: includes/settings.php:1025
 msgid "Learn how to use AesirX Privacy Scanner with Consent Shield to detect privacy-intrusive elements, using the JetPack plugin as an example."
 msgstr "Naučte se používat AesirX Privacy Scanner s Consent Shield k detekci prvků narušujících soukromí, s použitím pluginu JetPack jako příkladu."
 
-#: includes/settings.php:1427
+#: includes/settings.php:1441
 msgid "Your license ends in %1$s days. Please update new license <a href='%2$s' target='_blank'>%2$s</a>."
 msgstr "Vaše licence končí za %1$s dní. Aktualizujte prosím novou licenci na <a href='%2$s' target='_blank'>%2$s</a>."
 
@@ -754,7 +758,7 @@ msgstr "Obnovit souhlas"
 msgid "Important: Permalink Settings Required"
 msgstr "Důležité: Je vyžadováno nastavení trvalých odkazů"
 
-#: includes/settings.php:1453
+#: includes/settings.php:1467
 msgid "Your trial license ends in %1$s hour(s). Please update your license <a href='%2$s' target='_blank'>here</a>."
 msgstr "Vaše zkušební licence končí za %1$s hodinu/hodiny. Aktualizujte prosím svou licenci <a href='%2$s' target='_blank'>zde</a>."
 
@@ -775,11 +779,11 @@ msgstr "klikněte zde"
 msgid "GTM General"
 msgstr "GTM General"
 
-#: includes/settings.php:1386
+#: includes/settings.php:1400
 msgid "Something went wrong: %1$s. Please contact the administrator."
 msgstr "Něco se pokazilo: %1$s. Kontaktujte prosím administrátora."
 
-#: includes/settings.php:1433
+#: includes/settings.php:1447
 msgid "Check license failed: %1$s. Please contact the administrator or update your license."
 msgstr "Kontrola licence selhala: %1$s. Kontaktujte prosím administrátora nebo aktualizujte svou licenci."
 
@@ -787,7 +791,7 @@ msgstr "Kontrola licence selhala: %1$s. Kontaktujte prosím administrátora nebo
 msgid "Check license failed: %1\\$s. Please contact the administrator."
 msgstr "Kontrola licence selhala: %1$s. Kontaktujte prosím administrátora."
 
-#: includes/settings.php:1416
+#: includes/settings.php:1430
 msgid "Your domain is not match with your license. Please update domain in your license <a href='%1$s' target='_blank'>%1$s</a> and click <span class='verify_domain'>here</span> to verify again."
 msgstr "Vaše doména neodpovídá vaší licenci. Aktualizujte prosím doménu ve své licenci <a href='%1$s' target='_blank'>%1$s</a> a klikněte <span class='verify_domain'>zde</span> pro opětovné ověření."
 

@@ -399,13 +399,13 @@
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/vietredweb/aesirx-analytics-lib.git",
-                "reference": "1781bfa491e621bce9ff767bc44402cd0618cf34"
+                "url": "https://github.com/aesirxio/aesirx-analytics-lib.git",
+                "reference": "5fabd8ed022c5df5a9fe9f37c29a9baf7e460516"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vietredweb/aesirx-analytics-lib/zipball/1781bfa491e621bce9ff767bc44402cd0618cf34",
-                "reference": "1781bfa491e621bce9ff767bc44402cd0618cf34",
+                "url": "https://api.github.com/repos/aesirxio/aesirx-analytics-lib/zipball/5fabd8ed022c5df5a9fe9f37c29a9baf7e460516",
+                "reference": "5fabd8ed022c5df5a9fe9f37c29a9baf7e460516",
                 "shasum": ""
             },
             "require": {

@@ -8,7 +8,7 @@ $sql = [];
 $sql[] = "
     CREATE TABLE `{$wpdb->prefix}analytics_category_consent` (
         `id` char(36) NOT NULL,
-        `uuid` char(36) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+        `uuid` char(36) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
         `datetime` datetime DEFAULT NULL,
         `expiration` datetime DEFAULT NULL,
         `allow` varchar(255) DEFAULT NULL,

@@ -79,7 +79,7 @@ add_action('admin_init', function () {
 
   add_settings_section(
     'aesirx_analytics_settings',
-    'Aesirx Consent Management',
+    'AesirX Consent Management',
     function () {
       $options = get_option('aesirx_analytics_plugin_options', []);
       echo wp_kses("
@@ -1000,6 +1000,7 @@ add_action('admin_init', function () {
     '',
     function () {
       // using custom function to escape HTML
+      $urlScanner = esc_url(add_query_arg('page', 'aesirx-cmp-scanner', get_admin_url() . 'admin.php'));
       echo wp_kses("
       <div class='aesirx_consent_scanner'>
         <p class='aesirx_consent_title'>".esc_html__("Scan Your Site for Privacy Risks", 'aesirx-consent')."</p>
@@ -1015,7 +1016,7 @@ add_action('admin_init', function () {
             ".esc_html__("Use Consent Shield to block those scripts by adding their domains or paths, ensuring quick & simple compliance.", 'aesirx-consent')."
           </div>
         </div>
-        <a class='aesirx_btn_success' target='_blank' href='https://privacyscanner.aesirx.io'>
+        <a class='aesirx_btn_success' target='_blank' href='".$urlScanner."'>
           Run Privacy Scanner
           <img width='20px' height='20px' src='". plugins_url( 'aesirx-consent/assets/images-plugin/external_link_icon.png')."' />
         </a>
@@ -1051,7 +1052,7 @@ add_action('admin_menu', function () {
     'aesirx-consent-management-plugin',
     function () {
       ?>
-      <h2 class="aesirx_heading">Aesirx Consent Management</h2>
+      <h2 class="aesirx_heading">AesirX Consent Management</h2>
       <div class="aesirx_consent_wrapper">
       <div class="form_wrapper">
         <form action="options.php" method="post">
@@ -1105,17 +1106,7 @@ add_action('admin_menu', function () {
     },
     3
   );
-  add_submenu_page(
-    'aesirx-consent-management-plugin',
-    'Advance Consent',
-    'Advance Consent',
-    'manage_options',
-    'aesirx-bi-consents-advance',
-    function () {
-      ?><div id="biapp" class="aesirxui"></div><?php
-    },
-    3
-  );
+  
   add_submenu_page(
     'aesirx-consent-management-plugin',
     'Consent Modal',
@@ -1184,6 +1175,18 @@ add_action('admin_menu', function () {
 
   add_submenu_page(
     'aesirx-consent-management-plugin',
+    'Consent Analytics',
+    'Consent Analytics',
+    'manage_options',
+    'aesirx-bi-consents-advance',
+    function () {
+      ?><div id="biapp" class="aesirxui"></div><?php
+    },
+    4
+  );
+
+  add_submenu_page(
+    'aesirx-consent-management-plugin',
     'Geo-Handling',
     'Geo-Handling',
     'manage_options',
@@ -1213,7 +1216,7 @@ add_action('admin_menu', function () {
 			<?php
         echo '</div>';
     },
-  4);
+  5);
 
   add_submenu_page(
     'aesirx-consent-management-plugin',
@@ -1229,7 +1232,7 @@ add_action('admin_menu', function () {
 			<?php
         echo '</div>';
     },
-  5);
+  6);
   
   });
 
