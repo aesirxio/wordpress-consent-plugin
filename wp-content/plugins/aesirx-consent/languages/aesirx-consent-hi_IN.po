@@ -1,0 +1,1031 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: AesirX Consent 1.8.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/aesirx-consent\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2024-07-25T03:47:45+00:00\n"
+"PO-Revision-Date: 2024-07-26 17:10+0200\n"
+"Language: hi\n"
+"X-Domain: aesirx-consent\n"
+"X-Generator: Poedit 3.4.4\n"
+
+#. Plugin URI of the plugin
+#: aesirx-consent.php
+msgid "https://analytics.aesirx.io?utm_source=wpplugin&utm_medium=web&utm_campaign=wordpress&utm_id=aesirx&utm_term=wordpress&utm_content=analytics"
+msgstr "https://analytics.aesirx.io?utm_source=wpplugin&utm_medium=web&utm_campaign=wordpress&utm_id=aesirx&utm_term=wordpress&utm_content=analytics"
+
+#. Author of the plugin
+#: aesirx-consent.php
+msgid "aesirx.io"
+msgstr "aesirx.io"
+
+#. Author URI of the plugin
+#: aesirx-consent.php
+msgid "https://aesirx.io/"
+msgstr "https://aesirx.io/"
+
+#: aesirx-consent.php:225
+msgid "Settings"
+msgstr "सेटिंग्स"
+
+#: aesirx-consent.php:340
+msgid "Problem with Aesirx Analytics plugin install"
+msgstr "Aesirx Analytics प्लगइन इंस्टॉल करने में समस्या"
+
+#: includes/settings.php:17
+msgid "Please register your license at Signup.aesirx.io to enable the external first-party server."
+msgstr "बाहरी फर्स्ट-पार्टी सर्वर को सक्षम करने के लिए कृपया अपना लाइसेंस Signup.aesirx.io पर पंजीकृत करें।"
+
+#: includes/settings.php:27
+msgid "Domain is empty."
+msgstr "डोमेन खाली है।"
+
+#: includes/settings.php:34
+msgid "Invalid domain format."
+msgstr "अमान्य डोमेन प्रारूप।"
+
+#: aesirx-consent.php:43
+#: includes/settings.php:1252
+msgid "Consent"
+msgstr "सहमति"
+
+#: src/AesirxAnalyticsMysqlHelper.php:101
+msgid "Database error occurred."
+msgstr "डेटाबेस त्रुटि हुई।"
+
+#: src/AesirxAnalyticsMysqlHelper.php:255
+#: src/AesirxAnalyticsMysqlHelper.php:594
+#: src/AesirxAnalyticsMysqlHelper.php:632
+#: src/AesirxAnalyticsMysqlHelper.php:671
+#: src/AesirxAnalyticsMysqlHelper.php:705
+msgid "\"start\" filter is not correct"
+msgstr "\"start\" फ़िल्टर सही नहीं है"
+
+#: src/AesirxAnalyticsMysqlHelper.php:263
+#: src/AesirxAnalyticsMysqlHelper.php:602
+#: src/AesirxAnalyticsMysqlHelper.php:640
+#: src/AesirxAnalyticsMysqlHelper.php:680
+#: src/AesirxAnalyticsMysqlHelper.php:713
+msgid "\"end\" filter is not correct"
+msgstr "\"end\" फ़िल्टर सही नहीं है"
+
+#: src/AesirxAnalyticsMysqlHelper.php:333
+msgid "Domain not found"
+msgstr "डोमेन नहीं मिला"
+
+#: src/AesirxAnalyticsMysqlHelper.php:413
+#: src/AesirxAnalyticsMysqlHelper.php:477
+#: src/AesirxAnalyticsMysqlHelper.php:530
+#: src/AesirxAnalyticsMysqlHelper.php:555
+#: src/AesirxAnalyticsMysqlHelper.php:574
+#: src/AesirxAnalyticsMysqlHelper.php:734
+#: src/AesirxAnalyticsMysqlHelper.php:758
+#: src/AesirxAnalyticsMysqlHelper.php:785
+#: src/AesirxAnalyticsMysqlHelper.php:825
+#: src/AesirxAnalyticsMysqlHelper.php:1183
+#: src/Mysql/GetVisitorConsentList.php:60
+msgid "There was a problem with the database query."
+msgstr "डेटाबेस क्वेरी में समस्या थी।"
+
+#: src/AesirxAnalyticsMysqlHelper.php:1007
+#: src/AesirxAnalyticsMysqlHelper.php:1026
+#: src/AesirxAnalyticsMysqlHelper.php:1046
+#: src/AesirxAnalyticsMysqlHelper.php:1387
+msgid "Something went wrong"
+msgstr "कुछ गलत हो गया"
+
+#: src/AesirxAnalyticsMysqlHelper.php:1108
+msgid "There was a problem updating the data in the database."
+msgstr "डेटाबेस में डेटा अपडेट करने में समस्या थी।"
+
+#: src/Mysql/AddConsentLevel1.php:23
+#: src/Mysql/AddConsentLevel5.php:23
+#: src/Mysql/AddConsentLevel6.php:23
+msgid "The uuid parameter is required."
+msgstr "uuid पैरामीटर आवश्यक है।"
+
+#: src/Mysql/AddConsentLevel1.php:27
+#: src/Mysql/AddConsentLevel5.php:27
+#: src/Mysql/AddConsentLevel6.php:27
+msgid "The consent parameter is required and must be a number."
+msgstr "सहमति पैरामीटर आवश्यक है और यह एक संख्या होनी चाहिए।"
+
+#: src/Mysql/AddConsentLevel1.php:53
+#: src/Mysql/AddConsentLevel5.php:53
+#: src/Mysql/AddConsentLevel6.php:53
+msgid "Previous consent was not expired"
+msgstr "पिछली सहमति समाप्त नहीं हुई थी"
+
+#: src/Mysql/AddConsentLevel2.php:16
+#: src/Mysql/AddConsentLevel3or4.php:55
+msgid "Invalid token"
+msgstr "अमान्य टोकन"
+
+#: src/Mysql/AddConsentLevel2.php:24
+#: src/Mysql/AddConsentLevel3or4.php:19
+msgid "Visitor not found"
+msgstr "आगंतुक नहीं मिला"
+
+#: src/Mysql/AddConsentLevel2.php:41
+#: src/Mysql/AddConsentLevel3or4.php:80
+msgid "Previous consent still active"
+msgstr "पिछली सहमति अभी भी सक्रिय है"
+
+#: src/Mysql/AddConsentLevel2.php:124
+#: src/Mysql/AddConsentLevel3or4.php:167
+msgid "There was a problem querying the data in the database."
+msgstr "डेटाबेस में डेटा क्वेरी करने में समस्या थी।"
+
+#: src/Mysql/AddConsentLevel3or4.php:12
+msgid "Invalid signature"
+msgstr "अमान्य हस्ताक्षर"
+
+#: src/Mysql/AddConsentLevel3or4.php:26
+msgid "Wallet not found"
+msgstr "वॉलेट नहीं मिला"
+
+#: src/Mysql/AddConsentLevel3or4.php:32
+msgid "Wallet nonce not found"
+msgstr "वॉलेट नॉनस नहीं मिला"
+
+#: src/Mysql/AddConsentLevel3or4.php:39
+#: src/Mysql/RevokeConsentLevel3or4.php:37
+msgid "Nonce is not valid"
+msgstr "Nonce मान्य नहीं है"
+
+#: src/Mysql/AddConsentLevel3or4.php:48
+#: src/Mysql/RevokeConsentLevel3or4.php:44
+msgid "Contract is not valid"
+msgstr "ठेका मान्य नहीं है"
+
+#: src/Mysql/CloseVisitorEvent.php:14
+#: src/Mysql/CloseVisitorEvent.php:18
+msgid "The event uuid parameter is required."
+msgstr "इवेंट uuid पैरामीटर आवश्यक है।"
+
+#: src/Mysql/CloseVisitorEvent.php:36
+msgid "Failed to update analytics events."
+msgstr "एनालिटिक्स इवेंट्स को अपडेट करने में विफल रहा।"
+
+#: src/Mysql/CloseVisitorEvent.php:43
+msgid "Visitor event not found."
+msgstr "आगंतुक इवेंट नहीं मिला।"
+
+#: src/Mysql/CloseVisitorEvent.php:55
+msgid "Failed to update analytics flows"
+msgstr "एनालिटिक्स प्रवाहों को अपडेट करने में विफल रहा"
+
+#: src/Mysql/GetNonce.php:12
+msgid "Address is not valid"
+msgstr "पता मान्य नहीं है"
+
+#: src/Mysql/RevokeConsentLevel3or4.php:14
+msgid "Invalid signature."
+msgstr "अमान्य हस्ताक्षर।"
+
+#: src/Mysql/RevokeConsentLevel3or4.php:24
+msgid "Wallet not found."
+msgstr "वॉलेट नहीं मिला।"
+
+#: src/Mysql/RevokeConsentLevel3or4.php:30
+msgid "Nonce not found."
+msgstr "Nonce नहीं मिला।"
+
+#: src/Mysql/RevokeConsentLevel3or4.php:55
+msgid "Failed to update consent expiration."
+msgstr "सहमति की समय सीमा को अपडेट करने में विफल रहा।"
+
+#: src/Mysql/RevokeConsentLevel3or4.php:62
+msgid "Failed to update nonce."
+msgstr "Nonce को अपडेट करने में विफल रहा।"
+
+#: src/Mysql/StartFingerprint.php:147
+msgid "Wrong URL format, domain not found"
+msgstr "गलत URL प्रारूप, डोमेन नहीं मिला"
+
+#: src/Mysql/StartFingerprint.php:151
+msgid "The domain sent in the new URL does not match the domain stored in the visitor document"
+msgstr "नए URL में भेजा गया डोमेन आगंतुक दस्तावेज़ में संग्रहीत डोमेन से मेल नहीं खाता"
+
+#: src/Route/Middleware/IsBackendMiddleware.php:18
+msgid "Permission denied!"
+msgstr "अनुमति नहीं है!"
+
+#: src/Track/CliTracker.php:32
+msgid "Error in tracking"
+msgstr "ट्रैकिंग में त्रुटि"
+
+#. Plugin Name of the plugin
+#: aesirx-consent.php
+msgid "AesirX Consent"
+msgstr "AesirX सहमति"
+
+#. Description of the plugin
+#: aesirx-consent.php
+msgid "Aesirx Consent plugin. When you join forces with AesirX, you're not just becoming a Partner - you're also becoming a freedom fighter in the battle for privacy! Earn 25% Affiliate Commission <a href=\"https://aesirx.io/partner?utm_source=wpplugin&utm_medium=web&utm_campaign=wordpress&utm_id=aesirx&utm_term=wordpress&utm_content=analytics\">[Click to Join]</a>"
+msgstr "Aesirx सहमति प्लगइन। जब आप Aesirx के साथ जुड़ते हैं, तो आप सिर्फ एक पार्टनर नहीं बन रहे होते - आप गोपनीयता की लड़ाई में एक स्वतंत्रता सेनानी भी बन रहे होते हैं! 25% संबद्ध कमीशन कमाएँ <a href=\"https://aesirx.io/partner?utm_source=wpplugin&utm_medium=web&utm_campaign=wordpress&utm_id=aesirx&utm_term=wordpress&utm_content=analytics\">[शामिल होने के लिए क्लिक करें]</a>"
+
+#: aesirx-consent.php:39
+#: includes/settings.php:1248
+msgid "Shield of Privacy"
+msgstr "निजता का ढाल"
+
+#: aesirx-consent.php:40
+#: includes/settings.php:1249
+msgid "Revoke your consent for data use whenever you wish."
+msgstr "आप जब चाहें डेटा के उपयोग के लिए अपनी सहमति रद्द कर सकते हैं।"
+
+#: aesirx-consent.php:41
+#: includes/settings.php:1250
+msgid "Manage Decentralized Consent"
+msgstr "विकेन्द्रीकृत सहमति प्रबंधित करें"
+
+#: aesirx-consent.php:42
+#: includes/settings.php:1251
+msgid "Revoke Consent"
+msgstr "सहमति रद्द करें"
+
+#: aesirx-consent.php:44
+#: includes/settings.php:1253
+msgid "Reject"
+msgstr "अस्वीकार करें"
+
+#: aesirx-consent.php:45
+#: includes/settings.php:1254
+msgid "Please connect your Web3 wallet"
+msgstr "कृपया अपना वेब3 वॉलेट कनेक्ट करें"
+
+#: aesirx-consent.php:46
+#: includes/settings.php:1255
+msgid "Please sign the message on your wallet twice and wait for it to be saved."
+msgstr "कृपया अपने वॉलेट पर संदेश पर दो बार हस्ताक्षर करें और इसके सहेजे जाने की प्रतीक्षा करें।"
+
+#: aesirx-consent.php:47
+#: includes/settings.php:1256
+msgid "Saving..."
+msgstr "सहेजा जा रहा है..."
+
+#: aesirx-consent.php:48
+#: includes/settings.php:1257
+msgid "Please connect to your wallet"
+msgstr "कृपया अपने वॉलेट से कनेक्ट करें"
+
+#: aesirx-consent.php:49
+#: includes/settings.php:1258
+msgid "Connecting"
+msgstr "कनेक्ट किया जा रहा है"
+
+#: aesirx-consent.php:50
+#: includes/settings.php:1259
+msgid "TRACKING AND DATA PRIVACY PREFERENCES"
+msgstr "ट्रैकिंग और डेटा गोपनीयता प्राथमिकताएँ"
+
+#: aesirx-consent.php:51
+#: includes/settings.php:1260
+msgid "About"
+msgstr "के बारे में"
+
+#: aesirx-consent.php:52
+#: aesirx-consent.php:101
+#: includes/settings.php:1261
+#: includes/settings.php:1310
+msgid "Details"
+msgstr "विवरण"
+
+#: aesirx-consent.php:53
+#: aesirx-consent.php:81
+#: includes/settings.php:1262
+#: includes/settings.php:1290
+msgid "Decentralized Consent"
+msgstr "विकेन्द्रीकृत सहमति"
+
+#: aesirx-consent.php:54
+#: includes/settings.php:1263
+msgid "Manage Your Consent Preferences"
+msgstr "अपनी सहमति प्राथमिकताएँ प्रबंधित करें"
+
+#: aesirx-consent.php:55
+#: includes/settings.php:1264
+msgid "Choose how we use your data: \"Reject\" data collection, allow tracking [\"Consent\"], or use \"Decentralized Consent\" for more control over your personal data & rewards."
+msgstr "चुनें कि हम आपके डेटा का उपयोग कैसे करते हैं: डेटा संग्रह \"अस्वीकार करें\", ट्रैकिंग की अनुमति दें [\"सहमति\"], या अपने व्यक्तिगत डेटा और पुरस्कारों पर अधिक नियंत्रण के लिए \"विकेन्द्रीकृत सहमति\" का उपयोग करें।"
+
+#: aesirx-consent.php:56
+#: includes/settings.php:1265
+msgid "Choose how we use your data: \"Reject\" data collection, allow tracking [\"Consent\"]."
+msgstr "चुनें कि हम आपके डेटा का उपयोग कैसे करते हैं: डेटा संग्रह \"अस्वीकार करें\", ट्रैकिंग की अनुमति दें [\"सहमति\"]।"
+
+#: aesirx-consent.php:57
+#: includes/settings.php:1266
+msgid "By consenting, you allow us to collect & use your data for:"
+msgstr "सहमति देकर, आप हमें इसके लिए आपका डेटा एकत्र और उपयोग करने की अनुमति देते हैं:"
+
+#: aesirx-consent.php:58
+#: includes/settings.php:1267
+msgid "Analytics & Behavioral Data: To improve our services & personalize your experience."
+msgstr "विश्लेषण और व्यवहार संबंधी डेटा: हमारी सेवाओं को बेहतर बनाने और आपके अनुभव को व्यक्तिगत बनाने के लिए।"
+
+#: aesirx-consent.php:59
+#: includes/settings.php:1268
+msgid "Form Data: When you contact us."
+msgstr "फॉर्म डेटा: जब आप हमसे संपर्क करते हैं।"
+
+#: aesirx-consent.php:60
+#: includes/settings.php:1269
+msgid "Please note"
+msgstr "कृपया ध्यान दें"
+
+#: aesirx-consent.php:61
+#: includes/settings.php:1270
+msgid "We do not share your data with third parties without your explicit consent."
+msgstr "हम आपकी स्पष्ट सहमति के बिना आपका डेटा तीसरे पक्ष के साथ साझा नहीं करते हैं।"
+
+#: aesirx-consent.php:62
+#: includes/settings.php:1271
+msgid "You can opt-in later for specific features without giving blanket consent."
+msgstr "आप सामान्य सहमति दिए बिना विशिष्ट सुविधाओं के लिए बाद में ऑप्ट-इन कर सकते हैं।"
+
+#: aesirx-consent.php:63
+#: includes/settings.php:1272
+msgid "For more details, refer to our <a class='text-success fw-semibold text-decoration-underline' href='https://aesirx.io/privacy-policy' target='_blank'>privacy policy.</a>"
+msgstr "अधिक विवरण के लिए, हमारी <a class='text-success fw-semibold text-decoration-underline' href='https://aesirx.io/privacy-policy' target='_blank'>निजता नीति</a> देखें।"
+
+#: aesirx-consent.php:64
+#: includes/settings.php:1273
+msgid "Benefits"
+msgstr "लाभ"
+
+#: aesirx-consent.php:65
+#: includes/settings.php:1274
+msgid "<span class='fw-semibold text-primary'>Control your data:</span> Choose your preferred level of data collection & tracking."
+msgstr "<span class='fw-semibold text-primary'>अपने डेटा को नियंत्रित करें:</span> डेटा संग्रह और ट्रैकिंग का अपना पसंदीदा स्तर चुनें।"
+
+#: aesirx-consent.php:66
+#: includes/settings.php:1275
+msgid "<span class='fw-semibold text-primary'>Earn rewards:</span> Participate in decentralized consent for privacy & rewards."
+msgstr "<span class='fw-semibold text-primary'>पुरस्कार अर्जित करें:</span> गोपनीयता और पुरस्कारों के लिए विकेन्द्रीकृत सहमति में भाग लें।"
+
+#: aesirx-consent.php:67
+#: includes/settings.php:1276
+msgid "<span class='fw-semibold text-primary'>Transparent data collection practices:</span> Understand how your data is collected & used."
+msgstr "<span class='fw-semibold text-primary'>पारदर्शी डेटा संग्रह प्रथाएं:</span> समझें कि आपका डेटा कैसे एकत्र और उपयोग किया जाता है।"
+
+#: aesirx-consent.php:68
+#: includes/settings.php:1277
+msgid "Understanding Your Privacy Choices"
+msgstr "आपकी गोपनीयता विकल्पों को समझना"
+
+#: aesirx-consent.php:69
+#: includes/settings.php:1278
+msgid "<span class='fw-semibold text-primary'>Reject:</span> No data will be collected or loaded except for anonymized page views & rejections. Some personalization features may be disabled."
+msgstr "<span class='fw-semibold text-primary'>अस्वीकार करें:</span> अनाम पेज दृश्यों और अस्वीकृति को छोड़कर कोई डेटा एकत्र या लोड नहीं किया जाएगा। कुछ वैयक्तिकरण सुविधाएँ अक्षम हो सकती हैं।"
+
+#: aesirx-consent.php:70
+#: includes/settings.php:1279
+msgid "<span class='fw-semibold text-primary'>Consent:</span> First & third-party tracking data will be collected to enhance your experience."
+msgstr "<span class='fw-semibold text-primary'>सहमति:</span> आपके अनुभव को बेहतर बनाने के लिए फर्स्ट और थर्ड-पार्टी ट्रैकिंग डेटा एकत्र किया जाएगा।"
+
+#: aesirx-consent.php:71
+#: includes/settings.php:1280
+msgid "<span class='fw-semibold text-primary'>Decentralized Consent:</span> Choose Decentralized Wallets or Decentralized Wallet + Shield of Privacy. Both options let you manage & revoke consent on-site or through AesirX dApp, plus earn rewards from digital marketing activities."
+msgstr "<span class='fw-semibold text-primary'>विकेन्द्रीकृत सहमति:</span> विकेन्द्रीकृत वॉलेट या विकेन्द्रीकृत वॉलेट + निजता का ढाल चुनें। दोनों विकल्प आपको साइट पर या AesirX dApp के माध्यम से सहमति प्रबंधित और रद्द करने देते हैं, साथ ही डिजिटल मार्केटिंग गतिविधियों से पुरस्कार अर्जित करते हैं।"
+
+#: aesirx-consent.php:72
+#: includes/settings.php:1281
+msgid "Our Commitment in Action"
+msgstr "कार्य में हमारी प्रतिबद्धता"
+
+#: aesirx-consent.php:73
+#: includes/settings.php:1282
+msgid "<span class='fw-semibold text-primary'>Privacy Protection:</span> Users have full control over their data, ensuring maximum privacy."
+msgstr "<span class='fw-semibold text-primary'>निजता सुरक्षा:</span> उपयोगकर्ताओं का अपने डेटा पर पूर्ण नियंत्रण होता है, जिससे अधिकतम गोपनीयता सुनिश्चित होती है।"
+
+#: aesirx-consent.php:74
+#: includes/settings.php:1283
+msgid "<span class='fw-semibold text-primary'>Enables Compliance:</span> Using Shield of Privacy (SoP) ensures compliance with GDPR, CCPA, ePrivacy Directive, & other data protection regulations."
+msgstr "<span class='fw-semibold text-primary'>अनुपालन सक्षम करता है:</span> निजता के ढाल (SoP) का उपयोग GDPR, CCPA, ePrivacy Directive, और अन्य डेटा सुरक्षा नियमों का अनुपालन सुनिश्चित करता है।"
+
+#: aesirx-consent.php:75
+#: includes/settings.php:1284
+msgid "<span class='fw-semibold text-primary'>Proactive Protection:</span> We enhance privacy measures to safeguard your data integrity."
+msgstr "<span class='fw-semibold text-primary'>सक्रिय सुरक्षा:</span> हम आपके डेटा की अखंडता की रक्षा के लिए गोपनीयता उपायों को बढ़ाते हैं।"
+
+#: aesirx-consent.php:76
+#: includes/settings.php:1285
+msgid "<span class='fw-semibold text-primary'>Flexible Consent:</span> You can withdraw your consent anytime on-site or via our <a class='text-success fw-semibold text-decoration-underline' href='https://dapp.shield.aesirx.io' target='_blank'>dApp</a> (Decentralized Application)."
+msgstr "<span class='fw-semibold text-primary'>लचीली सहमति:</span> आप साइट पर या हमारे <a class='text-success fw-semibold text-decoration-underline' href='https://dapp.shield.aesirx.io' target='_blank'>dApp</a> (विकेन्द्रीकृत एप्लिकेशन) के माध्यम से किसी भी समय अपनी सहमति वापस ले सकते हैं।"
+
+#: aesirx-consent.php:77
+#: includes/settings.php:1286
+msgid "<span class='fw-semibold text-primary'>Learn More:</span> Discover our approach to data processing in our <a class='text-success fw-semibold text-decoration-underline' href='https://aesirx.io/privacy-policy' target='_blank'>Privacy Policy</a>."
+msgstr "<span class='fw-semibold text-primary'>अधिक जानें:</span> हमारी <a class='text-success fw-semibold text-decoration-underline' href='https://aesirx.io/privacy-policy' target='_blank'>निजता नीति</a> में डेटा प्रोसेसिंग के प्रति हमारे दृष्टिकोण का पता लगाएं।"
+
+#: aesirx-consent.php:78
+#: includes/settings.php:1287
+msgid "<span class='fw-semibold text-primary'>For Businesses:</span> Enhance trust, secure user identities, & prevent breaches."
+msgstr "<span class='fw-semibold text-primary'>व्यवसायों के लिए:</span> विश्वास बढ़ाएँ, उपयोगकर्ता पहचानों को सुरक्षित करें, और उल्लंघनों को रोकें।"
+
+#: aesirx-consent.php:79
+#: includes/settings.php:1288
+msgid "More info at <a class='text-success fw-semibold text-decoration-underline' href='https://shield.aesirx.io' target='_blank'>https://shield.aesirx.io</a>."
+msgstr "<a class='text-success fw-semibold text-decoration-underline' href='https://shield.aesirx.io' target='_blank'>https://shield.aesirx.io</a> पर अधिक जानकारी।"
+
+#: aesirx-consent.php:80
+#: includes/settings.php:1289
+msgid "Select your preferred decentralized consent option:"
+msgstr "अपना पसंदीदा विकेन्द्रीकृत सहमति विकल्प चुनें:"
+
+#: aesirx-consent.php:82
+#: includes/settings.php:1291
+msgid "Decentralized consent will be loaded"
+msgstr "विकेन्द्रीकृत सहमति लोड हो जाएगी"
+
+#: aesirx-consent.php:83
+#: includes/settings.php:1292
+msgid "Both first-party & third-party tracking data will be activated."
+msgstr "फर्स्ट-पार्टी और थर्ड-पार्टी दोनों ट्रैकिंग डेटा सक्रिय हो जाएंगे।"
+
+#: aesirx-consent.php:84
+#: includes/settings.php:1293
+msgid "All consented data will be collected."
+msgstr "सभी सहमति प्राप्त डेटा एकत्र किया जाएगा।"
+
+#: aesirx-consent.php:85
+#: includes/settings.php:1294
+msgid "Users can revoke consent on-site at any time."
+msgstr "उपयोगकर्ता साइट पर किसी भी समय सहमति रद्द कर सकते हैं।"
+
+#: aesirx-consent.php:86
+#: includes/settings.php:1295
+msgid "Decentralized Consent + Shield of Privacy"
+msgstr "विकेन्द्रीकृत सहमति + निजता का ढाल"
+
+#: aesirx-consent.php:87
+#: includes/settings.php:1296
+msgid "Users can revoke consent on-site or from the AesirX dApp at any time."
+msgstr "उपयोगकर्ता साइट पर या AesirX dApp से किसी भी समय सहमति रद्द कर सकते हैं।"
+
+#: aesirx-consent.php:88
+#: includes/settings.php:1297
+msgid "Users can earn rewards from digital marketing activities."
+msgstr "उपयोगकर्ता डिजिटल मार्केटिंग गतिविधियों से पुरस्कार अर्जित कर सकते हैं।"
+
+#: aesirx-consent.php:89
+#: includes/settings.php:1298
+msgid "Continue"
+msgstr "जारी रखें"
+
+#: aesirx-consent.php:90
+#: includes/settings.php:1299
+msgid "Back"
+msgstr "वापस"
+
+#: aesirx-consent.php:91
+#: includes/settings.php:1300
+msgid "You've chosen to reject data collection:"
+msgstr "आपने डेटा संग्रह को अस्वीकार करने का विकल्प चुना है:"
+
+#: aesirx-consent.php:92
+#: includes/settings.php:1301
+msgid "Only anonymized page views & limited features will be available. To access all website features, including personalized content & enhanced functionality, please choose an option:"
+msgstr "केवल अनाम पेज दृश्य और सीमित सुविधाएँ उपलब्ध होंगी। सभी वेबसाइट सुविधाओं, जिसमें व्यक्तिगत सामग्री और बढ़ी हुई कार्यक्षमता शामिल है, तक पहुँचने के लिए, कृपया एक विकल्प चुनें:"
+
+#: aesirx-consent.php:93
+#: includes/settings.php:1302
+msgid "<span class='fw-semibold text-primary'>Consent:</span> Allow data collection for analytics, form data (when you contact us), & behavioral & event tracking, with the option to opt-in for specific features."
+msgstr "<span class='fw-semibold text-primary'>सहमति:</span> एनालिटिक्स, फॉर्म डेटा (जब आप हमसे संपर्क करते हैं), और व्यवहारिक और इवेंट ट्रैकिंग के लिए डेटा संग्रह की अनुमति दें, जिसमें विशिष्ट सुविधाओं के लिए ऑप्ट-इन करने का विकल्प भी शामिल है।"
+
+#: aesirx-consent.php:94
+#: includes/settings.php:1303
+msgid "<span class='fw-semibold text-primary'>Decentralized Consent:</span> Allow data collection for analytics, form data (when you contact us), & behavioral & event tracking, with the option to revoke consent, opt-in for specific features, & earn rewards from digital marketing activities."
+msgstr "<span class='fw-semibold text-primary'>विकेन्द्रीकृत सहमति:</span> एनालिटिक्स, फॉर्म डेटा (जब आप हमसे संपर्क करते हैं), और व्यवहारिक और इवेंट ट्रैकिंग के लिए डेटा संग्रह की अनुमति दें, जिसमें सहमति रद्द करने, विशिष्ट सुविधाओं के लिए ऑप्ट-इन करने और डिजिटल मार्केटिंग गतिविधियों से पुरस्कार अर्जित करने का विकल्प भी शामिल है।"
+
+#: aesirx-consent.php:95
+#: includes/settings.php:1304
+msgid "You can revoke consent on the site or any explicit opt-in consent, such as payment processing, at any time"
+msgstr "आप साइट पर या किसी भी स्पष्ट ऑप्ट-इन सहमति को, जैसे भुगतान प्रसंस्करण, किसी भी समय रद्द कर सकते हैं"
+
+#: aesirx-consent.php:96
+#: includes/settings.php:1305
+msgid "Revoke Opt-In Consent"
+msgstr "ऑप्ट-इन सहमति रद्द करें"
+
+#: aesirx-consent.php:97
+#: includes/settings.php:1306
+msgid "Revoke Opt-In Consent for Payment Processing"
+msgstr "भुगतान प्रसंस्करण के लिए ऑप्ट-इन सहमति रद्द करें"
+
+#: aesirx-consent.php:98
+#: includes/settings.php:1307
+msgid "Revoke Opt-In Consent for AesirX Privacy Advisor AI"
+msgstr "AesirX Privacy Advisor AI के लिए ऑप्ट-इन सहमति रद्द करें"
+
+#: aesirx-consent.php:99
+#: includes/settings.php:1308
+msgid "Revoke Consent for the site"
+msgstr "साइट के लिए सहमति रद्द करें"
+
+#: aesirx-consent.php:100
+#: includes/settings.php:1309
+msgid "Consent Management"
+msgstr "सहमति प्रबंधन"
+
+#: includes/settings.php:224
+msgid "Gtag ID"
+msgstr "Gtag ID"
+
+#: includes/settings.php:249
+msgid "GTM ID"
+msgstr "GTM ID"
+
+#: includes/settings.php:379
+msgid "AesirX Consent Shield for Third-Party Plugins "
+msgstr "थर्ड-पार्टी प्लगइन्स के लिए AesirX कंसेंट शील्ड"
+
+#: includes/settings.php:384
+msgid "Blocks selected third-party plugins from loading until user consent is given."
+msgstr "चयनित थर्ड-पार्टी प्लगइन्स को उपयोगकर्ता द्वारा सहमति दिए जाने तक लोड होने से ब्लॉक करता है।"
+
+#: includes/settings.php:415
+msgid "Completely prevents the loading and execution of chosen third-party plugins before consent."
+msgstr "सहमति से पहले चयनित थर्ड-पार्टी प्लगइन्स के लोडिंग और निष्पादन को पूरी तरह से रोकता है।"
+
+#: includes/settings.php:421
+msgid "No network requests are made to third-party servers, enabling maximum compliance with privacy regulations like GDPR and the ePrivacy Directive."
+msgstr "थर्ड-पार्टी सर्वर पर कोई नेटवर्क अनुरोध नहीं किया जाता है, जिससे GDPR और ePrivacy Directive जैसे गोपनीयता नियमों का अधिकतम अनुपालन सक्षम होता है।"
+
+#: includes/settings.php:435
+msgid "AesirX Consent Shield for Domain/Path-Based Blocking"
+msgstr "डोमेन/पाथ-आधारित ब्लॉकिंग के लिए AesirX कंसेंट शील्ड"
+
+#: includes/settings.php:445
+#: includes/settings.php:463
+msgid "Enter domain or path"
+msgstr "डोमेन या पाथ दर्ज करें"
+
+#: includes/settings.php:438
+msgid "Removes scripts matching specified domains or paths from the browser until user consent is given."
+msgstr "निर्दिष्ट डोमेन या पाथ से मेल खाने वाली स्क्रिप्ट को उपयोगकर्ता द्वारा सहमति दिए जाने तक ब्राउज़र से हटाता है।"
+
+#: includes/settings.php:486
+msgid "Blocks or removes scripts from running in the user's browser before consent is given."
+msgstr "सहमति दिए जाने से पहले उपयोगकर्ता के ब्राउज़र में चल रही स्क्रिप्ट को ब्लॉक या हटाता है।"
+
+#: includes/settings.php:492
+msgid "While it prevents scripts from executing, initial network requests may still occur, so it enhances privacy compliance under GDPR but may not fully meet the ePrivacy Directive requirements."
+msgstr "जबकि यह स्क्रिप्ट्स को निष्पादित होने से रोकता है, प्रारंभिक नेटवर्क अनुरोध अभी भी हो सकते हैं, इसलिए यह GDPR के तहत गोपनीयता अनुपालन को बढ़ाता है लेकिन ePrivacy Directive आवश्यकताओं को पूरी तरह से पूरा नहीं कर सकता है।"
+
+#: includes/settings.php:506
+msgid "Script Blocking Options"
+msgstr "स्क्रिप्ट ब्लॉकिंग विकल्प"
+
+#: includes/settings.php:521
+msgid "Only Third-Party Hosts (default)"
+msgstr "केवल थर्ड-पार्टी होस्ट (डिफ़ॉल्ट)"
+
+#: includes/settings.php:532
+msgid "Both First and Third-Party Hosts"
+msgstr "फर्स्ट और थर्ड-पार्टी दोनों होस्ट"
+
+#: includes/settings.php:939
+msgid "Need Help? Access Our Comprehensive Documentation Hub"
+msgstr "सहायता चाहिए? हमारे व्यापक दस्तावेज़ीकरण हब तक पहुँचें"
+
+#: includes/settings.php:1394
+#: includes/settings.php:1474
+msgid "Your trial license ends in %1$s days. Please update new license <a href='%2$s' target='_blank'>%2$s</a>."
+msgstr "आपकी परीक्षण लाइसेंस %1$s दिनों में समाप्त हो जाएगा। कृपया नया लाइसेंस अपडेट करें <a href='%2$s' target='_blank'>%2$s</a>।"
+
+#: includes/settings.php:1423
+msgid "Your license is expried or not found. Please update new license <a href='%1$s' target='_blank'>%1$s</a>."
+msgstr "आपकी लाइसेंस समाप्त हो गई है या नहीं मिली है। कृपया नया लाइसेंस अपडेट करें <a href='%1$s' target='_blank'>%1$s</a>।"
+
+#: includes/settings.php:1477
+msgid "Your free trials has ended. Please update your license. <a href='%1$s' target='_blank'>%1$s</a>."
+msgstr "आपकी निःशुल्क परीक्षण अवधि समाप्त हो गई है। कृपया अपनी लाइसेंस अपडेट करें। <a href='%1$s' target='_blank'>%1$s</a>।"
+
+#: src/AesirxAnalyticsMysqlHelper.php:946
+msgid "Could not insert consent"
+msgstr "सहमति डालने में असमर्थ"
+
+#: src/Mysql/StartFingerprint.php:35
+#: src/Mysql/StartFingerprint.php:64
+msgid "License is expired or not found. Please update your license"
+msgstr "लाइसेंस समाप्त हो गया है या नहीं मिला है। कृपया अपनी लाइसेंस अपडेट करें"
+
+#: src/Mysql/StartFingerprint.php:76
+#: src/Mysql/StartFingerprint.php:83
+msgid "Your trial is ended. Please renew your license"
+msgstr "आपकी परीक्षण अवधि समाप्त हो गई है। कृपया अपनी लाइसेंस नवीनीकृत करें"
+
+#: includes/settings.php:106
+msgid "Your Client ID *"
+msgstr "आपका क्लाइंट ID *"
+
+#: includes/settings.php:113
+msgid "SSO Client ID"
+msgstr "SSO क्लाइंट ID"
+
+#: includes/settings.php:134
+msgid "Your Client Secret *"
+msgstr "आपका क्लाइंट सीक्रेट *"
+
+#: includes/settings.php:139
+msgid "SSO Client Secret"
+msgstr "SSO क्लाइंट सीक्रेट"
+
+#: includes/settings.php:161
+msgid "Your License Key"
+msgstr "आपका लाइसेंस कुंजी"
+
+#: includes/settings.php:188
+msgid "Choose your tailored template"
+msgstr "अपना अनुकूलित टेम्पलेट चुनें"
+
+#: includes/settings.php:444
+#: includes/settings.php:462
+msgid "Domain"
+msgstr "डोमेन"
+
+#: includes/settings.php:512
+msgid "Configure how JavaScript is blocked based on user consent preferences."
+msgstr "कॉन्फ़िगर करें कि उपयोगकर्ता की सहमति प्राथमिकताओं के आधार पर जावास्क्रिप्ट को कैसे ब्लॉक किया जाता है।"
+
+#: includes/settings.php:522
+msgid "Blocks JavaScript from third-party domains, allowing first-party scripts to run normally & keep essential site functions intact."
+msgstr "थर्ड-पार्टी डोमेन से जावास्क्रिप्ट को ब्लॉक करता है, जिससे फर्स्ट-पार्टी स्क्रिप्ट सामान्य रूप से चल सकें और आवश्यक साइट फ़ंक्शन अक्षुण्ण रहें।"
+
+#: includes/settings.php:533
+msgid "Blocks JavaScript from both first-party & third-party domains for comprehensive script control, giving you the ability to block any JavaScript from internal or external sources based on user consent."
+msgstr "व्यापक स्क्रिप्ट नियंत्रण के लिए फर्स्ट-पार्टी और थर्ड-पार्टी दोनों डोमेन से जावास्क्रिप्ट को ब्लॉक करता है, जिससे आपको उपयोगकर्ता की सहमति के आधार पर आंतरिक या बाहरी स्रोतों से किसी भी जावास्क्रिप्ट को ब्लॉक करने की क्षमता मिलती है।"
+
+#: includes/settings.php:949
+msgid "Discover the latest features & best practices."
+msgstr "नवीनतम सुविधाओं और सर्वोत्तम प्रथाओं की खोज करें।"
+
+#: includes/settings.php:976
+msgid "Haven't got a license yet?"
+msgstr "अभी तक लाइसेंस नहीं मिला?"
+
+#: includes/settings.php:1006
+msgid "Scan Your Site for Privacy Risks"
+msgstr "गोपनीयता जोखिमों के लिए अपनी साइट को स्कैन करें"
+
+#: includes/settings.php:1010
+msgid "Use the Privacy Scanner to quickly identify scripts, tags, & trackers running on your site that may compromise user privacy."
+msgstr "अपनी साइट पर चल रही स्क्रिप्ट्स, टैग्स और ट्रैकर्स की तेज़ी से पहचान करने के लिए निजता स्कैनर का उपयोग करें जो उपयोगकर्ता की निजता से समझौता कर सकते हैं।"
+
+#: includes/settings.php:1016
+msgid "Use Consent Shield to block those scripts by adding their domains or paths, ensuring quick & simple compliance."
+msgstr "उनकी डोमेन या पाथ जोड़कर उन स्क्रिप्ट्स को ब्लॉक करने के लिए सहमति शील्ड का उपयोग करें, जिससे त्वरित और सरल अनुपालन सुनिश्चित हो।"
+
+#: includes/settings.php:1069
+#: includes/settings.php:1132
+#: includes/settings.php:1165
+#: includes/settings.php:1210
+msgid "Save settings"
+msgstr "सेटिंग्स सहेजें"
+
+#: includes/settings.php:166
+msgid "License Key"
+msgstr "लाइसेंस कुंजी"
+
+#: includes/settings.php:978
+msgid "Haven't got Shield of Privacy ID yet?"
+msgstr "अभी तक गोपनीयता ID का ढाल नहीं मिला?"
+
+#: includes/settings.php:1441
+msgid "Your license ends in %1$s days. Please update new license <a href='%2$s' target='_blank'>%2$s</a>."
+msgstr "आपकी लाइसेंस %1$s दिनों में समाप्त हो जाएगी। कृपया नया लाइसेंस अपडेट करें <a href='%2$s' target='_blank'>%2$s</a>।"
+
+#: includes/settings.php:277
+msgid "To configure, input your Google Tag Manager Gtag ID & GTM ID in the designated fields. Once set up, Google Tag Manager will only load after the user provides consent."
+msgstr "कॉन्फ़िगर करने के लिए, निर्दिष्ट फ़ील्ड में अपना Google Tag Manager Gtag ID और GTM ID इनपुट करें। एक बार सेट हो जाने पर, Google Tag Manager केवल उपयोगकर्ता की सहमति प्रदान करने के बाद ही लोड होगा।"
+
+#: includes/settings.php:982
+msgid "Register Licence Here"
+msgstr "लाइसेंस यहाँ पंजीकृत करें"
+
+#: includes/settings.php:987
+msgid "Sign up now"
+msgstr "अभी साइन अप करें"
+
+#: includes/settings.php:943
+msgid "Explore How-To Guides, instructions, & tutorials to get the most from AesirX Consent Shield. Whether you're a developer or admin, find all you need to configure & optimize your privacy setup."
+msgstr "AesirX कंसेंट शील्ड से अधिकतम लाभ प्राप्त करने के लिए How-To गाइड, निर्देश और ट्यूटोरियल एक्सप्लोर करें। चाहे आप डेवलपर हों या व्यवस्थापक, अपनी गोपनीयता सेटअप को कॉन्फ़िगर और अनुकूलित करने के लिए आपको जो कुछ भी चाहिए, वह सब यहां मिलेगा।"
+
+#: includes/settings.php:303
+msgid "Customize Consent Text "
+msgstr "सहमति पाठ अनुकूलित करें"
+
+#: includes/settings.php:316
+msgid "Reset Consent"
+msgstr "सहमति रीसेट करें"
+
+#: aesirx-consent.php:355
+msgid "Important: Permalink Settings Required"
+msgstr "महत्वपूर्ण: पर्मालिंक सेटिंग्स आवश्यक हैं"
+
+#: includes/settings.php:1467
+msgid "Your trial license ends in %1$s hour(s). Please update your license <a href='%2$s' target='_blank'>here</a>."
+msgstr "आपकी परीक्षण लाइसेंस %1$s घंटे(यों) में समाप्त हो जाएगी। कृपया अपनी लाइसेंस <a href='%2$s' target='_blank'>यहां</a> अपडेट करें।"
+
+#: aesirx-consent.php:367
+msgid "click here"
+msgstr "यहां क्लिक करें"
+
+#: includes/settings.php:274
+msgid "GTM General"
+msgstr "GTM सामान्य"
+
+#: includes/settings.php:1400
+msgid "Something went wrong: %1$s. Please contact the administrator."
+msgstr "कुछ गलत हो गया: %1$s। कृपया व्यवस्थापक से संपर्क करें।"
+
+#: includes/settings.php:1447
+msgid "Check license failed: %1$s. Please contact the administrator or update your license."
+msgstr "लाइसेंस जांच विफल रही: %1$s। कृपया व्यवस्थापक से संपर्क करें या अपनी लाइसेंस अपडेट करें।"
+
+#: src/Mysql/StartFingerprint.php:55
+msgid "Check license failed: %1\\$s. Please contact the administrator."
+msgstr "लाइसेंस जांच विफल रही: %1\\$s। कृपया व्यवस्थापक से संपर्क करें।"
+
+#: includes/settings.php:1430
+msgid "Your domain is not match with your license. Please update domain in your license <a href='%1$s' target='_blank'>%1$s</a> and click <span class='verify_domain'>here</span> to verify again."
+msgstr "आपका डोमेन आपकी लाइसेंस से मेल नहीं खाता है। कृपया अपनी लाइसेंस <a href='%1$s' target='_blank'>%1$s</a> में डोमेन अपडेट करें और फिर से सत्यापित करने के लिए <span class='verify_domain'>यहां</span> क्लिक करें।"
+
+#: src/Mysql/StartFingerprint.php:43
+#: src/Mysql/StartFingerprint.php:62
+msgid "Your domain is not match with your license. Please update domain in your license"
+msgstr "आपका डोमेन आपकी लाइसेंस से मेल नहीं खाता है। कृपया अपनी लाइसेंस में डोमेन अपडेट करें"
+
+#: includes/settings.php:205
+msgid "Decentralized Consent Mode"
+msgstr "विकेन्द्रीकृत सहमति मोड"
+
+#: includes/settings.php:654
+msgid "GPC Compliance"
+msgstr "GPC अनुपालन"
+
+#: includes/settings.php:667
+msgid "Enable GPC Support"
+msgstr "GPC समर्थन सक्षम करें"
+
+#: includes/settings.php:675
+msgid "Disable GPC Support"
+msgstr "GPC समर्थन अक्षम करें"
+
+#: includes/settings.php:682
+msgid "To comply with Global Privacy Control (GPC), please download and upload the following file:"
+msgstr "ग्लोबल प्राइवेसी कंट्रोल (जीपीसी) का पालन करने के लिए, कृपया निम्न फ़ाइल डाउनलोड और अपलोड करें:"
+
+#: includes/settings.php:685
+msgid "Upload Instructions:"
+msgstr "अपलोड निर्देश:"
+
+#: includes/settings.php:687
+msgid "Download the gpc.json file."
+msgstr "gpc.json फ़ाइल डाउनलोड करें।"
+
+#: includes/settings.php:688
+msgid "Connect to your website via FTP or File Manager."
+msgstr "एफ़टीपी या फ़ाइल प्रबंधक के माध्यम से अपनी वेबसाइट से कनेक्ट करें।"
+
+#: includes/settings.php:689
+msgid "Upload the file to: <code>/public_html/.well-known/gpc.json</code>"
+msgstr "फ़ाइल को यहां अपलोड करें: <code>/public_html/.well-known/gpc.json</code>"
+
+#: includes/settings.php:690
+msgid "Ensure the file is accessible by visiting: <a href='"
+msgstr "सुनिश्चित करें कि फ़ाइल यहां जाकर सुलभ है: <a href='"
+
+#: includes/settings.php:328
+msgid "Customize Detail Text "
+msgstr "विवरण पाठ अनुकूलित करें"
+
+#: includes/settings.php:341
+msgid "Reset Detail"
+msgstr "विवरण रीसेट करें"
+
+#: includes/settings.php:353
+msgid "Customize Reject Text "
+msgstr "अस्वीकार पाठ अनुकूलित करें"
+
+#: includes/settings.php:366
+msgid "Reset Reject"
+msgstr "अस्वीकार रीसेट करें"
+
+#: aesirx-consent.php:102
+msgid "Customize"
+msgstr "अनुकूलित करें"
+
+#: aesirx-consent.php:103
+msgid "Save"
+msgstr "सहेजें"
+
+#: aesirx-consent.php:104
+msgid "Always active"
+msgstr "हमेशा सक्रिय"
+
+#: aesirx-consent.php:105
+msgid "Domain/Path-Based"
+msgstr "डोमेन/पाथ-आधारित"
+
+#: aesirx-consent.php:106
+msgid "Third-Party Plugins"
+msgstr "थर्ड-पार्टी प्लगइन्स"
+
+#: aesirx-consent.php:107
+msgid "Essential Tracking"
+msgstr "आवश्यक ट्रैकिंग"
+
+#: aesirx-consent.php:108
+msgid "Required for the website to function (e.g, session cookies, security tracking)."
+msgstr "वेबसाइट के कार्य करने के लिए आवश्यक (जैसे, सत्र कुकीज़, सुरक्षा ट्रैकिंग)।"
+
+#: aesirx-consent.php:109
+msgid "Functional Tracking"
+msgstr "कार्यात्मक ट्रैकिंग"
+
+#: aesirx-consent.php:110
+msgid "User preferencese & site enhancements (e.g, language setting, live chat)."
+msgstr "उपयोगकर्ता प्राथमिकताएँ और साइट संवर्द्धन (जैसे, भाषा सेटिंग, लाइव चैट)।"
+
+#: aesirx-consent.php:111
+msgid "Analytics Tracking"
+msgstr "विश्लेषण ट्रैकिंग"
+
+#: aesirx-consent.php:112
+msgid "Visitor behavior monitoring (e.g, Google Analytics, Matomo)."
+msgstr "आगंतुक व्यवहार निगरानी (जैसे, Google Analytics, Matomo)।"
+
+#: aesirx-consent.php:113
+msgid "Advertising Tracking"
+msgstr "विज्ञापन ट्रैकिंग"
+
+#: aesirx-consent.php:114
+msgid "Targeted advertising & remarketing (e.g, Facebook Pixel, Google Ads)."
+msgstr "लक्षित विज्ञापन और रीमार्केटिंग (जैसे, फेसबुक पिक्सेल, गूगल विज्ञापन)।"
+
+#: aesirx-consent.php:115
+msgid "Custom Tracking"
+msgstr "कस्टम ट्रैकिंग"
+
+#: aesirx-consent.php:116
+msgid "Any additional third-party integrations (e.g, customer support tools, CDNS)."
+msgstr "कोई भी अतिरिक्त थर्ड-पार्टी एकीकरण (जैसे, ग्राहक सहायता उपकरण, CDNS)।"
+
+#: aesirx-consent.php:117
+msgid "Opt-Out of tracking"
+msgstr "ट्रैकिंग से ऑप्ट-आउट करें"
+
+#: aesirx-consent.php:118
+msgid "This website uses tracking by default. You may opt out at any time."
+msgstr "यह वेबसाइट डिफ़ॉल्ट रूप से ट्रैकिंग का उपयोग करती है। आप किसी भी समय ऑप्ट-आउट कर सकते हैं।"
+
+#: aesirx-consent.php:119
+msgid "Do Not Sell or Share My Personal Information (CCPA)"
+msgstr "मेरी व्यक्तिगत जानकारी न बेचें या साझा करें (CCPA)"
+
+#: aesirx-consent.php:120
+msgid "Disables third-party data sharing for California users."
+msgstr "कैलिफ़ोर्निया के उपयोगकर्ताओं के लिए थर्ड-पार्टी डेटा साझाकरण अक्षम करता है।"
+
+#: includes/settings.php:564
+msgid "Configurable Consent Logic"
+msgstr "विन्यास योग्य सहमति तर्क"
+
+#: includes/settings.php:577
+msgid "Opt-In Mode (EU)"
+msgstr "ऑप्ट-इन मोड (यूरोपीय संघ)"
+
+#: includes/settings.php:578
+msgid "No tracking technologies are activated until a user explicitly gives consent. This is required by <strong>GDPR</strong> and <strong>ePrivacy Directive 5(3)</strong>."
+msgstr "कोई भी ट्रैकिंग तकनीक तब तक सक्रिय नहीं की जाती जब तक उपयोगकर्ता स्पष्ट रूप से सहमति न दे। यह <strong>जीडीपीआर</strong> और <strong>ई-निजता निर्देश 5(3)</strong> द्वारा आवश्यक है।"
+
+#: includes/settings.php:586
+msgid "Opt-Out Mode (California)"
+msgstr "ऑप्ट-आउट मोड (कैलिफ़ोर्निया)"
+
+#: includes/settings.php:587
+msgid "Tracking is allowed by default, but users must be able to opt out easily. This aligns with <strong>CCPA</strong> and similar U.S. privacy frameworks."
+msgstr "डिफ़ॉल्ट रूप से ट्रैकिंग की अनुमति है, लेकिन उपयोगकर्ता आसानी से ऑप्ट-आउट करने में सक्षम होने चाहिए। यह <strong>सीसीपीए</strong> और समान अमेरिकी गोपनीयता ढांचे के अनुरूप है।"
+
+#: includes/settings.php:618
+msgid "Do not sell or share options"
+msgstr "विकल्प न बेचें या साझा करें"
+
+#: includes/settings.php:631
+#: includes/settings.php:737
+msgid "Yes"
+msgstr "हाँ"
+
+#: includes/settings.php:639
+#: includes/settings.php:745
+msgid "No"
+msgstr "नहीं"
+
+#: includes/settings.php:724
+msgid "Enable Geo-handling for Consent Mode"
+msgstr "सहमति मोड के लिए भू-हैंडलिंग सक्षम करें"
+
+#: includes/settings.php:760
+msgid "Geo-Based Consent Rules"
+msgstr "भू-आधारित सहमति नियम"
+
+#: includes/settings.php:859
+msgid "Browser Language"
+msgstr "ब्राउज़र भाषा"
+
+#: includes/settings.php:860
+#: includes/settings.php:884
+#: includes/settings.php:901
+msgid "Time Zone"
+msgstr "समय क्षेत्र"
+
+#: includes/settings.php:874
+msgid "Consent Mode"
+msgstr "सहमति मोड"
+
+#: includes/settings.php:875
+msgid "Allow Override"
+msgstr "ओवरराइड की अनुमति दें"
+
+#: includes/settings.php:883
+#: includes/settings.php:900
+msgid "Language"
+msgstr "भाषा"
+
+#: includes/settings.php:886
+#: includes/settings.php:903
+msgid "Select Mode"
+msgstr "मोड चुनें"
+
+#: includes/settings.php:904
+msgid "Override"
+msgstr "ओवरराइड करें"
+
+#: includes/settings.php:196
+msgid "Default Consent Mode"
+msgstr "डिफ़ॉल्ट सहमति मोड"
+
+#: includes/settings.php:200
+msgid "Default Consent Mode improves Google Consent Mode 2.0 by not loading any tags until after consent is given, reducing compliance risks."
+msgstr "डिफ़ॉल्ट सहमति मोड Google सहमति मोड 2.0 को सहमति दिए जाने तक कोई टैग लोड न करके सुधारता है, जिससे अनुपालन जोखिम कम होते हैं।"
+
+#: includes/settings.php:209
+msgid "Decentralized Consent Mode setup improves Google Consent Mode 2.0 by not loading any scripts, beacons, or tags until after consent is given, reducing compliance risks. It also includes Decentralized Consent, for more control over personal data and rewards."
+msgstr "विकेन्द्रीकृत सहमति मोड सेटअप Google सहमति मोड 2.0 को सहमति दिए जाने तक कोई स्क्रिप्ट, बीकन या टैग लोड न करके सुधारता है, जिससे अनुपालन जोखिम कम होते हैं। इसमें व्यक्तिगत डेटा और पुरस्कारों पर अधिक नियंत्रण के लिए विकेन्द्रीकृत सहमति भी शामिल है।"
+
+#: includes/settings.php:866
+msgid "Choose how browser language and time zone are combined to determine consent rules:"
+msgstr "चुनें कि सहमति नियम निर्धारित करने के लिए ब्राउज़र भाषा और समय क्षेत्र को कैसे संयोजित किया जाता है:"
+
+#: includes/settings.php:868
+msgid "<strong>AND Logic (Stricter Match):</strong> Both language and time zone must match a region for its consent model to apply. Ideal for high-accuracy targeting."
+msgstr "<strong>और तर्क (सख्त मिलान):</strong> इसकी सहमति मॉडल लागू होने के लिए भाषा और समय क्षेत्र दोनों को एक क्षेत्र से मेल खाना चाहिए। उच्च-सटीकता लक्ष्यीकरण के लिए आदर्श।"
+
+#: includes/settings.php:869
+msgid "<strong>OR Logic (More Flexible):</strong> Either language or time zone can match to apply a region’s consent model. Best for broader coverage based on user preferences."
+msgstr "<strong>या तर्क (अधिक लचीला):</strong> किसी क्षेत्र के सहमति मॉडल को लागू करने के लिए या तो भाषा या समय क्षेत्र मेल खा सकता है। उपयोगकर्ता की प्राथमिकताओं के आधार पर व्यापक कवरेज के लिए सबसे अच्छा।"
+
+#. translators: 1: Permalink structure example, 2: Link to Permalink Settings page
+#: aesirx-consent.php:360
+msgid ""
+"Our plugin requires that your site use a pretty permalink structure (for example, %1$s) to work correctly.\n"
+"                            It looks like your current settings are using the plain permalink format, which might cause issues.\n"
+"                            Please %2$s to open your Permalink Settings.\n"
+"                            Once there, select the \"Post name\" option (or another pretty permalink structure) and click \"Save Changes.\""
+msgstr ""
+
+#: includes/settings.php:119
+msgid ""
+"<div class='input_information_content'>\n"
+"          Provided SSO CLIENT ID from <a href='%1$s' target='_blank'>%1$s</a>.</div>"
+msgstr ""
+
+#: includes/settings.php:145
+msgid ""
+"<div class='input_information_content'>\n"
+"          Provided SSO Client Secret from <a href='%1$s' target='_blank'>%1$s</a>.</div>"
+msgstr ""
+
+#: includes/settings.php:172
+msgid ""
+"<div class='input_information_content'>\n"
+"          Sign up to obtain your Shield of Privacy ID and purchase licenses <a href='https://aesirx.io/licenses' target='blank' class='text-link'>here</a>.</div>"
+msgstr ""
+
+#: includes/settings.php:234
+#: includes/settings.php:259
+msgid ""
+"<div class='input_information_content'>\n"
+"          Remember to include the explicit purpose (e.g., analytics, marketing) in the consent text to inform users why GTM is being used.</div>"
+msgstr ""
+
+#: includes/settings.php:1025
+msgid "Learn how to use AesirX Privacy Scanner with Consent Shield to detect privacy-intrusive elements, using the JetPack plugin as an example."
+msgstr ""

@@ -1,0 +1,1031 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: AesirX Consent 1.8.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/aesirx-consent\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2024-07-25T03:47:45+00:00\n"
+"PO-Revision-Date: 2024-07-26 17:10+0200\n"
+"Language: uk\n"
+"X-Domain: aesirx-consent\n"
+"X-Generator: Poedit 3.4.4\n"
+
+#. Plugin URI of the plugin
+#: aesirx-consent.php
+msgid "https://analytics.aesirx.io?utm_source=wpplugin&utm_medium=web&utm_campaign=wordpress&utm_id=aesirx&utm_term=wordpress&utm_content=analytics"
+msgstr "https://analytics.aesirx.io?utm_source=wpplugin&utm_medium=web&utm_campaign=wordpress&utm_id=aesirx&utm_term=wordpress&utm_content=analytics"
+
+#. Author of the plugin
+#: aesirx-consent.php
+msgid "aesirx.io"
+msgstr "aesirx.io"
+
+#. Author URI of the plugin
+#: aesirx-consent.php
+msgid "https://aesirx.io/"
+msgstr "https://aesirx.io/"
+
+#: aesirx-consent.php:225
+msgid "Settings"
+msgstr "Налаштування"
+
+#: aesirx-consent.php:340
+msgid "Problem with Aesirx Analytics plugin install"
+msgstr "Проблема з встановленням плагіна Aesirx Analytics"
+
+#: includes/settings.php:17
+msgid "Please register your license at Signup.aesirx.io to enable the external first-party server."
+msgstr "Будь ласка, зареєструйте свою ліцензію на Signup.aesirx.io, щоб увімкнути зовнішній сервер першої сторони."
+
+#: includes/settings.php:27
+msgid "Domain is empty."
+msgstr "Домен порожній."
+
+#: includes/settings.php:34
+msgid "Invalid domain format."
+msgstr "Недійсний формат домену."
+
+#: aesirx-consent.php:43
+#: includes/settings.php:1252
+msgid "Consent"
+msgstr "Згода"
+
+#: src/AesirxAnalyticsMysqlHelper.php:101
+msgid "Database error occurred."
+msgstr "Виникла помилка бази даних."
+
+#: src/AesirxAnalyticsMysqlHelper.php:255
+#: src/AesirxAnalyticsMysqlHelper.php:594
+#: src/AesirxAnalyticsMysqlHelper.php:632
+#: src/AesirxAnalyticsMysqlHelper.php:671
+#: src/AesirxAnalyticsMysqlHelper.php:705
+msgid "\"start\" filter is not correct"
+msgstr "Фільтр \"start\" неправильний"
+
+#: src/AesirxAnalyticsMysqlHelper.php:263
+#: src/AesirxAnalyticsMysqlHelper.php:602
+#: src/AesirxAnalyticsMysqlHelper.php:640
+#: src/AesirxAnalyticsMysqlHelper.php:680
+#: src/AesirxAnalyticsMysqlHelper.php:713
+msgid "\"end\" filter is not correct"
+msgstr "Фільтр \"end\" неправильний"
+
+#: src/AesirxAnalyticsMysqlHelper.php:333
+msgid "Domain not found"
+msgstr "Домен не знайдено"
+
+#: src/AesirxAnalyticsMysqlHelper.php:413
+#: src/AesirxAnalyticsMysqlHelper.php:477
+#: src/AesirxAnalyticsMysqlHelper.php:530
+#: src/AesirxAnalyticsMysqlHelper.php:555
+#: src/AesirxAnalyticsMysqlHelper.php:574
+#: src/AesirxAnalyticsMysqlHelper.php:734
+#: src/AesirxAnalyticsMysqlHelper.php:758
+#: src/AesirxAnalyticsMysqlHelper.php:785
+#: src/AesirxAnalyticsMysqlHelper.php:825
+#: src/AesirxAnalyticsMysqlHelper.php:1183
+#: src/Mysql/GetVisitorConsentList.php:60
+msgid "There was a problem with the database query."
+msgstr "Виникла проблема з запитом до бази даних."
+
+#: src/AesirxAnalyticsMysqlHelper.php:1007
+#: src/AesirxAnalyticsMysqlHelper.php:1026
+#: src/AesirxAnalyticsMysqlHelper.php:1046
+#: src/AesirxAnalyticsMysqlHelper.php:1387
+msgid "Something went wrong"
+msgstr "Щось пішло не так"
+
+#: src/AesirxAnalyticsMysqlHelper.php:1108
+msgid "There was a problem updating the data in the database."
+msgstr "Виникла проблема з оновленням даних у базі даних."
+
+#: src/Mysql/AddConsentLevel1.php:23
+#: src/Mysql/AddConsentLevel5.php:23
+#: src/Mysql/AddConsentLevel6.php:23
+msgid "The uuid parameter is required."
+msgstr "Параметр uuid є обов'язковим."
+
+#: src/Mysql/AddConsentLevel1.php:27
+#: src/Mysql/AddConsentLevel5.php:27
+#: src/Mysql/AddConsentLevel6.php:27
+msgid "The consent parameter is required and must be a number."
+msgstr "Параметр згоди є обов'язковим і повинен бути числом."
+
+#: src/Mysql/AddConsentLevel1.php:53
+#: src/Mysql/AddConsentLevel5.php:53
+#: src/Mysql/AddConsentLevel6.php:53
+msgid "Previous consent was not expired"
+msgstr "Попередня згода не була прострочена"
+
+#: src/Mysql/AddConsentLevel2.php:16
+#: src/Mysql/AddConsentLevel3or4.php:55
+msgid "Invalid token"
+msgstr "Недійсний токен"
+
+#: src/Mysql/AddConsentLevel2.php:24
+#: src/Mysql/AddConsentLevel3or4.php:19
+msgid "Visitor not found"
+msgstr "Відвідувача не знайдено"
+
+#: src/Mysql/AddConsentLevel2.php:41
+#: src/Mysql/AddConsentLevel3or4.php:80
+msgid "Previous consent still active"
+msgstr "Попередня згода все ще активна"
+
+#: src/Mysql/AddConsentLevel2.php:124
+#: src/Mysql/AddConsentLevel3or4.php:167
+msgid "There was a problem querying the data in the database."
+msgstr "Виникла проблема з запитом даних у базі даних."
+
+#: src/Mysql/AddConsentLevel3or4.php:12
+msgid "Invalid signature"
+msgstr "Недійсний підпис"
+
+#: src/Mysql/AddConsentLevel3or4.php:26
+msgid "Wallet not found"
+msgstr "Гаманець не знайдено"
+
+#: src/Mysql/AddConsentLevel3or4.php:32
+msgid "Wallet nonce not found"
+msgstr "Nonce гаманця не знайдено"
+
+#: src/Mysql/AddConsentLevel3or4.php:39
+#: src/Mysql/RevokeConsentLevel3or4.php:37
+msgid "Nonce is not valid"
+msgstr "Nonce недійсний"
+
+#: src/Mysql/AddConsentLevel3or4.php:48
+#: src/Mysql/RevokeConsentLevel3or4.php:44
+msgid "Contract is not valid"
+msgstr "Контракт недійсний"
+
+#: src/Mysql/CloseVisitorEvent.php:14
+#: src/Mysql/CloseVisitorEvent.php:18
+msgid "The event uuid parameter is required."
+msgstr "Параметр uuid події є обов'язковим."
+
+#: src/Mysql/CloseVisitorEvent.php:36
+msgid "Failed to update analytics events."
+msgstr "Не вдалося оновити аналітичні події."
+
+#: src/Mysql/CloseVisitorEvent.php:43
+msgid "Visitor event not found."
+msgstr "Подію відвідувача не знайдено."
+
+#: src/Mysql/CloseVisitorEvent.php:55
+msgid "Failed to update analytics flows"
+msgstr "Не вдалося оновити аналітичні потоки"
+
+#: src/Mysql/GetNonce.php:12
+msgid "Address is not valid"
+msgstr "Адреса недійсний"
+
+#: src/Mysql/RevokeConsentLevel3or4.php:14
+msgid "Invalid signature."
+msgstr "Недійсний підпис."
+
+#: src/Mysql/RevokeConsentLevel3or4.php:24
+msgid "Wallet not found."
+msgstr "Гаманець не знайдено."
+
+#: src/Mysql/RevokeConsentLevel3or4.php:30
+msgid "Nonce not found."
+msgstr "Nonce не знайдено."
+
+#: src/Mysql/RevokeConsentLevel3or4.php:55
+msgid "Failed to update consent expiration."
+msgstr "Не вдалося оновити термін дії згоди."
+
+#: src/Mysql/RevokeConsentLevel3or4.php:62
+msgid "Failed to update nonce."
+msgstr "Не вдалося оновити nonce."
+
+#: src/Mysql/StartFingerprint.php:147
+msgid "Wrong URL format, domain not found"
+msgstr "Неправильний формат URL, домен не знайдено"
+
+#: src/Mysql/StartFingerprint.php:151
+msgid "The domain sent in the new URL does not match the domain stored in the visitor document"
+msgstr "Домен, надісланий в новій URL, не збігається з доменом, збереженим у документі відвідувача"
+
+#: src/Route/Middleware/IsBackendMiddleware.php:18
+msgid "Permission denied!"
+msgstr "Доступ заборонено!"
+
+#: src/Track/CliTracker.php:32
+msgid "Error in tracking"
+msgstr "Помилка під час відстеження"
+
+#. Plugin Name of the plugin
+#: aesirx-consent.php
+msgid "AesirX Consent"
+msgstr "AesirX Згода"
+
+#. Description of the plugin
+#: aesirx-consent.php
+msgid "Aesirx Consent plugin. When you join forces with AesirX, you're not just becoming a Partner - you're also becoming a freedom fighter in the battle for privacy! Earn 25% Affiliate Commission <a href=\"https://aesirx.io/partner?utm_source=wpplugin&utm_medium=web&utm_campaign=wordpress&utm_id=aesirx&utm_term=wordpress&utm_content=analytics\">[Click to Join]</a>"
+msgstr "Плагін AesirX Згода. Приєднуючись до AesirX, ви стаєте не просто Партнером - ви також стаєте борцем за свободу в битві за приватність! Отримайте 25% партнерську комісію <a href=\"https://aesirx.io/partner?utm_source=wpplugin&utm_medium=web&utm_campaign=wordpress&utm_id=aesirx&utm_term=wordpress&utm_content=analytics\">[Натисніть, щоб приєднатися]</a>"
+
+#: aesirx-consent.php:39
+#: includes/settings.php:1248
+msgid "Shield of Privacy"
+msgstr "Щит приватності"
+
+#: aesirx-consent.php:40
+#: includes/settings.php:1249
+msgid "Revoke your consent for data use whenever you wish."
+msgstr "Ви можете відкликати свою згоду на використання даних у будь-який час."
+
+#: aesirx-consent.php:41
+#: includes/settings.php:1250
+msgid "Manage Decentralized Consent"
+msgstr "Керувати децентралізованою згодою"
+
+#: aesirx-consent.php:42
+#: includes/settings.php:1251
+msgid "Revoke Consent"
+msgstr "Відкликати згоду"
+
+#: aesirx-consent.php:44
+#: includes/settings.php:1253
+msgid "Reject"
+msgstr "Відхилити"
+
+#: aesirx-consent.php:45
+#: includes/settings.php:1254
+msgid "Please connect your Web3 wallet"
+msgstr "Будь ласка, підключіть свій Web3 гаманець"
+
+#: aesirx-consent.php:46
+#: includes/settings.php:1255
+msgid "Please sign the message on your wallet twice and wait for it to be saved."
+msgstr "Будь ласка, підпишіть повідомлення у своєму гаманці двічі та зачекайте, доки воно збережеться."
+
+#: aesirx-consent.php:47
+#: includes/settings.php:1256
+msgid "Saving..."
+msgstr "Збереження..."
+
+#: aesirx-consent.php:48
+#: includes/settings.php:1257
+msgid "Please connect to your wallet"
+msgstr "Будь ласка, підключіться до свого гаманця"
+
+#: aesirx-consent.php:49
+#: includes/settings.php:1258
+msgid "Connecting"
+msgstr "Підключення"
+
+#: aesirx-consent.php:50
+#: includes/settings.php:1259
+msgid "TRACKING AND DATA PRIVACY PREFERENCES"
+msgstr "ПРЕФЕРЕНЦІЇ ВІДСТЕЖЕННЯ ТА КОНФІДЕНЦІЙНОСТІ ДАНИХ"
+
+#: aesirx-consent.php:51
+#: includes/settings.php:1260
+msgid "About"
+msgstr "Про нас"
+
+#: aesirx-consent.php:52
+#: aesirx-consent.php:101
+#: includes/settings.php:1261
+#: includes/settings.php:1310
+msgid "Details"
+msgstr "Деталі"
+
+#: aesirx-consent.php:53
+#: aesirx-consent.php:81
+#: includes/settings.php:1262
+#: includes/settings.php:1290
+msgid "Decentralized Consent"
+msgstr "Децентралізована згода"
+
+#: aesirx-consent.php:54
+#: includes/settings.php:1263
+msgid "Manage Your Consent Preferences"
+msgstr "Керуйте своїми уподобаннями щодо згоди"
+
+#: aesirx-consent.php:55
+#: includes/settings.php:1264
+msgid "Choose how we use your data: \"Reject\" data collection, allow tracking [\"Consent\"], or use \"Decentralized Consent\" for more control over your personal data & rewards."
+msgstr "Виберіть, як ми використовуємо ваші дані: \"Відхилити\" збір даних, дозволити відстеження [\"Згода\"], або використовувати \"Децентралізовану згоду\" для більшого контролю над вашими персональними даними та винагородами."
+
+#: aesirx-consent.php:56
+#: includes/settings.php:1265
+msgid "Choose how we use your data: \"Reject\" data collection, allow tracking [\"Consent\"]."
+msgstr "Виберіть, як ми використовуємо ваші дані: \"Відхилити\" збір даних, дозволити відстеження [\"Згода\"]."
+
+#: aesirx-consent.php:57
+#: includes/settings.php:1266
+msgid "By consenting, you allow us to collect & use your data for:"
+msgstr "Надаючи згоду, ви дозволяєте нам збирати та використовувати ваші дані для:"
+
+#: aesirx-consent.php:58
+#: includes/settings.php:1267
+msgid "Analytics & Behavioral Data: To improve our services & personalize your experience."
+msgstr "Аналітика та поведінкові дані: Для покращення наших послуг та персоналізації вашого досвіду."
+
+#: aesirx-consent.php:59
+#: includes/settings.php:1268
+msgid "Form Data: When you contact us."
+msgstr "Дані форм: Коли ви зв'язуєтеся з нами."
+
+#: aesirx-consent.php:60
+#: includes/settings.php:1269
+msgid "Please note"
+msgstr "Будь ласка, зверніть увагу"
+
+#: aesirx-consent.php:61
+#: includes/settings.php:1270
+msgid "We do not share your data with third parties without your explicit consent."
+msgstr "Ми не передаємо ваші дані третім сторонам без вашої явної згоди."
+
+#: aesirx-consent.php:62
+#: includes/settings.php:1271
+msgid "You can opt-in later for specific features without giving blanket consent."
+msgstr "Ви можете пізніше вибрати участь у певних функціях, не надаючи загальної згоди."
+
+#: aesirx-consent.php:63
+#: includes/settings.php:1272
+msgid "For more details, refer to our <a class='text-success fw-semibold text-decoration-underline' href='https://aesirx.io/privacy-policy' target='_blank'>privacy policy.</a>"
+msgstr "Для отримання додаткової інформації зверніться до нашої <a class='text-success fw-semibold text-decoration-underline' href='https://aesirx.io/privacy-policy' target='_blank'>політики конфіденційності.</a>"
+
+#: aesirx-consent.php:64
+#: includes/settings.php:1273
+msgid "Benefits"
+msgstr "Переваги"
+
+#: aesirx-consent.php:65
+#: includes/settings.php:1274
+msgid "<span class='fw-semibold text-primary'>Control your data:</span> Choose your preferred level of data collection & tracking."
+msgstr "<span class='fw-semibold text-primary'>Контролюйте свої дані:</span> Оберіть бажаний рівень збору та відстеження даних."
+
+#: aesirx-consent.php:66
+#: includes/settings.php:1275
+msgid "<span class='fw-semibold text-primary'>Earn rewards:</span> Participate in decentralized consent for privacy & rewards."
+msgstr "<span class='fw-semibold text-primary'>Отримуйте винагороди:</span> Беріть участь у децентралізованій згоді для приватності та винагород."
+
+#: aesirx-consent.php:67
+#: includes/settings.php:1276
+msgid "<span class='fw-semibold text-primary'>Transparent data collection practices:</span> Understand how your data is collected & used."
+msgstr "<span class='fw-semibold text-primary'>Прозорі практики збору даних:</span> Розумійте, як ваші дані збираються та використовуються."
+
+#: aesirx-consent.php:68
+#: includes/settings.php:1277
+msgid "Understanding Your Privacy Choices"
+msgstr "Розуміння ваших виборів щодо приватності"
+
+#: aesirx-consent.php:69
+#: includes/settings.php:1278
+msgid "<span class='fw-semibold text-primary'>Reject:</span> No data will be collected or loaded except for anonymized page views & rejections. Some personalization features may be disabled."
+msgstr "<span class='fw-semibold text-primary'>Відхилити:</span> Жодні дані не будуть збиратися чи завантажуватися, окрім анонімізованих переглядів сторінок та відхилень. Деякі функції персоналізації можуть бути вимкнені."
+
+#: aesirx-consent.php:70
+#: includes/settings.php:1279
+msgid "<span class='fw-semibold text-primary'>Consent:</span> First & third-party tracking data will be collected to enhance your experience."
+msgstr "<span class='fw-semibold text-primary'>Згода:</span> Дані відстеження першої та третьої сторін будуть збиратися для покращення вашого досвіду."
+
+#: aesirx-consent.php:71
+#: includes/settings.php:1280
+msgid "<span class='fw-semibold text-primary'>Decentralized Consent:</span> Choose Decentralized Wallets or Decentralized Wallet + Shield of Privacy. Both options let you manage & revoke consent on-site or through AesirX dApp, plus earn rewards from digital marketing activities."
+msgstr "<span class='fw-semibold text-primary'>Децентралізована згода:</span> Оберіть Децентралізовані гаманці або Децентралізований гаманець + Щит приватності. Обидва варіанти дозволяють вам керувати та відкликати згоду на сайті або через AesirX dApp, а також отримувати винагороди від цифрових маркетингових активностей."
+
+#: aesirx-consent.php:72
+#: includes/settings.php:1281
+msgid "Our Commitment in Action"
+msgstr "Наші зобов'язання в дії"
+
+#: aesirx-consent.php:73
+#: includes/settings.php:1282
+msgid "<span class='fw-semibold text-primary'>Privacy Protection:</span> Users have full control over their data, ensuring maximum privacy."
+msgstr "<span class='fw-semibold text-primary'>Захист приватності:</span> Користувачі мають повний контроль над своїми даними, забезпечуючи максимальну приватність."
+
+#: aesirx-consent.php:74
+#: includes/settings.php:1283
+msgid "<span class='fw-semibold text-primary'>Enables Compliance:</span> Using Shield of Privacy (SoP) ensures compliance with GDPR, CCPA, ePrivacy Directive, & other data protection regulations."
+msgstr "<span class='fw-semibold text-primary'>Забезпечує відповідність:</span> Використання Щита приватності (SoP) забезпечує відповідність GDPR, CCPA, Директиві про конфіденційність та електронні комунікації та іншим нормативним актам про захист даних."
+
+#: aesirx-consent.php:75
+#: includes/settings.php:1284
+msgid "<span class='fw-semibold text-primary'>Proactive Protection:</span> We enhance privacy measures to safeguard your data integrity."
+msgstr "<span class='fw-semibold text-primary'>Проактивний захист:</span> Ми посилюємо заходи конфіденційності для захисту цілісності ваших даних."
+
+#: aesirx-consent.php:76
+#: includes/settings.php:1285
+msgid "<span class='fw-semibold text-primary'>Flexible Consent:</span> You can withdraw your consent anytime on-site or via our <a class='text-success fw-semibold text-decoration-underline' href='https://dapp.shield.aesirx.io' target='_blank'>dApp</a> (Decentralized Application)."
+msgstr "<span class='fw-semibold text-primary'>Гнучка згода:</span> Ви можете відкликати свою згоду в будь-який час на сайті або через наш <a class='text-success fw-semibold text-decoration-underline' href='https://dapp.shield.aesirx.io' target='_blank'>dApp</a> (Децентралізований додаток)."
+
+#: aesirx-consent.php:77
+#: includes/settings.php:1286
+msgid "<span class='fw-semibold text-primary'>Learn More:</span> Discover our approach to data processing in our <a class='text-success fw-semibold text-decoration-underline' href='https://aesirx.io/privacy-policy' target='_blank'>Privacy Policy</a>."
+msgstr "<span class='fw-semibold text-primary'>Дізнатися більше:</span> Відкрийте для себе наш підхід до обробки даних у нашій <a class='text-success fw-semibold text-decoration-underline' href='https://aesirx.io/privacy-policy' target='_blank'>Політиці конфіденційності</a>."
+
+#: aesirx-consent.php:78
+#: includes/settings.php:1287
+msgid "<span class='fw-semibold text-primary'>For Businesses:</span> Enhance trust, secure user identities, & prevent breaches."
+msgstr "<span class='fw-semibold text-primary'>Для бізнесу:</span> Зміцнюйте довіру, захищайте ідентичності користувачів та запобігайте витокам."
+
+#: aesirx-consent.php:79
+#: includes/settings.php:1288
+msgid "More info at <a class='text-success fw-semibold text-decoration-underline' href='https://shield.aesirx.io' target='_blank'>https://shield.aesirx.io</a>."
+msgstr "Більше інформації на <a class='text-success fw-semibold text-decoration-underline' href='https://shield.aesirx.io' target='_blank'>https://shield.aesirx.io</a>."
+
+#: aesirx-consent.php:80
+#: includes/settings.php:1289
+msgid "Select your preferred decentralized consent option:"
+msgstr "Виберіть бажаний варіант децентралізованої згоди:"
+
+#: aesirx-consent.php:82
+#: includes/settings.php:1291
+msgid "Decentralized consent will be loaded"
+msgstr "Децентралізована згода буде завантажена"
+
+#: aesirx-consent.php:83
+#: includes/settings.php:1292
+msgid "Both first-party & third-party tracking data will be activated."
+msgstr "Дані відстеження першої та третьої сторін будуть активовані."
+
+#: aesirx-consent.php:84
+#: includes/settings.php:1293
+msgid "All consented data will be collected."
+msgstr "Будуть зібрані всі дані, на які надано згоду."
+
+#: aesirx-consent.php:85
+#: includes/settings.php:1294
+msgid "Users can revoke consent on-site at any time."
+msgstr "Користувачі можуть відкликати згоду на сайті в будь-який час."
+
+#: aesirx-consent.php:86
+#: includes/settings.php:1295
+msgid "Decentralized Consent + Shield of Privacy"
+msgstr "Децентралізована згода + Щит приватності"
+
+#: aesirx-consent.php:87
+#: includes/settings.php:1296
+msgid "Users can revoke consent on-site or from the AesirX dApp at any time."
+msgstr "Користувачі можуть відкликати згоду на сайті або з AesirX dApp у будь-який час."
+
+#: aesirx-consent.php:88
+#: includes/settings.php:1297
+msgid "Users can earn rewards from digital marketing activities."
+msgstr "Користувачі можуть отримувати винагороди від цифрових маркетингових активностей."
+
+#: aesirx-consent.php:89
+#: includes/settings.php:1298
+msgid "Continue"
+msgstr "Продовжити"
+
+#: aesirx-consent.php:90
+#: includes/settings.php:1299
+msgid "Back"
+msgstr "Назад"
+
+#: aesirx-consent.php:91
+#: includes/settings.php:1300
+msgid "You've chosen to reject data collection:"
+msgstr "Ви вирішили відхилити збір даних:"
+
+#: aesirx-consent.php:92
+#: includes/settings.php:1301
+msgid "Only anonymized page views & limited features will be available. To access all website features, including personalized content & enhanced functionality, please choose an option:"
+msgstr "Будуть доступні лише анонімізовані перегляди сторінок та обмежені функції. Щоб отримати доступ до всіх функцій веб-сайту, включаючи персоналізований контент та розширену функціональність, будь ласка, оберіть варіант:"
+
+#: aesirx-consent.php:93
+#: includes/settings.php:1302
+msgid "<span class='fw-semibold text-primary'>Consent:</span> Allow data collection for analytics, form data (when you contact us), & behavioral & event tracking, with the option to opt-in for specific features."
+msgstr "<span class='fw-semibold text-primary'>Згода:</span> Дозволити збір даних для аналітики, даних форм (коли ви звертаєтеся до нас), а також відстеження поведінки та подій, з можливістю вибрати участь у певних функціях."
+
+#: aesirx-consent.php:94
+#: includes/settings.php:1303
+msgid "<span class='fw-semibold text-primary'>Decentralized Consent:</span> Allow data collection for analytics, form data (when you contact us), & behavioral & event tracking, with the option to revoke consent, opt-in for specific features, & earn rewards from digital marketing activities."
+msgstr "<span class='fw-semibold text-primary'>Децентралізована згода:</span> Дозволити збір даних для аналітики, даних форм (коли ви звертаєтеся до нас), а також відстеження поведінки та подій, з можливістю відкликати згоду, вибрати участь у певних функціях та отримувати винагороди від цифрових маркетингових активностей."
+
+#: aesirx-consent.php:95
+#: includes/settings.php:1304
+msgid "You can revoke consent on the site or any explicit opt-in consent, such as payment processing, at any time"
+msgstr "Ви можете відкликати згоду на сайті або будь-яку явну згоду на участь, наприклад, на обробку платежів, у будь-який час"
+
+#: aesirx-consent.php:96
+#: includes/settings.php:1305
+msgid "Revoke Opt-In Consent"
+msgstr "Відкликати згоду на участь"
+
+#: aesirx-consent.php:97
+#: includes/settings.php:1306
+msgid "Revoke Opt-In Consent for Payment Processing"
+msgstr "Відкликати згоду на участь в обробці платежів"
+
+#: aesirx-consent.php:98
+#: includes/settings.php:1307
+msgid "Revoke Opt-In Consent for AesirX Privacy Advisor AI"
+msgstr "Відкликати згоду на участь для AesirX Privacy Advisor AI"
+
+#: aesirx-consent.php:99
+#: includes/settings.php:1308
+msgid "Revoke Consent for the site"
+msgstr "Відкликати згоду для сайту"
+
+#: aesirx-consent.php:100
+#: includes/settings.php:1309
+msgid "Consent Management"
+msgstr "Управління згодою"
+
+#: includes/settings.php:224
+msgid "Gtag ID"
+msgstr "Gtag ID"
+
+#: includes/settings.php:249
+msgid "GTM ID"
+msgstr "GTM ID"
+
+#: includes/settings.php:379
+msgid "AesirX Consent Shield for Third-Party Plugins "
+msgstr "Щит згоди AesirX для сторонніх плагінів"
+
+#: includes/settings.php:384
+msgid "Blocks selected third-party plugins from loading until user consent is given."
+msgstr "Блокує завантаження вибраних сторонніх плагінів до отримання згоди користувача."
+
+#: includes/settings.php:415
+msgid "Completely prevents the loading and execution of chosen third-party plugins before consent."
+msgstr "Повністю запобігає завантаженню та виконанню обраних сторонніх плагінів до отримання згоди."
+
+#: includes/settings.php:421
+msgid "No network requests are made to third-party servers, enabling maximum compliance with privacy regulations like GDPR and the ePrivacy Directive."
+msgstr "Не надсилаються мережеві запити до сторонніх серверів, що забезпечує максимальну відповідність нормам конфіденційності, таким як GDPR та Директива про конфіденційність та електронні комунікації."
+
+#: includes/settings.php:435
+msgid "AesirX Consent Shield for Domain/Path-Based Blocking"
+msgstr "Щит згоди AesirX для блокування за доменом/шляхом"
+
+#: includes/settings.php:445
+#: includes/settings.php:463
+msgid "Enter domain or path"
+msgstr "Введіть домен або шлях"
+
+#: includes/settings.php:438
+msgid "Removes scripts matching specified domains or paths from the browser until user consent is given."
+msgstr "Видаляє скрипти, що відповідають зазначеним доменам або шляхам, з браузера до отримання згоди користувача."
+
+#: includes/settings.php:486
+msgid "Blocks or removes scripts from running in the user's browser before consent is given."
+msgstr "Блокує або видаляє скрипти, що виконуються в браузері користувача, до надання згоди."
+
+#: includes/settings.php:492
+msgid "While it prevents scripts from executing, initial network requests may still occur, so it enhances privacy compliance under GDPR but may not fully meet the ePrivacy Directive requirements."
+msgstr "Хоча це запобігає виконанню скриптів, початкові мережеві запити все ще можуть відбуватися, тому це покращує відповідність приватності згідно з GDPR, але може не повністю відповідати вимогам Директиви про конфіденційність та електронні комунікації."
+
+#: includes/settings.php:506
+msgid "Script Blocking Options"
+msgstr "Параметри блокування скриптів"
+
+#: includes/settings.php:521
+msgid "Only Third-Party Hosts (default)"
+msgstr "Тільки сторонні хости (за замовчуванням)"
+
+#: includes/settings.php:532
+msgid "Both First and Third-Party Hosts"
+msgstr "Хости першої та третьої сторін"
+
+#: includes/settings.php:939
+msgid "Need Help? Access Our Comprehensive Documentation Hub"
+msgstr "Потрібна допомога? Отримайте доступ до нашого повного документаційного центру"
+
+#: includes/settings.php:1394
+#: includes/settings.php:1474
+msgid "Your trial license ends in %1$s days. Please update new license <a href='%2$s' target='_blank'>%2$s</a>."
+msgstr "Термін дії вашої пробної ліцензії закінчується через %1$s днів. Будь ласка, оновіть нову ліцензію <a href='%2$s' target='_blank'>%2$s</a>."
+
+#: includes/settings.php:1423
+msgid "Your license is expried or not found. Please update new license <a href='%1$s' target='_blank'>%1$s</a>."
+msgstr "Термін дії вашої ліцензії закінчився або її не знайдено. Будь ласка, оновіть нову ліцензію <a href='%1$s' target='_blank'>%1$s</a>."
+
+#: includes/settings.php:1477
+msgid "Your free trials has ended. Please update your license. <a href='%1$s' target='_blank'>%1$s</a>."
+msgstr "Термін дії вашої безкоштовної пробної версії закінчився. Будь ласка, оновіть свою ліцензію. <a href='%1$s' target='_blank'>%1$s</a>."
+
+#: src/AesirxAnalyticsMysqlHelper.php:946
+msgid "Could not insert consent"
+msgstr "Не вдалося вставити згоду"
+
+#: src/Mysql/StartFingerprint.php:35
+#: src/Mysql/StartFingerprint.php:64
+msgid "License is expired or not found. Please update your license"
+msgstr "Термін дії ліцензії закінчився або її не знайдено. Будь ласка, оновіть свою ліцензію"
+
+#: src/Mysql/StartFingerprint.php:76
+#: src/Mysql/StartFingerprint.php:83
+msgid "Your trial is ended. Please renew your license"
+msgstr "Термін дії вашої пробної версії закінчився. Будь ласка, поновіть свою ліцензію"
+
+#: includes/settings.php:106
+msgid "Your Client ID *"
+msgstr "Ваш ID клієнта *"
+
+#: includes/settings.php:113
+msgid "SSO Client ID"
+msgstr "SSO ID клієнта"
+
+#: includes/settings.php:134
+msgid "Your Client Secret *"
+msgstr "Ваш секрет клієнта *"
+
+#: includes/settings.php:139
+msgid "SSO Client Secret"
+msgstr "SSO секрет клієнта"
+
+#: includes/settings.php:161
+msgid "Your License Key"
+msgstr "Ваш ліцензійний ключ"
+
+#: includes/settings.php:188
+msgid "Choose your tailored template"
+msgstr "Оберіть свій індивідуальний шаблон"
+
+#: includes/settings.php:444
+#: includes/settings.php:462
+msgid "Domain"
+msgstr "Домен"
+
+#: includes/settings.php:512
+msgid "Configure how JavaScript is blocked based on user consent preferences."
+msgstr "Налаштуйте, як блокується JavaScript на основі уподобань користувача щодо згоди."
+
+#: includes/settings.php:522
+msgid "Blocks JavaScript from third-party domains, allowing first-party scripts to run normally & keep essential site functions intact."
+msgstr "Блокує JavaScript зі сторонніх доменів, дозволяючи скриптам першої сторони працювати нормально та зберігаючи основні функції сайту недоторканими."
+
+#: includes/settings.php:533
+msgid "Blocks JavaScript from both first-party & third-party domains for comprehensive script control, giving you the ability to block any JavaScript from internal or external sources based on user consent."
+msgstr "Блокує JavaScript як з доменів першої, так і з доменів третьої сторони для всебічного контролю скриптів, надаючи вам можливість блокувати будь-який JavaScript з внутрішніх або зовнішніх джерел на основі згоди користувача."
+
+#: includes/settings.php:949
+msgid "Discover the latest features & best practices."
+msgstr "Відкрийте для себе останні функції та найкращі практики."
+
+#: includes/settings.php:976
+msgid "Haven't got a license yet?"
+msgstr "Ще не отримали ліцензію?"
+
+#: includes/settings.php:1006
+msgid "Scan Your Site for Privacy Risks"
+msgstr "Скануйте свій сайт на наявність ризиків приватності"
+
+#: includes/settings.php:1010
+msgid "Use the Privacy Scanner to quickly identify scripts, tags, & trackers running on your site that may compromise user privacy."
+msgstr "Використовуйте Сканер приватності, щоб швидко виявити скрипти, теги та трекери, що працюють на вашому сайті, які можуть поставити під загрозу конфіденційність користувачів."
+
+#: includes/settings.php:1016
+msgid "Use Consent Shield to block those scripts by adding their domains or paths, ensuring quick & simple compliance."
+msgstr "Використовуйте Щит згоди, щоб заблокувати ці скрипти, додавши їх домени або шляхи, забезпечуючи швидку та просту відповідність."
+
+#: includes/settings.php:1069
+#: includes/settings.php:1132
+#: includes/settings.php:1165
+#: includes/settings.php:1210
+msgid "Save settings"
+msgstr "Зберегти налаштування"
+
+#: includes/settings.php:166
+msgid "License Key"
+msgstr "Ліцензійний ключ"
+
+#: includes/settings.php:978
+msgid "Haven't got Shield of Privacy ID yet?"
+msgstr "Ще не отримали ID Щита приватності?"
+
+#: includes/settings.php:1441
+msgid "Your license ends in %1$s days. Please update new license <a href='%2$s' target='_blank'>%2$s</a>."
+msgstr "Термін дії вашої ліцензії закінчується через %1$s днів. Будь ласка, оновіть нову ліцензію <a href='%2$s' target='_blank'>%2$s</a>."
+
+#: includes/settings.php:277
+msgid "To configure, input your Google Tag Manager Gtag ID & GTM ID in the designated fields. Once set up, Google Tag Manager will only load after the user provides consent."
+msgstr "Щоб налаштувати, введіть ваші Google Tag Manager Gtag ID та GTM ID у відповідні поля. Після налаштування Google Tag Manager буде завантажуватися тільки після надання згоди користувачем."
+
+#: includes/settings.php:982
+msgid "Register Licence Here"
+msgstr "Зареєструвати ліцензію тут"
+
+#: includes/settings.php:987
+msgid "Sign up now"
+msgstr "Зареєструватися зараз"
+
+#: includes/settings.php:943
+msgid "Explore How-To Guides, instructions, & tutorials to get the most from AesirX Consent Shield. Whether you're a developer or admin, find all you need to configure & optimize your privacy setup."
+msgstr "Перегляньте посібники, інструкції та навчальні матеріали, щоб отримати максимум від AesirX Consent Shield. Незалежно від того, чи ви розробник, чи адміністратор, знайдіть все необхідне для налаштування та оптимізації вашого захисту приватності."
+
+#: includes/settings.php:303
+msgid "Customize Consent Text "
+msgstr "Налаштувати текст згоди"
+
+#: includes/settings.php:316
+msgid "Reset Consent"
+msgstr "Скинути згоду"
+
+#: aesirx-consent.php:355
+msgid "Important: Permalink Settings Required"
+msgstr "Важливо: Потрібні налаштування постійних посилань"
+
+#: includes/settings.php:1467
+msgid "Your trial license ends in %1$s hour(s). Please update your license <a href='%2$s' target='_blank'>here</a>."
+msgstr "Термін дії вашої пробної ліцензії закінчується через %1$s годину(и). Будь ласка, оновіть свою ліцензію <a href='%2$s' target='_blank'>тут</a>."
+
+#: aesirx-consent.php:367
+msgid "click here"
+msgstr "натисніть тут"
+
+#: includes/settings.php:274
+msgid "GTM General"
+msgstr "GTM Загальне"
+
+#: includes/settings.php:1400
+msgid "Something went wrong: %1$s. Please contact the administrator."
+msgstr "Щось пішло не так: %1$s. Будь ласка, зв'яжіться з адміністратором."
+
+#: includes/settings.php:1447
+msgid "Check license failed: %1$s. Please contact the administrator or update your license."
+msgstr "Перевірка ліцензії не вдалася: %1$s. Будь ласка, зв'яжіться з адміністратором або оновіть свою ліцензію."
+
+#: src/Mysql/StartFingerprint.php:55
+msgid "Check license failed: %1\\$s. Please contact the administrator."
+msgstr "Перевірка ліцензії не вдалася: %1\\$s. Будь ласка, зв'яжіться з адміністратором."
+
+#: includes/settings.php:1430
+msgid "Your domain is not match with your license. Please update domain in your license <a href='%1$s' target='_blank'>%1$s</a> and click <span class='verify_domain'>here</span> to verify again."
+msgstr "Ваш домен не відповідає вашій ліцензії. Будь ласка, оновіть домен у своїй ліцензії <a href='%1$s' target='_blank'>%1$s</a> та натисніть <span class='verify_domain'>тут</span>, щоб перевірити ще раз."
+
+#: src/Mysql/StartFingerprint.php:43
+#: src/Mysql/StartFingerprint.php:62
+msgid "Your domain is not match with your license. Please update domain in your license"
+msgstr "Ваш домен не відповідає вашій ліцензії. Будь ласка, оновіть домен у своїй ліцензії"
+
+#: includes/settings.php:205
+msgid "Decentralized Consent Mode"
+msgstr "Режим децентралізованої згоди"
+
+#: includes/settings.php:654
+msgid "GPC Compliance"
+msgstr "Відповідність GPC"
+
+#: includes/settings.php:667
+msgid "Enable GPC Support"
+msgstr "Увімкнути підтримку GPC"
+
+#: includes/settings.php:675
+msgid "Disable GPC Support"
+msgstr "Вимкнути підтримку GPC"
+
+#: includes/settings.php:682
+msgid "To comply with Global Privacy Control (GPC), please download and upload the following file:"
+msgstr "Для відповідності Global Privacy Control (GPC), будь ласка, завантажте та завантажте наступний файл:"
+
+#: includes/settings.php:685
+msgid "Upload Instructions:"
+msgstr "Інструкції з завантаження:"
+
+#: includes/settings.php:687
+msgid "Download the gpc.json file."
+msgstr "Завантажте файл gpc.json."
+
+#: includes/settings.php:688
+msgid "Connect to your website via FTP or File Manager."
+msgstr "Підключіться до свого веб-сайту через FTP або файловий менеджер."
+
+#: includes/settings.php:689
+msgid "Upload the file to: <code>/public_html/.well-known/gpc.json</code>"
+msgstr "Завантажте файл до: <code>/public_html/.well-known/gpc.json</code>"
+
+#: includes/settings.php:690
+msgid "Ensure the file is accessible by visiting: <a href='"
+msgstr "Переконайтеся, що файл доступний, відвідавши: <a href='"
+
+#: includes/settings.php:328
+msgid "Customize Detail Text "
+msgstr "Налаштувати текст деталей"
+
+#: includes/settings.php:341
+msgid "Reset Detail"
+msgstr "Скинути деталі"
+
+#: includes/settings.php:353
+msgid "Customize Reject Text "
+msgstr "Налаштувати текст відмови"
+
+#: includes/settings.php:366
+msgid "Reset Reject"
+msgstr "Скинути відмову"
+
+#: aesirx-consent.php:102
+msgid "Customize"
+msgstr "Налаштувати"
+
+#: aesirx-consent.php:103
+msgid "Save"
+msgstr "Зберегти"
+
+#: aesirx-consent.php:104
+msgid "Always active"
+msgstr "Завжди активний"
+
+#: aesirx-consent.php:105
+msgid "Domain/Path-Based"
+msgstr "За доменом/шляхом"
+
+#: aesirx-consent.php:106
+msgid "Third-Party Plugins"
+msgstr "Сторонні плагіни"
+
+#: aesirx-consent.php:107
+msgid "Essential Tracking"
+msgstr "Необхідне відстеження"
+
+#: aesirx-consent.php:108
+msgid "Required for the website to function (e.g, session cookies, security tracking)."
+msgstr "Необхідно для функціонування веб-сайту (наприклад, сесійні файли cookie, відстеження безпеки)."
+
+#: aesirx-consent.php:109
+msgid "Functional Tracking"
+msgstr "Функціональне відстеження"
+
+#: aesirx-consent.php:110
+msgid "User preferencese & site enhancements (e.g, language setting, live chat)."
+msgstr "Налаштування користувача та покращення сайту (наприклад, налаштування мови, онлайн-чат)."
+
+#: aesirx-consent.php:111
+msgid "Analytics Tracking"
+msgstr "Відстеження аналітики"
+
+#: aesirx-consent.php:112
+msgid "Visitor behavior monitoring (e.g, Google Analytics, Matomo)."
+msgstr "Моніторинг поведінки відвідувачів (наприклад, Google Analytics, Matomo)."
+
+#: aesirx-consent.php:113
+msgid "Advertising Tracking"
+msgstr "Відстеження реклами"
+
+#: aesirx-consent.php:114
+msgid "Targeted advertising & remarketing (e.g, Facebook Pixel, Google Ads)."
+msgstr "Цільова реклама та ремаркетинг (наприклад, Facebook Pixel, Google Ads)."
+
+#: aesirx-consent.php:115
+msgid "Custom Tracking"
+msgstr "Користувацьке відстеження"
+
+#: aesirx-consent.php:116
+msgid "Any additional third-party integrations (e.g, customer support tools, CDNS)."
+msgstr "Будь-які додаткові інтеграції з третіми сторонами (наприклад, інструменти підтримки клієнтів, CDNS)."
+
+#: aesirx-consent.php:117
+msgid "Opt-Out of tracking"
+msgstr "Відмовитися від відстеження"
+
+#: aesirx-consent.php:118
+msgid "This website uses tracking by default. You may opt out at any time."
+msgstr "Цей веб-сайт використовує відстеження за замовчуванням. Ви можете відмовитися від нього в будь-який час."
+
+#: aesirx-consent.php:119
+msgid "Do Not Sell or Share My Personal Information (CCPA)"
+msgstr "Не продавати та не передавати мою особисту інформацію (CCPA)"
+
+#: aesirx-consent.php:120
+msgid "Disables third-party data sharing for California users."
+msgstr "Вимкнути обмін даними з третіми сторонами для користувачів з Каліфорнії."
+
+#: includes/settings.php:564
+msgid "Configurable Consent Logic"
+msgstr "Конфігурована логіка згоди"
+
+#: includes/settings.php:577
+msgid "Opt-In Mode (EU)"
+msgstr "Режим згоди (ЄС)"
+
+#: includes/settings.php:578
+msgid "No tracking technologies are activated until a user explicitly gives consent. This is required by <strong>GDPR</strong> and <strong>ePrivacy Directive 5(3)</strong>."
+msgstr "Жодні технології відстеження не активуються, доки користувач явно не надасть згоду. Це вимагається згідно з <strong>GDPR</strong> та <strong>Директивою про конфіденційність та електронні комунікації 5(3)</strong>."
+
+#: includes/settings.php:586
+msgid "Opt-Out Mode (California)"
+msgstr "Режим відмови (Каліфорнія)"
+
+#: includes/settings.php:587
+msgid "Tracking is allowed by default, but users must be able to opt out easily. This aligns with <strong>CCPA</strong> and similar U.S. privacy frameworks."
+msgstr "Відстеження дозволено за замовчуванням, але користувачі повинні мати можливість легко відмовитися. Це відповідає <strong>CCPA</strong> та подібним американським нормам приватності."
+
+#: includes/settings.php:618
+msgid "Do not sell or share options"
+msgstr "Не продавати або ділитися опціями"
+
+#: includes/settings.php:631
+#: includes/settings.php:737
+msgid "Yes"
+msgstr "Так"
+
+#: includes/settings.php:639
+#: includes/settings.php:745
+msgid "No"
+msgstr "Ні"
+
+#: includes/settings.php:724
+msgid "Enable Geo-handling for Consent Mode"
+msgstr "Увімкнути гео-обробку для режиму згоди"
+
+#: includes/settings.php:760
+msgid "Geo-Based Consent Rules"
+msgstr "Правила згоди на основі географії"
+
+#: includes/settings.php:859
+msgid "Browser Language"
+msgstr "Мова браузера"
+
+#: includes/settings.php:860
+#: includes/settings.php:884
+#: includes/settings.php:901
+msgid "Time Zone"
+msgstr "Часовий пояс"
+
+#: includes/settings.php:874
+msgid "Consent Mode"
+msgstr "Режим згоди"
+
+#: includes/settings.php:875
+msgid "Allow Override"
+msgstr "Дозволити перевизначення"
+
+#: includes/settings.php:883
+#: includes/settings.php:900
+msgid "Language"
+msgstr "Мова"
+
+#: includes/settings.php:886
+#: includes/settings.php:903
+msgid "Select Mode"
+msgstr "Вибрати режим"
+
+#: includes/settings.php:904
+msgid "Override"
+msgstr "Перевизначити"
+
+#: includes/settings.php:196
+msgid "Default Consent Mode"
+msgstr "Режим згоди за замовчуванням"
+
+#: includes/settings.php:200
+msgid "Default Consent Mode improves Google Consent Mode 2.0 by not loading any tags until after consent is given, reducing compliance risks."
+msgstr "Режим згоди за замовчуванням покращує Google Consent Mode 2.0, не завантажуючи жодних тегів до надання згоди, що знижує ризики відповідності."
+
+#: includes/settings.php:209
+msgid "Decentralized Consent Mode setup improves Google Consent Mode 2.0 by not loading any scripts, beacons, or tags until after consent is given, reducing compliance risks. It also includes Decentralized Consent, for more control over personal data and rewards."
+msgstr "Налаштування режиму децентралізованої згоди покращує Google Consent Mode 2.0, не завантажуючи жодних скриптів, маяків чи тегів до надання згоди, що зменшує ризики відповідності. Воно також включає децентралізовану згоду для більшого контролю над персональними даними та винагородами."
+
+#: includes/settings.php:866
+msgid "Choose how browser language and time zone are combined to determine consent rules:"
+msgstr "Виберіть, як мова браузера та часовий пояс поєднуються для визначення правил згоди:"
+
+#: includes/settings.php:868
+msgid "<strong>AND Logic (Stricter Match):</strong> Both language and time zone must match a region for its consent model to apply. Ideal for high-accuracy targeting."
+msgstr "<strong>Логіка AND (Більш строге співпадіння):</strong> Як мова, так і часовий пояс повинні відповідати регіону, щоб застосувати його модель згоди. Ідеально підходить для високоточного націлювання."
+
+#: includes/settings.php:869
+msgid "<strong>OR Logic (More Flexible):</strong> Either language or time zone can match to apply a region’s consent model. Best for broader coverage based on user preferences."
+msgstr "<strong>Логіка OR (Більш гнучка):</strong> Мова або часовий пояс можуть відповідати регіону для застосування його моделі згоди. Найкраще для ширшого охоплення на основі уподобань користувача."
+
+#. translators: 1: Permalink structure example, 2: Link to Permalink Settings page
+#: aesirx-consent.php:360
+msgid ""
+"Our plugin requires that your site use a pretty permalink structure (for example, %1$s) to work correctly.\n"
+"                            It looks like your current settings are using the plain permalink format, which might cause issues.\n"
+"                            Please %2$s to open your Permalink Settings.\n"
+"                            Once there, select the \"Post name\" option (or another pretty permalink structure) and click \"Save Changes.\""
+msgstr ""
+
+#: includes/settings.php:119
+msgid ""
+"<div class='input_information_content'>\n"
+"          Provided SSO CLIENT ID from <a href='%1$s' target='_blank'>%1$s</a>.</div>"
+msgstr ""
+
+#: includes/settings.php:145
+msgid ""
+"<div class='input_information_content'>\n"
+"          Provided SSO Client Secret from <a href='%1$s' target='_blank'>%1$s</a>.</div>"
+msgstr ""
+
+#: includes/settings.php:172
+msgid ""
+"<div class='input_information_content'>\n"
+"          Sign up to obtain your Shield of Privacy ID and purchase licenses <a href='https://aesirx.io/licenses' target='blank' class='text-link'>here</a>.</div>"
+msgstr ""
+
+#: includes/settings.php:234
+#: includes/settings.php:259
+msgid ""
+"<div class='input_information_content'>\n"
+"          Remember to include the explicit purpose (e.g., analytics, marketing) in the consent text to inform users why GTM is being used.</div>"
+msgstr ""
+
+#: includes/settings.php:1025
+msgid "Learn how to use AesirX Privacy Scanner with Consent Shield to detect privacy-intrusive elements, using the JetPack plugin as an example."
+msgstr ""

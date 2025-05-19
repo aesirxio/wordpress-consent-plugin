@@ -1,8 +1,7 @@
 #biapp {
   margin-left: -20px;
   #all_header {
-    margin-top: 2px;
-    width: calc(100% - 161px) !important;
+    display: none !important;
   }
   .arrow {
     position: static !important;
@@ -31,7 +30,7 @@
     display: none !important;
   }
   &.aesirxui .main_content.pd-t-80 {
-    padding-top: 60px;
+    padding-top: 0;
   }
   &.aesirxui .content_header.h-80 {
     height: 60px;

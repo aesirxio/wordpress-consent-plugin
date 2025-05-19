@@ -116,6 +116,7 @@ Class AesirX_Analytics_Start_Fingerprint extends AesirxAnalyticsMysqlHelper
                 'browser_version' => $params['request']['browser_version'],
                 'domain' => $domain,
                 'lang' => $params['request']['lang'],
+                'timezone' => $params['request']['timezone'],
                 'visitor_flows' => [$new_visitor_flow],
             ];
     
@@ -148,6 +149,21 @@ Class AesirX_Analytics_Start_Fingerprint extends AesirxAnalyticsMysqlHelper
     
             if ($url['host'] !== $visitor['domain']) {
                 return new WP_Error('validation_error', esc_html__('The domain sent in the new URL does not match the domain stored in the visitor document', 'aesirx-consent'));
+            }
+          
+            global $wpdb;
+            if (!$visitor['timezone']) {
+                $updated_data['timezone'] = isset($params['request']['timezone']) ? $params['request']['timezone'] : '';
+            }
+            if (!$visitor['lang']) {
+                $updated_data['lang'] = isset($params['request']['lang']) ? $params['request']['lang'] : '';
+            }
+            if (!empty($updated_data)) {
+                $wpdb->update( // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching
+                    $wpdb->prefix . 'analytics_visitors',
+                    $updated_data,
+                    ['uuid' => $visitor['uuid']],
+                );
             }
     
             $create_flow = true;

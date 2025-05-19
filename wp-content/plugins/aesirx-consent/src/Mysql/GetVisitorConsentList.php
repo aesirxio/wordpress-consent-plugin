@@ -70,6 +70,7 @@ Class AesirX_Analytics_Get_Visitor_Consent_List extends AesirxAnalyticsMysqlHelp
                 'browser_version' => $visitor->browser_version,
                 'domain' => $visitor->domain,
                 'lang' => $visitor->lang,
+                'timezone' => $visitor->timezone,
                 'visitor_flows' => [],
                 'geo' => null,
                 'visitor_consents' => [],

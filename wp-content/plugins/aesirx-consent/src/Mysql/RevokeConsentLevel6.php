@@ -37,7 +37,8 @@ Class AesirX_Analytics_Revoke_Consent_Level6 extends AesirxAnalyticsMysqlHelper
                 'browser_version' => '',
                 'browser_name' => '',
                 'device' => '',
-                'user_agent' => ''
+                'user_agent' => '',
+                'timezone' => ''
             ],
             ['uuid' => $visitor_uuid],
         );
