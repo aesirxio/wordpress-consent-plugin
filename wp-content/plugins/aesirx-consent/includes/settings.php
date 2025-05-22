@@ -972,14 +972,12 @@ add_action('admin_init', function () {
         <div class='aesirx_consent_register_license_notice'>
         ".aesirx_analytics_license_info()."
         </div>
-        ".($isRegisted ? "
-          <p>".esc_html__("Haven't got a license yet?", 'aesirx-consent')."</p>
-        " :"
+        ".($isRegisted ? "" :"
           <p>".esc_html__("Haven't got Shield of Privacy ID yet?", 'aesirx-consent')."</p>
         ")."
         ".($isRegisted ? "
-          <a class='aesirx_btn_success cta-button' target='_blank' href='https://aesirx.io/licenses/consent-management-platform'>
-            ".esc_html__("Register Licence Here", 'aesirx-consent')."
+          <a class='aesirx_btn_success cta-button' target='_blank' href='https://aesirx.io/licenses'>
+            ".esc_html__("Manage License Here", 'aesirx-consent')."
             <img width='20px' height='20px' src='". plugins_url( 'aesirx-consent/assets/images-plugin/external_link_icon.png')."' />
           </a>
         " :"
