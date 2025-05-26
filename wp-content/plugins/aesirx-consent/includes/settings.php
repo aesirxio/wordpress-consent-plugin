@@ -300,7 +300,7 @@ add_action('admin_init', function () {
   );
   add_settings_field(
     'aesirx_consent_modal_datastream_consent',
-    esc_html__('Customize Consent Text ', 'aesirx-consent'),
+    esc_html__('Customize Consent Management Text ', 'aesirx-consent'),
     function () {
       $options = get_option('aesirx_consent_modal_plugin_options', []);
       $decodedHtml = html_entity_decode($options['datastream_consent'], ENT_QUOTES, 'UTF-8');
@@ -325,7 +325,7 @@ add_action('admin_init', function () {
 
   add_settings_field(
     'aesirx_consent_modal_datastream_detail',
-    esc_html__('Customize Detail Text ', 'aesirx-consent'),
+    esc_html__('Customize Details Text ', 'aesirx-consent'),
     function () {
       $options = get_option('aesirx_consent_modal_plugin_options', []);
       $decodedHtml = html_entity_decode($options['datastream_detail'], ENT_QUOTES, 'UTF-8');
@@ -1436,7 +1436,33 @@ function aesirx_analytics_license_info() {
         $currentDate = new DateTime();
         $interval = $currentDate->diff($dateExpired);
         $daysLeft = $interval->days;
-        return wp_kses(sprintf(__("Your license ends in %1\$s days. Please update new license <a href='%2\$s' target='_blank'>%2\$s</a>.", 'aesirx-consent'), $daysLeft, 'https://aesirx.io/licenses'), aesirx_analytics_escape_html());
+        if ($interval->y > 2) {
+          // License is considered lifetime
+            return wp_kses(
+              __("You are using a lifetime license.", 'aesirx-consent'),
+              aesirx_analytics_escape_html()
+          );
+        } else {
+          $parts = [];
+          if ($interval->y > 0) {
+              $parts[] = $interval->y . ' ' . _n('year', 'years', $interval->y, 'aesirx-consent');
+          }
+          if ($interval->m > 0) {
+              $parts[] = $interval->m . ' ' . _n('month', 'months', $interval->m, 'aesirx-consent');
+          }
+          if ($interval->d > 0 || empty($parts)) {
+              $parts[] = $interval->d . ' ' . _n('day', 'days', $interval->d, 'aesirx-consent');
+          }
+          $timeLeft = implode(', ', $parts);
+          return wp_kses(
+              sprintf(
+                  __("Your license ends in %1\$s. Please update your license <a href='%2\$s' target='_blank'>%2\$s</a>.", 'aesirx-consent'),
+                  $timeLeft,
+                  'https://aesirx.io/licenses'
+              ),
+              aesirx_analytics_escape_html()
+          );
+        }
       }
     } else {
       $error_message = $response['response']['message'];
@@ -1469,7 +1495,33 @@ function aesirx_analytics_license_info() {
               aesirx_analytics_escape_html()
           );
         }
-        return wp_kses(sprintf(__("Your trial license ends in %1\$s days. Please update new license <a href='%2\$s' target='_blank'>%2\$s</a>.", 'aesirx-consent'), $daysLeft, 'https://aesirx.io/licenses'), aesirx_analytics_escape_html());
+        if ($interval->y > 2) {
+          // License is considered lifetime
+            return wp_kses(
+              __("You are using a lifetime license.", 'aesirx-consent'),
+              aesirx_analytics_escape_html()
+          );
+        } else {
+          $parts = [];
+          if ($interval->y > 0) {
+              $parts[] = $interval->y . ' ' . _n('year', 'years', $interval->y, 'aesirx-consent');
+          }
+          if ($interval->m > 0) {
+              $parts[] = $interval->m . ' ' . _n('month', 'months', $interval->m, 'aesirx-consent');
+          }
+          if ($interval->d > 0 || empty($parts)) {
+              $parts[] = $interval->d . ' ' . _n('day', 'days', $interval->d, 'aesirx-consent');
+          }
+          $timeLeft = implode(', ', $parts);
+          return wp_kses(
+              sprintf(
+                  __("Your trial license ends in %1\$s. Please update your license <a href='%2\$s' target='_blank'>%2\$s</a>.", 'aesirx-consent'),
+                  $timeLeft,
+                  'https://aesirx.io/licenses'
+              ),
+              aesirx_analytics_escape_html()
+          );
+        }
       } else {
         if(json_decode($body)->result->date_expired) {
           return wp_kses(sprintf(__("Your free trials has ended. Please update your license. <a href='%1\$s' target='_blank'>%1\$s</a>.", 'aesirx-consent'), 'https://aesirx.io/licenses'), aesirx_analytics_escape_html());
