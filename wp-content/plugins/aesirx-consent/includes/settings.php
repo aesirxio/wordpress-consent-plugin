@@ -77,6 +77,18 @@ add_action('admin_init', function () {
     return $value;
   });
 
+  register_setting('aesirx_consent_ai_plugin_options', 'aesirx_consent_ai_plugin_options', function (
+    $value
+  ) {
+    $valid = true;
+    // Ignore the user's changes and use the old database value.
+    if (!$valid) {
+      $value = get_option('aesirx_consent_ai_plugin_options');
+    }
+    return $value;
+  });
+
+
   add_settings_section(
     'aesirx_analytics_settings',
     'AesirX Consent Management',
@@ -1040,6 +1052,23 @@ add_action('admin_init', function () {
     'aesirx_signup_modal'
   );
 
+  add_settings_section(
+    'aesirx_consent_ai_settings',
+    'AI Privacy Generator',
+    function () {
+      $manifest = json_decode(
+        file_get_contents(plugin_dir_path(__DIR__) . 'assets-manifest.json', true)
+      );
+
+      if ($manifest->entrypoints->plugin->assets) {
+        foreach ($manifest->entrypoints->plugin->assets->js as $js) {
+          wp_enqueue_script('aesrix_bi' . md5($js), plugins_url($js, __DIR__), false, '1.0', true);
+        }
+      }
+    },
+    'aesirx_consent_ai_plugin'
+  );
+
 });
 
 add_action('admin_menu', function () {
@@ -1231,6 +1260,56 @@ add_action('admin_menu', function () {
         echo '</div>';
     },
   6);
+  add_submenu_page(
+    'aesirx-consent-management-plugin',
+    'AI Privacy Generator',
+    'AI Privacy Generator',
+    'manage_options',
+    'aesirx-cmp-ai',
+    function () {
+      ?>
+      <?php
+        settings_fields('aesirx_consent_ai_plugin_options');
+        do_settings_sections('aesirx_consent_ai_plugin');
+      ?>
+      <div class="aesirx_consent_wrapper">
+        <div class="w-100 bg-white rounded-16px p-16px">
+          <div class="advisor_wrapper">
+            <div class="advisor_prompt">
+              <div class="advisor_prompt_item">
+                Cookie Declaration
+              </div>
+              <div class="advisor_prompt_item">
+                Privacy Policy
+              </div>
+              <div class="advisor_prompt_item">
+                Consent Request
+              </div>
+            </div>
+            <div class="advisor_chat">
+              <div class="advisor_chat_container">
+                <div class="advisor_chat_message">
+                  <div class="advisor_chat_loading">
+                    <div class="loader"></div>
+                  </div>
+                  <div class="advisor_chat_message_container"></div>
+                </div>
+              </div>
+              <div class="advisor_chat_loading_text">
+                <div class="loader"></div>
+                Privacy Assistant is processing your request. This can take up to 10 seconds.
+              </div>
+              <div class="advisor_chat_footer">
+                <textarea class="advisor_chat_footer_textarea" placeholder="Type your message here..."></textarea>
+                <button class="advisor_chat_footer_send">Send</button>
+              </div>
+            </div>
+          </div>
+        </div>
+			<?php
+        echo '</div>';
+    },
+  7);
   
   });
 
@@ -1238,6 +1317,10 @@ add_action('admin_enqueue_scripts', function ($hook) {
   if ($hook === "aesirx-cmp_page_aesirx-cmp-geo") {
     wp_register_script('aesirx_analytics_geo', plugins_url('assets/vendor/aesirx-consent-geo.js', __DIR__), array('jquery'), false, true);
     wp_enqueue_script('aesirx_analytics_geo');
+  }
+  if ($hook === "aesirx-cmp_page_aesirx-cmp-ai") {
+    wp_register_script('aesirx_analytics_ai', plugins_url('assets/vendor/aesirx-consent-ai.js', __DIR__), array('jquery'), false, true);
+    wp_enqueue_script('aesirx_analytics_ai');
   }
   if ($hook === 'toplevel_page_aesirx-consent-management-plugin' || $hook === "aesirx-cmp_page_aesirx-cmp-modal") {
     wp_enqueue_script('aesirx_analytics_ckeditor', plugins_url('assets/vendor/aesirx-consent-ckeditor.js', __DIR__), array('jquery'), true, true);

@@ -41,6 +41,12 @@ function moveGeoJSTask() {
     .pipe(gulp.dest(`${dist}/plugins/aesirx-consent/assets/vendor`));
 }
 
+function moveAiJSTask() {
+  return gulp
+    .src(['./wp-content/plugins/aesirx-consent/aesirx-consent-ai.js'])
+    .pipe(gulp.dest(`${dist}/plugins/aesirx-consent/assets/vendor`));
+}
+
 function moveCKeditorJSTask() {
   return gulp
     .src(['./wp-content/plugins/aesirx-consent/aesirx-consent-ckeditor.js'])
@@ -88,6 +94,7 @@ exports.zip = series(
   moveAnalyticJSTask,
   moveRepeatableFieldsJSTask,
   moveGeoJSTask,
+  moveAiJSTask,
   moveCKeditorJSTask,
   webpackBIApp,
   composerTask,
@@ -107,6 +114,7 @@ exports.watch = function () {
       moveAnalyticJSTask,
       moveRepeatableFieldsJSTask,
       moveGeoJSTask,
+      moveAiJSTask,
       moveCKeditorJSTask,
       composerTask
     )

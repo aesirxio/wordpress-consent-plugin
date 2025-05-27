@@ -437,8 +437,9 @@ $consent = $wpdb->get_row( // phpcs:ignore WordPress.DB.DirectDatabaseQuery.Dire
 );
 
 $disabled_block_domains = get_option('aesirx_analytics_plugin_options_disabled_block_domains');
+$consentParams = isset($_GET['consent']) ? sanitize_text_field($_GET['consent']) : 'no';
 
-if (!$consent) {
+if (!$consent && $consentParams !== 'yes') {
     add_action( 'wp_enqueue_scripts', function (): void {
 
 		$deregistered_scripts = aesirx_analytics_get_deregistered_scripts();
@@ -512,7 +513,7 @@ if (!$consent) {
 
         return $deregistered_scripts;
     }
-} else if ($disabled_block_domains && $consent) {
+} else if ($disabled_block_domains && ($consent || $consentParams !== 'yes')) {
     add_action( 'wp_enqueue_scripts', function (): void {
 
 		$deregistered_scripts = aesirx_analytics_block_disabled_domains();
