@@ -1271,41 +1271,69 @@ add_action('admin_menu', function () {
       <?php
         settings_fields('aesirx_consent_ai_plugin_options');
         do_settings_sections('aesirx_consent_ai_plugin');
+        $options = get_option('aesirx_consent_ai_plugin_options', []);
       ?>
       <div class="aesirx_consent_wrapper">
-        <div class="w-100 bg-white rounded-16px p-16px">
-          <div class="advisor_wrapper">
-            <div class="advisor_prompt">
-              <div class="advisor_prompt_item">
-                Cookie Declaration
-              </div>
-              <div class="advisor_prompt_item">
-                Privacy Policy
-              </div>
-              <div class="advisor_prompt_item">
-                Consent Request
-              </div>
-            </div>
-            <div class="advisor_chat">
-              <div class="advisor_chat_container">
-                <div class="advisor_chat_message">
-                  <div class="advisor_chat_loading">
-                    <div class="loader"></div>
-                  </div>
-                  <div class="advisor_chat_message_container"></div>
+        <?php
+          $optionsAIKey = get_option('aesirx_consent_ai_key_plugin_options',[]);
+        ?>
+        <?php if( $optionsAIKey['openai_key']) : ?>
+          <div class="w-100 bg-white rounded-16px p-16px">
+            <button class="ai_generate_button
+            <?php if($options['cookie_declaration'] || 
+                      $options['privacy_policy'] || 
+                      $options['consent_request'] ) echo 'hide'; ?>">
+              <div class="loader"></div><div>Generate</div>
+            </button>
+            <div id="cookie_declaration" class="prompt_item">
+              <div class="prompt_item_title">Cookie Declaration</div>
+              <div class="prompt_item_result">
+                <div class="loading">
+                  <div class="loader"></div>
+                </div>
+                <div class="result">
+                  <?php echo stripslashes($options['cookie_declaration']) ?>
                 </div>
               </div>
-              <div class="advisor_chat_loading_text">
-                <div class="loader"></div>
-                Privacy Assistant is processing your request. This can take up to 10 seconds.
+              <button class="prompt_item_regenerate <?php if(!$options['cookie_declaration']) echo 'hide'; ?>">
+                <div class="loader"></div><div>Regenerate</div>
+              </button>
+            </div>
+            <div id="privacy_policy" class="prompt_item">
+              <div class="prompt_item_title">Privacy Policy</div>
+              <div class="prompt_item_result">
+                <div class="loading">
+                  <div class="loader"></div>
+                </div>
+                <div class="result">
+                  <?php echo stripslashes($options['privacy_policy']) ?>
+                </div>
               </div>
-              <div class="advisor_chat_footer">
-                <textarea class="advisor_chat_footer_textarea" placeholder="Type your message here..."></textarea>
-                <button class="advisor_chat_footer_send">Send</button>
+              <button class="prompt_item_regenerate <?php if(!$options['privacy_policy']) echo 'hide'; ?>">
+                <div class="loader"></div><div>Regenerate</div>
+              </button>
+            </div>
+            <div id="consent_request" class="prompt_item">
+              <div class="prompt_item_title">Consent Request</div>
+              <div class="prompt_item_result">
+                <div class="loading">
+                  <div class="loader"></div>
+                </div>
+                <div class="result">
+                <?php echo stripslashes($options['consent_request']) ?>
+                </div>
               </div>
+              <button class="prompt_item_regenerate <?php if(!$options['consent_request']) echo 'hide'; ?>">
+                <div class="loader"></div><div>Regenerate</div>
+              </button>
             </div>
           </div>
-        </div>
+        <?php else : ?>
+          <div class="w-100 bg-white rounded-16px p-16px">
+              <p><?php echo wp_kses(sprintf(__("Your license is expried or not found. Please update new license <a href='%1\$s' target='_blank'>%1\$s</a>.", 'aesirx-consent'), 'https://aesirx.io/licenses'), aesirx_analytics_escape_html()); ?></p>
+          </div>
+        <?php endif; ?>
+       
 			<?php
         echo '</div>';
     },
@@ -1319,7 +1347,18 @@ add_action('admin_enqueue_scripts', function ($hook) {
     wp_enqueue_script('aesirx_analytics_geo');
   }
   if ($hook === "aesirx-cmp_page_aesirx-cmp-ai") {
+    wp_enqueue_script('aesirx_analytics_marked', plugins_url('assets/vendor/aesirx-consent-marked.js', __DIR__), array('jquery'), true, true);
     wp_register_script('aesirx_analytics_ai', plugins_url('assets/vendor/aesirx-consent-ai.js', __DIR__), array('jquery'), false, true);
+    $optionsAI = get_option('aesirx_consent_ai_plugin_options', []);
+    wp_localize_script('aesirx_analytics_ai', 'aesirx_ajax', [
+      'ajax_url' => admin_url('admin-ajax.php'),
+      'nonce' => wp_create_nonce('aesirx_consent_nonce'),
+      'thread_id' =>  $optionsAI['thread_id'],
+      'cookie_declaration' =>  $optionsAI['cookie_declaration'],
+      'privacy_policy' =>  $optionsAI['privacy_policy'],
+      'consent_request' =>  $optionsAI['consent_request']
+     
+  ]);
     wp_enqueue_script('aesirx_analytics_ai');
   }
   if ($hook === 'toplevel_page_aesirx-consent-management-plugin' || $hook === "aesirx-cmp_page_aesirx-cmp-modal") {
@@ -1488,12 +1527,19 @@ function aesirx_analytics_trigger_trial() {
 
 function aesirx_analytics_license_info() {
   $options = get_option('aesirx_analytics_plugin_options', []);
+  $optionsAIKey = get_option('aesirx_consent_ai_key_plugin_options',[]);
   $domain = isset($_SERVER['SERVER_NAME']) ? sanitize_text_field($_SERVER['SERVER_NAME']) : '';
   if (!empty($options['license'])) {
     $response = aesirx_analytics_get_api('https://api.aesirx.io/index.php?webserviceClient=site&webserviceVersion=1.0.0&option=member&task=validateWPLicense&api=hal&license=' . $options['license']);
     $bodyCheckLicense = wp_remote_retrieve_body($response);
     $decodedDomains = json_decode($bodyCheckLicense)->result->domain_list->decoded ?? [];
     $domainList = array_column($decodedDomains, 'domain');
+
+    $openAIKey = json_decode($bodyCheckLicense)->result->openai_key ?? "";
+    $openAIAssistant = json_decode($bodyCheckLicense)->result->openai_assistant ?? "";
+    $optionsAIKey['openai_key'] = $openAIKey;
+    $optionsAIKey['openai_assistant'] =  $openAIAssistant;
+    update_option('aesirx_consent_ai_key_plugin_options', $optionsAIKey);
 
     if ($response['response']['code'] === 200 ) {
       if(!json_decode($bodyCheckLicense)->result->success || json_decode($bodyCheckLicense)->result->subscription_product !== "product-aesirx-cmp") {
@@ -1558,6 +1604,10 @@ function aesirx_analytics_license_info() {
       );
     }
   } else {
+    $optionsAIKey['openai_key'] = "";
+    $optionsAIKey['openai_assistant'] =  "";
+    update_option('aesirx_consent_ai_key_plugin_options', $optionsAIKey);
+
     $checkTrial = aesirx_analytics_get_api('https://api.aesirx.io/index.php?webserviceClient=site&webserviceVersion=1.0.0&option=member&task=validateWPDomain&api=hal&domain='.rawurlencode($domain));
     $body = wp_remote_retrieve_body($checkTrial);
     if($body) {
@@ -1725,3 +1775,22 @@ function allow_data_protocol($protocols) {
   return $protocols;
 }
 add_filter('kses_allowed_protocols', 'allow_data_protocol');
+
+
+add_action('wp_ajax_update_aesirx_options', 'update_aesirx_options');
+
+function update_aesirx_options() {
+    // Check nonce for security (optional but recommended)
+    check_ajax_referer('aesirx_consent_nonce', 'security');
+
+    // Get options from request
+    $options = $_POST['options'] ?? [];
+
+    // Sanitize or validate $options as needed
+
+    // Update the option
+    update_option('aesirx_consent_ai_plugin_options', $options);
+
+    // Return a success response
+    wp_send_json_success('Options updated successfully');
+}

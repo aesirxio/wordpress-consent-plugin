@@ -7,12 +7,14 @@ Class AesirX_Analytics_Get_Openai_Assistant extends AesirxAnalyticsMysqlHelper
 {
     function aesirx_analytics_mysql_execute($params = [])
     {
-        $thread_id = get_option('openai_assistant_thread_id');
+        $options = get_option('aesirx_consent_ai_plugin_options');
+        $thread_id = $options['thread_id'];
         if (!$thread_id) {
             return rest_ensure_response(['messages' => []]);
         }
+        $optionsAIKey = get_option('aesirx_consent_ai_key_plugin_options', []);
 
-        $authorization = 'Bearer ';
+        $authorization = 'Bearer '. $optionsAIKey['openai_key'];
         $headers = [
             'Authorization' => $authorization,
             'OpenAI-Beta' => 'assistants=v2',
@@ -26,7 +28,7 @@ Class AesirX_Analytics_Get_Openai_Assistant extends AesirxAnalyticsMysqlHelper
         $messages = array_map(function ($msg) {
             return [
                 'role' => $msg['role'],
-                'content' => $msg['content'],
+                'content' => str_replace('"', "'", $msg['content'][0]['text']['value']),
             ];
         }, array_reverse($msgData['data']));
 

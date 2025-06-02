@@ -8,10 +8,11 @@ Class AesirX_Analytics_Openai_Assistant extends AesirxAnalyticsMysqlHelper
     function aesirx_analytics_mysql_execute($params = [])
     {
         $response = [];
-        $assistant_id = '';
+        $optionsAIKey = get_option('aesirx_consent_ai_key_plugin_options', []);
+        $assistant_id = $optionsAIKey['openai_assistant'];
         $user_message = sanitize_text_field($params[1]);
 
-        $authorization = 'Bearer ';
+        $authorization = 'Bearer '. $optionsAIKey['openai_key'];
         
         $headers = [
             'Authorization' => $authorization,
@@ -19,7 +20,8 @@ Class AesirX_Analytics_Openai_Assistant extends AesirxAnalyticsMysqlHelper
             'Content-Type' => 'application/json',
         ];
          // 1. Get or create thread_id
-        $thread_id = get_option('openai_assistant_thread_id');
+        $options = get_option('aesirx_consent_ai_plugin_options');
+        $thread_id = $options['thread_id'];
         if (!$thread_id) {
             $response = wp_remote_post('https://api.openai.com/v1/threads', [
                 'headers' => $headers,
@@ -27,7 +29,8 @@ Class AesirX_Analytics_Openai_Assistant extends AesirxAnalyticsMysqlHelper
             ]);
             $thread_data = json_decode(wp_remote_retrieve_body($response), true);
             $thread_id = $thread_data['id'];
-            update_option('openai_assistant_thread_id', $thread_id);
+            $options['thread_id'] = $thread_id;
+            update_option('aesirx_consent_ai_plugin_options', $options);
         }
 
         // 2. Add user message
@@ -68,7 +71,7 @@ Class AesirX_Analytics_Openai_Assistant extends AesirxAnalyticsMysqlHelper
         $messages = array_map(function ($msg) {
             return [
                 'role' => $msg['role'],
-                'content' => $msg['content'],
+                'content' => str_replace('"', "'", $msg['content'][0]['text']['value']),
             ];
         }, array_reverse($msgData['data'])); // oldest to newest
 
