@@ -1287,6 +1287,7 @@ add_action('admin_menu', function () {
             </button>
             <div id="cookie_declaration" class="prompt_item">
               <div class="prompt_item_title">Cookie Declaration</div>
+              <div class="prompt_item_warning">⚠️ This is a draft generated based on your site’s scan results. Please review and edit to ensure it reflects your actual data practices before publishing.</div>
               <div class="prompt_item_result">
                 <div class="loading">
                   <div class="loader"></div>
@@ -1301,6 +1302,7 @@ add_action('admin_menu', function () {
             </div>
             <div id="privacy_policy" class="prompt_item">
               <div class="prompt_item_title">Privacy Policy</div>
+              <div class="prompt_item_warning">⚠️ This is a draft generated based on your site’s scan results. Please review and edit to ensure it reflects your actual data practices before publishing.</div>
               <div class="prompt_item_result">
                 <div class="loading">
                   <div class="loader"></div>
@@ -1315,6 +1317,7 @@ add_action('admin_menu', function () {
             </div>
             <div id="consent_request" class="prompt_item">
               <div class="prompt_item_title">Consent Request</div>
+              <div class="prompt_item_warning">⚠️ This is a draft generated based on your site’s scan results. Please review and edit to ensure it reflects your actual data practices before publishing.</div>
               <div class="prompt_item_result">
                 <div class="loading">
                   <div class="loader"></div>
