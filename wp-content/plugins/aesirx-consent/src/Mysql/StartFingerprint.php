@@ -10,6 +10,7 @@ Class AesirX_Analytics_Start_Fingerprint extends AesirxAnalyticsMysqlHelper
         $license = $options['license'];
         $verifyDomain = $options['verify_domain'];
         $serverName = isset($_SERVER['SERVER_NAME']) ? sanitize_text_field($_SERVER['SERVER_NAME']) : '';
+        $serverName = preg_replace('/^www\./', '', $serverName);
         if (!empty($license)) {
             $current_time = new DateTime('now', new DateTimeZone('UTC')); // Current time in UTC
             $expiry_time = new DateTime($options['license_date_expired'], new DateTimeZone('UTC'));

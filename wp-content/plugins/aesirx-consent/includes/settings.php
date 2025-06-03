@@ -1369,6 +1369,7 @@ function aesirx_analytics_get_api($url) {
 function aesirx_analytics_trigger_trial() {
   $urlPost = 'https://api.aesirx.io/index.php?webserviceClient=site&webserviceVersion=1.0.0&option=member&task=validateWPDomain&api=hal';
   $domain = isset($_SERVER['SERVER_NAME']) ? sanitize_text_field($_SERVER['SERVER_NAME']) : '';
+  $domain = preg_replace('/^www\./', '', $domain);
   $args = array(
       'headers' => array(
           'Content-Type' => 'application/json',
@@ -1406,6 +1407,7 @@ function aesirx_analytics_trigger_trial() {
 function aesirx_analytics_license_info() {
   $options = get_option('aesirx_analytics_plugin_options', []);
   $domain = isset($_SERVER['SERVER_NAME']) ? sanitize_text_field($_SERVER['SERVER_NAME']) : '';
+  $domain = preg_replace('/^www\./', '', $domain);
   if (!empty($options['license'])) {
     $response = aesirx_analytics_get_api('https://api.aesirx.io/index.php?webserviceClient=site&webserviceVersion=1.0.0&option=member&task=validateWPLicense&api=hal&license=' . $options['license']);
     $bodyCheckLicense = wp_remote_retrieve_body($response);
