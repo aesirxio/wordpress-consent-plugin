@@ -1413,6 +1413,9 @@ function aesirx_analytics_license_info() {
     $bodyCheckLicense = wp_remote_retrieve_body($response);
     $decodedDomains = json_decode($bodyCheckLicense)->result->domain_list->decoded ?? [];
     $domainList = array_column($decodedDomains, 'domain');
+    $domainList = array_map(function ($d) {
+        return preg_replace('/^www\./', '', $d);
+    }, $domainList);
 
     if ($response['response']['code'] === 200 ) {
       if(!json_decode($bodyCheckLicense)->result->success || json_decode($bodyCheckLicense)->result->subscription_product !== "product-aesirx-cmp") {
