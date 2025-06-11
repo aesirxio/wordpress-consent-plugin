@@ -541,10 +541,6 @@ msgstr "Gtag ID"
 msgid "GTM ID"
 msgstr "GTM ID"
 
-#: includes/settings.php:391
-msgid "AesirX Consent Shield for Third-Party Plugins"
-msgstr "AesirX Razılığı Üçüncü Tərəf Pluqinləri üçün Xərci"
-
 #: includes/settings.php:396
 msgid "Blocks selected third-party plugins from loading until user consent is given."
 msgstr "İstifadəçi razılığı verilənə qədər seçilmiş üçüncü tərəf pluqinlərinin yüklənməsini bloklayır."
@@ -598,11 +594,6 @@ msgstr "Əlavə kömək lazımdır? Əhatəli Sənədlər Mərkəzimizə daxil o
 msgid "Your trial license ends in %1$s days. Please update new license <a href='%2$s' target='_blank'>%2$s</a>."
 msgstr "Sınaq lisenziyanız %1$s gün sonra bitəcək. Zəhmət olmasa yeni lisenziyanı yeniləyin <a href='%2$s' target='_blank'>%2$s</a>."
 
-#: includes/settings.php:1377
-#: includes/settings.php:1594
-msgid "Your license is expired or not found. Please update new license <a href='%1$s' target='_blank'>%1$s</a>."
-msgstr "Lisenziyanız tarixdə keçmiş və ya tapılmadı. Zəhmət olmasa yeni lisenziyanı yeniləyin <a href='%1$s' target='_blank'>%1$s</a>."
-
 #: includes/settings.php:1704
 msgid "Your free trials has ended. Please update your license. <a href='%1$s' target='_blank'>%1$s</a>."
 msgstr "Sınaq müddətiniz başa çatdı. Zəhmət olmasa lisenziyanızı yeniləyin. <a href='%1$s' target='_blank'>%1$s</a>."
@@ -630,7 +621,9 @@ msgid "SSO Client ID"
 msgstr "SSO Müştəri ID"
 
 #: includes/settings.php:131
-msgid "<div class='input_information_content'>\n          Provided SSO CLIENT ID from <a href='%1$s' target='_blank'>%1$s</a>.</div>"
+msgid ""
+"<div class='input_information_content'>\n"
+"          Provided SSO CLIENT ID from <a href='%1$s' target='_blank'>%1$s</a>.</div>"
 msgstr "<div class='input_information_content'>Təqdim edilən SSO MÜŞTƏRİ ID <a href='%1$s' target='_blank'>%1$s</a>.</div>"
 
 #: includes/settings.php:146
@@ -642,7 +635,9 @@ msgid "SSO Client Secret"
 msgstr "SSO Müştəri Gizliliyi"
 
 #: includes/settings.php:157
-msgid "<div class='input_information_content'>\n          Provided SSO Client Secret from <a href='%1$s' target='_blank'>%1$s</a>.</div>"
+msgid ""
+"<div class='input_information_content'>\n"
+"          Provided SSO Client Secret from <a href='%1$s' target='_blank'>%1$s</a>.</div>"
 msgstr "<div class='input_information_content'>Təqdim edilən SSO Müştəri Gizliliyi <a href='%1$s' target='_blank'>%1$s</a>.</div>"
 
 #: includes/settings.php:173
@@ -706,7 +701,9 @@ msgid "Learn how to use AesirX Privacy Scanner with Consent Shield to detect pr
 msgstr "Privacy Skannerilə məxfilik-intrusiv elementlərini aşkar etmək üçün JetPack plugini nümunə olaraq istifadə edərək, AesirX Privacy Scanner ilə necə istifadə edəcəyinizi öyrənin."
 
 #: includes/settings.php:184
-msgid "<div class='input_information_content'>\n          Sign up to obtain your Shield of Privacy ID and purchase licenses <a href='https://aesirx.io/licenses' target='blank' class='text-link'>here</a>.</div>"
+msgid ""
+"<div class='input_information_content'>\n"
+"          Sign up to obtain your Shield of Privacy ID and purchase licenses <a href='https://aesirx.io/licenses' target='blank' class='text-link'>here</a>.</div>"
 msgstr "<div class='input_information_content'>Məxfilik Xərci ID-nizi əldə etmək və lisenziya almaq üçün qeyd olun <a href='https://aesirx.io/licenses' target='blank' class='text-link'>burada</a>.</div>"
 
 #: includes/settings.php:289
@@ -715,7 +712,9 @@ msgstr "Konfiqurasiya etmək üçün Google Tag Manager Gtag ID və GTM ID-nizi 
 
 #: includes/settings.php:246
 #: includes/settings.php:271
-msgid "<div class='input_information_content'>\n          Remember to include the explicit purpose (e.g., analytics, marketing) in the consent text to inform users why GTM is being used.</div>"
+msgid ""
+"<div class='input_information_content'>\n"
+"          Remember to include the explicit purpose (e.g., analytics, marketing) in the consent text to inform users why GTM is being used.</div>"
 msgstr "<div class='input_information_content'>GTM-in niyə istifadə edildiyini izah etmək üçün razılıq mətninə açıq məqsədi daxil etməyi unutmayın (məsələn, analitika, marketinq).</div>"
 
 #: includes/settings.php:997
@@ -738,18 +737,6 @@ msgstr "Vacibdir: Permalink Ayarları Tələb Olunur"
 msgid "Your trial license ends in %1$s hour(s). Please update your license <a href='%2$s' target='_blank'>here</a>."
 msgstr "Sınaq lisenziyanız %1$s saatdan sonra bitir. Zəhmət olmasa lisenziyanızı <a href='%2$s' target='_blank'>burada</a> yeniləyin."
 
-#. translators: 1: Permalink structure example, 2: Link to Permalink Settings page
-#: aesirx-consent.php:360
-msgid ""
-"Our plugin requires that your site use a pretty permalink structure (for example, %1$s) to work correctly.\n"
-"It looks like your current settings are using the plain permalink format, which might cause issues.\n"
-"Please %2$s to open your Permalink Settings.\n"
-"Once there, select the \"Post name\" option (or another pretty permalink structure) and click \"Save Changes.\""
-msgstr "Pluqinimiz, saytınızın düzgün işləmək üçün gözəl bir permalink quruluşundan (məsələn, %1$s) istifadə etməsini tələb edir.\n"
-"Hal-hazırkı ayarlarınızın sadə permalink formatını istifadə etdiyini görürük, bu, problemlər yarada bilər.\n"
-"%2$s Permalink Ayarlarınızı açmaq üçün edin.\n"
-"Orada, \"Post name\" (və ya başqa gözəl permalink quruluşu) seçin və \"Dəyişiklikləri yadda saxlayın\" düyməsini basın."
-
 #: aesirx-consent.php:367
 msgid "click here"
 msgstr "buraya tıklayın"
@@ -769,10 +756,6 @@ msgstr "Lisenziyanın yoxlanışı uğursuz oldu: %1$s. İdarəçi ilə əlaqə 
 #: src/Mysql/StartFingerprint.php:55
 msgid "Check license failed: %1\\$s. Please contact the administrator."
 msgstr "Lisenziyanın yoxlanması uğursuz oldu: %1\\$s. İdarəçi ilə əlaqə saxlayın."
-
-#: includes/settings.php:1601
-msgid "Your domain does not match with your license. Please update domain in your license <a href='%1$s' target='_blank'>%1$s</a> and click <span class='verify_domain'>here</span> to verify again."
-msgstr "İstifadə etdiyiniz domen lisenziyanızla uyğun gəlmir. Lisenziyanızdakı domeni yeniləyin <a href='%1$s' target='_blank'>%1$s</a> və təkrar yoxlamaq üçün <span class='verify_domain'>buraya tıklayın.</span> "
 
 #: src/Mysql/StartFingerprint.php:43
 #: src/Mysql/StartFingerprint.php:62
@@ -823,10 +806,6 @@ msgstr "Faylın əlçatan olduğuna əmin olun ziyarət edərək: <a href='"
 msgid "Reset Detail"
 msgstr "Ətraflı Məlumatı Sıfırla"
 
-#: includes/settings.php:365
-msgid "Customize Reject Text"
-msgstr "Rədd Mətnini Fərdiləşdirin"
-
 #: includes/settings.php:378
 msgid "Reset Reject"
 msgstr "Rədd etməni Sıfırla"
@@ -862,10 +841,6 @@ msgstr "Veb saytın işləməsi üçün tələb olunur (məsələn, sessiya kuki
 #: aesirx-consent.php:109
 msgid "Functional Tracking"
 msgstr "Funksional İzləmə"
-
-#: aesirx-consent.php:110
-msgid "User preferences & site enhancements (e.g, language setting, live chat)."
-msgstr "İstifadəçi seçimləri və sayt təkmilləşdirmələri (məsələn, dil ayarı, canlı söhbət)."
 
 #: aesirx-consent.php:111
 msgid "Analytics Tracking"
@@ -1009,14 +984,6 @@ msgstr "<strong>VƏ YA Məntiqi (Daha Elastik):</strong> İstənilən dil və ya
 msgid "Manage License Here"
 msgstr "Lisenziyanı Burada İdarə Edin"
 
-#: includes/settings.php:315
-msgid "Customize Consent Management Text"
-msgstr "Razılıq İdarəetmə Mətnini Fərdiləşdirin"
-
-#: includes/settings.php:340
-msgid "Customize Details Text"
-msgstr "Ətraflı Mətnini Fərdiləşdirin"
-
 #: includes/settings.php:1287
 #: includes/settings.php:1301
 #: includes/settings.php:1316
@@ -1058,23 +1025,23 @@ msgid "You are using a lifetime license."
 msgstr "Siz ömürlük lisenziya istifadə edirsiniz."
 
 #: includes/settings.php:1621
-#: includes=settings.php:1684
+#: includes/settings.php:1684
 msgid "year"
 msgid_plural "years"
 msgstr[0] "il"
 msgstr[1] "illər"
 msgstr[2] "illər"
 
-#: includes=settings.php:1624
-#: includes=settings.php:1687
+#: includes/settings.php:1624
+#: includes/settings.php:1687
 msgid "month"
 msgid_plural "months"
 msgstr[0] "ay"
 msgstr[1] "aylar"
 msgstr[2] "aylar"
 
-#: includes=settings.php:1627
-#: includes=settings.php:1690
+#: includes/settings.php:1627
+#: includes/settings.php:1690
 msgid "day"
 msgid_plural "days"
 msgstr[0] "gün"
@@ -1088,3 +1055,41 @@ msgstr "Lisenziyanız %1$s içində sona çatır. Zəhmət olmasa lisenziyanız�
 #: includes/settings.php:1695
 msgid "Your trial license ends in %1$s. Please update your license <a href='%2$s' target='_blank'>%2$s</a>."
 msgstr "Sınaq lisenziyanız %1$s içində sona çatır. Zəhmət olmasa lisenziyanızı yeniləyin <a href='%2$s' target='_blank'>%2$s</a>."
+
+#: aesirx-consent.php:110
+msgid "User preferencese & site enhancements (e.g, language setting, live chat)."
+msgstr ""
+
+#. translators: 1: Permalink structure example, 2: Link to Permalink Settings page
+#: aesirx-consent.php:360
+msgid ""
+"Our plugin requires that your site use a pretty permalink structure (for example, %1$s) to work correctly.\n"
+"                            It looks like your current settings are using the plain permalink format, which might cause issues.\n"
+"                            Please %2$s to open your Permalink Settings.\n"
+"                            Once there, select the \"Post name\" option (or another pretty permalink structure) and click \"Save Changes.\""
+msgstr ""
+
+#: includes/settings.php:315
+msgid "Customize Consent Management Text "
+msgstr ""
+
+#: includes/settings.php:340
+msgid "Customize Details Text "
+msgstr ""
+
+#: includes/settings.php:365
+msgid "Customize Reject Text "
+msgstr ""
+
+#: includes/settings.php:391
+msgid "AesirX Consent Shield for Third-Party Plugins "
+msgstr ""
+
+#: includes/settings.php:1377
+#: includes/settings.php:1594
+msgid "Your license is expried or not found. Please update new license <a href='%1$s' target='_blank'>%1$s</a>."
+msgstr ""
+
+#: includes/settings.php:1601
+msgid "Your domain is not match with your license. Please update domain in your license <a href='%1$s' target='_blank'>%1$s</a> and click <span class='verify_domain'>here</span> to verify again."
+msgstr ""

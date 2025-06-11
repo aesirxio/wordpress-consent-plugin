@@ -541,10 +541,6 @@ msgstr "Gtag ID"
 msgid "GTM ID"
 msgstr "GTM ID"
 
-#: includes/settings.php:391
-msgid "AesirX Consent Shield for Third-Party Plugins"
-msgstr "AesirX Sutikimo skydas trečiųjų šalių papildiniams"
-
 #: includes/settings.php:396
 msgid "Blocks selected third-party plugins from loading until user consent is given."
 msgstr "Blokuoja pasirinktus trečiųjų šalių papildinius, kol nėra pateiktas naudotojo sutikimas."
@@ -598,11 +594,6 @@ msgstr "Reikia pagalbos? Pasiekite mūsų išsamų dokumentacijos centrą"
 msgid "Your trial license ends in %1$s days. Please update new license <a href='%2$s' target='_blank'>%2$s</a>."
 msgstr "Jūsų bandomasis licencijos laikas baigsis po %1$s dienų. Prašome atnaujinti naują licenciją <a href='%2$s' target='_blank'>%2$s</a>."
 
-#: includes/settings.php:1377
-#: includes/settings.php:1594
-msgid "Your license is expired or not found. Please update new license <a href='%1$s' target='_blank'>%1$s</a>."
-msgstr "Jūsų licencija yra pasibaigusi arba nerasta. Prašome atnaujinti naują licenciją <a href='%1$s' target='_blank'>%1$s</a>."
-
 #: includes/settings.php:1704
 msgid "Your free trials has ended. Please update your license. <a href='%1$s' target='_blank'>%1$s</a>."
 msgstr "Jūsų nemokamas bandomasis laikotarpis pasibaigė. Prašome atnaujinti savo licenciją. <a href='%1$s' target='_blank'>%1$s</a>."
@@ -630,7 +621,9 @@ msgid "SSO Client ID"
 msgstr "SSO kliento ID"
 
 #: includes/settings.php:131
-msgid "<div class='input_information_content'>\n          Provided SSO CLIENT ID from <a href='%1$s' target='_blank'>%1$s</a>.</div>"
+msgid ""
+"<div class='input_information_content'>\n"
+"          Provided SSO CLIENT ID from <a href='%1$s' target='_blank'>%1$s</a>.</div>"
 msgstr "<div class='input_information_content'>Nurodytas SSO klientų ID iš <a href='%1$s' target='_blank'>%1$s</a>.</div>"
 
 #: includes/settings.php:146
@@ -642,7 +635,9 @@ msgid "SSO Client Secret"
 msgstr "SSO kliento slaptažodis"
 
 #: includes/settings.php:157
-msgid "<div class='input_information_content'>\n          Provided SSO Client Secret from <a href='%1$s' target='_blank'>%1$s</a>.</div>"
+msgid ""
+"<div class='input_information_content'>\n"
+"          Provided SSO Client Secret from <a href='%1$s' target='_blank'>%1$s</a>.</div>"
 msgstr "<div class='input_information_content'>Pateiktas SSO kliento slaptažodis iš <a href='%1$s' target='_blank'>%1$s</a>.</div>"
 
 #: includes/settings.php:173
@@ -706,7 +701,9 @@ msgid "Learn how to use AesirX Privacy Scanner with Consent Shield to detect pr
 msgstr "Sužinokite, kaip naudoti AesirX privatumo skenerį su sutikimo skydu, kad aptiktumėte privatumą trikdančius elementus, naudojant JetPack papildinį kaip pavyzdį."
 
 #: includes/settings.php:184
-msgid "<div class='input_information_content'>\n          Sign up to obtain your Shield of Privacy ID and purchase licenses <a href='https://aesirx.io/licenses' target='blank' class='text-link'>here</a>.</div>"
+msgid ""
+"<div class='input_information_content'>\n"
+"          Sign up to obtain your Shield of Privacy ID and purchase licenses <a href='https://aesirx.io/licenses' target='blank' class='text-link'>here</a>.</div>"
 msgstr "<div class='input_information_content'>Užsiregistruokite, kad gautumėte savo Privatumo Skydo ID ir įsigytumėte licencijas <a href='https://aesirx.io/licenses' target='blank' class='text-link'>čia</a>.</div>"
 
 #: includes/settings.php:289
@@ -715,7 +712,9 @@ msgstr "Norėdami konfigūruoti, įveskite savo Google Tag Manager Gtag ID ir GT
 
 #: includes/settings.php:246
 #: includes/settings.php:271
-msgid "<div class='input_information_content'>\n          Remember to include the explicit purpose (e.g., analytics, marketing) in the consent text to inform users why GTM is being used.</div>"
+msgid ""
+"<div class='input_information_content'>\n"
+"          Remember to include the explicit purpose (e.g., analytics, marketing) in the consent text to inform users why GTM is being used.</div>"
 msgstr "<div class='input_information_content'>Nepamirškite įtraukti aiškų tikslą (pvz., analitika, rinkodara) į sutikimo tekstą, kad informuotumėte naudotojus, kodėl naudojamas GTM.</div>"
 
 #: includes/settings.php:997
@@ -745,7 +744,8 @@ msgid ""
 "                            It looks like your current settings are using the plain permalink format, which might cause issues.\n"
 "                            Please %2$s to open your Permalink Settings.\n"
 "                            Once there, select the \"Post name\" option (or another pretty permalink structure) and click \"Save Changes.\""
-msgstr "Mūsų papildinys reikalauja, kad jūsų svetainėje būtų naudojama graži saito struktūra (pavyzdžiui, %1$s), kad jis veiktų teisingai.\n"
+msgstr ""
+"Mūsų papildinys reikalauja, kad jūsų svetainėje būtų naudojama graži saito struktūra (pavyzdžiui, %1$s), kad jis veiktų teisingai.\n"
 "                            Atrodo, kad jūsų dabartiniai nustatymai naudoja paprastą saito formatą, kuris gali sukelti problemų.\n"
 "                            Prašome %2$s atidaryti savo saito nustatymus.\n"
 "                            Ten pasirinkite \"Įrašų pavadinimą\" (arba kitą gražią saito struktūrą) ir spustelėkite \"Išsaugoti pakeitimus.\""
@@ -769,10 +769,6 @@ msgstr "Patikrinimo licencija nesėkminga: %1$s. Prašome susisiekti su administ
 #: src/Mysql/StartFingerprint.php:55
 msgid "Check license failed: %1\\$s. Please contact the administrator."
 msgstr "Patikrinimo licencija nesėkminga: %1\\$s. Prašome susisiekti su administratoriumi."
-
-#: includes/settings.php:1601
-msgid "Your domain does not match with your license. Please update domain in your license <a href='%1$s' target='_blank'>%1$s</a> and click <span class='verify_domain'>here</span> to verify again."
-msgstr "Jūsų domenas nesutampa su jūsų licencija. Prašome atnaujinti domeną jūsų licencijoje <a href='%1$s' target='_blank'>%1$s</a> ir spustelėkite <span class='verify_domain'>čia</span> norint iš naujo patvirtinti."
 
 #: src/Mysql/StartFingerprint.php:43
 #: src/Mysql/StartFingerprint.php:62
@@ -823,10 +819,6 @@ msgstr "Įsitikinkite, kad failas yra pasiekiamas apsilankius: <a href='"
 msgid "Reset Detail"
 msgstr "Atstatyti detalę"
 
-#: includes/settings.php:365
-msgid "Customize Reject Text"
-msgstr "Pritaikyti atmetamą tekstą"
-
 #: includes/settings.php:378
 msgid "Reset Reject"
 msgstr "Atstatyti atmetimą"
@@ -862,10 +854,6 @@ msgstr "Būtinas svetainės veikimui (pvz., sesijos slapukai, saugumo sekimas)."
 #: aesirx-consent.php:109
 msgid "Functional Tracking"
 msgstr "Funkcinis sekimas"
-
-#: aesirx-consent.php:110
-msgid "User preferences & site enhancements (e.g, language setting, live chat)."
-msgstr "Vartotojų preferences ir svetainės patobulinimai (pvz., kalbos nustatymai, gyvas pokalbis)."
 
 #: aesirx-consent.php:111
 msgid "Analytics Tracking"
@@ -1009,14 +997,6 @@ msgstr "<strong>ARBA logika (daugiau lanksti):</strong> Arba kalba, arba laiko z
 msgid "Manage License Here"
 msgstr "Tvarkyti licenciją čia"
 
-#: includes/settings.php:315
-msgid "Customize Consent Management Text"
-msgstr "Pritaikyti sutikimo valdymo tekstą"
-
-#: includes/settings.php:340
-msgid "Customize Details Text"
-msgstr "Pritaikyti detalių tekstą"
-
 #: includes/settings.php:1287
 #: includes/settings.php:1301
 #: includes/settings.php:1316
@@ -1088,3 +1068,32 @@ msgstr "Jūsų licencija pasibaigs už %1$s. Prašome atnaujinti savo licenciją
 #: includes/settings.php:1695
 msgid "Your trial license ends in %1$s. Please update your license <a href='%2$s' target='_blank'>%2$s</a>."
 msgstr "Jūsų bandomoji licencija pasibaigs už %1$s. Prašome atnaujinti savo licenciją <a href='%2$s' target='_blank'>%2$s</a>."
+
+#: aesirx-consent.php:110
+msgid "User preferencese & site enhancements (e.g, language setting, live chat)."
+msgstr ""
+
+#: includes/settings.php:315
+msgid "Customize Consent Management Text "
+msgstr ""
+
+#: includes/settings.php:340
+msgid "Customize Details Text "
+msgstr ""
+
+#: includes/settings.php:365
+msgid "Customize Reject Text "
+msgstr ""
+
+#: includes/settings.php:391
+msgid "AesirX Consent Shield for Third-Party Plugins "
+msgstr ""
+
+#: includes/settings.php:1377
+#: includes/settings.php:1594
+msgid "Your license is expried or not found. Please update new license <a href='%1$s' target='_blank'>%1$s</a>."
+msgstr ""
+
+#: includes/settings.php:1601
+msgid "Your domain is not match with your license. Please update domain in your license <a href='%1$s' target='_blank'>%1$s</a> and click <span class='verify_domain'>here</span> to verify again."
+msgstr ""

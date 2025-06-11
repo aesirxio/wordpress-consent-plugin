@@ -1090,4 +1090,3 @@ msgstr "Vaše licence končí za %1$s. Aktualizujte prosím svou licenci <a href
 #: includes/settings.php:1695
 msgid "Your trial license ends in %1$s. Please update your license <a href='%2$s' target='_blank'>%2$s</a>."
 msgstr "Vaše zkušební licence končí za %1$s. Aktualizujte prosím svou licenci <a href='%2$s' target='_blank'>%2$s</a>."
-

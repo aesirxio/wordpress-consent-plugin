@@ -541,10 +541,6 @@ msgstr "Gtag ID"
 msgid "GTM ID"
 msgstr "GTM ID"
 
-#: includes/settings.php:391
-msgid "AesirX Consent Shield for Third-Party Plugins"
-msgstr "AesirX Nõusoleku kilp kolmandate osapoolte pistikprogrammide jaoks"
-
 #: includes/settings.php:396
 msgid "Blocks selected third-party plugins from loading until user consent is given."
 msgstr "Blokeerib valitud kolmandate osapoolte pistikprogrammide laadimise, kuni on antud kasutaja nõusolek."
@@ -598,11 +594,6 @@ msgstr "Vajate abi? Juurdepääs meie põhjalikule dokumentatsiooni keskusele"
 msgid "Your trial license ends in %1$s days. Please update new license <a href='%2$s' target='_blank'>%2$s</a>."
 msgstr "Teie prooviversiooni litsents lõpeb %1$s päeva pärast. Palun uuendage litsentsi <a href='%2$s' target='_blank'>%2$s</a>."
 
-#: includes/settings.php:1377
-#: includes/settings.php:1594
-msgid "Your license is expired or not found. Please update new license <a href='%1$s' target='_blank'>%1$s</a>."
-msgstr "Teie litsents on aegunud või pole leitud. Palun uuendage litsentsi <a href='%1$s' target='_blank'>%1$s</a>."
-
 #: includes/settings.php:1704
 msgid "Your free trials has ended. Please update your license. <a href='%1$s' target='_blank'>%1$s</a>."
 msgstr "Teie tasuta prooviperiood on lõppenud. Palun uuendage oma litsentsi. <a href='%1$s' target='_blank'>%1$s</a>."
@@ -630,7 +621,9 @@ msgid "SSO Client ID"
 msgstr "SSO kliendi ID"
 
 #: includes/settings.php:131
-msgid "<div class='input_information_content'>\n          Provided SSO CLIENT ID from <a href='%1$s' target='_blank'>%1$s</a>.</div>"
+msgid ""
+"<div class='input_information_content'>\n"
+"          Provided SSO CLIENT ID from <a href='%1$s' target='_blank'>%1$s</a>.</div>"
 msgstr "<div class='input_information_content'>Pakutud SSO klientide ID <a href='%1$s' target='_blank'>%1$s</a>.</div>"
 
 #: includes/settings.php:146
@@ -642,7 +635,9 @@ msgid "SSO Client Secret"
 msgstr "SSO Kliendi Saladus"
 
 #: includes/settings.php:157
-msgid "<div class='input_information_content'>\n          Provided SSO Client Secret from <a href='%1$s' target='_blank'>%1$s</a>.</div>"
+msgid ""
+"<div class='input_information_content'>\n"
+"          Provided SSO Client Secret from <a href='%1$s' target='_blank'>%1$s</a>.</div>"
 msgstr "<div class='input_information_content'>Pakutud SSO kliendi saladus <a href='%1$s' target='_blank'>%1$s</a>.</div>"
 
 #: includes/settings.php:173
@@ -706,7 +701,9 @@ msgid "Learn how to use AesirX Privacy Scanner with Consent Shield to detect pr
 msgstr "Õppige, kuidas kasutada AesirX Privaatsuse Skannerit koos nõusoleku kilbiga, et tuvastada privaatsust rikkuvaid elemente, kasutades näitena JetPack pistikprogrammi."
 
 #: includes/settings.php:184
-msgid "<div class='input_information_content'>\n          Sign up to obtain your Shield of Privacy ID and purchase licenses <a href='https://aesirx.io/licenses' target='blank' class='text-link'>here</a>.</div>"
+msgid ""
+"<div class='input_information_content'>\n"
+"          Sign up to obtain your Shield of Privacy ID and purchase licenses <a href='https://aesirx.io/licenses' target='blank' class='text-link'>here</a>.</div>"
 msgstr "<div class='input_information_content'>Registreeruge oma Privaatsuse Kilbi ID saamiseks ja litsentside ostmiseks <a href='https://aesirx.io/licenses' target='blank' class='text-link'>siin</a>.</div>"
 
 #: includes/settings.php:289
@@ -715,7 +712,9 @@ msgstr "Konfigureerimiseks sisestage Google Tag Manageri Gtag ID ja GTM ID mää
 
 #: includes/settings.php:246
 #: includes/settings.php:271
-msgid "<div class='input_information_content'>\n          Remember to include the explicit purpose (e.g., analytics, marketing) in the consent text to inform users why GTM is being used.</div>"
+msgid ""
+"<div class='input_information_content'>\n"
+"          Remember to include the explicit purpose (e.g., analytics, marketing) in the consent text to inform users why GTM is being used.</div>"
 msgstr "<div class='input_information_content'>Pidage meeles, et lisage nõusoleku tekstis konkreetne eesmärk (nt analüütika, turundus), et teavitada kasutajaid, miks kasutatakse GTM-i.</div>"
 
 #: includes/settings.php:997
@@ -745,7 +744,8 @@ msgid ""
 "                            It looks like your current settings are using the plain permalink format, which might cause issues.\n"
 "                            Please %2$s to open your Permalink Settings.\n"
 "                            Once there, select the \"Post name\" option (or another pretty permalink structure) and click \"Save Changes.\""
-msgstr "Meie pistikprogramm nõuab, et teie sait kasutaks korrektseks toimimiseks kena püsiühenduste struktuuri (näiteks %1$s).\n"
+msgstr ""
+"Meie pistikprogramm nõuab, et teie sait kasutaks korrektseks toimimiseks kena püsiühenduste struktuuri (näiteks %1$s).\n"
 "                            Tundub, et teie praegused sätted kasutavad tavalist püsiühenduse vormingut, mis võib põhjustada probleeme.\n"
 "                            Palun %2$s avage oma püsiühenduste seaded.\n"
 "                            Seal valige suvand \"Posti nimi\" (või teine kena püsiühenduste struktuur) ja klõpsake \"Salvesta muudatused.\""
@@ -769,10 +769,6 @@ msgstr "Litsentsi kontroll ebaõnnestus: %1$s. Palun võtke ühendust administra
 #: src/Mysql/StartFingerprint.php:55
 msgid "Check license failed: %1\\$s. Please contact the administrator."
 msgstr "Litsentsi kontroll ebaõnnestus: %1\\$s. Palun võtke ühendust administraatoriga."
-
-#: includes/settings.php:1601
-msgid "Your domain does not match with your license. Please update domain in your license <a href='%1$s' target='_blank'>%1$s</a> and click <span class='verify_domain'>here</span> to verify again."
-msgstr "Teie domeen ei vasta teie litsentsile. Palun uuendage domeeni oma litsentsis <a href='%1$s' target='_blank'>%1$s</a> ja klõpsake <span class='verify_domain'>siin</span>, et kinnitada uuesti."
 
 #: src/Mysql/StartFingerprint.php:43
 #: src/Mysql/StartFingerprint.php:62
@@ -823,10 +819,6 @@ msgstr "Veenduge, et fail oleks ligipääsetav, külastades: <a href='"
 msgid "Reset Detail"
 msgstr "Lähtesta detail"
 
-#: includes/settings.php:365
-msgid "Customize Reject Text"
-msgstr "Kohandage tagasilükkamise teksti"
-
 #: includes/settings.php:378
 msgid "Reset Reject"
 msgstr "Lähtestage tagasilükkamine"
@@ -862,10 +854,6 @@ msgstr "Nõutav veebisaidi toimimiseks (nt sessiooniküpsised, turvaseire)."
 #: aesirx-consent.php:109
 msgid "Functional Tracking"
 msgstr "Funktsionaalne jälgimine"
-
-#: aesirx-consent.php:110
-msgid "User preferences & site enhancements (e.g, language setting, live chat)."
-msgstr "Kasutaja eelistused ja saiti parandavad funktsioonid (nt keelevalik, reaalajas vestlus)."
 
 #: aesirx-consent.php:111
 msgid "Analytics Tracking"
@@ -1009,14 +997,6 @@ msgstr "<strong>VÕI loogika (paindlikum):</strong> Kas keel või ajavöönd võ
 msgid "Manage License Here"
 msgstr "Hallata litsentsi siin"
 
-#: includes/settings.php:315
-msgid "Customize Consent Management Text"
-msgstr "Kohandage nõusoleku haldamise teksti"
-
-#: includes/settings.php:340
-msgid "Customize Details Text"
-msgstr "Kohandage üksikasjade teksti"
-
 #: includes/settings.php:1287
 #: includes/settings.php:1301
 #: includes/settings.php:1316
@@ -1088,3 +1068,32 @@ msgstr "Teie litsents lõpeb %1$s pärast. Palun uuendage oma litsentsi <a href=
 #: includes/settings.php:1695
 msgid "Your trial license ends in %1$s. Please update your license <a href='%2$s' target='_blank'>%2$s</a>."
 msgstr "Teie prooviversiooni litsents lõpeb %1$s pärast. Palun uuendage oma litsentsi <a href='%2$s' target='_blank'>%2$s</a>."
+
+#: aesirx-consent.php:110
+msgid "User preferencese & site enhancements (e.g, language setting, live chat)."
+msgstr ""
+
+#: includes/settings.php:315
+msgid "Customize Consent Management Text "
+msgstr ""
+
+#: includes/settings.php:340
+msgid "Customize Details Text "
+msgstr ""
+
+#: includes/settings.php:365
+msgid "Customize Reject Text "
+msgstr ""
+
+#: includes/settings.php:391
+msgid "AesirX Consent Shield for Third-Party Plugins "
+msgstr ""
+
+#: includes/settings.php:1377
+#: includes/settings.php:1594
+msgid "Your license is expried or not found. Please update new license <a href='%1$s' target='_blank'>%1$s</a>."
+msgstr ""
+
+#: includes/settings.php:1601
+msgid "Your domain is not match with your license. Please update domain in your license <a href='%1$s' target='_blank'>%1$s</a> and click <span class='verify_domain'>here</span> to verify again."
+msgstr ""

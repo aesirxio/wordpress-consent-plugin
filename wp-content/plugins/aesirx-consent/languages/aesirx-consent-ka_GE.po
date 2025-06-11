@@ -541,10 +541,6 @@ msgstr "Gtag ID"
 msgid "GTM ID"
 msgstr "GTM ID"
 
-#: includes/settings.php:391
-msgid "AesirX Consent Shield for Third-Party Plugins"
-msgstr "AesirX თანხმობის ფარი მესამე მხარეების მოდულებისთვის"
-
 #: includes/settings.php:396
 msgid "Blocks selected third-party plugins from loading until user consent is given."
 msgstr "შერჩეული მესამე მხარეების მოდულების ჩატვირთვისგან პრევენცია, სანამ მომხმარებლის თანხმობა იქნება მოცემული."
@@ -598,11 +594,6 @@ msgstr "გჭირდებათ დახმარება? წვდომ
 msgid "Your trial license ends in %1$s days. Please update new license <a href='%2$s' target='_blank'>%2$s</a>."
 msgstr "სატესტო ლიცენზიამ %1$s დღეზე დასრულდება. გთხოვთ, განაახლეთ ახალი ლიცენზია <a href='%2$s' target='_blank'>%2$s</a>."
 
-#: includes/settings.php:1377
-#: includes/settings.php:1594
-msgid "Your license is expired or not found. Please update new license <a href='%1$s' target='_blank'>%1$s</a>."
-msgstr "თქვენი ლიცენზია დასრულდა ან ვერ მოიძებნა. განაახლეთ ახალი ლიცენზია <a href='%1$s' target='_blank'>%1$s</a>."
-
 #: includes/settings.php:1704
 msgid "Your free trials has ended. Please update your license. <a href='%1$s' target='_blank'>%1$s</a>."
 msgstr "თქვენი უფასო სატესტო პერიოდი დასრულდა. განაახლეთ თქვენი ლიცენზია. <a href='%1$s' target='_blank'>%1$s</a>."
@@ -630,7 +621,9 @@ msgid "SSO Client ID"
 msgstr "SSO კლიენტური ID"
 
 #: includes/settings.php:131
-msgid "<div class='input_information_content'>\n          Provided SSO CLIENT ID from <a href='%1$s' target='_blank'>%1$s</a>.</div>"
+msgid ""
+"<div class='input_information_content'>\n"
+"          Provided SSO CLIENT ID from <a href='%1$s' target='_blank'>%1$s</a>.</div>"
 msgstr "<div class='input_information_content'>მოცემულია SSO კლიენტური ID <a href='%1$s' target='_blank'>%1$s</a>დან.</div>"
 
 #: includes/settings.php:146
@@ -642,7 +635,9 @@ msgid "SSO Client Secret"
 msgstr "SSO კლიენტური პაროლი"
 
 #: includes/settings.php:157
-msgid "<div class='input_information_content'>\n          Provided SSO Client Secret from <a href='%1$s' target='_blank'>%1$s</a>.</div>"
+msgid ""
+"<div class='input_information_content'>\n"
+"          Provided SSO Client Secret from <a href='%1$s' target='_blank'>%1$s</a>.</div>"
 msgstr "<div class='input_information_content'>მოცემულია SSO კლიენტური პაროლი <a href='%1$s' target='_blank'>%1$s</a>დან.</div>"
 
 #: includes/settings.php:173
@@ -684,7 +679,7 @@ msgstr "გამოიყენეთ კონფიდენციალო�
 
 #: includes/settings.php:1026
 msgid "Use Consent Shield to block those scripts by adding their domains or paths, ensuring quick & simple compliance."
-msgstr "გამოიყენეთ თანხმობის ფარი, რათა დაბლოკოთ ის სკრიპტები, დამატებითი დომენებისა და გზების აღრიცხვით, რაც უზრუნველყოფს სწრაფ და მარტივ შესაბამისობას."""
+msgstr "გამოიყენეთ თანხმობის ფარი, რათა დაბლოკოთ ის სკრიპტები, დამატებითი დომენებისა და გზების აღრიცხვით, რაც უზრუნველყოფს სწრაფ და მარტივ შესაბამისობას.\"\""
 
 #: includes/settings.php:1096
 #: includes/settings.php:1159
@@ -706,7 +701,9 @@ msgid "Learn how to use AesirX Privacy Scanner with Consent Shield to detect pr
 msgstr "სწავლეთ, როგორ გამოიყენოთ AesirX კონფიდენციალობის სკანერი თანხმობის ფარით , რათა დააყენოთ კონფიდენციალობის დაბრკოლებები, JetPack მოდულის მაგალითის გამოყენებით."
 
 #: includes/settings.php:184
-msgid "<div class='input_information_content'>\n          Sign up to obtain your Shield of Privacy ID and purchase licenses <a href='https://aesirx.io/licenses' target='blank' class='text-link'>here</a>.</div>"
+msgid ""
+"<div class='input_information_content'>\n"
+"          Sign up to obtain your Shield of Privacy ID and purchase licenses <a href='https://aesirx.io/licenses' target='blank' class='text-link'>here</a>.</div>"
 msgstr "<div class='input_information_content'>შეიძინეთ Shield of Privacy ID და სათამაშო ლიცენზიები <a href='https://aesirx.io/licenses' target='blank' class='text-link'>აქ</a>.</div>"
 
 #: includes/settings.php:289
@@ -715,7 +712,9 @@ msgstr "კონფიგურაცის დასადგენად ჩ�
 
 #: includes/settings.php:246
 #: includes/settings.php:271
-msgid "<div class='input_information_content'>\n          Remember to include the explicit purpose (e.g., analytics, marketing) in the consent text to inform users why GTM is being used.</div>"
+msgid ""
+"<div class='input_information_content'>\n"
+"          Remember to include the explicit purpose (e.g., analytics, marketing) in the consent text to inform users why GTM is being used.</div>"
 msgstr "<div class='input_information_content'>გახსოვდეთ ჩააგდოთ აშკარად ცხადად შემცველი ტექსტში (მაგ. ანალიტიკისათვის, მარკეტინგისათვის), რათა მომხმარებლები ინფორმატი იქნან, რატომ გამოიყენება GTM.</div>"
 
 #: includes/settings.php:997
@@ -738,18 +737,6 @@ msgstr "მთავარია: საჭიროა Permalink პარა�
 msgid "Your trial license ends in %1$s hour(s). Please update your license <a href='%2$s' target='_blank'>here</a>."
 msgstr "თქვენი განფენური ლიცენზია დასრულდება %1$s საათში. გთხოვთ, განაახლეთ თქვენი ლიცენზია <a href='%2$s' target='_blank'>აქ</a>."
 
-#. translators: 1: Permalink structure example, 2: Link to Permalink Settings page
-#: aesirx-consent.php:360
-msgid ""
-"Our plugin requires that your site use a pretty permalink structure (for example, %1$s) to work correctly.\n"
-"It looks like your current settings are using the plain permalink format, which might cause issues.\n"
-"Please %2$s to open your Permalink Settings.\n"
-"Once there, select the \"Post name\" option (or another pretty permalink structure) and click \"Save Changes.\""
-msgstr "ჩვენი მოდული თქვენი ვებსაიტის აუცილებელია ნორმალურად მუშაობისთვის სასარგებლო permalink სტრუქტურის სანაცვლოდ (მაგალითად, %1$s).\n"
-"გამოიძახა, როგორც ჩანს, ნაციონალურ პარამეტრების ფორმატში გამოიყენეთ, რასაც შეისუსტი მიუტანები\n"
-"გთხოვთ, %2$s თქვენი Permalink პარამეტრების გასახსნელად.\n"
-"სექციაან სათვალთმყოლი პოზიციის ფორმატი გადაკვეთეთ (ან სხვა მშვენიერი permalink სტრუქტურა) და დააჭირეთ \"ცვლილებების შენახვა.\""
-
 #: aesirx-consent.php:367
 msgid "click here"
 msgstr "დააჭირეთ აქ"
@@ -769,10 +756,6 @@ msgstr "ლიცენზიის განაჩინოსში პრო�
 #: src/Mysql/StartFingerprint.php:55
 msgid "Check license failed: %1\\$s. Please contact the administrator."
 msgstr "ლიცენზიის შემოწმება გაიშალა: %1\\$s. გთხოვთ, დაუკავშირდით ადმინისტრატორს."
-
-#: includes/settings.php:1601
-msgid "Your domain does not match with your license. Please update domain in your license <a href='%1$s' target='_blank'>%1$s</a> and click <span class='verify_domain'>here</span> to verify again."
-msgstr "თქვენი დომენი არ შეესაბამება თქვენს ლიცენზიათა. გთხოვთ, განაახლეთ დომენი თქვენს ლიცენზიაში <a href='%1$s' target='_blank'>%1$s</a>. გააკეთეთ <span class='verify_domain'>აქ</span> ხელახალი ატიგა."
 
 #: src/Mysql/StartFingerprint.php:43
 #: src/Mysql/StartFingerprint.php:62
@@ -799,9 +782,6 @@ msgstr "GPC დახმარების უმეტრი რეჟიმი
 msgid "To comply with Global Privacy Control (GPC), please download and upload the following file:"
 msgstr "გლობალური კონფიდენციალობის კონტროლის (GPC) შესასრულებლად გთხოვთ, ჩამოტვირთეთ და დაუყავით შემდეგი ფაილი:"
 
-#: includes/settings.php:697
-msgid "Upload Instructions:"
-msgstr "განვლილების ინსტრუქცია:"
 #: includes/settings.php:699
 msgid "Download the gpc.json file."
 msgstr "ჩამოტვირთეთ gpc.json ფაილი."
@@ -821,10 +801,6 @@ msgstr "მიაწვდეთ, იმ ხელმისაწვდომი
 #: includes/settings.php:353
 msgid "Reset Detail"
 msgstr "ხანგრძლივობის შემოვლის დრო"
-
-#: includes/settings.php:365
-msgid "Customize Reject Text"
-msgstr "უარყოფის ტექსტის მორთვა"
 
 #: includes/settings.php:378
 msgid "Reset Reject"
@@ -861,10 +837,6 @@ msgstr "საჭიროა ვებსაიტისთვის ფუნ�
 #: aesirx-consent.php:109
 msgid "Functional Tracking"
 msgstr "ფუნქციონალური თვალყურის ბეგერი"
-
-#: aesirx-consent.php:110
-msgid "User preferences & site enhancements (e.g, language setting, live chat)."
-msgstr "მომხმარებელთა პარამარბელები & საიტის გაუმჯობესებები (მაგი. ენის დაყენება, ჩათა რეალ-ტაიმში)."
 
 #: aesirx-consent.php:111
 msgid "Analytics Tracking"
@@ -924,7 +896,7 @@ msgstr "Opt-Out რეჟიმი (კალიფორნია)"
 
 #: includes/settings.php:599
 msgid "Tracking is allowed by default, but users must be able to opt out easily. This aligns with <strong>CCPA</strong> and similar U.S. privacy frameworks."
-msgstr "თვალყურის დევნა ნაგულისხმევად ნებადართულია, მაგრამ მომხმარებელმა ჯარიმიშ რომ, გამოდით წარსულაფრის გაოფრთხილებ." 
+msgstr "თვალყურის დევნა ნაგულისხმევად ნებადართულია, მაგრამ მომხმარებელმა ჯარიმიშ რომ, გამოდით წარსულაფრის გაოფრთხილებ."
 
 #: includes/settings.php:630
 msgid "Do not sell or share options"
@@ -953,26 +925,26 @@ msgid "Browser Language"
 msgstr "ბროუზერის ენა"
 
 #: includes/settings.php:872
-#: includes=settings.php:896
-#: includes=settings.php:913
+#: includes/settings.php:896
+#: includes/settings.php:913
 msgid "Time Zone"
 msgstr "დროის ზონა"
 
-#: includes=settings.php:886
+#: includes/settings.php:886
 msgid "Consent Mode"
 msgstr "თანხმობის რეჟიმი"
 
-#: includes=settings.php:887
+#: includes/settings.php:887
 msgid "Allow Override"
 msgstr "გაუმარჯოს შეჯილდოება"
 
-#: includes=settings.php:895
-#: includes=settings.php:912
+#: includes/settings.php:895
+#: includes/settings.php:912
 msgid "Language"
 msgstr "ენა"
 
-#: includes=settings.php:898
-#: includes=settings.php:915
+#: includes/settings.php:898
+#: includes/settings.php:915
 msgid "Select Mode"
 msgstr "აირჩიეთ რეჟიმი"
 
@@ -984,7 +956,7 @@ msgstr "შეჯილდოება"
 msgid "Default Consent Mode"
 msgstr "ნაგულისხმები თანხმობის რეჟიმი"
 
-#: includes=settings.php:212
+#: includes/settings.php:212
 msgid "Default Consent Mode improves Google Consent Mode 2.0 by not loading any tags until after consent is given, reducing compliance risks."
 msgstr "ნაგულისხმები თანხმობის რეჟიმი აუმჯობესებს Google Consent Mode 2.0-ს თიკეტების ჩატვირთვის გარეშე, ვიდრე უეცრება მოხდება ხელი დაწერა ოფიციალურ სიტყვის სტანდარტებში, რაც ამცირებს სანისიერი უკუიშენქების სენა დედის შემოდგომა."
 
@@ -994,33 +966,25 @@ msgstr "დეცენტრალიზირებული თანხმ�
 
 #: includes/settings.php:878
 msgid "Choose how browser language and time zone are combined to determine consent rules:"
-msgstr "გადააზღვრაცემი მანასწარ როგორ გაღვრატობს ბროუზერის ენა და დროის ზონა, ხელი ახებიცერატ მოხადა სღაფრად მცნება:" 
+msgstr "გადააზღვრაცემი მანასწარ როგორ გაღვრატობს ბროუზერის ენა და დროის ზონა, ხელი ახებიცერატ მოხადა სღაფრად მცნება:"
 
 #: includes/settings.php:880
 msgid "<strong>AND Logic (Stricter Match):</strong> Both language and time zone must match a region for its consent model to apply. Ideal for high-accuracy targeting."
-msgstr "<strong>Մի რატოგიკა („მელია გაღვებადირად სიძინგიც-ძიხდათ“):</strong> აშიგუს ბროუზერის ენას და შემილკებულ მსახოთა მოთხოვნად, და რია შეჯიბრის გა დოზგებ გამაბარუკ, დამაბლუბ ზრდანა სამობუნდითად, გაანი ლოვი." 
+msgstr "<strong>Մի რატოგიკა („მელია გაღვებადირად სიძინგიც-ძიხდათ“):</strong> აშიგუს ბროუზერის ენას და შემილკებულ მსახოთა მოთხოვნად, და რია შეჯიბრის გა დოზგებ გამაბარუკ, დამაბლუბ ზრდანა სამობუნდითად, გაანი ლოვი."
 
-#: includes=settings.php:881
+#: includes/settings.php:881
 msgid "<strong>OR Logic (More Flexible):</strong> Either language or time zone can match to apply a region’s consent model. Best for broader coverage based on user preferences."
-msgstr "<strong>OR Rაბლიკიტი, გაცარი ქმარდება:</strong> ბროუზერის ენას და გამაჩნიანი მუშიდა, რაიში დაფუძნებული ჩ კლუბოთი მოიმება, გაიშენე ფუნეტ „როგორ მოთხოვნით„ართველი გადავურას„ დასრულენ გაგიცხენს-საქართველოდ ასასრულებული." 
- 
+msgstr "<strong>OR Rაბლიკიტი, გაცარი ქმარდება:</strong> ბროუზერის ენას და გამაჩნიანი მუშიდა, რაიში დაფუძნებული ჩ კლუბოთი მოიმება, გაიშენე ფუნეტ „როგორ მოთხოვნით„ართველი გადავურას„ დასრულენ გაგიცხენს-საქართველოდ ასასრულებული."
+
 #: includes/settings.php:992
 msgid "Manage License Here"
 msgstr "ლიცენზიის მართვა აქ"
 
-#: includes/settings.php:315
-msgid "Customize Consent Management Text"
-msgstr "თანხმობის მართვის მორგება ტექსტი"
-
-#: includes=settings.php:340
-msgid "Customize Details Text"
-msgstr "დეტალების მორგება ტექსტში"
-
-#: includes=settings.php:1287
-#: includes=settings.php:1301
-#: includes=settings.php:1316
-#: includes=settings.php:1331
-#: includes=settings.php:1355
+#: includes/settings.php:1287
+#: includes/settings.php:1301
+#: includes/settings.php:1316
+#: includes/settings.php:1331
+#: includes/settings.php:1355
 msgid "Generate"
 msgstr "წარმოქმნა"
 
@@ -1028,10 +992,10 @@ msgstr "წარმოქმნა"
 msgid "Cookie Declaration"
 msgstr "ქუქის დეკლარაცია"
 
-#: includes=settings.php:1291
+#: includes/settings.php:1291
 #: includes/settings.php:1306
 #: includes/settings.php:1321
-#: includes=settings.php:1340
+#: includes/settings.php:1340
 msgid "⚠️ This is a draft generated based on your site’s scan results. Please review and edit to ensure it reflects your actual data practices before publishing."
 msgstr "⚠️ ეს ჩემი სარკანეთელი ვორხი ბიბთ იღორღხმდება სასიგრებული შედეგებიდან. გთხოვ, წარადგეთ ასევე, დათესხადოგის განსაწვალში შესრულება კუმბათ შეიძლებოდათ, თქვენი თავს ვიცითა."
 
@@ -1051,21 +1015,21 @@ msgstr "დომენ კატეგორიზაცია"
 msgid "Auto-Populated Blocking List"
 msgstr "ავტო-თავხმა უშვევს მდგრს პროცესზე მომხვდება"
 
-#: includes=settings.php:1615
-#: includes=settings.php:1678
+#: includes/settings.php:1615
+#: includes/settings.php:1678
 msgid "You are using a lifetime license."
 msgstr "თქვენ ცხოვრება ლიცენზიათ ხედროს დასრახბა."
 
-#: includes=settings.php:1621
-#: includes=settings.php:1684
+#: includes/settings.php:1621
+#: includes/settings.php:1684
 msgid "year"
 msgid_plural "years"
 msgstr[0] "წელიწადი"
 msgstr[1] "წლები"
 msgstr[2] "წლები"
 
-#: includes=settings.php:1624
-#: includes=settings.php:1687
+#: includes/settings.php:1624
+#: includes/settings.php:1687
 msgid "month"
 msgid_plural "months"
 msgstr[0] "თვე"
@@ -1087,3 +1051,45 @@ msgstr "თქვენი ლიცენზია დასრულდებ�
 #: includes/settings.php:1695
 msgid "Your trial license ends in %1$s. Please update your license <a href='%2$s' target='_blank'>%2$s</a>."
 msgstr "თქვენი საცდელი ლიცენზიან ერთად დასრულება მოხდება %1$s-ში. განაახლეთ თქვენი მომწემა <a href='%2$s' target='_blank'>%2$s</a>."
+
+#: aesirx-consent.php:110
+msgid "User preferencese & site enhancements (e.g, language setting, live chat)."
+msgstr ""
+
+#. translators: 1: Permalink structure example, 2: Link to Permalink Settings page
+#: aesirx-consent.php:360
+msgid ""
+"Our plugin requires that your site use a pretty permalink structure (for example, %1$s) to work correctly.\n"
+"                            It looks like your current settings are using the plain permalink format, which might cause issues.\n"
+"                            Please %2$s to open your Permalink Settings.\n"
+"                            Once there, select the \"Post name\" option (or another pretty permalink structure) and click \"Save Changes.\""
+msgstr ""
+
+#: includes/settings.php:315
+msgid "Customize Consent Management Text "
+msgstr ""
+
+#: includes/settings.php:340
+msgid "Customize Details Text "
+msgstr ""
+
+#: includes/settings.php:365
+msgid "Customize Reject Text "
+msgstr ""
+
+#: includes/settings.php:391
+msgid "AesirX Consent Shield for Third-Party Plugins "
+msgstr ""
+
+#: includes/settings.php:697
+msgid "Upload Instructions:"
+msgstr ""
+
+#: includes/settings.php:1377
+#: includes/settings.php:1594
+msgid "Your license is expried or not found. Please update new license <a href='%1$s' target='_blank'>%1$s</a>."
+msgstr ""
+
+#: includes/settings.php:1601
+msgid "Your domain is not match with your license. Please update domain in your license <a href='%1$s' target='_blank'>%1$s</a> and click <span class='verify_domain'>here</span> to verify again."
+msgstr ""

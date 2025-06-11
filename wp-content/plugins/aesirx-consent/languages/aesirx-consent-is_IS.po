@@ -541,10 +541,6 @@ msgstr "Gtag kennitala"
 msgid "GTM ID"
 msgstr "GTM kennitala"
 
-#: includes/settings.php:391
-msgid "AesirX Consent Shield for Third-Party Plugins"
-msgstr "AesirX Samþykki Skjöldur fyrir viðbætur þriðja aðila"
-
 #: includes/settings.php:396
 msgid "Blocks selected third-party plugins from loading until user consent is given."
 msgstr "Blokkar valdar viðbætur þriðja aðila frá því að hlaða inn fyrr en notandi hefur veitt samþykki."
@@ -598,11 +594,6 @@ msgstr "Þarftu hjálp? Fáðu aðgang að allsherjar skjalasafni okkar"
 msgid "Your trial license ends in %1$s days. Please update new license <a href='%2$s' target='_blank'>%2$s</a>."
 msgstr "Prufuleyfið þitt rennur út á %1$s dögum. Vinsamlegast uppfærðu nýtt leyfi <a href='%2$s' target='_blank'>%2$s</a>."
 
-#: includes/settings.php:1377
-#: includes/settings.php:1594
-msgid "Your license is expired or not found. Please update new license <a href='%1$s' target='_blank'>%1$s</a>."
-msgstr "Leyfið þitt er útrunnið eða ekki fannst. Vinsamlegast uppfærðu nýtt leyfi <a href='%1$s' target='_blank'>%1$s</a>."
-
 #: includes/settings.php:1704
 msgid "Your free trials has ended. Please update your license. <a href='%1$s' target='_blank'>%1$s</a>."
 msgstr "Prufuleyfið þitt hefur endað. Vinsamlegast uppfærðu leyfið þitt. <a href='%1$s' target='_blank'>%1$s</a>."
@@ -630,7 +621,9 @@ msgid "SSO Client ID"
 msgstr "ID-númer SSO viðskiptavinar"
 
 #: includes/settings.php:131
-msgid "<div class='input_information_content'>\n          Provided SSO CLIENT ID from <a href='%1$s' target='_blank'>%1$s</a>.</div>"
+msgid ""
+"<div class='input_information_content'>\n"
+"          Provided SSO CLIENT ID from <a href='%1$s' target='_blank'>%1$s</a>.</div>"
 msgstr "<div class='input_information_content'>Veitt ID-númer SSO VIÐSKIPTAVINAR frá <a href='%1$s' target='_blank'>%1$s</a>.</div>"
 
 #: includes/settings.php:146
@@ -642,7 +635,9 @@ msgid "SSO Client Secret"
 msgstr "SSO Leynilykill Viðskiptavinar"
 
 #: includes/settings.php:157
-msgid "<div class='input_information_content'>\n          Provided SSO Client Secret from <a href='%1$s' target='_blank'>%1$s</a>.</div>"
+msgid ""
+"<div class='input_information_content'>\n"
+"          Provided SSO Client Secret from <a href='%1$s' target='_blank'>%1$s</a>.</div>"
 msgstr "<div class='input_information_content'>Veitt SSO Leynilykill Viðskiptavinar frá <a href='%1$s' target='_blank'>%1$s</a>.</div>"
 
 #: includes/settings.php:173
@@ -706,7 +701,9 @@ msgid "Learn how to use AesirX Privacy Scanner with Consent Shield to detect pr
 msgstr "Lærðu að nota AesirX Persónuverndar skannan með Samþykki Skjöld til að finna persónuverndariðanleg atriði, með JetPack viðbótinni sem dæmi."
 
 #: includes/settings.php:184
-msgid "<div class='input_information_content'>\n          Sign up to obtain your Shield of Privacy ID and purchase licenses <a href='https://aesirx.io/licenses' target='blank' class='text-link'>here</a>.</div>"
+msgid ""
+"<div class='input_information_content'>\n"
+"          Sign up to obtain your Shield of Privacy ID and purchase licenses <a href='https://aesirx.io/licenses' target='blank' class='text-link'>here</a>.</div>"
 msgstr "<div class='input_information_content'>Skráðu þig til að fá persónuverndar skjöldan ID þinn og kaup leyfi <a href='https://aesirx.io/licenses' target='blank' class='text-link'>hér</a>.</div>"
 
 #: includes/settings.php:289
@@ -715,7 +712,9 @@ msgstr "Til að stilla, sláðu inn þitt Google Tag Manager Gtag ID & GTM ID í
 
 #: includes/settings.php:246
 #: includes/settings.php:271
-msgid "<div class='input_information_content'>\n          Remember to include the explicit purpose (e.g., analytics, marketing) in the consent text to inform users why GTM is being used.</div>"
+msgid ""
+"<div class='input_information_content'>\n"
+"          Remember to include the explicit purpose (e.g., analytics, marketing) in the consent text to inform users why GTM is being used.</div>"
 msgstr "<div class='input_information_content'>Mundu að hafa skýran tilgang (td. greining, markaðssetning) í sjálfarkennslitextanum til að upplýsa notendur afhverju GTM er í gangi.</div>"
 
 #: includes/settings.php:997
@@ -745,7 +744,8 @@ msgid ""
 "                            It looks like your current settings are using the plain permalink format, which might cause issues.\n"
 "                            Please %2$s to open your Permalink Settings.\n"
 "                            Once there, select the \"Post name\" option (or another pretty permalink structure) and click \"Save Changes.\""
-msgstr "Viðbótin okkar krefst þess að notkuð sé falleg hlekkstengingarskipan (til dæmis %1$s) til að virka rétt.\n"
+msgstr ""
+"Viðbótin okkar krefst þess að notkuð sé falleg hlekkstengingarskipan (til dæmis %1$s) til að virka rétt.\n"
 "                            Það virðist sem núverandi stillingar séu að nota venjulegu hlekkstengingarformið, sem gæti valdið vandamálum.\n"
 "                            Vinsamlegast %2$s til að opna stillingar þínar fyrir hlekkstengingar.\n"
 "                            Veldu þar valmöguleika á \"Post name\" (eða annan fallegan hlekkstengingarstrúktúr) og smelltu á \"Vista breytingar.\""
@@ -769,10 +769,6 @@ msgstr "Leyfi skoðun mistókst: %1$s. Vinsamlegast hafðu samband við stjórna
 #: src/Mysql/StartFingerprint.php:55
 msgid "Check license failed: %1\\$s. Please contact the administrator."
 msgstr "Leyfi skoðun mistókst: %1\\$s. Vinsamlegast hafðu samband við stjórnanda."
-
-#: includes/settings.php:1601
-msgid "Your domain does not match with your license. Please update domain in your license <a href='%1$s' target='_blank'>%1$s</a> and click <span class='verify_domain'>here</span> to verify again."
-msgstr "Lén þitt passar ekki við leyfi þitt. Vinsamlegast uppfærðu lén í leyfi þínu <a href='%1$s' target='_blank'>%1$s</a> og smelltu á <span class='verify_domain'>hér</span> til að staðfesta aftur."
 
 #: src/Mysql/StartFingerprint.php:43
 #: src/Mysql/StartFingerprint.php:62
@@ -823,10 +819,6 @@ msgstr "Tryggðu að skráin sé aðgengileg með því að heimsækja: <a href=
 msgid "Reset Detail"
 msgstr "Endurstilla smáatriði"
 
-#: includes/settings.php:365
-msgid "Customize Reject Text"
-msgstr "Sérsmíðaðu hafna texta"
-
 #: includes/settings.php:378
 msgid "Reset Reject"
 msgstr "Endurstilla hafnanir"
@@ -862,10 +854,6 @@ msgstr "Krafist fyrir vefsíðuna til að virka (td. lotukökur, öryggisrekning
 #: aesirx-consent.php:109
 msgid "Functional Tracking"
 msgstr "Virkjanlegt rekning"
-
-#: aesirx-consent.php:110
-msgid "User preferences & site enhancements (e.g, language setting, live chat)."
-msgstr "Notenda óskir og vefsíðubætur (td. tungumálstillir, spjall í beinni)."
 
 #: aesirx-consent.php:111
 msgid "Analytics Tracking"
@@ -1009,14 +997,6 @@ msgstr "<strong>OR Rökfræði (Sveigjanlegri):</strong> Annað hvort veffræði
 msgid "Manage License Here"
 msgstr "Stjór reyi leyfi hér"
 
-#: includes/settings.php:315
-msgid "Customize Consent Management Text"
-msgstr "Sérsniðið Samþykkis Stjórnun Texti"
-
-#: includes/settings.php:340
-msgid "Customize Details Text"
-msgstr "Sérsniðið Upplýsingar Textíma"
-
 #: includes/settings.php:1287
 #: includes/settings.php:1301
 #: includes/settings.php:1316
@@ -1088,3 +1068,32 @@ msgstr "Leyfið þitt rennur út eftir %1$s. Vinsamlegast uppfærðu leyfi þitt
 #: includes/settings.php:1695
 msgid "Your trial license ends in %1$s. Please update your license <a href='%2$s' target='_blank'>%2$s</a>."
 msgstr "Prufuleyfið þitt rennur út eftir %1$s. Vinsamlegast uppfærðu leyfið þitt <a href='%2$s' target='_blank'>%2$s</a>."
+
+#: aesirx-consent.php:110
+msgid "User preferencese & site enhancements (e.g, language setting, live chat)."
+msgstr ""
+
+#: includes/settings.php:315
+msgid "Customize Consent Management Text "
+msgstr ""
+
+#: includes/settings.php:340
+msgid "Customize Details Text "
+msgstr ""
+
+#: includes/settings.php:365
+msgid "Customize Reject Text "
+msgstr ""
+
+#: includes/settings.php:391
+msgid "AesirX Consent Shield for Third-Party Plugins "
+msgstr ""
+
+#: includes/settings.php:1377
+#: includes/settings.php:1594
+msgid "Your license is expried or not found. Please update new license <a href='%1$s' target='_blank'>%1$s</a>."
+msgstr ""
+
+#: includes/settings.php:1601
+msgid "Your domain is not match with your license. Please update domain in your license <a href='%1$s' target='_blank'>%1$s</a> and click <span class='verify_domain'>here</span> to verify again."
+msgstr ""
