@@ -49,7 +49,7 @@ msgid "Invalid domain format."
 msgstr "無効なドメイン形式です。"
 
 #: aesirx-consent.php:43
-#: includes/settings.php:1250
+#: includes/settings.php:1416
 msgid "Consent"
 msgstr "同意"
 
@@ -230,380 +230,380 @@ msgid "Aesirx Consent plugin. When you join forces with AesirX, you're not just 
 msgstr "AesirX 同意プラグイン。AesirX に参加すると、パートナーになるだけでなく、プライバシーのための戦いで自由を守る戦士にもなります！アフィリエイトコミッション25％を獲得 <a href=\"https://aesirx.io/partner?utm_source=wpplugin&utm_medium=web&utm_campaign=wordpress&utm_id=aesirx&utm_term=wordpress&utm_content=analytics\">[参加するをクリック]</a>"
 
 #: aesirx-consent.php:39
-#: includes/settings.php:1246
+#: includes/settings.php:1412
 msgid "Shield of Privacy"
 msgstr "Shield of Privacy"
 
 #: aesirx-consent.php:40
-#: includes/settings.php:1247
+#: includes/settings.php:1413
 msgid "Revoke your consent for data use whenever you wish."
 msgstr "データ使用の同意をいつでも取り消すことができます。"
 
 #: aesirx-consent.php:41
-#: includes/settings.php:1248
+#: includes/settings.php:1414
 msgid "Manage Decentralized Consent"
 msgstr "分散型同意の管理"
 
 #: aesirx-consent.php:42
-#: includes/settings.php:1249
+#: includes/settings.php:1415
 msgid "Revoke Consent"
 msgstr "同意を撤回"
 
 #: aesirx-consent.php:44
-#: includes/settings.php:1251
+#: includes/settings.php:1417
 msgid "Reject"
 msgstr "拒否"
 
 #: aesirx-consent.php:45
-#: includes/settings.php:1252
+#: includes/settings.php:1418
 msgid "Please connect your Web3 wallet"
 msgstr "Web3ウォレットを接続してください"
 
 #: aesirx-consent.php:46
-#: includes/settings.php:1253
+#: includes/settings.php:1419
 msgid "Please sign the message on your wallet twice and wait for it to be saved."
 msgstr "ウォレットでメッセージに2回署名し、保存されるのを待ってください。"
 
 #: aesirx-consent.php:47
-#: includes/settings.php:1254
+#: includes/settings.php:1420
 msgid "Saving..."
 msgstr "保存中..."
 
 #: aesirx-consent.php:48
-#: includes/settings.php:1255
+#: includes/settings.php:1421
 msgid "Please connect to your wallet"
 msgstr "ウォレットに接続してください。"
 
 #: aesirx-consent.php:49
-#: includes/settings.php:1256
+#: includes/settings.php:1422
 msgid "Connecting"
 msgstr "接続中"
 
 #: aesirx-consent.php:50
-#: includes/settings.php:1257
+#: includes/settings.php:1423
 msgid "TRACKING AND DATA PRIVACY PREFERENCES"
 msgstr "トラッキングとデータプライバシーの設定"
 
 #: aesirx-consent.php:51
-#: includes/settings.php:1258
+#: includes/settings.php:1424
 msgid "About"
 msgstr "約"
 
 #: aesirx-consent.php:52
 #: aesirx-consent.php:101
-#: includes/settings.php:1259
-#: includes/settings.php:1308
+#: includes/settings.php:1425
+#: includes/settings.php:1474
 msgid "Details"
 msgstr "詳細"
 
 #: aesirx-consent.php:53
 #: aesirx-consent.php:81
-#: includes/settings.php:1260
-#: includes/settings.php:1288
+#: includes/settings.php:1426
+#: includes/settings.php:1454
 msgid "Decentralized Consent"
 msgstr "分散型同意"
 
 #: aesirx-consent.php:54
-#: includes/settings.php:1261
+#: includes/settings.php:1427
 msgid "Manage Your Consent Preferences"
 msgstr "同意の設定を管理する"
 
 #: aesirx-consent.php:55
-#: includes/settings.php:1262
+#: includes/settings.php:1428
 msgid "Choose how we use your data: \"Reject\" data collection, allow tracking [\"Consent\"], or use \"Decentralized Consent\" for more control over your personal data & rewards."
 msgstr "あなたのデータの使用方法を選択してください：データ収集を「拒否」、トラッキングを許可（「同意」）、または「分散型同意」を使用して個人データと報酬のコントロールを強化します。"
 
 #: aesirx-consent.php:56
-#: includes/settings.php:1263
+#: includes/settings.php:1429
 msgid "Choose how we use your data: \"Reject\" data collection, allow tracking [\"Consent\"]."
 msgstr "データの使用方法を選択してください：データ収集を「拒否」し、追跡を許可する[「同意」]。"
 
 #: aesirx-consent.php:57
-#: includes/settings.php:1264
+#: includes/settings.php:1430
 msgid "By consenting, you allow us to collect & use your data for:"
 msgstr "同意することで、あなたのデータを収集して使用することを許可します:"
 
 #: aesirx-consent.php:58
-#: includes/settings.php:1265
+#: includes/settings.php:1431
 msgid "Analytics & Behavioral Data: To improve our services & personalize your experience."
 msgstr "分析および行動データ：私たちのサービスを改善し、あなたの体験をパーソナライズするため。"
 
 #: aesirx-consent.php:59
-#: includes/settings.php:1266
+#: includes/settings.php:1432
 msgid "Form Data: When you contact us."
 msgstr "フォームデータ：お問い合わせの際。"
 
 #: aesirx-consent.php:60
-#: includes/settings.php:1267
+#: includes/settings.php:1433
 msgid "Please note"
 msgstr "ご注意ください"
 
 #: aesirx-consent.php:61
-#: includes/settings.php:1268
+#: includes/settings.php:1434
 msgid "We do not share your data with third parties without your explicit consent."
 msgstr "お客様の明示的な同意なしに第三者とデータを共有することはありません。"
 
 #: aesirx-consent.php:62
-#: includes/settings.php:1269
+#: includes/settings.php:1435
 msgid "You can opt-in later for specific features without giving blanket consent."
 msgstr "包括的な同意を与えることなく、特定の機能に後から参加することができます。"
 
 #: aesirx-consent.php:63
-#: includes/settings.php:1270
+#: includes/settings.php:1436
 msgid "For more details, refer to our <a class='text-success fw-semibold text-decoration-underline' href='https://aesirx.io/privacy-policy' target='_blank'>privacy policy.</a>"
 msgstr "詳細については、当社の<a class='text-success fw-semibold text-decoration-underline' href='https://aesirx.io/privacy-policy' target='_blank'>プライバシーポリシー</a>を参照してください。"
 
 #: aesirx-consent.php:64
-#: includes/settings.php:1271
+#: includes/settings.php:1437
 msgid "Benefits"
 msgstr "メリット"
 
 #: aesirx-consent.php:65
-#: includes/settings.php:1272
+#: includes/settings.php:1438
 msgid "<span class='fw-semibold text-primary'>Control your data:</span> Choose your preferred level of data collection & tracking."
 msgstr "<span class='fw-semibold text-primary'>データを制御する：</span>データ収集および追跡の好みのレベルを選択してください。"
 
 #: aesirx-consent.php:66
-#: includes/settings.php:1273
+#: includes/settings.php:1439
 msgid "<span class='fw-semibold text-primary'>Earn rewards:</span> Participate in decentralized consent for privacy & rewards."
 msgstr "<span class='fw-semibold text-primary'>報酬を獲得：</span>プライバシーと報酬のための分散型同意に参加する。"
 
 #: aesirx-consent.php:67
-#: includes/settings.php:1274
+#: includes/settings.php:1440
 msgid "<span class='fw-semibold text-primary'>Transparent data collection practices:</span> Understand how your data is collected & used."
 msgstr "<span class='fw-semibold text-primary'>透明なデータ収集の実践：</span>あなたのデータがどのように収集・使用されているかを理解する。"
 
 #: aesirx-consent.php:68
-#: includes/settings.php:1275
+#: includes/settings.php:1441
 msgid "Understanding Your Privacy Choices"
 msgstr "プライバシー選択の理解"
 
 #: aesirx-consent.php:69
-#: includes/settings.php:1276
+#: includes/settings.php:1442
 msgid "<span class='fw-semibold text-primary'>Reject:</span> No data will be collected or loaded except for anonymized page views & rejections. Some personalization features may be disabled."
 msgstr "<span class='fw-semibold text-primary'>拒否:</span> 匿名化されたページビューと拒否以外のデータは収集またはロードされません。一部のパーソナライゼーション機能が無効になる可能性があります。"
 
 #: aesirx-consent.php:70
-#: includes/settings.php:1277
+#: includes/settings.php:1443
 msgid "<span class='fw-semibold text-primary'>Consent:</span> First & third-party tracking data will be collected to enhance your experience."
 msgstr "<span class='fw-semibold text-primary'>同意:</span> あなたの体験を向上させるために、第一者および第三者の追跡データが収集されます。"
 
 #: aesirx-consent.php:71
-#: includes/settings.php:1278
+#: includes/settings.php:1444
 msgid "<span class='fw-semibold text-primary'>Decentralized Consent:</span> Choose Decentralized Wallets or Decentralized Wallet + Shield of Privacy. Both options let you manage & revoke consent on-site or through AesirX dApp, plus earn rewards from digital marketing activities."
 msgstr "<span class='fw-semibold text-primary'>分散型同意：</span>分散型ウォレット、または分散型ウォレット+プライバシーシールドを選択してください。どちらのオプションも、サイト上またはAesirX dAppを通じて同意の管理と撤回が可能で、デジタルマーケティング活動からの報酬を獲得することができます。"
 
 #: aesirx-consent.php:72
-#: includes/settings.php:1279
+#: includes/settings.php:1445
 msgid "Our Commitment in Action"
 msgstr "私たちの行動での取り組み"
 
 #: aesirx-consent.php:73
-#: includes/settings.php:1280
+#: includes/settings.php:1446
 msgid "<span class='fw-semibold text-primary'>Privacy Protection:</span> Users have full control over their data, ensuring maximum privacy."
 msgstr "<span class='fw-semibold text-primary'>プライバシー保護：</span>ユーザーは自分のデータを完全に制御でき、最大限のプライバシーが保証されます。"
 
 #: aesirx-consent.php:74
-#: includes/settings.php:1281
+#: includes/settings.php:1447
 msgid "<span class='fw-semibold text-primary'>Enables Compliance:</span> Using Shield of Privacy (SoP) ensures compliance with GDPR, CCPA, ePrivacy Directive, & other data protection regulations."
 msgstr "<span class='fw-semibold text-primary'>コンプライアンスを可能にする：</span>プライバシーシールド（SoP）の使用は、GDPR、CCPA、eプライバシー指令、およびその他のデータ保護規制に対する遵守を保証します。"
 
 #: aesirx-consent.php:75
-#: includes/settings.php:1282
+#: includes/settings.php:1448
 msgid "<span class='fw-semibold text-primary'>Proactive Protection:</span> We enhance privacy measures to safeguard your data integrity."
 msgstr "<span class='fw-semibold text-primary'>プロアクティブ保護：</span>データの完全性を守るために、プライバシー対策を強化しています。"
 
 #: aesirx-consent.php:76
-#: includes/settings.php:1283
+#: includes/settings.php:1449
 msgid "<span class='fw-semibold text-primary'>Flexible Consent:</span> You can withdraw your consent anytime on-site or via our <a class='text-success fw-semibold text-decoration-underline' href='https://dapp.shield.aesirx.io' target='_blank'>dApp</a> (Decentralized Application)."
 msgstr "<span class='fw-semibold text-primary'>柔軟な同意:</span> いつでも現地または当社の<a class='text-success fw-semibold text-decoration-underline' href='https://dapp.shield.aesirx.io' target='_blank'>dApp</a>（分散型アプリケーション）を通じて同意を撤回できます。"
 
 #: aesirx-consent.php:77
-#: includes/settings.php:1284
+#: includes/settings.php:1450
 msgid "<span class='fw-semibold text-primary'>Learn More:</span> Discover our approach to data processing in our <a class='text-success fw-semibold text-decoration-underline' href='https://aesirx.io/privacy-policy' target='_blank'>Privacy Policy</a>."
 msgstr "<span class='fw-semibold text-primary'>詳細情報:</span> 当社のデータ処理アプローチを<a class='text-success fw-semibold text-decoration-underline' href='https://aesirx.io/privacy-policy' target='_blank'>プライバシーポリシー</a>で確認してください。"
 
 #: aesirx-consent.php:78
-#: includes/settings.php:1285
+#: includes/settings.php:1451
 msgid "<span class='fw-semibold text-primary'>For Businesses:</span> Enhance trust, secure user identities, & prevent breaches."
 msgstr "<span class='fw-semibold text-primary'>ビジネス向け：</span>信頼を強化し、ユーザーの身元を保護し、侵害を防ぎます。"
 
 #: aesirx-consent.php:79
-#: includes/settings.php:1286
+#: includes/settings.php:1452
 msgid "More info at <a class='text-success fw-semibold text-decoration-underline' href='https://shield.aesirx.io' target='_blank'>https://shield.aesirx.io</a>."
 msgstr "詳細は<a class='text-success fw-semibold text-decoration-underline' href='https://shield.aesirx.io' target='_blank'>https://shield.aesirx.io</a>をご覧ください。"
 
 #: aesirx-consent.php:80
-#: includes/settings.php:1287
+#: includes/settings.php:1453
 msgid "Select your preferred decentralized consent option:"
 msgstr "お好みの分散型同意オプションを選択してください:"
 
 #: aesirx-consent.php:82
-#: includes/settings.php:1289
+#: includes/settings.php:1455
 msgid "Decentralized consent will be loaded"
 msgstr "分散型の同意が読み込まれます"
 
 #: aesirx-consent.php:83
-#: includes/settings.php:1290
+#: includes/settings.php:1456
 msgid "Both first-party & third-party tracking data will be activated."
 msgstr "第一者および第三者の追跡データが有効になります。"
 
 #: aesirx-consent.php:84
-#: includes/settings.php:1291
+#: includes/settings.php:1457
 msgid "All consented data will be collected."
 msgstr "同意されたすべてのデータが収集されます。"
 
 #: aesirx-consent.php:85
-#: includes/settings.php:1292
+#: includes/settings.php:1458
 msgid "Users can revoke consent on-site at any time."
 msgstr "ユーザーはいつでもサイト上で同意を取り消すことができます。"
 
 #: aesirx-consent.php:86
-#: includes/settings.php:1293
+#: includes/settings.php:1459
 msgid "Decentralized Consent + Shield of Privacy"
 msgstr "分散型同意 + プライバシーシールド"
 
 #: aesirx-consent.php:87
-#: includes/settings.php:1294
+#: includes/settings.php:1460
 msgid "Users can revoke consent on-site or from the AesirX dApp at any time."
 msgstr "ユーザーは、サイト上またはAesirX dAppからいつでも同意を撤回できます。"
 
 #: aesirx-consent.php:88
-#: includes/settings.php:1295
+#: includes/settings.php:1461
 msgid "Users can earn rewards from digital marketing activities."
 msgstr "ユーザーはデジタルマーケティング活動から報酬を得ることができます。"
 
 #: aesirx-consent.php:89
-#: includes/settings.php:1296
+#: includes/settings.php:1462
 msgid "Continue"
 msgstr "続ける"
 
 #: aesirx-consent.php:90
-#: includes/settings.php:1297
+#: includes/settings.php:1463
 msgid "Back"
 msgstr "戻る"
 
 #: aesirx-consent.php:91
-#: includes/settings.php:1298
+#: includes/settings.php:1464
 msgid "You've chosen to reject data collection:"
 msgstr "データ収集を拒否することを選択しました:"
 
 #: aesirx-consent.php:92
-#: includes/settings.php:1299
+#: includes/settings.php:1465
 msgid "Only anonymized page views & limited features will be available. To access all website features, including personalized content & enhanced functionality, please choose an option:"
 msgstr "匿名化されたページビューと限られた機能のみが利用可能です。パーソナライズされたコンテンツや拡張機能を含むすべてのウェブサイト機能にアクセスするには、オプションを選択してください。"
 
 #: aesirx-consent.php:93
-#: includes/settings.php:1300
+#: includes/settings.php:1466
 msgid "<span class='fw-semibold text-primary'>Consent:</span> Allow data collection for analytics, form data (when you contact us), & behavioral & event tracking, with the option to opt-in for specific features."
 msgstr "<span class='fw-semibold text-primary'>同意：</span>分析、フォームデータ（お問い合わせの際）、および行動とイベントの追跡のためのデータ収集を許可し、特定の機能についてはオプトインするオプションを提供します。"
 
 #: aesirx-consent.php:94
-#: includes/settings.php:1301
+#: includes/settings.php:1467
 msgid "<span class='fw-semibold text-primary'>Decentralized Consent:</span> Allow data collection for analytics, form data (when you contact us), & behavioral & event tracking, with the option to revoke consent, opt-in for specific features, & earn rewards from digital marketing activities."
 msgstr "<span class='fw-semibold text-primary'>分散型同意:</span> 分析、フォームデータ（お問い合わせ時）、行動・イベント追跡のためのデータ収集を許可し、同意の撤回、特定の機能へのオプトイン、デジタルマーケティング活動からの報酬獲得のオプションを提供します。"
 
 #: aesirx-consent.php:95
-#: includes/settings.php:1302
+#: includes/settings.php:1468
 msgid "You can revoke consent on the site or any explicit opt-in consent, such as payment processing, at any time"
 msgstr "サイト上での同意や、支払い処理などの明示的な同意をいつでも取り消すことができます"
 
 #: aesirx-consent.php:96
-#: includes/settings.php:1303
+#: includes/settings.php:1469
 msgid "Revoke Opt-In Consent"
 msgstr "オプトイン同意を取り消す"
 
 #: aesirx-consent.php:97
-#: includes/settings.php:1304
+#: includes/settings.php:1470
 msgid "Revoke Opt-In Consent for Payment Processing"
 msgstr "決済処理のオプトイン同意を取り消す"
 
 #: aesirx-consent.php:98
-#: includes/settings.php:1305
+#: includes/settings.php:1471
 msgid "Revoke Opt-In Consent for AesirX Privacy Advisor AI"
 msgstr "AesirX Privacy Advisor AIのオプトイン同意を取り消す"
 
 #: aesirx-consent.php:99
-#: includes/settings.php:1306
+#: includes/settings.php:1472
 msgid "Revoke Consent for the site"
 msgstr "サイトの同意を取り消す"
 
 #: aesirx-consent.php:100
-#: includes/settings.php:1307
+#: includes/settings.php:1473
 msgid "Consent Management"
 msgstr "同意管理"
 
-#: includes/settings.php:224
+#: includes/settings.php:236
 msgid "Gtag ID"
 msgstr "Gtag ID"
 
-#: includes/settings.php:249
+#: includes/settings.php:261
 msgid "GTM ID"
 msgstr "GTM ID"
 
-#: includes/settings.php:379
+#: includes/settings.php:391
 msgid "AesirX Consent Shield for Third-Party Plugins "
 msgstr "サードパーティ製プラグイン向けAesirX Consent Shield"
 
-#: includes/settings.php:384
+#: includes/settings.php:396
 msgid "Blocks selected third-party plugins from loading until user consent is given."
 msgstr "ユーザーの同意が得られるまで、選択されたサードパーティのプラグインの読み込みをブロックします。"
 
-#: includes/settings.php:415
+#: includes/settings.php:427
 msgid "Completely prevents the loading and execution of chosen third-party plugins before consent."
 msgstr "同意前に選択したサードパーティプラグインの読み込みと実行を完全に防ぎます。"
 
-#: includes/settings.php:421
+#: includes/settings.php:433
 msgid "No network requests are made to third-party servers, enabling maximum compliance with privacy regulations like GDPR and the ePrivacy Directive."
 msgstr "第三者のサーバーへのネットワークリクエストは行われません。これにより、GDPRおよびePrivacy指令などのプライバシー規制への最大限の準拠が可能になります。"
 
-#: includes/settings.php:435
+#: includes/settings.php:447
 msgid "AesirX Consent Shield for Domain/Path-Based Blocking"
 msgstr "ドメイン/パスベースのブロッキングのためのAesirX同意シールド"
 
-#: includes/settings.php:445
-#: includes/settings.php:463
+#: includes/settings.php:457
+#: includes/settings.php:475
 msgid "Enter domain or path"
 msgstr "ドメインまたはパスを入力してください"
 
-#: includes/settings.php:438
+#: includes/settings.php:450
 msgid "Removes scripts matching specified domains or paths from the browser until user consent is given."
 msgstr "指定されたドメインまたはパスに一致するスクリプトを、ユーザーが同意するまでブラウザから削除します。"
 
-#: includes/settings.php:486
+#: includes/settings.php:498
 msgid "Blocks or removes scripts from running in the user's browser before consent is given."
 msgstr "ユーザーの同意が得られる前に、ブラウザでスクリプトをブロックまたは削除します。"
 
-#: includes/settings.php:492
+#: includes/settings.php:504
 msgid "While it prevents scripts from executing, initial network requests may still occur, so it enhances privacy compliance under GDPR but may not fully meet the ePrivacy Directive requirements."
 msgstr "スクリプトの実行を防ぐ一方で、初期のネットワーク要求が発生する可能性があるため、GDPRの下でのプライバシー遵守を強化しますが、ePrivacy指令の要件を完全に満たすわけではありません。"
 
-#: includes/settings.php:506
+#: includes/settings.php:518
 msgid "Script Blocking Options"
 msgstr "スクリプトブロックオプション"
 
-#: includes/settings.php:521
+#: includes/settings.php:533
 msgid "Only Third-Party Hosts (default)"
 msgstr "サードパーティホストのみ（デフォルト）"
 
-#: includes/settings.php:532
+#: includes/settings.php:544
 msgid "Both First and Third-Party Hosts"
 msgstr "第一者および第三者のホスト"
 
-#: includes/settings.php:939
+#: includes/settings.php:951
 msgid "Need Help? Access Our Comprehensive Documentation Hub"
 msgstr "ヘルプが必要ですか？当社の包括的なドキュメントハブにアクセスしてください"
 
-#: includes/settings.php:1392
-#: includes/settings.php:1472
+#: includes/settings.php:1558
 msgid "Your trial license ends in %1$s days. Please update new license <a href='%2$s' target='_blank'>%2$s</a>."
 msgstr "お試しライセンスはあと %1$s 日で終了します。新しいライセンスを更新してください <a href='%2$s' target='_blank'>%2$s</a>。"
 
-#: includes/settings.php:1421
+#: includes/settings.php:1377
+#: includes/settings.php:1594
 msgid "Your license is expried or not found. Please update new license <a href='%1$s' target='_blank'>%1$s</a>."
 msgstr "ライセンスが期限切れか見つかりません。新しいライセンスを更新してください <a href='%1$s' target='_blank'>%1$s</a>。"
 
-#: includes/settings.php:1475
+#: includes/settings.php:1704
 msgid "Your free trials has ended. Please update your license. <a href='%1$s' target='_blank'>%1$s</a>."
 msgstr "無料試用期間が終了しました。ライセンスを更新してください。<a href='%1$s' target='_blank'>%1$s</a>。"
 
@@ -621,128 +621,120 @@ msgstr "ライセンスが期限切れか見つかりません。ライセンス
 msgid "Your trial is ended. Please renew your license"
 msgstr "試用期間が終了しました。ライセンスを更新してください"
 
-#: includes/settings.php:106
+#: includes/settings.php:118
 msgid "Your Client ID *"
 msgstr "クライアントID *"
 
-#: includes/settings.php:113
+#: includes/settings.php:125
 msgid "SSO Client ID"
 msgstr "SSO クライアント ID"
 
-#: includes/settings.php:119
+#: includes/settings.php:131
 msgid ""
 "<div class='input_information_content'>\n"
 "          Provided SSO CLIENT ID from <a href='%1$s' target='_blank'>%1$s</a>.</div>"
 msgstr "<div class='input_information_content'><a href='%1$s' target='_blank'>%1$s</a>から提供されたSSOクライアントID。</div>"
 
-#: includes/settings.php:134
+#: includes/settings.php:146
 msgid "Your Client Secret *"
 msgstr "クライアントシークレット *"
 
-#: includes/settings.php:139
+#: includes/settings.php:151
 msgid "SSO Client Secret"
 msgstr "SSOクライアントシークレット"
 
-#: includes/settings.php:145
+#: includes/settings.php:157
 msgid ""
 "<div class='input_information_content'>\n"
 "          Provided SSO Client Secret from <a href='%1$s' target='_blank'>%1$s</a>.</div>"
 msgstr "<div class='input_information_content'><a href='%1$s' target='_blank'>%1$s</a>から提供されたSSOクライアントシークレット。</div>"
 
-#: includes/settings.php:161
+#: includes/settings.php:173
 msgid "Your License Key"
 msgstr "ライセンスキー"
 
-#: includes/settings.php:188
+#: includes/settings.php:200
 msgid "Choose your tailored template"
 msgstr "カスタマイズされたテンプレートを選択してください"
 
-#: includes/settings.php:444
-#: includes/settings.php:462
+#: includes/settings.php:456
+#: includes/settings.php:474
 msgid "Domain"
 msgstr "ドメイン"
 
-#: includes/settings.php:512
+#: includes/settings.php:524
 msgid "Configure how JavaScript is blocked based on user consent preferences."
 msgstr "ユーザーの同意設定に基づいてJavaScriptがブロックされる方法を設定します。"
 
-#: includes/settings.php:522
+#: includes/settings.php:534
 msgid "Blocks JavaScript from third-party domains, allowing first-party scripts to run normally & keep essential site functions intact."
 msgstr "サードパーティのドメインからのJavaScriptをブロックし、ファーストパーティのスクリプトが正常に動作し、サイトの必須機能を保持します。"
 
-#: includes/settings.php:533
+#: includes/settings.php:545
 msgid "Blocks JavaScript from both first-party & third-party domains for comprehensive script control, giving you the ability to block any JavaScript from internal or external sources based on user consent."
 msgstr "第一者および第三者のドメインからのJavaScriptをブロックし、ユーザーの同意に基づいて内部または外部のソースからのJavaScriptをブロックする能力を提供することで、包括的なスクリプト制御を実現します。"
 
-#: includes/settings.php:949
+#: includes/settings.php:961
 msgid "Discover the latest features & best practices."
 msgstr "最新機能とベストプラクティスを発見。"
 
-#: includes/settings.php:1004
+#: includes/settings.php:1016
 msgid "Scan Your Site for Privacy Risks"
 msgstr "プライバシーリスクのためにサイトをスキャンする"
 
-#: includes/settings.php:1008
+#: includes/settings.php:1020
 msgid "Use the Privacy Scanner to quickly identify scripts, tags, & trackers running on your site that may compromise user privacy."
 msgstr "プライバシースキャナーを使用して、ユーザーのプライバシーを損なう可能性のあるスクリプト、タグ、およびトラッカーをサイト上で迅速に特定します。"
 
-#: includes/settings.php:1014
+#: includes/settings.php:1026
 msgid "Use Consent Shield to block those scripts by adding their domains or paths, ensuring quick & simple compliance."
 msgstr "Consent Shieldを使用して、ドメインまたはパスを追加することでこれらのスクリプトをブロックし、迅速かつ簡単なコンプライアンスを確保します。"
 
-#: includes/settings.php:1067
-#: includes/settings.php:1130
-#: includes/settings.php:1163
-#: includes/settings.php:1208
+#: includes/settings.php:1096
+#: includes/settings.php:1159
+#: includes/settings.php:1192
+#: includes/settings.php:1237
 msgid "Save settings"
 msgstr "設定を保存"
 
-#: includes/settings.php:166
+#: includes/settings.php:178
 msgid "License Key"
 msgstr "ライセンスキー"
 
-#: includes/settings.php:976
+#: includes/settings.php:988
 msgid "Haven't got Shield of Privacy ID yet?"
 msgstr "まだプライバシーシールドIDを取得していませんか？"
 
-#: includes/settings.php:1023
+#: includes/settings.php:1035
 msgid "Learn how to use AesirX Privacy Scanner with Consent Shield to detect privacy-intrusive elements, using the JetPack plugin as an example."
 msgstr "JetPackプラグインを例にして、AesirX Privacy ScannerとConsent Shieldを使用してプライバシーを侵害する要素を検出する方法を学びます。"
 
-#: includes/settings.php:1439
-msgid "Your license ends in %1$s days. Please update new license <a href='%2$s' target='_blank'>%2$s</a>."
-msgstr "ライセンスはあと%1$s日で終了します。新しいライセンスを更新してください <a href='%2$s' target='_blank'>%2$s</a>。"
-
-#: includes/settings.php:172
+#: includes/settings.php:184
 msgid ""
 "<div class='input_information_content'>\n"
 "          Sign up to obtain your Shield of Privacy ID and purchase licenses <a href='https://aesirx.io/licenses' target='blank' class='text-link'>here</a>.</div>"
 msgstr "<div class='input_information_content'>プライバシーシールドIDを取得し、ライセンスを購入するには<a href='https://aesirx.io/licenses' target='blank' class='text-link'>こちら</a>から登録してください。</div>"
 
-#: includes/settings.php:277
+#: includes/settings.php:289
 msgid "To configure, input your Google Tag Manager Gtag ID & GTM ID in the designated fields. Once set up, Google Tag Manager will only load after the user provides consent."
 msgstr "設定するには、指定されたフィールドにGoogle Tag ManagerのGtag IDとGTM IDを入力してください。設定が完了すると、ユーザーが同意を提供した後にのみGoogle Tag Managerが読み込まれます。"
 
-#: includes/settings.php:234
-#: includes/settings.php:259
+#: includes/settings.php:246
+#: includes/settings.php:271
 msgid ""
 "<div class='input_information_content'>\n"
 "          Remember to include the explicit purpose (e.g., analytics, marketing) in the consent text to inform users why GTM is being used.</div>"
 msgstr "<div class='input_information_content'>GTMを使用する理由をユーザーに通知するために、同意テキストに明確な目的（例：分析、マーケティング）を含めることを忘れないでください。</div>"
 
-#: includes/settings.php:985
+#: includes/settings.php:997
 msgid "Sign up now"
 msgstr "今すぐサインアップ"
 
-#: includes/settings.php:943
+#: includes/settings.php:955
 msgid "Explore How-To Guides, instructions, & tutorials to get the most from AesirX Consent Shield. Whether you're a developer or admin, find all you need to configure & optimize your privacy setup."
 msgstr "AesirX Consent Shieldを最大限に活用するためのハウツーガイド、説明書、チュートリアルを探索してください。開発者であろうと管理者であろうと、プライバシー設定を構成および最適化するために必要なすべてを見つけることができます。"
 
-#: includes/settings.php:303
-msgid "Customize Consent Text "
-msgstr "同意テキストをカスタマイズする "
-
-#: includes/settings.php:316
+#: includes/settings.php:328
 msgid "Reset Consent"
 msgstr "同意をリセット"
 
@@ -750,7 +742,7 @@ msgstr "同意をリセット"
 msgid "Important: Permalink Settings Required"
 msgstr "重要：パーマリンク設定が必要です"
 
-#: includes/settings.php:1465
+#: includes/settings.php:1668
 msgid "Your trial license ends in %1$s hour(s). Please update your license <a href='%2$s' target='_blank'>here</a>."
 msgstr "試用ライセンスはあと%1$s時間で終了します。ライセンスを<a href='%2$s' target='_blank'>こちら</a>で更新してください。"
 
@@ -767,15 +759,15 @@ msgstr "当プラグインは、サイトが正しい動作をするために、
 msgid "click here"
 msgstr "ここをクリック"
 
-#: includes/settings.php:274
+#: includes/settings.php:286
 msgid "GTM General"
 msgstr "GTM 一般"
 
-#: includes/settings.php:1398
+#: includes/settings.php:1564
 msgid "Something went wrong: %1$s. Please contact the administrator."
 msgstr "問題が発生しました: %1$s。管理者に連絡してください。"
 
-#: includes/settings.php:1445
+#: includes/settings.php:1644
 msgid "Check license failed: %1$s. Please contact the administrator or update your license."
 msgstr "ライセンスチェックに失敗しました：%1$s。管理者に連絡するか、ライセンスを更新してください。"
 
@@ -783,7 +775,7 @@ msgstr "ライセンスチェックに失敗しました：%1$s。管理者に�
 msgid "Check license failed: %1\\$s. Please contact the administrator."
 msgstr "ライセンスを確認できませんでした: %1\\$s. Kontakt venligst administratoren."
 
-#: includes/settings.php:1428
+#: includes/settings.php:1601
 msgid "Your domain is not match with your license. Please update domain in your license <a href='%1$s' target='_blank'>%1$s</a> and click <span class='verify_domain'>here</span> to verify again."
 msgstr "あなたのドメインはライセンスと一致しません。ライセンスのドメインを更新し、<a href='%1$s' target='_blank'>%1$s</a> をクリックして、<span class='verify_domain'>ここ</span>をもう一度確認してください。"
 
@@ -792,59 +784,55 @@ msgstr "あなたのドメインはライセンスと一致しません。ライ
 msgid "Your domain is not match with your license. Please update domain in your license"
 msgstr "ドメインがライセンスと一致しません。ライセンス内のドメインを更新してください。"
 
-#: includes/settings.php:205
+#: includes/settings.php:217
 msgid "Decentralized Consent Mode"
 msgstr "分散同意モード"
 
-#: includes/settings.php:654
+#: includes/settings.php:666
 msgid "GPC Compliance"
 msgstr "GPCコンプライアンス"
 
-#: includes/settings.php:667
+#: includes/settings.php:679
 msgid "Enable GPC Support"
 msgstr "GPCサポートを有効にする"
 
-#: includes/settings.php:675
+#: includes/settings.php:687
 msgid "Disable GPC Support"
 msgstr "GPCサポートを無効にする"
 
-#: includes/settings.php:682
+#: includes/settings.php:694
 msgid "To comply with Global Privacy Control (GPC), please download and upload the following file:"
 msgstr "グローバルプライバシーコントロール (GPC) に準拠するために、次のファイルをダウンロードしてアップロードしてください。"
 
-#: includes/settings.php:685
+#: includes/settings.php:697
 msgid "Upload Instructions:"
 msgstr "アップロード手順："
 
-#: includes/settings.php:687
+#: includes/settings.php:699
 msgid "Download the gpc.json file."
 msgstr "gpc.jsonファイルをダウンロードしてください。"
 
-#: includes/settings.php:688
+#: includes/settings.php:700
 msgid "Connect to your website via FTP or File Manager."
 msgstr "FTPまたはファイルマネージャーを通じてウェブサイトに接続します。"
 
-#: includes/settings.php:689
+#: includes/settings.php:701
 msgid "Upload the file to: <code>/public_html/.well-known/gpc.json</code>"
 msgstr "<code>/public_html/.well-known/gpc.json</code> にファイルをアップロードしてください"
 
-#: includes/settings.php:690
+#: includes/settings.php:702
 msgid "Ensure the file is accessible by visiting: <a href='"
 msgstr "ファイルがアクセス可能であることを確認するには、次のリンクを訪れてください：<a href='"
 
-#: includes/settings.php:328
-msgid "Customize Detail Text "
-msgstr "詳細テキストをカスタマイズする"
-
-#: includes/settings.php:341
+#: includes/settings.php:353
 msgid "Reset Detail"
 msgstr "詳細をリセット"
 
-#: includes/settings.php:353
+#: includes/settings.php:365
 msgid "Customize Reject Text "
 msgstr "拒否テキストをカスタマイズする"
 
-#: includes/settings.php:366
+#: includes/settings.php:378
 msgid "Reset Reject"
 msgstr "リセット拒否"
 
@@ -924,104 +912,181 @@ msgstr "個人情報の販売または共有禁止（CCPA）"
 msgid "Disables third-party data sharing for California users."
 msgstr "カリフォルニア州のユーザーに対して、サードパーティによるデータ共有を無効にします。"
 
-#: includes/settings.php:564
+#: includes/settings.php:576
 msgid "Configurable Consent Logic"
 msgstr "設定可能な同意ロジック"
 
-#: includes/settings.php:577
+#: includes/settings.php:589
 msgid "Opt-In Mode (EU)"
 msgstr "オプトインモード（EU）"
 
-#: includes/settings.php:578
+#: includes/settings.php:590
 msgid "No tracking technologies are activated until a user explicitly gives consent. This is required by <strong>GDPR</strong> and <strong>ePrivacy Directive 5(3)</strong>."
 msgstr "ユーザーが明示的に同意するまで、トラッキング技術は有効化されません。これは、<strong>GDPR</strong>および<strong>eプライバシー指令5(3)</strong>で義務付けられています。"
 
-#: includes/settings.php:586
+#: includes/settings.php:598
 msgid "Opt-Out Mode (California)"
 msgstr "オプトアウトモード（カリフォルニア州）"
 
-#: includes/settings.php:587
+#: includes/settings.php:599
 msgid "Tracking is allowed by default, but users must be able to opt out easily. This aligns with <strong>CCPA</strong> and similar U.S. privacy frameworks."
 msgstr "トラッキングはデフォルトで許可されていますが、ユーザーは簡単にオプトアウトできる必要があります。これは、<strong>CCPA</strong>などの米国のプライバシー保護の枠組みに準拠しています。"
 
-#: includes/settings.php:618
+#: includes/settings.php:630
 msgid "Do not sell or share options"
 msgstr "オプションの販売または共有を禁止します"
 
-#: includes/settings.php:631
-#: includes/settings.php:737
+#: includes/settings.php:643
+#: includes/settings.php:749
 msgid "Yes"
 msgstr "はい"
 
-#: includes/settings.php:639
-#: includes/settings.php:745
+#: includes/settings.php:651
+#: includes/settings.php:757
 msgid "No"
 msgstr "いいえ"
 
-#: includes/settings.php:724
+#: includes/settings.php:736
 msgid "Enable Geo-handling for Consent Mode"
 msgstr "同意モードで地域情報処理を有効にする"
 
-#: includes/settings.php:760
+#: includes/settings.php:772
 msgid "Geo-Based Consent Rules"
 msgstr "地域ベースの同意ルール"
 
-#: includes/settings.php:859
+#: includes/settings.php:871
 msgid "Browser Language"
 msgstr "ブラウザの言語"
 
-#: includes/settings.php:860
-#: includes/settings.php:884
-#: includes/settings.php:901
+#: includes/settings.php:872
+#: includes/settings.php:896
+#: includes/settings.php:913
 msgid "Time Zone"
 msgstr "タイムゾーン"
 
-#: includes/settings.php:874
+#: includes/settings.php:886
 msgid "Consent Mode"
 msgstr "同意モード"
 
-#: includes/settings.php:875
+#: includes/settings.php:887
 msgid "Allow Override"
 msgstr "オーバーライドを許可"
 
-#: includes/settings.php:883
-#: includes/settings.php:900
+#: includes/settings.php:895
+#: includes/settings.php:912
 msgid "Language"
 msgstr "言語"
 
-#: includes/settings.php:886
-#: includes/settings.php:903
+#: includes/settings.php:898
+#: includes/settings.php:915
 msgid "Select Mode"
 msgstr "モードを選択"
 
-#: includes/settings.php:904
+#: includes/settings.php:916
 msgid "Override"
 msgstr "オーバーライド"
 
-#: includes/settings.php:196
+#: includes/settings.php:208
 msgid "Default Consent Mode"
 msgstr "デフォルトの同意モード"
 
-#: includes/settings.php:200
+#: includes/settings.php:212
 msgid "Default Consent Mode improves Google Consent Mode 2.0 by not loading any tags until after consent is given, reducing compliance risks."
 msgstr "デフォルトの同意モードは、同意が得られるまでタグを読み込まないことでGoogle同意モード2.0を改良し、コンプライアンスリスクを軽減します。"
 
-#: includes/settings.php:209
+#: includes/settings.php:221
 msgid "Decentralized Consent Mode setup improves Google Consent Mode 2.0 by not loading any scripts, beacons, or tags until after consent is given, reducing compliance risks. It also includes Decentralized Consent, for more control over personal data and rewards."
 msgstr "分散型同意モードの設定は、同意が得られるまでスクリプト、ビーコン、タグを読み込まないことでGoogle同意モード2.0を改良し、コンプライアンスリスクを軽減します。また、個人データとリワードをより細かく制御できる分散型同意も含まれています。"
 
-#: includes/settings.php:866
+#: includes/settings.php:878
 msgid "Choose how browser language and time zone are combined to determine consent rules:"
 msgstr "ブラウザの言語とタイムゾーンを組み合わせて同意ルールを決定する方法を選択します。"
 
-#: includes/settings.php:868
+#: includes/settings.php:880
 msgid "<strong>AND Logic (Stricter Match):</strong> Both language and time zone must match a region for its consent model to apply. Ideal for high-accuracy targeting."
 msgstr "<strong>ANDロジック（より厳密な一致）:</strong> 同意モデルを適用するには、言語とタイムゾーンの両方が地域と一致している必要があります。高精度なターゲティングに最適です。"
 
-#: includes/settings.php:869
+#: includes/settings.php:881
 msgid "<strong>OR Logic (More Flexible):</strong> Either language or time zone can match to apply a region’s consent model. Best for broader coverage based on user preferences."
 msgstr "<strong>ORロジック（より柔軟）:</strong> 言語またはタイムゾーンのいずれかを一致させることで、地域の同意モデルを適用できます。ユーザーの好みに基づいてより広範囲にカバーする場合に最適です。"
 
-#: includes/settings.php:980
+#: includes/settings.php:992
 msgid "Manage License Here"
-msgstr ""
+msgstr "ここでライセンスを管理"
+
+#: includes/settings.php:315
+msgid "Customize Consent Management Text "
+msgstr "同意管理テキストをカスタマイズ"
+
+#: includes/settings.php:340
+msgid "Customize Details Text "
+msgstr "詳細テキストをカスタマイズ"
+
+#: includes/settings.php:1287
+#: includes/settings.php:1301
+#: includes/settings.php:1316
+#: includes/settings.php:1331
+#: includes/settings.php:1355
+msgid "Generate"
+msgstr "生成"
+
+#: includes/settings.php:1290
+msgid "Cookie Declaration"
+msgstr "クッキーに関する宣言"
+
+#: includes/settings.php:1291
+#: includes/settings.php:1306
+#: includes/settings.php:1321
+#: includes/settings.php:1340
+msgid "⚠️ This is a draft generated based on your site’s scan results. Please review and edit to ensure it reflects your actual data practices before publishing."
+msgstr "⚠️ これはサイトのスキャン結果に基づいて生成された下書きです。公開する前に、実際のデータ取り扱い方針に沿っているか確認し、必要に応じて編集してください。"
+
+#: includes/settings.php:1305
+msgid "Privacy Policy"
+msgstr "プライバシーポリシー"
+
+#: includes/settings.php:1320
+msgid "Consent Request"
+msgstr "同意のリクエスト"
+
+#: includes/settings.php:1339
+msgid "Domain Categorization"
+msgstr "ドメインの分類"
+
+#: includes/settings.php:1352
+msgid "Auto-Populated Blocking List"
+msgstr "自動生成されたブロックリスト"
+
+#: includes/settings.php:1615
+#: includes/settings.php:1678
+msgid "You are using a lifetime license."
+msgstr "あなたはライフタイムライセンスを使用しています。"
+
+#: includes/settings.php:1621
+#: includes/settings.php:1684
+msgid "year"
+msgid_plural "years"
+msgstr[0] "年"
+msgstr[1] "年"
+
+#: includes/settings.php:1624
+#: includes/settings.php:1687
+msgid "month"
+msgid_plural "months"
+msgstr[0] "ヶ月"
+msgstr[1] "ヶ月"
+
+#: includes/settings.php:1627
+#: includes/settings.php:1690
+msgid "day"
+msgid_plural "days"
+msgstr[0] "日"
+msgstr[1] "日"
+
+#: includes/settings.php:1632
+msgid "Your license ends in %1$s. Please update your license <a href='%2$s' target='_blank'>%2$s</a>."
+msgstr "あなたのライセンスは %1$s で終了します。ライセンスを更新してください：<a href='%2$s' target='_blank'>%2$s</a>"
+
+#: includes/settings.php:1695
+msgid "Your trial license ends in %1$s. Please update your license <a href='%2$s' target='_blank'>%2$s</a>."
+msgstr "あなたのトライアルライセンスは %1$s で終了します。ライセンスを更新してください：<a href='%2$s' target='_blank'>%2$s</a>"

@@ -49,7 +49,7 @@ msgid "Invalid domain format."
 msgstr "Định dạng tên miền không hợp lệ."
 
 #: aesirx-consent.php:43
-#: includes/settings.php:1250
+#: includes/settings.php:1416
 msgid "Consent"
 msgstr "Sự đồng ý"
 
@@ -230,380 +230,380 @@ msgid "Aesirx Consent plugin. When you join forces with AesirX, you're not just 
 msgstr "Plugin đồng ý AesirX. Khi bạn gia nhập AesirX, bạn không chỉ trở thành Đối tác - bạn còn là một chiến binh tự do trong cuộc chiến bảo vệ quyền riêng tư! Kiếm 25% hoa hồng liên kết <a href=\"https://aesirx.io/partner?utm_source=wpplugin&utm_medium=web&utm_campaign=wordpress&utm_id=aesirx&utm_term=wordpress&utm_content=analytics\">[Nhấn để tham gia]</a>"
 
 #: aesirx-consent.php:39
-#: includes/settings.php:1246
+#: includes/settings.php:1412
 msgid "Shield of Privacy"
 msgstr "Shield of Privacy"
 
 #: aesirx-consent.php:40
-#: includes/settings.php:1247
+#: includes/settings.php:1413
 msgid "Revoke your consent for data use whenever you wish."
 msgstr "Thu hồi sự đồng ý của bạn cho việc sử dụng dữ liệu bất cứ khi nào bạn muốn."
 
 #: aesirx-consent.php:41
-#: includes/settings.php:1248
+#: includes/settings.php:1414
 msgid "Manage Decentralized Consent"
 msgstr "Quản lý Sự đồng ý Phân tán"
 
 #: aesirx-consent.php:42
-#: includes/settings.php:1249
+#: includes/settings.php:1415
 msgid "Revoke Consent"
 msgstr "Thu hồi sự đồng ý"
 
 #: aesirx-consent.php:44
-#: includes/settings.php:1251
+#: includes/settings.php:1417
 msgid "Reject"
 msgstr "Từ chối"
 
 #: aesirx-consent.php:45
-#: includes/settings.php:1252
+#: includes/settings.php:1418
 msgid "Please connect your Web3 wallet"
 msgstr "Vui lòng kết nối ví Web3 của bạn"
 
 #: aesirx-consent.php:46
-#: includes/settings.php:1253
+#: includes/settings.php:1419
 msgid "Please sign the message on your wallet twice and wait for it to be saved."
 msgstr "Vui lòng ký vào thông điệp trong ví của bạn hai lần và chờ đợi cho đến khi nó được lưu lại."
 
 #: aesirx-consent.php:47
-#: includes/settings.php:1254
+#: includes/settings.php:1420
 msgid "Saving..."
 msgstr "Đang lưu..."
 
 #: aesirx-consent.php:48
-#: includes/settings.php:1255
+#: includes/settings.php:1421
 msgid "Please connect to your wallet"
 msgstr "Vui lòng kết nối với ví của bạn"
 
 #: aesirx-consent.php:49
-#: includes/settings.php:1256
+#: includes/settings.php:1422
 msgid "Connecting"
 msgstr "Đang kết nối"
 
 #: aesirx-consent.php:50
-#: includes/settings.php:1257
+#: includes/settings.php:1423
 msgid "TRACKING AND DATA PRIVACY PREFERENCES"
 msgstr "TÙY CHỌN THEO DÕI VÀ QUYỀN RIÊNG TƯ DỮ LIỆU"
 
 #: aesirx-consent.php:51
-#: includes/settings.php:1258
+#: includes/settings.php:1424
 msgid "About"
 msgstr "Giới thiệu"
 
 #: aesirx-consent.php:52
 #: aesirx-consent.php:101
-#: includes/settings.php:1259
-#: includes/settings.php:1308
+#: includes/settings.php:1425
+#: includes/settings.php:1474
 msgid "Details"
 msgstr "Chi tiết"
 
 #: aesirx-consent.php:53
 #: aesirx-consent.php:81
-#: includes/settings.php:1260
-#: includes/settings.php:1288
+#: includes/settings.php:1426
+#: includes/settings.php:1454
 msgid "Decentralized Consent"
 msgstr "Sự đồng ý phi tập trung"
 
 #: aesirx-consent.php:54
-#: includes/settings.php:1261
+#: includes/settings.php:1427
 msgid "Manage Your Consent Preferences"
 msgstr "Quản lý Tùy chọn Đồng ý của Bạn"
 
 #: aesirx-consent.php:55
-#: includes/settings.php:1262
+#: includes/settings.php:1428
 msgid "Choose how we use your data: \"Reject\" data collection, allow tracking [\"Consent\"], or use \"Decentralized Consent\" for more control over your personal data & rewards."
 msgstr "Chọn cách chúng tôi sử dụng dữ liệu của bạn: 'Từ chối' thu thập dữ liệu, cho phép theo dõi ['Đồng ý'], hoặc sử dụng 'Sự Đồng Ý Phân Tán' để có nhiều quyền kiểm soát hơn đối với dữ liệu cá nhân & phần thưởng của bạn."
 
 #: aesirx-consent.php:56
-#: includes/settings.php:1263
+#: includes/settings.php:1429
 msgid "Choose how we use your data: \"Reject\" data collection, allow tracking [\"Consent\"]."
 msgstr "Chọn cách chúng tôi sử dụng dữ liệu của bạn: \"Từ chối\" thu thập dữ liệu, cho phép theo dõi [\"Đồng ý\"]."
 
 #: aesirx-consent.php:57
-#: includes/settings.php:1264
+#: includes/settings.php:1430
 msgid "By consenting, you allow us to collect & use your data for:"
 msgstr "Bằng cách đồng ý, bạn cho phép chúng tôi thu thập & sử dụng dữ liệu của bạn cho:"
 
 #: aesirx-consent.php:58
-#: includes/settings.php:1265
+#: includes/settings.php:1431
 msgid "Analytics & Behavioral Data: To improve our services & personalize your experience."
 msgstr "Phân tích & Dữ liệu hành vi: Để cải thiện dịch vụ & cá nhân hóa trải nghiệm của bạn."
 
 #: aesirx-consent.php:59
-#: includes/settings.php:1266
+#: includes/settings.php:1432
 msgid "Form Data: When you contact us."
 msgstr "Dữ liệu biểu mẫu: Khi bạn liên hệ với chúng tôi."
 
 #: aesirx-consent.php:60
-#: includes/settings.php:1267
+#: includes/settings.php:1433
 msgid "Please note"
 msgstr "Xin lưu ý"
 
 #: aesirx-consent.php:61
-#: includes/settings.php:1268
+#: includes/settings.php:1434
 msgid "We do not share your data with third parties without your explicit consent."
 msgstr "Chúng tôi không chia sẻ dữ liệu của bạn với bên thứ ba nếu không có sự đồng ý rõ ràng của bạn."
 
 #: aesirx-consent.php:62
-#: includes/settings.php:1269
+#: includes/settings.php:1435
 msgid "You can opt-in later for specific features without giving blanket consent."
 msgstr "Bạn có thể chọn tham gia sau cho các tính năng cụ thể mà không cần đồng ý toàn diện."
 
 #: aesirx-consent.php:63
-#: includes/settings.php:1270
+#: includes/settings.php:1436
 msgid "For more details, refer to our <a class='text-success fw-semibold text-decoration-underline' href='https://aesirx.io/privacy-policy' target='_blank'>privacy policy.</a>"
 msgstr "Để biết thêm chi tiết, vui lòng tham khảo <a class='text-success fw-semibold text-decoration-underline' href='https://aesirx.io/privacy-policy' target='_blank'>chính sách bảo mật.</a>"
 
 #: aesirx-consent.php:64
-#: includes/settings.php:1271
+#: includes/settings.php:1437
 msgid "Benefits"
 msgstr "Lợi ích"
 
 #: aesirx-consent.php:65
-#: includes/settings.php:1272
+#: includes/settings.php:1438
 msgid "<span class='fw-semibold text-primary'>Control your data:</span> Choose your preferred level of data collection & tracking."
 msgstr "<span class='fw-semibold text-primary'>Kiểm soát dữ liệu của bạn:</span> Chọn mức độ thu thập và theo dõi dữ liệu ưa thích của bạn."
 
 #: aesirx-consent.php:66
-#: includes/settings.php:1273
+#: includes/settings.php:1439
 msgid "<span class='fw-semibold text-primary'>Earn rewards:</span> Participate in decentralized consent for privacy & rewards."
 msgstr "<span class='fw-semibold text-primary'>Kiếm phần thưởng:</span> Tham gia vào sự đồng ý phân cấp cho quyền riêng tư và phần thưởng."
 
 #: aesirx-consent.php:67
-#: includes/settings.php:1274
+#: includes/settings.php:1440
 msgid "<span class='fw-semibold text-primary'>Transparent data collection practices:</span> Understand how your data is collected & used."
 msgstr "<span class='fw-semibold text-primary'>Thực hành thu thập dữ liệu minh bạch:</span> Hiểu cách dữ liệu của bạn được thu thập & sử dụng."
 
 #: aesirx-consent.php:68
-#: includes/settings.php:1275
+#: includes/settings.php:1441
 msgid "Understanding Your Privacy Choices"
 msgstr "Hiểu các lựa chọn quyền riêng tư của bạn"
 
 #: aesirx-consent.php:69
-#: includes/settings.php:1276
+#: includes/settings.php:1442
 msgid "<span class='fw-semibold text-primary'>Reject:</span> No data will be collected or loaded except for anonymized page views & rejections. Some personalization features may be disabled."
 msgstr "<span class='fw-semibold text-primary'>Từ chối:</span> Không có dữ liệu nào được thu thập hoặc tải trừ các lượt xem trang ẩn danh & từ chối. Một số tính năng cá nhân hóa có thể bị vô hiệu hóa."
 
 #: aesirx-consent.php:70
-#: includes/settings.php:1277
+#: includes/settings.php:1443
 msgid "<span class='fw-semibold text-primary'>Consent:</span> First & third-party tracking data will be collected to enhance your experience."
 msgstr "<span class='fw-semibold text-primary'>Sự đồng ý:</span> Dữ liệu theo dõi của bên thứ nhất và thứ ba sẽ được thu thập để nâng cao trải nghiệm của bạn."
 
 #: aesirx-consent.php:71
-#: includes/settings.php:1278
+#: includes/settings.php:1444
 msgid "<span class='fw-semibold text-primary'>Decentralized Consent:</span> Choose Decentralized Wallets or Decentralized Wallet + Shield of Privacy. Both options let you manage & revoke consent on-site or through AesirX dApp, plus earn rewards from digital marketing activities."
 msgstr "<span class='fw-semibold text-primary'>Sự Đồng Ý Phi Tập Trung:</span> Chọn Ví Phi Tập Trung hoặc Ví Phi Tập Trung + Lá Chắn Riêng Tư. Cả hai tùy chọn cho phép bạn quản lý và thu hồi sự đồng ý tại chỗ hoặc thông qua AesirX dApp, cộng với kiếm được phần thưởng từ các hoạt động tiếp thị kỹ thuật số."
 
 #: aesirx-consent.php:72
-#: includes/settings.php:1279
+#: includes/settings.php:1445
 msgid "Our Commitment in Action"
 msgstr "Cam kết của chúng tôi trong hành động"
 
 #: aesirx-consent.php:73
-#: includes/settings.php:1280
+#: includes/settings.php:1446
 msgid "<span class='fw-semibold text-primary'>Privacy Protection:</span> Users have full control over their data, ensuring maximum privacy."
 msgstr "<span class='fw-semibold text-primary'>Bảo vệ Quyền riêng tư:</span> Người dùng có toàn quyền kiểm soát dữ liệu của mình, đảm bảo quyền riêng tư tối đa."
 
 #: aesirx-consent.php:74
-#: includes/settings.php:1281
+#: includes/settings.php:1447
 msgid "<span class='fw-semibold text-primary'>Enables Compliance:</span> Using Shield of Privacy (SoP) ensures compliance with GDPR, CCPA, ePrivacy Directive, & other data protection regulations."
 msgstr "<span class='fw-semibold text-primary'>Cho phép Tuân thủ:</span> Sử dụng Khiên Bảo mật (SoP) đảm bảo tuân thủ GDPR, CCPA, Chỉ thị ePrivacy và các quy định bảo vệ dữ liệu khác."
 
 #: aesirx-consent.php:75
-#: includes/settings.php:1282
+#: includes/settings.php:1448
 msgid "<span class='fw-semibold text-primary'>Proactive Protection:</span> We enhance privacy measures to safeguard your data integrity."
 msgstr "<span class='fw-semibold text-primary'>Bảo vệ Chủ động:</span> Chúng tôi tăng cường các biện pháp bảo mật để bảo vệ tính toàn vẹn của dữ liệu của bạn."
 
 #: aesirx-consent.php:76
-#: includes/settings.php:1283
+#: includes/settings.php:1449
 msgid "<span class='fw-semibold text-primary'>Flexible Consent:</span> You can withdraw your consent anytime on-site or via our <a class='text-success fw-semibold text-decoration-underline' href='https://dapp.shield.aesirx.io' target='_blank'>dApp</a> (Decentralized Application)."
 msgstr "<span class='fw-semibold text-primary'>Sự Đồng Ý Linh Hoạt:</span> Bạn có thể rút lại sự đồng ý của mình bất cứ lúc nào tại chỗ hoặc qua <a class='text-success fw-semibold text-decoration-underline' href='https://dapp.shield.aesirx.io' target='_blank'>dApp</a> (Ứng dụng Phi tập trung) của chúng tôi."
 
 #: aesirx-consent.php:77
-#: includes/settings.php:1284
+#: includes/settings.php:1450
 msgid "<span class='fw-semibold text-primary'>Learn More:</span> Discover our approach to data processing in our <a class='text-success fw-semibold text-decoration-underline' href='https://aesirx.io/privacy-policy' target='_blank'>Privacy Policy</a>."
 msgstr "<span class='fw-semibold text-primary'>Tìm hiểu thêm:</span> Khám phá cách tiếp cận của chúng tôi đối với việc xử lý dữ liệu trong <a class='text-success fw-semibold text-decoration-underline' href='https://aesirx.io/privacy-policy' target='_blank'>Chính sách Bảo mật</a> của chúng tôi."
 
 #: aesirx-consent.php:78
-#: includes/settings.php:1285
+#: includes/settings.php:1451
 msgid "<span class='fw-semibold text-primary'>For Businesses:</span> Enhance trust, secure user identities, & prevent breaches."
 msgstr "<span class='fw-semibold text-primary'>Dành cho doanh nghiệp:</span> Tăng cường niềm tin, bảo mật danh tính người dùng & ngăn ngừa vi phạm."
 
 #: aesirx-consent.php:79
-#: includes/settings.php:1286
+#: includes/settings.php:1452
 msgid "More info at <a class='text-success fw-semibold text-decoration-underline' href='https://shield.aesirx.io' target='_blank'>https://shield.aesirx.io</a>."
 msgstr "Thêm thông tin tại <a class='text-success fw-semibold text-decoration-underline' href='https://shield.aesirx.io' target='_blank'>https://shield.aesirx.io</a>."
 
 #: aesirx-consent.php:80
-#: includes/settings.php:1287
+#: includes/settings.php:1453
 msgid "Select your preferred decentralized consent option:"
 msgstr "Chọn tùy chọn đồng ý phân cấp ưa thích của bạn:"
 
 #: aesirx-consent.php:82
-#: includes/settings.php:1289
+#: includes/settings.php:1455
 msgid "Decentralized consent will be loaded"
 msgstr "Sự đồng ý phân cấp sẽ được tải"
 
 #: aesirx-consent.php:83
-#: includes/settings.php:1290
+#: includes/settings.php:1456
 msgid "Both first-party & third-party tracking data will be activated."
 msgstr "Dữ liệu theo dõi của bên thứ nhất và bên thứ ba sẽ được kích hoạt."
 
 #: aesirx-consent.php:84
-#: includes/settings.php:1291
+#: includes/settings.php:1457
 msgid "All consented data will be collected."
 msgstr "Tất cả dữ liệu được đồng ý sẽ được thu thập."
 
 #: aesirx-consent.php:85
-#: includes/settings.php:1292
+#: includes/settings.php:1458
 msgid "Users can revoke consent on-site at any time."
 msgstr "Người dùng có thể rút lại sự đồng ý tại chỗ bất cứ lúc nào."
 
 #: aesirx-consent.php:86
-#: includes/settings.php:1293
+#: includes/settings.php:1459
 msgid "Decentralized Consent + Shield of Privacy"
 msgstr "Sự Đồng Ý Phân Tán + Lá Chắn Bảo Mật"
 
 #: aesirx-consent.php:87
-#: includes/settings.php:1294
+#: includes/settings.php:1460
 msgid "Users can revoke consent on-site or from the AesirX dApp at any time."
 msgstr "Người dùng có thể thu hồi sự đồng ý tại chỗ hoặc từ AesirX dApp bất cứ lúc nào."
 
 #: aesirx-consent.php:88
-#: includes/settings.php:1295
+#: includes/settings.php:1461
 msgid "Users can earn rewards from digital marketing activities."
 msgstr "Người dùng có thể nhận phần thưởng từ các hoạt động tiếp thị số."
 
 #: aesirx-consent.php:89
-#: includes/settings.php:1296
+#: includes/settings.php:1462
 msgid "Continue"
 msgstr "Tiếp tục"
 
 #: aesirx-consent.php:90
-#: includes/settings.php:1297
+#: includes/settings.php:1463
 msgid "Back"
 msgstr "Quay lại"
 
 #: aesirx-consent.php:91
-#: includes/settings.php:1298
+#: includes/settings.php:1464
 msgid "You've chosen to reject data collection:"
 msgstr "Bạn đã chọn từ chối thu thập dữ liệu:"
 
 #: aesirx-consent.php:92
-#: includes/settings.php:1299
+#: includes/settings.php:1465
 msgid "Only anonymized page views & limited features will be available. To access all website features, including personalized content & enhanced functionality, please choose an option:"
 msgstr "Chỉ có lượt xem trang ẩn danh và các tính năng hạn chế sẽ có sẵn. Để truy cập vào tất cả các tính năng của trang web, bao gồm nội dung cá nhân hóa và chức năng nâng cao, vui lòng chọn một tùy chọn:"
 
 #: aesirx-consent.php:93
-#: includes/settings.php:1300
+#: includes/settings.php:1466
 msgid "<span class='fw-semibold text-primary'>Consent:</span> Allow data collection for analytics, form data (when you contact us), & behavioral & event tracking, with the option to opt-in for specific features."
 msgstr "<span class='fw-semibold text-primary'>Sự đồng ý:</span> Cho phép thu thập dữ liệu cho phân tích, dữ liệu biểu mẫu (khi bạn liên hệ với chúng tôi) và theo dõi hành vi & sự kiện, với tùy chọn đăng ký các tính năng cụ thể."
 
 #: aesirx-consent.php:94
-#: includes/settings.php:1301
+#: includes/settings.php:1467
 msgid "<span class='fw-semibold text-primary'>Decentralized Consent:</span> Allow data collection for analytics, form data (when you contact us), & behavioral & event tracking, with the option to revoke consent, opt-in for specific features, & earn rewards from digital marketing activities."
 msgstr "<span class='fw-semibold text-primary'>Sự đồng ý phi tập trung:</span> Cho phép thu thập dữ liệu cho phân tích, dữ liệu biểu mẫu (khi bạn liên hệ với chúng tôi) và theo dõi hành vi & sự kiện, với tùy chọn thu hồi sự đồng ý, chọn tham gia các tính năng cụ thể và kiếm phần thưởng từ các hoạt động tiếp thị số."
 
 #: aesirx-consent.php:95
-#: includes/settings.php:1302
+#: includes/settings.php:1468
 msgid "You can revoke consent on the site or any explicit opt-in consent, such as payment processing, at any time"
 msgstr "Bạn có thể thu hồi sự đồng ý trên trang web hoặc bất kỳ sự đồng ý rõ ràng nào, chẳng hạn như xử lý thanh toán, bất cứ lúc nào"
 
 #: aesirx-consent.php:96
-#: includes/settings.php:1303
+#: includes/settings.php:1469
 msgid "Revoke Opt-In Consent"
 msgstr "Thu hồi sự đồng ý"
 
 #: aesirx-consent.php:97
-#: includes/settings.php:1304
+#: includes/settings.php:1470
 msgid "Revoke Opt-In Consent for Payment Processing"
 msgstr "Thu hồi sự đồng ý cho xử lý thanh toán"
 
 #: aesirx-consent.php:98
-#: includes/settings.php:1305
+#: includes/settings.php:1471
 msgid "Revoke Opt-In Consent for AesirX Privacy Advisor AI"
 msgstr "Thu hồi sự đồng ý tham gia cho AesirX Privacy Advisor AI"
 
 #: aesirx-consent.php:99
-#: includes/settings.php:1306
+#: includes/settings.php:1472
 msgid "Revoke Consent for the site"
 msgstr "Thu hồi sự đồng ý cho trang web"
 
 #: aesirx-consent.php:100
-#: includes/settings.php:1307
+#: includes/settings.php:1473
 msgid "Consent Management"
 msgstr "Quản lý Đồng ý"
 
-#: includes/settings.php:224
+#: includes/settings.php:236
 msgid "Gtag ID"
 msgstr "ID Gtag"
 
-#: includes/settings.php:249
+#: includes/settings.php:261
 msgid "GTM ID"
 msgstr "ID GTM"
 
-#: includes/settings.php:379
+#: includes/settings.php:391
 msgid "AesirX Consent Shield for Third-Party Plugins "
 msgstr ""
 
-#: includes/settings.php:384
+#: includes/settings.php:396
 msgid "Blocks selected third-party plugins from loading until user consent is given."
 msgstr "Chặn tải các plugin của bên thứ ba đã chọn cho đến khi người dùng đồng ý."
 
-#: includes/settings.php:415
+#: includes/settings.php:427
 msgid "Completely prevents the loading and execution of chosen third-party plugins before consent."
 msgstr "Ngăn chặn hoàn toàn việc tải và thực thi các plugin của bên thứ ba đã chọn trước khi có sự đồng ý."
 
-#: includes/settings.php:421
+#: includes/settings.php:433
 msgid "No network requests are made to third-party servers, enabling maximum compliance with privacy regulations like GDPR and the ePrivacy Directive."
 msgstr "Không có yêu cầu mạng nào được gửi đến máy chủ của bên thứ ba, cho phép tuân thủ tối đa các quy định về quyền riêng tư như GDPR và Chỉ thị ePrivacy."
 
-#: includes/settings.php:435
+#: includes/settings.php:447
 msgid "AesirX Consent Shield for Domain/Path-Based Blocking"
 msgstr "Khiên Đồng Ý AesirX cho Chặn Dựa trên Tên miền/Đường dẫn"
 
-#: includes/settings.php:445
-#: includes/settings.php:463
+#: includes/settings.php:457
+#: includes/settings.php:475
 msgid "Enter domain or path"
 msgstr "Nhập tên miền hoặc đường dẫn"
 
-#: includes/settings.php:438
+#: includes/settings.php:450
 msgid "Removes scripts matching specified domains or paths from the browser until user consent is given."
 msgstr "Xóa bỏ các script khớp với các miền hoặc đường dẫn đã chỉ định khỏi trình duyệt cho đến khi người dùng đồng ý."
 
-#: includes/settings.php:486
+#: includes/settings.php:498
 msgid "Blocks or removes scripts from running in the user's browser before consent is given."
 msgstr "Chặn hoặc gỡ bỏ các script chạy trên trình duyệt của người dùng trước khi có sự đồng ý."
 
-#: includes/settings.php:492
+#: includes/settings.php:504
 msgid "While it prevents scripts from executing, initial network requests may still occur, so it enhances privacy compliance under GDPR but may not fully meet the ePrivacy Directive requirements."
 msgstr "Mặc dù nó ngăn chặn việc thực thi script, các yêu cầu mạng ban đầu vẫn có thể xảy ra, do đó nó cải thiện tuân thủ quyền riêng tư theo GDPR nhưng có thể không hoàn toàn đáp ứng các yêu cầu của Chỉ thị ePrivacy."
 
-#: includes/settings.php:506
+#: includes/settings.php:518
 msgid "Script Blocking Options"
 msgstr "Tùy chọn chặn kịch bản"
 
-#: includes/settings.php:521
+#: includes/settings.php:533
 msgid "Only Third-Party Hosts (default)"
 msgstr "Chỉ máy chủ của bên thứ ba (mặc định)"
 
-#: includes/settings.php:532
+#: includes/settings.php:544
 msgid "Both First and Third-Party Hosts"
 msgstr "Cả máy chủ của bên thứ nhất và bên thứ ba"
 
-#: includes/settings.php:939
+#: includes/settings.php:951
 msgid "Need Help? Access Our Comprehensive Documentation Hub"
 msgstr "Cần trợ giúp? Truy cập Trung tâm Tài liệu Toàn diện của chúng tôi"
 
-#: includes/settings.php:1392
-#: includes/settings.php:1472
+#: includes/settings.php:1558
 msgid "Your trial license ends in %1$s days. Please update new license <a href='%2$s' target='_blank'>%2$s</a>."
 msgstr "Giấy phép dùng thử của bạn sẽ hết hạn trong %1$s ngày. Vui lòng cập nhật giấy phép mới tại <a href='%2$s' target='_blank'>%2$s</a>."
 
-#: includes/settings.php:1421
+#: includes/settings.php:1377
+#: includes/settings.php:1594
 msgid "Your license is expried or not found. Please update new license <a href='%1$s' target='_blank'>%1$s</a>."
 msgstr "Giấy phép của bạn đã hết hạn hoặc không được tìm thấy. Vui lòng cập nhật giấy phép mới tại <a href='%1$s' target='_blank'>%1$s</a>."
 
-#: includes/settings.php:1475
+#: includes/settings.php:1704
 msgid "Your free trials has ended. Please update your license. <a href='%1$s' target='_blank'>%1$s</a>."
 msgstr "Thời gian dùng thử miễn phí của bạn đã kết thúc. Vui lòng cập nhật giấy phép của bạn. <a href='%1$s' target='_blank'>%1$s</a>."
 
@@ -621,128 +621,120 @@ msgstr "Giấy phép đã hết hạn hoặc không tìm thấy. Vui lòng cập
 msgid "Your trial is ended. Please renew your license"
 msgstr "Thời gian dùng thử của bạn đã kết thúc. Vui lòng gia hạn bản quyền"
 
-#: includes/settings.php:106
+#: includes/settings.php:118
 msgid "Your Client ID *"
 msgstr "ID khách hàng của bạn *"
 
-#: includes/settings.php:113
+#: includes/settings.php:125
 msgid "SSO Client ID"
 msgstr "ID khách hàng SSO"
 
-#: includes/settings.php:119
+#: includes/settings.php:131
 msgid ""
 "<div class='input_information_content'>\n"
 "          Provided SSO CLIENT ID from <a href='%1$s' target='_blank'>%1$s</a>.</div>"
 msgstr "<div class='input_information_content'>Cung cấp ID KHÁCH HÀNG SSO từ <a href='%1$s' target='_blank'>%1$s</a>.</div>"
 
-#: includes/settings.php:134
+#: includes/settings.php:146
 msgid "Your Client Secret *"
 msgstr "Bí mật của khách hàng *"
 
-#: includes/settings.php:139
+#: includes/settings.php:151
 msgid "SSO Client Secret"
 msgstr "Bí mật khách hàng SSO"
 
-#: includes/settings.php:145
+#: includes/settings.php:157
 msgid ""
 "<div class='input_information_content'>\n"
 "          Provided SSO Client Secret from <a href='%1$s' target='_blank'>%1$s</a>.</div>"
 msgstr "<div class='input_information_content'>Đã cung cấp Bí mật Khách hàng SSO từ <a href='%1$s' target='_blank'>%1$s</a>.</div>"
 
-#: includes/settings.php:161
+#: includes/settings.php:173
 msgid "Your License Key"
 msgstr "Khóa bản quyền của bạn"
 
-#: includes/settings.php:188
+#: includes/settings.php:200
 msgid "Choose your tailored template"
 msgstr "Chọn mẫu được tùy chỉnh của bạn"
 
-#: includes/settings.php:444
-#: includes/settings.php:462
+#: includes/settings.php:456
+#: includes/settings.php:474
 msgid "Domain"
 msgstr "Miền"
 
-#: includes/settings.php:512
+#: includes/settings.php:524
 msgid "Configure how JavaScript is blocked based on user consent preferences."
 msgstr "Cấu hình cách JavaScript được chặn dựa trên sở thích đồng ý của người dùng."
 
-#: includes/settings.php:522
+#: includes/settings.php:534
 msgid "Blocks JavaScript from third-party domains, allowing first-party scripts to run normally & keep essential site functions intact."
 msgstr "Chặn JavaScript từ các miền của bên thứ ba, cho phép các script của bên đầu tiên hoạt động bình thường và giữ các chức năng thiết yếu của trang web nguyên vẹn."
 
-#: includes/settings.php:533
+#: includes/settings.php:545
 msgid "Blocks JavaScript from both first-party & third-party domains for comprehensive script control, giving you the ability to block any JavaScript from internal or external sources based on user consent."
 msgstr "Chặn JavaScript từ cả các miền bên thứ nhất và bên thứ ba để kiểm soát script toàn diện, cho phép bạn chặn bất kỳ JavaScript nào từ các nguồn nội bộ hoặc bên ngoài dựa trên sự đồng ý của người dùng."
 
-#: includes/settings.php:949
+#: includes/settings.php:961
 msgid "Discover the latest features & best practices."
 msgstr "Khám phá các tính năng mới nhất và các phương pháp tốt nhất."
 
-#: includes/settings.php:1004
+#: includes/settings.php:1016
 msgid "Scan Your Site for Privacy Risks"
 msgstr "Quét trang web của bạn để tìm rủi ro về quyền riêng tư"
 
-#: includes/settings.php:1008
+#: includes/settings.php:1020
 msgid "Use the Privacy Scanner to quickly identify scripts, tags, & trackers running on your site that may compromise user privacy."
 msgstr "Sử dụng Bộ quét Quyền riêng tư để nhanh chóng xác định các script, thẻ và bộ theo dõi đang chạy trên trang web của bạn có thể làm ảnh hưởng đến quyền riêng tư của người dùng."
 
-#: includes/settings.php:1014
+#: includes/settings.php:1026
 msgid "Use Consent Shield to block those scripts by adding their domains or paths, ensuring quick & simple compliance."
 msgstr "Sử dụng Consent Shield để chặn các script này bằng cách thêm tên miền hoặc đường dẫn của chúng, đảm bảo tuân thủ nhanh chóng và đơn giản."
 
-#: includes/settings.php:1067
-#: includes/settings.php:1130
-#: includes/settings.php:1163
-#: includes/settings.php:1208
+#: includes/settings.php:1096
+#: includes/settings.php:1159
+#: includes/settings.php:1192
+#: includes/settings.php:1237
 msgid "Save settings"
 msgstr "Lưu cài đặt"
 
-#: includes/settings.php:166
+#: includes/settings.php:178
 msgid "License Key"
 msgstr "Khóa bản quyền"
 
-#: includes/settings.php:976
+#: includes/settings.php:988
 msgid "Haven't got Shield of Privacy ID yet?"
 msgstr "Bạn chưa có ID Shield of Privacy?"
 
-#: includes/settings.php:1023
+#: includes/settings.php:1035
 msgid "Learn how to use AesirX Privacy Scanner with Consent Shield to detect privacy-intrusive elements, using the JetPack plugin as an example."
 msgstr "Tìm hiểu cách sử dụng AesirX Privacy Scanner với Consent Shield để phát hiện các yếu tố xâm phạm quyền riêng tư, sử dụng plugin JetPack làm ví dụ."
 
-#: includes/settings.php:1439
-msgid "Your license ends in %1$s days. Please update new license <a href='%2$s' target='_blank'>%2$s</a>."
-msgstr "Giấy phép của bạn sẽ hết hạn trong %1$s ngày. Vui lòng cập nhật giấy phép mới tại <a href='%2$s' target='_blank'>%2$s</a>."
-
-#: includes/settings.php:172
+#: includes/settings.php:184
 msgid ""
 "<div class='input_information_content'>\n"
 "          Sign up to obtain your Shield of Privacy ID and purchase licenses <a href='https://aesirx.io/licenses' target='blank' class='text-link'>here</a>.</div>"
 msgstr "<div class='input_information_content'>Đăng ký để nhận ID Shield of Privacy của bạn và mua giấy phép <a href='https://aesirx.io/licenses' target='blank' class='text-link'>tại đây</a>.</div>"
 
-#: includes/settings.php:277
+#: includes/settings.php:289
 msgid "To configure, input your Google Tag Manager Gtag ID & GTM ID in the designated fields. Once set up, Google Tag Manager will only load after the user provides consent."
 msgstr "Để cấu hình, nhập ID Gtag và ID GTM của Google Tag Manager vào các trường được chỉ định. Sau khi thiết lập, Google Tag Manager chỉ tải sau khi người dùng đồng ý."
 
-#: includes/settings.php:234
-#: includes/settings.php:259
+#: includes/settings.php:246
+#: includes/settings.php:271
 msgid ""
 "<div class='input_information_content'>\n"
 "          Remember to include the explicit purpose (e.g., analytics, marketing) in the consent text to inform users why GTM is being used.</div>"
 msgstr "<div class='input_information_content'>Nhớ bao gồm mục đích rõ ràng (ví dụ, phân tích, tiếp thị) trong văn bản đồng ý để thông báo cho người dùng tại sao GTM được sử dụng.</div>"
 
-#: includes/settings.php:985
+#: includes/settings.php:997
 msgid "Sign up now"
 msgstr "Đăng ký ngay"
 
-#: includes/settings.php:943
+#: includes/settings.php:955
 msgid "Explore How-To Guides, instructions, & tutorials to get the most from AesirX Consent Shield. Whether you're a developer or admin, find all you need to configure & optimize your privacy setup."
 msgstr "Khám phá các hướng dẫn, chỉ dẫn và hướng dẫn từng bước để tận dụng tối đa AesirX Consent Shield. Dù bạn là nhà phát triển hay quản trị viên, tìm kiếm mọi thứ bạn cần để cấu hình và tối ưu hóa cài đặt quyền riêng tư của mình."
 
-#: includes/settings.php:303
-msgid "Customize Consent Text "
-msgstr ""
-
-#: includes/settings.php:316
+#: includes/settings.php:328
 msgid "Reset Consent"
 msgstr "Đặt lại sự đồng ý"
 
@@ -750,7 +742,7 @@ msgstr "Đặt lại sự đồng ý"
 msgid "Important: Permalink Settings Required"
 msgstr "Quan trọng: Cần thiết lập Permalink"
 
-#: includes/settings.php:1465
+#: includes/settings.php:1668
 msgid "Your trial license ends in %1$s hour(s). Please update your license <a href='%2$s' target='_blank'>here</a>."
 msgstr "Giấy phép dùng thử của bạn sẽ hết hạn trong %1$s giờ. Vui lòng cập nhật giấy phép của bạn <a href='%2$s' target='_blank'>tại đây</a>."
 
@@ -767,15 +759,15 @@ msgstr "Plugin của chúng tôi yêu cầu trang web của bạn sử dụng c�
 msgid "click here"
 msgstr "Nhấn vào đây"
 
-#: includes/settings.php:274
+#: includes/settings.php:286
 msgid "GTM General"
 msgstr "GTM Chung"
 
-#: includes/settings.php:1398
+#: includes/settings.php:1564
 msgid "Something went wrong: %1$s. Please contact the administrator."
 msgstr "Đã xảy ra lỗi: %1$s. Vui lòng liên hệ với quản trị viên."
 
-#: includes/settings.php:1445
+#: includes/settings.php:1644
 msgid "Check license failed: %1$s. Please contact the administrator or update your license."
 msgstr "Kiểm tra bản quyền thất bại: %1$s. Vui lòng liên hệ với quản trị viên hoặc cập nhật bản quyền của bạn."
 
@@ -783,7 +775,7 @@ msgstr "Kiểm tra bản quyền thất bại: %1$s. Vui lòng liên hệ với 
 msgid "Check license failed: %1\\$s. Please contact the administrator."
 msgstr ""
 
-#: includes/settings.php:1428
+#: includes/settings.php:1601
 msgid "Your domain is not match with your license. Please update domain in your license <a href='%1$s' target='_blank'>%1$s</a> and click <span class='verify_domain'>here</span> to verify again."
 msgstr "Tên miền của bạn không khớp với giấy phép của bạn. Vui lòng cập nhật tên miền trong giấy phép của bạn <a href='%1$s' target='_blank'>%1$s</a> và nhấn <span class='verify_domain'>ở đây</span> để xác minh lại."
 
@@ -792,59 +784,55 @@ msgstr "Tên miền của bạn không khớp với giấy phép của bạn. Vu
 msgid "Your domain is not match with your license. Please update domain in your license"
 msgstr "Tên miền của bạn không khớp với giấy phép của bạn. Vui lòng cập nhật tên miền trong giấy phép của bạn"
 
-#: includes/settings.php:205
+#: includes/settings.php:217
 msgid "Decentralized Consent Mode"
 msgstr "Chế độ đồng ý phi tập trung"
 
-#: includes/settings.php:654
+#: includes/settings.php:666
 msgid "GPC Compliance"
 msgstr "Tuân thủ GPC"
 
-#: includes/settings.php:667
+#: includes/settings.php:679
 msgid "Enable GPC Support"
 msgstr "Kích hoạt hỗ trợ GPC"
 
-#: includes/settings.php:675
+#: includes/settings.php:687
 msgid "Disable GPC Support"
 msgstr "Tắt hỗ trợ GPC"
 
-#: includes/settings.php:682
+#: includes/settings.php:694
 msgid "To comply with Global Privacy Control (GPC), please download and upload the following file:"
 msgstr "Để tuân thủ Điều khiển Quyền riêng tư Toàn cầu (GPC), vui lòng tải xuống và tải lên tệp sau:"
 
-#: includes/settings.php:685
+#: includes/settings.php:697
 msgid "Upload Instructions:"
 msgstr "Hướng dẫn tải lên:"
 
-#: includes/settings.php:687
+#: includes/settings.php:699
 msgid "Download the gpc.json file."
 msgstr "Tải xuống tệp gpc.json."
 
-#: includes/settings.php:688
+#: includes/settings.php:700
 msgid "Connect to your website via FTP or File Manager."
 msgstr "Kết nối với trang web của bạn qua FTP hoặc Quản lý Tập tin."
 
-#: includes/settings.php:689
+#: includes/settings.php:701
 msgid "Upload the file to: <code>/public_html/.well-known/gpc.json</code>"
 msgstr "Tải tệp lên: <code>/public_html/.well-known/gpc.json</code>"
 
-#: includes/settings.php:690
+#: includes/settings.php:702
 msgid "Ensure the file is accessible by visiting: <a href='"
 msgstr "Đảm bảo tệp có thể truy cập bằng cách truy cập: <a href='"
 
-#: includes/settings.php:328
-msgid "Customize Detail Text "
-msgstr "Tùy chỉnh Văn bản Chi tiết"
-
-#: includes/settings.php:341
+#: includes/settings.php:353
 msgid "Reset Detail"
 msgstr "Đặt lại Chi tiết"
 
-#: includes/settings.php:353
+#: includes/settings.php:365
 msgid "Customize Reject Text "
 msgstr "Tùy chỉnh Văn bản Từ chối"
 
-#: includes/settings.php:366
+#: includes/settings.php:378
 msgid "Reset Reject"
 msgstr "Đặt lại Từ chối"
 
@@ -924,104 +912,181 @@ msgstr "Không Bán hoặc Chia sẻ Thông tin Cá nhân của Tôi (CCPA)"
 msgid "Disables third-party data sharing for California users."
 msgstr "Vô hiệu hóa việc chia sẻ dữ liệu của bên thứ ba đối với người dùng California."
 
-#: includes/settings.php:564
+#: includes/settings.php:576
 msgid "Configurable Consent Logic"
 msgstr "Logic đồng ý có thể cấu hình"
 
-#: includes/settings.php:577
+#: includes/settings.php:589
 msgid "Opt-In Mode (EU)"
 msgstr "Chế độ chọn tham gia (EU)"
 
-#: includes/settings.php:578
+#: includes/settings.php:590
 msgid "No tracking technologies are activated until a user explicitly gives consent. This is required by <strong>GDPR</strong> and <strong>ePrivacy Directive 5(3)</strong>."
 msgstr "Không có công nghệ theo dõi nào được kích hoạt cho đến khi người dùng đồng ý rõ ràng. Điều này được yêu cầu bởi <strong>GDPR</strong> và <strong>Chỉ thị ePrivacy 5(3)</strong>."
 
-#: includes/settings.php:586
+#: includes/settings.php:598
 msgid "Opt-Out Mode (California)"
 msgstr "Chế độ chọn không tham gia (California)"
 
-#: includes/settings.php:587
+#: includes/settings.php:599
 msgid "Tracking is allowed by default, but users must be able to opt out easily. This aligns with <strong>CCPA</strong> and similar U.S. privacy frameworks."
 msgstr "Theo mặc định, việc theo dõi được phép, nhưng người dùng phải có thể dễ dàng chọn không tham gia. Điều này phù hợp với <strong>CCPA</strong> và các khuôn khổ quyền riêng tư tương tự của Hoa Kỳ."
 
-#: includes/settings.php:618
+#: includes/settings.php:630
 msgid "Do not sell or share options"
 msgstr "Không bán hoặc chia sẻ các tùy chọn"
 
-#: includes/settings.php:631
-#: includes/settings.php:737
+#: includes/settings.php:643
+#: includes/settings.php:749
 msgid "Yes"
 msgstr "Có"
 
-#: includes/settings.php:639
-#: includes/settings.php:745
+#: includes/settings.php:651
+#: includes/settings.php:757
 msgid "No"
 msgstr "Không"
 
-#: includes/settings.php:724
+#: includes/settings.php:736
 msgid "Enable Geo-handling for Consent Mode"
 msgstr "Bật xử lý theo địa lý cho Chế độ đồng ý"
 
-#: includes/settings.php:760
+#: includes/settings.php:772
 msgid "Geo-Based Consent Rules"
 msgstr "Quy tắc đồng ý theo địa lý"
 
-#: includes/settings.php:859
+#: includes/settings.php:871
 msgid "Browser Language"
 msgstr "Ngôn ngữ trình duyệt"
 
-#: includes/settings.php:860
-#: includes/settings.php:884
-#: includes/settings.php:901
+#: includes/settings.php:872
+#: includes/settings.php:896
+#: includes/settings.php:913
 msgid "Time Zone"
 msgstr "Múi giờ"
 
-#: includes/settings.php:874
+#: includes/settings.php:886
 msgid "Consent Mode"
 msgstr "Chế độ đồng ý"
 
-#: includes/settings.php:875
+#: includes/settings.php:887
 msgid "Allow Override"
 msgstr "Cho phép ghi đè"
 
-#: includes/settings.php:883
-#: includes/settings.php:900
+#: includes/settings.php:895
+#: includes/settings.php:912
 msgid "Language"
 msgstr "Ngôn ngữ"
 
-#: includes/settings.php:886
-#: includes/settings.php:903
+#: includes/settings.php:898
+#: includes/settings.php:915
 msgid "Select Mode"
 msgstr "Chọn chế độ"
 
-#: includes/settings.php:904
+#: includes/settings.php:916
 msgid "Override"
 msgstr "Ghi đè"
 
-#: includes/settings.php:196
+#: includes/settings.php:208
 msgid "Default Consent Mode"
 msgstr "Chế độ đồng ý mặc định"
 
-#: includes/settings.php:200
+#: includes/settings.php:212
 msgid "Default Consent Mode improves Google Consent Mode 2.0 by not loading any tags until after consent is given, reducing compliance risks."
 msgstr "Chế độ đồng ý mặc định cải thiện Chế độ đồng ý 2.0 của Google bằng cách không tải bất kỳ thẻ nào cho đến khi đồng ý được đưa ra, giảm rủi ro tuân thủ."
 
-#: includes/settings.php:209
+#: includes/settings.php:221
 msgid "Decentralized Consent Mode setup improves Google Consent Mode 2.0 by not loading any scripts, beacons, or tags until after consent is given, reducing compliance risks. It also includes Decentralized Consent, for more control over personal data and rewards."
 msgstr "Thiết lập Chế độ đồng ý phi tập trung cải thiện Chế độ đồng ý 2.0 của Google bằng cách không tải bất kỳ tập lệnh, đèn hiệu hoặc thẻ nào cho đến khi đồng ý được đưa ra, giảm rủi ro tuân thủ. Nó cũng bao gồm Đồng ý phi tập trung, để kiểm soát nhiều hơn đối với dữ liệu cá nhân và phần thưởng."
 
-#: includes/settings.php:866
+#: includes/settings.php:878
 msgid "Choose how browser language and time zone are combined to determine consent rules:"
 msgstr "Chọn cách kết hợp ngôn ngữ trình duyệt và múi giờ để xác định các quy tắc đồng ý:"
 
-#: includes/settings.php:868
+#: includes/settings.php:880
 msgid "<strong>AND Logic (Stricter Match):</strong> Both language and time zone must match a region for its consent model to apply. Ideal for high-accuracy targeting."
 msgstr "<strong>AND Logic (Phù hợp chặt chẽ hơn):</strong> Cả ngôn ngữ và múi giờ phải khớp với một khu vực để mô hình đồng ý của nó được áp dụng. Lý tưởng cho mục tiêu có độ chính xác cao."
 
-#: includes/settings.php:869
+#: includes/settings.php:881
 msgid "<strong>OR Logic (More Flexible):</strong> Either language or time zone can match to apply a region’s consent model. Best for broader coverage based on user preferences."
 msgstr "<strong>OR Logic (Linh hoạt hơn):</strong> Ngôn ngữ hoặc múi giờ có thể khớp để áp dụng mô hình đồng ý của một khu vực. Tốt nhất cho phạm vi phủ sóng rộng hơn dựa trên sở thích của người dùng."
 
-#: includes/settings.php:980
+#: includes/settings.php:992
 msgid "Manage License Here"
-msgstr ""
+msgstr "Quản lý giấy phép tại đây"
+
+#: includes/settings.php:315
+msgid "Customize Consent Management Text "
+msgstr "Tùy chỉnh văn bản quản lý sự đồng ý"
+
+#: includes/settings.php:340
+msgid "Customize Details Text "
+msgstr "Tùy chỉnh văn bản chi tiết"
+
+#: includes/settings.php:1287
+#: includes/settings.php:1301
+#: includes/settings.php:1316
+#: includes/settings.php:1331
+#: includes/settings.php:1355
+msgid "Generate"
+msgstr "Tạo"
+
+#: includes/settings.php:1290
+msgid "Cookie Declaration"
+msgstr "Tuyên bố về Cookie"
+
+#: includes/settings.php:1291
+#: includes/settings.php:1306
+#: includes/settings.php:1321
+#: includes/settings.php:1340
+msgid "⚠️ This is a draft generated based on your site’s scan results. Please review and edit to ensure it reflects your actual data practices before publishing."
+msgstr "⚠️ Đây là bản nháp được tạo dựa trên kết quả quét trang web của bạn. Vui lòng xem lại và chỉnh sửa để đảm bảo nó phản ánh chính xác cách bạn xử lý dữ liệu trước khi xuất bản."
+
+#: includes/settings.php:1305
+msgid "Privacy Policy"
+msgstr "Chính sách quyền riêng tư"
+
+#: includes/settings.php:1320
+msgid "Consent Request"
+msgstr "Yêu cầu sự đồng ý"
+
+#: includes/settings.php:1339
+msgid "Domain Categorization"
+msgstr "Phân loại tên miền"
+
+#: includes/settings.php:1352
+msgid "Auto-Populated Blocking List"
+msgstr "Danh sách chặn được điền tự động"
+
+#: includes/settings.php:1615
+#: includes/settings.php:1678
+msgid "You are using a lifetime license."
+msgstr "Bạn đang sử dụng giấy phép trọn đời."
+
+#: includes/settings.php:1621
+#: includes/settings.php:1684
+msgid "year"
+msgid_plural "years"
+msgstr[0] "năm"
+msgstr[1] "năm"
+
+#: includes/settings.php:1624
+#: includes/settings.php:1687
+msgid "month"
+msgid_plural "months"
+msgstr[0] "tháng"
+msgstr[1] "tháng"
+
+#: includes/settings.php:1627
+#: includes/settings.php:1690
+msgid "day"
+msgid_plural "days"
+msgstr[0] "ngày"
+msgstr[1] "ngày"
+
+#: includes/settings.php:1632
+msgid "Your license ends in %1$s. Please update your license <a href='%2$s' target='_blank'>%2$s</a>."
+msgstr "Giấy phép của bạn sẽ hết hạn sau %1$s. Vui lòng cập nhật giấy phép tại <a href='%2$s' target='_blank'>%2$s</a>."
+
+#: includes/settings.php:1695
+msgid "Your trial license ends in %1$s. Please update your license <a href='%2$s' target='_blank'>%2$s</a>."
+msgstr "Giấy phép dùng thử của bạn sẽ hết hạn sau %1$s. Vui lòng cập nhật giấy phép tại <a href='%2$s' target='_blank'>%2$s</a>."

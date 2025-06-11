@@ -827,7 +827,13 @@ input.aesirx_consent_input {
       }
     }
   }
-  .prompt_item_regenerate {
+  .domain_categorization_buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .prompt_item_regenerate,
+  .auto_populated {
     height: 40px;
     padding: 0 20px;
     background-color: #1ab394;
@@ -873,6 +879,17 @@ input.aesirx_consent_input {
       }
     }
   }
+  .auto_populated {
+    margin-left: 0;
+    margin-right: 20px;
+  }
+  .domain_categorization_result {
+    display: none;
+  }
+}
+
+.list_plugin {
+  display: none;
 }
 .advisor_wrapper {
   display: flex;

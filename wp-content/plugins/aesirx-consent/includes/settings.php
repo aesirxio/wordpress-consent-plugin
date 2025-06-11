@@ -1280,14 +1280,15 @@ add_action('admin_menu', function () {
         <?php if( $optionsAIKey['openai_key']) : ?>
           <div class="w-100 bg-white rounded-16px p-16px">
             <button class="ai_generate_button
-            <?php if($options['cookie_declaration'] || 
-                      $options['privacy_policy'] || 
-                      $options['consent_request'] ) echo 'hide'; ?>">
-              <div class="loader"></div><div>Generate</div>
+            <?php if($options['cookie_declaration'] ||
+                      $options['privacy_policy'] ||
+                      $options['consent_request'] ||
+                      $options['domain_categorization'] ) echo 'hide'; ?>">
+              <div class="loader"></div><div><?php echo esc_html__("Generate", 'aesirx-consent') ?></div>
             </button>
             <div id="cookie_declaration" class="prompt_item">
-              <div class="prompt_item_title">Cookie Declaration</div>
-              <div class="prompt_item_warning">⚠️ This is a draft generated based on your site’s scan results. Please review and edit to ensure it reflects your actual data practices before publishing.</div>
+              <div class="prompt_item_title"><?php echo esc_html__("Cookie Declaration", 'aesirx-consent') ?></div>
+              <div class="prompt_item_warning"><?php echo esc_html__("⚠️ This is a draft generated based on your site’s scan results. Please review and edit to ensure it reflects your actual data practices before publishing.", 'aesirx-consent') ?></div>
               <div class="prompt_item_result">
                 <div class="loading">
                   <div class="loader"></div>
@@ -1297,12 +1298,12 @@ add_action('admin_menu', function () {
                 </div>
               </div>
               <button class="prompt_item_regenerate <?php if(!$options['cookie_declaration']) echo 'hide'; ?>">
-                <div class="loader"></div><div>Regenerate</div>
+                <div class="loader"></div><div><?php echo esc_html__("Generate", 'aesirx-consent') ?></div>
               </button>
             </div>
             <div id="privacy_policy" class="prompt_item">
-              <div class="prompt_item_title">Privacy Policy</div>
-              <div class="prompt_item_warning">⚠️ This is a draft generated based on your site’s scan results. Please review and edit to ensure it reflects your actual data practices before publishing.</div>
+              <div class="prompt_item_title"><?php echo esc_html__("Privacy Policy", 'aesirx-consent') ?></div>
+              <div class="prompt_item_warning"><?php echo esc_html__("⚠️ This is a draft generated based on your site’s scan results. Please review and edit to ensure it reflects your actual data practices before publishing.", 'aesirx-consent') ?></div>
               <div class="prompt_item_result">
                 <div class="loading">
                   <div class="loader"></div>
@@ -1312,12 +1313,12 @@ add_action('admin_menu', function () {
                 </div>
               </div>
               <button class="prompt_item_regenerate <?php if(!$options['privacy_policy']) echo 'hide'; ?>">
-                <div class="loader"></div><div>Regenerate</div>
+                <div class="loader"></div><div><?php echo esc_html__("Generate", 'aesirx-consent') ?></div>
               </button>
             </div>
             <div id="consent_request" class="prompt_item">
-              <div class="prompt_item_title">Consent Request</div>
-              <div class="prompt_item_warning">⚠️ This is a draft generated based on your site’s scan results. Please review and edit to ensure it reflects your actual data practices before publishing.</div>
+              <div class="prompt_item_title"><?php echo esc_html__("Consent Request", 'aesirx-consent') ?></div>
+              <div class="prompt_item_warning"><?php echo esc_html__("⚠️ This is a draft generated based on your site’s scan results. Please review and edit to ensure it reflects your actual data practices before publishing.", 'aesirx-consent') ?></div>
               <div class="prompt_item_result">
                 <div class="loading">
                   <div class="loader"></div>
@@ -1327,8 +1328,48 @@ add_action('admin_menu', function () {
                 </div>
               </div>
               <button class="prompt_item_regenerate <?php if(!$options['consent_request']) echo 'hide'; ?>">
-                <div class="loader"></div><div>Regenerate</div>
+                <div class="loader"></div><div><?php echo esc_html__("Generate", 'aesirx-consent') ?></div>
               </button>
+            </div>
+            <?php
+             $installed_plugins = get_plugins();
+             $active_plugins = get_option('active_plugins');
+             ?>
+            <div id="domain_categorization" class="prompt_item">
+              <div class="prompt_item_title"><?php echo esc_html__("Domain Categorization", 'aesirx-consent') ?></div>
+              <div class="prompt_item_warning"><?php echo esc_html__("⚠️ This is a draft generated based on your site’s scan results. Please review and edit to ensure it reflects your actual data practices before publishing.", 'aesirx-consent') ?></div>
+              <div class="prompt_item_result">
+                <div class="loading">
+                  <div class="loader"></div>
+                </div>
+                <div class="result">
+                <?php echo stripslashes($options['domain_categorization']) ?>
+                </div>
+              </div>
+              <div class="domain_categorization_result"></div>
+              <div class="domain_categorization_buttons">
+                <button class="auto_populated <?php if(!$options['domain_categorization']) echo 'hide'; ?>">
+                  <div class="loader"></div><div><?php echo esc_html__("Auto-Populated Blocking List", 'aesirx-consent') ?></div>
+                </button>
+                <button class="prompt_item_regenerate <?php if(!$options['domain_categorization']) echo 'hide'; ?>">
+                  <div class="loader"></div><div><?php echo esc_html__("Generate", 'aesirx-consent') ?></div>
+                </button>
+              </div>
+              <div class="list_plugin">
+                <?php
+                  foreach ($installed_plugins as $path => $plugin) {
+                    if ($plugin['TextDomain'] === 'aesirx-consent' || $plugin['TextDomain'] === '' || !in_array($path, $active_plugins, true)) {
+                      continue;
+                    }
+                    echo wp_kses("
+                          <div class='list_plugin_item'
+                                id='".esc_attr($plugin['TextDomain'])."'
+                                value='" . esc_attr($plugin['TextDomain']) . "' >
+                              ". $plugin['Name'] ."
+                          </div>", aesirx_analytics_escape_html());
+                  }
+                ?>
+              </div>
             </div>
           </div>
         <?php else : ?>
@@ -1359,8 +1400,8 @@ add_action('admin_enqueue_scripts', function ($hook) {
       'thread_id' =>  $optionsAI['thread_id'],
       'cookie_declaration' =>  $optionsAI['cookie_declaration'],
       'privacy_policy' =>  $optionsAI['privacy_policy'],
-      'consent_request' =>  $optionsAI['consent_request']
-     
+      'consent_request' =>  $optionsAI['consent_request'],
+      'domain_categorization' =>  $optionsAI['domain_categorization']
   ]);
     wp_enqueue_script('aesirx_analytics_ai');
   }
@@ -1796,4 +1837,35 @@ function update_aesirx_options() {
 
     // Return a success response
     wp_send_json_success('Options updated successfully');
+}
+
+add_action('wp_ajax_update_aesirx_plugins_options', 'update_aesirx_plugins_options');
+
+function update_aesirx_plugins_options() {
+  check_ajax_referer('aesirx_consent_nonce', 'security');
+
+  // Decode JSON string directly
+  $json_raw = $_POST['options'] ?? '{}';
+  $decoded_options = json_decode(stripslashes($json_raw), true); // Decode JSON
+
+  if (!is_array($decoded_options)) {
+      wp_send_json_error('Invalid options format');
+  }
+
+  // Fetch current DB option
+  $pluginOptions = get_option('aesirx_analytics_plugin_options', []);
+
+  // Overwrite specific keys to avoid leftover values
+  $pluginOptions['blocking_cookies'] = array_filter($decoded_options['blocking_cookies'] ?? []);
+  $pluginOptions['blocking_cookies_category'] = $decoded_options['blocking_cookies_category'] ?? [];
+  $pluginOptions['blocking_cookies_plugins'] = array_filter($decoded_options['blocking_cookies_plugins'] ?? []);
+  $pluginOptions['blocking_cookies_plugins_category'] = $decoded_options['blocking_cookies_plugins_category'] ?? [];
+
+
+  // Merge rest if needed
+  $merged = array_replace_recursive($pluginOptions, $decoded_options);
+
+  update_option('aesirx_analytics_plugin_options', $merged);
+
+  wp_send_json_success('Options updated successfully');
 }
