@@ -1054,7 +1054,7 @@ add_action('admin_init', function () {
 
   add_settings_section(
     'aesirx_consent_ai_settings',
-    'AI Privacy Generator',
+    '',
     function () {
       $manifest = json_decode(
         file_get_contents(plugin_dir_path(__DIR__) . 'assets-manifest.json', true)
@@ -1262,8 +1262,8 @@ add_action('admin_menu', function () {
   6);
   add_submenu_page(
     'aesirx-consent-management-plugin',
-    'AI Privacy Generator',
-    'AI Privacy Generator',
+    'AI Privacy Advisor',
+    'AI Privacy Advisor',
     'manage_options',
     'aesirx-cmp-ai',
     function () {
@@ -1273,12 +1273,20 @@ add_action('admin_menu', function () {
         do_settings_sections('aesirx_consent_ai_plugin');
         $options = get_option('aesirx_consent_ai_plugin_options', []);
       ?>
+      <h2 class="aesirx_heading">AI Privacy Advisor</h2>
       <div class="aesirx_consent_wrapper">
         <?php
           $optionsAIKey = get_option('aesirx_consent_ai_key_plugin_options',[]);
         ?>
         <?php if( $optionsAIKey['openai_key']) : ?>
-          <div class="w-100 bg-white rounded-16px p-16px">
+          <div class="w-100">
+            <div class="ai_introduction bg-white rounded-16px">
+              <div>
+                <?php
+                  echo wp_kses("<strong>AI Privacy Advisor</strong> helps you manage cookie and beacon compliance by analyzing what loads before and after consent. It enables AI Auto-Blocking and generates privacy documentation based on real scan data. With one click, you can configure third-party and domain/path blocking, and create cookie declarations, privacy policies, and consent text to support GDPR and ePrivacy Directive compliance. While optimized for strict opt-in regimes like the EU, it also supports transparency and documentation requirements for opt-out frameworks such as CCPA.", aesirx_analytics_escape_html());
+                ?>
+              </div>
+            </div>
             <button class="ai_generate_button
             <?php if($options['cookie_declaration'] ||
                       $options['privacy_policy'] ||
@@ -1286,61 +1294,31 @@ add_action('admin_menu', function () {
                       $options['domain_categorization'] ) echo 'hide'; ?>">
               <div class="loader"></div><div><?php echo esc_html__("Generate", 'aesirx-consent') ?></div>
             </button>
-            <div id="cookie_declaration" class="prompt_item">
-              <div class="prompt_item_title"><?php echo esc_html__("Cookie Declaration", 'aesirx-consent') ?></div>
-              <div class="prompt_item_warning"><?php echo esc_html__("⚠️ This is a draft generated based on your site’s scan results. Please review and edit to ensure it reflects your actual data practices before publishing.", 'aesirx-consent') ?></div>
-              <div class="prompt_item_result">
-                <div class="loading">
-                  <div class="loader"></div>
-                </div>
-                <div class="result">
-                  <?php echo stripslashes($options['cookie_declaration']) ?>
-                </div>
-              </div>
-              <button class="prompt_item_regenerate <?php if(!$options['cookie_declaration']) echo 'hide'; ?>">
-                <div class="loader"></div><div><?php echo esc_html__("Generate", 'aesirx-consent') ?></div>
-              </button>
-            </div>
-            <div id="privacy_policy" class="prompt_item">
-              <div class="prompt_item_title"><?php echo esc_html__("Privacy Policy", 'aesirx-consent') ?></div>
-              <div class="prompt_item_warning"><?php echo esc_html__("⚠️ This is a draft generated based on your site’s scan results. Please review and edit to ensure it reflects your actual data practices before publishing.", 'aesirx-consent') ?></div>
-              <div class="prompt_item_result">
-                <div class="loading">
-                  <div class="loader"></div>
-                </div>
-                <div class="result">
-                  <?php echo stripslashes($options['privacy_policy']) ?>
-                </div>
-              </div>
-              <button class="prompt_item_regenerate <?php if(!$options['privacy_policy']) echo 'hide'; ?>">
-                <div class="loader"></div><div><?php echo esc_html__("Generate", 'aesirx-consent') ?></div>
-              </button>
-            </div>
-            <div id="consent_request" class="prompt_item">
-              <div class="prompt_item_title"><?php echo esc_html__("Consent Request", 'aesirx-consent') ?></div>
-              <div class="prompt_item_warning"><?php echo esc_html__("⚠️ This is a draft generated based on your site’s scan results. Please review and edit to ensure it reflects your actual data practices before publishing.", 'aesirx-consent') ?></div>
-              <div class="prompt_item_result">
-                <div class="loading">
-                  <div class="loader"></div>
-                </div>
-                <div class="result">
-                <?php echo stripslashes($options['consent_request']) ?>
-                </div>
-              </div>
-              <button class="prompt_item_regenerate <?php if(!$options['consent_request']) echo 'hide'; ?>">
-                <div class="loader"></div><div><?php echo esc_html__("Generate", 'aesirx-consent') ?></div>
-              </button>
-            </div>
             <?php
              $installed_plugins = get_plugins();
              $active_plugins = get_option('active_plugins');
              ?>
-            <div id="domain_categorization" class="prompt_item">
+            <div id="domain_categorization" class="prompt_item bg-white rounded-16px p-32px">
               <div class="prompt_item_title"><?php echo esc_html__("Domain Categorization", 'aesirx-consent') ?></div>
-              <div class="prompt_item_warning"><?php echo esc_html__("⚠️ This is a draft generated based on your site’s scan results. Please review and edit to ensure it reflects your actual data practices before publishing.", 'aesirx-consent') ?></div>
+              <div class="prompt_item_question">
+                <img width='24px' height='24px' src='<?php echo plugins_url( 'aesirx-consent/assets/images-plugin/question.png') ?>' />
+                <?php echo esc_html__("This draft was automatically generated based on real scan data from your website and identifies third-party domains, cookies, and beacons used, categorized by purpose.", 'aesirx-consent') ?>
+              </div>
+              <div class="prompt_item_warning">
+                <img width='24px' height='24px' src='<?php echo plugins_url( 'aesirx-consent/assets/images-plugin/warning.png') ?>' />
+                <?php echo esc_html__("Please review and adjust the content to make sure it reflects your actual data practices before publishing.", 'aesirx-consent') ?>
+              </div>
+              <div class="prompt_item_info">
+                <img width='24px' height='24px' src='<?php echo plugins_url( 'aesirx-consent/assets/images-plugin/info.png') ?>' />
+                <?php echo esc_html__("For full setup instructions: AesirX CMP Guide: How to Generate Domain Categorization Text with AI", 'aesirx-consent') ?>
+              </div>
               <div class="prompt_item_result">
                 <div class="loading">
                   <div class="loader"></div>
+                </div>
+                <div class="copy_clipboard">
+                  <img width='20px' height='20px' src='<?php echo plugins_url( 'aesirx-consent/assets/images-plugin/copy.svg') ?>' />
+                  <div class="copied_text">Copied!</div>
                 </div>
                 <div class="result">
                 <?php echo stripslashes($options['domain_categorization']) ?>
@@ -1349,10 +1327,20 @@ add_action('admin_menu', function () {
               <div class="domain_categorization_result"></div>
               <div class="domain_categorization_buttons">
                 <button class="auto_populated <?php if(!$options['domain_categorization']) echo 'hide'; ?>">
-                  <div class="loader"></div><div><?php echo esc_html__("Auto-Populated Blocking List", 'aesirx-consent') ?></div>
+                  <div class="loader"></div>
+                  <img width='22px' height='22px' src='<?php echo plugins_url( 'aesirx-consent/assets/images-plugin/shield_block.png') ?>' />
+                  <?php echo esc_html__("Enable AI Auto-Blocking", 'aesirx-consent') ?>
                 </button>
+                <div class="auto_populated_information">
+                  <img width='22px' height='22px' src='<?php echo plugins_url( 'aesirx-consent/assets/images-plugin/info_gray.png') ?>' />
+                  <div class="auto_populated_information_content">
+                    <div class="title">Enable Automatic AI-Based Blocking</div>
+                    <div>The AI scan compares what loads before and after consent to identify third-party domains, plugins, and beacons. These are categorized in the Domain Categorization section. When you Enable AI Blocking, this will automatically update your Consent Shield settings, applying blocking rules in the Third-Party Plugins and Domain/Path-Based Blocking sections. </div>
+                  </div>
+                  Automatically apply third-party blocking <br/> based on scan results.
+                </div>
                 <button class="prompt_item_regenerate <?php if(!$options['domain_categorization']) echo 'hide'; ?>">
-                  <div class="loader"></div><div><?php echo esc_html__("Generate", 'aesirx-consent') ?></div>
+                  <div class="loader"></div><div><?php echo esc_html__("Regenerate", 'aesirx-consent') ?></div>
                 </button>
               </div>
               <div class="list_plugin">
@@ -1370,6 +1358,96 @@ add_action('admin_menu', function () {
                   }
                 ?>
               </div>
+            </div>
+            <div id="cookie_declaration" class="prompt_item bg-white rounded-16px p-32px">
+              <div class="prompt_item_title"><?php echo esc_html__("Cookie Declaration", 'aesirx-consent') ?></div>
+              <div class="prompt_item_question">
+                <img width='24px' height='24px' src='<?php echo plugins_url( 'aesirx-consent/assets/images-plugin/question.png') ?>' />
+                <?php echo esc_html__("This draft was automatically generated based on real scan data from your website and lists the cookies and tracking technologies detected.", 'aesirx-consent') ?>
+              </div>
+              <div class="prompt_item_warning">
+                <img width='24px' height='24px' src='<?php echo plugins_url( 'aesirx-consent/assets/images-plugin/warning.png') ?>' />
+                <?php echo esc_html__("Please review and adjust the content to make sure it reflects your actual data practices before publishing.", 'aesirx-consent') ?>
+              </div>
+              <div class="prompt_item_info">
+                <img width='24px' height='24px' src='<?php echo plugins_url( 'aesirx-consent/assets/images-plugin/info.png') ?>' />
+                <?php echo esc_html__("For full setup instructions: AesirX CMP Guide: How to Generate a Cookie Declaration with AI", 'aesirx-consent') ?>
+              </div>
+              <div class="prompt_item_result">
+                <div class="loading">
+                  <div class="loader"></div>
+                </div>
+                <div class="copy_clipboard">
+                  <img width='20px' height='20px' src='<?php echo plugins_url( 'aesirx-consent/assets/images-plugin/copy.svg') ?>' />
+                  <div class="copied_text">Copied!</div>
+                </div>
+                <div class="result">
+                  <?php echo stripslashes($options['cookie_declaration']) ?>
+                </div>
+              </div>
+              <button class="prompt_item_regenerate <?php if(!$options['cookie_declaration']) echo 'hide'; ?>">
+                <div class="loader"></div><div><?php echo esc_html__("Regenerate", 'aesirx-consent') ?></div>
+              </button>
+            </div>
+            <div id="privacy_policy" class="prompt_item bg-white rounded-16px p-32px">
+              <div class="prompt_item_title"><?php echo esc_html__("Privacy Policy", 'aesirx-consent') ?></div>
+              <div class="prompt_item_question">
+                <img width='24px' height='24px' src='<?php echo plugins_url( 'aesirx-consent/assets/images-plugin/question.png') ?>' />
+                <?php echo esc_html__("This draft was automatically generated based on real scan data from your website and outlines the data collection and processing activities detected.", 'aesirx-consent') ?>
+              </div>
+              <div class="prompt_item_warning">
+                <img width='24px' height='24px' src='<?php echo plugins_url( 'aesirx-consent/assets/images-plugin/warning.png') ?>' />
+                <?php echo esc_html__("Please review and adjust the content to make sure it reflects your actual data practices before publishing.", 'aesirx-consent') ?>
+              </div>
+              <div class="prompt_item_info">
+                <img width='24px' height='24px' src='<?php echo plugins_url( 'aesirx-consent/assets/images-plugin/info.png') ?>' />
+                <?php echo esc_html__("For full setup instructions: AesirX CMP Guide: How to Generate a Privacy Policy with AI", 'aesirx-consent') ?>
+              </div>
+              <div class="prompt_item_result">
+                <div class="loading">
+                  <div class="loader"></div>
+                </div>
+                <div class="copy_clipboard">
+                  <img width='20px' height='20px' src='<?php echo plugins_url( 'aesirx-consent/assets/images-plugin/copy.svg') ?>' />
+                  <div class="copied_text">Copied!</div>
+                </div>
+                <div class="result">
+                  <?php echo stripslashes($options['privacy_policy']) ?>
+                </div>
+              </div>
+              <button class="prompt_item_regenerate <?php if(!$options['privacy_policy']) echo 'hide'; ?>">
+                <div class="loader"></div><div><?php echo esc_html__("Regenerate", 'aesirx-consent') ?></div>
+              </button>
+            </div>
+            <div id="consent_request" class="prompt_item bg-white rounded-16px p-32px">
+              <div class="prompt_item_title"><?php echo esc_html__("Consent Request", 'aesirx-consent') ?></div>
+              <div class="prompt_item_question">
+                <img width='24px' height='24px' src='<?php echo plugins_url( 'aesirx-consent/assets/images-plugin/question.png') ?>' />
+                <?php echo esc_html__("This draft was automatically generated based on real scan data from your website and provides a consent message tailored to the technologies and data flows detected.", 'aesirx-consent') ?>
+              </div>
+              <div class="prompt_item_warning">
+                <img width='24px' height='24px' src='<?php echo plugins_url( 'aesirx-consent/assets/images-plugin/warning.png') ?>' />
+                <?php echo esc_html__("Please review and adjust the content to make sure it reflects your actual data practices before publishing.", 'aesirx-consent') ?>
+              </div>
+              <div class="prompt_item_info">
+                <img width='24px' height='24px' src='<?php echo plugins_url( 'aesirx-consent/assets/images-plugin/info.png') ?>' />
+                <?php echo esc_html__("For full setup instructions: AesirX CMP Guide: How to Generate Consent Request Text with AI", 'aesirx-consent') ?>
+              </div>
+              <div class="prompt_item_result">
+                <div class="loading">
+                  <div class="loader"></div>
+                </div>
+                 <div class="copy_clipboard">
+                  <img width='20px' height='20px' src='<?php echo plugins_url( 'aesirx-consent/assets/images-plugin/copy.svg') ?>' />
+                  <div class="copied_text">Copied!</div>
+                </div>
+                <div class="result">
+                <?php echo stripslashes($options['consent_request']) ?>
+                </div>
+              </div>
+              <button class="prompt_item_regenerate <?php if(!$options['consent_request']) echo 'hide'; ?>">
+                <div class="loader"></div><div><?php echo esc_html__("Regenerate", 'aesirx-consent') ?></div>
+              </button>
             </div>
           </div>
         <?php else : ?>

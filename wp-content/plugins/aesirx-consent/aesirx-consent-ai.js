@@ -134,7 +134,7 @@ jQuery(document).ready(async function ($) {
     $(`#${id} .prompt_item_regenerate, #${id} .auto_populated`).removeClass('hide');
     if (id === 'domain_categorization') {
       $('.auto_populated').prop('disabled', false);
-      $('.domain_categorization_buttons .error').remove();
+      $('#domain_categorization .error').remove();
     }
   }
 
@@ -182,16 +182,48 @@ jQuery(document).ready(async function ($) {
     const result = await generateDomainConfigure(validJson);
     if (result) {
       $('.auto_populated').prop('disabled', true);
-      $('.auto_populated').after(
-        '<div>Blocking List updated, please check <a href="/wp-admin/admin.php?page=aesirx-consent-management-plugin">here</a></div>'
+      $('.domain_categorization_buttons').after(
+        '<div>Blocking rules updated. Review the applied settings on <a href="/wp-admin/admin.php?page=aesirx-consent-management-plugin">the Consent Shield page</a></div>'
       );
     } else {
       $('.auto_populated').prop('disabled', true);
-      $('.auto_populated').after(
+      $('.domain_categorization_buttons').after(
         "<div class='error' style='color:red'>Error on generate blocking list, please regenerate</div>"
       );
     }
   });
+
+  $('.copy_clipboard').click(function () {
+    const htmlContent = $(this).parent().find('.result').html();
+
+    const tempEl = document.createElement('div');
+    tempEl.contentEditable = true;
+    tempEl.innerHTML = htmlContent;
+    document.body.appendChild(tempEl);
+
+    const range = document.createRange();
+    range.selectNodeContents(tempEl);
+
+    const selection = window.getSelection();
+    selection.removeAllRanges();
+    selection.addRange(range);
+
+    try {
+      const success = document.execCommand('copy');
+      console.log('HTML copied:', success);
+    } catch (err) {
+      console.error('Failed to copy HTML:', err);
+    }
+
+    selection.removeAllRanges();
+    document.body.removeChild(tempEl);
+    const copiedText = $(this).find('.copied_text');
+    copiedText.addClass('show');
+    setTimeout(function () {
+      copiedText.removeClass('show');
+    }, 1000);
+  });
+
   async function generateDomainConfigure(json) {
     try {
       const formattedOptions = JSON?.parse(json);
