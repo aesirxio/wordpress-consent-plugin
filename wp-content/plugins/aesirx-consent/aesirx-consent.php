@@ -3,7 +3,7 @@
  * Plugin Name: AesirX Consent
  * Plugin URI: https://analytics.aesirx.io?utm_source=wpplugin&utm_medium=web&utm_campaign=wordpress&utm_id=aesirx&utm_term=wordpress&utm_content=analytics
  * Description: Aesirx Consent plugin. When you join forces with AesirX, you're not just becoming a Partner - you're also becoming a freedom fighter in the battle for privacy! Earn 25% Affiliate Commission <a href="https://aesirx.io/partner?utm_source=wpplugin&utm_medium=web&utm_campaign=wordpress&utm_id=aesirx&utm_term=wordpress&utm_content=analytics">[Click to Join]</a>
- * Version: 1.8.0
+ * Version: 1.9.0
  * Author: aesirx.io
  * Author URI: https://aesirx.io/
  * Domain Path: /languages
@@ -437,8 +437,9 @@ $consent = $wpdb->get_row( // phpcs:ignore WordPress.DB.DirectDatabaseQuery.Dire
 );
 
 $disabled_block_domains = get_option('aesirx_analytics_plugin_options_disabled_block_domains');
+$consentParams = isset($_GET['consent']) ? sanitize_text_field($_GET['consent']) : 'no';
 
-if (!$consent) {
+if (!$consent && $consentParams !== 'yes') {
     add_action( 'wp_enqueue_scripts', function (): void {
 
 		$deregistered_scripts = aesirx_analytics_get_deregistered_scripts();
@@ -512,7 +513,7 @@ if (!$consent) {
 
         return $deregistered_scripts;
     }
-} else if ($disabled_block_domains && $consent) {
+} else if ($disabled_block_domains && ($consent || $consentParams !== 'yes')) {
     add_action( 'wp_enqueue_scripts', function (): void {
 
 		$deregistered_scripts = aesirx_analytics_block_disabled_domains();

@@ -1,0 +1,1099 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: AesirX Consent 1.9.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/aesirx-consent\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2024-07-25T03:47:45+00:00\n"
+"PO-Revision-Date: 2024-07-26 17:10+0200\n"
+"Language: lt_LT\n"
+"X-Domain: aesirx-consent\n"
+"X-Generator: Poedit 3.4.4\n"
+
+#. Plugin URI of the plugin
+#: aesirx-consent.php
+msgid "https://analytics.aesirx.io?utm_source=wpplugin&utm_medium=web&utm_campaign=wordpress&utm_id=aesirx&utm_term=wordpress&utm_content=analytics"
+msgstr "https://analytics.aesirx.io?utm_source=wpplugin&utm_medium=web&utm_campaign=wordpress&utm_id=aesirx&utm_term=wordpress&utm_content=analytics"
+
+#. Author of the plugin
+#: aesirx-consent.php
+msgid "aesirx.io"
+msgstr "aesirx.io"
+
+#. Author URI of the plugin
+#: aesirx-consent.php
+msgid "https://aesirx.io/"
+msgstr "https://aesirx.io/"
+
+#: aesirx-consent.php:225
+msgid "Settings"
+msgstr "Nustatymai"
+
+#: aesirx-consent.php:340
+msgid "Problem with Aesirx Analytics plugin install"
+msgstr "Problema su Aesirx Analytics papildinio įdiegimu"
+
+#: includes/settings.php:17
+msgid "Please register your license at Signup.aesirx.io to enable the external first-party server."
+msgstr "Prašome užregistruoti savo licenciją portale Signup.aesirx.io, kad įgalintumėte išorinį pirmosios šalies serverį."
+
+#: includes/settings.php:27
+msgid "Domain is empty."
+msgstr "Domenas yra tuščias."
+
+#: includes/settings.php:34
+msgid "Invalid domain format."
+msgstr "Neteisingas domeno formatas."
+
+#: aesirx-consent.php:43
+#: includes/settings.php:1416
+msgid "Consent"
+msgstr "Sutikimas"
+
+#: src/AesirxAnalyticsMysqlHelper.php:101
+msgid "Database error occurred."
+msgstr "Įvyko duomenų bazės klaida."
+
+#: src/AesirxAnalyticsMysqlHelper.php:255
+#: src/AesirxAnalyticsMysqlHelper.php:594
+#: src/AesirxAnalyticsMysqlHelper.php:632
+#: src/AesirxAnalyticsMysqlHelper.php:671
+#: src/AesirxAnalyticsMysqlHelper.php:705
+msgid "\"start\" filter is not correct"
+msgstr "\"pradžios\" filtras neteisingas"
+
+#: src/AesirxAnalyticsMysqlHelper.php:263
+#: src/AesirxAnalyticsMysqlHelper.php:602
+#: src/AesirxAnalyticsMysqlHelper.php:640
+#: src/AesirxAnalyticsMysqlHelper.php:680
+#: src/AesirxAnalyticsMysqlHelper.php:713
+msgid "\"end\" filter is not correct"
+msgstr "\"pabaigos\" filtras neteisingas"
+
+#: src/AesirxAnalyticsMysqlHelper.php:333
+msgid "Domain not found"
+msgstr "Domenas nerastas"
+
+#: src/AesirxAnalyticsMysqlHelper.php:413
+#: src/AesirxAnalyticsMysqlHelper.php:477
+#: src/AesirxAnalyticsMysqlHelper.php:530
+#: src/AesirxAnalyticsMysqlHelper.php:555
+#: src/AesirxAnalyticsMysqlHelper.php:574
+#: src/AesirxAnalyticsMysqlHelper.php:734
+#: src/AesirxAnalyticsMysqlHelper.php:758
+#: src/AesirxAnalyticsMysqlHelper.php:785
+#: src/AesirxAnalyticsMysqlHelper.php:825
+#: src/AesirxAnalyticsMysqlHelper.php:1183
+#: src/Mysql/GetVisitorConsentList.php:60
+msgid "There was a problem with the database query."
+msgstr "Įvyko duomenų bazės užklausos problema."
+
+#: src/AesirxAnalyticsMysqlHelper.php:1007
+#: src/AesirxAnalyticsMysqlHelper.php:1026
+#: src/AesirxAnalyticsMysqlHelper.php:1046
+#: src/AesirxAnalyticsMysqlHelper.php:1387
+msgid "Something went wrong"
+msgstr "Kažkas įvyko neteisingai"
+
+#: src/AesirxAnalyticsMysqlHelper.php:1108
+msgid "There was a problem updating the data in the database."
+msgstr "Įvyko problema atnaujinant duomenis duomenų bazėje."
+
+#: src/Mysql/AddConsentLevel1.php:23
+#: src/Mysql/AddConsentLevel5.php:23
+#: src/Mysql/AddConsentLevel6.php:23
+msgid "The uuid parameter is required."
+msgstr "UUID parametras yra privalomas."
+
+#: src/Mysql/AddConsentLevel1.php:27
+#: src/Mysql/AddConsentLevel5.php:27
+#: src/Mysql/AddConsentLevel6.php:27
+msgid "The consent parameter is required and must be a number."
+msgstr "Sutikimo parametras yra privalomas ir turi būti skaičius."
+
+#: src/Mysql/AddConsentLevel1.php:53
+#: src/Mysql/AddConsentLevel5.php:53
+#: src/Mysql/AddConsentLevel6.php:53
+msgid "Previous consent was not expired"
+msgstr "Ankstesnis sutikimas nebuvo pasibaigęs"
+
+#: src/Mysql/AddConsentLevel2.php:16
+#: src/Mysql/AddConsentLevel3or4.php:55
+msgid "Invalid token"
+msgstr "Neteisingas žetonas"
+
+#: src/Mysql/AddConsentLevel2.php:24
+#: src/Mysql/AddConsentLevel3or4.php:19
+msgid "Visitor not found"
+msgstr "Lankytojas nerastas"
+
+#: src/Mysql/AddConsentLevel2.php:41
+#: src/Mysql/AddConsentLevel3or4.php:80
+msgid "Previous consent still active"
+msgstr "Ankstesnis sutikimas vis dar aktyvus"
+
+#: src/Mysql/AddConsentLevel2.php:124
+#: src/Mysql/AddConsentLevel3or4.php:167
+msgid "There was a problem querying the data in the database."
+msgstr "Įvyko problema atliekant duomenų užklausas duomenų bazėje."
+
+#: src/Mysql/AddConsentLevel3or4.php:12
+msgid "Invalid signature"
+msgstr "Neteisingas parašas"
+
+#: src/Mysql/AddConsentLevel3or4.php:26
+msgid "Wallet not found"
+msgstr "Piniginė nerasta"
+
+#: src/Mysql/AddConsentLevel3or4.php:32
+msgid "Wallet nonce not found"
+msgstr "Piniginės nonce nerastas"
+
+#: src/Mysql/AddConsentLevel3or4.php:39
+#: src/Mysql/RevokeConsentLevel3or4.php:37
+msgid "Nonce is not valid"
+msgstr "Nonce neteisingas"
+
+#: src/Mysql/AddConsentLevel3or4.php:48
+#: src/Mysql/RevokeConsentLevel3or4.php:44
+msgid "Contract is not valid"
+msgstr "Sutartis neteisinga"
+
+#: src/Mysql/CloseVisitorEvent.php:14
+#: src/Mysql/CloseVisitorEvent.php:18
+msgid "The event uuid parameter is required."
+msgstr "Įvykio UUID parametras yra privalomas."
+
+#: src/Mysql/CloseVisitorEvent.php:36
+msgid "Failed to update analytics events."
+msgstr "Nepavyko atnaujinti analitikos įvykių."
+
+#: src/Mysql/CloseVisitorEvent.php:43
+msgid "Visitor event not found."
+msgstr "Įvykio lankytojas nerastas."
+
+#: src/Mysql/CloseVisitorEvent.php:55
+msgid "Failed to update analytics flows"
+msgstr "Nepavyko atnaujinti analitikos srautų"
+
+#: src/Mysql/GetNonce.php:12
+msgid "Address is not valid"
+msgstr "Adresas neteisingas"
+
+#: src/Mysql/RevokeConsentLevel3or4.php:14
+msgid "Invalid signature."
+msgstr "Neteisingas parašas."
+
+#: src/Mysql/RevokeConsentLevel3or4.php:24
+msgid "Wallet not found."
+msgstr "Piniginė nerasta."
+
+#: src/Mysql/RevokeConsentLevel3or4.php:30
+msgid "Nonce not found."
+msgstr "Nonce nerastas."
+
+#: src/Mysql/RevokeConsentLevel3or4.php:55
+msgid "Failed to update consent expiration."
+msgstr "Nepavyko atnaujinti sutikimo galiojimo laiko."
+
+#: src/Mysql/RevokeConsentLevel3or4.php:62
+msgid "Failed to update nonce."
+msgstr "Nepavyko atnaujinti nonce."
+
+#: src/Mysql/StartFingerprint.php:147
+msgid "Wrong URL format, domain not found"
+msgstr "Neteisingas URL formatas, domenas nerastas"
+
+#: src/Mysql/StartFingerprint.php:151
+msgid "The domain sent in the new URL does not match the domain stored in the visitor document"
+msgstr "Domenas, nurodytas naujame URL, nesutampa su domenu, saugomu lankytojo dokumente"
+
+#: src/Route/Middleware/IsBackendMiddleware.php:18
+msgid "Permission denied!"
+msgstr "Leidimas uždraustas!"
+
+#: src/Track/CliTracker.php:32
+msgid "Error in tracking"
+msgstr "Klaida sekime"
+
+#. Plugin Name of the plugin
+#: aesirx-consent.php
+msgid "AesirX Consent"
+msgstr "AesirX Sutikimas"
+
+#. Description of the plugin
+#: aesirx-consent.php
+msgid "Aesirx Consent plugin. When you join forces with AesirX, you're not just becoming a Partner - you're also becoming a freedom fighter in the battle for privacy! Earn 25% Affiliate Commission <a href=\"https://aesirx.io/partner?utm_source=wpplugin&utm_medium=web&utm_campaign=wordpress&utm_id=aesirx&utm_term=wordpress&utm_content=analytics\">[Click to Join]</a>"
+msgstr "Aesirx Sutikimo papildinys. Kai jūs prisijungiate prie AesirX, jūs ne tik tampate Partneriu – jūs tampate ir kovos už privatumą laisvės kovotoju! Uždirbkite 25% partnerių komisinio atlygio <a href=\"https://aesirx.io/partner?utm_source=wpplugin&utm_medium=web&utm_campaign=wordpress&utm_id=aesirx&utm_term=wordpress&utm_content=analytics\">[Paspauskite norėdami prisijungti]</a>"
+
+#: aesirx-consent.php:39
+#: includes/settings.php:1412
+msgid "Shield of Privacy"
+msgstr "Privatumo Skydas"
+
+#: aesirx-consent.php:40
+#: includes/settings.php:1413
+msgid "Revoke your consent for data use whenever you wish."
+msgstr "Atšaukite savo sutikimą duomenų naudojimui bet kada, kai norite."
+
+#: aesirx-consent.php:41
+#: includes/settings.php:1414
+msgid "Manage Decentralized Consent"
+msgstr "Tvarkykite Decentralizuotą Sutikimą"
+
+#: aesirx-consent.php:42
+#: includes/settings.php:1415
+msgid "Revoke Consent"
+msgstr "Atšaukite Sutikimą"
+
+#: aesirx-consent.php:44
+#: includes/settings.php:1417
+msgid "Reject"
+msgstr "Atmesti"
+
+#: aesirx-consent.php:45
+#: includes/settings.php:1418
+msgid "Please connect your Web3 wallet"
+msgstr "Prašome prisijungti savo Web3 piniginę"
+
+#: aesirx-consent.php:46
+#: includes/settings.php:1419
+msgid "Please sign the message on your wallet twice and wait for it to be saved."
+msgstr "Prašome pasirašyti pranešimą savo piniginėje du kartus ir palaukite, kol jis bus išsaugotas."
+
+#: aesirx-consent.php:47
+#: includes/settings.php:1420
+msgid "Saving..."
+msgstr "Išsaugoma..."
+
+#: aesirx-consent.php:48
+#: includes/settings.php:1421
+msgid "Please connect to your wallet"
+msgstr "Prašome prisijungti prie savo piniginės"
+
+#: aesirx-consent.php:49
+#: includes/settings.php:1422
+msgid "Connecting"
+msgstr "Prisijungiama"
+
+#: aesirx-consent.php:50
+#: includes/settings.php:1423
+msgid "TRACKING AND DATA PRIVACY PREFERENCES"
+msgstr "SEKIMO IR DUOMENŲ PRIVATUMO PREFERENCIJOS"
+
+#: aesirx-consent.php:51
+#: includes/settings.php:1424
+msgid "About"
+msgstr "Apie"
+
+#: aesirx-consent.php:52
+#: aesirx-consent.php:101
+#: includes/settings.php:1425
+#: includes/settings.php:1474
+msgid "Details"
+msgstr "Išsamiai"
+
+#: aesirx-consent.php:53
+#: aesirx-consent.php:81
+#: includes/settings.php:1426
+#: includes/settings.php:1454
+msgid "Decentralized Consent"
+msgstr "Decentralizuotas Sutikimas"
+
+#: aesirx-consent.php:54
+#: includes/settings.php:1427
+msgid "Manage Your Consent Preferences"
+msgstr "Tvarkykite savo sutikimo preferencijas"
+
+#: aesirx-consent.php:55
+#: includes/settings.php:1428
+msgid "Choose how we use your data: \"Reject\" data collection, allow tracking [\"Consent\"], or use \"Decentralized Consent\" for more control over your personal data & rewards."
+msgstr "Pasirinkite, kaip mes naudojame jūsų duomenis: \"Atmesti\" duomenų rinkimą, leisti sekimą [\"Sutikimas\"], arba naudoti \"Decentralizuotą Sutikimą\" dėl didesnės kontrolės jūsų asmeniniams duomenims ir atlygiams."
+
+#: aesirx-consent.php:56
+#: includes/settings.php:1429
+msgid "Choose how we use your data: \"Reject\" data collection, allow tracking [\"Consent\"]."
+msgstr "Pasirinkite, kaip mes naudojame jūsų duomenis: \"Atmesti\" duomenų rinkimą, leisti sekimą [\"Sutikimas\"]."
+
+#: aesirx-consent.php:57
+#: includes/settings.php:1430
+msgid "By consenting, you allow us to collect & use your data for:"
+msgstr "Sutikę, jūs leidžiate mums rinkti ir naudoti jūsų duomenis tokiais tikslais:"
+
+#: aesirx-consent.php:58
+#: includes/settings.php:1431
+msgid "Analytics & Behavioral Data: To improve our services & personalize your experience."
+msgstr "Analitika ir elgsenos duomenys: Siekiant pagerinti mūsų paslaugas ir suasmeninti jūsų patirtį."
+
+#: aesirx-consent.php:59
+#: includes/settings.php:1432
+msgid "Form Data: When you contact us."
+msgstr "Formos duomenys: Kai jūs susisiekiate su mumis."
+
+#: aesirx-consent.php:60
+#: includes/settings.php:1433
+msgid "Please note"
+msgstr "Prašome atkreipti dėmesį"
+
+#: aesirx-consent.php:61
+#: includes/settings.php:1434
+msgid "We do not share your data with third parties without your explicit consent."
+msgstr "Mes nesidaliname jūsų duomenimis su trečiosiomis šalimis be jūsų aiškaus sutikimo."
+
+#: aesirx-consent.php:62
+#: includes/settings.php:1435
+msgid "You can opt-in later for specific features without giving blanket consent."
+msgstr "Galite vėliau prisijungti prie tam tikrų funkcijų be plataus sutikimo."
+
+#: aesirx-consent.php:63
+#: includes/settings.php:1436
+msgid "For more details, refer to our <a class='text-success fw-semibold text-decoration-underline' href='https://aesirx.io/privacy-policy' target='_blank'>privacy policy.</a>"
+msgstr "Daugiau informacijos rasite mūsų <a class='text-success fw-semibold text-decoration-underline' href='https://aesirx.io/privacy-policy' target='_blank'>privatumo politikoje.</a>"
+
+#: aesirx-consent.php:64
+#: includes/settings.php:1437
+msgid "Benefits"
+msgstr "Privalumai"
+
+#: aesirx-consent.php:65
+#: includes/settings.php:1438
+msgid "<span class='fw-semibold text-primary'>Control your data:</span> Choose your preferred level of data collection & tracking."
+msgstr "<span class='fw-semibold text-primary'>Valdykite savo duomenis:</span> Pasirinkite pageidaujamą duomenų rinkimo ir sekimo lygį."
+
+#: aesirx-consent.php:66
+#: includes/settings.php:1439
+msgid "<span class='fw-semibold text-primary'>Earn rewards:</span> Participate in decentralized consent for privacy & rewards."
+msgstr "<span class='fw-semibold text-primary'>Uždirbkite atlygius:</span> Dalyvaukite decentralizuotame sutikime dėl privatumo ir atlygių."
+
+#: aesirx-consent.php:67
+#: includes/settings.php:1440
+msgid "<span class='fw-semibold text-primary'>Transparent data collection practices:</span> Understand how your data is collected & used."
+msgstr "<span class='fw-semibold text-primary'>Skaidrios duomenų rinkimo praktikos:</span> Supraskite, kaip jūsų duomenys yra renkami ir naudojami."
+
+#: aesirx-consent.php:68
+#: includes/settings.php:1441
+msgid "Understanding Your Privacy Choices"
+msgstr "Supraskite savo privatumo pasirinkimus"
+
+#: aesirx-consent.php:69
+#: includes/settings.php:1442
+msgid "<span class='fw-semibold text-primary'>Reject:</span> No data will be collected or loaded except for anonymized page views & rejections. Some personalization features may be disabled."
+msgstr "<span class='fw-semibold text-primary'>Atmesti:</span> Nebus renkami ar užkrauti jokie duomenys, išskyrus anonimizuotus puslapių peržiūras ir atmetimus. Kai kurios personalizacijos funkcijos gali būti išjungtos."
+
+#: aesirx-consent.php:70
+#: includes/settings.php:1443
+msgid "<span class='fw-semibold text-primary'>Consent:</span> First & third-party tracking data will be collected to enhance your experience."
+msgstr "<span class='fw-semibold text-primary'>Sutikimas:</span> Siekiant pagerinti jūsų patirtį bus renkami pirmosios ir trečiosios šalies sekimo duomenys."
+
+#: aesirx-consent.php:71
+#: includes/settings.php:1444
+msgid "<span class='fw-semibold text-primary'>Decentralized Consent:</span> Choose Decentralized Wallets or Decentralized Wallet + Shield of Privacy. Both options let you manage & revoke consent on-site or through AesirX dApp, plus earn rewards from digital marketing activities."
+msgstr "<span class='fw-semibold text-primary'>Decentralizuotas sutikimas:</span> Pasirinkite decentralizuotas pinigines arba decentralizuotą piniginę + privatumo skydą. Abi parinktys leidžia jums valdyti ir atšaukti sutikimą svetainėje arba per AesirX dApp, taip pat uždirbti atlygius iš skaitmeninės rinkodaros veiklų."
+
+#: aesirx-consent.php:72
+#: includes/settings.php:1445
+msgid "Our Commitment in Action"
+msgstr "Mūsų įsipareigojimas veiksme"
+
+#: aesirx-consent.php:73
+#: includes/settings.php:1446
+msgid "<span class='fw-semibold text-primary'>Privacy Protection:</span> Users have full control over their data, ensuring maximum privacy."
+msgstr "<span class='fw-semibold text-primary'>Privatumo apsauga:</span> Vartotojai turi visišką savo duomenų kontrolę, užtikrindami maksimalią privatumą."
+
+#: aesirx-consent.php:74
+#: includes/settings.php:1447
+msgid "<span class='fw-semibold text-primary'>Enables Compliance:</span> Using Shield of Privacy (SoP) ensures compliance with GDPR, CCPA, ePrivacy Directive, & other data protection regulations."
+msgstr "<span class='fw-semibold text-primary'>Užtikrina atitiktį:</span> Naudojant privatumo skydą (SoP) užtikrinama atitiktis BDAR, CCPA, ePrivatumo direktyvai bei kitiems duomenų apsaugos reglamentams."
+
+#: aesirx-consent.php:75
+#: includes/settings.php:1448
+msgid "<span class='fw-semibold text-primary'>Proactive Protection:</span> We enhance privacy measures to safeguard your data integrity."
+msgstr "<span class='fw-semibold text-primary'>Proaktyvi apsauga:</span> Mes stipriname privatumo priemones, kad apsaugotume jūsų duomenų vientisumą."
+
+#: aesirx-consent.php:76
+#: includes/settings.php:1449
+msgid "<span class='fw-semibold text-primary'>Flexible Consent:</span> You can withdraw your consent anytime on-site or via our <a class='text-success fw-semibold text-decoration-underline' href='https://dapp.shield.aesirx.io' target='_blank'>dApp</a> (Decentralized Application)."
+msgstr "<span class='fw-semibold text-primary'>Lankstus sutikimas:</span> Galite bet kada atšaukti savo sutikimą svetainėje arba per mūsų <a class='text-success fw-semibold text-decoration-underline' href='https://dapp.shield.aesirx.io' target='_blank'>dApp</a> (decentralizuotą programą)."
+
+#: aesirx-consent.php:77
+#: includes/settings.php:1450
+msgid "<span class='fw-semibold text-primary'>Learn More:</span> Discover our approach to data processing in our <a class='text-success fw-semibold text-decoration-underline' href='https://aesirx.io/privacy-policy' target='_blank'>Privacy Policy</a>."
+msgstr "<span class='fw-semibold text-primary'>Sužinokite daugiau:</span> Atraskite mūsų požiūrį į duomenų tvarkymą mūsų <a class='text-success fw-semibold text-decoration-underline' href='https://aesirx.io/privacy-policy' target='_blank'>privatumo politikoje</a>."
+
+#: aesirx-consent.php:78
+#: includes/settings.php:1451
+msgid "<span class='fw-semibold text-primary'>For Businesses:</span> Enhance trust, secure user identities, & prevent breaches."
+msgstr "<span class='fw-semibold text-primary'>Įmonėms:</span> Gerinkite pasitikėjimą, apsaugokite naudotojų tapatybes ir užkirsti kelią pažeidimams."
+
+#: aesirx-consent.php:79
+#: includes/settings.php:1452
+msgid "More info at <a class='text-success fw-semibold text-decoration-underline' href='https://shield.aesirx.io' target='_blank'>https://shield.aesirx.io</a>."
+msgstr "Daugiau informacijos adresu <a class='text-success fw-semibold text-decoration-underline' href='https://shield.aesirx.io' target='_blank'>https://shield.aesirx.io</a>."
+
+#: aesirx-consent.php:80
+#: includes/settings.php:1453
+msgid "Select your preferred decentralized consent option:"
+msgstr "Pasirinkite pageidaujamą decentralizuoto sutikimo parinktį:"
+
+#: aesirx-consent.php:82
+#: includes/settings.php:1455
+msgid "Decentralized consent will be loaded"
+msgstr "Bus įkeltas decentralizuotas sutikimas"
+
+#: aesirx-consent.php:83
+#: includes/settings.php:1456
+msgid "Both first-party & third-party tracking data will be activated."
+msgstr "Bus aktyvuoti pirmosios ir trečiosios šalies sekimo duomenys."
+
+#: aesirx-consent.php:84
+#: includes/settings.php:1457
+msgid "All consented data will be collected."
+msgstr "Bus renkami visi pritarimo duomenys."
+
+#: aesirx-consent.php:85
+#: includes/settings.php:1458
+msgid "Users can revoke consent on-site at any time."
+msgstr "Vartotojai gali bet kada svetainėje atšaukti sutikimą."
+
+#: aesirx-consent.php:86
+#: includes/settings.php:1459
+msgid "Decentralized Consent + Shield of Privacy"
+msgstr "Decentralizuotas Sutikimas + Privatumo Skydas"
+
+#: aesirx-consent.php:87
+#: includes/settings.php:1460
+msgid "Users can revoke consent on-site or from the AesirX dApp at any time."
+msgstr "Vartotojai gali bet kada atšaukti sutikimą svetainėje arba iš AesirX dApp."
+
+#: aesirx-consent.php:88
+#: includes/settings.php:1461
+msgid "Users can earn rewards from digital marketing activities."
+msgstr "Vartotojai gali gauti atlygius už skaitmeninės rinkodaros veiklą."
+
+#: aesirx-consent.php:89
+#: includes/settings.php:1462
+msgid "Continue"
+msgstr "Tęsti"
+
+#: aesirx-consent.php:90
+#: includes/settings.php:1463
+msgid "Back"
+msgstr "Atgal"
+
+#: aesirx-consent.php:91
+#: includes/settings.php:1464
+msgid "You've chosen to reject data collection:"
+msgstr "Jūs pasirinkote atmesti duomenų rinkimą:"
+
+#: aesirx-consent.php:92
+#: includes/settings.php:1465
+msgid "Only anonymized page views & limited features will be available. To access all website features, including personalized content & enhanced functionality, please choose an option:"
+msgstr "Bus prieinamos tik anonimizuotos puslapių peržiūros ir ribotos funkcijos. Norėdami naudotis visomis svetainės funkcijomis, įskaitant personalizuotą turinį ir išplėstą funkcionalumą, pasirinkite parinktį:"
+
+#: aesirx-consent.php:93
+#: includes/settings.php:1466
+msgid "<span class='fw-semibold text-primary'>Consent:</span> Allow data collection for analytics, form data (when you contact us), & behavioral & event tracking, with the option to opt-in for specific features."
+msgstr "<span class='fw-semibold text-primary'>Sutikimas:</span> Leisti duomenų rinkimą analitikai, formos duomenims (kai susisiekiate su mumis) ir elgsenos bei įvykių sekimui, su galimybe pasirinkti konkrečias funkcijas."
+
+#: aesirx-consent.php:94
+#: includes/settings.php:1467
+msgid "<span class='fw-semibold text-primary'>Decentralized Consent:</span> Allow data collection for analytics, form data (when you contact us), & behavioral & event tracking, with the option to revoke consent, opt-in for specific features, & earn rewards from digital marketing activities."
+msgstr "<span class='fw-semibold text-primary'>Decentralizuotas sutikimas:</span> Leisti duomenų rinkimą analitikai, formos duomenims (kai susisiekiate su mumis) ir elgsenos bei įvykių sekimui, su galimybe panaikinti sutikimą, pasirinkti konkrečias funkcijas ir gauti atlygius iš skaitmeninės rinkodaros veiklos."
+
+#: aesirx-consent.php:95
+#: includes/settings.php:1468
+msgid "You can revoke consent on the site or any explicit opt-in consent, such as payment processing, at any time"
+msgstr "Galite bet kada svetainėje panaikinti sutikimą arba bet kokį aiškų sutikimą, pvz., mokėjimų apdorojimą."
+
+#: aesirx-consent.php:96
+#: includes/settings.php:1469
+msgid "Revoke Opt-In Consent"
+msgstr "Panaikinti pasirinktinį sutikimą"
+
+#: aesirx-consent.php:97
+#: includes/settings.php:1470
+msgid "Revoke Opt-In Consent for Payment Processing"
+msgstr "Panaikinti pasirinktinį sutikimą mokėjimų apdorojimui"
+
+#: aesirx-consent.php:98
+#: includes/settings.php:1471
+msgid "Revoke Opt-In Consent for AesirX Privacy Advisor AI"
+msgstr "Panaikinti pasirinktinį sutikimą AesirX Privatumo patarėjo AI"
+
+#: aesirx-consent.php:99
+#: includes/settings.php:1472
+msgid "Revoke Consent for the site"
+msgstr "Panaikinti sutikimą svetainėje"
+
+#: aesirx-consent.php:100
+#: includes/settings.php:1473
+msgid "Consent Management"
+msgstr "Sutikimo valdymas"
+
+#: includes/settings.php:236
+msgid "Gtag ID"
+msgstr "Gtag ID"
+
+#: includes/settings.php:261
+msgid "GTM ID"
+msgstr "GTM ID"
+
+#: includes/settings.php:396
+msgid "Blocks selected third-party plugins from loading until user consent is given."
+msgstr "Blokuoja pasirinktus trečiųjų šalių papildinius, kol nėra pateiktas naudotojo sutikimas."
+
+#: includes/settings.php:427
+msgid "Completely prevents the loading and execution of chosen third-party plugins before consent."
+msgstr "Visiškai neleidžia krauti ir vykdyti pasirinktų trečiųjų šalių papildinių iki sutikimo."
+
+#: includes/settings.php:433
+msgid "No network requests are made to third-party servers, enabling maximum compliance with privacy regulations like GDPR and the ePrivacy Directive."
+msgstr "Nėra siunčiami tinklo užklausimai į trečiųjų šalių serverius, leidžiant laikytis maksimalios privatumui skirtų nuostatų, tokių kaip GDPR ir ePrivatumo direktyva."
+
+#: includes/settings.php:447
+msgid "AesirX Consent Shield for Domain/Path-Based Blocking"
+msgstr "AesirX Sutikimo skydas domenų/kelio blokavimui"
+
+#: includes/settings.php:457
+#: includes/settings.php:475
+msgid "Enter domain or path"
+msgstr "Įveskite domeną arba kelią"
+
+#: includes/settings.php:450
+msgid "Removes scripts matching specified domains or paths from the browser until user consent is given."
+msgstr "Pašalina skriptus, kurie atitinka nurodytus domenus ar kelius, iš naršyklės, kol nėra pateiktas naudotojo sutikimas."
+
+#: includes/settings.php:498
+msgid "Blocks or removes scripts from running in the user's browser before consent is given."
+msgstr "Blokuoja arba pašalina skriptus, kurie veikia vartotojo naršyklėje, kol nėra pateiktas sutikimas."
+
+#: includes/settings.php:504
+msgid "While it prevents scripts from executing, initial network requests may still occur, so it enhances privacy compliance under GDPR but may not fully meet the ePrivacy Directive requirements."
+msgstr "Nors tai ir neleidžia skriptams vykdyti, pradžios tinklo užklausimai gali vis dar įvykti, todėl tai pagerina privatumui skirtą laikymąsi pagal GDPR, tačiau gali ne visiškai atitikti ePrivatumo direktyvos reikalavimus."
+
+#: includes/settings.php:518
+msgid "Script Blocking Options"
+msgstr "Skriptų blokavimo parinktys"
+
+#: includes/settings.php:533
+msgid "Only Third-Party Hosts (default)"
+msgstr "Tik trečiųjų šalių šeimininkai (numatytasis)"
+
+#: includes/settings.php:544
+msgid "Both First and Third-Party Hosts"
+msgstr "Tiek pirmosios, tiek trečiosios šalies šeimininkai"
+
+#: includes/settings.php:951
+msgid "Need Help? Access Our Comprehensive Documentation Hub"
+msgstr "Reikia pagalbos? Pasiekite mūsų išsamų dokumentacijos centrą"
+
+#: includes/settings.php:1558
+msgid "Your trial license ends in %1$s days. Please update new license <a href='%2$s' target='_blank'>%2$s</a>."
+msgstr "Jūsų bandomasis licencijos laikas baigsis po %1$s dienų. Prašome atnaujinti naują licenciją <a href='%2$s' target='_blank'>%2$s</a>."
+
+#: includes/settings.php:1704
+msgid "Your free trials has ended. Please update your license. <a href='%1$s' target='_blank'>%1$s</a>."
+msgstr "Jūsų nemokamas bandomasis laikotarpis pasibaigė. Prašome atnaujinti savo licenciją. <a href='%1$s' target='_blank'>%1$s</a>."
+
+#: src/AesirxAnalyticsMysqlHelper.php:946
+msgid "Could not insert consent"
+msgstr "Nepavyko įterpti sutikimo"
+
+#: src/Mysql/StartFingerprint.php:35
+#: src/Mysql/StartFingerprint.php:64
+msgid "License is expired or not found. Please update your license"
+msgstr "Licencija pasibaigusi arba nerasta. Prašome atnaujinti savo licenciją"
+
+#: src/Mysql/StartFingerprint.php:76
+#: src/Mysql/StartFingerprint.php:83
+msgid "Your trial is ended. Please renew your license"
+msgstr "Jūsų bandomasis laikotarpis pasibaigė. Prašome atnaujinti savo licenciją"
+
+#: includes/settings.php:118
+msgid "Your Client ID *"
+msgstr "Jūsų kliento ID *"
+
+#: includes/settings.php:125
+msgid "SSO Client ID"
+msgstr "SSO kliento ID"
+
+#: includes/settings.php:131
+msgid ""
+"<div class='input_information_content'>\n"
+"          Provided SSO CLIENT ID from <a href='%1$s' target='_blank'>%1$s</a>.</div>"
+msgstr "<div class='input_information_content'>Nurodytas SSO klientų ID iš <a href='%1$s' target='_blank'>%1$s</a>.</div>"
+
+#: includes/settings.php:146
+msgid "Your Client Secret *"
+msgstr "Jūsų kliento slaptažodis *"
+
+#: includes/settings.php:151
+msgid "SSO Client Secret"
+msgstr "SSO kliento slaptažodis"
+
+#: includes/settings.php:157
+msgid ""
+"<div class='input_information_content'>\n"
+"          Provided SSO Client Secret from <a href='%1$s' target='_blank'>%1$s</a>.</div>"
+msgstr "<div class='input_information_content'>Pateiktas SSO kliento slaptažodis iš <a href='%1$s' target='_blank'>%1$s</a>.</div>"
+
+#: includes/settings.php:173
+msgid "Your License Key"
+msgstr "Jūsų licencijos raktas"
+
+#: includes/settings.php:200
+msgid "Choose your tailored template"
+msgstr "Pasirinkite pritaikytą šabloną"
+
+#: includes/settings.php:456
+#: includes/settings.php:474
+msgid "Domain"
+msgstr "Domenas"
+
+#: includes/settings.php:524
+msgid "Configure how JavaScript is blocked based on user consent preferences."
+msgstr "Konfigūruokite, kaip JavaScript yra blokuojamas pagal naudotojo sutikimo preferencijas."
+
+#: includes/settings.php:534
+msgid "Blocks JavaScript from third-party domains, allowing first-party scripts to run normally & keep essential site functions intact."
+msgstr "Blokuoja JavaScript iš trečiųjų šalių domenų, leidžiant normaliai veikti pirmosios šalies skriptams ir išlaikyti pagrindines svetainės funkcijas."
+
+#: includes/settings.php:545
+msgid "Blocks JavaScript from both first-party & third-party domains for comprehensive script control, giving you the ability to block any JavaScript from internal or external sources based on user consent."
+msgstr "Blokuoja JavaScript iš pirmosios ir trečiosios šalies domenų, leisdama visapusiškai kontroliuoti skriptus ir suteikdama galimybę blokuoti bet kokį JavaScript iš vidinių ar išorinių šaltinių pagal naudotojo sutikimą."
+
+#: includes/settings.php:961
+msgid "Discover the latest features & best practices."
+msgstr "Atraskite naujausias funkcijas ir geriausias praktikas."
+
+#: includes/settings.php:1016
+msgid "Scan Your Site for Privacy Risks"
+msgstr "Nuskaitykite savo svetainę dėl privatumo rizikų"
+
+#: includes/settings.php:1020
+msgid "Use the Privacy Scanner to quickly identify scripts, tags, & trackers running on your site that may compromise user privacy."
+msgstr "Naudokite privatumo skenerį, kad greitai atpažintumėte skriptus, žymas ir sekiklius, vykdomus jūsų svetainėje, kurie gali pakenkti naudotojų privatumui."
+
+#: includes/settings.php:1026
+msgid "Use Consent Shield to block those scripts by adding their domains or paths, ensuring quick & simple compliance."
+msgstr "Naudokite sutikimo skydą, kad blokuotumėte šiuos skriptus, pridėdami jų domenus ar kelius, užtikrinant greitą ir paprastą laikymąsi."
+
+#: includes/settings.php:1096
+#: includes/settings.php:1159
+#: includes/settings.php:1192
+#: includes/settings.php:1237
+msgid "Save settings"
+msgstr "Išsaugoti nustatymus"
+
+#: includes/settings.php:178
+msgid "License Key"
+msgstr "Licencijos raktas"
+
+#: includes/settings.php:988
+msgid "Haven't got Shield of Privacy ID yet?"
+msgstr "Dar neturite Privatumo Skydo ID?"
+
+#: includes/settings.php:1035
+msgid "Learn how to use AesirX Privacy Scanner with Consent Shield to detect privacy-intrusive elements, using the JetPack plugin as an example."
+msgstr "Sužinokite, kaip naudoti AesirX privatumo skenerį su sutikimo skydu, kad aptiktumėte privatumą trikdančius elementus, naudojant JetPack papildinį kaip pavyzdį."
+
+#: includes/settings.php:184
+msgid ""
+"<div class='input_information_content'>\n"
+"          Sign up to obtain your Shield of Privacy ID and purchase licenses <a href='https://aesirx.io/licenses' target='blank' class='text-link'>here</a>.</div>"
+msgstr "<div class='input_information_content'>Užsiregistruokite, kad gautumėte savo Privatumo Skydo ID ir įsigytumėte licencijas <a href='https://aesirx.io/licenses' target='blank' class='text-link'>čia</a>.</div>"
+
+#: includes/settings.php:289
+msgid "To configure, input your Google Tag Manager Gtag ID & GTM ID in the designated fields. Once set up, Google Tag Manager will only load after the user provides consent."
+msgstr "Norėdami konfigūruoti, įveskite savo Google Tag Manager Gtag ID ir GTM ID nurodytuose laukuose. Kai nustatyta, Google Tag Manager įsikraus tik po to, kai naudotojas pateikia sutikimą."
+
+#: includes/settings.php:246
+#: includes/settings.php:271
+msgid ""
+"<div class='input_information_content'>\n"
+"          Remember to include the explicit purpose (e.g., analytics, marketing) in the consent text to inform users why GTM is being used.</div>"
+msgstr "<div class='input_information_content'>Nepamirškite įtraukti aiškų tikslą (pvz., analitika, rinkodara) į sutikimo tekstą, kad informuotumėte naudotojus, kodėl naudojamas GTM.</div>"
+
+#: includes/settings.php:997
+msgid "Sign up now"
+msgstr "Užsiregistruokite dabar"
+
+#: includes/settings.php:955
+msgid "Explore How-To Guides, instructions, & tutorials to get the most from AesirX Consent Shield. Whether you're a developer or admin, find all you need to configure & optimize your privacy setup."
+msgstr "Ištyrinėkite vadovus, instrukcijas ir mokymus, kad gautumėte geriausią iš AesirX Sutikimo Skydo. Nesvarbu, ar esate kūrėjas ar administratorius, suraskite viską, ko reikia konfigūracijai ir privatumo nustatymų optimizavimui."
+
+#: includes/settings.php:328
+msgid "Reset Consent"
+msgstr "Atstatyti sutikimą"
+
+#: aesirx-consent.php:355
+msgid "Important: Permalink Settings Required"
+msgstr "Svarbu: Reikalingi Permalink nustatymai"
+
+#: includes/settings.php:1668
+msgid "Your trial license ends in %1$s hour(s). Please update your license <a href='%2$s' target='_blank'>here</a>."
+msgstr "Jūsų bandomasis licencijos laikas baigsis po %1$s valandos(-ų). Prašome atnaujinti savo licenciją <a href='%2$s' target='_blank'>čia</a>."
+
+#. translators: 1: Permalink structure example, 2: Link to Permalink Settings page
+#: aesirx-consent.php:360
+msgid ""
+"Our plugin requires that your site use a pretty permalink structure (for example, %1$s) to work correctly.\n"
+"                            It looks like your current settings are using the plain permalink format, which might cause issues.\n"
+"                            Please %2$s to open your Permalink Settings.\n"
+"                            Once there, select the \"Post name\" option (or another pretty permalink structure) and click \"Save Changes.\""
+msgstr ""
+"Mūsų papildinys reikalauja, kad jūsų svetainėje būtų naudojama graži saito struktūra (pavyzdžiui, %1$s), kad jis veiktų teisingai.\n"
+"                            Atrodo, kad jūsų dabartiniai nustatymai naudoja paprastą saito formatą, kuris gali sukelti problemų.\n"
+"                            Prašome %2$s atidaryti savo saito nustatymus.\n"
+"                            Ten pasirinkite \"Įrašų pavadinimą\" (arba kitą gražią saito struktūrą) ir spustelėkite \"Išsaugoti pakeitimus.\""
+
+#: aesirx-consent.php:367
+msgid "click here"
+msgstr "spustelėkite čia"
+
+#: includes/settings.php:286
+msgid "GTM General"
+msgstr "GTM Bendras"
+
+#: includes/settings.php:1564
+msgid "Something went wrong: %1$s. Please contact the administrator."
+msgstr "Kažkas atsitiko neteisingai: %1$s. Prašome susisiekti su administratoriumi."
+
+#: includes/settings.php:1644
+msgid "Check license failed: %1$s. Please contact the administrator or update your license."
+msgstr "Patikrinimo licencija nesėkminga: %1$s. Prašome susisiekti su administratoriumi arba atnaujinti savo licenciją."
+
+#: src/Mysql/StartFingerprint.php:55
+msgid "Check license failed: %1\\$s. Please contact the administrator."
+msgstr "Patikrinimo licencija nesėkminga: %1\\$s. Prašome susisiekti su administratoriumi."
+
+#: src/Mysql/StartFingerprint.php:43
+#: src/Mysql/StartFingerprint.php:62
+msgid "Your domain is not match with your license. Please update domain in your license"
+msgstr "Jūsų domenas nesutampa su jūsų licencija. Prašome atnaujinti domeną jūsų licencijoje"
+
+#: includes/settings.php:217
+msgid "Decentralized Consent Mode"
+msgstr "Decentralizuotas sutikimo režimas"
+
+#: includes/settings.php:666
+msgid "GPC Compliance"
+msgstr "GPC atitiktis"
+
+#: includes/settings.php:679
+msgid "Enable GPC Support"
+msgstr "Įjungti GPC palaikymą"
+
+#: includes/settings.php:687
+msgid "Disable GPC Support"
+msgstr "Išjungti GPC palaikymą"
+
+#: includes/settings.php:694
+msgid "To comply with Global Privacy Control (GPC), please download and upload the following file:"
+msgstr "Kad laikytumėtės pasaulinio privatumo kontrolės (GPC), prašome atsisiųsti ir įkelti šį failą:"
+
+#: includes/settings.php:697
+msgid "Upload Instructions:"
+msgstr "Įkėlimo instrukcijos:"
+
+#: includes/settings.php:699
+msgid "Download the gpc.json file."
+msgstr "Atsisiųskite gpc.json failą."
+
+#: includes/settings.php:700
+msgid "Connect to your website via FTP or File Manager."
+msgstr "Prisijunkite prie savo svetainės per FTP arba Bylose Manager."
+
+#: includes/settings.php:701
+msgid "Upload the file to: <code>/public_html/.well-known/gpc.json</code>"
+msgstr "Įkelkite failą į: <code>/public_html/.well-known/gpc.json</code>"
+
+#: includes/settings.php:702
+msgid "Ensure the file is accessible by visiting: <a href='"
+msgstr "Įsitikinkite, kad failas yra pasiekiamas apsilankius: <a href='"
+
+#: includes/settings.php:353
+msgid "Reset Detail"
+msgstr "Atstatyti detalę"
+
+#: includes/settings.php:378
+msgid "Reset Reject"
+msgstr "Atstatyti atmetimą"
+
+#: aesirx-consent.php:102
+msgid "Customize"
+msgstr "Pritaikykite"
+
+#: aesirx-consent.php:103
+msgid "Save"
+msgstr "Išsaugoti"
+
+#: aesirx-consent.php:104
+msgid "Always active"
+msgstr "Visada aktyvus"
+
+#: aesirx-consent.php:105
+msgid "Domain/Path-Based"
+msgstr "Domenais/Keliais pagrįsta"
+
+#: aesirx-consent.php:106
+msgid "Third-Party Plugins"
+msgstr "Trečiųjų šalių įskiepiai"
+
+#: aesirx-consent.php:107
+msgid "Essential Tracking"
+msgstr "Esminis sekimas"
+
+#: aesirx-consent.php:108
+msgid "Required for the website to function (e.g, session cookies, security tracking)."
+msgstr "Būtinas svetainės veikimui (pvz., sesijos slapukai, saugumo sekimas)."
+
+#: aesirx-consent.php:109
+msgid "Functional Tracking"
+msgstr "Funkcinis sekimas"
+
+#: aesirx-consent.php:111
+msgid "Analytics Tracking"
+msgstr "Analitinis sekimas"
+
+#: aesirx-consent.php:112
+msgid "Visitor behavior monitoring (e.g, Google Analytics, Matomo)."
+msgstr "Lankytojų elgsenos sekimas (pvz., Google Analytics, Matomo)."
+
+#: aesirx-consent.php:113
+msgid "Advertising Tracking"
+msgstr "Reklamos sekimas"
+
+#: aesirx-consent.php:114
+msgid "Targeted advertising & remarketing (e.g, Facebook Pixel, Google Ads)."
+msgstr "Tikslinė reklama ir remarketingas (pvz., Facebook Pixel, Google Ads)."
+
+#: aesirx-consent.php:115
+msgid "Custom Tracking"
+msgstr "Pritaikytas sekimas"
+
+#: aesirx-consent.php:116
+msgid "Any additional third-party integrations (e.g, customer support tools, CDNS)."
+msgstr "Bet kokie papildomi trečiųjų šalių integravimai (pvz., klientų palaikymo įrankiai, CDNS)."
+
+#: aesirx-consent.php:117
+msgid "Opt-Out of tracking"
+msgstr "Atsisakyti sekimo"
+
+#: aesirx-consent.php:118
+msgid "This website uses tracking by default. You may opt out at any time."
+msgstr "Ši svetainė pagal numatytuosius parametrus naudoja sekimą. Jūs galite bet kada atsisakyti."
+
+#: aesirx-consent.php:119
+msgid "Do Not Sell or Share My Personal Information (CCPA)"
+msgstr "Neparduokite arba nepasidalykite mano asmenine informacija (CCPA)"
+
+#: aesirx-consent.php:120
+msgid "Disables third-party data sharing for California users."
+msgstr "Išjungia trečiųjų šalių duomenų dalinimąsi Kalifornijos naudotojams."
+
+#: includes/settings.php:576
+msgid "Configurable Consent Logic"
+msgstr "Konfigūruojama sutikimo logika"
+
+#: includes/settings.php:589
+msgid "Opt-In Mode (EU)"
+msgstr "Pasirinktinis režimas (ES)"
+
+#: includes/settings.php:590
+msgid "No tracking technologies are activated until a user explicitly gives consent. This is required by <strong>GDPR</strong> and <strong>ePrivacy Directive 5(3)</strong>."
+msgstr "Jokios sekimo technologijos nėra aktyvuotos, kol naudotojas aiškiai neduoda sutikimo. Tai reikalaujama pagal <strong>GDPR</strong> ir <strong>ePrivatumo direktyvos 5(3)</strong>."
+
+#: includes/settings.php:598
+msgid "Opt-Out Mode (California)"
+msgstr "Atsisakymo režimas (Kalifornija)"
+
+#: includes/settings.php:599
+msgid "Tracking is allowed by default, but users must be able to opt out easily. This aligns with <strong>CCPA</strong> and similar U.S. privacy frameworks."
+msgstr "Numatyta, kad sekimas leidžiamas iš karto, tačiau naudotojai turi turėti galimybę lengvai atsisakyti. Tai dera su <strong>CCPA</strong> ir panašiais JAV privatumo karkasais."
+
+#: includes/settings.php:630
+msgid "Do not sell or share options"
+msgstr "Neparduokite arba nepasidalykite pasirinktys"
+
+#: includes/settings.php:643
+#: includes/settings.php:749
+msgid "Yes"
+msgstr "Taip"
+
+#: includes/settings.php:651
+#: includes/settings.php:757
+msgid "No"
+msgstr "Ne"
+
+#: includes/settings.php:736
+msgid "Enable Geo-handling for Consent Mode"
+msgstr "Įjungti geo-apdorojimą sutikimo režimui"
+
+#: includes/settings.php:772
+msgid "Geo-Based Consent Rules"
+msgstr "Geo-pagrįstos sutikimo taisyklės"
+
+#: includes/settings.php:871
+msgid "Browser Language"
+msgstr "Naršyklės kalba"
+
+#: includes/settings.php:872
+#: includes/settings.php:896
+#: includes/settings.php:913
+msgid "Time Zone"
+msgstr "Laiko zona"
+
+#: includes/settings.php:886
+msgid "Consent Mode"
+msgstr "Sutikimo režimas"
+
+#: includes/settings.php:887
+msgid "Allow Override"
+msgstr "Leisti įveikti"
+
+#: includes/settings.php:895
+#: includes/settings.php:912
+msgid "Language"
+msgstr "Kalba"
+
+#: includes/settings.php:898
+#: includes/settings.php:915
+msgid "Select Mode"
+msgstr "Pasirinkite režimą"
+
+#: includes/settings.php:916
+msgid "Override"
+msgstr "Įveikti"
+
+#: includes/settings.php:208
+msgid "Default Consent Mode"
+msgstr "Numatytas sutikimo režimas"
+
+#: includes/settings.php:212
+msgid "Default Consent Mode improves Google Consent Mode 2.0 by not loading any tags until after consent is given, reducing compliance risks."
+msgstr "Numatytasis sutikimo režimas pagerina Google sutikimo režimą 2.0, neįkeliant jokių žymų iki sutikimo pateikimo, sumažinant nesilaikymo grisus."
+
+#: includes/settings.php:221
+msgid "Decentralized Consent Mode setup improves Google Consent Mode 2.0 by not loading any scripts, beacons, or tags until after consent is given, reducing compliance risks. It also includes Decentralized Consent, for more control over personal data and rewards."
+msgstr "Decentralizuoto sutikimo režimo nustatymas pagerina Google sutikimo režimą 2.0, neįkeliant jokių skriptų, švyturių ar žymų iki sutikimo pateikimo, sumažinant nesilaikymo grisus. Taip pat įtraukiamas decentralizuotas sutikimas, kad turėtumėte daugiau kontrolės asmeninių duomenų ir apdovanojimų atžvilgiu."
+
+#: includes/settings.php:878
+msgid "Choose how browser language and time zone are combined to determine consent rules:"
+msgstr "Pasirinkite, kaip naršyklės kalba ir laiko zona sujungiamos sutikimo taisyklėms nustatyti:"
+
+#: includes/settings.php:880
+msgid "<strong>AND Logic (Stricter Match):</strong> Both language and time zone must match a region for its consent model to apply. Ideal for high-accuracy targeting."
+msgstr "<strong>IR logika (griežtesnis atitikimas):</strong> Tiek kalba, tiek laiko zona turi sutapti su regionu, kad būtų galima taikyti jo sutikimo modelį. Idealu didelės tikslumo tikslinei auditorijai."
+
+#: includes/settings.php:881
+msgid "<strong>OR Logic (More Flexible):</strong> Either language or time zone can match to apply a region’s consent model. Best for broader coverage based on user preferences."
+msgstr "<strong>ARBA logika (daugiau lanksti):</strong> Arba kalba, arba laiko zona gali sutapti, kad būtų galima taikyti regiono sutikimo modelį. Geriausia platesnei aprėpčiai, pagrįstai naudotojų preferencijomis."
+
+#: includes/settings.php:992
+msgid "Manage License Here"
+msgstr "Tvarkyti licenciją čia"
+
+#: includes/settings.php:1287
+#: includes/settings.php:1301
+#: includes/settings.php:1316
+#: includes/settings.php:1331
+#: includes/settings.php:1355
+msgid "Generate"
+msgstr "Generuoti"
+
+#: includes/settings.php:1290
+msgid "Cookie Declaration"
+msgstr "Slapukų deklaracija"
+
+#: includes/settings.php:1291
+#: includes/settings.php:1306
+#: includes/settings.php:1321
+#: includes/settings.php:1340
+msgid "⚠️ This is a draft generated based on your site’s scan results. Please review and edit to ensure it reflects your actual data practices before publishing."
+msgstr "⚠️ Tai yra juodraštis, sukurtas remiantis jūsų svetainės nuskaitymo rezultatais. Prašome peržiūrėti ir redaguoti, kad užtikrintumėte, jog jis atspindi jūsų tikrąsias duomenų tvarkymo praktikas prieš publikuojant."
+
+#: includes/settings.php:1305
+msgid "Privacy Policy"
+msgstr "Privatumo politika"
+
+#: includes/settings.php:1320
+msgid "Consent Request"
+msgstr "Sutikimo prašymas"
+
+#: includes/settings.php:1339
+msgid "Domain Categorization"
+msgstr "Domeno kategorizavimas"
+
+#: includes/settings.php:1352
+msgid "Auto-Populated Blocking List"
+msgstr "Automatiškai užpildytas blokavimo sąrašas"
+
+#: includes/settings.php:1615
+#: includes/settings.php:1678
+msgid "You are using a lifetime license."
+msgstr "Jūs naudojate viso gyvenimo licenciją."
+
+#: includes/settings.php:1621
+#: includes/settings.php:1684
+msgid "year"
+msgid_plural "years"
+msgstr[0] "metai"
+msgstr[1] "metai"
+msgstr[2] "metai"
+
+#: includes/settings.php:1624
+#: includes/settings.php:1687
+msgid "month"
+msgid_plural "months"
+msgstr[0] "mėnuo"
+msgstr[1] "mėnesiai"
+msgstr[2] "mėnesiai"
+
+#: includes/settings.php:1627
+#: includes/settings.php:1690
+msgid "day"
+msgid_plural "days"
+msgstr[0] "diena"
+msgstr[1] "dienos"
+msgstr[2] "dienos"
+
+#: includes/settings.php:1632
+msgid "Your license ends in %1$s. Please update your license <a href='%2$s' target='_blank'>%2$s</a>."
+msgstr "Jūsų licencija pasibaigs už %1$s. Prašome atnaujinti savo licenciją <a href='%2$s' target='_blank'>%2$s</a>."
+
+#: includes/settings.php:1695
+msgid "Your trial license ends in %1$s. Please update your license <a href='%2$s' target='_blank'>%2$s</a>."
+msgstr "Jūsų bandomoji licencija pasibaigs už %1$s. Prašome atnaujinti savo licenciją <a href='%2$s' target='_blank'>%2$s</a>."
+
+#: aesirx-consent.php:110
+msgid "User preferencese & site enhancements (e.g, language setting, live chat)."
+msgstr ""
+
+#: includes/settings.php:315
+msgid "Customize Consent Management Text "
+msgstr ""
+
+#: includes/settings.php:340
+msgid "Customize Details Text "
+msgstr ""
+
+#: includes/settings.php:365
+msgid "Customize Reject Text "
+msgstr ""
+
+#: includes/settings.php:391
+msgid "AesirX Consent Shield for Third-Party Plugins "
+msgstr ""
+
+#: includes/settings.php:1377
+#: includes/settings.php:1594
+msgid "Your license is expried or not found. Please update new license <a href='%1$s' target='_blank'>%1$s</a>."
+msgstr ""
+
+#: includes/settings.php:1601
+msgid "Your domain is not match with your license. Please update domain in your license <a href='%1$s' target='_blank'>%1$s</a> and click <span class='verify_domain'>here</span> to verify again."
+msgstr ""

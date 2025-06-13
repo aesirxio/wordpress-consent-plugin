@@ -77,6 +77,18 @@ add_action('admin_init', function () {
     return $value;
   });
 
+  register_setting('aesirx_consent_ai_plugin_options', 'aesirx_consent_ai_plugin_options', function (
+    $value
+  ) {
+    $valid = true;
+    // Ignore the user's changes and use the old database value.
+    if (!$valid) {
+      $value = get_option('aesirx_consent_ai_plugin_options');
+    }
+    return $value;
+  });
+
+
   add_settings_section(
     'aesirx_analytics_settings',
     'AesirX Consent Management',
@@ -300,7 +312,7 @@ add_action('admin_init', function () {
   );
   add_settings_field(
     'aesirx_consent_modal_datastream_consent',
-    esc_html__('Customize Consent Text ', 'aesirx-consent'),
+    esc_html__('Customize Consent Management Text ', 'aesirx-consent'),
     function () {
       $options = get_option('aesirx_consent_modal_plugin_options', []);
       $decodedHtml = html_entity_decode($options['datastream_consent'], ENT_QUOTES, 'UTF-8');
@@ -325,7 +337,7 @@ add_action('admin_init', function () {
 
   add_settings_field(
     'aesirx_consent_modal_datastream_detail',
-    esc_html__('Customize Detail Text ', 'aesirx-consent'),
+    esc_html__('Customize Details Text ', 'aesirx-consent'),
     function () {
       $options = get_option('aesirx_consent_modal_plugin_options', []);
       $decodedHtml = html_entity_decode($options['datastream_detail'], ENT_QUOTES, 'UTF-8');
@@ -1040,6 +1052,23 @@ add_action('admin_init', function () {
     'aesirx_signup_modal'
   );
 
+  add_settings_section(
+    'aesirx_consent_ai_settings',
+    '',
+    function () {
+      $manifest = json_decode(
+        file_get_contents(plugin_dir_path(__DIR__) . 'assets-manifest.json', true)
+      );
+
+      if ($manifest->entrypoints->plugin->assets) {
+        foreach ($manifest->entrypoints->plugin->assets->js as $js) {
+          wp_enqueue_script('aesrix_bi' . md5($js), plugins_url($js, __DIR__), false, '1.0', true);
+        }
+      }
+    },
+    'aesirx_consent_ai_plugin'
+  );
+
 });
 
 add_action('admin_menu', function () {
@@ -1080,7 +1109,7 @@ add_action('admin_menu', function () {
         echo '</div>';
     },
     plugins_url( 'aesirx-consent/assets/images-plugin/AesirX_BI_icon.png'),
-    3
+    75
   );
   add_submenu_page(
     'aesirx-consent-management-plugin',
@@ -1231,6 +1260,206 @@ add_action('admin_menu', function () {
         echo '</div>';
     },
   6);
+  add_submenu_page(
+    'aesirx-consent-management-plugin',
+    'AI Privacy Advisor',
+    'AI Privacy Advisor',
+    'manage_options',
+    'aesirx-cmp-ai',
+    function () {
+      ?>
+      <?php
+        settings_fields('aesirx_consent_ai_plugin_options');
+        do_settings_sections('aesirx_consent_ai_plugin');
+        $options = get_option('aesirx_consent_ai_plugin_options', []);
+      ?>
+      <h2 class="aesirx_heading">AI Privacy Advisor</h2>
+      <div class="aesirx_consent_wrapper">
+        <?php
+          $optionsAIKey = get_option('aesirx_consent_ai_key_plugin_options',[]);
+        ?>
+        <?php if( $optionsAIKey['openai_key']) : ?>
+          <div class="w-100">
+            <div class="ai_introduction bg-white rounded-16px">
+              <div>
+                <?php
+                  echo wp_kses("<strong>AI Privacy Advisor</strong> helps you manage cookie and beacon compliance by analyzing what loads before and after consent. It enables AI Auto-Blocking and generates privacy documentation based on real scan data. With one click, you can configure third-party and domain/path blocking, and create cookie declarations, privacy policies, and consent text to support GDPR and ePrivacy Directive compliance. While optimized for strict opt-in regimes like the EU, it also supports transparency and documentation requirements for opt-out frameworks such as CCPA.", aesirx_analytics_escape_html());
+                ?>
+              </div>
+            </div>
+            <button class="ai_generate_button
+            <?php if($options['cookie_declaration'] ||
+                      $options['privacy_policy'] ||
+                      $options['consent_request'] ||
+                      $options['domain_categorization'] ) echo 'hide'; ?>">
+              <div class="loader"></div><div><?php echo esc_html__("Generate", 'aesirx-consent') ?></div>
+            </button>
+            <?php
+             $installed_plugins = get_plugins();
+             $active_plugins = get_option('active_plugins');
+             ?>
+            <div id="domain_categorization" class="prompt_item bg-white rounded-16px p-32px">
+              <div class="prompt_item_title"><?php echo esc_html__("Domain Categorization", 'aesirx-consent') ?></div>
+              <div class="prompt_item_question">
+                <img width='24px' height='24px' src='<?php echo plugins_url( 'aesirx-consent/assets/images-plugin/question.png') ?>' />
+                <?php echo esc_html__("This draft was automatically generated based on real scan data from your website and identifies third-party domains, cookies, and beacons used, categorized by purpose.", 'aesirx-consent') ?>
+              </div>
+              <div class="prompt_item_warning">
+                <img width='24px' height='24px' src='<?php echo plugins_url( 'aesirx-consent/assets/images-plugin/warning.png') ?>' />
+                <?php echo esc_html__("Please review and adjust the content to make sure it reflects your actual data practices before publishing.", 'aesirx-consent') ?>
+              </div>
+              <div class="prompt_item_info d-none">
+                <img width='24px' height='24px' src='<?php echo plugins_url( 'aesirx-consent/assets/images-plugin/info.png') ?>' />
+                <?php echo esc_html__("For full setup instructions: AesirX CMP Guide: How to Generate Domain Categorization Text with AI", 'aesirx-consent') ?>
+              </div>
+              <div class="prompt_item_result">
+                <div class="loading">
+                  <div class="loader"></div>
+                </div>
+                <div class="copy_clipboard">
+                  <img width='20px' height='20px' src='<?php echo plugins_url( 'aesirx-consent/assets/images-plugin/copy.svg') ?>' />
+                  <div class="copied_text">Copied!</div>
+                </div>
+                <div class="result">
+                <?php echo stripslashes($options['domain_categorization']) ?>
+                </div>
+              </div>
+              <div class="domain_categorization_result"></div>
+              <div class="domain_categorization_buttons">
+                <button class="auto_populated <?php if(!$options['domain_categorization']) echo 'hide'; ?>">
+                  <div class="loader"></div>
+                  <img width='22px' height='22px' src='<?php echo plugins_url( 'aesirx-consent/assets/images-plugin/shield_block.png') ?>' />
+                  <?php echo esc_html__("Enable AI Auto-Blocking", 'aesirx-consent') ?>
+                </button>
+                <div class="auto_populated_information">
+                  <img width='22px' height='22px' src='<?php echo plugins_url( 'aesirx-consent/assets/images-plugin/info_gray.png') ?>' />
+                  <div class="auto_populated_information_content">
+                    <div class="title">Enable Automatic AI-Based Blocking</div>
+                    <div>The AI scan compares what loads before and after consent to identify third-party domains, plugins, and beacons. These are categorized in the Domain Categorization section. When you Enable AI Blocking, this will automatically update your Consent Shield settings, applying blocking rules in the Third-Party Plugins and Domain/Path-Based Blocking sections. </div>
+                  </div>
+                  Automatically apply third-party blocking <br/> based on scan results.
+                </div>
+                <button class="prompt_item_regenerate <?php if(!$options['domain_categorization']) echo 'hide'; ?>">
+                  <div class="loader"></div><div><?php echo esc_html__("Regenerate", 'aesirx-consent') ?></div>
+                </button>
+              </div>
+              <div class="list_plugin">
+                <?php
+                  foreach ($installed_plugins as $path => $plugin) {
+                    if ($plugin['TextDomain'] === 'aesirx-consent' || $plugin['TextDomain'] === '' || !in_array($path, $active_plugins, true)) {
+                      continue;
+                    }
+                    echo wp_kses("
+                          <div class='list_plugin_item'
+                                id='".esc_attr($plugin['TextDomain'])."'
+                                value='" . esc_attr($plugin['TextDomain']) . "' >
+                              ". $plugin['Name'] ."
+                          </div>", aesirx_analytics_escape_html());
+                  }
+                ?>
+              </div>
+            </div>
+            <div id="cookie_declaration" class="prompt_item bg-white rounded-16px p-32px">
+              <div class="prompt_item_title"><?php echo esc_html__("Cookie Declaration", 'aesirx-consent') ?></div>
+              <div class="prompt_item_question">
+                <img width='24px' height='24px' src='<?php echo plugins_url( 'aesirx-consent/assets/images-plugin/question.png') ?>' />
+                <?php echo esc_html__("This draft was automatically generated based on real scan data from your website and lists the cookies and tracking technologies detected.", 'aesirx-consent') ?>
+              </div>
+              <div class="prompt_item_warning">
+                <img width='24px' height='24px' src='<?php echo plugins_url( 'aesirx-consent/assets/images-plugin/warning.png') ?>' />
+                <?php echo esc_html__("Please review and adjust the content to make sure it reflects your actual data practices before publishing.", 'aesirx-consent') ?>
+              </div>
+              <div class="prompt_item_info d-none">
+                <img width='24px' height='24px' src='<?php echo plugins_url( 'aesirx-consent/assets/images-plugin/info.png') ?>' />
+                <?php echo esc_html__("For full setup instructions: AesirX CMP Guide: How to Generate a Cookie Declaration with AI", 'aesirx-consent') ?>
+              </div>
+              <div class="prompt_item_result">
+                <div class="loading">
+                  <div class="loader"></div>
+                </div>
+                <div class="copy_clipboard">
+                  <img width='20px' height='20px' src='<?php echo plugins_url( 'aesirx-consent/assets/images-plugin/copy.svg') ?>' />
+                  <div class="copied_text">Copied!</div>
+                </div>
+                <div class="result">
+                  <?php echo stripslashes($options['cookie_declaration']) ?>
+                </div>
+              </div>
+              <button class="prompt_item_regenerate <?php if(!$options['cookie_declaration']) echo 'hide'; ?>">
+                <div class="loader"></div><div><?php echo esc_html__("Regenerate", 'aesirx-consent') ?></div>
+              </button>
+            </div>
+            <div id="privacy_policy" class="prompt_item bg-white rounded-16px p-32px">
+              <div class="prompt_item_title"><?php echo esc_html__("Privacy Policy", 'aesirx-consent') ?></div>
+              <div class="prompt_item_question">
+                <img width='24px' height='24px' src='<?php echo plugins_url( 'aesirx-consent/assets/images-plugin/question.png') ?>' />
+                <?php echo esc_html__("This draft was automatically generated based on real scan data from your website and outlines the data collection and processing activities detected.", 'aesirx-consent') ?>
+              </div>
+              <div class="prompt_item_warning">
+                <img width='24px' height='24px' src='<?php echo plugins_url( 'aesirx-consent/assets/images-plugin/warning.png') ?>' />
+                <?php echo esc_html__("Please review and adjust the content to make sure it reflects your actual data practices before publishing.", 'aesirx-consent') ?>
+              </div>
+              <div class="prompt_item_info d-none">
+                <img width='24px' height='24px' src='<?php echo plugins_url( 'aesirx-consent/assets/images-plugin/info.png') ?>' />
+                <?php echo esc_html__("For full setup instructions: AesirX CMP Guide: How to Generate a Privacy Policy with AI", 'aesirx-consent') ?>
+              </div>
+              <div class="prompt_item_result">
+                <div class="loading">
+                  <div class="loader"></div>
+                </div>
+                <div class="copy_clipboard">
+                  <img width='20px' height='20px' src='<?php echo plugins_url( 'aesirx-consent/assets/images-plugin/copy.svg') ?>' />
+                  <div class="copied_text">Copied!</div>
+                </div>
+                <div class="result">
+                  <?php echo stripslashes($options['privacy_policy']) ?>
+                </div>
+              </div>
+              <button class="prompt_item_regenerate <?php if(!$options['privacy_policy']) echo 'hide'; ?>">
+                <div class="loader"></div><div><?php echo esc_html__("Regenerate", 'aesirx-consent') ?></div>
+              </button>
+            </div>
+            <div id="consent_request" class="prompt_item bg-white rounded-16px p-32px">
+              <div class="prompt_item_title"><?php echo esc_html__("Consent Request", 'aesirx-consent') ?></div>
+              <div class="prompt_item_question">
+                <img width='24px' height='24px' src='<?php echo plugins_url( 'aesirx-consent/assets/images-plugin/question.png') ?>' />
+                <?php echo esc_html__("This draft was automatically generated based on real scan data from your website and provides a consent message tailored to the technologies and data flows detected.", 'aesirx-consent') ?>
+              </div>
+              <div class="prompt_item_warning">
+                <img width='24px' height='24px' src='<?php echo plugins_url( 'aesirx-consent/assets/images-plugin/warning.png') ?>' />
+                <?php echo esc_html__("Please review and adjust the content to make sure it reflects your actual data practices before publishing.", 'aesirx-consent') ?>
+              </div>
+              <div class="prompt_item_info d-none">
+                <img width='24px' height='24px' src='<?php echo plugins_url( 'aesirx-consent/assets/images-plugin/info.png') ?>' />
+                <?php echo esc_html__("For full setup instructions: AesirX CMP Guide: How to Generate Consent Request Text with AI", 'aesirx-consent') ?>
+              </div>
+              <div class="prompt_item_result">
+                <div class="loading">
+                  <div class="loader"></div>
+                </div>
+                 <div class="copy_clipboard">
+                  <img width='20px' height='20px' src='<?php echo plugins_url( 'aesirx-consent/assets/images-plugin/copy.svg') ?>' />
+                  <div class="copied_text">Copied!</div>
+                </div>
+                <div class="result">
+                <?php echo stripslashes($options['consent_request']) ?>
+                </div>
+              </div>
+              <button class="prompt_item_regenerate <?php if(!$options['consent_request']) echo 'hide'; ?>">
+                <div class="loader"></div><div><?php echo esc_html__("Regenerate", 'aesirx-consent') ?></div>
+              </button>
+            </div>
+          </div>
+        <?php else : ?>
+          <div class="w-100 bg-white rounded-16px p-16px">
+              <p><?php echo wp_kses(sprintf(__("Your license is expried or not found. Please update new license <a href='%1\$s' target='_blank'>%1\$s</a>.", 'aesirx-consent'), 'https://aesirx.io/licenses'), aesirx_analytics_escape_html()); ?></p>
+          </div>
+        <?php endif; ?>
+       
+			<?php
+        echo '</div>';
+    },
+  7);
   
   });
 
@@ -1238,6 +1467,21 @@ add_action('admin_enqueue_scripts', function ($hook) {
   if ($hook === "aesirx-cmp_page_aesirx-cmp-geo") {
     wp_register_script('aesirx_analytics_geo', plugins_url('assets/vendor/aesirx-consent-geo.js', __DIR__), array('jquery'), false, true);
     wp_enqueue_script('aesirx_analytics_geo');
+  }
+  if ($hook === "aesirx-cmp_page_aesirx-cmp-ai") {
+    wp_enqueue_script('aesirx_analytics_marked', plugins_url('assets/vendor/aesirx-consent-marked.js', __DIR__), array('jquery'), true, true);
+    wp_register_script('aesirx_analytics_ai', plugins_url('assets/vendor/aesirx-consent-ai.js', __DIR__), array('jquery'), false, true);
+    $optionsAI = get_option('aesirx_consent_ai_plugin_options', []);
+    wp_localize_script('aesirx_analytics_ai', 'aesirx_ajax', [
+      'ajax_url' => admin_url('admin-ajax.php'),
+      'nonce' => wp_create_nonce('aesirx_consent_nonce'),
+      'thread_id' =>  $optionsAI['thread_id'],
+      'cookie_declaration' =>  $optionsAI['cookie_declaration'],
+      'privacy_policy' =>  $optionsAI['privacy_policy'],
+      'consent_request' =>  $optionsAI['consent_request'],
+      'domain_categorization' =>  $optionsAI['domain_categorization']
+  ]);
+    wp_enqueue_script('aesirx_analytics_ai');
   }
   if ($hook === 'toplevel_page_aesirx-consent-management-plugin' || $hook === "aesirx-cmp_page_aesirx-cmp-modal") {
     wp_enqueue_script('aesirx_analytics_ckeditor', plugins_url('assets/vendor/aesirx-consent-ckeditor.js', __DIR__), array('jquery'), true, true);
@@ -1406,6 +1650,7 @@ function aesirx_analytics_trigger_trial() {
 
 function aesirx_analytics_license_info() {
   $options = get_option('aesirx_analytics_plugin_options', []);
+  $optionsAIKey = get_option('aesirx_consent_ai_key_plugin_options',[]);
   $domain = isset($_SERVER['SERVER_NAME']) ? sanitize_text_field($_SERVER['SERVER_NAME']) : '';
   $domain = preg_replace('/^www\./', '', $domain);
   if (!empty($options['license'])) {
@@ -1416,6 +1661,12 @@ function aesirx_analytics_license_info() {
     $domainList = array_map(function ($d) {
         return preg_replace('/^www\./', '', $d);
     }, $domainList);
+
+    $openAIKey = json_decode($bodyCheckLicense)->result->openai_key ?? "";
+    $openAIAssistant = json_decode($bodyCheckLicense)->result->openai_assistant ?? "";
+    $optionsAIKey['openai_key'] = $openAIKey;
+    $optionsAIKey['openai_assistant'] =  $openAIAssistant;
+    update_option('aesirx_consent_ai_key_plugin_options', $optionsAIKey);
 
     if ($response['response']['code'] === 200 ) {
       if(!json_decode($bodyCheckLicense)->result->success || json_decode($bodyCheckLicense)->result->subscription_product !== "product-aesirx-cmp") {
@@ -1441,7 +1692,33 @@ function aesirx_analytics_license_info() {
         $currentDate = new DateTime();
         $interval = $currentDate->diff($dateExpired);
         $daysLeft = $interval->days;
-        return wp_kses(sprintf(__("Your license ends in %1\$s days. Please update new license <a href='%2\$s' target='_blank'>%2\$s</a>.", 'aesirx-consent'), $daysLeft, 'https://aesirx.io/licenses'), aesirx_analytics_escape_html());
+        if ($interval->y > 2) {
+          // License is considered lifetime
+            return wp_kses(
+              __("You are using a lifetime license.", 'aesirx-consent'),
+              aesirx_analytics_escape_html()
+          );
+        } else {
+          $parts = [];
+          if ($interval->y > 0) {
+              $parts[] = $interval->y . ' ' . _n('year', 'years', $interval->y, 'aesirx-consent');
+          }
+          if ($interval->m > 0) {
+              $parts[] = $interval->m . ' ' . _n('month', 'months', $interval->m, 'aesirx-consent');
+          }
+          if ($interval->d > 0 || empty($parts)) {
+              $parts[] = $interval->d . ' ' . _n('day', 'days', $interval->d, 'aesirx-consent');
+          }
+          $timeLeft = implode(', ', $parts);
+          return wp_kses(
+              sprintf(
+                  __("Your license ends in %1\$s. Please update your license <a href='%2\$s' target='_blank'>%2\$s</a>.", 'aesirx-consent'),
+                  $timeLeft,
+                  'https://aesirx.io/licenses'
+              ),
+              aesirx_analytics_escape_html()
+          );
+        }
       }
     } else {
       $error_message = $response['response']['message'];
@@ -1454,6 +1731,10 @@ function aesirx_analytics_license_info() {
       );
     }
   } else {
+    $optionsAIKey['openai_key'] = "";
+    $optionsAIKey['openai_assistant'] =  "";
+    update_option('aesirx_consent_ai_key_plugin_options', $optionsAIKey);
+
     $checkTrial = aesirx_analytics_get_api('https://api.aesirx.io/index.php?webserviceClient=site&webserviceVersion=1.0.0&option=member&task=validateWPDomain&api=hal&domain='.rawurlencode($domain));
     $body = wp_remote_retrieve_body($checkTrial);
     if($body) {
@@ -1474,7 +1755,33 @@ function aesirx_analytics_license_info() {
               aesirx_analytics_escape_html()
           );
         }
-        return wp_kses(sprintf(__("Your trial license ends in %1\$s days. Please update new license <a href='%2\$s' target='_blank'>%2\$s</a>.", 'aesirx-consent'), $daysLeft, 'https://aesirx.io/licenses'), aesirx_analytics_escape_html());
+        if ($interval->y > 2) {
+          // License is considered lifetime
+            return wp_kses(
+              __("You are using a lifetime license.", 'aesirx-consent'),
+              aesirx_analytics_escape_html()
+          );
+        } else {
+          $parts = [];
+          if ($interval->y > 0) {
+              $parts[] = $interval->y . ' ' . _n('year', 'years', $interval->y, 'aesirx-consent');
+          }
+          if ($interval->m > 0) {
+              $parts[] = $interval->m . ' ' . _n('month', 'months', $interval->m, 'aesirx-consent');
+          }
+          if ($interval->d > 0 || empty($parts)) {
+              $parts[] = $interval->d . ' ' . _n('day', 'days', $interval->d, 'aesirx-consent');
+          }
+          $timeLeft = implode(', ', $parts);
+          return wp_kses(
+              sprintf(
+                  __("Your trial license ends in %1\$s. Please update your license <a href='%2\$s' target='_blank'>%2\$s</a>.", 'aesirx-consent'),
+                  $timeLeft,
+                  'https://aesirx.io/licenses'
+              ),
+              aesirx_analytics_escape_html()
+          );
+        }
       } else {
         if(json_decode($body)->result->date_expired) {
           return wp_kses(sprintf(__("Your free trials has ended. Please update your license. <a href='%1\$s' target='_blank'>%1\$s</a>.", 'aesirx-consent'), 'https://aesirx.io/licenses'), aesirx_analytics_escape_html());
@@ -1595,3 +1902,53 @@ function allow_data_protocol($protocols) {
   return $protocols;
 }
 add_filter('kses_allowed_protocols', 'allow_data_protocol');
+
+
+add_action('wp_ajax_update_aesirx_options', 'update_aesirx_options');
+
+function update_aesirx_options() {
+    // Check nonce for security (optional but recommended)
+    check_ajax_referer('aesirx_consent_nonce', 'security');
+
+    // Get options from request
+    $options = $_POST['options'] ?? [];
+
+    // Sanitize or validate $options as needed
+
+    // Update the option
+    update_option('aesirx_consent_ai_plugin_options', $options);
+
+    // Return a success response
+    wp_send_json_success('Options updated successfully');
+}
+
+add_action('wp_ajax_update_aesirx_plugins_options', 'update_aesirx_plugins_options');
+
+function update_aesirx_plugins_options() {
+  check_ajax_referer('aesirx_consent_nonce', 'security');
+
+  // Decode JSON string directly
+  $json_raw = $_POST['options'] ?? '{}';
+  $decoded_options = json_decode(stripslashes($json_raw), true); // Decode JSON
+
+  if (!is_array($decoded_options)) {
+      wp_send_json_error('Invalid options format');
+  }
+
+  // Fetch current DB option
+  $pluginOptions = get_option('aesirx_analytics_plugin_options', []);
+
+  // Overwrite specific keys to avoid leftover values
+  $pluginOptions['blocking_cookies'] = array_filter($decoded_options['blocking_cookies'] ?? []);
+  $pluginOptions['blocking_cookies_category'] = $decoded_options['blocking_cookies_category'] ?? [];
+  $pluginOptions['blocking_cookies_plugins'] = array_filter($decoded_options['blocking_cookies_plugins'] ?? []);
+  $pluginOptions['blocking_cookies_plugins_category'] = $decoded_options['blocking_cookies_plugins_category'] ?? [];
+
+
+  // Merge rest if needed
+  $merged = array_replace_recursive($pluginOptions, $decoded_options);
+
+  update_option('aesirx_analytics_plugin_options', $merged);
+
+  wp_send_json_success('Options updated successfully');
+}
