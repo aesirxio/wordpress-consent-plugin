@@ -50,6 +50,7 @@ The Terms of service can be found here https://aesirx.io/terms-conditions and th
 
 = 1.9.0 =
 * AI Privacy Generator
+* 8 More Languages: MY, SL, LT, ET, IS, AZ, KA, LV
 
 = 1.8.0 =
 * Consent Analytics
