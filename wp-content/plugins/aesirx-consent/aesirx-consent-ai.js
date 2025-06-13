@@ -7,7 +7,11 @@ jQuery(document).ready(async function ($) {
 
   const responses = await Promise.all([resBeforeConsent, resAfterConsent]);
 
-  const data = await Promise.all(responses.map((res) => res.json()));
+  const data = await Promise.all(
+    responses.map((res) => {
+      return res?.status === 200 ? res?.json() : [];
+    })
+  );
 
   const beforeCookies = data[0]?.cookies?.map((item) => {
     return {
@@ -23,6 +27,14 @@ jQuery(document).ready(async function ($) {
       expiresDays: item?.expiresDays,
     };
   });
+  if (!afterCookies) {
+    $('.domain_categorization_buttons').after(
+      "<div class='error' style='color:red'>Your site not having scanned result yet. Please contact Aesirx team to perform scan.</div>"
+    );
+    $(
+      '.domain_categorization_buttons .auto_populated, .domain_categorization_buttons .prompt_item_regenerate'
+    ).prop('disabled', true);
+  }
   const cookieData = {
     site_url: endpoint,
     cookies_pre_consent: beforeCookies,

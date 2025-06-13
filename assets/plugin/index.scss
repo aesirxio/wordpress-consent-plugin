@@ -705,6 +705,9 @@ input.aesirx_consent_input {
 .p-32px {
   padding: 32px;
 }
+.d-none {
+  display: none !important;
+}
 .ai_introduction {
   padding: 24px 32px;
   margin-bottom: 20px;
@@ -975,6 +978,11 @@ input.aesirx_consent_input {
 
   .domain_categorization_result {
     display: none;
+  }
+  .error {
+    margin-left: 0;
+    padding: 5px 12px;
+    display: inline-block;
   }
 }
 

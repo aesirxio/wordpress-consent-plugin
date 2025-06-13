@@ -1109,7 +1109,7 @@ add_action('admin_menu', function () {
         echo '</div>';
     },
     plugins_url( 'aesirx-consent/assets/images-plugin/AesirX_BI_icon.png'),
-    3
+    75
   );
   add_submenu_page(
     'aesirx-consent-management-plugin',
@@ -1308,7 +1308,7 @@ add_action('admin_menu', function () {
                 <img width='24px' height='24px' src='<?php echo plugins_url( 'aesirx-consent/assets/images-plugin/warning.png') ?>' />
                 <?php echo esc_html__("Please review and adjust the content to make sure it reflects your actual data practices before publishing.", 'aesirx-consent') ?>
               </div>
-              <div class="prompt_item_info">
+              <div class="prompt_item_info d-none">
                 <img width='24px' height='24px' src='<?php echo plugins_url( 'aesirx-consent/assets/images-plugin/info.png') ?>' />
                 <?php echo esc_html__("For full setup instructions: AesirX CMP Guide: How to Generate Domain Categorization Text with AI", 'aesirx-consent') ?>
               </div>
@@ -1369,7 +1369,7 @@ add_action('admin_menu', function () {
                 <img width='24px' height='24px' src='<?php echo plugins_url( 'aesirx-consent/assets/images-plugin/warning.png') ?>' />
                 <?php echo esc_html__("Please review and adjust the content to make sure it reflects your actual data practices before publishing.", 'aesirx-consent') ?>
               </div>
-              <div class="prompt_item_info">
+              <div class="prompt_item_info d-none">
                 <img width='24px' height='24px' src='<?php echo plugins_url( 'aesirx-consent/assets/images-plugin/info.png') ?>' />
                 <?php echo esc_html__("For full setup instructions: AesirX CMP Guide: How to Generate a Cookie Declaration with AI", 'aesirx-consent') ?>
               </div>
@@ -1399,7 +1399,7 @@ add_action('admin_menu', function () {
                 <img width='24px' height='24px' src='<?php echo plugins_url( 'aesirx-consent/assets/images-plugin/warning.png') ?>' />
                 <?php echo esc_html__("Please review and adjust the content to make sure it reflects your actual data practices before publishing.", 'aesirx-consent') ?>
               </div>
-              <div class="prompt_item_info">
+              <div class="prompt_item_info d-none">
                 <img width='24px' height='24px' src='<?php echo plugins_url( 'aesirx-consent/assets/images-plugin/info.png') ?>' />
                 <?php echo esc_html__("For full setup instructions: AesirX CMP Guide: How to Generate a Privacy Policy with AI", 'aesirx-consent') ?>
               </div>
@@ -1429,7 +1429,7 @@ add_action('admin_menu', function () {
                 <img width='24px' height='24px' src='<?php echo plugins_url( 'aesirx-consent/assets/images-plugin/warning.png') ?>' />
                 <?php echo esc_html__("Please review and adjust the content to make sure it reflects your actual data practices before publishing.", 'aesirx-consent') ?>
               </div>
-              <div class="prompt_item_info">
+              <div class="prompt_item_info d-none">
                 <img width='24px' height='24px' src='<?php echo plugins_url( 'aesirx-consent/assets/images-plugin/info.png') ?>' />
                 <?php echo esc_html__("For full setup instructions: AesirX CMP Guide: How to Generate Consent Request Text with AI", 'aesirx-consent') ?>
               </div>
