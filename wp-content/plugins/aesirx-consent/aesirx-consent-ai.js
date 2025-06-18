@@ -52,7 +52,7 @@ jQuery(document).ready(async function ($) {
   You are a privacy legal expert assistant tasked with generating privacy policies for websites. Use the provided scan data, services, and jurisdiction to create a GDPR/CCPA/ePrivacy-compliant privacy policy.
   Include the following: Identity of the data controller, Types of personal data collected (incl. data from beacons and tracking pixels), Use of cookies and similar technologies, Legal basis for processing, Third-party services involved, Data retention periods, Sharing of data (who receives it and why), User rights, International transfers, A disclaimer that the policy is a draft and must be reviewed.
   ${JSON.stringify(cookieData, null, 2)}
-  Additions: Explicit mention and inclusion of beacons and tracking pixels. Add a draft disclaimer in the generated policy. Ensure third-party data sharing is addressed, with optional placeholder to list vendors. Highlight user rights under GDPR/CCPA.
+  Additions: Explicit mention and inclusion of beacons and tracking pixels. Add a draft disclaimer in the generated policy. Ensure third-party data sharing is addressed, with optional placeholder to list vendors. Highlight user rights under GDPR/CCPA. Remove phone number since don't need it.
   `;
   const consent_request_prompt = `
   You are a privacy user experience expert specializing in global privacy compliance (GDPR, ePrivacy, CCPA). Generate a clear, user-friendly consent request message for a website. The message must explain cookie usage, mention beacons/tracking pixels, and clearly state which data types are collected before and after consent.
