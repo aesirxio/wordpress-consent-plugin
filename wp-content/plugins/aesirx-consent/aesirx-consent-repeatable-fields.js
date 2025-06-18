@@ -52,6 +52,9 @@ jQuery(document).ready(function ($) {
           case 'client_secret':
             jQuery('#aesirx_analytics_secret').val(value);
             break;
+          case 'copy':
+            navigator.clipboard.writeText(value);
+            break;
           default:
             console.warn('Unknown message type:', key);
         }
