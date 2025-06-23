@@ -134,11 +134,6 @@ jQuery(document).ready(async function ($) {
     const openai_content = marked.parse(
       openai_json?.data?.messages[openai_json?.data?.messages?.length - 1]?.content
     );
-    console.log(
-      'openai_json?.data?.messages[openai_json?.data?.messages?.length - 1]?.content',
-      openai_json?.data?.messages[openai_json?.data?.messages?.length - 1]?.content
-    );
-    console.log('openai_content', openai_content);
     const threadID = openai_json?.data?.thread_id;
     $(`#${id} .prompt_item_result .result`).html(`${openai_content}`);
     const newOptions = {
