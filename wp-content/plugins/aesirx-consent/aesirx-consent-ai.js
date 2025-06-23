@@ -44,7 +44,7 @@ jQuery(document).ready(async function ($) {
   };
   const cookie_declaration_prompt = `
   You are a privacy compliance assistant specializing in GDPR, ePrivacy, and global data privacy laws. Generate a legally accurate cookie declaration based on the input JSON of scanned cookies and services. Cookies should be categorized, and include name, domain, purpose, duration, and provider. Assume a consent-based model (prior consent unless strictly necessary). This declaration should only include cookies-not beacons or tracking pixels.
-  Format the output in Markdown/HTML for WordPress and ensure it's readable and editable by the site admin. Indicate consent is required for all cookies except strictly necessary ones.
+  Indicate consent is required for all cookies except strictly necessary ones.
   ${JSON.stringify(cookieData, null, 2)}
   Additions: Explicit instruction: Exclude beacons and pixels. Emphasize consent requirements clearly in the text output. Tables remain the same for cookie display.
   `;
@@ -134,10 +134,16 @@ jQuery(document).ready(async function ($) {
     const openai_content = marked.parse(
       openai_json?.data?.messages[openai_json?.data?.messages?.length - 1]?.content
     );
+    console.log(
+      'openai_json?.data?.messages[openai_json?.data?.messages?.length - 1]?.content',
+      openai_json?.data?.messages[openai_json?.data?.messages?.length - 1]?.content
+    );
+    console.log('openai_content', openai_content);
     const threadID = openai_json?.data?.thread_id;
     $(`#${id} .prompt_item_result .result`).html(`${openai_content}`);
     const newOptions = {
       thread_id: threadID ?? aesirx_ajax.thread_id,
+      update_thread: '1.9.0',
       [id]: openai_content,
     };
     await updateAesirxOptions(newOptions);
@@ -167,7 +173,7 @@ jQuery(document).ready(async function ($) {
     Only return object that domain not in ${host} and blocked is true.
     If have duplicate domain, please use the latest. Remove duplicate domain.
     If the domain is aesirx.io, just return empty in domain.
-    Only output JSON. No explanation. No markdown.`;
+    Only output JSON. No explanation. No markdown. No spacing/line break.`;
     $('.prompt_item_regenerate, .auto_populated').each(function () {
       $(this).prop('disabled', true);
       $(this).find('.loader').addClass('show');
@@ -189,7 +195,9 @@ jQuery(document).ready(async function ($) {
       $(this).prop('disabled', false);
       $(this).find('.loader').removeClass('show');
     });
-    const rawString = $(`.domain_categorization_result code`).text();
+    const rawString = $(`.domain_categorization_result code`).text()
+      ? $(`.domain_categorization_result code`).text()
+      : $(`.domain_categorization_result p`).text();
     const validJson = rawString.replace(/'/g, '"');
     const result = await generateDomainConfigure(validJson);
     if (result) {

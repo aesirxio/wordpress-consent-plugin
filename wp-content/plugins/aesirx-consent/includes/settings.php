@@ -1369,9 +1369,9 @@ add_action('admin_menu', function () {
                 <img width='24px' height='24px' src='<?php echo plugins_url( 'aesirx-consent/assets/images-plugin/warning.png') ?>' />
                 <?php echo esc_html__("Please review and adjust the content to make sure it reflects your actual data practices before publishing.", 'aesirx-consent') ?>
               </div>
-              <div class="prompt_item_info d-none">
+              <div class="prompt_item_info">
                 <img width='24px' height='24px' src='<?php echo plugins_url( 'aesirx-consent/assets/images-plugin/info.png') ?>' />
-                <?php echo esc_html__("For full setup instructions: AesirX CMP Guide: How to Generate a Cookie Declaration with AI", 'aesirx-consent') ?>
+                <?php echo wp_kses(sprintf(__("For full setup instructions: <a href='%1\$s' target='_blank'>AesirX CMP Guide: How to Generate a Cookie Declaration with AI</a>.", 'aesirx-consent'), 'https://aesirx.io/documentation/cmp/how-to/aesirx-cmp-how-to-generate-a-cookie-declaration-with-ai'), aesirx_analytics_escape_html()); ?>
               </div>
               <div class="prompt_item_result">
                 <div class="loading">
@@ -1399,9 +1399,9 @@ add_action('admin_menu', function () {
                 <img width='24px' height='24px' src='<?php echo plugins_url( 'aesirx-consent/assets/images-plugin/warning.png') ?>' />
                 <?php echo esc_html__("Please review and adjust the content to make sure it reflects your actual data practices before publishing.", 'aesirx-consent') ?>
               </div>
-              <div class="prompt_item_info d-none">
+              <div class="prompt_item_info">
                 <img width='24px' height='24px' src='<?php echo plugins_url( 'aesirx-consent/assets/images-plugin/info.png') ?>' />
-                <?php echo esc_html__("For full setup instructions: AesirX CMP Guide: How to Generate a Privacy Policy with AI", 'aesirx-consent') ?>
+                <?php echo wp_kses(sprintf(__("For full setup instructions: <a href='%1\$s' target='_blank'>AesirX CMP Guide: How to Generate a Privacy Policy with AI</a>.", 'aesirx-consent'), 'https://aesirx.io/documentation/cmp/how-to/aesirx-cmp-guide-how-to-generate-a-privacy-policy-with-ai'), aesirx_analytics_escape_html()); ?>
               </div>
               <div class="prompt_item_result">
                 <div class="loading">

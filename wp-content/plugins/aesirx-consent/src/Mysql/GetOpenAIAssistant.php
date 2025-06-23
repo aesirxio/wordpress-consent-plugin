@@ -20,7 +20,7 @@ Class AesirX_Analytics_Get_Openai_Assistant extends AesirxAnalyticsMysqlHelper
             'OpenAI-Beta' => 'assistants=v2',
             'Content-Type' => 'application/json',
         ];
-        $msgRes = wp_remote_get("https://api.openai.com/v1/threads/{$thread_id}/messages", [
+        $msgRes = wp_remote_get("https://aesirxopenai.openai.azure.com/openai/threads/{$thread_id}/messages", [
             'headers' => $headers,
         ]);
         $msgData = json_decode(wp_remote_retrieve_body($msgRes), true);

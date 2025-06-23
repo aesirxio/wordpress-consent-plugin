@@ -22,19 +22,21 @@ Class AesirX_Analytics_Openai_Assistant extends AesirxAnalyticsMysqlHelper
          // 1. Get or create thread_id
         $options = get_option('aesirx_consent_ai_plugin_options');
         $thread_id = $options['thread_id'];
-        if (!$thread_id) {
-            $response = wp_remote_post('https://api.openai.com/v1/threads', [
+        $updateThread = $options['update_thread'];
+        if (!$thread_id || $updateThread !== '1.9.0') {
+            $response = wp_remote_post('https://aesirxopenai.openai.azure.com/openai/threads?api-version=2024-12-01-preview', [
                 'headers' => $headers,
                 'body' => '{}',
             ]);
             $thread_data = json_decode(wp_remote_retrieve_body($response), true);
             $thread_id = $thread_data['id'];
             $options['thread_id'] = $thread_id;
+            $options['update_thread'] = '1.9.0';
             update_option('aesirx_consent_ai_plugin_options', $options);
         }
 
         // 2. Add user message
-        wp_remote_post("https://api.openai.com/v1/threads/{$thread_id}/messages", [
+        wp_remote_post("https://aesirxopenai.openai.azure.com/openai/threads/{$thread_id}/messages?api-version=2024-12-01-preview", [
             'headers' => $headers,
             'body' => json_encode([
                 'role' => 'user',
@@ -43,7 +45,7 @@ Class AesirX_Analytics_Openai_Assistant extends AesirxAnalyticsMysqlHelper
         ]);
 
         // 3. Run assistant
-        $runRes = wp_remote_post("https://api.openai.com/v1/threads/{$thread_id}/runs", [
+        $runRes = wp_remote_post("https://aesirxopenai.openai.azure.com/openai/threads/{$thread_id}/runs?api-version=2024-12-01-preview", [
             'headers' => $headers,
             'body' => json_encode(['assistant_id' => $assistant_id]),
         ]);
@@ -54,7 +56,7 @@ Class AesirX_Analytics_Openai_Assistant extends AesirxAnalyticsMysqlHelper
         $status = 'queued';
         while (in_array($status, ['queued', 'in_progress'])) {
             sleep(1);
-            $statusRes = wp_remote_get("https://api.openai.com/v1/threads/{$thread_id}/runs/{$run_id}", [
+            $statusRes = wp_remote_get("https://aesirxopenai.openai.azure.com/openai/threads/{$thread_id}/runs/{$run_id}?api-version=2024-12-01-preview", [
                 'headers' => $headers,
             ]);
             $statusData = json_decode(wp_remote_retrieve_body($statusRes), true);
@@ -62,7 +64,7 @@ Class AesirX_Analytics_Openai_Assistant extends AesirxAnalyticsMysqlHelper
         }
 
         // 5. Get all messages
-        $msgRes = wp_remote_get("https://api.openai.com/v1/threads/{$thread_id}/messages", [
+        $msgRes = wp_remote_get("https://aesirxopenai.openai.azure.com/openai/threads/{$thread_id}/messages?api-version=2024-12-01-preview", [
             'headers' => $headers,
         ]);
         $msgData = json_decode(wp_remote_retrieve_body($msgRes), true);
