@@ -1308,9 +1308,24 @@ add_action('admin_menu', function () {
                 <img width='24px' height='24px' src='<?php echo plugins_url( 'aesirx-consent/assets/images-plugin/warning.png') ?>' />
                 <?php echo esc_html__("Please review and adjust the content to make sure it reflects your actual data practices before publishing.", 'aesirx-consent') ?>
               </div>
-              <div class="prompt_item_info d-none">
+              <div class="prompt_item_info" style="align-items: start;">
                 <img width='24px' height='24px' src='<?php echo plugins_url( 'aesirx-consent/assets/images-plugin/info.png') ?>' />
-                <?php echo esc_html__("For full setup instructions: AesirX CMP Guide: How to Generate Domain Categorization Text with AI", 'aesirx-consent') ?>
+                <div>
+                  <div>
+                    <strong>Disclaimer:</strong>The AI Privacy Advisor can only detect and automatically block third-party services (such as cookies, scripts, or domains) that are integrated via WordPress plugins or recognizable injection patterns. Any third-party technologies manually inserted into the WordPress theme files or directly embedded in the source code (e.g., within the <strong>&lt;head&gt;</strong> or <strong>&lt;footer&gt;</strong> sections) bypass plugin detection and must be manually move the loading of such scripts or links into the <strong>window.funcAfterConsent</strong> function within your code.
+                  </div>
+                  <code style="
+                    display: inline-block;
+                    white-space: pre;
+                    margin-top: 10px;
+                    border-radius: 10px;
+                    padding: 0 20px;
+                    width: auto;">
+window.funcAfterConsent = async function () {
+  // Load your 3rd party or JS you need after consent here
+}
+                  </code>
+                </div>
               </div>
               <div class="prompt_item_result">
                 <div class="loading">
