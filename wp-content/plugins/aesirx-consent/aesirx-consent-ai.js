@@ -208,12 +208,32 @@ jQuery(document).ready(async function ($) {
     }
   });
 
-  $('.copy_clipboard').click(function () {
-    const htmlContent = $(this).parent().find('.result').html();
+  $('.copy_clipboard').click(async function () {
+    const html = $(this).parent().find('.result').html();
+    const copiedText = $(this).find('.copied_text');
 
+    if (navigator.clipboard && navigator.clipboard.write) {
+      try {
+        await navigator.clipboard.write([
+          new ClipboardItem({
+            'text/html': new Blob([html], { type: 'text/html' }),
+            'text/plain': new Blob([$(this).parent().find('.result').text()], {
+              type: 'text/plain',
+            }),
+          }),
+        ]);
+        copiedText.addClass('show');
+        setTimeout(() => copiedText.removeClass('show'), 1000);
+        return;
+      } catch (err) {
+        console.error('Clipboard API error:', err);
+      }
+    }
+
+    // Fallback for non-secure/unsupported environments
     const tempEl = document.createElement('div');
     tempEl.contentEditable = true;
-    tempEl.innerHTML = htmlContent;
+    tempEl.innerHTML = html;
     document.body.appendChild(tempEl);
 
     const range = document.createRange();
@@ -224,19 +244,16 @@ jQuery(document).ready(async function ($) {
     selection.addRange(range);
 
     try {
-      const success = document.execCommand('copy');
-      console.log('HTML copied:', success);
+      document.execCommand('copy');
+      console.log('Fallback copied');
     } catch (err) {
-      console.error('Failed to copy HTML:', err);
+      console.error('Fallback copy failed:', err);
     }
 
     selection.removeAllRanges();
     document.body.removeChild(tempEl);
-    const copiedText = $(this).find('.copied_text');
     copiedText.addClass('show');
-    setTimeout(function () {
-      copiedText.removeClass('show');
-    }, 1000);
+    setTimeout(() => copiedText.removeClass('show'), 1000);
   });
 
   async function generateDomainConfigure(json) {

@@ -117,7 +117,8 @@ add_action('wp_enqueue_scripts', function (): void {
         "txt_opt_out_tracking" => __( "Opt-Out of tracking", 'aesirx-consent' ),
         "txt_tracking_default" => __( "This website uses tracking by default. You may opt out at any time.", 'aesirx-consent' ),
         "txt_do_not_sell" => __( "Do Not Sell or Share My Personal Information (CCPA)", 'aesirx-consent' ),
-        "txt_disables_third_party" => __( "Disables third-party data sharing for California users.", 'aesirx-consent' )
+        "txt_disables_third_party" => __( "Disables third-party data sharing for California users.", 'aesirx-consent' ),
+        "txt_cookie_declaration" => __( "Cookie Declaration", 'aesirx-consent' )
     );
     wp_localize_script( 'aesirx-consent', 'aesirx_analytics_translate', $translation_array );
     wp_enqueue_script('aesirx-consent');

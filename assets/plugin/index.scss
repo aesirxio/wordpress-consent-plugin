@@ -62,14 +62,14 @@
     padding-left: 20px;
     color: #646970;
   }
-  table {
-    tbody {
+  table.form-table {
+    & > tbody {
       display: flex;
       flex-wrap: wrap;
-      tr {
+      & > tr {
         display: flex;
         flex-wrap: wrap;
-        th {
+        & > th {
           width: 100%;
           padding-top: 0;
           padding-bottom: 6px;
@@ -77,7 +77,7 @@
           display: flex;
           font-size: 18px;
         }
-        td {
+        & > td {
           width: 100%;
           padding: 0;
         }
@@ -157,9 +157,9 @@
 }
 
 .aesirx-cmp_page_aesirx-cmp-modal {
-  table {
-    tbody {
-      tr {
+  table.form-table {
+    & > tbody {
+      & > tr {
         &.aesirx_analytics_consent_template_row {
           margin-bottom: 50px;
           .aesirx_consent_template {
@@ -196,6 +196,7 @@
           }
         }
         &.aesirx_consent_modal_datastream_consent_row,
+        &.aesirx_consent_modal_datastream_cookie_row,
         &.aesirx_consent_modal_datastream_detail_row,
         &.aesirx_consent_modal_datastream_reject_row {
           margin-bottom: 32px;
@@ -250,9 +251,14 @@
   .text-success {
     color: #1ab394;
   }
+  .ck-content {
+    min-height: 100px;
+    max-height: 400px;
+  }
 }
 .reset_consent_button,
 .reset_detail_button,
+.reset_cookie_button,
 .reset_reject_button {
   &.aesirx_btn_success_light {
     margin-top: 10px;
@@ -977,6 +983,9 @@ input.aesirx_consent_input {
         color: #fff;
         margin-bottom: 5px;
       }
+    }
+    &.hide {
+      display: none;
     }
   }
 

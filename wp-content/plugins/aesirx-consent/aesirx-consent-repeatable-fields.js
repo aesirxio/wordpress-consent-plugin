@@ -209,6 +209,12 @@ jQuery(document).ready(function ($) {
       resetClass: 'reset_consent_button',
     },
     {
+      id: 'datastream_cookie',
+      inputId: 'aesirx_consent_modal_datastream_cookie',
+      text: '',
+      resetClass: 'reset_cookie_button',
+    },
+    {
       id: 'datastream_detail',
       inputId: 'aesirx_consent_modal_datastream_detail',
       text: textDetail,
@@ -239,13 +245,28 @@ jQuery(document).ready(function ($) {
     SourceEditing,
     Link,
     AutoLink,
+    Table,
+    TableToolbar,
+    Heading,
+    CodeBlock,
   } = CKEDITOR;
   editors.forEach(({ id, inputId, text, resetClass }) => {
     // Initialize CKEditor for each editor
     ClassicEditor.create(document.querySelector(`#${id}`), {
       licenseKey: 'GPL',
       toolbar: {
-        items: ['sourceEditing', 'undo', 'redo', '|', 'bold', 'italic', 'link', 'insertImage'],
+        items: [
+          'sourceEditing',
+          'undo',
+          'redo',
+          '|',
+          'bold',
+          'italic',
+          'link',
+          'insertImage',
+          'insertTable',
+          'codeBlock',
+        ],
       },
       plugins: [
         Bold,
@@ -264,40 +285,21 @@ jQuery(document).ready(function ($) {
         SourceEditing,
         Link,
         AutoLink,
+        Table,
+        TableToolbar,
+        Heading,
+        CodeBlock,
       ],
       htmlSupport: {
-        allow: [
-          {
-            name: 'div',
-            attributes: true,
-            classes: true,
-            styles: true,
-          },
-          {
-            name: 'p',
-            attributes: true,
-            classes: true,
-            styles: true,
-          },
-          {
-            name: 'span',
-            attributes: true,
-            classes: true,
-            styles: true,
-          },
-          {
-            name: 'a',
-            attributes: true,
-            classes: true,
-            styles: true,
-          },
-        ],
+        allow: [{ name: /.*/, attributes: true, classes: true, styles: true }],
       },
     })
       .then((editor) => {
         // Set the initial content if the input field is empty
         if (!$(`#${inputId}`).val()) {
           editor.setData(text);
+        } else {
+          editor.setData($(`#${inputId}`).val());
         }
 
         // Listen for changes and update the input field accordingly
