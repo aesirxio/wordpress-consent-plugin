@@ -336,6 +336,31 @@ add_action('admin_init', function () {
   );
 
   add_settings_field(
+    'aesirx_consent_modal_datastream_cookie',
+    esc_html__('Customize Cookie Declaration Text', 'aesirx-consent'),
+    function () {
+      $options = get_option('aesirx_consent_modal_plugin_options', []);
+      $decodedHtml = html_entity_decode($options['datastream_cookie'], ENT_QUOTES, 'UTF-8');
+      echo wp_kses('<input id="aesirx_consent_modal_datastream_cookie" class="aesirx_consent_input" name="aesirx_consent_modal_plugin_options[datastream_cookie]" type="hidden" 
+      value="'.esc_attr($options['datastream_cookie']).'" />', aesirx_analytics_escape_html());
+      echo wp_kses('
+      <div id="datastream_cookie">
+        <div>'.$decodedHtml.'</div>'.'
+      </div>', aesirx_analytics_escape_html());
+      echo wp_kses('
+      <button type="button" class="reset_cookie_button aesirx_btn_success_light">
+        <img width="20px" height="20px" src="'. plugins_url( 'aesirx-consent/assets/images-plugin/reset_icon.png').'" />
+        '.esc_html__("Reset Detail", 'aesirx-consent').'
+      </button>', aesirx_analytics_escape_html());
+    },
+    'aesirx_consent_modal_plugin',
+    'aesirx_consent_modal_settings',
+    [
+      'class' => 'aesirx_consent_modal_datastream_cookie_row',
+    ]
+  );
+
+  add_settings_field(
     'aesirx_consent_modal_datastream_detail',
     esc_html__('Customize Details Text ', 'aesirx-consent'),
     function () {
@@ -1346,7 +1371,7 @@ window.funcAfterConsent = async function () {
                   <img width='22px' height='22px' src='<?php echo plugins_url( 'aesirx-consent/assets/images-plugin/shield_block.png') ?>' />
                   <?php echo esc_html__("Enable AI Auto-Blocking", 'aesirx-consent') ?>
                 </button>
-                <div class="auto_populated_information">
+                <div class="auto_populated_information <?php if(!$options['domain_categorization']) echo 'hide'; ?>">
                   <img width='22px' height='22px' src='<?php echo plugins_url( 'aesirx-consent/assets/images-plugin/info_gray.png') ?>' />
                   <div class="auto_populated_information_content">
                     <div class="title">Enable Automatic AI-Based Blocking</div>

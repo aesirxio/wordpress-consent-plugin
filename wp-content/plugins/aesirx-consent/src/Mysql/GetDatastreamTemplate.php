@@ -17,6 +17,7 @@ Class AesirX_Analytics_Get_Datastream_Template extends AesirxAnalyticsMysqlHelpe
             'gtag_id' => $options['datastream_gtag_id'],
             'gtm_id' => $options['datastream_gtm_id'],
             "consent_text" =>  $optionsConsentModal['datastream_consent'],
+            "cookie_text" =>  $optionsConsentModal['datastream_cookie'],
             "detail_text" =>  $optionsConsentModal['datastream_detail'],
             "reject_text" =>  $optionsConsentModal['datastream_reject'],
             "gpc_consent" =>  $optionsGPC['gpc_consent'],
