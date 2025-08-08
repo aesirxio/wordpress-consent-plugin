@@ -35,18 +35,10 @@ Class AesirX_Analytics_Get_Statement extends AesirxAnalyticsMysqlHelper
         
         if ($ageCheck === "ageCheck") {
             $today = new DateTime();
-            if ($maximumAge > 0) {
-                $lowerDate = $today->sub(new DateInterval("P{$maximumAge}Y"))->format('Ymd');
-                $today->add(new DateInterval("P{$maximumAge}Y")); // reset
-            } else {
-                $lowerDate = '19000101'; // January 1st, 1900
-            }
-        
-            if ($minimumAge > 0) {
-                $upperDate = $today->sub(new DateInterval("P{$minimumAge}Y"))->format('Ymd');
-            } else {
-                $upperDate = $today->format('Ymd');
-            }
+            $lowerDate = $today->sub(new DateInterval("P{$maximumAge}Y"))->format('Ymd');
+            $today->add(new DateInterval("P{$maximumAge}Y"));
+            $upperDate = $today->sub(new DateInterval("P{$minimumAge}Y"))->format('Ymd');
+            $today->add(new DateInterval("P{$minimumAge}Y"));
             $response[] = [
                 "type" => "AttributeInRange",
                 "attributeTag" => "dob",

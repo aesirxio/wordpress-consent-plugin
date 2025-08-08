@@ -201,6 +201,28 @@ add_action('admin_init', function () {
     function () {
       $template = get_option('aesirx_consent_modal_plugin_options', []);
       // using custom function to escape HTML
+      echo "<div class='aesirx_consent_template_container'>";
+      echo wp_kses("
+        <div class='aesirx_consent_template'>
+          <label class='aesirx_consent_template_item ".($template['datastream_template'] === 'simple-consent-mode' ? 'active' : '')."' for='simple-mode'>
+            <img width='585px' height='388px' src='". plugins_url( 'aesirx-consent/assets/images-plugin/consent_simple_mode.png')."' />
+            <p class='title'>".esc_html__('Default Consent Mode', 'aesirx-consent')."</p>
+            <input id='simple-mode' type='radio' class='analytic-consent-class' name='aesirx_consent_modal_plugin_options[datastream_template]' " .
+            ($template['datastream_template'] === 'simple-consent-mode' ? "checked='checked'" : '') .
+            " value='simple-consent-mode'  />
+            <p>".esc_html__("Default Consent Mode improves Google Consent Mode 2.0 by not loading any tags until after consent is given, reducing compliance risks.", 'aesirx-consent')."</p>
+          </label>
+          <label class='aesirx_consent_template_item ".
+          (!$template['datastream_template'] || $template['datastream_template'] === 'default' ? 'active' : '') ."' for='default'>
+            <img width='585px' height='388px' src='". plugins_url( 'aesirx-consent/assets/images-plugin/consent_default.png')."' />
+            <p class='title'>".esc_html__('Decentralized Consent Mode', 'aesirx-consent')."</p>
+            <input type='radio' id='default' class='analytic-consent-class' name='aesirx_consent_modal_plugin_options[datastream_template]' " .
+            (!$template['datastream_template'] || $template['datastream_template'] === 'default' ? "checked='checked'" : '') .
+            "value='default'  />
+            <p>".esc_html__("Decentralized Consent Mode setup improves Google Consent Mode 2.0 by not loading any scripts, beacons, or tags until after consent is given, reducing compliance risks. It also includes Decentralized Consent, for more control over personal data and rewards.", 'aesirx-consent')."</p>
+          </label>
+        </div>
+      ", aesirx_analytics_escape_html());
       $allCountries = [
         "AF" => "Afghanistan",
         "AL" => "Albania",
@@ -399,113 +421,49 @@ add_action('admin_init', function () {
       ];
       $allowedCountryOptions = '';
       foreach ($allCountries as $code => $name) {
-          $isSelected = $template['allowed_countries'] ? (in_array($code, $template['allowed_countries']) ? 'selected' : '') : '';
-          $allowedCountryOptions .= "<option value=\"$code\"  $isSelected >$name</option>";
+          $isSelected = in_array($code, $template['allowed_countries']) ? 'selected' : '';
+          $allowedCountryOptions .= "<option value=\"$code\" $isSelected>$name</option>";
       }
       $disallowedCountryOptions = '';
       foreach ($allCountries as $code => $name) {
-          $isSelected = $template['disallowed_countries'] ? (in_array($code, $template['disallowed_countries']) ? 'selected' : '' ): '';
+          $isSelected = in_array($code, $template['disallowed_countries']) ? 'selected' : '';
           $disallowedCountryOptions .= "<option value=\"$code\" $isSelected>$name</option>";
       }
       echo wp_kses("
-        <div class='aesirx_consent_template_container'>
-          <div class='aesirx_consent_template'>
-            <label class='aesirx_consent_template_item ".($template['datastream_template'] === 'simple-consent-mode' ? 'active' : '')."' for='simple-mode'>
-              <img width='585px' height='388px' src='". plugins_url( 'aesirx-consent/assets/images-plugin/consent_simple_mode.png')."' />
-              <p class='title'>".esc_html__('Default Consent Mode', 'aesirx-consent')."</p>
-              <input id='simple-mode' type='radio' class='analytic-consent-class' name='aesirx_consent_modal_plugin_options[datastream_template]' " .
-              ($template['datastream_template'] === 'simple-consent-mode' ? "checked='checked'" : '') .
-              " value='simple-consent-mode'  />
-              <p>".esc_html__("Default Consent Mode improves Google Consent Mode 2.0 by not loading any tags until after consent is given, reducing compliance risks.", 'aesirx-consent')."</p>
-            </label>
-            <label class='aesirx_consent_template_item ".
-            (!$template['datastream_template'] || $template['datastream_template'] === 'default' ? 'active' : '') ."' for='default'>
-              <img width='585px' height='388px' src='". plugins_url( 'aesirx-consent/assets/images-plugin/consent_default.png')."' />
-              <p class='title'>".esc_html__('Decentralized Consent Mode', 'aesirx-consent')."</p>
-              <input type='radio' id='default' class='analytic-consent-class' name='aesirx_consent_modal_plugin_options[datastream_template]' " .
-              (!$template['datastream_template'] || $template['datastream_template'] === 'default' ? "checked='checked'" : '') .
-              "value='default'  />
-              <p>".esc_html__("Decentralized Consent Mode setup improves Google Consent Mode 2.0 by not loading any scripts, beacons, or tags until after consent is given, reducing compliance risks. It also includes Decentralized Consent, for more control over personal data and rewards.", 'aesirx-consent')."</p>
-            </label>
-            <input type='hidden' id='datastream_template_hidden' name='aesirx_consent_modal_plugin_options[datastream_template]' value=".$template['datastream_template']."  />
-          </div>
-          <div class='aesirx_consent_age_country'>
-            <h4>Age & Country Verification</h4>
-            <div class='aesirx_consent_age'>
-              <input id='age_check' type='checkbox' name='aesirx_consent_modal_plugin_options[age_check]' ".($template['age_check'] === 'ageCheck' ? "checked='checked'" : "")." value='ageCheck' />
-              <label for='age_check'>
-                Enable Age Verification
-                <div class='input_information'>
-                  <img width='20px' height='20px' src='". plugins_url( 'aesirx-consent/assets/images-plugin/infor_icon.png')."' />
-                  ".sprintf(__("<div class='input_information_content'>
-                  Verifies user’s age using Zero-Knowledge Proof (ZKP) via Concordium Wallet. No actual age is collected or stored—only a cryptographic confirmation that the user meets the age requirement.</div>", 'aesirx-consent'))."
-                </div>
-              </label>
-             
-            </div>
-            <div class='aesirx_consent_country'>
-              <input id='country_check' type='checkbox' name='aesirx_consent_modal_plugin_options[country_check]' ".($template['country_check'] === 'countryCheck' ? "checked='checked'" : "")." value='countryCheck' />
-              <label for='country_check'>
-                Enable Country Verification
-                <div class='input_information'>
-                  <img width='20px' height='20px' src='". plugins_url( 'aesirx-consent/assets/images-plugin/infor_icon.png')."' />
-                  ".sprintf(__("<div class='input_information_content'>
-                  Confirms the user’s country using ZKP from Concordium Wallet. The site never accesses or stores personal location data—only a validated result.</div>", 'aesirx-consent'))."
-                </div>
-              </label>
-            </div>
-            <div class='aesirx_consent_minimum_age'>
-              <label for='minimum_age'>
-                Minimum Age
-                <div class='input_information'>
-                  <img width='20px' height='20px' src='". plugins_url( 'aesirx-consent/assets/images-plugin/infor_icon.png')."' />
-                  ".sprintf(__("<div class='input_information_content'>
-                  Minimum age required for access. Verified securely using ZKP via Concordium Wallet—without revealing or storing the user’s actual age.</div>", 'aesirx-consent'))."
-                </div>
-              </label>
-              <input id='minimum_age' type='number' name='aesirx_consent_modal_plugin_options[minimum_age]' value=".($template['minimum_age'] ? $template['minimum_age'] : "")." />
-            </div>
-            <div class='aesirx_consent_maximum_age'>
-              <label for='maximum_age'>
-                Maximum Age (optional)
-                <div class='input_information'>
-                  <img width='20px' height='20px' src='". plugins_url( 'aesirx-consent/assets/images-plugin/infor_icon.png')."' />
-                  ".sprintf(__("<div class='input_information_content'>
-                  Optional upper age limit. The system will confirm the user is younger than this using ZKP, without exposing personal data.</div>", 'aesirx-consent'))."
-                </div>
-              </label>
-              <input id='maximum_age' type='number' name='aesirx_consent_modal_plugin_options[maximum_age]' value=".($template['maximum_age'] ? $template['maximum_age'] : "")." />
-            </div>
-            <div class='aesirx_consent_allowed_countries'>
-              <label for='allowed_countries'>
-                Allowed Countries
-                <div class='input_information'>
-                  <img width='20px' height='20px' src='". plugins_url( 'aesirx-consent/assets/images-plugin/infor_icon.png')."' />
-                  ".sprintf(__("<div class='input_information_content'>
-                  Access is granted only to users from these selected countries. Verification uses ISO 3166-1 alpha-2 codes via Concordium Wallet.</div>", 'aesirx-consent'))."
-                </div>
-              </label>
-              <select id='allowed_countries' name='aesirx_consent_modal_plugin_options[allowed_countries][]' multiple>
-                ".$allowedCountryOptions."
-              </select>
-            </div>
-            <div class='aesirx_consent_disallowed_countries'>
-              <label for='disallowed_countries'>
-                Disallowed Countries
-                <div class='input_information'>
-                  <img width='20px' height='20px' src='". plugins_url( 'aesirx-consent/assets/images-plugin/infor_icon.png')."' />
-                  ".sprintf(__("<div class='input_information_content'>
-                  Users from these countries will be denied access, even if other requirements are met. Verification is handled via Concordium Wallet.</div>", 'aesirx-consent'))."
-                </div>
-              </label>
-              <select id='disallowed_countries' name='aesirx_consent_modal_plugin_options[disallowed_countries][]' multiple>
-                ".$disallowedCountryOptions."
-              </select>
-            </div>
-          </div>
+      <div class='aesirx_consent_age_country'>
+        <h4>Age & Country Verification</h4>
+        <div class='aesirx_consent_age'>
+          <input id='age_check' type='checkbox' name='aesirx_consent_modal_plugin_options[age_check]' ".($template['age_check'] === 'ageCheck' ? "checked='checked'" : "")." value='ageCheck' />
+          <label for='age_check'>Enable Age Verification</label>
         </div>
+        <div class='aesirx_consent_country'>
+          <input id='country_check' type='checkbox' name='aesirx_consent_modal_plugin_options[country_check]' ".($template['country_check'] === 'countryCheck' ? "checked='checked'" : "")." value='countryCheck' />
+          <label for='country_check'>Enable Country Verification</label>
+        </div>
+        <div class='aesirx_consent_minimum_age'>
+          <label for='minimum_age'>Minimum Age</label>
+          <input id='minimum_age' type='text' name='aesirx_consent_modal_plugin_options[minimum_age]' value=".$template['minimum_age']." />
+        </div>
+        <div class='aesirx_consent_maximum_age'>
+          <label for='maximum_age'>Maximum Age</label>
+          <input id='maximum_age' type='text' name='aesirx_consent_modal_plugin_options[maximum_age]' value=".$template['maximum_age']." />
+        </div>
+        <div class='aesirx_consent_allowed_countries'>
+          <label for='allowed_countries'>Allowed Countries</label>
+          <select id='allowed_countries' name='aesirx_consent_modal_plugin_options[allowed_countries][]' multiple>
+            ".$allowedCountryOptions."
+          </select>
+        </div>
+        <div class='aesirx_consent_disallowed_countries'>
+          <label for='disallowed_countries'>Disallowed Countries</label>
+          <select id='disallowed_countries' name='aesirx_consent_modal_plugin_options[disallowed_countries][]' multiple>
+            ".$disallowedCountryOptions."
+          </select>
+        </div>
+      </div>
       ", aesirx_analytics_escape_html());
-    },
+      echo '</div>';
+    }, 
     'aesirx_consent_modal_plugin',
     'aesirx_consent_modal_settings',
     [
