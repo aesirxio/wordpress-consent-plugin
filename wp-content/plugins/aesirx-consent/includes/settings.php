@@ -201,28 +201,311 @@ add_action('admin_init', function () {
     function () {
       $template = get_option('aesirx_consent_modal_plugin_options', []);
       // using custom function to escape HTML
+      $allCountries = [
+        "AF" => "Afghanistan",
+        "AL" => "Albania",
+        "DZ" => "Algeria",
+        "AD" => "Andorra",
+        "AO" => "Angola",
+        "AG" => "Antigua and Barbuda",
+        "AR" => "Argentina",
+        "AM" => "Armenia",
+        "AU" => "Australia",
+        "AT" => "Austria",
+        "AZ" => "Azerbaijan",
+        "BS" => "Bahamas",
+        "BH" => "Bahrain",
+        "BD" => "Bangladesh",
+        "BB" => "Barbados",
+        "BY" => "Belarus",
+        "BE" => "Belgium",
+        "BZ" => "Belize",
+        "BJ" => "Benin",
+        "BT" => "Bhutan",
+        "BO" => "Bolivia",
+        "BA" => "Bosnia and Herzegovina",
+        "BW" => "Botswana",
+        "BR" => "Brazil",
+        "BN" => "Brunei",
+        "BG" => "Bulgaria",
+        "BF" => "Burkina Faso",
+        "BI" => "Burundi",
+        "KH" => "Cambodia",
+        "CM" => "Cameroon",
+        "CA" => "Canada",
+        "CV" => "Cape Verde",
+        "CF" => "Central African Republic",
+        "TD" => "Chad",
+        "CL" => "Chile",
+        "CN" => "China",
+        "CO" => "Colombia",
+        "KM" => "Comoros",
+        "CG" => "Congo (Brazzaville)",
+        "CD" => "Congo (Kinshasa)",
+        "CR" => "Costa Rica",
+        "CI" => "Côte d’Ivoire",
+        "HR" => "Croatia",
+        "CY" => "Cyprus",
+        "CZ" => "Czech Republic",
+        "DK" => "Denmark",
+        "DJ" => "Djibouti",
+        "DM" => "Dominica",
+        "DO" => "Dominican Republic",
+        "EC" => "Ecuador",
+        "EG" => "Egypt",
+        "SV" => "El Salvador",
+        "GQ" => "Equatorial Guinea",
+        "ER" => "Eritrea",
+        "EE" => "Estonia",
+        "SZ" => "Eswatini",
+        "ET" => "Ethiopia",
+        "FJ" => "Fiji",
+        "FI" => "Finland",
+        "FR" => "France",
+        "GA" => "Gabon",
+        "GM" => "Gambia",
+        "GE" => "Georgia",
+        "DE" => "Germany",
+        "GH" => "Ghana",
+        "GR" => "Greece",
+        "GD" => "Grenada",
+        "GT" => "Guatemala",
+        "GN" => "Guinea",
+        "GW" => "Guinea-Bissau",
+        "GY" => "Guyana",
+        "HT" => "Haiti",
+        "HN" => "Honduras",
+        "HU" => "Hungary",
+        "IS" => "Iceland",
+        "IN" => "India",
+        "ID" => "Indonesia",
+        "IR" => "Iran",
+        "IQ" => "Iraq",
+        "IE" => "Ireland",
+        "IL" => "Israel",
+        "IT" => "Italy",
+        "JM" => "Jamaica",
+        "JP" => "Japan",
+        "JO" => "Jordan",
+        "KZ" => "Kazakhstan",
+        "KE" => "Kenya",
+        "KI" => "Kiribati",
+        "KW" => "Kuwait",
+        "KG" => "Kyrgyzstan",
+        "LA" => "Laos",
+        "LV" => "Latvia",
+        "LB" => "Lebanon",
+        "LS" => "Lesotho",
+        "LR" => "Liberia",
+        "LY" => "Libya",
+        "LI" => "Liechtenstein",
+        "LT" => "Lithuania",
+        "LU" => "Luxembourg",
+        "MG" => "Madagascar",
+        "MW" => "Malawi",
+        "MY" => "Malaysia",
+        "MV" => "Maldives",
+        "ML" => "Mali",
+        "MT" => "Malta",
+        "MH" => "Marshall Islands",
+        "MR" => "Mauritania",
+        "MU" => "Mauritius",
+        "MX" => "Mexico",
+        "FM" => "Micronesia",
+        "MD" => "Moldova",
+        "MC" => "Monaco",
+        "MN" => "Mongolia",
+        "ME" => "Montenegro",
+        "MA" => "Morocco",
+        "MZ" => "Mozambique",
+        "MM" => "Myanmar",
+        "NA" => "Namibia",
+        "NR" => "Nauru",
+        "NP" => "Nepal",
+        "NL" => "Netherlands",
+        "NZ" => "New Zealand",
+        "NI" => "Nicaragua",
+        "NE" => "Niger",
+        "NG" => "Nigeria",
+        "KP" => "North Korea",
+        "MK" => "North Macedonia",
+        "NO" => "Norway",
+        "OM" => "Oman",
+        "PK" => "Pakistan",
+        "PW" => "Palau",
+        "PA" => "Panama",
+        "PG" => "Papua New Guinea",
+        "PY" => "Paraguay",
+        "PE" => "Peru",
+        "PH" => "Philippines",
+        "PL" => "Poland",
+        "PT" => "Portugal",
+        "QA" => "Qatar",
+        "RO" => "Romania",
+        "RU" => "Russia",
+        "RW" => "Rwanda",
+        "KN" => "Saint Kitts and Nevis",
+        "LC" => "Saint Lucia",
+        "VC" => "Saint Vincent and the Grenadines",
+        "WS" => "Samoa",
+        "SM" => "San Marino",
+        "ST" => "Sao Tome and Principe",
+        "SA" => "Saudi Arabia",
+        "SN" => "Senegal",
+        "RS" => "Serbia",
+        "SC" => "Seychelles",
+        "SL" => "Sierra Leone",
+        "SG" => "Singapore",
+        "SK" => "Slovakia",
+        "SI" => "Slovenia",
+        "SB" => "Solomon Islands",
+        "SO" => "Somalia",
+        "ZA" => "South Africa",
+        "KR" => "South Korea",
+        "SS" => "South Sudan",
+        "ES" => "Spain",
+        "LK" => "Sri Lanka",
+        "SD" => "Sudan",
+        "SR" => "Suriname",
+        "SE" => "Sweden",
+        "CH" => "Switzerland",
+        "SY" => "Syria",
+        "TW" => "Taiwan",
+        "TJ" => "Tajikistan",
+        "TZ" => "Tanzania",
+        "TH" => "Thailand",
+        "TL" => "Timor-Leste",
+        "TG" => "Togo",
+        "TO" => "Tonga",
+        "TT" => "Trinidad and Tobago",
+        "TN" => "Tunisia",
+        "TR" => "Turkey",
+        "TM" => "Turkmenistan",
+        "TV" => "Tuvalu",
+        "UG" => "Uganda",
+        "UA" => "Ukraine",
+        "AE" => "United Arab Emirates",
+        "GB" => "United Kingdom",
+        "US" => "United States",
+        "UY" => "Uruguay",
+        "UZ" => "Uzbekistan",
+        "VU" => "Vanuatu",
+        "VA" => "Vatican City",
+        "VE" => "Venezuela",
+        "VN" => "Vietnam",
+        "YE" => "Yemen",
+        "ZM" => "Zambia",
+        "ZW" => "Zimbabwe"
+      ];
+      $allowedCountryOptions = '';
+      foreach ($allCountries as $code => $name) {
+          $isSelected = $template['allowed_countries'] ? (in_array($code, $template['allowed_countries']) ? 'selected' : '') : '';
+          $allowedCountryOptions .= "<option value=\"$code\"  $isSelected >$name</option>";
+      }
+      $disallowedCountryOptions = '';
+      foreach ($allCountries as $code => $name) {
+          $isSelected = $template['disallowed_countries'] ? (in_array($code, $template['disallowed_countries']) ? 'selected' : '' ): '';
+          $disallowedCountryOptions .= "<option value=\"$code\" $isSelected>$name</option>";
+      }
       echo wp_kses("
-        <div class='aesirx_consent_template'>
-          <label class='aesirx_consent_template_item ".($template['datastream_template'] === 'simple-consent-mode' ? 'active' : '')."' for='simple-mode'>
-            <img width='585px' height='388px' src='". plugins_url( 'aesirx-consent/assets/images-plugin/consent_simple_mode.png')."' />
-            <p class='title'>".esc_html__('Default Consent Mode', 'aesirx-consent')."</p>
-            <input id='simple-mode' type='radio' class='analytic-consent-class' name='aesirx_consent_modal_plugin_options[datastream_template]' " .
-            ($template['datastream_template'] === 'simple-consent-mode' ? "checked='checked'" : '') .
-            " value='simple-consent-mode'  />
-            <p>".esc_html__("Default Consent Mode improves Google Consent Mode 2.0 by not loading any tags until after consent is given, reducing compliance risks.", 'aesirx-consent')."</p>
-          </label>
-          <label class='aesirx_consent_template_item ".
-          (!$template['datastream_template'] || $template['datastream_template'] === 'default' ? 'active' : '') ."' for='default'>
-            <img width='585px' height='388px' src='". plugins_url( 'aesirx-consent/assets/images-plugin/consent_default.png')."' />
-            <p class='title'>".esc_html__('Decentralized Consent Mode', 'aesirx-consent')."</p>
-            <input type='radio' id='default' class='analytic-consent-class' name='aesirx_consent_modal_plugin_options[datastream_template]' " .
-            (!$template['datastream_template'] || $template['datastream_template'] === 'default' ? "checked='checked'" : '') .
-            "value='default'  />
-            <p>".esc_html__("Decentralized Consent Mode setup improves Google Consent Mode 2.0 by not loading any scripts, beacons, or tags until after consent is given, reducing compliance risks. It also includes Decentralized Consent, for more control over personal data and rewards.", 'aesirx-consent')."</p>
-          </label>
+        <div class='aesirx_consent_template_container'>
+          <div class='aesirx_consent_template'>
+            <label class='aesirx_consent_template_item ".($template['datastream_template'] === 'simple-consent-mode' ? 'active' : '')."' for='simple-mode'>
+              <img width='585px' height='388px' src='". plugins_url( 'aesirx-consent/assets/images-plugin/consent_simple_mode.png')."' />
+              <p class='title'>".esc_html__('Default Consent Mode', 'aesirx-consent')."</p>
+              <input id='simple-mode' type='radio' class='analytic-consent-class' name='aesirx_consent_modal_plugin_options[datastream_template]' " .
+              ($template['datastream_template'] === 'simple-consent-mode' ? "checked='checked'" : '') .
+              " value='simple-consent-mode'  />
+              <p>".esc_html__("Default Consent Mode improves Google Consent Mode 2.0 by not loading any tags until after consent is given, reducing compliance risks.", 'aesirx-consent')."</p>
+            </label>
+            <label class='aesirx_consent_template_item ".
+            (!$template['datastream_template'] || $template['datastream_template'] === 'default' ? 'active' : '') ."' for='default'>
+              <img width='585px' height='388px' src='". plugins_url( 'aesirx-consent/assets/images-plugin/consent_default.png')."' />
+              <p class='title'>".esc_html__('Decentralized Consent Mode', 'aesirx-consent')."</p>
+              <input type='radio' id='default' class='analytic-consent-class' name='aesirx_consent_modal_plugin_options[datastream_template]' " .
+              (!$template['datastream_template'] || $template['datastream_template'] === 'default' ? "checked='checked'" : '') .
+              "value='default'  />
+              <p>".esc_html__("Decentralized Consent Mode setup improves Google Consent Mode 2.0 by not loading any scripts, beacons, or tags until after consent is given, reducing compliance risks. It also includes Decentralized Consent, for more control over personal data and rewards.", 'aesirx-consent')."</p>
+            </label>
+            <input type='hidden' id='datastream_template_hidden' name='aesirx_consent_modal_plugin_options[datastream_template]' value=".$template['datastream_template']."  />
+          </div>
+          <div class='aesirx_consent_age_country'>
+            <h4>Age & Country Verification</h4>
+            <div class='aesirx_consent_age'>
+              <input id='age_check' type='checkbox' name='aesirx_consent_modal_plugin_options[age_check]' ".($template['age_check'] === 'ageCheck' ? "checked='checked'" : "")." value='ageCheck' />
+              <label for='age_check'>
+                Enable Age Verification
+                <div class='input_information'>
+                  <img width='20px' height='20px' src='". plugins_url( 'aesirx-consent/assets/images-plugin/infor_icon.png')."' />
+                  ".sprintf(__("<div class='input_information_content'>
+                  Verifies user’s age using Zero-Knowledge Proof (ZKP) via Concordium Wallet. No actual age is collected or stored—only a cryptographic confirmation that the user meets the age requirement.</div>", 'aesirx-consent'))."
+                </div>
+              </label>
+             
+            </div>
+            <div class='aesirx_consent_country'>
+              <input id='country_check' type='checkbox' name='aesirx_consent_modal_plugin_options[country_check]' ".($template['country_check'] === 'countryCheck' ? "checked='checked'" : "")." value='countryCheck' />
+              <label for='country_check'>
+                Enable Country Verification
+                <div class='input_information'>
+                  <img width='20px' height='20px' src='". plugins_url( 'aesirx-consent/assets/images-plugin/infor_icon.png')."' />
+                  ".sprintf(__("<div class='input_information_content'>
+                  Confirms the user’s country using ZKP from Concordium Wallet. The site never accesses or stores personal location data—only a validated result.</div>", 'aesirx-consent'))."
+                </div>
+              </label>
+            </div>
+            <div class='aesirx_consent_minimum_age'>
+              <label for='minimum_age'>
+                Minimum Age
+                <div class='input_information'>
+                  <img width='20px' height='20px' src='". plugins_url( 'aesirx-consent/assets/images-plugin/infor_icon.png')."' />
+                  ".sprintf(__("<div class='input_information_content'>
+                  Minimum age required for access. Verified securely using ZKP via Concordium Wallet—without revealing or storing the user’s actual age.</div>", 'aesirx-consent'))."
+                </div>
+              </label>
+              <input id='minimum_age' type='number' name='aesirx_consent_modal_plugin_options[minimum_age]' value=".($template['minimum_age'] ? $template['minimum_age'] : "")." />
+            </div>
+            <div class='aesirx_consent_maximum_age'>
+              <label for='maximum_age'>
+                Maximum Age (optional)
+                <div class='input_information'>
+                  <img width='20px' height='20px' src='". plugins_url( 'aesirx-consent/assets/images-plugin/infor_icon.png')."' />
+                  ".sprintf(__("<div class='input_information_content'>
+                  Optional upper age limit. The system will confirm the user is younger than this using ZKP, without exposing personal data.</div>", 'aesirx-consent'))."
+                </div>
+              </label>
+              <input id='maximum_age' type='number' name='aesirx_consent_modal_plugin_options[maximum_age]' value=".($template['maximum_age'] ? $template['maximum_age'] : "")." />
+            </div>
+            <div class='aesirx_consent_allowed_countries'>
+              <label for='allowed_countries'>
+                Allowed Countries
+                <div class='input_information'>
+                  <img width='20px' height='20px' src='". plugins_url( 'aesirx-consent/assets/images-plugin/infor_icon.png')."' />
+                  ".sprintf(__("<div class='input_information_content'>
+                  Access is granted only to users from these selected countries. Verification uses ISO 3166-1 alpha-2 codes via Concordium Wallet.</div>", 'aesirx-consent'))."
+                </div>
+              </label>
+              <select id='allowed_countries' name='aesirx_consent_modal_plugin_options[allowed_countries][]' multiple>
+                ".$allowedCountryOptions."
+              </select>
+            </div>
+            <div class='aesirx_consent_disallowed_countries'>
+              <label for='disallowed_countries'>
+                Disallowed Countries
+                <div class='input_information'>
+                  <img width='20px' height='20px' src='". plugins_url( 'aesirx-consent/assets/images-plugin/infor_icon.png')."' />
+                  ".sprintf(__("<div class='input_information_content'>
+                  Users from these countries will be denied access, even if other requirements are met. Verification is handled via Concordium Wallet.</div>", 'aesirx-consent'))."
+                </div>
+              </label>
+              <select id='disallowed_countries' name='aesirx_consent_modal_plugin_options[disallowed_countries][]' multiple>
+                ".$disallowedCountryOptions."
+              </select>
+            </div>
+          </div>
         </div>
       ", aesirx_analytics_escape_html());
-    }, 
+    },
     'aesirx_consent_modal_plugin',
     'aesirx_consent_modal_settings',
     [
@@ -1525,6 +1808,7 @@ add_action('admin_enqueue_scripts', function ($hook) {
   }
   if ($hook === 'toplevel_page_aesirx-consent-management-plugin' || $hook === "aesirx-cmp_page_aesirx-cmp-modal") {
     wp_enqueue_script('aesirx_analytics_ckeditor', plugins_url('assets/vendor/aesirx-consent-ckeditor.js', __DIR__), array('jquery'), true, true);
+    wp_enqueue_script('aesirx_analytics_select2', plugins_url('assets/vendor/aesirx-consent-select2.js', __DIR__), array('jquery'), true, true);
     wp_register_script('aesirx_analytics_repeatable_fields', plugins_url('assets/vendor/aesirx-consent-repeatable-fields.js', __DIR__), array('jquery'), false, true);
     $translation_array = array(
       'txt_shield_of_privacy' => __( 'Shield of Privacy', 'aesirx-consent' ),
@@ -1855,6 +2139,7 @@ function aesirx_analytics_escape_html() {
         'id'    => array(),
         'name'  => array(),
         'class' => array(),
+        'multiple' => array(),
       ),
       'option' => array(
         'name'  => array(),
@@ -1881,6 +2166,9 @@ function aesirx_analytics_escape_html() {
       'class' => array(),
      ),
      'h3' => array(
+      'class' => array(),
+     ),
+     'h4' => array(
       'class' => array(),
      ),
      'ul' => array(

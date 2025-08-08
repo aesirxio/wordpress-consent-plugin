@@ -14,7 +14,7 @@ class IsBackendMiddleware implements IMiddleware
   {
     if (!current_user_can('administrator')) {
       $url = $request->getUrl()->getOriginalPath();
-			if (strpos($url, 'datastream/template') === false) {
+			if (strpos($url, 'datastream/template') === false && strpos($url, 'statement') === false) {
         throw new HttpException(esc_html__('Permission denied!', 'aesirx-consent'), 403);
 			}
     }

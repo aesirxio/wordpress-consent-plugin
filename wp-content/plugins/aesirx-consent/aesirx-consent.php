@@ -199,6 +199,11 @@ add_action('wp_enqueue_scripts', function (): void {
         return $result;
     }
     $geoRules =  $configGeoHandling ? transformGeoOptions($optionsGEO) : null;
+
+    $optionsConsentModal = get_option('aesirx_consent_modal_plugin_options', []);
+    $ageCheck = $optionsConsentModal['age_check'] === 'ageCheck' ? 1 : 0;
+    $countryCheck = $optionsConsentModal['country_check'] === 'countryCheck' ? 1 : 0;
+
     wp_add_inline_script(
         'aesirx-consent',
         'window.aesirx1stparty="' . esc_attr($domain) . '";
@@ -209,7 +214,11 @@ add_action('wp_enqueue_scripts', function (): void {
         window.aesirxTrackEcommerce="' . esc_attr($trackEcommerce) . '";
         window.aesirxOptOutMode="' . esc_attr($configConsentGPC) . '";
         window.aesirxOptOutDoNotSell="' . esc_attr($configConsentGPCDoNotSell) . '";
-        window.geoRules=' . wp_json_encode($geoRules) . ';',
+        window.geoRules=' . wp_json_encode($geoRules) . ';
+        window.web3Endpoint="https://web3id.backend.aesirx.io:8001";
+        window.ageCheck='.$ageCheck.';
+        window.countryCheck='.$countryCheck.';'
+        ,
         'before');
 });
 
