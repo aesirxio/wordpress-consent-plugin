@@ -421,12 +421,12 @@ add_action('admin_init', function () {
       ];
       $allowedCountryOptions = '';
       foreach ($allCountries as $code => $name) {
-          $isSelected = in_array($code, $template['allowed_countries']) ? 'selected' : '';
+          $isSelected = isset($template['allowed_countries']) ? (in_array($code, $template['allowed_countries']) ? 'selected' : '') : '';
           $allowedCountryOptions .= "<option value=\"$code\" $isSelected>$name</option>";
       }
       $disallowedCountryOptions = '';
       foreach ($allCountries as $code => $name) {
-          $isSelected = in_array($code, $template['disallowed_countries']) ? 'selected' : '';
+          $isSelected = isset($template['disallowed_countries']) ? (in_array($code, $template['disallowed_countries']) ? 'selected' : '') : '';
           $disallowedCountryOptions .= "<option value=\"$code\" $isSelected>$name</option>";
       }
       echo wp_kses("
