@@ -172,10 +172,10 @@ add_action('wp_enqueue_scripts', function (): void {
     $secret = $options['secret'] ?? '';
     $optionsGPC = get_option('aesirx_consent_gpc_plugin_options', []);
     $optionsGEO = get_option('aesirx_consent_geo_plugin_options', []);
-    $disableGPCSupport = $optionsGPC['gpc_support'] === 'no' ? "true" : "false";
-    $configConsentGPC = $optionsGPC['gpc_consent'] === 'opt-out' ? "true" : "false";
-    $configConsentGPCDoNotSell = $optionsGPC['gpc_consent_donotsell'] === 'yes' ? "true" : "false";
-    $configGeoHandling = $optionsGEO['geo_handling'] === 'yes' ? true : false;
+    $disableGPCSupport  = (isset($optionsGPC['gpc_support']) && $optionsGPC['gpc_support'] === 'no') ? "true" : "false";
+    $configConsentGPC   = (isset($optionsGPC['gpc_consent']) && $optionsGPC['gpc_consent'] === 'opt-out') ? "true" : "false";
+    $configConsentGPCDoNotSell = (isset($optionsGPC['gpc_consent_donotsell']) && $optionsGPC['gpc_consent_donotsell'] === 'yes') ? "true" : "false";
+    $configGeoHandling         = (isset($optionsGEO['geo_handling']) && $optionsGEO['geo_handling'] === 'yes');
 
     function transformGeoOptions(array $optionsGEO): array {
         $keys = [
