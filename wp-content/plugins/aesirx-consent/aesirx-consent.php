@@ -3,7 +3,7 @@
  * Plugin Name: AesirX Consent
  * Plugin URI: https://analytics.aesirx.io?utm_source=wpplugin&utm_medium=web&utm_campaign=wordpress&utm_id=aesirx&utm_term=wordpress&utm_content=analytics
  * Description: Aesirx Consent plugin. When you join forces with AesirX, you're not just becoming a Partner - you're also becoming a freedom fighter in the battle for privacy! Earn 25% Affiliate Commission <a href="https://aesirx.io/partner?utm_source=wpplugin&utm_medium=web&utm_campaign=wordpress&utm_id=aesirx&utm_term=wordpress&utm_content=analytics">[Click to Join]</a>
- * Version: 1.9.0
+ * Version: 2.0.0
  * Author: aesirx.io
  * Author URI: https://aesirx.io/
  * Domain Path: /languages
@@ -200,9 +200,14 @@ add_action('wp_enqueue_scripts', function (): void {
     }
     $geoRules =  $configGeoHandling ? transformGeoOptions($optionsGEO) : null;
 
-    $optionsConsentModal = get_option('aesirx_consent_modal_plugin_options', []);
-    $ageCheck = $optionsConsentModal['age_check'] === 'ageCheck' ? 1 : 0;
-    $countryCheck = $optionsConsentModal['country_check'] === 'countryCheck' ? 1 : 0;
+    $optionsConsentVerify = get_option('aesirx_consent_verify_plugin_options', []);
+    $minimumAge = isset($optionsConsentVerify['minimum_age']) ? (int)$optionsConsentVerify['minimum_age'] : 0;
+    $maximumAge = isset($optionsConsentVerify['maximum_age']) ? (int)$optionsConsentVerify['maximum_age'] : 0;
+    $ageCheck = $optionsConsentVerify['age_check'] === 'ageCheck' ? ($minimumAge > 0 || $maximumAge > 0 ? 1 : 0): 0;
+    $allowedCountries = $optionsConsentVerify['allowed_countries'] ?? [];
+    $disallowedCountries = $optionsConsentVerify['disallowed_countries'] ?? [];
+    $countryCheck = $optionsConsentVerify['country_check'] === 'countryCheck' ? (!empty($allowedCountries) || !empty($disallowedCountries) ? 1 : 0) : 0;
+
 
     wp_add_inline_script(
         'aesirx-consent',
@@ -217,7 +222,11 @@ add_action('wp_enqueue_scripts', function (): void {
         window.geoRules=' . wp_json_encode($geoRules) . ';
         window.web3Endpoint="https://web3id.backend.aesirx.io:8001";
         window.ageCheck='.$ageCheck.';
-        window.countryCheck='.$countryCheck.';'
+        window.minimumAge='.$minimumAge.';
+        window.maximumAge='.$maximumAge.';
+        window.countryCheck='.$countryCheck.';
+        window.allowedCountries='.wp_json_encode($allowedCountries).';
+        window.disallowedCountries='.wp_json_encode($disallowedCountries).';'
         ,
         'before');
 });

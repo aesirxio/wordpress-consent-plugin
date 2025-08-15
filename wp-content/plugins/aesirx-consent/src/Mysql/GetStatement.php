@@ -8,13 +8,13 @@ Class AesirX_Analytics_Get_Statement extends AesirxAnalyticsMysqlHelper
     function aesirx_analytics_mysql_execute($params = [])
     {
      
-        $optionsConsentModal = get_option('aesirx_consent_modal_plugin_options', []);
-        $ageCheck = $optionsConsentModal['age_check'];
-        $countryCheck = $optionsConsentModal['country_check'];
-        $minimumAge = isset($optionsConsentModal['minimum_age']) ? (int)$optionsConsentModal['minimum_age'] : 0;
-        $maximumAge = isset($optionsConsentModal['maximum_age']) ? (int)$optionsConsentModal['maximum_age'] : 150;
-        $allowedCountries = $optionsConsentModal['allowed_countries'] ?? [];
-        $disallowedCountries = $optionsConsentModal['disallowed_countries'] ?? [];
+        $optionsConsentVerify = get_option('aesirx_consent_verify_plugin_options', []);
+        $ageCheck = $optionsConsentVerify['age_check'];
+        $countryCheck = $optionsConsentVerify['country_check'];
+        $minimumAge = isset($optionsConsentVerify['minimum_age']) ? (int)$optionsConsentVerify['minimum_age'] : 0;
+        $maximumAge = isset($optionsConsentVerify['maximum_age']) ? (int)$optionsConsentVerify['maximum_age'] : 150;
+        $allowedCountries = $optionsConsentVerify['allowed_countries'] ?? [];
+        $disallowedCountries = $optionsConsentVerify['disallowed_countries'] ?? [];
         $response = [];
         if ($countryCheck === "countryCheck") {
             if (!empty($allowedCountries)) {

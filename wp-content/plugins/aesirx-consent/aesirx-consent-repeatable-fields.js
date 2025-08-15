@@ -325,7 +325,4 @@ jQuery(document).ready(function ($) {
         });
     }
   });
-
-  $('#allowed_countries').select2();
-  $('#disallowed_countries').select2();
 });
