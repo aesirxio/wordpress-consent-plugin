@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: AesirX Consent 1.9.0\n"
+"Project-Id-Version: AesirX Consent 2.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/aesirx-consent\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -28,11 +28,11 @@ msgstr "aesirx.io"
 msgid "https://aesirx.io/"
 msgstr "https://aesirx.io/"
 
-#: aesirx-consent.php:225
+#: aesirx-consent.php:244
 msgid "Settings"
 msgstr "Seaded"
 
-#: aesirx-consent.php:340
+#: aesirx-consent.php:359
 msgid "Problem with Aesirx Analytics plugin install"
 msgstr "Probleem Aesirx Analytics pistikprogrammi paigaldamisel"
 
@@ -49,7 +49,7 @@ msgid "Invalid domain format."
 msgstr "Vigane domeeni formaat."
 
 #: aesirx-consent.php:43
-#: includes/settings.php:1416
+#: includes/settings.php:2000
 msgid "Consent"
 msgstr "Nõusolek"
 
@@ -203,11 +203,11 @@ msgstr "Nõusoleku kehtivusaja uuendamine ebaõnnestus."
 msgid "Failed to update nonce."
 msgstr "Nonce'i uuendamine ebaõnnestus."
 
-#: src/Mysql/StartFingerprint.php:147
+#: src/Mysql/StartFingerprint.php:151
 msgid "Wrong URL format, domain not found"
 msgstr "Vale URL-i vorming, domeen ei leitud"
 
-#: src/Mysql/StartFingerprint.php:151
+#: src/Mysql/StartFingerprint.php:155
 msgid "The domain sent in the new URL does not match the domain stored in the visitor document"
 msgstr "Uues URL-is saadetud domeen ei klapi külastaja profiilis salvestatud domeeniga"
 
@@ -230,371 +230,371 @@ msgid "Aesirx Consent plugin. When you join forces with AesirX, you're not just 
 msgstr "AesirX Nõusoleku pistikprogramm. Kui te liitute AesirX-iga, ei saa te ainult partneriks - te olete ka vabadusvõitleja privaatsuse eest! Teenige 25% sidusettevõtte vahendustasu <a href=\"https://aesirx.io/partner?utm_source=wpplugin&utm_medium=web&utm_campaign=wordpress&utm_id=aesirx&utm_term=wordpress&utm_content=analytics\">[Liitu Klõpsates]</a>"
 
 #: aesirx-consent.php:39
-#: includes/settings.php:1412
+#: includes/settings.php:1996
 msgid "Shield of Privacy"
 msgstr "Privaatsuse Kilp"
 
 #: aesirx-consent.php:40
-#: includes/settings.php:1413
+#: includes/settings.php:1997
 msgid "Revoke your consent for data use whenever you wish."
 msgstr "Võite oma andmete kasutamise nõusoleku igal ajal tagasi võtta."
 
 #: aesirx-consent.php:41
-#: includes/settings.php:1414
+#: includes/settings.php:1998
 msgid "Manage Decentralized Consent"
 msgstr "Haldage Detsentraliseeritud Nõusolekut"
 
 #: aesirx-consent.php:42
-#: includes/settings.php:1415
+#: includes/settings.php:1999
 msgid "Revoke Consent"
 msgstr "Tühista Nõusolek"
 
 #: aesirx-consent.php:44
-#: includes/settings.php:1417
+#: includes/settings.php:2001
 msgid "Reject"
 msgstr "Lükka tagasi"
 
 #: aesirx-consent.php:45
-#: includes/settings.php:1418
+#: includes/settings.php:2002
 msgid "Please connect your Web3 wallet"
 msgstr "Palun ühendage oma Web3 rahakott"
 
 #: aesirx-consent.php:46
-#: includes/settings.php:1419
+#: includes/settings.php:2003
 msgid "Please sign the message on your wallet twice and wait for it to be saved."
 msgstr "Palun allkirjastage kaks korda oma rahakoti sõnum ja oodake, kuni see salvestatakse."
 
 #: aesirx-consent.php:47
-#: includes/settings.php:1420
+#: includes/settings.php:2004
 msgid "Saving..."
 msgstr "Salvestamine..."
 
 #: aesirx-consent.php:48
-#: includes/settings.php:1421
+#: includes/settings.php:2005
 msgid "Please connect to your wallet"
 msgstr "Palun ühendage oma rahakott"
 
 #: aesirx-consent.php:49
-#: includes/settings.php:1422
+#: includes/settings.php:2006
 msgid "Connecting"
 msgstr "Ühendamine"
 
 #: aesirx-consent.php:50
-#: includes/settings.php:1423
+#: includes/settings.php:2007
 msgid "TRACKING AND DATA PRIVACY PREFERENCES"
 msgstr "JÄLGIMISE JA ANDMEPRIVAATSUSE EELISTUSED"
 
 #: aesirx-consent.php:51
-#: includes/settings.php:1424
+#: includes/settings.php:2008
 msgid "About"
 msgstr "Teave"
 
 #: aesirx-consent.php:52
 #: aesirx-consent.php:101
-#: includes/settings.php:1425
-#: includes/settings.php:1474
+#: includes/settings.php:2009
+#: includes/settings.php:2058
 msgid "Details"
 msgstr "Üksikasjad"
 
 #: aesirx-consent.php:53
 #: aesirx-consent.php:81
-#: includes/settings.php:1426
-#: includes/settings.php:1454
+#: includes/settings.php:2010
+#: includes/settings.php:2038
 msgid "Decentralized Consent"
 msgstr "Detsentraliseeritud Nõusolek"
 
 #: aesirx-consent.php:54
-#: includes/settings.php:1427
+#: includes/settings.php:2011
 msgid "Manage Your Consent Preferences"
 msgstr "Halda oma nõusoleku eelistusi"
 
 #: aesirx-consent.php:55
-#: includes/settings.php:1428
+#: includes/settings.php:2012
 msgid "Choose how we use your data: \"Reject\" data collection, allow tracking [\"Consent\"], or use \"Decentralized Consent\" for more control over your personal data & rewards."
 msgstr "Valige, kuidas me teie andmeid kasutame: \"Tagasi lükata\" andmete kogumine, lubada jälgimine [\"Nõusolek\"], või kasutada \"Detsentraliseeritud Nõusolekut\" suurema kontrolli jaoks oma isikuandmete ja tasude üle."
 
 #: aesirx-consent.php:56
-#: includes/settings.php:1429
+#: includes/settings.php:2013
 msgid "Choose how we use your data: \"Reject\" data collection, allow tracking [\"Consent\"]."
 msgstr "Valige, kuidas me teie andmeid kasutame: \"Tagasi lükata\" andmete kogumine, lubada jälgimine [\"Nõusolek\"]."
 
 #: aesirx-consent.php:57
-#: includes/settings.php:1430
+#: includes/settings.php:2014
 msgid "By consenting, you allow us to collect & use your data for:"
 msgstr "Andes nõusoleku, lubate meil teie andmeid koguda ja kasutada järgmisteks eesmärkideks:"
 
 #: aesirx-consent.php:58
-#: includes/settings.php:1431
+#: includes/settings.php:2015
 msgid "Analytics & Behavioral Data: To improve our services & personalize your experience."
 msgstr "Analüütika ja käitumisandmed: Teenuste parandamiseks ja teie kogemuse isikupärastamiseks."
 
 #: aesirx-consent.php:59
-#: includes/settings.php:1432
+#: includes/settings.php:2016
 msgid "Form Data: When you contact us."
 msgstr "Vormandmed: Kui võtate meiega ühendust."
 
 #: aesirx-consent.php:60
-#: includes/settings.php:1433
+#: includes/settings.php:2017
 msgid "Please note"
 msgstr "Palun märkige"
 
 #: aesirx-consent.php:61
-#: includes/settings.php:1434
+#: includes/settings.php:2018
 msgid "We do not share your data with third parties without your explicit consent."
 msgstr "Me ei jaga teie andmeid kolmandate osapooltega ilma teie selgesõnalise nõusolekuta."
 
 #: aesirx-consent.php:62
-#: includes/settings.php:1435
+#: includes/settings.php:2019
 msgid "You can opt-in later for specific features without giving blanket consent."
 msgstr "Saate hiljem valida konkreetsetele funktsioonidele sisenemise, ilma üldist nõusolekut andmata."
 
 #: aesirx-consent.php:63
-#: includes/settings.php:1436
+#: includes/settings.php:2020
 msgid "For more details, refer to our <a class='text-success fw-semibold text-decoration-underline' href='https://aesirx.io/privacy-policy' target='_blank'>privacy policy.</a>"
 msgstr "Lisateabe saamiseks vaadake meie <a class='text-success fw-semibold text-decoration-underline' href='https://aesirx.io/privacy-policy' target='_blank'>privaatsuseeskirja.</a>"
 
 #: aesirx-consent.php:64
-#: includes/settings.php:1437
+#: includes/settings.php:2021
 msgid "Benefits"
 msgstr "Eelised"
 
 #: aesirx-consent.php:65
-#: includes/settings.php:1438
+#: includes/settings.php:2022
 msgid "<span class='fw-semibold text-primary'>Control your data:</span> Choose your preferred level of data collection & tracking."
 msgstr "<span class='fw-semibold text-primary'>Kontrollige oma andmeid:</span> Valige oma eelistatud andmete kogumise ja jälgimise tase."
 
 #: aesirx-consent.php:66
-#: includes/settings.php:1439
+#: includes/settings.php:2023
 msgid "<span class='fw-semibold text-primary'>Earn rewards:</span> Participate in decentralized consent for privacy & rewards."
 msgstr "<span class='fw-semibold text-primary'>Teenige preemiaid:</span> Osalege privaatsuse ja preemiate detsentraliseeritud nõusolekus."
 
 #: aesirx-consent.php:67
-#: includes/settings.php:1440
+#: includes/settings.php:2024
 msgid "<span class='fw-semibold text-primary'>Transparent data collection practices:</span> Understand how your data is collected & used."
 msgstr "<span class='fw-semibold text-primary'>Läbipaistvad andmete kogumise tavad:</span> Mõistke, kuidas teie andmeid kogutakse ja kasutatakse."
 
 #: aesirx-consent.php:68
-#: includes/settings.php:1441
+#: includes/settings.php:2025
 msgid "Understanding Your Privacy Choices"
 msgstr "Teie privaatsuse valikute mõistmine"
 
 #: aesirx-consent.php:69
-#: includes/settings.php:1442
+#: includes/settings.php:2026
 msgid "<span class='fw-semibold text-primary'>Reject:</span> No data will be collected or loaded except for anonymized page views & rejections. Some personalization features may be disabled."
 msgstr "<span class='fw-semibold text-primary'>Tagasi lükatud:</span> Andmeid ei koguta ega laadita peale anonüümsete lehevaadete ja tagasilükkamiste. Mõned personaliseerimisfunktsioonid võidakse keelata."
 
 #: aesirx-consent.php:70
-#: includes/settings.php:1443
+#: includes/settings.php:2027
 msgid "<span class='fw-semibold text-primary'>Consent:</span> First & third-party tracking data will be collected to enhance your experience."
 msgstr "<span class='fw-semibold text-primary'>Nõusolek:</span> Esimese ja kolmanda osapoole jälgimisandmeid kogutakse teie kogemuse parandamiseks."
 
 #: aesirx-consent.php:71
-#: includes/settings.php:1444
+#: includes/settings.php:2028
 msgid "<span class='fw-semibold text-primary'>Decentralized Consent:</span> Choose Decentralized Wallets or Decentralized Wallet + Shield of Privacy. Both options let you manage & revoke consent on-site or through AesirX dApp, plus earn rewards from digital marketing activities."
 msgstr "<span class='fw-semibold text-primary'>Detsentraliseeritud Nõusolek:</span> Valige Decentraliseeritud Rahakott või Decentraliseeritud Rahakott + Privaatsuse Kilp. Mõlemad valikud võimaldavad teil nõusolekut kohapeal hallata ja tagasi võtta või AesirX dApp kaudu, pluss teenida tasusid digitaalse turundustegevuse kaudu."
 
 #: aesirx-consent.php:72
-#: includes/settings.php:1445
+#: includes/settings.php:2029
 msgid "Our Commitment in Action"
 msgstr "Meie pühendumus tegevuses"
 
 #: aesirx-consent.php:73
-#: includes/settings.php:1446
+#: includes/settings.php:2030
 msgid "<span class='fw-semibold text-primary'>Privacy Protection:</span> Users have full control over their data, ensuring maximum privacy."
 msgstr "<span class='fw-semibold text-primary'>Privaatsuse kaitse:</span> Kasutajad omavad täielikku kontrolli oma andmete üle, tagades maksimaalse privaatsuse."
 
 #: aesirx-consent.php:74
-#: includes/settings.php:1447
+#: includes/settings.php:2031
 msgid "<span class='fw-semibold text-primary'>Enables Compliance:</span> Using Shield of Privacy (SoP) ensures compliance with GDPR, CCPA, ePrivacy Directive, & other data protection regulations."
 msgstr "<span class='fw-semibold text-primary'>Tagab vastavuse:</span> Privaatsuse Kilbi (SoP) kasutamine tagab vastavuse GDPR-ile, CCPA-le, ePrivaatsuse Direktiivile ja muudele andmekaitseseadustele."
 
 #: aesirx-consent.php:75
-#: includes/settings.php:1448
+#: includes/settings.php:2032
 msgid "<span class='fw-semibold text-primary'>Proactive Protection:</span> We enhance privacy measures to safeguard your data integrity."
 msgstr "<span class='fw-semibold text-primary'>Proaktiivne kaitse:</span> Me täiustame privaatsusmeetmeid, et kaitsta teie andmete terviklikkust."
 
 #: aesirx-consent.php:76
-#: includes/settings.php:1449
+#: includes/settings.php:2033
 msgid "<span class='fw-semibold text-primary'>Flexible Consent:</span> You can withdraw your consent anytime on-site or via our <a class='text-success fw-semibold text-decoration-underline' href='https://dapp.shield.aesirx.io' target='_blank'>dApp</a> (Decentralized Application)."
 msgstr "<span class='fw-semibold text-primary'>Paindlik nõusolek:</span> Saate oma nõusoleku igal ajal kohapeal tühistada või meie <a class='text-success fw-semibold text-decoration-underline' href='https://dapp.shield.aesirx.io' target='_blank'>dApp</a> (detsentraliseeritud rakenduse) kaudu."
 
 #: aesirx-consent.php:77
-#: includes/settings.php:1450
+#: includes/settings.php:2034
 msgid "<span class='fw-semibold text-primary'>Learn More:</span> Discover our approach to data processing in our <a class='text-success fw-semibold text-decoration-underline' href='https://aesirx.io/privacy-policy' target='_blank'>Privacy Policy</a>."
 msgstr "<span class='fw-semibold text-primary'>Lisateave:</span> Avastage meie lähenemine andmete töötlemisele meie <a class='text-success fw-semibold text-decoration-underline' href='https://aesirx.io/privacy-policy' target='_blank'>privaatsuseeskirjades</a>."
 
 #: aesirx-consent.php:78
-#: includes/settings.php:1451
+#: includes/settings.php:2035
 msgid "<span class='fw-semibold text-primary'>For Businesses:</span> Enhance trust, secure user identities, & prevent breaches."
 msgstr "<span class='fw-semibold text-primary'>Ettevõtetele:</span> Tugevdage usaldust, kaitske kasutajate identiteete ja vältige rikkumisi."
 
 #: aesirx-consent.php:79
-#: includes/settings.php:1452
+#: includes/settings.php:2036
 msgid "More info at <a class='text-success fw-semibold text-decoration-underline' href='https://shield.aesirx.io' target='_blank'>https://shield.aesirx.io</a>."
 msgstr "Rohkem teavet <a class='text-success fw-semibold text-decoration-underline' href='https://shield.aesirx.io' target='_blank'>https://shield.aesirx.io</a>."
 
 #: aesirx-consent.php:80
-#: includes/settings.php:1453
+#: includes/settings.php:2037
 msgid "Select your preferred decentralized consent option:"
 msgstr "Valige oma eelistatud detsentraliseeritud nõusolekuvalik:"
 
 #: aesirx-consent.php:82
-#: includes/settings.php:1455
+#: includes/settings.php:2039
 msgid "Decentralized consent will be loaded"
 msgstr "Detsentraliseeritud nõusolek laetakse"
 
 #: aesirx-consent.php:83
-#: includes/settings.php:1456
+#: includes/settings.php:2040
 msgid "Both first-party & third-party tracking data will be activated."
 msgstr "Nii esimese kui ka kolmanda osapoole jälgimisandmed aktiveeritakse."
 
 #: aesirx-consent.php:84
-#: includes/settings.php:1457
+#: includes/settings.php:2041
 msgid "All consented data will be collected."
 msgstr "Kõik nõusolekuga kogutavad andmed kogutakse."
 
 #: aesirx-consent.php:85
-#: includes/settings.php:1458
+#: includes/settings.php:2042
 msgid "Users can revoke consent on-site at any time."
 msgstr "Kasutajad saavad nõusoleku igal ajal kohapeal tühistada."
 
 #: aesirx-consent.php:86
-#: includes/settings.php:1459
+#: includes/settings.php:2043
 msgid "Decentralized Consent + Shield of Privacy"
 msgstr "Detsentraliseeritud Nõusolek + Privaatsuse Kilp"
 
 #: aesirx-consent.php:87
-#: includes/settings.php:1460
+#: includes/settings.php:2044
 msgid "Users can revoke consent on-site or from the AesirX dApp at any time."
 msgstr "Kasutajad saavad nõusoleku igal ajal kohapeal või AesirX dApp kaudu tühistada."
 
 #: aesirx-consent.php:88
-#: includes/settings.php:1461
+#: includes/settings.php:2045
 msgid "Users can earn rewards from digital marketing activities."
 msgstr "Kasutajad saavad digitaalse turundustegevuse kaudu tasu teenida."
 
 #: aesirx-consent.php:89
-#: includes/settings.php:1462
+#: includes/settings.php:2046
 msgid "Continue"
 msgstr "Jätka"
 
 #: aesirx-consent.php:90
-#: includes/settings.php:1463
+#: includes/settings.php:2047
 msgid "Back"
 msgstr "Tagasi"
 
 #: aesirx-consent.php:91
-#: includes/settings.php:1464
+#: includes/settings.php:2048
 msgid "You've chosen to reject data collection:"
 msgstr "Olete valinud andmete kogumise tagasilükkamise:"
 
 #: aesirx-consent.php:92
-#: includes/settings.php:1465
+#: includes/settings.php:2049
 msgid "Only anonymized page views & limited features will be available. To access all website features, including personalized content & enhanced functionality, please choose an option:"
 msgstr "Saadaval on ainult anonüümitud lehevaated ja piiratud funktsioonid. Kõigi veebilehe funktsioonide, sealhulgas isikupärastatud sisu ja täiustatud funktsionaalsuse kasutamiseks valige järgmine valik:"
 
 #: aesirx-consent.php:93
-#: includes/settings.php:1466
+#: includes/settings.php:2050
 msgid "<span class='fw-semibold text-primary'>Consent:</span> Allow data collection for analytics, form data (when you contact us), & behavioral & event tracking, with the option to opt-in for specific features."
 msgstr "<span class='fw-semibold text-primary'>Nõusolek:</span> Luba andmete kogumine analüütika, vormiandmete (kui võtate meiega ühendust) ja käitumise ning sündmuste jälgimise jaoks, lisaks võimalus konkreetsetele funktsioonidele sisse lülituda."
 
 #: aesirx-consent.php:94
-#: includes/settings.php:1467
+#: includes/settings.php:2051
 msgid "<span class='fw-semibold text-primary'>Decentralized Consent:</span> Allow data collection for analytics, form data (when you contact us), & behavioral & event tracking, with the option to revoke consent, opt-in for specific features, & earn rewards from digital marketing activities."
 msgstr "<span class='fw-semibold text-primary'>Detsentraliseeritud nõusolek:</span> Luba andmete kogumine analüütika, vormiandmete (kui võtate meiega ühendust) ja käitumise ning sündmuste jälgimise jaoks, samuti võimalus nõusolek tagasi võtta, konkreetsetele funktsioonidele sisse lülituda ja tasu teenida digitaalse turunduse tegevustest."
 
 #: aesirx-consent.php:95
-#: includes/settings.php:1468
+#: includes/settings.php:2052
 msgid "You can revoke consent on the site or any explicit opt-in consent, such as payment processing, at any time"
 msgstr "Kohapeal saate igal ajal tühistada nõusoleku või mis tahes selgesõnalise nõusoleku, näiteks maksete töötlemise"
 
 #: aesirx-consent.php:96
-#: includes/settings.php:1469
+#: includes/settings.php:2053
 msgid "Revoke Opt-In Consent"
 msgstr "Tühista opt-in nõusolek"
 
 #: aesirx-consent.php:97
-#: includes/settings.php:1470
+#: includes/settings.php:2054
 msgid "Revoke Opt-In Consent for Payment Processing"
 msgstr "Tühista opt-in nõusolek maksete töötlemiseks"
 
 #: aesirx-consent.php:98
-#: includes/settings.php:1471
+#: includes/settings.php:2055
 msgid "Revoke Opt-In Consent for AesirX Privacy Advisor AI"
 msgstr "Tühista valitud sisenemise nõusolek AesirX Privacy Advisor AI jaoks"
 
 #: aesirx-consent.php:99
-#: includes/settings.php:1472
+#: includes/settings.php:2056
 msgid "Revoke Consent for the site"
 msgstr "Tühista nõusolek saidi jaoks"
 
 #: aesirx-consent.php:100
-#: includes/settings.php:1473
+#: includes/settings.php:2057
 msgid "Consent Management"
 msgstr "Nõusoleku haldamine"
 
-#: includes/settings.php:236
+#: includes/settings.php:249
 msgid "Gtag ID"
 msgstr "Gtag ID"
 
-#: includes/settings.php:261
+#: includes/settings.php:274
 msgid "GTM ID"
 msgstr "GTM ID"
 
-#: includes/settings.php:396
+#: includes/settings.php:434
 msgid "Blocks selected third-party plugins from loading until user consent is given."
 msgstr "Blokeerib valitud kolmandate osapoolte pistikprogrammide laadimise, kuni on antud kasutaja nõusolek."
 
-#: includes/settings.php:427
+#: includes/settings.php:465
 msgid "Completely prevents the loading and execution of chosen third-party plugins before consent."
 msgstr "Takistab täielikult valitud kolmandate osapoolte pistikprogrammide laadimist ja käitamist enne nõusolekut."
 
-#: includes/settings.php:433
+#: includes/settings.php:471
 msgid "No network requests are made to third-party servers, enabling maximum compliance with privacy regulations like GDPR and the ePrivacy Directive."
 msgstr "Kolmandate osapoolte serveritele ei tehta võrgupäringuid, mis võimaldab täielikku vastavust privaatsuseeskirjadele, nagu GDPR ja ePrivacye direktiiv."
 
-#: includes/settings.php:447
+#: includes/settings.php:485
 msgid "AesirX Consent Shield for Domain/Path-Based Blocking"
 msgstr "AesirX Nõusoleku kilp domeeni/tee-põhise blokeerimise jaoks"
 
-#: includes/settings.php:457
-#: includes/settings.php:475
+#: includes/settings.php:495
+#: includes/settings.php:513
 msgid "Enter domain or path"
 msgstr "Sisesta domeen või tee"
 
-#: includes/settings.php:450
+#: includes/settings.php:488
 msgid "Removes scripts matching specified domains or paths from the browser until user consent is given."
 msgstr "Eemaldab skriptid, mis vastavad määratud domeenidele või teedele, brauserist kuni kasutaja nõusoleku andmiseni."
 
-#: includes/settings.php:498
+#: includes/settings.php:536
 msgid "Blocks or removes scripts from running in the user's browser before consent is given."
 msgstr "Blokeerib või eemaldab skriptid, mis töötavad kasutaja brauseris, enne nõusoleku andmist."
 
-#: includes/settings.php:504
+#: includes/settings.php:542
 msgid "While it prevents scripts from executing, initial network requests may still occur, so it enhances privacy compliance under GDPR but may not fully meet the ePrivacy Directive requirements."
 msgstr "Samal ajal kui see takistab skriptide täitmist, võivad siiski esineda esialgsed võrgupäringud, mis parandavad privaatsuse vastavust GDPRile, kuid ei pruugi täielikult vastata ePrivacy direktiivi nõuetele."
 
-#: includes/settings.php:518
+#: includes/settings.php:556
 msgid "Script Blocking Options"
 msgstr "Skriptide blokeerimise valikud"
 
-#: includes/settings.php:533
+#: includes/settings.php:571
 msgid "Only Third-Party Hosts (default)"
 msgstr "Ainult kolmandate osapoolte hostid (vaikimisi)"
 
-#: includes/settings.php:544
+#: includes/settings.php:582
 msgid "Both First and Third-Party Hosts"
 msgstr "Nii esimese kui kolmandate osapoolte hostid"
 
-#: includes/settings.php:951
+#: includes/settings.php:989
 msgid "Need Help? Access Our Comprehensive Documentation Hub"
 msgstr "Vajate abi? Juurdepääs meie põhjalikule dokumentatsiooni keskusele"
 
-#: includes/settings.php:1558
+#: includes/settings.php:2143
 msgid "Your trial license ends in %1$s days. Please update new license <a href='%2$s' target='_blank'>%2$s</a>."
 msgstr "Teie prooviversiooni litsents lõpeb %1$s päeva pärast. Palun uuendage litsentsi <a href='%2$s' target='_blank'>%2$s</a>."
 
-#: includes/settings.php:1704
+#: includes/settings.php:2293
 msgid "Your free trials has ended. Please update your license. <a href='%1$s' target='_blank'>%1$s</a>."
 msgstr "Teie tasuta prooviperiood on lõppenud. Palun uuendage oma litsentsi. <a href='%1$s' target='_blank'>%1$s</a>."
 
@@ -602,143 +602,144 @@ msgstr "Teie tasuta prooviperiood on lõppenud. Palun uuendage oma litsentsi. <a
 msgid "Could not insert consent"
 msgstr "Nõusolekut ei õnnestunud sisestada"
 
-#: src/Mysql/StartFingerprint.php:35
-#: src/Mysql/StartFingerprint.php:64
+#: src/Mysql/StartFingerprint.php:39
+#: src/Mysql/StartFingerprint.php:68
 msgid "License is expired or not found. Please update your license"
 msgstr "Litsents on aegunud või pole leitud. Palun uuendage oma litsentsi"
 
-#: src/Mysql/StartFingerprint.php:76
-#: src/Mysql/StartFingerprint.php:83
+#: src/Mysql/StartFingerprint.php:80
+#: src/Mysql/StartFingerprint.php:87
 msgid "Your trial is ended. Please renew your license"
 msgstr "Teie prooviversioon on lõppenud. Palun uuendage oma litsentsi"
 
-#: includes/settings.php:118
+#: includes/settings.php:129
 msgid "Your Client ID *"
 msgstr "Teie kliendi ID *"
 
-#: includes/settings.php:125
+#: includes/settings.php:136
 msgid "SSO Client ID"
 msgstr "SSO kliendi ID"
 
-#: includes/settings.php:131
+#: includes/settings.php:142
 msgid ""
 "<div class='input_information_content'>\n"
 "          Provided SSO CLIENT ID from <a href='%1$s' target='_blank'>%1$s</a>.</div>"
 msgstr "<div class='input_information_content'>Pakutud SSO klientide ID <a href='%1$s' target='_blank'>%1$s</a>.</div>"
 
-#: includes/settings.php:146
+#: includes/settings.php:157
 msgid "Your Client Secret *"
 msgstr "Teie kliendi saladus *"
 
-#: includes/settings.php:151
+#: includes/settings.php:162
 msgid "SSO Client Secret"
 msgstr "SSO Kliendi Saladus"
 
-#: includes/settings.php:157
+#: includes/settings.php:168
 msgid ""
 "<div class='input_information_content'>\n"
 "          Provided SSO Client Secret from <a href='%1$s' target='_blank'>%1$s</a>.</div>"
 msgstr "<div class='input_information_content'>Pakutud SSO kliendi saladus <a href='%1$s' target='_blank'>%1$s</a>.</div>"
 
-#: includes/settings.php:173
+#: includes/settings.php:184
 msgid "Your License Key"
 msgstr "Teie litsentsivõti"
 
-#: includes/settings.php:200
+#: includes/settings.php:211
 msgid "Choose your tailored template"
 msgstr "Valige oma kohandatud mall"
 
-#: includes/settings.php:456
-#: includes/settings.php:474
+#: includes/settings.php:494
+#: includes/settings.php:512
 msgid "Domain"
 msgstr "Domeen"
 
-#: includes/settings.php:524
+#: includes/settings.php:562
 msgid "Configure how JavaScript is blocked based on user consent preferences."
 msgstr "Konfigureerige, kuidas JavaScript blokeeritakse vastavalt kasutaja nõusoleku eelistustele."
 
-#: includes/settings.php:534
+#: includes/settings.php:572
 msgid "Blocks JavaScript from third-party domains, allowing first-party scripts to run normally & keep essential site functions intact."
 msgstr "Blokeerib JavaScripti kolmandate osapoolte domeenidelt, võimaldades esimese osapoole skriptidel normaalselt töötada ja säilitada olulised saidi funktsioonid."
 
-#: includes/settings.php:545
+#: includes/settings.php:583
 msgid "Blocks JavaScript from both first-party & third-party domains for comprehensive script control, giving you the ability to block any JavaScript from internal or external sources based on user consent."
 msgstr "Blokeerib JavaScripti nii esimese kui kolmanda osapoole domeenidelt skripti täielikuks juhtimiseks, mis annab teile võimaluse blokeerida mis tahes JavaScripti vastavalt kasutaja nõusolekule sisemistest või välistest allikatest."
 
-#: includes/settings.php:961
+#: includes/settings.php:999
 msgid "Discover the latest features & best practices."
 msgstr "Avastage uusimad funktsioonid ja parimad tavad."
 
-#: includes/settings.php:1016
+#: includes/settings.php:1468
 msgid "Scan Your Site for Privacy Risks"
 msgstr "Skaneerige oma saiti privaatsusriskide jaoks"
 
-#: includes/settings.php:1020
+#: includes/settings.php:1472
 msgid "Use the Privacy Scanner to quickly identify scripts, tags, & trackers running on your site that may compromise user privacy."
 msgstr "Kasutage privaatsuse skannerit, et kiiresti tuvastada teie saidil töötavad skriptid, sildid ja jälgurid, mis võivad kasutaja privaatsust ohustada."
 
-#: includes/settings.php:1026
+#: includes/settings.php:1478
 msgid "Use Consent Shield to block those scripts by adding their domains or paths, ensuring quick & simple compliance."
 msgstr "Kasutage nõusoleku kilpi nende skriptide blokeerimiseks, lisades nende domeene või teid, tagades kiire ja lihtsa vastavuse."
 
-#: includes/settings.php:1096
-#: includes/settings.php:1159
-#: includes/settings.php:1192
-#: includes/settings.php:1237
+#: includes/settings.php:1548
+#: includes/settings.php:1611
+#: includes/settings.php:1644
+#: includes/settings.php:1689
+#: includes/settings.php:1722
 msgid "Save settings"
 msgstr "Salvestage seaded"
 
-#: includes/settings.php:178
+#: includes/settings.php:189
 msgid "License Key"
 msgstr "Litsentsivõti"
 
-#: includes/settings.php:988
+#: includes/settings.php:1026
 msgid "Haven't got Shield of Privacy ID yet?"
 msgstr "Kas teil pole veel Privaatsuse Kilbi ID-d?"
 
-#: includes/settings.php:1035
+#: includes/settings.php:1487
 msgid "Learn how to use AesirX Privacy Scanner with Consent Shield to detect privacy-intrusive elements, using the JetPack plugin as an example."
 msgstr "Õppige, kuidas kasutada AesirX Privaatsuse Skannerit koos nõusoleku kilbiga, et tuvastada privaatsust rikkuvaid elemente, kasutades näitena JetPack pistikprogrammi."
 
-#: includes/settings.php:184
+#: includes/settings.php:195
 msgid ""
 "<div class='input_information_content'>\n"
 "          Sign up to obtain your Shield of Privacy ID and purchase licenses <a href='https://aesirx.io/licenses' target='blank' class='text-link'>here</a>.</div>"
 msgstr "<div class='input_information_content'>Registreeruge oma Privaatsuse Kilbi ID saamiseks ja litsentside ostmiseks <a href='https://aesirx.io/licenses' target='blank' class='text-link'>siin</a>.</div>"
 
-#: includes/settings.php:289
+#: includes/settings.php:302
 msgid "To configure, input your Google Tag Manager Gtag ID & GTM ID in the designated fields. Once set up, Google Tag Manager will only load after the user provides consent."
 msgstr "Konfigureerimiseks sisestage Google Tag Manageri Gtag ID ja GTM ID määratud väljadele. Kui see on seadistatud, laaditakse Google Tag Manager ainult pärast kasutaja nõusoleku andmist."
 
-#: includes/settings.php:246
-#: includes/settings.php:271
+#: includes/settings.php:259
+#: includes/settings.php:284
 msgid ""
 "<div class='input_information_content'>\n"
 "          Remember to include the explicit purpose (e.g., analytics, marketing) in the consent text to inform users why GTM is being used.</div>"
 msgstr "<div class='input_information_content'>Pidage meeles, et lisage nõusoleku tekstis konkreetne eesmärk (nt analüütika, turundus), et teavitada kasutajaid, miks kasutatakse GTM-i.</div>"
 
-#: includes/settings.php:997
+#: includes/settings.php:1035
 msgid "Sign up now"
 msgstr "Registreeri kohe"
 
-#: includes/settings.php:955
+#: includes/settings.php:993
 msgid "Explore How-To Guides, instructions, & tutorials to get the most from AesirX Consent Shield. Whether you're a developer or admin, find all you need to configure & optimize your privacy setup."
 msgstr "Uurige juhiseid, instruktsioone ja õpetusi, et saada AesirX Nõusoleku kilbist kõige rohkem kasu. Olenemata sellest, kas olete arendaja või administraator, leiate siin kõik, mida vajate oma privaatsuse seadistamiseks ja optimeerimiseks."
 
-#: includes/settings.php:328
+#: includes/settings.php:341
 msgid "Reset Consent"
 msgstr "Lähtesta nõusolek"
 
-#: aesirx-consent.php:355
+#: aesirx-consent.php:374
 msgid "Important: Permalink Settings Required"
 msgstr "Tähtis: vaja on püsiühenduse seadeid"
 
-#: includes/settings.php:1668
+#: includes/settings.php:2257
 msgid "Your trial license ends in %1$s hour(s). Please update your license <a href='%2$s' target='_blank'>here</a>."
 msgstr "Teie prooviversiooni litsents lõpeb %1$s tunni pärast. Palun uuendage oma litsentsi <a href='%2$s' target='_blank'>siin</a>."
 
 #. translators: 1: Permalink structure example, 2: Link to Permalink Settings page
-#: aesirx-consent.php:360
+#: aesirx-consent.php:379
 msgid ""
 "Our plugin requires that your site use a pretty permalink structure (for example, %1$s) to work correctly.\n"
 "                            It looks like your current settings are using the plain permalink format, which might cause issues.\n"
@@ -750,76 +751,77 @@ msgstr ""
 "                            Palun %2$s avage oma püsiühenduste seaded.\n"
 "                            Seal valige suvand \"Posti nimi\" (või teine kena püsiühenduste struktuur) ja klõpsake \"Salvesta muudatused.\""
 
-#: aesirx-consent.php:367
+#: aesirx-consent.php:386
 msgid "click here"
 msgstr "klõpsake siin"
 
-#: includes/settings.php:286
+#: includes/settings.php:299
 msgid "GTM General"
 msgstr "GTM Üldine"
 
-#: includes/settings.php:1564
+#: includes/settings.php:2149
 msgid "Something went wrong: %1$s. Please contact the administrator."
 msgstr "Midagi läks valesti: %1$s. Palun võtke ühendust administraatoriga."
 
-#: includes/settings.php:1644
+#: includes/settings.php:2233
 msgid "Check license failed: %1$s. Please contact the administrator or update your license."
 msgstr "Litsentsi kontroll ebaõnnestus: %1$s. Palun võtke ühendust administraatoriga või uuendage oma litsentsi."
 
-#: src/Mysql/StartFingerprint.php:55
+#: src/Mysql/StartFingerprint.php:59
 msgid "Check license failed: %1\\$s. Please contact the administrator."
 msgstr "Litsentsi kontroll ebaõnnestus: %1\\$s. Palun võtke ühendust administraatoriga."
 
-#: src/Mysql/StartFingerprint.php:43
-#: src/Mysql/StartFingerprint.php:62
+#: src/Mysql/StartFingerprint.php:47
+#: src/Mysql/StartFingerprint.php:66
 msgid "Your domain is not match with your license. Please update domain in your license"
 msgstr "Teie domeen ei vasta teie litsentsile. Palun uuendage domeeni oma litsentsis"
 
-#: includes/settings.php:217
+#: includes/settings.php:229
 msgid "Decentralized Consent Mode"
 msgstr "Detsentraliseeritud nõusoleku režiim"
 
-#: includes/settings.php:666
+#: includes/settings.php:704
 msgid "GPC Compliance"
 msgstr "GPC vastavus"
 
-#: includes/settings.php:679
+#: includes/settings.php:717
 msgid "Enable GPC Support"
 msgstr "Lülitage sisse GPC-tugi"
 
-#: includes/settings.php:687
+#: includes/settings.php:725
 msgid "Disable GPC Support"
 msgstr "Lülitage välja GPC-tugi"
 
-#: includes/settings.php:694
+#: includes/settings.php:732
 msgid "To comply with Global Privacy Control (GPC), please download and upload the following file:"
 msgstr "Globaalsete privaatsuseeskirjade (GPC) järgimiseks palun laadige alla ja laadige üles järgmine fail:"
 
-#: includes/settings.php:697
+#: includes/settings.php:735
 msgid "Upload Instructions:"
 msgstr "Üleslaadimisjuhised:"
 
-#: includes/settings.php:699
+#: includes/settings.php:737
 msgid "Download the gpc.json file."
 msgstr "Laadige alla gpc.json fail."
 
-#: includes/settings.php:700
+#: includes/settings.php:738
 msgid "Connect to your website via FTP or File Manager."
 msgstr "Ühendage oma veebisait FTP või failihalduri kaudu."
 
-#: includes/settings.php:701
+#: includes/settings.php:739
 msgid "Upload the file to: <code>/public_html/.well-known/gpc.json</code>"
 msgstr "Laadige fail üles: <code>/public_html/.well-known/gpc.json</code>"
 
-#: includes/settings.php:702
+#: includes/settings.php:740
 msgid "Ensure the file is accessible by visiting: <a href='"
 msgstr "Veenduge, et fail oleks ligipääsetav, külastades: <a href='"
 
-#: includes/settings.php:353
+#: includes/settings.php:366
+#: includes/settings.php:391
 msgid "Reset Detail"
 msgstr "Lähtesta detail"
 
-#: includes/settings.php:378
+#: includes/settings.php:416
 msgid "Reset Reject"
 msgstr "Lähtestage tagasilükkamine"
 
@@ -895,177 +897,163 @@ msgstr "Ärge müüge ega jagage minu isiklikku teavet (CCPA)"
 msgid "Disables third-party data sharing for California users."
 msgstr "Keelab kolmanda osapoole andmete jagamise California kasutajatele."
 
-#: includes/settings.php:576
+#: includes/settings.php:614
 msgid "Configurable Consent Logic"
 msgstr "Konfigureeritav nõusoleku loogika"
 
-#: includes/settings.php:589
+#: includes/settings.php:627
 msgid "Opt-In Mode (EU)"
 msgstr "Opt-In režiim (EU)"
 
-#: includes/settings.php:590
+#: includes/settings.php:628
 msgid "No tracking technologies are activated until a user explicitly gives consent. This is required by <strong>GDPR</strong> and <strong>ePrivacy Directive 5(3)</strong>."
 msgstr "Jälgimistehnoloogiaid ei aktiveerita enne, kui kasutaja annab selgesõnalise nõusoleku. Selle nõuavad <strong>GDPR</strong> ja <strong>ePrivaatsuse Direktiiv 5(3)</strong>."
 
-#: includes/settings.php:598
+#: includes/settings.php:636
 msgid "Opt-Out Mode (California)"
 msgstr "Väljalülimisrežiim (California)"
 
-#: includes/settings.php:599
+#: includes/settings.php:637
 msgid "Tracking is allowed by default, but users must be able to opt out easily. This aligns with <strong>CCPA</strong> and similar U.S. privacy frameworks."
 msgstr "Jälgimine on vaikimisi lubatud, kuid kasutajad peavad saama sellest hõlpsasti loobuda. See vastab <strong>CCPA</strong> ning sarnastele USA privaatsusraamistikele."
 
-#: includes/settings.php:630
+#: includes/settings.php:668
 msgid "Do not sell or share options"
 msgstr "Ei müü ega jaga valikuid"
 
-#: includes/settings.php:643
-#: includes/settings.php:749
+#: includes/settings.php:681
+#: includes/settings.php:787
 msgid "Yes"
 msgstr "Jah"
 
-#: includes/settings.php:651
-#: includes/settings.php:757
+#: includes/settings.php:689
+#: includes/settings.php:795
 msgid "No"
 msgstr "Ei"
 
-#: includes/settings.php:736
+#: includes/settings.php:774
 msgid "Enable Geo-handling for Consent Mode"
 msgstr "Lubage geotöötlus nõusoleku režiimi jaoks"
 
-#: includes/settings.php:772
+#: includes/settings.php:810
 msgid "Geo-Based Consent Rules"
 msgstr "Geo-põhised nõusoleku reeglid"
 
-#: includes/settings.php:871
+#: includes/settings.php:909
 msgid "Browser Language"
 msgstr "Brauserikeel"
 
-#: includes/settings.php:872
-#: includes/settings.php:896
-#: includes/settings.php:913
+#: includes/settings.php:910
+#: includes/settings.php:934
+#: includes/settings.php:951
 msgid "Time Zone"
 msgstr "Ajavöönd"
 
-#: includes/settings.php:886
+#: includes/settings.php:924
 msgid "Consent Mode"
 msgstr "Nõusoleku režiim"
 
-#: includes/settings.php:887
+#: includes/settings.php:925
 msgid "Allow Override"
 msgstr "Luba ülekirjutamine"
 
-#: includes/settings.php:895
-#: includes/settings.php:912
+#: includes/settings.php:933
+#: includes/settings.php:950
 msgid "Language"
 msgstr "Keel"
 
-#: includes/settings.php:898
-#: includes/settings.php:915
+#: includes/settings.php:936
+#: includes/settings.php:953
 msgid "Select Mode"
 msgstr "Valige režiim"
 
-#: includes/settings.php:916
+#: includes/settings.php:954
 msgid "Override"
 msgstr "Ülekirjutamine"
 
-#: includes/settings.php:208
+#: includes/settings.php:220
 msgid "Default Consent Mode"
 msgstr "Vaikimisi nõusoleku režiim"
 
-#: includes/settings.php:212
+#: includes/settings.php:224
 msgid "Default Consent Mode improves Google Consent Mode 2.0 by not loading any tags until after consent is given, reducing compliance risks."
 msgstr "Vaikimisi nõusoleku režiim parandab Google nõusoleku režiimi 2.0, kui see ei lae märke kuni nõusoleku saamiseni, vähendades vastavuse riske."
 
-#: includes/settings.php:221
+#: includes/settings.php:233
 msgid "Decentralized Consent Mode setup improves Google Consent Mode 2.0 by not loading any scripts, beacons, or tags until after consent is given, reducing compliance risks. It also includes Decentralized Consent, for more control over personal data and rewards."
 msgstr "Detsentraliseeritud nõusoleku režiimi seadistamine parandab Google nõusoleku režiimi 2.0, kui see ei lae skripte, majakaid ega märke enne nõusoleku saamist, vähendades vastavuse riske. See hõlmab ka detsentraliseeritud nõusolekut, et võimaldada rohkem kontrolli oma isikuandmete ja preemiate üle."
 
-#: includes/settings.php:878
+#: includes/settings.php:916
 msgid "Choose how browser language and time zone are combined to determine consent rules:"
 msgstr "Valige, kuidas ühendatakse brauserikeel ja ajavöönd nõusoleku reeglite määramiseks:"
 
-#: includes/settings.php:880
+#: includes/settings.php:918
 msgid "<strong>AND Logic (Stricter Match):</strong> Both language and time zone must match a region for its consent model to apply. Ideal for high-accuracy targeting."
 msgstr "<strong>JA loogika (rangem sobivus):</strong> Nii keel kui ka ajavöönd peavad olema vastavas piirkonnas, et see nõusolekumudel kehtiks. Ideaalne kõrgema täpsusega sihtmärgistamiseks."
 
-#: includes/settings.php:881
+#: includes/settings.php:919
 msgid "<strong>OR Logic (More Flexible):</strong> Either language or time zone can match to apply a region’s consent model. Best for broader coverage based on user preferences."
 msgstr "<strong>VÕI loogika (paindlikum):</strong> Kas keel või ajavöönd võib sobida regiooni nõusolekumudeli rakendamiseks. Ideaalne laiemale katvusele kasutaja eelistuste alusel."
 
-#: includes/settings.php:992
+#: includes/settings.php:1030
 msgid "Manage License Here"
 msgstr "Hallata litsentsi siin"
 
-#: includes/settings.php:1287
-#: includes/settings.php:1301
-#: includes/settings.php:1316
-#: includes/settings.php:1331
-#: includes/settings.php:1355
+#: includes/settings.php:1780
 msgid "Generate"
 msgstr "Loo"
 
-#: includes/settings.php:1290
+#: aesirx-consent.php:121
+#: includes/settings.php:1863
 msgid "Cookie Declaration"
 msgstr "Küpsiste deklaratsioon"
 
-#: includes/settings.php:1291
-#: includes/settings.php:1306
-#: includes/settings.php:1321
-#: includes/settings.php:1340
-msgid "⚠️ This is a draft generated based on your site’s scan results. Please review and edit to ensure it reflects your actual data practices before publishing."
-msgstr "⚠️ See on teie saidi skannimistulemuste põhjal genereeritud mustand. Enne avaldamist vaadake see üle ja redigeerige, et veenduda, et see kajastaks teie tegelikke andmepraktikaid."
-
-#: includes/settings.php:1305
+#: includes/settings.php:1893
 msgid "Privacy Policy"
 msgstr "Privaatsuspoliitika"
 
-#: includes/settings.php:1320
+#: includes/settings.php:1923
 msgid "Consent Request"
 msgstr "Nõusoleku taotlus"
 
-#: includes/settings.php:1339
+#: includes/settings.php:1787
 msgid "Domain Categorization"
 msgstr "Domeeni kategooria"
 
-#: includes/settings.php:1352
-msgid "Auto-Populated Blocking List"
-msgstr "Automaatselt täidetud blokeerimisnimekiri"
-
-#: includes/settings.php:1615
-#: includes/settings.php:1678
+#: includes/settings.php:2204
+#: includes/settings.php:2267
 msgid "You are using a lifetime license."
 msgstr "Kasutate eluaegset litsentsi."
 
-#: includes/settings.php:1621
-#: includes/settings.php:1684
+#: includes/settings.php:2210
+#: includes/settings.php:2273
 msgid "year"
 msgid_plural "years"
 msgstr[0] "aasta"
 msgstr[1] "aastad"
 msgstr[2] "aastad"
 
-#: includes/settings.php:1624
-#: includes/settings.php:1687
+#: includes/settings.php:2213
+#: includes/settings.php:2276
 msgid "month"
 msgid_plural "months"
 msgstr[0] "kuu"
 msgstr[1] "kuud"
 msgstr[2] "kuud"
 
-#: includes/settings.php:1627
-#: includes/settings.php:1690
+#: includes/settings.php:2216
+#: includes/settings.php:2279
 msgid "day"
 msgid_plural "days"
 msgstr[0] "päev"
 msgstr[1] "päeva"
 msgstr[2] "päeva"
 
-#: includes/settings.php:1632
+#: includes/settings.php:2221
 msgid "Your license ends in %1$s. Please update your license <a href='%2$s' target='_blank'>%2$s</a>."
 msgstr "Teie litsents lõpeb %1$s pärast. Palun uuendage oma litsentsi <a href='%2$s' target='_blank'>%2$s</a>."
 
-#: includes/settings.php:1695
+#: includes/settings.php:2284
 msgid "Your trial license ends in %1$s. Please update your license <a href='%2$s' target='_blank'>%2$s</a>."
 msgstr "Teie prooviversiooni litsents lõpeb %1$s pärast. Palun uuendage oma litsentsi <a href='%2$s' target='_blank'>%2$s</a>."
 
@@ -1073,27 +1061,147 @@ msgstr "Teie prooviversiooni litsents lõpeb %1$s pärast. Palun uuendage oma li
 msgid "User preferencese & site enhancements (e.g, language setting, live chat)."
 msgstr ""
 
-#: includes/settings.php:315
+#: includes/settings.php:328
 msgid "Customize Consent Management Text "
 msgstr ""
 
-#: includes/settings.php:340
+#: includes/settings.php:378
 msgid "Customize Details Text "
 msgstr ""
 
-#: includes/settings.php:365
+#: includes/settings.php:403
 msgid "Customize Reject Text "
 msgstr ""
 
-#: includes/settings.php:391
+#: includes/settings.php:429
 msgid "AesirX Consent Shield for Third-Party Plugins "
 msgstr ""
 
-#: includes/settings.php:1377
-#: includes/settings.php:1594
+#: includes/settings.php:1955
+#: includes/settings.php:2183
 msgid "Your license is expried or not found. Please update new license <a href='%1$s' target='_blank'>%1$s</a>."
 msgstr ""
 
-#: includes/settings.php:1601
+#: includes/settings.php:2190
 msgid "Your domain is not match with your license. Please update domain in your license <a href='%1$s' target='_blank'>%1$s</a> and click <span class='verify_domain'>here</span> to verify again."
+msgstr ""
+
+#: includes/settings.php:353
+msgid "Customize Cookie Declaration Text"
+msgstr ""
+
+#: includes/settings.php:1065
+#: includes/settings.php:1391
+msgid "Age & Country Verification"
+msgstr ""
+
+#: includes/settings.php:1306
+msgid "This feature lets you restrict access by age or location using secure digital ID verification. Users without a wallet ID can create a Concordium ID with a passport or driver’s license. Verification uses zero-knowledge proofs, so the website never sees or stores personal details."
+msgstr ""
+
+#: includes/settings.php:1315
+msgid "Tick to require users to confirm their age using a digital ID stored in a wallet such as Concordium Wallet or Google Wallet (Note: Google Wallet support varies by region and ID type)."
+msgstr ""
+
+#: includes/settings.php:1327
+msgid "Tick to require users to confirm their country from their digital ID stored in a wallet such as Concordium Wallet or Google Wallet (Note: Google Wallet support varies by region and ID type)."
+msgstr ""
+
+#: includes/settings.php:1338
+msgid "Users must be at least this age to access."
+msgstr ""
+
+#: includes/settings.php:1350
+msgid "Users cannot be over this age to access."
+msgstr ""
+
+#: includes/settings.php:1362
+#: includes/settings.php:1376
+msgid "Only these countries can access (leave blank to allow all)."
+msgstr ""
+
+#: includes/settings.php:1386
+msgid "Message preview"
+msgstr ""
+
+#: includes/settings.php:1392
+msgid "Age Verification"
+msgstr ""
+
+#: includes/settings.php:1393
+msgid "Country Verification"
+msgstr ""
+
+#: includes/settings.php:1400
+msgid "You must be at least <span class='minimum_age_text'>%1$s</span> years old to access this content."
+msgstr ""
+
+#: includes/settings.php:1406
+msgid "Access is limited to users under <span class='maximum_age_text'>%1$s</span> years."
+msgstr ""
+
+#: includes/settings.php:1412
+msgid "To access this content, you must be from <span class='allow_country_text'>%1$s</span>."
+msgstr ""
+
+#: includes/settings.php:1418
+msgid "Access is excluded to users from <span class='disallow_country_text'>%1$s</span>."
+msgstr ""
+
+#: includes/settings.php:1433
+msgid "Verification is done using your digital ID stored in a secure wallet of your choice – your personal details are encrypted & never stored or shared. If you don’t have a wallet ID, you can create one now."
+msgstr ""
+
+#: includes/settings.php:1439
+msgid "Cancel"
+msgstr ""
+
+#: includes/settings.php:1444
+msgid "Continue to Verification"
+msgstr ""
+
+#: includes/settings.php:1790
+msgid "This draft was automatically generated based on real scan data from your website and identifies third-party domains, cookies, and beacons used, categorized by purpose."
+msgstr ""
+
+#: includes/settings.php:1794
+#: includes/settings.php:1870
+#: includes/settings.php:1900
+#: includes/settings.php:1930
+msgid "Please review and adjust the content to make sure it reflects your actual data practices before publishing."
+msgstr ""
+
+#: includes/settings.php:1832
+msgid "Enable AI Auto-Blocking"
+msgstr ""
+
+#: includes/settings.php:1843
+#: includes/settings.php:1889
+#: includes/settings.php:1919
+#: includes/settings.php:1949
+msgid "Regenerate"
+msgstr ""
+
+#: includes/settings.php:1866
+msgid "This draft was automatically generated based on real scan data from your website and lists the cookies and tracking technologies detected."
+msgstr ""
+
+#: includes/settings.php:1874
+msgid "For full setup instructions: <a href='%1$s' target='_blank'>AesirX CMP Guide: How to Generate a Cookie Declaration with AI</a>."
+msgstr ""
+
+#: includes/settings.php:1896
+msgid "This draft was automatically generated based on real scan data from your website and outlines the data collection and processing activities detected."
+msgstr ""
+
+#: includes/settings.php:1904
+msgid "For full setup instructions: <a href='%1$s' target='_blank'>AesirX CMP Guide: How to Generate a Privacy Policy with AI</a>."
+msgstr ""
+
+#: includes/settings.php:1926
+msgid "This draft was automatically generated based on real scan data from your website and provides a consent message tailored to the technologies and data flows detected."
+msgstr ""
+
+#: includes/settings.php:1934
+msgid "For full setup instructions: AesirX CMP Guide: How to Generate Consent Request Text with AI"
 msgstr ""
