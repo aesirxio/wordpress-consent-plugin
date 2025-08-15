@@ -41,6 +41,12 @@ function moveGeoJSTask() {
     .pipe(gulp.dest(`${dist}/plugins/aesirx-consent/assets/vendor`));
 }
 
+function moveVerifyJSTask() {
+  return gulp
+    .src(['./wp-content/plugins/aesirx-consent/aesirx-consent-verify.js'])
+    .pipe(gulp.dest(`${dist}/plugins/aesirx-consent/assets/vendor`));
+}
+
 function moveAiJSTask() {
   return gulp
     .src(['./wp-content/plugins/aesirx-consent/aesirx-consent-ai.js'])
@@ -56,6 +62,12 @@ function moveMarkedJSTask() {
 function moveCKeditorJSTask() {
   return gulp
     .src(['./wp-content/plugins/aesirx-consent/aesirx-consent-ckeditor.js'])
+    .pipe(gulp.dest(`${dist}/plugins/aesirx-consent/assets/vendor`));
+}
+
+function moveSelect2JSTask() {
+  return gulp
+    .src(['./wp-content/plugins/aesirx-consent/aesirx-consent-select2.js'])
     .pipe(gulp.dest(`${dist}/plugins/aesirx-consent/assets/vendor`));
 }
 
@@ -100,9 +112,11 @@ exports.zip = series(
   moveAnalyticJSTask,
   moveRepeatableFieldsJSTask,
   moveGeoJSTask,
+  moveVerifyJSTask,
   moveAiJSTask,
   moveMarkedJSTask,
   moveCKeditorJSTask,
+  moveSelect2JSTask,
   webpackBIApp,
   composerTask,
   cleanComposerTask,
@@ -121,9 +135,11 @@ exports.watch = function () {
       moveAnalyticJSTask,
       moveRepeatableFieldsJSTask,
       moveGeoJSTask,
+      moveVerifyJSTask,
       moveAiJSTask,
       moveMarkedJSTask,
       moveCKeditorJSTask,
+      moveSelect2JSTask,
       composerTask
     )
   );

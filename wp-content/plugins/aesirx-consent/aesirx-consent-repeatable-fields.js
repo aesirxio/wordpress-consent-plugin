@@ -66,6 +66,7 @@ jQuery(document).ready(function ($) {
   $(document).on('click', '.aesirx_consent_template_item', function (e) {
     $(this).parent().find('.aesirx_consent_template_item').removeClass('active');
     $(this).addClass('active');
+    $('#datastream_template_hidden').remove();
   });
 
   const textConsent = `
@@ -252,74 +253,76 @@ jQuery(document).ready(function ($) {
   } = CKEDITOR;
   editors.forEach(({ id, inputId, text, resetClass }) => {
     // Initialize CKEditor for each editor
-    ClassicEditor.create(document.querySelector(`#${id}`), {
-      licenseKey: 'GPL',
-      toolbar: {
-        items: [
-          'sourceEditing',
-          'undo',
-          'redo',
-          '|',
-          'bold',
-          'italic',
-          'link',
-          'insertImage',
-          'insertTable',
-          'codeBlock',
+    if (document.querySelector(`#${id}`)) {
+      ClassicEditor.create(document.querySelector(`#${id}`), {
+        licenseKey: 'GPL',
+        toolbar: {
+          items: [
+            'sourceEditing',
+            'undo',
+            'redo',
+            '|',
+            'bold',
+            'italic',
+            'link',
+            'insertImage',
+            'insertTable',
+            'codeBlock',
+          ],
+        },
+        plugins: [
+          Bold,
+          Essentials,
+          Italic,
+          Mention,
+          Paragraph,
+          Undo,
+          GeneralHtmlSupport,
+          Image,
+          ImageToolbar,
+          ImageCaption,
+          ImageStyle,
+          ImageResize,
+          LinkImage,
+          SourceEditing,
+          Link,
+          AutoLink,
+          Table,
+          TableToolbar,
+          Heading,
+          CodeBlock,
         ],
-      },
-      plugins: [
-        Bold,
-        Essentials,
-        Italic,
-        Mention,
-        Paragraph,
-        Undo,
-        GeneralHtmlSupport,
-        Image,
-        ImageToolbar,
-        ImageCaption,
-        ImageStyle,
-        ImageResize,
-        LinkImage,
-        SourceEditing,
-        Link,
-        AutoLink,
-        Table,
-        TableToolbar,
-        Heading,
-        CodeBlock,
-      ],
-      htmlSupport: {
-        allow: [{ name: /.*/, attributes: true, classes: true, styles: true }],
-      },
-    })
-      .then((editor) => {
-        // Set the initial content if the input field is empty
-        if (!$(`#${inputId}`).val()) {
-          editor.setData(text);
-        } else {
-          editor.setData($(`#${inputId}`).val());
-        }
-
-        // Listen for changes and update the input field accordingly
-        editor.model.document.on('change:data', () => {
-          let content = editor.getData();
-          content = content.replace(/="([^"]*)"/g, "='$1'");
-          const hasText = content.replace(/(<([^>]+)>)/gi, '').length;
-          $(`#${inputId}`).val(hasText ? content : '');
-        });
-
-        // Reset content when the reset button is clicked
-        $(document).on('click', `.${resetClass}`, function () {
-          editor.setData(text);
-          $(`#${inputId}`).val('');
-        });
-
-        console.log(`${id} initialized successfully!`);
+        htmlSupport: {
+          allow: [{ name: /.*/, attributes: true, classes: true, styles: true }],
+        },
       })
-      .catch((error) => {
-        console.error(`Error initializing CKEditor for ${id}:`, error);
-      });
+        .then((editor) => {
+          // Set the initial content if the input field is empty
+          if (!$(`#${inputId}`).val()) {
+            editor.setData(text);
+          } else {
+            editor.setData($(`#${inputId}`).val());
+          }
+
+          // Listen for changes and update the input field accordingly
+          editor.model.document.on('change:data', () => {
+            let content = editor.getData();
+            content = content.replace(/="([^"]*)"/g, "='$1'");
+            const hasText = content.replace(/(<([^>]+)>)/gi, '').length;
+            $(`#${inputId}`).val(hasText ? content : '');
+          });
+
+          // Reset content when the reset button is clicked
+          $(document).on('click', `.${resetClass}`, function () {
+            editor.setData(text);
+            $(`#${inputId}`).val('');
+          });
+
+          console.log(`${id} initialized successfully!`);
+        })
+        .catch((error) => {
+          console.error(`Error initializing CKEditor for ${id}:`, error);
+        });
+    }
   });
 });
