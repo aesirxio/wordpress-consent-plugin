@@ -212,25 +212,26 @@ add_action('admin_init', function () {
     __('Choose your tailored template', 'aesirx-consent'),
     function () {
       $template = get_option('aesirx_consent_modal_plugin_options', []);
+      $datastream_template = $template['datastream_template'] ?? '';
       // using custom function to escape HTML
       echo "<div class='aesirx_consent_template_container'>";
       echo wp_kses("
         <div class='aesirx_consent_template'>
-          <label class='aesirx_consent_template_item ".($template['datastream_template'] === 'simple-consent-mode' ? 'active' : '')."' for='simple-mode'>
+          <label class='aesirx_consent_template_item ".(!$datastream_template || $datastream_template === 'simple-consent-mode' ? 'active' : '')."' for='simple-mode'>
             <img width='585px' height='388px' src='". plugins_url( 'aesirx-consent/assets/images-plugin/consent_simple_mode.png')."' />
             <p class='title'>".esc_html__('Default Consent Mode', 'aesirx-consent')."</p>
             <input id='simple-mode' type='radio' class='analytic-consent-class' name='aesirx_consent_modal_plugin_options[datastream_template]' " .
-            ($template['datastream_template'] === 'simple-consent-mode' ? "checked='checked'" : '') .
+            (!$datastream_template || $datastream_template === 'simple-consent-mode' ? "checked='checked'" : '') .
             " value='simple-consent-mode'  />
             <p>".esc_html__("Default Consent Mode improves Google Consent Mode 2.0 by not loading any tags until after consent is given, reducing compliance risks.", 'aesirx-consent')."</p>
           </label>
           <label class='aesirx_consent_template_item ".
-          (!$template['datastream_template'] || $template['datastream_template'] === 'default' ? 'active' : '') ."' for='default'>
+          ($datastream_template === 'default' ? 'active' : '') ."' for='default'>
             <img width='585px' height='388px' src='". plugins_url( 'aesirx-consent/assets/images-plugin/consent_default.png')."' />
             <p class='title'>".esc_html__('Decentralized Consent Mode', 'aesirx-consent')."</p>
             <input type='radio' id='default' class='analytic-consent-class' name='aesirx_consent_modal_plugin_options[datastream_template]' " .
-            (!$template['datastream_template'] || $template['datastream_template'] === 'default' ? "checked='checked'" : '') .
-            "value='default'  />
+            ($datastream_template === 'default' ? "checked='checked'" : '') .
+            " value='default'  />
             <p>".esc_html__("Decentralized Consent Mode setup improves Google Consent Mode 2.0 by not loading any scripts, beacons, or tags until after consent is given, reducing compliance risks. It also includes Decentralized Consent, for more control over personal data and rewards.", 'aesirx-consent')."</p>
           </label>
         </div>
@@ -329,9 +330,10 @@ add_action('admin_init', function () {
     esc_html__('Customize Consent Management Text ', 'aesirx-consent'),
     function () {
       $options = get_option('aesirx_consent_modal_plugin_options', []);
-      $decodedHtml = html_entity_decode($options['datastream_consent'], ENT_QUOTES, 'UTF-8');
+      $datastream_consent = $options['datastream_consent'] ?? '';
+      $decodedHtml = html_entity_decode($datastream_consent, ENT_QUOTES, 'UTF-8');
       echo wp_kses('<input id="aesirx_consent_modal_datastream_consent" class="aesirx_consent_input" name="aesirx_consent_modal_plugin_options[datastream_consent]" type="hidden" 
-      value="'.esc_attr($options['datastream_consent']).'" />', aesirx_analytics_escape_html());
+      value="'.esc_attr($datastream_consent).'" />', aesirx_analytics_escape_html());
       echo wp_kses('
       <div id="datastream_consent">
         <div>'.$decodedHtml.'</div>'.'
@@ -354,9 +356,10 @@ add_action('admin_init', function () {
     esc_html__('Customize Cookie Declaration Text', 'aesirx-consent'),
     function () {
       $options = get_option('aesirx_consent_modal_plugin_options', []);
-      $decodedHtml = html_entity_decode($options['datastream_cookie'], ENT_QUOTES, 'UTF-8');
+      $datastream_cookie = $options['datastream_cookie'] ?? '';
+      $decodedHtml = html_entity_decode($datastream_cookie, ENT_QUOTES, 'UTF-8');
       echo wp_kses('<input id="aesirx_consent_modal_datastream_cookie" class="aesirx_consent_input" name="aesirx_consent_modal_plugin_options[datastream_cookie]" type="hidden" 
-      value="'.esc_attr($options['datastream_cookie']).'" />', aesirx_analytics_escape_html());
+      value="'.esc_attr($datastream_cookie).'" />', aesirx_analytics_escape_html());
       echo wp_kses('
       <div id="datastream_cookie">
         <div>'.$decodedHtml.'</div>'.'
@@ -379,9 +382,10 @@ add_action('admin_init', function () {
     esc_html__('Customize Details Text ', 'aesirx-consent'),
     function () {
       $options = get_option('aesirx_consent_modal_plugin_options', []);
-      $decodedHtml = html_entity_decode($options['datastream_detail'], ENT_QUOTES, 'UTF-8');
+      $datastream_detail = $options['datastream_detail'] ?? '';
+      $decodedHtml = html_entity_decode($datastream_detail, ENT_QUOTES, 'UTF-8');
       echo wp_kses('<input id="aesirx_consent_modal_datastream_detail" class="aesirx_consent_input" name="aesirx_consent_modal_plugin_options[datastream_detail]" type="hidden" 
-      value="'.esc_attr($options['datastream_detail']).'" />', aesirx_analytics_escape_html());
+      value="'.esc_attr($datastream_detail).'" />', aesirx_analytics_escape_html());
       echo wp_kses('
       <div id="datastream_detail">
         <div>'.$decodedHtml.'</div>'.'
@@ -404,9 +408,10 @@ add_action('admin_init', function () {
     esc_html__('Customize Reject Text ', 'aesirx-consent'),
     function () {
       $options = get_option('aesirx_consent_modal_plugin_options', []);
-      $decodedHtml = html_entity_decode($options['datastream_reject'], ENT_QUOTES, 'UTF-8');
+      $datastream_reject = $options['datastream_reject'] ?? '';
+      $decodedHtml = html_entity_decode($datastream_reject, ENT_QUOTES, 'UTF-8');
       echo wp_kses('<input id="aesirx_consent_modal_datastream_reject" class="aesirx_consent_input" name="aesirx_consent_modal_plugin_options[datastream_reject]" type="hidden" 
-      value="'.esc_attr($options['datastream_reject']).'" />', aesirx_analytics_escape_html());
+      value="'.esc_attr($datastream_reject).'" />', aesirx_analytics_escape_html());
       echo wp_kses('
       <div id="datastream_reject">
         <div>'.$decodedHtml.'</div>'.'
@@ -1293,11 +1298,14 @@ add_action('admin_init', function () {
 
       $minimumAge = isset($options['minimum_age']) ? (int)$options['minimum_age'] : 0;
       $maximumAge = isset($options['maximum_age']) ? (int)$options['maximum_age'] : 0;
-      $ageCheck = $options['age_check'] === 'ageCheck' ? ($minimumAge > 0 || $maximumAge > 0 ? 1 : 0): 0;
+      $ageCheck = (isset($options['age_check']) && $options['age_check'] === 'ageCheck')
+      ? (($minimumAge > 0 || $maximumAge > 0) ? 1 : 0)
+      : 0;
       $allowedCountries = $options['allowed_countries'] ?? [];
       $disallowedCountries = $options['disallowed_countries'] ?? [];
-      $countryCheck = $options['country_check'] === 'countryCheck' ? (!empty($allowedCountries) || !empty($disallowedCountries) ? 1 : 0) : 0;
-      
+      $countryCheck = (isset($options['country_check']) && $options['country_check'] === 'countryCheck')
+            ? ((!empty($allowedCountries) || !empty($disallowedCountries)) ? 1 : 0)
+            : 0;
       $showPreview = 'default';
       if($ageCheck && $countryCheck) {
         $showPreview = 'age-country';
@@ -1307,13 +1315,14 @@ add_action('admin_init', function () {
         $showPreview = 'country';
       }
 
+
       echo wp_kses("
       <div class='aesirx_consent_age_country'>
         <div class='aesirx_consent_verify_note'>
           ".esc_html__('This feature lets you restrict access by age or location using secure digital ID verification. Users without a wallet ID can create a Concordium ID with a passport or driver’s license. Verification uses zero-knowledge proofs, so the website never sees or stores personal details.', 'aesirx-consent')."
         </div>
         <div class='aesirx_consent_age'>
-          <input id='age_check' type='checkbox' name='aesirx_consent_verify_plugin_options[age_check]' ".($options['age_check'] === 'ageCheck' ? "checked='checked'" : "")." value='ageCheck' />
+          <input id='age_check' type='checkbox' name='aesirx_consent_verify_plugin_options[age_check]' ".($ageCheck === 1 ? "checked='checked'" : "")." value='ageCheck' />
           <label for='age_check' class='aesirx_infor_wrapper'>
             Enable Age Verification
             <div class='input_information'>
@@ -1325,7 +1334,7 @@ add_action('admin_init', function () {
           </label>
         </div>
         <div class='aesirx_consent_country'>
-          <input id='country_check' type='checkbox' name='aesirx_consent_verify_plugin_options[country_check]' ".($options['country_check'] === 'countryCheck' ? "checked='checked'" : "")." value='countryCheck' />
+          <input id='country_check' type='checkbox' name='aesirx_consent_verify_plugin_options[country_check]' ".($countryCheck === 1 ? "checked='checked'" : "")." value='countryCheck' />
           <label for='country_check' class='aesirx_infor_wrapper'>
             Enable Country Verification
             <div class='input_information'>
@@ -1346,7 +1355,7 @@ add_action('admin_init', function () {
               </div>
             </div>
           </label>
-          <input id='minimum_age' type='number' name='aesirx_consent_verify_plugin_options[minimum_age]' value=".($options['minimum_age'] ? $options['minimum_age'] : 0)." />
+          <input id='minimum_age' type='number' name='aesirx_consent_verify_plugin_options[minimum_age]' value=".($minimumAge ? $minimumAge : 0)." />
         </div>
         <div class='aesirx_consent_maximum_age'>
           <label for='maximum_age' class='aesirx_infor_wrapper'>
@@ -1358,7 +1367,7 @@ add_action('admin_init', function () {
               </div>
             </div>
           </label>
-          <input id='maximum_age' type='number' name='aesirx_consent_verify_plugin_options[maximum_age]' value=".($options['maximum_age'] ? $options['maximum_age'] : 0)." />
+          <input id='maximum_age' type='number' name='aesirx_consent_verify_plugin_options[maximum_age]' value=".($maximumAge ? $maximumAge : 0)." />
         </div>
         <div class='aesirx_consent_allowed_countries'>
           <label for='allowed_countries' class='aesirx_infor_wrapper'>
@@ -1401,25 +1410,25 @@ add_action('admin_init', function () {
               </div>
           </div>
           <div class='body'>
-            <div class='check_line minimum_age_line ".($options['age_check'] && $options['minimum_age'] ? '' : 'hide')."'>
+            <div class='check_line minimum_age_line ".($ageCheck && $minimumAge ? '' : 'hide')."'>
               <img class='check_radio' width='14px' height='14px' src='". plugins_url( 'aesirx-consent/assets/images-plugin/check_radio.png')."' />
               <div>
-                ".sprintf(__("You must be at least <span class='minimum_age_text'>%1\$s</span> years old to access this content.", 'aesirx-consent'), $options['minimum_age'] ? $options['minimum_age'] : '[Minimum Age]')."
+                ".sprintf(__("You must be at least <span class='minimum_age_text'>%1\$s</span> years old to access this content.", 'aesirx-consent'), $minimumAge ? $minimumAge : '[Minimum Age]')."
               </div>
             </div>
-            <div class='check_line maximum_age_line ".($options['age_check'] && $options['maximum_age'] ? '' : 'hide')." '>
+            <div class='check_line maximum_age_line ".($ageCheck && $maximumAge ? '' : 'hide')." '>
               <img class='check_radio' width='14px' height='14px' src='". plugins_url( 'aesirx-consent/assets/images-plugin/check_radio.png')."' />
               <div>
-                ".sprintf(__("Access is limited to users under <span class='maximum_age_text'>%1\$s</span> years.", 'aesirx-consent'), $options['maximum_age'] ? $options['maximum_age'] : '[Maximum Age]')."
+                ".sprintf(__("Access is limited to users under <span class='maximum_age_text'>%1\$s</span> years.", 'aesirx-consent'), $maximumAge ? $maximumAge : '[Maximum Age]')."
               </div>
             </div>
-            <div class='check_line allow_country_line ".($options['country_check'] && count($allowedCountriesNames) ? "" : "hide")."'>
+            <div class='check_line allow_country_line ".($countryCheck && count($allowedCountriesNames) ? "" : "hide")."'>
               <img class='check_radio' width='14px' height='14px' src='". plugins_url( 'aesirx-consent/assets/images-plugin/check_radio.png')."' />
               <div>
                 ".sprintf(__("To access this content, you must be from <span class='allow_country_text'>%1\$s</span>.", 'aesirx-consent'), implode(', ', $allowedCountriesNames))."
               </div>
             </div>
-            <div class='check_line disallow_country_line ".($options['country_check'] && count($disallowedCountriesNames) ? "" : "hide")."'>
+            <div class='check_line disallow_country_line ".($countryCheck && count($disallowedCountriesNames) ? "" : "hide")."'>
               <img class='check_radio' width='14px' height='14px' src='". plugins_url( 'aesirx-consent/assets/images-plugin/check_radio.png')."' />
               <div>
                 ".sprintf(__("Access is excluded to users from <span class='disallow_country_text'>%1\$s</span>.", 'aesirx-consent'), implode(', ', $disallowedCountriesNames))."
@@ -1769,6 +1778,10 @@ add_action('admin_menu', function () {
       <div class="aesirx_consent_wrapper">
         <?php
           $optionsAIKey = get_option('aesirx_consent_ai_key_plugin_options',[]);
+          $optionsCookieDeclaration = $options['cookie_declaration'] ?? '';
+          $optionsPrivacyPolicy = $options['privacy_policy'] ?? '';
+          $optionsConsentRequest = $options['consent_request'] ?? '';
+          $optionsDomainCategorization = $options['domain_categorization'] ?? '';
         ?>
         <?php if( $optionsAIKey['openai_key']) : ?>
           <div class="w-100">
@@ -1780,10 +1793,10 @@ add_action('admin_menu', function () {
               </div>
             </div>
             <button class="ai_generate_button
-            <?php if($options['cookie_declaration'] ||
-                      $options['privacy_policy'] ||
-                      $options['consent_request'] ||
-                      $options['domain_categorization'] ) echo 'hide'; ?>">
+            <?php if($optionsCookieDeclaration ||
+                      $optionsPrivacyPolicy ||
+                      $optionsConsentRequest ||
+                      $optionsDomainCategorization ) echo 'hide'; ?>">
               <div class="loader"></div><div><?php echo esc_html__("Generate", 'aesirx-consent') ?></div>
             </button>
             <?php
@@ -1828,17 +1841,17 @@ window.funcAfterConsent = async function () {
                   <div class="copied_text">Copied!</div>
                 </div>
                 <div class="result">
-                <?php echo stripslashes($options['domain_categorization']) ?>
+                <?php echo stripslashes($optionsDomainCategorization) ?>
                 </div>
               </div>
               <div class="domain_categorization_result"></div>
               <div class="domain_categorization_buttons">
-                <button class="auto_populated <?php if(!$options['domain_categorization']) echo 'hide'; ?>">
+                <button class="auto_populated <?php if(!$optionsDomainCategorization) echo 'hide'; ?>">
                   <div class="loader"></div>
                   <img width='22px' height='22px' src='<?php echo plugins_url( 'aesirx-consent/assets/images-plugin/shield_block.png') ?>' />
                   <?php echo esc_html__("Enable AI Auto-Blocking", 'aesirx-consent') ?>
                 </button>
-                <div class="auto_populated_information <?php if(!$options['domain_categorization']) echo 'hide'; ?>">
+                <div class="auto_populated_information <?php if(!$optionsDomainCategorization) echo 'hide'; ?>">
                   <img width='22px' height='22px' src='<?php echo plugins_url( 'aesirx-consent/assets/images-plugin/info_gray.png') ?>' />
                   <div class="auto_populated_information_content">
                     <div class="title">Enable Automatic AI-Based Blocking</div>
@@ -1846,7 +1859,7 @@ window.funcAfterConsent = async function () {
                   </div>
                   Automatically apply third-party blocking <br/> based on scan results.
                 </div>
-                <button class="prompt_item_regenerate <?php if(!$options['domain_categorization']) echo 'hide'; ?>">
+                <button class="prompt_item_regenerate <?php if(!$optionsDomainCategorization) echo 'hide'; ?>">
                   <div class="loader"></div><div><?php echo esc_html__("Regenerate", 'aesirx-consent') ?></div>
                 </button>
               </div>
@@ -1889,10 +1902,10 @@ window.funcAfterConsent = async function () {
                   <div class="copied_text">Copied!</div>
                 </div>
                 <div class="result">
-                  <?php echo stripslashes($options['cookie_declaration']) ?>
+                  <?php echo stripslashes($optionsCookieDeclaration) ?>
                 </div>
               </div>
-              <button class="prompt_item_regenerate <?php if(!$options['cookie_declaration']) echo 'hide'; ?>">
+              <button class="prompt_item_regenerate <?php if(!$optionsCookieDeclaration) echo 'hide'; ?>">
                 <div class="loader"></div><div><?php echo esc_html__("Regenerate", 'aesirx-consent') ?></div>
               </button>
             </div>
@@ -1919,10 +1932,10 @@ window.funcAfterConsent = async function () {
                   <div class="copied_text">Copied!</div>
                 </div>
                 <div class="result">
-                  <?php echo stripslashes($options['privacy_policy']) ?>
+                  <?php echo stripslashes($optionsPrivacyPolicy) ?>
                 </div>
               </div>
-              <button class="prompt_item_regenerate <?php if(!$options['privacy_policy']) echo 'hide'; ?>">
+              <button class="prompt_item_regenerate <?php if(!$optionsPrivacyPolicy) echo 'hide'; ?>">
                 <div class="loader"></div><div><?php echo esc_html__("Regenerate", 'aesirx-consent') ?></div>
               </button>
             </div>
@@ -1949,10 +1962,10 @@ window.funcAfterConsent = async function () {
                   <div class="copied_text">Copied!</div>
                 </div>
                 <div class="result">
-                <?php echo stripslashes($options['consent_request']) ?>
+                <?php echo stripslashes($optionsConsentRequest) ?>
                 </div>
               </div>
-              <button class="prompt_item_regenerate <?php if(!$options['consent_request']) echo 'hide'; ?>">
+              <button class="prompt_item_regenerate <?php if(!$optionsConsentRequest) echo 'hide'; ?>">
                 <div class="loader"></div><div><?php echo esc_html__("Regenerate", 'aesirx-consent') ?></div>
               </button>
             </div>
@@ -1987,11 +2000,11 @@ add_action('admin_enqueue_scripts', function ($hook) {
     wp_localize_script('aesirx_analytics_ai', 'aesirx_ajax', [
       'ajax_url' => admin_url('admin-ajax.php'),
       'nonce' => wp_create_nonce('aesirx_consent_nonce'),
-      'thread_id' =>  $optionsAI['thread_id'],
-      'cookie_declaration' =>  $optionsAI['cookie_declaration'],
-      'privacy_policy' =>  $optionsAI['privacy_policy'],
-      'consent_request' =>  $optionsAI['consent_request'],
-      'domain_categorization' =>  $optionsAI['domain_categorization']
+      'thread_id' =>  $optionsAI['thread_id'] ?? '',
+      'cookie_declaration' =>  $optionsAI['cookie_declaration'] ?? '',
+      'privacy_policy' =>  $optionsAI['privacy_policy'] ?? '',
+      'consent_request' =>  $optionsAI['consent_request'] ?? '',
+      'domain_categorization' =>  $optionsAI['domain_categorization'] ?? ''
   ]);
     wp_enqueue_script('aesirx_analytics_ai');
   }
@@ -2189,14 +2202,14 @@ function aesirx_analytics_license_info() {
         }
         return  wp_kses(sprintf(__("Your license is expried or not found. Please update new license <a href='%1\$s' target='_blank'>%1\$s</a>.", 'aesirx-consent'), 'https://aesirx.io/licenses'), aesirx_analytics_escape_html());
       } else if(!in_array($domain, $domainList, true)) {
-        if( $options['isDomainValid'] !== 'false') {
+        if( !isset($options['isDomainValid']) || $options['isDomainValid'] !== 'false') {
           $options['isDomainValid'] = 'false';
           $options['verify_domain'] = round(microtime(true) * 1000);
           update_option('aesirx_analytics_plugin_options', $options);
         }
         return  wp_kses(sprintf(__("Your domain is not match with your license. Please update domain in your license <a href='%1\$s' target='_blank'>%1\$s</a> and click <span class='verify_domain'>here</span> to verify again.", 'aesirx-consent'), 'https://aesirx.io/licenses'), aesirx_analytics_escape_html());
       } else {
-        if($options['isDomainValid'] === 'false') {
+        if(!isset($options['isDomainValid']) || $options['isDomainValid'] === 'false') {
           $options['isDomainValid'] = 'true';
           $options['verify_domain'] = round(microtime(true) * 1000);
           update_option('aesirx_analytics_plugin_options', $options);
