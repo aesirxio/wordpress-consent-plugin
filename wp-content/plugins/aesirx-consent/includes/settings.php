@@ -2193,10 +2193,11 @@ function aesirx_analytics_license_info() {
     $optionsAIKey['openai_key'] = $openAIKey;
     $optionsAIKey['openai_assistant'] =  $openAIAssistant;
     update_option('aesirx_consent_ai_key_plugin_options', $optionsAIKey);
+    $currentLicense = $options['current_license'] ?? '';
 
-    if ($response['response']['code'] === 200 ) {
+   if (is_array($response) && isset($response['response']['code']) && $response['response']['code'] === 200) {
       if(!json_decode($bodyCheckLicense)->result->success || json_decode($bodyCheckLicense)->result->subscription_product !== "product-aesirx-cmp") {
-        if($options['current_license']) {
+        if($currentLicense) {
           $options['current_license'] = '';
           update_option('aesirx_analytics_plugin_options', $options);
         }
@@ -2247,7 +2248,9 @@ function aesirx_analytics_license_info() {
         }
       }
     } else {
-      $error_message = $response['response']['message'];
+      $error_message = is_array($response) && isset($response['response']['message'])
+        ? $response['response']['message']
+        : (is_wp_error($response) ? $response->get_error_message() : __('Unknown error', 'aesirx-consent'));
       return wp_kses(
           sprintf(
               __("Check license failed: %1\$s. Please contact the administrator or update your license.", 'aesirx-consent'),
