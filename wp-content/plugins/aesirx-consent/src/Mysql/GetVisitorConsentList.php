@@ -25,7 +25,7 @@ Class AesirX_Analytics_Get_Visitor_Consent_List extends AesirxAnalyticsMysqlHelp
         // handle expiration
         if (!isset($params['expired']) || is_null($params['expired']) || !$params['expired']) {
             $exp = $wpdb->prepare(" AND (`vc`.`expiration` >= %s OR `vc`.`expiration` IS NULL)
-                    AND IF (c.uuid IS NULL, true, c.expiration IS NULL)", gmdate('Y-m-d H:i:s'));
+                    AND IF (c.uuid IS NULL, 1, c.expiration IS NULL)", gmdate('Y-m-d H:i:s'));
 
             // doing direct database calls to custom tables
             $consents = $wpdb->get_results( // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching
@@ -35,9 +35,10 @@ Class AesirX_Analytics_Get_Visitor_Consent_List extends AesirxAnalyticsMysqlHelp
                     FROM {$wpdb->prefix}analytics_visitor_consent AS vc
                     LEFT JOIN {$wpdb->prefix}analytics_consent AS c ON vc.consent_uuid = c.uuid
                     LEFT JOIN {$wpdb->prefix}analytics_wallet AS w ON c.wallet_uuid = w.uuid
-                    WHERE vc.visitor_uuid = %s ORDER BY vc.datetime 
+                    WHERE vc.visitor_uuid = %s
                     AND (`vc`.`expiration` >= %s OR `vc`.`expiration` IS NULL)
-                    AND IF (c.uuid IS NULL, true, c.expiration IS NULL)",
+                    AND IF (c.uuid IS NULL, 1, c.expiration IS NULL)
+                    ORDER BY vc.datetime",
                     sanitize_text_field($params['uuid']), gmdate('Y-m-d H:i:s')
                 )
             );
@@ -57,7 +58,15 @@ Class AesirX_Analytics_Get_Visitor_Consent_List extends AesirxAnalyticsMysqlHelp
         }
 
         if ($wpdb->last_error) {
-            return new WP_Error('db_query_error', esc_html__('There was a problem with the database query.', 'aesirx-consent'), ['status' => 500]);
+            return new WP_Error(
+                'db_query_error',
+                sprintf(
+                    'Database error: %s. Last query: %s',
+                    $wpdb->last_error,
+                    $wpdb->last_query
+                ),
+                ['status' => 500]
+            );
         }
 
         if ($visitor) {
