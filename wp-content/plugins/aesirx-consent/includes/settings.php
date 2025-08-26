@@ -8,8 +8,9 @@ add_action('admin_init', function () {
   ) {
     $valid = true;
     $input = (array) $value;
+    $storage = isset($input['storage']) ? $input['storage'] : null;
 
-    if ($input['storage'] === 'internal') {
+    if ($storage === 'internal') {
       if (empty($input['license'])) {
         add_settings_error(
           'aesirx_analytics_plugin_options',
@@ -18,7 +19,7 @@ add_action('admin_init', function () {
           'warning'
         );
       }
-    } elseif ($input['storage'] === 'external') {
+    } elseif ($storage === 'external') {
       if (empty($input['domain'])) {
         $valid = false;
         add_settings_error(
@@ -439,6 +440,12 @@ add_action('admin_init', function () {
         if ($plugin['TextDomain'] === 'aesirx-consent' || $plugin['TextDomain'] === '' || !in_array($path, $active_plugins, true)) {
           continue;
         }
+        $textDomain   = esc_attr($plugin['TextDomain']);
+        $name = esc_html($plugin['Name']);
+
+        // safely check current value
+        $current_value = $options['blocking_cookies_plugins_category'][$textDomain][$name] ?? '';
+
         echo '<div class="aesirx-consent-cookie-plugin-item">';
         echo '<div class="aesirx-consent-cookie-plugin-item-label">';
         echo wp_kses("<input id='aesirx_analytics_blocking_cookies_plugins".esc_attr($plugin['TextDomain'])."' name='aesirx_analytics_plugin_options[blocking_cookies_plugins][]' 
@@ -447,12 +454,12 @@ add_action('admin_init', function () {
         echo '<label for="aesirx_analytics_blocking_cookies_plugins'.esc_attr($plugin['TextDomain']).'">' . esc_html($plugin['Name']) . '</label>';
         echo '</div>';
         echo wp_kses('
-        <select name="aesirx_analytics_plugin_options[blocking_cookies_plugins_category]['.esc_attr($plugin['TextDomain']).']['.esc_html($plugin['Name']).']">
-          <option value="essential" '.($options['blocking_cookies_plugins_category'][esc_attr($plugin['TextDomain'])][esc_html($plugin['Name'])] === 'essential' ? 'selected' : '').'>Essential</option>
-          <option value="functional" '.($options['blocking_cookies_plugins_category'][esc_attr($plugin['TextDomain'])][esc_html($plugin['Name'])] === 'functional' ? 'selected' : '').'>Functional</option>
-          <option value="analytics" '.($options['blocking_cookies_plugins_category'][esc_attr($plugin['TextDomain'])][esc_html($plugin['Name'])] === 'analytics' ? 'selected' : '').'>Analytics</option>
-          <option value="advertising" '.($options['blocking_cookies_plugins_category'][esc_attr($plugin['TextDomain'])][esc_html($plugin['Name'])] === 'advertising' ? 'selected' : '').'>Advertising</option>
-          <option value="custom" '.($options['blocking_cookies_plugins_category'][esc_attr($plugin['TextDomain'])][esc_html($plugin['Name'])] === 'custom' ? 'selected' : '').'>Custom</option>
+        <select name="aesirx_analytics_plugin_options[blocking_cookies_plugins_category]['.$textDomain.']['.$name.']">
+          <option value="essential" '.($current_value === 'essential' ? 'selected' : '').'>Essential</option>
+          <option value="functional" '.($current_value === 'functional' ? 'selected' : '').'>Functional</option>
+          <option value="analytics" '.($current_value === 'analytics' ? 'selected' : '').'>Analytics</option>
+          <option value="advertising" '.($current_value === 'advertising' ? 'selected' : '').'>Advertising</option>
+          <option value="custom" '.($current_value === 'custom' ? 'selected' : '').'>Custom</option>
         </select>
       ', aesirx_analytics_escape_html());
         echo '</div>';
@@ -1015,7 +1022,7 @@ add_action('admin_init', function () {
     function () {
       // using custom function to escape HTML
       $options = get_option('aesirx_analytics_plugin_options', []);
-      $isRegisted = $options['secret'] && $options['clientid'] ? true : false;
+      $isRegisted = (isset($options['secret'], $options['clientid']) && $options['secret'] && $options['clientid']);
       echo wp_kses("
       <div class='aesirx_consent_register_license'>
         ".($isRegisted ? "<img width='255px' height='96px' src='". plugins_url( 'aesirx-consent/assets/images-plugin/banner_1.png')."' />" :"")."

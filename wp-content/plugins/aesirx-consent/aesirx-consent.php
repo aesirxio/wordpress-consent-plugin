@@ -203,12 +203,15 @@ add_action('wp_enqueue_scripts', function (): void {
     $optionsConsentVerify = get_option('aesirx_consent_verify_plugin_options', []);
     $minimumAge = isset($optionsConsentVerify['minimum_age']) ? (int)$optionsConsentVerify['minimum_age'] : 0;
     $maximumAge = isset($optionsConsentVerify['maximum_age']) ? (int)$optionsConsentVerify['maximum_age'] : 0;
-    $ageCheck = $optionsConsentVerify['age_check'] === 'ageCheck' ? ($minimumAge > 0 || $maximumAge > 0 ? 1 : 0): 0;
+    $ageCheck = (isset($optionsConsentVerify['age_check']) && $optionsConsentVerify['age_check'] === 'ageCheck')
+    ? (($minimumAge > 0 || $maximumAge > 0) ? 1 : 0)
+    : 0;
     $allowedCountries = $optionsConsentVerify['allowed_countries'] ?? [];
     $disallowedCountries = $optionsConsentVerify['disallowed_countries'] ?? [];
-    $countryCheck = $optionsConsentVerify['country_check'] === 'countryCheck' ? (!empty($allowedCountries) || !empty($disallowedCountries) ? 1 : 0) : 0;
-
-
+    $countryCheck = (isset($optionsConsentVerify['country_check']) && $optionsConsentVerify['country_check'] === 'countryCheck')
+            ? ((!empty($allowedCountries) || !empty($disallowedCountries)) ? 1 : 0)
+            : 0;
+            
     wp_add_inline_script(
         'aesirx-consent',
         'window.aesirx1stparty="' . esc_attr($domain) . '";
