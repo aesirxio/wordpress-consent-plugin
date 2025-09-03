@@ -105,6 +105,8 @@ Class AesirX_Analytics_Get_Visitor_Consent_List extends AesirxAnalyticsMysqlHelp
                     );
                 }
             }
+            aesirx_analytics_initialize_function(true);
+
 
             return new WP_Error(
                 'db_query_error',

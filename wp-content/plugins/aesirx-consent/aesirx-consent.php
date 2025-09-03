@@ -322,7 +322,7 @@ function aesirx_analytics_url_handler()
 }
 
 register_activation_hook(__FILE__, 'aesirx_analytics_initialize_function');
-function aesirx_analytics_initialize_function() {
+function aesirx_analytics_initialize_function($manually = false) {
     global $wpdb;
 
     //Add migration table
@@ -335,7 +335,7 @@ function aesirx_analytics_initialize_function() {
         if ($realpath && strpos($realpath, plugin_dir_path(__FILE__) . 'src/Migration/') === 0) {
             include_once $realpath; // Safe inclusion
             $file_name = basename($realpath, ".php");
-            if (!in_array($file_name, $migration_list, true)) {
+            if (!in_array($file_name, $migration_list, true) || $manually) {
                 MigratorMysql::aesirx_analytics_add_migration_query($file_name);
                 $sql = $sql ?? []; // Ensure $sql is an array
                 foreach ($sql as $each_query) {
