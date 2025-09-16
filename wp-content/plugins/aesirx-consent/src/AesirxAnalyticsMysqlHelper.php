@@ -91,7 +91,7 @@ if (!class_exists('AesirxAnalyticsMysqlHelper')) {
                     'total_elements' => $total_elements,
                 ];
     
-                if ($params[1] === "metrics" || $params[1] === "total-consent-override-language") {
+                if (($params[1] === "metrics" || $params[1] === "total-consent-override-language") && $list_response['collection'][0]) {
                     $list_response = $list_response['collection'][0];
                 }
     
