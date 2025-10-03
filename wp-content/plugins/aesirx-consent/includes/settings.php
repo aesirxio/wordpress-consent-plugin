@@ -499,12 +499,26 @@ add_action('admin_init', function () {
       $options = get_option('aesirx_analytics_plugin_options', []);
       echo wp_kses('<p class="small-description mb-10">'.esc_html__('Removes scripts matching specified domains or paths from the browser until user consent is given.', 'aesirx-consent').'</p>', aesirx_analytics_escape_html());
       echo '<div id="aesirx-consent-blocking-cookies">';
+      echo wp_kses('
+        <div class="aesirx-consent-cookie-row header">
+          <div class="block">Permanent Block</div>
+          <div class="category">Category</div>
+        </div>', aesirx_analytics_escape_html())
+      ;
       if (isset($options['blocking_cookies'])) {
           foreach ($options['blocking_cookies'] as $key => $field) {
             echo wp_kses('
             <div class="aesirx-consent-cookie-row">
               <div class="title">'.esc_html__('Domain', 'aesirx-consent').'</div>
               <input type="text" name="aesirx_analytics_plugin_options[blocking_cookies][]" placeholder="'.esc_attr__('Enter domain or path', 'aesirx-consent').'" value="'.esc_attr($field).'">
+               <div class="blocking_permanent">
+                <input type="hidden" name="aesirx_analytics_plugin_options[blocking_cookies_permanent]['.$key.']" value="off">
+                <input type="checkbox" name="aesirx_analytics_plugin_options[blocking_cookies_permanent]['.$key.']" 
+                      value="on" '.( ($options['blocking_cookies_permanent'][$key] === "on") ? 'checked' : '' ).'>
+                <div class="input_information_content">
+                  Block permanently
+                </div>
+              </div>
               <select name="aesirx_analytics_plugin_options[blocking_cookies_category][]">
                 <option value="essential" '.($options['blocking_cookies_category'][$key] === 'essential' ? 'selected' : '').'>Essential</option>
                 <option value="functional" '.($options['blocking_cookies_category'][$key] === 'functional' ? 'selected' : '').'>Functional</option>
@@ -523,6 +537,13 @@ add_action('admin_init', function () {
         <div class="aesirx-consent-cookie-row">
           <div class="title">'.esc_html__('Domain', 'aesirx-consent').'</div>
           <input type="text" name="aesirx_analytics_plugin_options[blocking_cookies][]" placeholder="'.esc_attr__('Enter domain or path', 'aesirx-consent').'">
+          <div class="blocking_permanent">
+            <input type="hidden" name="aesirx_analytics_plugin_options[blocking_cookies_permanent][]" value="off">
+            <input type="checkbox" name="aesirx_analytics_plugin_options[blocking_cookies_permanent][]">
+            <div class="input_information_content">
+              Block permanently
+            </div>
+          </div>
           <select name="aesirx_analytics_plugin_options[blocking_cookies_category][]">
             <option value="essential" selected>Essential</option>
             <option value="functional">Functional</option>

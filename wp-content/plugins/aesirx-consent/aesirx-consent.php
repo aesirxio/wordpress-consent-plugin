@@ -3,7 +3,7 @@
  * Plugin Name: AesirX Consent
  * Plugin URI: https://analytics.aesirx.io?utm_source=wpplugin&utm_medium=web&utm_campaign=wordpress&utm_id=aesirx&utm_term=wordpress&utm_content=analytics
  * Description: Aesirx Consent plugin. When you join forces with AesirX, you're not just becoming a Partner - you're also becoming a freedom fighter in the battle for privacy! Earn 25% Affiliate Commission <a href="https://aesirx.io/partner?utm_source=wpplugin&utm_medium=web&utm_campaign=wordpress&utm_id=aesirx&utm_term=wordpress&utm_content=analytics">[Click to Join]</a>
- * Version: 2.0.1
+ * Version: 2.0.2
  * Author: aesirx.io
  * Author URI: https://aesirx.io/
  * Domain Path: /languages
@@ -135,6 +135,7 @@ add_action('wp_enqueue_scripts', function (): void {
         ? array_filter($options['blocking_cookies'], fn($v) => trim($v) !== '') 
         : [];
     $blockingCookiesCategory = isset($options['blocking_cookies_category']) && count($options['blocking_cookies_category']) > 0 ? $options['blocking_cookies_category'] : [];
+    $blockingCookiesPermanent =  isset($options['blocking_cookies_permanent']) &&  count($options['blocking_cookies_permanent']) > 0 ? $options['blocking_cookies_permanent'] : [];
     $arrayCookiesPlugins =  isset($options['blocking_cookies_plugins']) &&  count($options['blocking_cookies_plugins']) > 0 ? $options['blocking_cookies_plugins'] : [];
     $arrayCookiesPluginsCategory =  isset($options['blocking_cookies_plugins_category']) &&  count($options['blocking_cookies_plugins_category']) > 0 ? $options['blocking_cookies_plugins_category'] : [];
     $prefix = "wp-content/plugins/";
@@ -156,11 +157,12 @@ add_action('wp_enqueue_scripts', function (): void {
 
     $blockingCookies = array_unique(array_merge($blockingCookiesPath, $blockingCookiesPlugins), SORT_REGULAR);
     
-    $blockingCookiesObjects = array_map(function ($cookie, $key) use ($blockingCookiesCategory, $blockingCookiesPluginsCategory, $blockingCookiesPluginsName) {
+    $blockingCookiesObjects = array_map(function ($cookie, $key) use ($blockingCookiesCategory, $blockingCookiesPermanent, $blockingCookiesPluginsCategory, $blockingCookiesPluginsName) {
         return [
             'domain' => $cookie,
             'category' => $blockingCookiesCategory[$key] ?? ($blockingCookiesPluginsCategory[$cookie] ?? 'custom'),
-            'name' => $blockingCookiesPluginsName[$cookie] ?? ''
+            'blocking_permanent' => $blockingCookiesPermanent[$key] ?? 'off',
+            'name' => $blockingCookiesPluginsName[$cookie] ?? '',
         ];
     }, array_values($blockingCookies), array_keys(array_values($blockingCookies)));
     
@@ -457,10 +459,69 @@ $consent = $wpdb->get_row( // phpcs:ignore WordPress.DB.DirectDatabaseQuery.Dire
         array($ip, $userAgent)
     )
 );
-
 $disabled_block_domains = get_option('aesirx_analytics_plugin_options_disabled_block_domains');
 $consentParams = isset($_GET['consent']) ? sanitize_text_field($_GET['consent']) : 'no';
+$optionsPlugin = get_option('aesirx_analytics_plugin_options');
+$blockingCookiesPermanent =  isset($optionsPlugin['blocking_cookies_permanent']) &&  count($optionsPlugin['blocking_cookies_permanent']) > 0 ? $optionsPlugin['blocking_cookies_permanent'] : [];
 
+function aesirx_analytics_get_deregistered_scripts($havePermanent = false) {
+    global $wp_scripts;
+    $deregistered_scripts = array();
+    $options = get_option('aesirx_analytics_plugin_options');
+    $blockingCookiesPaths = isset($options['blocking_cookies']) 
+        ? array_filter($options['blocking_cookies'], fn($v) => trim($v) !== '') 
+        : [];
+    $arrayCookiesPlugins =  isset($options['blocking_cookies_plugins']) &&  count($options['blocking_cookies_plugins']) > 0 ? $options['blocking_cookies_plugins'] : [];
+    $prefix = "wp-content/plugins/";
+    $blockingCookiesPlugins = isset($options['blocking_cookies_plugins']) && count($options['blocking_cookies_plugins']) > 0
+    ? array_map(function($value) use ($prefix) {
+        return $prefix . $value;
+    }, array_filter($arrayCookiesPlugins, fn($v) => trim($v) !== ''))
+    : [];
+    $blockingCookiesPermanent =  isset($options['blocking_cookies_permanent']) &&  count($options['blocking_cookies_permanent']) > 0 ? $options['blocking_cookies_permanent'] : [];
+
+    $blockingCookies = array_unique(array_merge($blockingCookiesPaths, $blockingCookiesPlugins), SORT_REGULAR);
+    $blockingCookiesObjects = array_map(function ($cookie, $key) use ($blockingCookiesPermanent) {
+        return [
+            'domain' => $cookie,
+            'blocking_permanent' => $blockingCookiesPermanent[$key] ?? 'off',
+        ];
+    }, array_values($blockingCookies), array_keys(array_values($blockingCookies)));
+    $queueScripts = $wp_scripts->queue;
+    $blockingCookiesMode = isset($options['blocking_cookies_mode']) ? $options['blocking_cookies_mode'] : '3rd_party';
+    $siteDomain = isset($_SERVER['HTTP_HOST']) ? filter_var($_SERVER['HTTP_HOST'], FILTER_SANITIZE_URL) : 'unknown';
+
+    foreach ( $wp_scripts->registered as $handle => $script ) {
+        if ( !is_string($script->src) || !in_array($handle, $queueScripts, true) ) {
+            continue;
+        }
+
+        if ($blockingCookiesMode === '3rd_party') {
+            $scriptDomain = wp_parse_url($script->src, PHP_URL_HOST);
+
+            if ($scriptDomain && $scriptDomain === $siteDomain) {
+                continue;
+            }
+        }
+
+        foreach ($blockingCookiesObjects as $cookie) {
+            if (isset($cookie['domain']) && stripos($script->src, $cookie['domain']) !== false) {
+                $deregistered_scripts[$handle] = $script;
+                if($havePermanent) {
+                    if($cookie['blocking_permanent'] === 'on') {
+                        wp_deregister_script( $handle );
+                        wp_dequeue_script( $handle );
+                    }
+                } else {
+                    wp_deregister_script( $handle );
+                    wp_dequeue_script( $handle );
+                }
+            }
+        }
+    }
+
+    return $deregistered_scripts;
+}
 if (!$consent && $consentParams !== 'yes') {
     add_action( 'wp_enqueue_scripts', function (): void {
 
@@ -490,51 +551,6 @@ if (!$consent && $consentParams !== 'yes') {
         </script>
     <?php
     }, 9999 );
-
-    function aesirx_analytics_get_deregistered_scripts() {
-        global $wp_scripts;
-        $deregistered_scripts = array();
-        $options = get_option('aesirx_analytics_plugin_options');
-        $blockingCookiesPaths = isset($options['blocking_cookies']) 
-            ? array_filter($options['blocking_cookies'], fn($v) => trim($v) !== '') 
-            : [];
-        $arrayCookiesPlugins =  isset($options['blocking_cookies_plugins']) &&  count($options['blocking_cookies_plugins']) > 0 ? $options['blocking_cookies_plugins'] : [];
-        $prefix = "wp-content/plugins/";
-        $blockingCookiesPlugins = isset($options['blocking_cookies_plugins']) && count($options['blocking_cookies_plugins']) > 0
-        ? array_map(function($value) use ($prefix) {
-            return $prefix . $value;
-        }, array_filter($arrayCookiesPlugins, fn($v) => trim($v) !== ''))
-        : [];
-
-        $blockingCookies = array_unique(array_merge($blockingCookiesPaths, $blockingCookiesPlugins), SORT_REGULAR);
-        $queueScripts = $wp_scripts->queue;
-        $blockingCookiesMode = isset($options['blocking_cookies_mode']) ? $options['blocking_cookies_mode'] : '3rd_party';
-        $siteDomain = isset($_SERVER['HTTP_HOST']) ? filter_var($_SERVER['HTTP_HOST'], FILTER_SANITIZE_URL) : 'unknown';
-
-        foreach ( $wp_scripts->registered as $handle => $script ) {
-            if ( !is_string($script->src) || !in_array($handle, $queueScripts, true) ) {
-                continue;
-            }
-
-            if ($blockingCookiesMode === '3rd_party') {
-                $scriptDomain = wp_parse_url($script->src, PHP_URL_HOST);
-
-                if ($scriptDomain && $scriptDomain === $siteDomain) {
-                    continue;
-                }
-            }
-    
-            foreach ($blockingCookies as $path) {
-                if ($path && stripos($script->src, $path) !== false) {
-                    $deregistered_scripts[$handle] = $script;
-                    wp_deregister_script( $handle );
-                    wp_dequeue_script( $handle );
-                }
-            }
-        }
-
-        return $deregistered_scripts;
-    }
 } else if ($disabled_block_domains && ($consent || $consentParams !== 'yes')) {
     add_action( 'wp_enqueue_scripts', function (): void {
 
@@ -590,4 +606,33 @@ if (!$consent && $consentParams !== 'yes') {
         }
         return $deregistered_scripts;
     }
+} else if (isset($optionsPlugin['blocking_cookies_permanent']) && count($blockingCookiesPermanent) > 0) {
+    add_action( 'wp_enqueue_scripts', function (): void {
+
+		$deregistered_scripts = aesirx_analytics_get_deregistered_scripts(true);
+
+        wp_localize_script( 'aesirx-consent', 'aesirx_analytics_degistered_scripts', $deregistered_scripts );
+	}, 9999 );
+
+    add_action( 'wp_head', function (): void {
+
+        $deregistered_scripts = aesirx_analytics_get_deregistered_scripts(true);
+
+        ?>
+        <script type="text/javascript">
+            var deregistered_scripts_head = <?php echo wp_json_encode($deregistered_scripts); ?>;
+        </script>
+    <?php
+    }, 9999 );
+
+    add_action( 'wp_footer', function (): void {
+
+        $deregistered_scripts = aesirx_analytics_get_deregistered_scripts(true);
+
+        ?>
+        <script type="text/javascript">
+            var deregistered_scripts_footer = <?php echo wp_json_encode($deregistered_scripts); ?>;
+        </script>
+    <?php
+    }, 9999 );
 }
