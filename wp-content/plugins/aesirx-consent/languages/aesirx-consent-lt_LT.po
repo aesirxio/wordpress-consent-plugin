@@ -1205,3 +1205,11 @@ msgstr ""
 #: includes/settings.php:1934
 msgid "For full setup instructions: AesirX CMP Guide: How to Generate Consent Request Text with AI"
 msgstr ""
+
+#: includes/settings.php:371
+msgid "Reset Cookie"
+msgstr ""
+
+#: includes/settings.php:342
+msgid "Always link your own website's Privacy Policy, not the AesirX example"
+msgstr ""
