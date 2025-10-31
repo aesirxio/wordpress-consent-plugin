@@ -2200,6 +2200,8 @@ function aesirx_analytics_license_info() {
   $optionsAIKey = get_option('aesirx_consent_ai_key_plugin_options',[]);
   $domain = isset($_SERVER['SERVER_NAME']) ? sanitize_text_field($_SERVER['SERVER_NAME']) : '';
   $domain = preg_replace('/^www\./', '', $domain);
+  $isTrial = false;
+
   if (!empty($options['license'])) {
     $response = aesirx_analytics_get_api('https://api.aesirx.io/index.php?webserviceClient=site&webserviceVersion=1.0.0&option=member&task=validateWPLicense&api=hal&license=' . $options['license']);
     $bodyCheckLicense = wp_remote_retrieve_body($response);
@@ -2216,56 +2218,59 @@ function aesirx_analytics_license_info() {
     update_option('aesirx_consent_ai_key_plugin_options', $optionsAIKey);
     $currentLicense = $options['current_license'] ?? '';
 
-   if (is_array($response) && isset($response['response']['code']) && $response['response']['code'] === 200) {
-      if(!json_decode($bodyCheckLicense)->result->success || json_decode($bodyCheckLicense)->result->subscription_product !== "product-aesirx-cmp") {
-        if($currentLicense) {
-          $options['current_license'] = '';
-          update_option('aesirx_analytics_plugin_options', $options);
-        }
-        return  wp_kses(sprintf(__("Your license is expried or not found. Please update new license <a href='%1\$s' target='_blank'>%1\$s</a>.", 'aesirx-consent'), 'https://aesirx.io/licenses'), aesirx_analytics_escape_html());
-      } else if(!in_array($domain, $domainList, true)) {
-        if( !isset($options['isDomainValid']) || $options['isDomainValid'] !== 'false') {
-          $options['isDomainValid'] = 'false';
-          $options['verify_domain'] = round(microtime(true) * 1000);
-          update_option('aesirx_analytics_plugin_options', $options);
-        }
-        return  wp_kses(sprintf(__("Your domain is not match with your license. Please update domain in your license <a href='%1\$s' target='_blank'>%1\$s</a> and click <span class='verify_domain'>here</span> to verify again.", 'aesirx-consent'), 'https://aesirx.io/licenses'), aesirx_analytics_escape_html());
-      } else {
-        if(!isset($options['isDomainValid']) || $options['isDomainValid'] === 'false') {
-          $options['isDomainValid'] = 'true';
-          $options['verify_domain'] = round(microtime(true) * 1000);
-          update_option('aesirx_analytics_plugin_options', $options);
-        }
-        $dateExpired = new DateTime(json_decode($bodyCheckLicense)->result->date_expired);
-        $currentDate = new DateTime();
-        $interval = $currentDate->diff($dateExpired);
-        $daysLeft = $interval->days;
-        if ($interval->y > 2) {
-          // License is considered lifetime
-            return wp_kses(
-              __("You are using a lifetime license.", 'aesirx-consent'),
-              aesirx_analytics_escape_html()
-          );
+    if (is_array($response) && isset($response['response']['code']) && $response['response']['code'] === 200) {
+      $isTrial = json_decode($bodyCheckLicense)->result->isTrial ?? false;
+      if ($isTrial !== true) {
+        if(!json_decode($bodyCheckLicense)->result->success || json_decode($bodyCheckLicense)->result->subscription_product !== "product-aesirx-cmp") {
+          if($currentLicense) {
+            $options['current_license'] = '';
+            update_option('aesirx_analytics_plugin_options', $options);
+          }
+          return  wp_kses(sprintf(__("Your license is expried or not found. Please update new license <a href='%1\$s' target='_blank'>%1\$s</a>.", 'aesirx-consent'), 'https://aesirx.io/licenses'), aesirx_analytics_escape_html());
+        } else if(!in_array($domain, $domainList, true)) {
+          if( !isset($options['isDomainValid']) || $options['isDomainValid'] !== 'false') {
+            $options['isDomainValid'] = 'false';
+            $options['verify_domain'] = round(microtime(true) * 1000);
+            update_option('aesirx_analytics_plugin_options', $options);
+          }
+          return  wp_kses(sprintf(__("Your domain is not match with your license. Please update domain in your license <a href='%1\$s' target='_blank'>%1\$s</a> and click <span class='verify_domain'>here</span> to verify again.", 'aesirx-consent'), 'https://aesirx.io/licenses'), aesirx_analytics_escape_html());
         } else {
-          $parts = [];
-          if ($interval->y > 0) {
-              $parts[] = $interval->y . ' ' . _n('year', 'years', $interval->y, 'aesirx-consent');
+          if(!isset($options['isDomainValid']) || $options['isDomainValid'] === 'false') {
+            $options['isDomainValid'] = 'true';
+            $options['verify_domain'] = round(microtime(true) * 1000);
+            update_option('aesirx_analytics_plugin_options', $options);
           }
-          if ($interval->m > 0) {
-              $parts[] = $interval->m . ' ' . _n('month', 'months', $interval->m, 'aesirx-consent');
+          $dateExpired = new DateTime(json_decode($bodyCheckLicense)->result->date_expired);
+          $currentDate = new DateTime();
+          $interval = $currentDate->diff($dateExpired);
+          $daysLeft = $interval->days;
+          if ($interval->y > 2) {
+            // License is considered lifetime
+              return wp_kses(
+                __("You are using a lifetime license.", 'aesirx-consent'),
+                aesirx_analytics_escape_html()
+            );
+          } else {
+            $parts = [];
+            if ($interval->y > 0) {
+                $parts[] = $interval->y . ' ' . _n('year', 'years', $interval->y, 'aesirx-consent');
+            }
+            if ($interval->m > 0) {
+                $parts[] = $interval->m . ' ' . _n('month', 'months', $interval->m, 'aesirx-consent');
+            }
+            if ($interval->d > 0 || empty($parts)) {
+                $parts[] = $interval->d . ' ' . _n('day', 'days', $interval->d, 'aesirx-consent');
+            }
+            $timeLeft = implode(', ', $parts);
+            return wp_kses(
+                sprintf(
+                    __("Your license ends in %1\$s. Please update your license <a href='%2\$s' target='_blank'>%2\$s</a>.", 'aesirx-consent'),
+                    $timeLeft,
+                    'https://aesirx.io/licenses'
+                ),
+                aesirx_analytics_escape_html()
+            );
           }
-          if ($interval->d > 0 || empty($parts)) {
-              $parts[] = $interval->d . ' ' . _n('day', 'days', $interval->d, 'aesirx-consent');
-          }
-          $timeLeft = implode(', ', $parts);
-          return wp_kses(
-              sprintf(
-                  __("Your license ends in %1\$s. Please update your license <a href='%2\$s' target='_blank'>%2\$s</a>.", 'aesirx-consent'),
-                  $timeLeft,
-                  'https://aesirx.io/licenses'
-              ),
-              aesirx_analytics_escape_html()
-          );
         }
       }
     } else {
@@ -2280,7 +2285,8 @@ function aesirx_analytics_license_info() {
           aesirx_analytics_escape_html()
       );
     }
-  } else {
+  };
+  if(empty($options['license']) || $isTrial) {
     $optionsAIKey['openai_key'] = "";
     $optionsAIKey['openai_assistant'] =  "";
     update_option('aesirx_consent_ai_key_plugin_options', $optionsAIKey);
