@@ -339,7 +339,7 @@ add_action('admin_init', function () {
         <div>'.$decodedHtml.'</div>'.'
       </div>', aesirx_analytics_escape_html());
       echo wp_kses('
-      <p>'.esc_html__("Always link your own website's Privacy Policy, not the AesirX example", 'aesirx-consent').'.</p>
+      <p class="reset_consent_note">'.esc_html__("Always link your own website's Privacy Policy, not the AesirX example", 'aesirx-consent').'.</p>
       <button type="button" class="reset_consent_button aesirx_btn_success_light">
         <img width="20px" height="20px" src="'. plugins_url( 'aesirx-consent/assets/images-plugin/reset_icon.png').'" />
         '.esc_html__("Reset Consent", 'aesirx-consent').'
