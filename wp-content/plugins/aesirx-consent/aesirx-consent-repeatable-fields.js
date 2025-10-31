@@ -142,12 +142,6 @@ jQuery(document).ready(function ($) {
     <div class="d-flex align-items-start check-line">
       <span><img src='/wp-content/plugins/aesirx-consent/assets/images-plugin/check_circle.svg' width='14px' height='15px'></span>
       <div class="ms-10px">
-      ${window?.aesirx_analytics_translate?.txt_earn_rewards}
-      </div>
-    </div>
-    <div class="d-flex align-items-start check-line">
-      <span><img src='/wp-content/plugins/aesirx-consent/assets/images-plugin/check_circle.svg' width='14px' height='15px'></span>
-      <div class="ms-10px">
       ${window?.aesirx_analytics_translate?.txt_transparent_data}
       </div>
     </div>
