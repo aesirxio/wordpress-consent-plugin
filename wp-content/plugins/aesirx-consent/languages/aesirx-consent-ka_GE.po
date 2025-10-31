@@ -28,28 +28,28 @@ msgstr "aesirx.io"
 msgid "https://aesirx.io/"
 msgstr "https://aesirx.io/"
 
-#: aesirx-consent.php:244
+#: aesirx-consent.php:249
 msgid "Settings"
 msgstr "პარამეტრები"
 
-#: aesirx-consent.php:359
+#: aesirx-consent.php:364
 msgid "Problem with Aesirx Analytics plugin install"
 msgstr "პრობლემა Aesirx Analytics-ის პლაგინის ინსტალაციასთან"
 
-#: includes/settings.php:17
+#: includes/settings.php:18
 msgid "Please register your license at Signup.aesirx.io to enable the external first-party server."
 msgstr "გთხოვთ, დარეგისტრირდეთ თქვენი ლიცენზიის Signup.aesirx.io-ზე, გარე პირველი მხარე სერვერის ჩასართავად."
 
-#: includes/settings.php:27
+#: includes/settings.php:28
 msgid "Domain is empty."
 msgstr "დომენი ცარიელია."
 
-#: includes/settings.php:34
+#: includes/settings.php:35
 msgid "Invalid domain format."
 msgstr "არასწორი დომენის ფორმატი."
 
 #: aesirx-consent.php:43
-#: includes/settings.php:2000
+#: includes/settings.php:2042
 msgid "Consent"
 msgstr "თანხმობა"
 
@@ -87,7 +87,6 @@ msgstr "დომენი ვერ მოიძებნა"
 #: src/AesirxAnalyticsMysqlHelper.php:785
 #: src/AesirxAnalyticsMysqlHelper.php:825
 #: src/AesirxAnalyticsMysqlHelper.php:1183
-#: src/Mysql/GetVisitorConsentList.php:60
 msgid "There was a problem with the database query."
 msgstr "მონაცემთა ბაზის შეკითხვასთან პრობლემა აღმოჩნდა."
 
@@ -203,11 +202,11 @@ msgstr "თანხმობის ვადის გასვლის გა
 msgid "Failed to update nonce."
 msgstr "nonce-ის განახლება ვერ მოხერხდა."
 
-#: src/Mysql/StartFingerprint.php:151
+#: src/Mysql/StartFingerprint.php:156
 msgid "Wrong URL format, domain not found"
 msgstr "არასწორი URL ფორმატი, დომენი ვერ მოიძებნა"
 
-#: src/Mysql/StartFingerprint.php:155
+#: src/Mysql/StartFingerprint.php:160
 msgid "The domain sent in the new URL does not match the domain stored in the visitor document"
 msgstr "ახალი URL-ში გაგზავნილი დომენი არ შეესაბამება დოკუმენტში შენახულ დომენს"
 
@@ -230,371 +229,371 @@ msgid "Aesirx Consent plugin. When you join forces with AesirX, you're not just 
 msgstr "Aesirx თანხმობის პლაგინი. როცა AesirX-თან გაერთიანდებით, არა მხოლოდ პარტნიორი გახდებით - თქვენ ასევე გახდებით თავისუფალი მებრძოლი კონფიდენციალობისთვის ბრძოლაში! მოიპოვეთ 25% შვილობილი საკომისიო <a href=\"https://aesirx.io/partner?utm_source=wpplugin&utm_medium=web&utm_campaign=wordpress&utm_id=aesirx&utm_term=wordpress&utm_content=analytics\">[შეუერთდით]</a>"
 
 #: aesirx-consent.php:39
-#: includes/settings.php:1996
+#: includes/settings.php:2038
 msgid "Shield of Privacy"
 msgstr "კონფიდენციალობის ფარი"
 
 #: aesirx-consent.php:40
-#: includes/settings.php:1997
+#: includes/settings.php:2039
 msgid "Revoke your consent for data use whenever you wish."
 msgstr "გააუქმეთ თქვენი თანხმობა მონაცემების გამოყენებისას, როცა გსურთ."
 
 #: aesirx-consent.php:41
-#: includes/settings.php:1998
+#: includes/settings.php:2040
 msgid "Manage Decentralized Consent"
 msgstr "დეცენტრალიზირებული თანხმობის მართვა"
 
 #: aesirx-consent.php:42
-#: includes/settings.php:1999
+#: includes/settings.php:2041
 msgid "Revoke Consent"
 msgstr "თანხმობის გაუქმება"
 
 #: aesirx-consent.php:44
-#: includes/settings.php:2001
+#: includes/settings.php:2043
 msgid "Reject"
 msgstr "უარყოფა"
 
 #: aesirx-consent.php:45
-#: includes/settings.php:2002
+#: includes/settings.php:2044
 msgid "Please connect your Web3 wallet"
 msgstr "გთხოვთ, თქვენი Web3 საფულე"
 
 #: aesirx-consent.php:46
-#: includes/settings.php:2003
+#: includes/settings.php:2045
 msgid "Please sign the message on your wallet twice and wait for it to be saved."
 msgstr "გთხოვთ, ორჯერ მოაწერეთ ხელი შეტყობინებას თქვენს საფულეზე და დაელოდეთ შენახვას."
 
 #: aesirx-consent.php:47
-#: includes/settings.php:2004
+#: includes/settings.php:2046
 msgid "Saving..."
 msgstr "შენახვა..."
 
 #: aesirx-consent.php:48
-#: includes/settings.php:2005
+#: includes/settings.php:2047
 msgid "Please connect to your wallet"
 msgstr "გთხოვთ, მიუერთდით თქვენს საფულეს"
 
 #: aesirx-consent.php:49
-#: includes/settings.php:2006
+#: includes/settings.php:2048
 msgid "Connecting"
 msgstr "მიერთება"
 
 #: aesirx-consent.php:50
-#: includes/settings.php:2007
+#: includes/settings.php:2049
 msgid "TRACKING AND DATA PRIVACY PREFERENCES"
 msgstr "თვალყურის დევნებისა და მონაცემთა კონფიდენციალობის პარამეტრები"
 
 #: aesirx-consent.php:51
-#: includes/settings.php:2008
+#: includes/settings.php:2050
 msgid "About"
 msgstr "შესახებ"
 
 #: aesirx-consent.php:52
 #: aesirx-consent.php:101
-#: includes/settings.php:2009
-#: includes/settings.php:2058
+#: includes/settings.php:2051
+#: includes/settings.php:2100
 msgid "Details"
 msgstr "დეტალები"
 
 #: aesirx-consent.php:53
 #: aesirx-consent.php:81
-#: includes/settings.php:2010
-#: includes/settings.php:2038
+#: includes/settings.php:2052
+#: includes/settings.php:2080
 msgid "Decentralized Consent"
 msgstr "დეცენტრალიზირებული თანხმობა"
 
 #: aesirx-consent.php:54
-#: includes/settings.php:2011
+#: includes/settings.php:2053
 msgid "Manage Your Consent Preferences"
 msgstr "მართეთ თქვენი თანხმობის პარამეტრები"
 
 #: aesirx-consent.php:55
-#: includes/settings.php:2012
+#: includes/settings.php:2054
 msgid "Choose how we use your data: \"Reject\" data collection, allow tracking [\"Consent\"], or use \"Decentralized Consent\" for more control over your personal data & rewards."
 msgstr "აირჩიეთ, როგორ გამოიყენოთ თქვენი მონაცემები: \"უარყოფა\" მონაცემთა შეგროვება, დაუშვებელია თვალყურის დევნა [\"თანხმობა\"], ან გამოიყენეთ \"დეცენტრალიზირებული თანხმობა\" თქვენი პირადი მონაცემებისა და ჯილდოების მეტი კონტროლისთვის."
 
 #: aesirx-consent.php:56
-#: includes/settings.php:2013
+#: includes/settings.php:2055
 msgid "Choose how we use your data: \"Reject\" data collection, allow tracking [\"Consent\"]."
 msgstr "აირჩიეთ, როგორ გამოიყენოთ თქვენი მონაცემები: \"უარყოფა\" მონაცემთა შეგროვება, დაუშვებელია თვალყურის დევნა [\"თანხმობა\"]."
 
 #: aesirx-consent.php:57
-#: includes/settings.php:2014
+#: includes/settings.php:2056
 msgid "By consenting, you allow us to collect & use your data for:"
 msgstr "თანხმობით, თქვენ აძლევთ უფლებას, რომ შევაგროვოთ და გამოვიყენოთ თქვენი მონაცემები შემდეგისთვის:"
 
 #: aesirx-consent.php:58
-#: includes/settings.php:2015
+#: includes/settings.php:2057
 msgid "Analytics & Behavioral Data: To improve our services & personalize your experience."
 msgstr "ანალიტიკა და ქცევის მონაცემები: მომსახურების გაუმჯობესებისა და თქვენი გამოცდილების პერსონალიზაციისთვის."
 
 #: aesirx-consent.php:59
-#: includes/settings.php:2016
+#: includes/settings.php:2058
 msgid "Form Data: When you contact us."
 msgstr "ფორმის მონაცემები: როცა ჩვენთან კავშირს განახორციელეთ."
 
 #: aesirx-consent.php:60
-#: includes/settings.php:2017
+#: includes/settings.php:2059
 msgid "Please note"
 msgstr "გთხოვთ გაითვალისწინოთ"
 
 #: aesirx-consent.php:61
-#: includes/settings.php:2018
+#: includes/settings.php:2060
 msgid "We do not share your data with third parties without your explicit consent."
 msgstr "ჩვენ არ ვუზიარებთ თქვენს მონაცემებს მესამე პირებს თქვენი გამოხატული თანხმობის გარეშე."
 
 #: aesirx-consent.php:62
-#: includes/settings.php:2019
+#: includes/settings.php:2061
 msgid "You can opt-in later for specific features without giving blanket consent."
 msgstr "შეგიძლიათ შემდგომი კონკრეტული ფუნქციონალობებისთვის ჩართული იყოთ, გარეშე გამოხატული თანხმობის გაცემისა."
 
 #: aesirx-consent.php:63
-#: includes/settings.php:2020
+#: includes/settings.php:2062
 msgid "For more details, refer to our <a class='text-success fw-semibold text-decoration-underline' href='https://aesirx.io/privacy-policy' target='_blank'>privacy policy.</a>"
 msgstr "დეტალებისთვის, გადახედეთ ჩვენი <a class='text-success fw-semibold text-decoration-underline' href='https://aesirx.io/privacy-policy' target='_blank'>კონფიდენციალობის პოლიტიკას.</a>"
 
 #: aesirx-consent.php:64
-#: includes/settings.php:2021
+#: includes/settings.php:2063
 msgid "Benefits"
 msgstr "სარგებელი"
 
 #: aesirx-consent.php:65
-#: includes/settings.php:2022
+#: includes/settings.php:2064
 msgid "<span class='fw-semibold text-primary'>Control your data:</span> Choose your preferred level of data collection & tracking."
 msgstr "<span class='fw-semibold text-primary'>მართეთ თქვენი მონაცემები:</span> აირჩიეთ მონაცემთა შეგროვებისა და თვალყურის დევნის სასურველი დონე."
 
 #: aesirx-consent.php:66
-#: includes/settings.php:2023
+#: includes/settings.php:2065
 msgid "<span class='fw-semibold text-primary'>Earn rewards:</span> Participate in decentralized consent for privacy & rewards."
 msgstr "<span class='fw-semibold text-primary'>გამოიმუშავეთ ჯილდოები:</span> ჩართეთ დეცენტრალიზირებული თანხმობა კონფიდენციალობისა და ჯილდოებისათვის."
 
 #: aesirx-consent.php:67
-#: includes/settings.php:2024
+#: includes/settings.php:2066
 msgid "<span class='fw-semibold text-primary'>Transparent data collection practices:</span> Understand how your data is collected & used."
 msgstr "<span class='fw-semibold text-primary'>გამჭვირვალე მონაცემთა შეგროვების პრაქტიკა:</span> გაიგეთ, როგორ ხდება თქვენი მონაცემების შეგროვება და გამოყენება."
 
 #: aesirx-consent.php:68
-#: includes/settings.php:2025
+#: includes/settings.php:2067
 msgid "Understanding Your Privacy Choices"
 msgstr "თქვენი კონფიდენციალურობის არჩევანის გაგება"
 
 #: aesirx-consent.php:69
-#: includes/settings.php:2026
+#: includes/settings.php:2068
 msgid "<span class='fw-semibold text-primary'>Reject:</span> No data will be collected or loaded except for anonymized page views & rejections. Some personalization features may be disabled."
 msgstr "<span class='fw-semibold text-primary'>უარყოფა:</span> მონაცემები არ შეგროვდება ან ჩაიტვირთება, გარდა ანონიმური გვერდების ნახვებისა და უარყოფებისა. ზოგიერთი პერსონალიზაციის ფუნქცია შეიძლება იყოს გათიშული."
 
 #: aesirx-consent.php:70
-#: includes/settings.php:2027
+#: includes/settings.php:2069
 msgid "<span class='fw-semibold text-primary'>Consent:</span> First & third-party tracking data will be collected to enhance your experience."
 msgstr "<span class='fw-semibold text-primary'>თანხმობა:</span> პირველი და მესამე მხარის თვალყურის დევნის მონაცემები შეიკრიბება თქვენი გამოცდილების გასაუმჯობესებლად."
 
 #: aesirx-consent.php:71
-#: includes/settings.php:2028
+#: includes/settings.php:2070
 msgid "<span class='fw-semibold text-primary'>Decentralized Consent:</span> Choose Decentralized Wallets or Decentralized Wallet + Shield of Privacy. Both options let you manage & revoke consent on-site or through AesirX dApp, plus earn rewards from digital marketing activities."
 msgstr "<span class='fw-semibold text-primary'>დეცენტრალიზირებული თანხმობა:</span> აირჩიეთ დეცენტრალიზირებული საფულეები ან დეცენტრალიზირებული საფულე + კონფიდენციალობის ფარი. ორივე ვარიანტი გაძლევთ უფლებას მართოთ და გააუქმოთ თანხმობა ადგილზე ან AesirX dApp-ის მეშვეობით, ასევე მიიღოთ ჯილდოები ციფრული მარკეტინგის აქტივობებიდან."
 
 #: aesirx-consent.php:72
-#: includes/settings.php:2029
+#: includes/settings.php:2071
 msgid "Our Commitment in Action"
 msgstr "ჩვენი ვალდებულება ქმედებაში"
 
 #: aesirx-consent.php:73
-#: includes/settings.php:2030
+#: includes/settings.php:2072
 msgid "<span class='fw-semibold text-primary'>Privacy Protection:</span> Users have full control over their data, ensuring maximum privacy."
 msgstr "<span class='fw-semibold text-primary'>კონფიდენციალობის დაცვა:</span> მომხმარებლებს აქვთ სრული კონტროლი მათ მონაცემებზე, რაც უზრუნველყოფს მაქსიმალურ კონფიდენციალობას."
 
 #: aesirx-consent.php:74
-#: includes/settings.php:2031
+#: includes/settings.php:2073
 msgid "<span class='fw-semibold text-primary'>Enables Compliance:</span> Using Shield of Privacy (SoP) ensures compliance with GDPR, CCPA, ePrivacy Directive, & other data protection regulations."
 msgstr "<span class='fw-semibold text-primary'>შესაბამისობის უზრუნველყოფა:</span> კონფიდენციალობის ფარის (SoP) გამოყენება უზრუნველყოფს GDPR, CCPA, ePrivacy Directive და სხვა მონაცემთა დაცვის რეგულაციების შესაბამისობას."
 
 #: aesirx-consent.php:75
-#: includes/settings.php:2032
+#: includes/settings.php:2074
 msgid "<span class='fw-semibold text-primary'>Proactive Protection:</span> We enhance privacy measures to safeguard your data integrity."
 msgstr "<span class='fw-semibold text-primary'>პრაქტიკული დაცვა:</span> ჩვენ გაძლიერებთ კონფიდენციალობის ზომებს თქვენი მონაცემების მთლიანობის დასაცავად."
 
 #: aesirx-consent.php:76
-#: includes/settings.php:2033
+#: includes/settings.php:2075
 msgid "<span class='fw-semibold text-primary'>Flexible Consent:</span> You can withdraw your consent anytime on-site or via our <a class='text-success fw-semibold text-decoration-underline' href='https://dapp.shield.aesirx.io' target='_blank'>dApp</a> (Decentralized Application)."
 msgstr "<span class='fw-semibold text-primary'>მოქნილი თანხმობა:</span> თქვენ შეგიძლიათ გააუქმოთ თქვენი თანხმობა ნებისმიერ დროს, ადგილზე თუ ჩვენი <a class='text-success fw-semibold text-decoration-underline' href='https://dapp.shield.aesirx.io' target='_blank'>dApp</a> (დეცენტრალიზირებული აპლიკაციის) მეშვეობით."
 
 #: aesirx-consent.php:77
-#: includes/settings.php:2034
+#: includes/settings.php:2076
 msgid "<span class='fw-semibold text-primary'>Learn More:</span> Discover our approach to data processing in our <a class='text-success fw-semibold text-decoration-underline' href='https://aesirx.io/privacy-policy' target='_blank'>Privacy Policy</a>."
 msgstr "<span class='fw-semibold text-primary'>გაიგეთ მეტი:</span> გაიგეთ ჩვენი მიდგომა მონაცემთა დამუშავებასთან ჩვენს <a class='text-success fw-semibold text-decoration-underline' href='https://aesirx.io/privacy-policy' target='_blank'>კონფიდენციალობის პოლიტიკაში</a>."
 
 #: aesirx-consent.php:78
-#: includes/settings.php:2035
+#: includes/settings.php:2077
 msgid "<span class='fw-semibold text-primary'>For Businesses:</span> Enhance trust, secure user identities, & prevent breaches."
 msgstr "<span class='fw-semibold text-primary'>ბიზნესისთვის:</span> გააძლიერეთ ნდობა, გააუმჯობესეთ მომხმარებელთა იდენტიფიკაცია და ჩაიდადეთ დარღვევებს."
 
 #: aesirx-consent.php:79
-#: includes/settings.php:2036
+#: includes/settings.php:2078
 msgid "More info at <a class='text-success fw-semibold text-decoration-underline' href='https://shield.aesirx.io' target='_blank'>https://shield.aesirx.io</a>."
 msgstr "მეტი ინფორმაცია <a class='text-success fw-semibold text-decoration-underline' href='https://shield.aesirx.io' target='_blank'>https://shield.aesirx.io</a>."
 
 #: aesirx-consent.php:80
-#: includes/settings.php:2037
+#: includes/settings.php:2079
 msgid "Select your preferred decentralized consent option:"
 msgstr "აირჩიეთ თქვენი სასურველი დეცენტრალიზირებული თანხმობის არჩევანი:"
 
 #: aesirx-consent.php:82
-#: includes/settings.php:2039
+#: includes/settings.php:2081
 msgid "Decentralized consent will be loaded"
 msgstr "დეცენტრალიზირებული თანხმობა ჩაიტვირთება"
 
 #: aesirx-consent.php:83
-#: includes/settings.php:2040
+#: includes/settings.php:2082
 msgid "Both first-party & third-party tracking data will be activated."
 msgstr "ინიციატივ საზილზე და მესამე მხარის თვალყურის დევნის მონაცემები გააქტიურდება."
 
 #: aesirx-consent.php:84
-#: includes/settings.php:2041
+#: includes/settings.php:2083
 msgid "All consented data will be collected."
 msgstr "ყველა თანხმობაში მოცემული მონაცემები შეიკრიბება."
 
 #: aesirx-consent.php:85
-#: includes/settings.php:2042
+#: includes/settings.php:2084
 msgid "Users can revoke consent on-site at any time."
 msgstr "მომხმარებლებს შეძლიათ გააუქმონ თანხმობა ადგილზე ნებისმიერ დროს."
 
 #: aesirx-consent.php:86
-#: includes/settings.php:2043
+#: includes/settings.php:2085
 msgid "Decentralized Consent + Shield of Privacy"
 msgstr "დეცენტრალიზირებული თანხმობა + კონფიდენციალობის ფარი"
 
 #: aesirx-consent.php:87
-#: includes/settings.php:2044
+#: includes/settings.php:2086
 msgid "Users can revoke consent on-site or from the AesirX dApp at any time."
 msgstr "მომხმარებლებს შეუძლიათ გააუქმონ თანხმობა ადგილზე ან AesirX dApp-დან ნებისმიერ დროს."
 
 #: aesirx-consent.php:88
-#: includes/settings.php:2045
+#: includes/settings.php:2087
 msgid "Users can earn rewards from digital marketing activities."
 msgstr "მომხმარებლებს შეუძლიათ მიიღონ ჯილდოები ციფრული მარკეტინგული აქტივობებიდან."
 
 #: aesirx-consent.php:89
-#: includes/settings.php:2046
+#: includes/settings.php:2088
 msgid "Continue"
 msgstr "გაგრძელება"
 
 #: aesirx-consent.php:90
-#: includes/settings.php:2047
+#: includes/settings.php:2089
 msgid "Back"
 msgstr "უკან"
 
 #: aesirx-consent.php:91
-#: includes/settings.php:2048
+#: includes/settings.php:2090
 msgid "You've chosen to reject data collection:"
 msgstr "თქვენ აირჩიეთ მონაცემთა აკუმულირებაზე უარის თქმა:"
 
 #: aesirx-consent.php:92
-#: includes/settings.php:2049
+#: includes/settings.php:2091
 msgid "Only anonymized page views & limited features will be available. To access all website features, including personalized content & enhanced functionality, please choose an option:"
 msgstr "მხოლოდ ანონიმური გვერდის ნახვები & შეზღუდული ფუნქციები იქნება ხელმისაწვდომი. ვებსაიტის ყველა შესაძლებლობით სარგებლობისთვის, პერსონალური მასალებისა და გაუმჯობესებული ფუნქციონალობის ჩათვლით, გთხოვთ, აირჩიოთ ოპცია:"
 
 #: aesirx-consent.php:93
-#: includes/settings.php:2050
+#: includes/settings.php:2092
 msgid "<span class='fw-semibold text-primary'>Consent:</span> Allow data collection for analytics, form data (when you contact us), & behavioral & event tracking, with the option to opt-in for specific features."
 msgstr "<span class='fw-semibold text-primary'>თანხმობა:</span> დაუშვება მონაცემთა აკუმულირება ანალიტიკისთვის, ფორმის მონაცემები (როდესაც ჩვენთან შედიხართ), და ქცევითი & ღონისძიებების თვალყურის დევნა, სპეციფიური ფუნქციების ჩართვის ოპციით."
 
 #: aesirx-consent.php:94
-#: includes/settings.php:2051
+#: includes/settings.php:2093
 msgid "<span class='fw-semibold text-primary'>Decentralized Consent:</span> Allow data collection for analytics, form data (when you contact us), & behavioral & event tracking, with the option to revoke consent, opt-in for specific features, & earn rewards from digital marketing activities."
 msgstr "<span class='fw-semibold text-primary'>დეცენტრალიზირებული თანხმობა:</span> დაუშვება მონაცემთა აკუმულირება ანალიტიკისთვის, ფორმის მონაცემები (როდესაც ჩვენთან შედიხართ), და ქცევითი & ღონისძიებების თვალყურის დევნა, თანხმობის გაუქმების, სპეციფიური ფუნქციების ჩართვის და ციფრული მარკეტინგული აქტივობებიდან ჯილდოების მოპოვების შესაძლებლობით."
 
 #: aesirx-consent.php:95
-#: includes/settings.php:2052
+#: includes/settings.php:2094
 msgid "You can revoke consent on the site or any explicit opt-in consent, such as payment processing, at any time"
 msgstr "შეგიძლიათ გააუქმოთ თანხმობა ადგილზე ან ნებისმიერ პირდაპირ ჩართვა, როგორც გადახდის დამუშავება, ნებისმიერ დროს"
 
 #: aesirx-consent.php:96
-#: includes/settings.php:2053
+#: includes/settings.php:2095
 msgid "Revoke Opt-In Consent"
 msgstr "ჩართვის თანხმობის გაუქმება"
 
 #: aesirx-consent.php:97
-#: includes/settings.php:2054
+#: includes/settings.php:2096
 msgid "Revoke Opt-In Consent for Payment Processing"
 msgstr "გადახდის დამუშავების ჩართვის თანხმობის გაუქმება"
 
 #: aesirx-consent.php:98
-#: includes/settings.php:2055
+#: includes/settings.php:2097
 msgid "Revoke Opt-In Consent for AesirX Privacy Advisor AI"
 msgstr "გაუქმეთ თანხმობის ჩართვა AesirX კონფიდენციალობის მრჩეველის AI-სთვის"
 
 #: aesirx-consent.php:99
-#: includes/settings.php:2056
+#: includes/settings.php:2098
 msgid "Revoke Consent for the site"
 msgstr "გაუქმეთ თანხმობა საიტისთვის"
 
 #: aesirx-consent.php:100
-#: includes/settings.php:2057
+#: includes/settings.php:2099
 msgid "Consent Management"
 msgstr "თანხმობის მართვა"
 
-#: includes/settings.php:249
+#: includes/settings.php:251
 msgid "Gtag ID"
 msgstr "Gtag ID"
 
-#: includes/settings.php:274
+#: includes/settings.php:276
 msgid "GTM ID"
 msgstr "GTM ID"
 
-#: includes/settings.php:434
+#: includes/settings.php:441
 msgid "Blocks selected third-party plugins from loading until user consent is given."
 msgstr "შერჩეული მესამე მხარეების მოდულების ჩატვირთვისგან პრევენცია, სანამ მომხმარებლის თანხმობა იქნება მოცემული."
 
-#: includes/settings.php:465
+#: includes/settings.php:478
 msgid "Completely prevents the loading and execution of chosen third-party plugins before consent."
 msgstr "სრულად აჩერებს შერჩეული მესამე მხარე მოდულების ჩატვირთვასა და განხორციელებას, სანამ თანხმობა იქნება მოცემული."
 
-#: includes/settings.php:471
+#: includes/settings.php:484
 msgid "No network requests are made to third-party servers, enabling maximum compliance with privacy regulations like GDPR and the ePrivacy Directive."
 msgstr "არცერთი ქსელური მოთხოვნა არ იქმნება მესამე მხარე სერვერებზე, რაც უზრუნველყოფს მაქსიმალურ შესაბამისობას კონფიდენციალობის რეგულაციებთან, როგორიცაა GDPR და ePrivacy დირექტივა."
 
-#: includes/settings.php:485
+#: includes/settings.php:498
 msgid "AesirX Consent Shield for Domain/Path-Based Blocking"
 msgstr "AesirX თანხმობის ფარი დომენ/გზულის ზედა ფონური ბლოკირებისათვის"
 
-#: includes/settings.php:495
-#: includes/settings.php:513
+#: includes/settings.php:514
+#: includes/settings.php:540
 msgid "Enter domain or path"
 msgstr "შეიყვანეთ დომენი ან გზა"
 
-#: includes/settings.php:488
+#: includes/settings.php:501
 msgid "Removes scripts matching specified domains or paths from the browser until user consent is given."
 msgstr "ბრაუზერის მიერ მომხმარებლის მიერ მოცემული თანხმობამდე, ამოიღეთ სკრიპტები, რომლებიც შესაბამის დომენებს ან ლიებზე შეესატყვისება."
 
-#: includes/settings.php:536
+#: includes/settings.php:570
 msgid "Blocks or removes scripts from running in the user's browser before consent is given."
 msgstr "ბლოკავს ან ამოწმებს სკრიპტებს, რათა არ ჩატარდეს ის მომხმარებლის ბრაუზერში, ვიდრე თანხმობა არ გაიცემა."
 
-#: includes/settings.php:542
+#: includes/settings.php:576
 msgid "While it prevents scripts from executing, initial network requests may still occur, so it enhances privacy compliance under GDPR but may not fully meet the ePrivacy Directive requirements."
 msgstr "მიუხედავად იმისა, რომ ის სკრიპტების განხორციელებას აჩერებს, პირველი ქსელური მოთხოვნები მაინც შეიძლება მოხდეს, ამ რეჟიმით ის ზრდის კონფიდენციალობის უზრუნველსაყოფად შესაბამისობას GDPR-იან, მაგრამ არ არწმეს სრულად ePrivacy პირებს მიეცემული უფლებები."
 
-#: includes/settings.php:556
+#: includes/settings.php:590
 msgid "Script Blocking Options"
 msgstr "სკრიპტების ბლოკირების პარამეტრები"
 
-#: includes/settings.php:571
+#: includes/settings.php:605
 msgid "Only Third-Party Hosts (default)"
 msgstr "მხოლოდ მესამე მხარე ჰოსტები (ნაგულისხმები)"
 
-#: includes/settings.php:582
+#: includes/settings.php:616
 msgid "Both First and Third-Party Hosts"
 msgstr "ორივე პირველი მხარე და მესამე მხარე ჰოსტები"
 
-#: includes/settings.php:989
+#: includes/settings.php:1023
 msgid "Need Help? Access Our Comprehensive Documentation Hub"
 msgstr "გჭირდებათ დახმარება? წვდომა ჩვენს კომპლექსურ დოკუმენტაციის ჰაბზე"
 
-#: includes/settings.php:2143
+#: includes/settings.php:2185
 msgid "Your trial license ends in %1$s days. Please update new license <a href='%2$s' target='_blank'>%2$s</a>."
 msgstr "სატესტო ლიცენზიამ %1$s დღეზე დასრულდება. გთხოვთ, განაახლეთ ახალი ლიცენზია <a href='%2$s' target='_blank'>%2$s</a>."
 
-#: includes/settings.php:2293
+#: includes/settings.php:2344
 msgid "Your free trials has ended. Please update your license. <a href='%1$s' target='_blank'>%1$s</a>."
 msgstr "თქვენი უფასო სატესტო პერიოდი დასრულდა. განაახლეთ თქვენი ლიცენზია. <a href='%1$s' target='_blank'>%1$s</a>."
 
@@ -602,209 +601,208 @@ msgstr "თქვენი უფასო სატესტო პერიო
 msgid "Could not insert consent"
 msgstr "თანხმობა ვერ ჩაისვა"
 
-#: src/Mysql/StartFingerprint.php:39
-#: src/Mysql/StartFingerprint.php:68
+#: src/Mysql/StartFingerprint.php:42
+#: src/Mysql/StartFingerprint.php:72
 msgid "License is expired or not found. Please update your license"
 msgstr "ლიცენზია ვადაგასულია ან ვერ მოიძებნა. განაახლეთ ლიცენზია."
 
-#: src/Mysql/StartFingerprint.php:80
-#: src/Mysql/StartFingerprint.php:87
+#: src/Mysql/StartFingerprint.php:85
+#: src/Mysql/StartFingerprint.php:92
 msgid "Your trial is ended. Please renew your license"
 msgstr "თქვენი სატესტო დასრულებულია. გთხოვთ, განაახლეთ თქვენი ლიცენზია."
 
-#: includes/settings.php:129
+#: includes/settings.php:130
 msgid "Your Client ID *"
 msgstr "თქვენი კლიენტური ID *"
 
-#: includes/settings.php:136
+#: includes/settings.php:137
 msgid "SSO Client ID"
 msgstr "SSO კლიენტური ID"
 
-#: includes/settings.php:142
+#: includes/settings.php:143
 msgid ""
 "<div class='input_information_content'>\n"
 "          Provided SSO CLIENT ID from <a href='%1$s' target='_blank'>%1$s</a>.</div>"
 msgstr "<div class='input_information_content'>მოცემულია SSO კლიენტური ID <a href='%1$s' target='_blank'>%1$s</a>დან.</div>"
 
-#: includes/settings.php:157
+#: includes/settings.php:158
 msgid "Your Client Secret *"
 msgstr "თქვენი კლიენტური პაროლი *"
 
-#: includes/settings.php:162
+#: includes/settings.php:163
 msgid "SSO Client Secret"
 msgstr "SSO კლიენტური პაროლი"
 
-#: includes/settings.php:168
+#: includes/settings.php:169
 msgid ""
 "<div class='input_information_content'>\n"
 "          Provided SSO Client Secret from <a href='%1$s' target='_blank'>%1$s</a>.</div>"
 msgstr "<div class='input_information_content'>მოცემულია SSO კლიენტური პაროლი <a href='%1$s' target='_blank'>%1$s</a>დან.</div>"
 
-#: includes/settings.php:184
+#: includes/settings.php:185
 msgid "Your License Key"
 msgstr "თქვენი ლიცენზიის გასაღები"
 
-#: includes/settings.php:211
+#: includes/settings.php:212
 msgid "Choose your tailored template"
 msgstr "აირჩიეთ თქვენი მორგებული შაბლონი"
 
-#: includes/settings.php:494
-#: includes/settings.php:512
+#: includes/settings.php:513
+#: includes/settings.php:539
 msgid "Domain"
 msgstr "დომენი"
 
-#: includes/settings.php:562
+#: includes/settings.php:596
 msgid "Configure how JavaScript is blocked based on user consent preferences."
 msgstr "კონფიგურაცია თუ როგორ დაბლოკოს JavaScript მომხმარებლის თანხმობის პარამეტრებზე დაფუძნებით."
 
-#: includes/settings.php:572
+#: includes/settings.php:606
 msgid "Blocks JavaScript from third-party domains, allowing first-party scripts to run normally & keep essential site functions intact."
 msgstr "JavaScript ბლოკდება მესამე მხარის დომენებიდან, რაც საშუალებას იძლევა პირველი მხარის სკრიპტები ჩვეულებრივ იმუშაოს და ძირითადი საიტის ფუნქციები შეუზღუდავად შეინარჩუნოს."
 
-#: includes/settings.php:583
+#: includes/settings.php:617
 msgid "Blocks JavaScript from both first-party & third-party domains for comprehensive script control, giving you the ability to block any JavaScript from internal or external sources based on user consent."
 msgstr "JavaScript ბლოკდება როგორც პირველი მხარის, ისე მესამე მხარის დომენებიდან მომწოდების შესაბამისი კონტროლისათვის, რაც გაძლევთ შესაძლებლობას, დაბლოკოთ ნებისმიერი JavaScript შიდა ან გარე წყაროებიდან, მომხმარებლის თანხმობის საფუძველზე."
 
-#: includes/settings.php:999
+#: includes/settings.php:1033
 msgid "Discover the latest features & best practices."
 msgstr "აღმოაჩინეთ უახლესი ფუნქციები და საუკეთესო პრაქტიკა."
 
-#: includes/settings.php:1468
+#: includes/settings.php:1506
 msgid "Scan Your Site for Privacy Risks"
 msgstr "გაატარეთ თქვენი საიტი კონფიდენციალობის რისკებისათვის"
 
-#: includes/settings.php:1472
+#: includes/settings.php:1510
 msgid "Use the Privacy Scanner to quickly identify scripts, tags, & trackers running on your site that may compromise user privacy."
 msgstr "გამოიყენეთ კონფიდენციალობის სკანერი რათა სწრაფად აღმოაჩინოთ სარკეები, ნიშნები, და ტრეკერები თქვენს საიტზე, რომლებიც შესაძლოა მომხმარებლის კონფიდენციალურობას შემაფიქსურებელ გზაში აღმოჩნდეს."
 
-#: includes/settings.php:1478
+#: includes/settings.php:1516
 msgid "Use Consent Shield to block those scripts by adding their domains or paths, ensuring quick & simple compliance."
 msgstr "გამოიყენეთ თანხმობის ფარი, რათა დაბლოკოთ ის სკრიპტები, დამატებითი დომენებისა და გზების აღრიცხვით, რაც უზრუნველყოფს სწრაფ და მარტივ შესაბამისობას.\"\""
 
-#: includes/settings.php:1548
-#: includes/settings.php:1611
-#: includes/settings.php:1644
-#: includes/settings.php:1689
-#: includes/settings.php:1722
+#: includes/settings.php:1586
+#: includes/settings.php:1649
+#: includes/settings.php:1682
+#: includes/settings.php:1727
+#: includes/settings.php:1760
 msgid "Save settings"
 msgstr "პარამეტრების შენახვა"
 
-#: includes/settings.php:189
+#: includes/settings.php:190
 msgid "License Key"
 msgstr "ლიცენზიის გასაღები"
 
-#: includes/settings.php:1026
+#: includes/settings.php:1060
 msgid "Haven't got Shield of Privacy ID yet?"
 msgstr "არ გაქვთ დამცავი კონფიდენციალობის ID?"
 
-#: includes/settings.php:1487
+#: includes/settings.php:1525
 msgid "Learn how to use AesirX Privacy Scanner with Consent Shield to detect privacy-intrusive elements, using the JetPack plugin as an example."
 msgstr "სწავლეთ, როგორ გამოიყენოთ AesirX კონფიდენციალობის სკანერი თანხმობის ფარით , რათა დააყენოთ კონფიდენციალობის დაბრკოლებები, JetPack მოდულის მაგალითის გამოყენებით."
 
-#: includes/settings.php:195
+#: includes/settings.php:196
 msgid ""
 "<div class='input_information_content'>\n"
 "          Sign up to obtain your Shield of Privacy ID and purchase licenses <a href='https://aesirx.io/licenses' target='blank' class='text-link'>here</a>.</div>"
 msgstr "<div class='input_information_content'>შეიძინეთ Shield of Privacy ID და სათამაშო ლიცენზიები <a href='https://aesirx.io/licenses' target='blank' class='text-link'>აქ</a>.</div>"
 
-#: includes/settings.php:302
+#: includes/settings.php:304
 msgid "To configure, input your Google Tag Manager Gtag ID & GTM ID in the designated fields. Once set up, Google Tag Manager will only load after the user provides consent."
 msgstr "კონფიგურაცის დასადგენად ჩაწერეთ თქვენი Google Tag Manager Gtag ID & GTM ID მითითებულ ველებში. როდესაც ყველა მსჯელობა დასრულებულია, Google Tag Manager შექანს მხოლოდ იმ შემთხვევაში, თუ მომხმარებელი დატოვებს თანხმობას."
 
-#: includes/settings.php:259
-#: includes/settings.php:284
+#: includes/settings.php:261
+#: includes/settings.php:286
 msgid ""
 "<div class='input_information_content'>\n"
 "          Remember to include the explicit purpose (e.g., analytics, marketing) in the consent text to inform users why GTM is being used.</div>"
 msgstr "<div class='input_information_content'>გახსოვდეთ ჩააგდოთ აშკარად ცხადად შემცველი ტექსტში (მაგ. ანალიტიკისათვის, მარკეტინგისათვის), რათა მომხმარებლები ინფორმატი იქნან, რატომ გამოიყენება GTM.</div>"
 
-#: includes/settings.php:1035
+#: includes/settings.php:1069
 msgid "Sign up now"
 msgstr "შეერთდით ახლავე"
 
-#: includes/settings.php:993
+#: includes/settings.php:1027
 msgid "Explore How-To Guides, instructions, & tutorials to get the most from AesirX Consent Shield. Whether you're a developer or admin, find all you need to configure & optimize your privacy setup."
 msgstr "კვლავ დაექვემდებარეთ ჩატარების სახელმძღვანელოებს, ინსტრუქციებს და ქურცხლებს, რათა არაჩვეულებრივი გაეცნოთ AesirX თანხმობის ფარის. მნიშვნელობა არ აქვს, დამწერსა თუ ადმინისტრატორს მოიაზრე, აღმოაჩინე ყველაფერი, რაც მგზნებარ არჰმის დადგენილი ხახვარდას შესასრულებლად საჭიროა, ინგა წარმოთქმებზე ჩვენებულ პრივატულ ფასნეულებებზე."
 
-#: includes/settings.php:341
+#: includes/settings.php:345
 msgid "Reset Consent"
 msgstr "თანხმობის განახლება"
 
-#: aesirx-consent.php:374
+#: aesirx-consent.php:379
 msgid "Important: Permalink Settings Required"
 msgstr "მთავარია: საჭიროა Permalink პარამეტრები"
 
-#: includes/settings.php:2257
+#: includes/settings.php:2308
 msgid "Your trial license ends in %1$s hour(s). Please update your license <a href='%2$s' target='_blank'>here</a>."
 msgstr "თქვენი განფენური ლიცენზია დასრულდება %1$s საათში. გთხოვთ, განაახლეთ თქვენი ლიცენზია <a href='%2$s' target='_blank'>აქ</a>."
 
-#: aesirx-consent.php:386
+#: aesirx-consent.php:391
 msgid "click here"
 msgstr "დააჭირეთ აქ"
 
-#: includes/settings.php:299
+#: includes/settings.php:301
 msgid "GTM General"
 msgstr "GTM ზოგადი"
 
-#: includes/settings.php:2149
+#: includes/settings.php:2191
 msgid "Something went wrong: %1$s. Please contact the administrator."
 msgstr "რაღაც არასწორედ წავსიდა: %1$s. გთხოვთ, დაუკავშირდით ადმინისტრატორს."
 
-#: includes/settings.php:2233
+#: includes/settings.php:2283
 msgid "Check license failed: %1$s. Please contact the administrator or update your license."
 msgstr "ლიცენზიის განაჩინოსში პრობლემა მოხდა: %1$s. გთხოვთ, დაუკავშირდით ადმინისტრატორს ან განაახლეთ თქვენი ლიცენზია."
 
-#: src/Mysql/StartFingerprint.php:59
+#: src/Mysql/StartFingerprint.php:63
 msgid "Check license failed: %1\\$s. Please contact the administrator."
 msgstr "ლიცენზიის შემოწმება გაიშალა: %1\\$s. გთხოვთ, დაუკავშირდით ადმინისტრატორს."
 
-#: src/Mysql/StartFingerprint.php:47
-#: src/Mysql/StartFingerprint.php:66
+#: src/Mysql/StartFingerprint.php:50
+#: src/Mysql/StartFingerprint.php:70
 msgid "Your domain is not match with your license. Please update domain in your license"
 msgstr "თქვენი დომენი არ შესავსებია თქვენ ლიცენზიასთან. განაახლეთ დომენი თქვენს ლიცენზიაში"
 
-#: includes/settings.php:229
+#: includes/settings.php:231
 msgid "Decentralized Consent Mode"
 msgstr "დეცენტრალიზირებული თანხმობის რეჟიმი"
 
-#: includes/settings.php:704
+#: includes/settings.php:738
 msgid "GPC Compliance"
 msgstr "GPC ჰარმონია"
 
-#: includes/settings.php:717
+#: includes/settings.php:751
 msgid "Enable GPC Support"
 msgstr "GPC დახმარების დამუშავება დამუშავებული იქნება"
 
-#: includes/settings.php:725
+#: includes/settings.php:759
 msgid "Disable GPC Support"
 msgstr "GPC დახმარების უმეტრი რეჟიმიდან ათვლა"
 
-#: includes/settings.php:732
+#: includes/settings.php:766
 msgid "To comply with Global Privacy Control (GPC), please download and upload the following file:"
 msgstr "გლობალური კონფიდენციალობის კონტროლის (GPC) შესასრულებლად გთხოვთ, ჩამოტვირთეთ და დაუყავით შემდეგი ფაილი:"
 
-#: includes/settings.php:737
+#: includes/settings.php:771
 msgid "Download the gpc.json file."
 msgstr "ჩამოტვირთეთ gpc.json ფაილი."
 
-#: includes/settings.php:738
+#: includes/settings.php:772
 msgid "Connect to your website via FTP or File Manager."
 msgstr "ქსელთან ერთად შეაერთეთ თქვენს ვებსაიტზე FTP ან ფაილის მენეჯერის მეშვეობით."
 
-#: includes/settings.php:739
+#: includes/settings.php:773
 msgid "Upload the file to: <code>/public_html/.well-known/gpc.json</code>"
 msgstr "განათავსება ამ ფაილთან ერთად: <code>/public_html/.well-known/gpc.json</code>"
 
-#: includes/settings.php:740
+#: includes/settings.php:774
 msgid "Ensure the file is accessible by visiting: <a href='"
 msgstr "მიაწვდეთ, იმ ხელმისაწვდომი გამოძიებით: <a href='"
 
-#: includes/settings.php:366
-#: includes/settings.php:391
+#: includes/settings.php:397
 msgid "Reset Detail"
 msgstr "ხანგრძლივობის შემოვლის დრო"
 
-#: includes/settings.php:416
+#: includes/settings.php:423
 msgid "Reset Reject"
 msgstr "უარყოფა განახლდეს"
 
@@ -880,163 +878,163 @@ msgstr "არ გაყიდოთ ან გააზიარეთ ჩე�
 msgid "Disables third-party data sharing for California users."
 msgstr "კალიფორნიის მომხმარებლებისთვის მესამე მხარის მონაცემთა გაზიარების გააუქმება."
 
-#: includes/settings.php:614
+#: includes/settings.php:648
 msgid "Configurable Consent Logic"
 msgstr "კონფიგურირებადი თანხმობის ლოგიკა"
 
-#: includes/settings.php:627
+#: includes/settings.php:661
 msgid "Opt-In Mode (EU)"
 msgstr "Opt-In რეჟიმი (EU)"
 
-#: includes/settings.php:628
+#: includes/settings.php:662
 msgid "No tracking technologies are activated until a user explicitly gives consent. This is required by <strong>GDPR</strong> and <strong>ePrivacy Directive 5(3)</strong>."
 msgstr "არცერთი თვალყურის ტექნოლოგია არ აქტიურდება, ვიდრე მომხმარებელი განსაკუთრებით არ აძლევს თანხმობას. ესაა <strong>GDPR</strong> და <strong>ePrivacy დირექტივა 5(3)</strong>-ის მოთხოვნის ნაწილი."
 
-#: includes/settings.php:636
+#: includes/settings.php:670
 msgid "Opt-Out Mode (California)"
 msgstr "Opt-Out რეჟიმი (კალიფორნია)"
 
-#: includes/settings.php:637
+#: includes/settings.php:671
 msgid "Tracking is allowed by default, but users must be able to opt out easily. This aligns with <strong>CCPA</strong> and similar U.S. privacy frameworks."
 msgstr "თვალყურის დევნა ნაგულისხმევად ნებადართულია, მაგრამ მომხმარებელმა ჯარიმიშ რომ, გამოდით წარსულაფრის გაოფრთხილებ."
 
-#: includes/settings.php:668
+#: includes/settings.php:702
 msgid "Do not sell or share options"
 msgstr "არ გაყიდოთ ან გააზიარეთ ვარიანტები"
 
-#: includes/settings.php:681
-#: includes/settings.php:787
+#: includes/settings.php:715
+#: includes/settings.php:821
 msgid "Yes"
 msgstr "დიახ"
 
-#: includes/settings.php:689
-#: includes/settings.php:795
+#: includes/settings.php:723
+#: includes/settings.php:829
 msgid "No"
 msgstr "არა"
 
-#: includes/settings.php:774
+#: includes/settings.php:808
 msgid "Enable Geo-handling for Consent Mode"
 msgstr "გეო-ჩართვის გაძლება თანხმობის რეჟიმისათვის"
 
-#: includes/settings.php:810
+#: includes/settings.php:844
 msgid "Geo-Based Consent Rules"
 msgstr "გეოზე დაფუძნებული თანხმობის წესები"
 
-#: includes/settings.php:909
+#: includes/settings.php:943
 msgid "Browser Language"
 msgstr "ბროუზერის ენა"
 
-#: includes/settings.php:910
-#: includes/settings.php:934
-#: includes/settings.php:951
+#: includes/settings.php:944
+#: includes/settings.php:968
+#: includes/settings.php:985
 msgid "Time Zone"
 msgstr "დროის ზონა"
 
-#: includes/settings.php:924
+#: includes/settings.php:958
 msgid "Consent Mode"
 msgstr "თანხმობის რეჟიმი"
 
-#: includes/settings.php:925
+#: includes/settings.php:959
 msgid "Allow Override"
 msgstr "გაუმარჯოს შეჯილდოება"
 
-#: includes/settings.php:933
-#: includes/settings.php:950
+#: includes/settings.php:967
+#: includes/settings.php:984
 msgid "Language"
 msgstr "ენა"
 
-#: includes/settings.php:936
-#: includes/settings.php:953
+#: includes/settings.php:970
+#: includes/settings.php:987
 msgid "Select Mode"
 msgstr "აირჩიეთ რეჟიმი"
 
-#: includes/settings.php:954
+#: includes/settings.php:988
 msgid "Override"
 msgstr "შეჯილდოება"
 
-#: includes/settings.php:220
+#: includes/settings.php:222
 msgid "Default Consent Mode"
 msgstr "ნაგულისხმები თანხმობის რეჟიმი"
 
-#: includes/settings.php:224
+#: includes/settings.php:226
 msgid "Default Consent Mode improves Google Consent Mode 2.0 by not loading any tags until after consent is given, reducing compliance risks."
 msgstr "ნაგულისხმები თანხმობის რეჟიმი აუმჯობესებს Google Consent Mode 2.0-ს თიკეტების ჩატვირთვის გარეშე, ვიდრე უეცრება მოხდება ხელი დაწერა ოფიციალურ სიტყვის სტანდარტებში, რაც ამცირებს სანისიერი უკუიშენქების სენა დედის შემოდგომა."
 
-#: includes/settings.php:233
+#: includes/settings.php:235
 msgid "Decentralized Consent Mode setup improves Google Consent Mode 2.0 by not loading any scripts, beacons, or tags until after consent is given, reducing compliance risks. It also includes Decentralized Consent, for more control over personal data and rewards."
 msgstr "დეცენტრალიზირებული თანხმობის რეჟიმი აუმჯობესებს Google Consent Mode 2.0-ს სკრიპტების, მარკების ან თიკეტების ჩატვირთვის გარეშე, ვიდრე უეცრება მოხდება ხელი აწერი უფროსმა უფროსებული თანმდგომეობების დაცვა თქვენი პერსონალური მონაცემების კუმაქსი თარგამების პროგებისთვის პრო ჩანაწერები."
 
-#: includes/settings.php:916
+#: includes/settings.php:950
 msgid "Choose how browser language and time zone are combined to determine consent rules:"
 msgstr "გადააზღვრაცემი მანასწარ როგორ გაღვრატობს ბროუზერის ენა და დროის ზონა, ხელი ახებიცერატ მოხადა სღაფრად მცნება:"
 
-#: includes/settings.php:918
+#: includes/settings.php:952
 msgid "<strong>AND Logic (Stricter Match):</strong> Both language and time zone must match a region for its consent model to apply. Ideal for high-accuracy targeting."
 msgstr "<strong>Մի რატოგიკა („მელია გაღვებადირად სიძინგიც-ძიხდათ“):</strong> აშიგუს ბროუზერის ენას და შემილკებულ მსახოთა მოთხოვნად, და რია შეჯიბრის გა დოზგებ გამაბარუკ, დამაბლუბ ზრდანა სამობუნდითად, გაანი ლოვი."
 
-#: includes/settings.php:919
+#: includes/settings.php:953
 msgid "<strong>OR Logic (More Flexible):</strong> Either language or time zone can match to apply a region’s consent model. Best for broader coverage based on user preferences."
 msgstr "<strong>OR Rაბლიკიტი, გაცარი ქმარდება:</strong> ბროუზერის ენას და გამაჩნიანი მუშიდა, რაიში დაფუძნებული ჩ კლუბოთი მოიმება, გაიშენე ფუნეტ „როგორ მოთხოვნით„ართველი გადავურას„ დასრულენ გაგიცხენს-საქართველოდ ასასრულებული."
 
-#: includes/settings.php:1030
+#: includes/settings.php:1064
 msgid "Manage License Here"
 msgstr "ლიცენზიის მართვა აქ"
 
-#: includes/settings.php:1780
+#: includes/settings.php:1822
 msgid "Generate"
 msgstr "წარმოქმნა"
 
 #: aesirx-consent.php:121
-#: includes/settings.php:1863
+#: includes/settings.php:1905
 msgid "Cookie Declaration"
 msgstr "ქუქის დეკლარაცია"
 
-#: includes/settings.php:1893
+#: includes/settings.php:1935
 msgid "Privacy Policy"
 msgstr "კონფიდენციკობა"
 
-#: includes/settings.php:1923
+#: includes/settings.php:1965
 msgid "Consent Request"
 msgstr "თანხმობის ბოლოს ხელვორო შინაგნასა"
 
-#: includes/settings.php:1787
+#: includes/settings.php:1829
 msgid "Domain Categorization"
 msgstr "დომენ კატეგორიზაცია"
 
-#: includes/settings.php:2204
-#: includes/settings.php:2267
+#: includes/settings.php:2251
+#: includes/settings.php:2318
 msgid "You are using a lifetime license."
 msgstr "თქვენ ცხოვრება ლიცენზიათ ხედროს დასრახბა."
 
-#: includes/settings.php:2210
-#: includes/settings.php:2273
+#: includes/settings.php:2257
+#: includes/settings.php:2324
 msgid "year"
 msgid_plural "years"
 msgstr[0] "წელიწადი"
 msgstr[1] "წლები"
 msgstr[2] "წლები"
 
-#: includes/settings.php:2213
-#: includes/settings.php:2276
+#: includes/settings.php:2260
+#: includes/settings.php:2327
 msgid "month"
 msgid_plural "months"
 msgstr[0] "თვე"
 msgstr[1] "თვეები"
 msgstr[2] "თვეები"
 
-#: includes/settings.php:2216
-#: includes/settings.php:2279
+#: includes/settings.php:2263
+#: includes/settings.php:2330
 msgid "day"
 msgid_plural "days"
 msgstr[0] "დღეს"
 msgstr[1] "დღეები"
 msgstr[2] "დღეები"
 
-#: includes/settings.php:2221
+#: includes/settings.php:2268
 msgid "Your license ends in %1$s. Please update your license <a href='%2$s' target='_blank'>%2$s</a>."
 msgstr "თქვენი ლიცენზია დასრულდება %1$s-ში. გთხოვთ განაახლოთ ქალონექტი <a href='%2$s' target='_blank'>%2$s</a>."
 
-#: includes/settings.php:2284
+#: includes/settings.php:2335
 msgid "Your trial license ends in %1$s. Please update your license <a href='%2$s' target='_blank'>%2$s</a>."
 msgstr "თქვენი საცდელი ლიცენზიან ერთად დასრულება მოხდება %1$s-ში. განაახლეთ თქვენი მომწემა <a href='%2$s' target='_blank'>%2$s</a>."
 
@@ -1045,7 +1043,7 @@ msgid "User preferencese & site enhancements (e.g, language setting, live chat).
 msgstr ""
 
 #. translators: 1: Permalink structure example, 2: Link to Permalink Settings page
-#: aesirx-consent.php:379
+#: aesirx-consent.php:384
 msgid ""
 "Our plugin requires that your site use a pretty permalink structure (for example, %1$s) to work correctly.\n"
 "                            It looks like your current settings are using the plain permalink format, which might cause issues.\n"
@@ -1053,152 +1051,152 @@ msgid ""
 "                            Once there, select the \"Post name\" option (or another pretty permalink structure) and click \"Save Changes.\""
 msgstr ""
 
-#: includes/settings.php:328
+#: includes/settings.php:330
 msgid "Customize Consent Management Text "
 msgstr ""
 
-#: includes/settings.php:378
+#: includes/settings.php:383
 msgid "Customize Details Text "
 msgstr ""
 
-#: includes/settings.php:403
+#: includes/settings.php:409
 msgid "Customize Reject Text "
 msgstr ""
 
-#: includes/settings.php:429
+#: includes/settings.php:436
 msgid "AesirX Consent Shield for Third-Party Plugins "
 msgstr ""
 
-#: includes/settings.php:735
+#: includes/settings.php:769
 msgid "Upload Instructions:"
 msgstr ""
 
-#: includes/settings.php:1955
-#: includes/settings.php:2183
+#: includes/settings.php:1997
+#: includes/settings.php:2230
 msgid "Your license is expried or not found. Please update new license <a href='%1$s' target='_blank'>%1$s</a>."
 msgstr ""
 
-#: includes/settings.php:2190
+#: includes/settings.php:2237
 msgid "Your domain is not match with your license. Please update domain in your license <a href='%1$s' target='_blank'>%1$s</a> and click <span class='verify_domain'>here</span> to verify again."
 msgstr ""
 
-#: includes/settings.php:353
+#: includes/settings.php:357
 msgid "Customize Cookie Declaration Text"
 msgstr ""
 
-#: includes/settings.php:1065
-#: includes/settings.php:1391
+#: includes/settings.php:1099
+#: includes/settings.php:1429
 msgid "Age & Country Verification"
 msgstr ""
 
-#: includes/settings.php:1306
+#: includes/settings.php:1344
 msgid "This feature lets you restrict access by age or location using secure digital ID verification. Users without a wallet ID can create a Concordium ID with a passport or driver’s license. Verification uses zero-knowledge proofs, so the website never sees or stores personal details."
 msgstr ""
 
-#: includes/settings.php:1315
+#: includes/settings.php:1353
 msgid "Tick to require users to confirm their age using a digital ID stored in a wallet such as Concordium Wallet or Google Wallet (Note: Google Wallet support varies by region and ID type)."
 msgstr ""
 
-#: includes/settings.php:1327
+#: includes/settings.php:1365
 msgid "Tick to require users to confirm their country from their digital ID stored in a wallet such as Concordium Wallet or Google Wallet (Note: Google Wallet support varies by region and ID type)."
 msgstr ""
 
-#: includes/settings.php:1338
+#: includes/settings.php:1376
 msgid "Users must be at least this age to access."
 msgstr ""
 
-#: includes/settings.php:1350
+#: includes/settings.php:1388
 msgid "Users cannot be over this age to access."
 msgstr ""
 
-#: includes/settings.php:1362
-#: includes/settings.php:1376
+#: includes/settings.php:1400
+#: includes/settings.php:1414
 msgid "Only these countries can access (leave blank to allow all)."
 msgstr ""
 
-#: includes/settings.php:1386
+#: includes/settings.php:1424
 msgid "Message preview"
 msgstr ""
 
-#: includes/settings.php:1392
+#: includes/settings.php:1430
 msgid "Age Verification"
 msgstr ""
 
-#: includes/settings.php:1393
+#: includes/settings.php:1431
 msgid "Country Verification"
 msgstr ""
 
-#: includes/settings.php:1400
+#: includes/settings.php:1438
 msgid "You must be at least <span class='minimum_age_text'>%1$s</span> years old to access this content."
 msgstr ""
 
-#: includes/settings.php:1406
+#: includes/settings.php:1444
 msgid "Access is limited to users under <span class='maximum_age_text'>%1$s</span> years."
 msgstr ""
 
-#: includes/settings.php:1412
+#: includes/settings.php:1450
 msgid "To access this content, you must be from <span class='allow_country_text'>%1$s</span>."
 msgstr ""
 
-#: includes/settings.php:1418
+#: includes/settings.php:1456
 msgid "Access is excluded to users from <span class='disallow_country_text'>%1$s</span>."
 msgstr ""
 
-#: includes/settings.php:1433
+#: includes/settings.php:1471
 msgid "Verification is done using your digital ID stored in a secure wallet of your choice – your personal details are encrypted & never stored or shared. If you don’t have a wallet ID, you can create one now."
 msgstr ""
 
-#: includes/settings.php:1439
+#: includes/settings.php:1477
 msgid "Cancel"
 msgstr ""
 
-#: includes/settings.php:1444
+#: includes/settings.php:1482
 msgid "Continue to Verification"
 msgstr ""
 
-#: includes/settings.php:1790
+#: includes/settings.php:1832
 msgid "This draft was automatically generated based on real scan data from your website and identifies third-party domains, cookies, and beacons used, categorized by purpose."
 msgstr ""
 
-#: includes/settings.php:1794
-#: includes/settings.php:1870
-#: includes/settings.php:1900
-#: includes/settings.php:1930
+#: includes/settings.php:1836
+#: includes/settings.php:1912
+#: includes/settings.php:1942
+#: includes/settings.php:1972
 msgid "Please review and adjust the content to make sure it reflects your actual data practices before publishing."
 msgstr ""
 
-#: includes/settings.php:1832
+#: includes/settings.php:1874
 msgid "Enable AI Auto-Blocking"
 msgstr ""
 
-#: includes/settings.php:1843
-#: includes/settings.php:1889
-#: includes/settings.php:1919
-#: includes/settings.php:1949
+#: includes/settings.php:1885
+#: includes/settings.php:1931
+#: includes/settings.php:1961
+#: includes/settings.php:1991
 msgid "Regenerate"
 msgstr ""
 
-#: includes/settings.php:1866
+#: includes/settings.php:1908
 msgid "This draft was automatically generated based on real scan data from your website and lists the cookies and tracking technologies detected."
 msgstr ""
 
-#: includes/settings.php:1874
+#: includes/settings.php:1916
 msgid "For full setup instructions: <a href='%1$s' target='_blank'>AesirX CMP Guide: How to Generate a Cookie Declaration with AI</a>."
 msgstr ""
 
-#: includes/settings.php:1896
+#: includes/settings.php:1938
 msgid "This draft was automatically generated based on real scan data from your website and outlines the data collection and processing activities detected."
 msgstr ""
 
-#: includes/settings.php:1904
+#: includes/settings.php:1946
 msgid "For full setup instructions: <a href='%1$s' target='_blank'>AesirX CMP Guide: How to Generate a Privacy Policy with AI</a>."
 msgstr ""
 
-#: includes/settings.php:1926
+#: includes/settings.php:1968
 msgid "This draft was automatically generated based on real scan data from your website and provides a consent message tailored to the technologies and data flows detected."
 msgstr ""
 
-#: includes/settings.php:1934
+#: includes/settings.php:1976
 msgid "For full setup instructions: AesirX CMP Guide: How to Generate Consent Request Text with AI"
 msgstr ""
 
@@ -1208,4 +1206,8 @@ msgstr ""
 
 #: includes/settings.php:342
 msgid "Always link your own website's Privacy Policy, not the AesirX example"
+msgstr ""
+
+#: includes/settings.php:2280
+msgid "Unknown error"
 msgstr ""
