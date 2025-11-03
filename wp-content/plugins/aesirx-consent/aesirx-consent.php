@@ -32,7 +32,7 @@ require_once plugin_dir_path(__FILE__) . 'includes/settings.php';
 include_once(ABSPATH . 'wp-admin/includes/plugin.php');
 
 add_action('wp_enqueue_scripts', function (): void {
-    wp_register_script('aesirx-consent', plugins_url('assets/vendor/consent.js', __FILE__), [], true,  array(
+    wp_register_script('aesirx-consent', plugins_url('assets/vendor/consent.js', __FILE__), [], '2.0.2',  array(
         'in_footer' => false,
     ));
     $translation_array = array(
