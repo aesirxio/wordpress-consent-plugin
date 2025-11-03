@@ -3258,10 +3258,10 @@ aesirx-bi-app@^2.6.6:
     simple-react-validator "^1.6.0"
     web-vitals "^3.3.1"
 
-aesirx-consent@1.3.5:
-  version "1.3.5"
-  resolved "https://registry.yarnpkg.com/aesirx-consent/-/aesirx-consent-1.3.5.tgz#8a3a699a54c1b5c12773c7505e4b773b2db1316b"
-  integrity sha512-epbAzr+nAAzLaSXuM+XiT11gYpMqKjkvG0TSWwHgq7N4Z/Tzfo97SaSqOnDMJtgp1+qc5fX8+n+NZyXmcSagzw==
+aesirx-consent@1.3.7:
+  version "1.3.7"
+  resolved "https://registry.yarnpkg.com/aesirx-consent/-/aesirx-consent-1.3.7.tgz#50c353a259aec49df769ad8c004d30c4ba8202c3"
+  integrity sha512-9NCpIOxq5T+BrwR0HV9CHdd7OeilWlsbkNN59wgUperDHTdPqpVuy8TpewaDyoBzahohQ12le7S1Tx7FuONOeA==
   dependencies:
     "@concordium/browser-wallet-api-helpers" "3.0.1"
     "@concordium/react-components" "0.6.1"

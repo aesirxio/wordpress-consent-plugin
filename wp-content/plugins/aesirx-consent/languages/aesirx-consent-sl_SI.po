@@ -28,28 +28,28 @@ msgstr "aesirx.io"
 msgid "https://aesirx.io/"
 msgstr "https://aesirx.io/"
 
-#: aesirx-consent.php:244
+#: aesirx-consent.php:249
 msgid "Settings"
 msgstr "Nastavitve"
 
-#: aesirx-consent.php:359
+#: aesirx-consent.php:364
 msgid "Problem with Aesirx Analytics plugin install"
 msgstr "Težava z namestitvijo vtičnika Aesirx Analytics"
 
-#: includes/settings.php:17
+#: includes/settings.php:18
 msgid "Please register your license at Signup.aesirx.io to enable the external first-party server."
 msgstr "Prosimo, registrirajte svojo licenco na Signup.aesirx.io da omogočite zunanji strežnik prve osebe."
 
-#: includes/settings.php:27
+#: includes/settings.php:28
 msgid "Domain is empty."
 msgstr "Domena je prazna."
 
-#: includes/settings.php:34
+#: includes/settings.php:35
 msgid "Invalid domain format."
 msgstr "Neveljavna oblika domene."
 
 #: aesirx-consent.php:43
-#: includes/settings.php:2000
+#: includes/settings.php:2042
 msgid "Consent"
 msgstr "Soglasje"
 
@@ -87,7 +87,6 @@ msgstr "Domena ni najdena"
 #: src/AesirxAnalyticsMysqlHelper.php:785
 #: src/AesirxAnalyticsMysqlHelper.php:825
 #: src/AesirxAnalyticsMysqlHelper.php:1183
-#: src/Mysql/GetVisitorConsentList.php:60
 msgid "There was a problem with the database query."
 msgstr "Prišlo je do težave z poizvedbo podatkovne baze."
 
@@ -203,11 +202,11 @@ msgstr "Posodobitev poteka soglasja ni uspela."
 msgid "Failed to update nonce."
 msgstr "Posodobitev nonce ni uspela."
 
-#: src/Mysql/StartFingerprint.php:151
+#: src/Mysql/StartFingerprint.php:156
 msgid "Wrong URL format, domain not found"
 msgstr "Napačen format URL, domena ni bila najdena"
 
-#: src/Mysql/StartFingerprint.php:155
+#: src/Mysql/StartFingerprint.php:160
 msgid "The domain sent in the new URL does not match the domain stored in the visitor document"
 msgstr "Domena poslana v novem URL-ju se ne ujema z domeno shranjeno v dokumentu obiskovalca"
 
@@ -230,371 +229,371 @@ msgid "Aesirx Consent plugin. When you join forces with AesirX, you're not just 
 msgstr "Vtičnik AesirX Soglasje. Ko se z AesirX združite, ne postanete le Partner - postanete tudi borec za svobodo v boju za zasebnost! Zaslužite 25% provizije za pridružitev <a href=\"https://aesirx.io/partner?utm_source=wpplugin&utm_medium=web&utm_campaign=wordpress&utm_id=aesirx&utm_term=wordpress&utm_content=analytics\">[Kliknite za Pridružitev]</a>"
 
 #: aesirx-consent.php:39
-#: includes/settings.php:1996
+#: includes/settings.php:2038
 msgid "Shield of Privacy"
 msgstr "Ščit zasebnosti"
 
 #: aesirx-consent.php:40
-#: includes/settings.php:1997
+#: includes/settings.php:2039
 msgid "Revoke your consent for data use whenever you wish."
 msgstr "Prekličete lahko svoje soglasje za uporabo podatkov kadarkoli."
 
 #: aesirx-consent.php:41
-#: includes/settings.php:1998
+#: includes/settings.php:2040
 msgid "Manage Decentralized Consent"
 msgstr "Upravljajte z decentraliziranim soglasjem"
 
 #: aesirx-consent.php:42
-#: includes/settings.php:1999
+#: includes/settings.php:2041
 msgid "Revoke Consent"
 msgstr "Prekliči soglasje"
 
 #: aesirx-consent.php:44
-#: includes/settings.php:2001
+#: includes/settings.php:2043
 msgid "Reject"
 msgstr "Zavrni"
 
 #: aesirx-consent.php:45
-#: includes/settings.php:2002
+#: includes/settings.php:2044
 msgid "Please connect your Web3 wallet"
 msgstr "Prosimo, povežite svojo Web3 denarnico"
 
 #: aesirx-consent.php:46
-#: includes/settings.php:2003
+#: includes/settings.php:2045
 msgid "Please sign the message on your wallet twice and wait for it to be saved."
 msgstr "Podpišite sporočilo na svoji denarnici dvakrat in počakajte, da se shrani."
 
 #: aesirx-consent.php:47
-#: includes/settings.php:2004
+#: includes/settings.php:2046
 msgid "Saving..."
 msgstr "Shranjevanje..."
 
 #: aesirx-consent.php:48
-#: includes/settings.php:2005
+#: includes/settings.php:2047
 msgid "Please connect to your wallet"
 msgstr "Prosimo, povežite se z vašo denarnico"
 
 #: aesirx-consent.php:49
-#: includes/settings.php:2006
+#: includes/settings.php:2048
 msgid "Connecting"
 msgstr "Povezovanje"
 
 #: aesirx-consent.php:50
-#: includes/settings.php:2007
+#: includes/settings.php:2049
 msgid "TRACKING AND DATA PRIVACY PREFERENCES"
 msgstr "NASTAVITVE SLEDENJA IN ZASEBNOSTI PODATKOV"
 
 #: aesirx-consent.php:51
-#: includes/settings.php:2008
+#: includes/settings.php:2050
 msgid "About"
 msgstr "O"
 
 #: aesirx-consent.php:52
 #: aesirx-consent.php:101
-#: includes/settings.php:2009
-#: includes/settings.php:2058
+#: includes/settings.php:2051
+#: includes/settings.php:2100
 msgid "Details"
 msgstr "Podrobnosti"
 
 #: aesirx-consent.php:53
 #: aesirx-consent.php:81
-#: includes/settings.php:2010
-#: includes/settings.php:2038
+#: includes/settings.php:2052
+#: includes/settings.php:2080
 msgid "Decentralized Consent"
 msgstr "Decentralizirano soglasje"
 
 #: aesirx-consent.php:54
-#: includes/settings.php:2011
+#: includes/settings.php:2053
 msgid "Manage Your Consent Preferences"
 msgstr "Upravljajte svoje nastavitve soglasja"
 
 #: aesirx-consent.php:55
-#: includes/settings.php:2012
+#: includes/settings.php:2054
 msgid "Choose how we use your data: \"Reject\" data collection, allow tracking [\"Consent\"], or use \"Decentralized Consent\" for more control over your personal data & rewards."
 msgstr "Izberite, kako uporabljamo vaše podatke: 'Zavrni' zbiranje podatkov, omogoči sledenje ['Soglasje'], ali uporabi 'Decentralizirano soglasje' za več nadzora nad vašimi osebnimi podatki in nagradami."
 
 #: aesirx-consent.php:56
-#: includes/settings.php:2013
+#: includes/settings.php:2055
 msgid "Choose how we use your data: \"Reject\" data collection, allow tracking [\"Consent\"]."
 msgstr "Izberite, kako uporabljamo vaše podatke: \"Zavrni\" zbiranje podatkov, omogoči sledenje [\"Soglasje\"]."
 
 #: aesirx-consent.php:57
-#: includes/settings.php:2014
+#: includes/settings.php:2056
 msgid "By consenting, you allow us to collect & use your data for:"
 msgstr "S soglasjem nam dovolite zbiranje in uporabo vaših podatkov za:"
 
 #: aesirx-consent.php:58
-#: includes/settings.php:2015
+#: includes/settings.php:2057
 msgid "Analytics & Behavioral Data: To improve our services & personalize your experience."
 msgstr "Analiza in vedenjski podatki: Da bi izboljšali naše storitve in prilagodili vašo izkušnjo."
 
 #: aesirx-consent.php:59
-#: includes/settings.php:2016
+#: includes/settings.php:2058
 msgid "Form Data: When you contact us."
 msgstr "Podatki obrazca: Ko nas kontaktirate."
 
 #: aesirx-consent.php:60
-#: includes/settings.php:2017
+#: includes/settings.php:2059
 msgid "Please note"
 msgstr "Prosimo, upoštevajte"
 
 #: aesirx-consent.php:61
-#: includes/settings.php:2018
+#: includes/settings.php:2060
 msgid "We do not share your data with third parties without your explicit consent."
 msgstr "Vaših podatkov ne delimo z tretjimi strankami brez vašega izrecnega soglasja."
 
 #: aesirx-consent.php:62
-#: includes/settings.php:2019
+#: includes/settings.php:2061
 msgid "You can opt-in later for specific features without giving blanket consent."
 msgstr "Kasneje se lahko prijavite za določene funkcije brez splošnega soglasja."
 
 #: aesirx-consent.php:63
-#: includes/settings.php:2020
+#: includes/settings.php:2062
 msgid "For more details, refer to our <a class='text-success fw-semibold text-decoration-underline' href='https://aesirx.io/privacy-policy' target='_blank'>privacy policy.</a>"
 msgstr "Za več podrobnosti glejte našo <a class='text-success fw-semibold text-decoration-underline' href='https://aesirx.io/privacy-policy' target='_blank'>politiko zasebnosti.</a>"
 
 #: aesirx-consent.php:64
-#: includes/settings.php:2021
+#: includes/settings.php:2063
 msgid "Benefits"
 msgstr "Koristi"
 
 #: aesirx-consent.php:65
-#: includes/settings.php:2022
+#: includes/settings.php:2064
 msgid "<span class='fw-semibold text-primary'>Control your data:</span> Choose your preferred level of data collection & tracking."
 msgstr "<span class='fw-semibold text-primary'>Upravljajte svoje podatke:</span> Izberite želeno raven zbiranja podatkov in sledenja."
 
 #: aesirx-consent.php:66
-#: includes/settings.php:2023
+#: includes/settings.php:2065
 msgid "<span class='fw-semibold text-primary'>Earn rewards:</span> Participate in decentralized consent for privacy & rewards."
 msgstr "<span class='fw-semibold text-primary'>Zaslužite nagrade:</span> Sodelujte v decentraliziranem soglasju za zasebnost in nagrade."
 
 #: aesirx-consent.php:67
-#: includes/settings.php:2024
+#: includes/settings.php:2066
 msgid "<span class='fw-semibold text-primary'>Transparent data collection practices:</span> Understand how your data is collected & used."
 msgstr "<span class='fw-semibold text-primary'>Transparentne prakse zbiranja podatkov:</span> Razumite, kako se vaši podatki zbirajo in uporabljajo."
 
 #: aesirx-consent.php:68
-#: includes/settings.php:2025
+#: includes/settings.php:2067
 msgid "Understanding Your Privacy Choices"
 msgstr "Razumevanje vaših možnosti zasebnosti"
 
 #: aesirx-consent.php:69
-#: includes/settings.php:2026
+#: includes/settings.php:2068
 msgid "<span class='fw-semibold text-primary'>Reject:</span> No data will be collected or loaded except for anonymized page views & rejections. Some personalization features may be disabled."
 msgstr "<span class='fw-semibold text-primary'>Zavrni:</span> Noben podatek ne bo zbran ali naložen, razen anonimnih ogledov strani in zavrnitev. Nekatere funkcije personalizacije so lahko onemogočene."
 
 #: aesirx-consent.php:70
-#: includes/settings.php:2027
+#: includes/settings.php:2069
 msgid "<span class='fw-semibold text-primary'>Consent:</span> First & third-party tracking data will be collected to enhance your experience."
 msgstr "<span class='fw-semibold text-primary'>Soglasje:</span> Podatki o sledenju prve in tretje strani bodo zbrani za izboljšanje vaše izkušnje."
 
 #: aesirx-consent.php:71
-#: includes/settings.php:2028
+#: includes/settings.php:2070
 msgid "<span class='fw-semibold text-primary'>Decentralized Consent:</span> Choose Decentralized Wallets or Decentralized Wallet + Shield of Privacy. Both options let you manage & revoke consent on-site or through AesirX dApp, plus earn rewards from digital marketing activities."
 msgstr "<span class='fw-semibold text-primary'>Decentralizirano soglasje:</span> Izberite decentralizirane denarnice ali decentralizirano denarnico + Ščit zasebnosti. Obe možnosti vam omogočata upravljanje in preklic soglasja na mestu ali prek AesirX dApp, poleg tega pa zaslužite nagrade z digitalnimi marketinškimi dejavnostmi."
 
 #: aesirx-consent.php:72
-#: includes/settings.php:2029
+#: includes/settings.php:2071
 msgid "Our Commitment in Action"
 msgstr "Naša zavezanost v akciji"
 
 #: aesirx-consent.php:73
-#: includes/settings.php:2030
+#: includes/settings.php:2072
 msgid "<span class='fw-semibold text-primary'>Privacy Protection:</span> Users have full control over their data, ensuring maximum privacy."
 msgstr "<span class='fw-semibold text-primary'>Zaščita zasebnosti:</span> Uporabniki imajo popoln nadzor nad svojimi podatki, kar zagotavlja maksimalno zasebnost."
 
 #: aesirx-consent.php:74
-#: includes/settings.php:2031
+#: includes/settings.php:2073
 msgid "<span class='fw-semibold text-primary'>Enables Compliance:</span> Using Shield of Privacy (SoP) ensures compliance with GDPR, CCPA, ePrivacy Directive, & other data protection regulations."
 msgstr "<span class='fw-semibold text-primary'>Omogoča skladnost:</span> Uporaba Ščita zasebnosti (SoP) zagotavlja skladnost z GDPR, CCPA, Direktivo ePrivacy in drugimi predpisi o varstvu podatkov."
 
 #: aesirx-consent.php:75
-#: includes/settings.php:2032
+#: includes/settings.php:2074
 msgid "<span class='fw-semibold text-primary'>Proactive Protection:</span> We enhance privacy measures to safeguard your data integrity."
 msgstr "<span class='fw-semibold text-primary'>Proaktivna zaščita:</span> Izboljšamo ukrepe za zaščito zasebnosti za zaščito integritete vaših podatkov."
 
 #: aesirx-consent.php:76
-#: includes/settings.php:2033
+#: includes/settings.php:2075
 msgid "<span class='fw-semibold text-primary'>Flexible Consent:</span> You can withdraw your consent anytime on-site or via our <a class='text-success fw-semibold text-decoration-underline' href='https://dapp.shield.aesirx.io' target='_blank'>dApp</a> (Decentralized Application)."
 msgstr "<span class='fw-semibold text-primary'>Prilagodljivo soglasje:</span> Svoje soglasje lahko kadar koli umaknete na mestu ali prek našega <a class='text-success fw-semibold text-decoration-underline' href='https://dapp.shield.aesirx.io' target='_blank'>dApp</a> (decentralizirana aplikacija)."
 
 #: aesirx-consent.php:77
-#: includes/settings.php:2034
+#: includes/settings.php:2076
 msgid "<span class='fw-semibold text-primary'>Learn More:</span> Discover our approach to data processing in our <a class='text-success fw-semibold text-decoration-underline' href='https://aesirx.io/privacy-policy' target='_blank'>Privacy Policy</a>."
 msgstr "<span class='fw-semibold text-primary'>Izvedite več:</span> Odkrijte naš pristop k obdelavi podatkov v naši <a class='text-success fw-semibold text-decoration-underline' href='https://aesirx.io/privacy-policy' target='_blank'>politiki zasebnosti</a>."
 
 #: aesirx-consent.php:78
-#: includes/settings.php:2035
+#: includes/settings.php:2077
 msgid "<span class='fw-semibold text-primary'>For Businesses:</span> Enhance trust, secure user identities, & prevent breaches."
 msgstr "<span class='fw-semibold text-primary'>Za podjetja:</span> Izboljšajte zaupanje, zagotovite identitete uporabnikov in preprečite kršitve."
 
 #: aesirx-consent.php:79
-#: includes/settings.php:2036
+#: includes/settings.php:2078
 msgid "More info at <a class='text-success fw-semibold text-decoration-underline' href='https://shield.aesirx.io' target='_blank'>https://shield.aesirx.io</a>."
 msgstr "Več informacij na <a class='text-success fw-semibold text-decoration-underline' href='https://shield.aesirx.io' target='_blank'>https://shield.aesirx.io</a>."
 
 #: aesirx-consent.php:80
-#: includes/settings.php:2037
+#: includes/settings.php:2079
 msgid "Select your preferred decentralized consent option:"
 msgstr "Izberite želeno možnost decentraliziranega soglasja:"
 
 #: aesirx-consent.php:82
-#: includes/settings.php:2039
+#: includes/settings.php:2081
 msgid "Decentralized consent will be loaded"
 msgstr "Decentralizirano soglasje bo naloženo"
 
 #: aesirx-consent.php:83
-#: includes/settings.php:2040
+#: includes/settings.php:2082
 msgid "Both first-party & third-party tracking data will be activated."
 msgstr "Podatki za sledenje prve in tretje strani bodo aktivirani."
 
 #: aesirx-consent.php:84
-#: includes/settings.php:2041
+#: includes/settings.php:2083
 msgid "All consented data will be collected."
 msgstr "Vsi podatki, za katere je bilo dano soglasje, bodo zbrani."
 
 #: aesirx-consent.php:85
-#: includes/settings.php:2042
+#: includes/settings.php:2084
 msgid "Users can revoke consent on-site at any time."
 msgstr "Uporabniki lahko kadar koli prekličejo soglasje na mestu."
 
 #: aesirx-consent.php:86
-#: includes/settings.php:2043
+#: includes/settings.php:2085
 msgid "Decentralized Consent + Shield of Privacy"
 msgstr "Decentralizirano soglasje + Ščit zasebnosti"
 
 #: aesirx-consent.php:87
-#: includes/settings.php:2044
+#: includes/settings.php:2086
 msgid "Users can revoke consent on-site or from the AesirX dApp at any time."
 msgstr "Uporabniki lahko kadar koli prekličejo soglasje na mestu ali prek aplikacije AesirX dApp."
 
 #: aesirx-consent.php:88
-#: includes/settings.php:2045
+#: includes/settings.php:2087
 msgid "Users can earn rewards from digital marketing activities."
 msgstr "Uporabniki lahko zaslužijo nagrade iz digitalnih marketinških dejavnosti."
 
 #: aesirx-consent.php:89
-#: includes/settings.php:2046
+#: includes/settings.php:2088
 msgid "Continue"
 msgstr "Nadaljujte"
 
 #: aesirx-consent.php:90
-#: includes/settings.php:2047
+#: includes/settings.php:2089
 msgid "Back"
 msgstr "Nazaj"
 
 #: aesirx-consent.php:91
-#: includes/settings.php:2048
+#: includes/settings.php:2090
 msgid "You've chosen to reject data collection:"
 msgstr "Izbrali ste zavrnitev zbiranja podatkov:"
 
 #: aesirx-consent.php:92
-#: includes/settings.php:2049
+#: includes/settings.php:2091
 msgid "Only anonymized page views & limited features will be available. To access all website features, including personalized content & enhanced functionality, please choose an option:"
 msgstr "Na voljo bodo le anonimni ogledi strani in omejene funkcije. Za dostop do vseh funkcij spletnega mesta, vključno s prilagojeno vsebino in izboljšano funkcionalnostjo, izberite možnost:"
 
 #: aesirx-consent.php:93
-#: includes/settings.php:2050
+#: includes/settings.php:2092
 msgid "<span class='fw-semibold text-primary'>Consent:</span> Allow data collection for analytics, form data (when you contact us), & behavioral & event tracking, with the option to opt-in for specific features."
 msgstr "<span class='fw-semibold text-primary'>Soglasje:</span> Dovolite zbiranje podatkov za analitiko, podatke obrazca (ko nas kontaktirate) in sledenje vedenja in dogodkov, z možnostjo vključitve v določene funkcije."
 
 #: aesirx-consent.php:94
-#: includes/settings.php:2051
+#: includes/settings.php:2093
 msgid "<span class='fw-semibold text-primary'>Decentralized Consent:</span> Allow data collection for analytics, form data (when you contact us), & behavioral & event tracking, with the option to revoke consent, opt-in for specific features, & earn rewards from digital marketing activities."
 msgstr "<span class='fw-semibold text-primary'>Decentralizirano soglasje:</span> Dovolite zbiranje podatkov za analitiko, podatke obrazca (ko nas kontaktirate) in sledenje vedenju in dogodkom, z možnostjo preklica soglasja, vključitve v določene funkcije in zaslužka nagrad pri digitalnih marketinških dejavnostih."
 
 #: aesirx-consent.php:95
-#: includes/settings.php:2052
+#: includes/settings.php:2094
 msgid "You can revoke consent on the site or any explicit opt-in consent, such as payment processing, at any time"
 msgstr "Soglasje lahko kadar koli prekličete na spletnem mestu ali katero koli izrecno soglasje za vključitev, kot je obdelava plačil"
 
 #: aesirx-consent.php:96
-#: includes/settings.php:2053
+#: includes/settings.php:2095
 msgid "Revoke Opt-In Consent"
 msgstr "Prekliči soglasje za vključitev"
 
 #: aesirx-consent.php:97
-#: includes/settings.php:2054
+#: includes/settings.php:2096
 msgid "Revoke Opt-In Consent for Payment Processing"
 msgstr "Prekliči soglasje za vključitev za obdelavo plačil"
 
 #: aesirx-consent.php:98
-#: includes/settings.php:2055
+#: includes/settings.php:2097
 msgid "Revoke Opt-In Consent for AesirX Privacy Advisor AI"
 msgstr "Prekliči soglasje za vključitev za AesirX svetovalca zasebnosti AI"
 
 #: aesirx-consent.php:99
-#: includes/settings.php:2056
+#: includes/settings.php:2098
 msgid "Revoke Consent for the site"
 msgstr "Prekliči soglasje za spletno mesto"
 
 #: aesirx-consent.php:100
-#: includes/settings.php:2057
+#: includes/settings.php:2099
 msgid "Consent Management"
 msgstr "Upravljanje soglasja"
 
-#: includes/settings.php:249
+#: includes/settings.php:251
 msgid "Gtag ID"
 msgstr "ID Gtag"
 
-#: includes/settings.php:274
+#: includes/settings.php:276
 msgid "GTM ID"
 msgstr "ID GTM"
 
-#: includes/settings.php:434
+#: includes/settings.php:441
 msgid "Blocks selected third-party plugins from loading until user consent is given."
 msgstr "Blokira izbrane vtičnike tretjih oseb, da se ne naložijo dokler ni dano soglasje uporabnika."
 
-#: includes/settings.php:465
+#: includes/settings.php:478
 msgid "Completely prevents the loading and execution of chosen third-party plugins before consent."
 msgstr "Popolnoma prepreči nalaganje in izvajanje izbranih vtičnikov tretjih oseb pred soglasjem."
 
-#: includes/settings.php:471
+#: includes/settings.php:484
 msgid "No network requests are made to third-party servers, enabling maximum compliance with privacy regulations like GDPR and the ePrivacy Directive."
 msgstr "Ni mrežnih zahtevkov na strežnike tretjih oseb, kar omogoča največjo skladnost s predpisi o zasebnosti, kot so GDPR in Direktiva o e-zasebnosti."
 
-#: includes/settings.php:485
+#: includes/settings.php:498
 msgid "AesirX Consent Shield for Domain/Path-Based Blocking"
 msgstr "Ščit soglasja AesirX za blokado na podlagi domene/poti"
 
-#: includes/settings.php:495
-#: includes/settings.php:513
+#: includes/settings.php:514
+#: includes/settings.php:540
 msgid "Enter domain or path"
 msgstr "Vnesite domeno ali pot"
 
-#: includes/settings.php:488
+#: includes/settings.php:501
 msgid "Removes scripts matching specified domains or paths from the browser until user consent is given."
 msgstr "Odstrani skripte, ki se ujemajo s podanimi domenami ali potmi iz brskalnika, dokler ni dano soglasje uporabnika."
 
-#: includes/settings.php:536
+#: includes/settings.php:570
 msgid "Blocks or removes scripts from running in the user's browser before consent is given."
 msgstr "Blokira ali odstrani skripte pred izvajanjem v uporabnikovem brskalniku pred podanim soglasjem."
 
-#: includes/settings.php:542
+#: includes/settings.php:576
 msgid "While it prevents scripts from executing, initial network requests may still occur, so it enhances privacy compliance under GDPR but may not fully meet the ePrivacy Directive requirements."
 msgstr "Medtem ko preprečuje izvajanje skript, se lahko še vedno pojavijo začetne zahteve po omrežju, kar izboljšuje skladnost s pravili zasebnosti po GDPR, vendar morda ne izpolnjuje v celoti zahtev Direktive o elektronski zasebnosti."
 
-#: includes/settings.php:556
+#: includes/settings.php:590
 msgid "Script Blocking Options"
 msgstr "Možnosti blokiranja skript"
 
-#: includes/settings.php:571
+#: includes/settings.php:605
 msgid "Only Third-Party Hosts (default)"
 msgstr "Samo gostitelji tretjih oseb (privzeto)"
 
-#: includes/settings.php:582
+#: includes/settings.php:616
 msgid "Both First and Third-Party Hosts"
 msgstr "Oba gostitelja prve in tretje strani"
 
-#: includes/settings.php:989
+#: includes/settings.php:1023
 msgid "Need Help? Access Our Comprehensive Documentation Hub"
 msgstr "Potrebujete pomoč? Dostopajte do naše celovite dokumentacijske postaje"
 
-#: includes/settings.php:2143
+#: includes/settings.php:2185
 msgid "Your trial license ends in %1$s days. Please update new license <a href='%2$s' target='_blank'>%2$s</a>."
 msgstr "Vaša preizkusna licenca bo potekla čez %1$s dni. Prosimo, posodobite novo licenco <a href='%2$s' target='_blank'>%2$s</a>."
 
-#: includes/settings.php:2293
+#: includes/settings.php:2344
 msgid "Your free trials has ended. Please update your license. <a href='%1$s' target='_blank'>%1$s</a>."
 msgstr "Vaše brezplačno poskusno obdobje je končano. Prosimo, posodobite vašo licenco. <a href='%1$s' target='_blank'>%1$s</a>."
 
@@ -602,144 +601,144 @@ msgstr "Vaše brezplačno poskusno obdobje je končano. Prosimo, posodobite vaš
 msgid "Could not insert consent"
 msgstr "Ni bilo mogoče vstaviti soglasja"
 
-#: src/Mysql/StartFingerprint.php:39
-#: src/Mysql/StartFingerprint.php:68
+#: src/Mysql/StartFingerprint.php:42
+#: src/Mysql/StartFingerprint.php:72
 msgid "License is expired or not found. Please update your license"
 msgstr "Licenca je potekla ali ni bila najdena. Prosimo, posodobite svojo licenco"
 
-#: src/Mysql/StartFingerprint.php:80
-#: src/Mysql/StartFingerprint.php:87
+#: src/Mysql/StartFingerprint.php:85
+#: src/Mysql/StartFingerprint.php:92
 msgid "Your trial is ended. Please renew your license"
 msgstr "Poskusno obdobje je končano. Prosimo, obnovite svojo licenco"
 
-#: includes/settings.php:129
+#: includes/settings.php:130
 msgid "Your Client ID *"
 msgstr "Vaš ID stranke *"
 
-#: includes/settings.php:136
+#: includes/settings.php:137
 msgid "SSO Client ID"
 msgstr "ID stranke SSO"
 
-#: includes/settings.php:142
+#: includes/settings.php:143
 msgid ""
 "<div class='input_information_content'>\n"
 "          Provided SSO CLIENT ID from <a href='%1$s' target='_blank'>%1$s</a>.</div>"
 msgstr "<div class='input_information_content'>Zagotovljen ID SSO stranke iz <a href='%1$s' target='_blank'>%1$s</a>.</div>"
 
-#: includes/settings.php:157
+#: includes/settings.php:158
 msgid "Your Client Secret *"
 msgstr "Vaša tajna koda stranke *"
 
-#: includes/settings.php:162
+#: includes/settings.php:163
 msgid "SSO Client Secret"
 msgstr "Tajna koda stranke SSO"
 
-#: includes/settings.php:168
+#: includes/settings.php:169
 msgid ""
 "<div class='input_information_content'>\n"
 "          Provided SSO Client Secret from <a href='%1$s' target='_blank'>%1$s</a>.</div>"
 msgstr "<div class='input_information_content'>Zaupan SSO tajna koda stranke iz <a href='%1$s' target='_blank'>%1$s</a>.</div>"
 
-#: includes/settings.php:184
+#: includes/settings.php:185
 msgid "Your License Key"
 msgstr "Vaš licenčni ključ"
 
-#: includes/settings.php:211
+#: includes/settings.php:212
 msgid "Choose your tailored template"
 msgstr "Izberite svojo prilagojeno predlogo"
 
-#: includes/settings.php:494
-#: includes/settings.php:512
+#: includes/settings.php:513
+#: includes/settings.php:539
 msgid "Domain"
 msgstr "Domena"
 
-#: includes/settings.php:562
+#: includes/settings.php:596
 msgid "Configure how JavaScript is blocked based on user consent preferences."
 msgstr "Konfigurirajte, kako je JavaScript blokiran glede na nastavitve soglasja uporabnika."
 
-#: includes/settings.php:572
+#: includes/settings.php:606
 msgid "Blocks JavaScript from third-party domains, allowing first-party scripts to run normally & keep essential site functions intact."
 msgstr "Blokira JavaScript iz domen tretjih oseb, kar omogoča normalno delovanje skript prve strani in ohranja bistvene funkcije spletnega mesta nedotaknjene."
 
-#: includes/settings.php:583
+#: includes/settings.php:617
 msgid "Blocks JavaScript from both first-party & third-party domains for comprehensive script control, giving you the ability to block any JavaScript from internal or external sources based on user consent."
 msgstr "Blokira JavaScript tako iz domen prve osebe kot tretje osebe za celovito kontrolo skript, kar vam omogoča, da blokirate kateri koli JavaScript iz notranjih ali zunanjih virov glede na soglasje uporabnika."
 
-#: includes/settings.php:999
+#: includes/settings.php:1033
 msgid "Discover the latest features & best practices."
 msgstr "Odkrijte najnovejše funkcije in najboljše prakse."
 
-#: includes/settings.php:1468
+#: includes/settings.php:1506
 msgid "Scan Your Site for Privacy Risks"
 msgstr "Skenirajte svoje spletno mesto za tveganja glede zasebnosti"
 
-#: includes/settings.php:1472
+#: includes/settings.php:1510
 msgid "Use the Privacy Scanner to quickly identify scripts, tags, & trackers running on your site that may compromise user privacy."
 msgstr "Uporabite skener zasebnosti za hitro identifikacijo skript, oznak in sledilcev, ki se izvajajo na vašem spletnem mestu in morda ogrožajo zasebnost uporabnikov."
 
-#: includes/settings.php:1478
+#: includes/settings.php:1516
 msgid "Use Consent Shield to block those scripts by adding their domains or paths, ensuring quick & simple compliance."
 msgstr "Uporabite Ščit soglasja za blokiranje teh skriptov z dodajanjem njihovih domen ali poti in s tem zagotovite hitro in enostavno skladnost."
 
-#: includes/settings.php:1548
-#: includes/settings.php:1611
-#: includes/settings.php:1644
-#: includes/settings.php:1689
-#: includes/settings.php:1722
+#: includes/settings.php:1586
+#: includes/settings.php:1649
+#: includes/settings.php:1682
+#: includes/settings.php:1727
+#: includes/settings.php:1760
 msgid "Save settings"
 msgstr "Shrani nastavitve"
 
-#: includes/settings.php:189
+#: includes/settings.php:190
 msgid "License Key"
 msgstr "Licenčni ključ"
 
-#: includes/settings.php:1026
+#: includes/settings.php:1060
 msgid "Haven't got Shield of Privacy ID yet?"
 msgstr "Še nimate ID-ja Ščita zasebnosti?"
 
-#: includes/settings.php:1487
+#: includes/settings.php:1525
 msgid "Learn how to use AesirX Privacy Scanner with Consent Shield to detect privacy-intrusive elements, using the JetPack plugin as an example."
 msgstr "Naučite se, kako uporabiti AesirX skener zasebnosti z uporabo Ščita soglasja za odkrivanje elementov, ki posegajo v zasebnost, z uporabo vtičnika JetPack kot primer."
 
-#: includes/settings.php:195
+#: includes/settings.php:196
 msgid ""
 "<div class='input_information_content'>\n"
 "          Sign up to obtain your Shield of Privacy ID and purchase licenses <a href='https://aesirx.io/licenses' target='blank' class='text-link'>here</a>.</div>"
 msgstr "<div class='input_information_content'>Prijavite se za pridobitev ID-ja Ščita zasebnosti in nakup licenc <a href='https://aesirx.io/licenses' target='blank' class='text-link'>tukaj</a>.</div>"
 
-#: includes/settings.php:302
+#: includes/settings.php:304
 msgid "To configure, input your Google Tag Manager Gtag ID & GTM ID in the designated fields. Once set up, Google Tag Manager will only load after the user provides consent."
 msgstr "Za konfiguracijo vnesite svoj ID Gtag in ID GTM Google Tag Manager v določena polja. Ko je nastavljeno, se bo Google Tag Manager naložil šele po tem, ko uporabnik poda soglasje."
 
-#: includes/settings.php:259
-#: includes/settings.php:284
+#: includes/settings.php:261
+#: includes/settings.php:286
 msgid ""
 "<div class='input_information_content'>\n"
 "          Remember to include the explicit purpose (e.g., analytics, marketing) in the consent text to inform users why GTM is being used.</div>"
 msgstr "<div class='input_information_content'>Ne pozabite vključiti izrecnega namena (npr. analitika, marketing) v besedilo soglasja, da obvestite uporabnike, zakaj se uporablja GTM.</div>"
 
-#: includes/settings.php:1035
+#: includes/settings.php:1069
 msgid "Sign up now"
 msgstr "Prijavite se zdaj"
 
-#: includes/settings.php:993
+#: includes/settings.php:1027
 msgid "Explore How-To Guides, instructions, & tutorials to get the most from AesirX Consent Shield. Whether you're a developer or admin, find all you need to configure & optimize your privacy setup."
 msgstr "Raziščite navodila, navodila in vodiče za kar najboljše koristi od Ščita soglasja AesirX. Ne glede na to, ali ste razvijalec ali administrator, poiščite vse, kar potrebujete za konfiguracijo in optimizacijo nastavitev zasebnosti."
 
-#: includes/settings.php:341
+#: includes/settings.php:345
 msgid "Reset Consent"
 msgstr "Ponastavi soglasje"
 
-#: aesirx-consent.php:374
+#: aesirx-consent.php:379
 msgid "Important: Permalink Settings Required"
 msgstr "Pomembno: Potrebne nastavitve permalinka"
 
-#: includes/settings.php:2257
+#: includes/settings.php:2308
 msgid "Your trial license ends in %1$s hour(s). Please update your license <a href='%2$s' target='_blank'>here</a>."
 msgstr "Vaša poskusna licenca bo potekla čez %1$s uro(e). Prosimo, posodobite svojo licenco <a href='%2$s' target='_blank'>tukaj</a>."
 
 #. translators: 1: Permalink structure example, 2: Link to Permalink Settings page
-#: aesirx-consent.php:379
+#: aesirx-consent.php:384
 msgid ""
 "Our plugin requires that your site use a pretty permalink structure (for example, %1$s) to work correctly.\n"
 "                            It looks like your current settings are using the plain permalink format, which might cause issues.\n"
@@ -751,77 +750,76 @@ msgstr ""
 "                            Prosimo, %2$s za odprtje nastavitev permalinka.\n"
 "                            Ko ste tam, izberite možnost \"Ime objave\" (ali drugo prijazno strukturo permalinka) in kliknite \"Shrani spremembe.\""
 
-#: aesirx-consent.php:386
+#: aesirx-consent.php:391
 msgid "click here"
 msgstr "kliknite tukaj"
 
-#: includes/settings.php:299
+#: includes/settings.php:301
 msgid "GTM General"
 msgstr "Splošni GTM"
 
-#: includes/settings.php:2149
+#: includes/settings.php:2191
 msgid "Something went wrong: %1$s. Please contact the administrator."
 msgstr "Nekaj je šlo narobe: %1$s. Prosimo, obrnite se na administratorja."
 
-#: includes/settings.php:2233
+#: includes/settings.php:2283
 msgid "Check license failed: %1$s. Please contact the administrator or update your license."
 msgstr "Preverjanje licence ni uspelo: %1$s. Prosimo, obrnite se na administratorja ali posodobite svojo licenco."
 
-#: src/Mysql/StartFingerprint.php:59
+#: src/Mysql/StartFingerprint.php:63
 msgid "Check license failed: %1\\$s. Please contact the administrator."
 msgstr ""
 
-#: src/Mysql/StartFingerprint.php:47
-#: src/Mysql/StartFingerprint.php:66
+#: src/Mysql/StartFingerprint.php:50
+#: src/Mysql/StartFingerprint.php:70
 msgid "Your domain is not match with your license. Please update domain in your license"
 msgstr "Vaša domena se ne ujema z vašo licenco. Prosimo, posodobite domeno v svoji licenci"
 
-#: includes/settings.php:229
+#: includes/settings.php:231
 msgid "Decentralized Consent Mode"
 msgstr "Način decentraliziranega soglasja"
 
-#: includes/settings.php:704
+#: includes/settings.php:738
 msgid "GPC Compliance"
 msgstr "Skladnost GPC"
 
-#: includes/settings.php:717
+#: includes/settings.php:751
 msgid "Enable GPC Support"
 msgstr "Omogoči podporo GPC"
 
-#: includes/settings.php:725
+#: includes/settings.php:759
 msgid "Disable GPC Support"
 msgstr "Onemogoči podporo GPC"
 
-#: includes/settings.php:732
+#: includes/settings.php:766
 msgid "To comply with Global Privacy Control (GPC), please download and upload the following file:"
 msgstr "Za skladnost z Globalnim nadzorom zasebnosti (GPC) prosimo, da prenesete in naložite naslednjo datoteko:"
 
-#: includes/settings.php:735
+#: includes/settings.php:769
 msgid "Upload Instructions:"
 msgstr "Navodila za nalaganje:"
 
-#: includes/settings.php:737
+#: includes/settings.php:771
 msgid "Download the gpc.json file."
 msgstr "Prenesite datoteko gpc.json."
 
-#: includes/settings.php:738
+#: includes/settings.php:772
 msgid "Connect to your website via FTP or File Manager."
 msgstr "Povežite se s svojo spletno stranjo prek FTP ali Upravitelja datotek."
 
-#: includes/settings.php:739
+#: includes/settings.php:773
 msgid "Upload the file to: <code>/public_html/.well-known/gpc.json</code>"
 msgstr "Naložite datoteko na: <code>/public_html/.well-known/gpc.json</code>"
 
-#: includes/settings.php:740
+#: includes/settings.php:774
 msgid "Ensure the file is accessible by visiting: <a href='"
 msgstr "Prepričajte se, da je datoteka dostopna z obiskom: <a href='"
 
-#: includes/settings.php:366
-#: includes/settings.php:391
+#: includes/settings.php:397
 msgid "Reset Detail"
 msgstr "Ponastavi podrobnost"
 
-#: includes/settings.php:416
+#: includes/settings.php:423
 msgid "Reset Reject"
 msgstr "Ponastavi zavrnitev"
 
@@ -897,163 +895,163 @@ msgstr "Ne prodajajte ali delite mojih osebnih podatkov (CCPA)"
 msgid "Disables third-party data sharing for California users."
 msgstr "Onemogoča deljenje podatkov tretjih oseb za uporabnike iz Kalifornije."
 
-#: includes/settings.php:614
+#: includes/settings.php:648
 msgid "Configurable Consent Logic"
 msgstr "Konfigurabilna logika soglasja"
 
-#: includes/settings.php:627
+#: includes/settings.php:661
 msgid "Opt-In Mode (EU)"
 msgstr "Način izbirnega soglasja (EU)"
 
-#: includes/settings.php:628
+#: includes/settings.php:662
 msgid "No tracking technologies are activated until a user explicitly gives consent. This is required by <strong>GDPR</strong> and <strong>ePrivacy Directive 5(3)</strong>."
 msgstr "Nobena tehnologija sledenja ni aktivirana, dokler uporabnik izrecno ne poda soglasja. To je potrebno v skladu z <strong>GDPR</strong> in <strong>Direktivo o e-zasebnosti 5(3)</strong>."
 
-#: includes/settings.php:636
+#: includes/settings.php:670
 msgid "Opt-Out Mode (California)"
 msgstr "Način izstopa (Kalifornija)"
 
-#: includes/settings.php:637
+#: includes/settings.php:671
 msgid "Tracking is allowed by default, but users must be able to opt out easily. This aligns with <strong>CCPA</strong> and similar U.S. privacy frameworks."
 msgstr "Sledenje je privzeto dovoljeno, vendar morajo uporabniki imeti možnost, da enostavno izstopijo. To je v skladu z <strong>CCPA</strong> in podobnimi ameriškimi okviri zasebnosti."
 
-#: includes/settings.php:668
+#: includes/settings.php:702
 msgid "Do not sell or share options"
 msgstr "Ne prodajajte ali delite možnosti"
 
-#: includes/settings.php:681
-#: includes/settings.php:787
+#: includes/settings.php:715
+#: includes/settings.php:821
 msgid "Yes"
 msgstr "Da"
 
-#: includes/settings.php:689
-#: includes/settings.php:795
+#: includes/settings.php:723
+#: includes/settings.php:829
 msgid "No"
 msgstr "Ne"
 
-#: includes/settings.php:774
+#: includes/settings.php:808
 msgid "Enable Geo-handling for Consent Mode"
 msgstr "Omogoči geografsko obravnavo za način soglasja"
 
-#: includes/settings.php:810
+#: includes/settings.php:844
 msgid "Geo-Based Consent Rules"
 msgstr "Pravila soglasja na podlagi geografije"
 
-#: includes/settings.php:909
+#: includes/settings.php:943
 msgid "Browser Language"
 msgstr "Jezik brskalnika"
 
-#: includes/settings.php:910
-#: includes/settings.php:934
-#: includes/settings.php:951
+#: includes/settings.php:944
+#: includes/settings.php:968
+#: includes/settings.php:985
 msgid "Time Zone"
 msgstr "Časovni pas"
 
-#: includes/settings.php:924
+#: includes/settings.php:958
 msgid "Consent Mode"
 msgstr "Način soglasja"
 
-#: includes/settings.php:925
+#: includes/settings.php:959
 msgid "Allow Override"
 msgstr "Dovoli preglasitev"
 
-#: includes/settings.php:933
-#: includes/settings.php:950
+#: includes/settings.php:967
+#: includes/settings.php:984
 msgid "Language"
 msgstr "Jezik"
 
-#: includes/settings.php:936
-#: includes/settings.php:953
+#: includes/settings.php:970
+#: includes/settings.php:987
 msgid "Select Mode"
 msgstr "Izberite način"
 
-#: includes/settings.php:954
+#: includes/settings.php:988
 msgid "Override"
 msgstr "Prekliči"
 
-#: includes/settings.php:220
+#: includes/settings.php:222
 msgid "Default Consent Mode"
 msgstr "Privzeti način soglasja"
 
-#: includes/settings.php:224
+#: includes/settings.php:226
 msgid "Default Consent Mode improves Google Consent Mode 2.0 by not loading any tags until after consent is given, reducing compliance risks."
 msgstr "Privzeti način soglasja izboljšuje Google Način soglasja 2.0, saj ne nalaga nobenih oznak, dokler ni podano soglasje, s čimer zmanjšuje tveganja za neskladje."
 
-#: includes/settings.php:233
+#: includes/settings.php:235
 msgid "Decentralized Consent Mode setup improves Google Consent Mode 2.0 by not loading any scripts, beacons, or tags until after consent is given, reducing compliance risks. It also includes Decentralized Consent, for more control over personal data and rewards."
 msgstr "Nastavitev decentraliziranega načina soglasja izboljšuje Način soglasja 2.0 od Google, saj ne nalaga skriptov, svetilnikov ali oznak, dokler ni podano soglasje, kar zmanjšuje tveganje za neskladje. Prav tako vključuje decentralizirano soglasje za večji nadzor nad osebnimi podatki in nagradami."
 
-#: includes/settings.php:916
+#: includes/settings.php:950
 msgid "Choose how browser language and time zone are combined to determine consent rules:"
 msgstr "Izberite, kako se kombinirata jezik brskalnika in časovni pas za določanje pravil soglasja:"
 
-#: includes/settings.php:918
+#: includes/settings.php:952
 msgid "<strong>AND Logic (Stricter Match):</strong> Both language and time zone must match a region for its consent model to apply. Ideal for high-accuracy targeting."
 msgstr "<strong>Logika IN (strožje ujemanje):</strong> Tako jezik kot časovni pas se morata ujemati z regijo, da se uporabi njen model soglasja. Idealno za visoko-natančno ciljanje."
 
-#: includes/settings.php:919
+#: includes/settings.php:953
 msgid "<strong>OR Logic (More Flexible):</strong> Either language or time zone can match to apply a region’s consent model. Best for broader coverage based on user preferences."
 msgstr "<strong>Logika ALI (bolj prilagodljivo):</strong> Bodisi jezik ali časovni pas se lahko ujemata za uporabo modela soglasja regije. Najboljše za širšo pokritost na osnovi uporabniških preferenc."
 
-#: includes/settings.php:1030
+#: includes/settings.php:1064
 msgid "Manage License Here"
 msgstr "Upravljajte licenco tukaj"
 
-#: includes/settings.php:1780
+#: includes/settings.php:1822
 msgid "Generate"
 msgstr "Ustvari"
 
 #: aesirx-consent.php:121
-#: includes/settings.php:1863
+#: includes/settings.php:1905
 msgid "Cookie Declaration"
 msgstr "Izjava o piškotkih"
 
-#: includes/settings.php:1893
+#: includes/settings.php:1935
 msgid "Privacy Policy"
 msgstr "Politika zasebnosti"
 
-#: includes/settings.php:1923
+#: includes/settings.php:1965
 msgid "Consent Request"
 msgstr "Zahteva za soglasje"
 
-#: includes/settings.php:1787
+#: includes/settings.php:1829
 msgid "Domain Categorization"
 msgstr "Kategorizacija domene"
 
-#: includes/settings.php:2204
-#: includes/settings.php:2267
+#: includes/settings.php:2251
+#: includes/settings.php:2318
 msgid "You are using a lifetime license."
 msgstr "Uporabljate doživljenjsko licenco."
 
-#: includes/settings.php:2210
-#: includes/settings.php:2273
+#: includes/settings.php:2257
+#: includes/settings.php:2324
 msgid "year"
 msgid_plural "years"
 msgstr[0] "leto"
 msgstr[1] "leti"
 msgstr[2] "leta"
 
-#: includes/settings.php:2213
-#: includes/settings.php:2276
+#: includes/settings.php:2260
+#: includes/settings.php:2327
 msgid "month"
 msgid_plural "months"
 msgstr[0] "mesec"
 msgstr[1] "meseca"
 msgstr[2] "meseci"
 
-#: includes/settings.php:2216
-#: includes/settings.php:2279
+#: includes/settings.php:2263
+#: includes/settings.php:2330
 msgid "day"
 msgid_plural "days"
 msgstr[0] "dan"
 msgstr[1] "dni"
 msgstr[2] "dni"
 
-#: includes/settings.php:2221
+#: includes/settings.php:2268
 msgid "Your license ends in %1$s. Please update your license <a href='%2$s' target='_blank'>%2$s</a>."
 msgstr "Vaša licenca bo potekla čez %1$s. Prosimo, posodobite svojo licenco na <a href='%2$s' target='_blank'>%2$s</a>."
 
-#: includes/settings.php:2284
+#: includes/settings.php:2335
 msgid "Your trial license ends in %1$s. Please update your license <a href='%2$s' target='_blank'>%2$s</a>."
 msgstr "Vaša poskusna licenca bo potekla čez %1$s. Prosimo, posodobite svojo licenco na <a href='%2$s' target='_blank'>%"
 
@@ -1061,148 +1059,148 @@ msgstr "Vaša poskusna licenca bo potekla čez %1$s. Prosimo, posodobite svojo l
 msgid "User preferencese & site enhancements (e.g, language setting, live chat)."
 msgstr ""
 
-#: includes/settings.php:328
+#: includes/settings.php:330
 msgid "Customize Consent Management Text "
 msgstr ""
 
-#: includes/settings.php:378
+#: includes/settings.php:383
 msgid "Customize Details Text "
 msgstr ""
 
-#: includes/settings.php:403
+#: includes/settings.php:409
 msgid "Customize Reject Text "
 msgstr ""
 
-#: includes/settings.php:429
+#: includes/settings.php:436
 msgid "AesirX Consent Shield for Third-Party Plugins "
 msgstr ""
 
-#: includes/settings.php:1955
-#: includes/settings.php:2183
+#: includes/settings.php:1997
+#: includes/settings.php:2230
 msgid "Your license is expried or not found. Please update new license <a href='%1$s' target='_blank'>%1$s</a>."
 msgstr ""
 
-#: includes/settings.php:2190
+#: includes/settings.php:2237
 msgid "Your domain is not match with your license. Please update domain in your license <a href='%1$s' target='_blank'>%1$s</a> and click <span class='verify_domain'>here</span> to verify again."
 msgstr ""
 
-#: includes/settings.php:353
+#: includes/settings.php:357
 msgid "Customize Cookie Declaration Text"
 msgstr ""
 
-#: includes/settings.php:1065
-#: includes/settings.php:1391
+#: includes/settings.php:1099
+#: includes/settings.php:1429
 msgid "Age & Country Verification"
 msgstr ""
 
-#: includes/settings.php:1306
+#: includes/settings.php:1344
 msgid "This feature lets you restrict access by age or location using secure digital ID verification. Users without a wallet ID can create a Concordium ID with a passport or driver’s license. Verification uses zero-knowledge proofs, so the website never sees or stores personal details."
 msgstr ""
 
-#: includes/settings.php:1315
+#: includes/settings.php:1353
 msgid "Tick to require users to confirm their age using a digital ID stored in a wallet such as Concordium Wallet or Google Wallet (Note: Google Wallet support varies by region and ID type)."
 msgstr ""
 
-#: includes/settings.php:1327
+#: includes/settings.php:1365
 msgid "Tick to require users to confirm their country from their digital ID stored in a wallet such as Concordium Wallet or Google Wallet (Note: Google Wallet support varies by region and ID type)."
 msgstr ""
 
-#: includes/settings.php:1338
+#: includes/settings.php:1376
 msgid "Users must be at least this age to access."
 msgstr ""
 
-#: includes/settings.php:1350
+#: includes/settings.php:1388
 msgid "Users cannot be over this age to access."
 msgstr ""
 
-#: includes/settings.php:1362
-#: includes/settings.php:1376
+#: includes/settings.php:1400
+#: includes/settings.php:1414
 msgid "Only these countries can access (leave blank to allow all)."
 msgstr ""
 
-#: includes/settings.php:1386
+#: includes/settings.php:1424
 msgid "Message preview"
 msgstr ""
 
-#: includes/settings.php:1392
+#: includes/settings.php:1430
 msgid "Age Verification"
 msgstr ""
 
-#: includes/settings.php:1393
+#: includes/settings.php:1431
 msgid "Country Verification"
 msgstr ""
 
-#: includes/settings.php:1400
+#: includes/settings.php:1438
 msgid "You must be at least <span class='minimum_age_text'>%1$s</span> years old to access this content."
 msgstr ""
 
-#: includes/settings.php:1406
+#: includes/settings.php:1444
 msgid "Access is limited to users under <span class='maximum_age_text'>%1$s</span> years."
 msgstr ""
 
-#: includes/settings.php:1412
+#: includes/settings.php:1450
 msgid "To access this content, you must be from <span class='allow_country_text'>%1$s</span>."
 msgstr ""
 
-#: includes/settings.php:1418
+#: includes/settings.php:1456
 msgid "Access is excluded to users from <span class='disallow_country_text'>%1$s</span>."
 msgstr ""
 
-#: includes/settings.php:1433
+#: includes/settings.php:1471
 msgid "Verification is done using your digital ID stored in a secure wallet of your choice – your personal details are encrypted & never stored or shared. If you don’t have a wallet ID, you can create one now."
 msgstr ""
 
-#: includes/settings.php:1439
+#: includes/settings.php:1477
 msgid "Cancel"
 msgstr ""
 
-#: includes/settings.php:1444
+#: includes/settings.php:1482
 msgid "Continue to Verification"
 msgstr ""
 
-#: includes/settings.php:1790
+#: includes/settings.php:1832
 msgid "This draft was automatically generated based on real scan data from your website and identifies third-party domains, cookies, and beacons used, categorized by purpose."
 msgstr ""
 
-#: includes/settings.php:1794
-#: includes/settings.php:1870
-#: includes/settings.php:1900
-#: includes/settings.php:1930
+#: includes/settings.php:1836
+#: includes/settings.php:1912
+#: includes/settings.php:1942
+#: includes/settings.php:1972
 msgid "Please review and adjust the content to make sure it reflects your actual data practices before publishing."
 msgstr ""
 
-#: includes/settings.php:1832
+#: includes/settings.php:1874
 msgid "Enable AI Auto-Blocking"
 msgstr ""
 
-#: includes/settings.php:1843
-#: includes/settings.php:1889
-#: includes/settings.php:1919
-#: includes/settings.php:1949
+#: includes/settings.php:1885
+#: includes/settings.php:1931
+#: includes/settings.php:1961
+#: includes/settings.php:1991
 msgid "Regenerate"
 msgstr ""
 
-#: includes/settings.php:1866
+#: includes/settings.php:1908
 msgid "This draft was automatically generated based on real scan data from your website and lists the cookies and tracking technologies detected."
 msgstr ""
 
-#: includes/settings.php:1874
+#: includes/settings.php:1916
 msgid "For full setup instructions: <a href='%1$s' target='_blank'>AesirX CMP Guide: How to Generate a Cookie Declaration with AI</a>."
 msgstr ""
 
-#: includes/settings.php:1896
+#: includes/settings.php:1938
 msgid "This draft was automatically generated based on real scan data from your website and outlines the data collection and processing activities detected."
 msgstr ""
 
-#: includes/settings.php:1904
+#: includes/settings.php:1946
 msgid "For full setup instructions: <a href='%1$s' target='_blank'>AesirX CMP Guide: How to Generate a Privacy Policy with AI</a>."
 msgstr ""
 
-#: includes/settings.php:1926
+#: includes/settings.php:1968
 msgid "This draft was automatically generated based on real scan data from your website and provides a consent message tailored to the technologies and data flows detected."
 msgstr ""
 
-#: includes/settings.php:1934
+#: includes/settings.php:1976
 msgid "For full setup instructions: AesirX CMP Guide: How to Generate Consent Request Text with AI"
 msgstr ""
 
@@ -1212,4 +1210,8 @@ msgstr ""
 
 #: includes/settings.php:342
 msgid "Always link your own website's Privacy Policy, not the AesirX example"
+msgstr ""
+
+#: includes/settings.php:2280
+msgid "Unknown error"
 msgstr ""
