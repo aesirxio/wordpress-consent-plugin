@@ -55,11 +55,45 @@ jQuery(document).ready(async function ($) {
   Additions: Explicit mention and inclusion of beacons and tracking pixels. Add a draft disclaimer in the generated policy. Ensure third-party data sharing is addressed, with optional placeholder to list vendors. Highlight user rights under GDPR/CCPA. Remove phone number since don't need it.
   `;
   const consent_request_prompt = `
-  You are a privacy user experience expert specializing in global privacy compliance (GDPR, ePrivacy, CCPA). Generate a clear, user-friendly consent request message for a website. The message must explain cookie usage, mention beacons/tracking pixels, and clearly state which data types are collected before and after consent.
-  Do not include buttons or UI - just the message. Ensure that the user understands: Types of tracking technologies used (cookies + beacons), The purpose and legal basis for their use, The user’s ability to control or withdraw consent, Links to Privacy Policy and Cookie Declaration (assume they exist as WP pages).
-  ${JSON.stringify(cookieData, null, 2)}
-  Additions: Introduce beacons in the message (same category as cookies but separately acknowledged). Include language like: “We also use technologies like beacons and tracking pixels to measure engagement and improve services.”, Add placeholder link text: “You can read more in our [Privacy Policy] and [Cookie Declaration].”
-  `;
+    You are a privacy user experience expert specializing in GDPR, ePrivacy, and CCPA. Generate a SHORT, clear consent text for a website based on the scan results provided in JSON.
+    Input JSON: ${JSON.stringify(cookieData, null, 2)}
+    The text must answer exactly these 3 questions, in this order:
+      1. What are we tracking?
+      2. Why are we tracking it (purpose)?
+      3. Who do we share the data with / who provides the tools?
+    Global rules:
+      - 140-180 words.
+      - Plain language, privacy-first.
+      - Output as a single paragraph with no line breaks. Do not format as a list.
+      - Do not include buttons or UI.
+      - Do not use the words “may”, “might”, “can”, “could” when describing tracking after consent. Use present tense: “we use…”, “we load…”
+      - State that consent can be given and revoked on a granular basis by customizing the settings.
+      - Do not mention or hint that a scanner, scan, detection script, or technical inspection was used. Describe tracking as part of the site’s normal operation.
+      - Always end with: “You can read more in our [Privacy Policy] and [Cookie Declaration].”
+      - Use only what is present or clearly inferable from the input lists.
+    Logic:
+      A) If BOTH cookies_post_consent and beacons_post_consent are empty:
+      Write a necessary/functional-only consent text, for example:
+        “We use cookies and similar technologies that are necessary to operate and secure this website. These are first-party or essential services only. We do not load analytics or marketing tools without your consent. Data is processed by us and, where needed, by our hosting/technical service providers. You can change your choice at any time, and you can do it granularly by customizing the settings. You can read more in our [Privacy Policy] and [Cookie Declaration].”
+      If cookies_pre_consent or beacons_pre_consent have entries, mention they are used only for essential / first-party operation.
+      B) If EITHER cookies_post_consent OR beacons_post_consent is non-empty:
+        1. Pre-consent statement
+          - “Before you give consent, we use only the cookies and technologies needed for this site to work, including essential first-party items.”
+        2. Post-consent statement (deterministic, no ‘may’)
+          - “After you give consent, we load additional tracking used on this site to keep it functional, understand where visitors come from, measure visits and site performance, and display embedded content.”
+        3. Provider naming – safe mapping
+          - If domain contains pixel.wp.com or stats.wp.com → call it “WordPress/Automattic statistics services”.
+          - If domain contains youtube → call it “YouTube no-cookie delivery” or “YouTube video delivery (no-cookie mode)”.
+          - If cookie name starts with sbjs_ → call it “source and campaign attribution cookies”.
+          - If domain contains google → call it “Google measurement services”.
+          - If domain contains facebook / meta / doubleclick → call it “Meta/advertising services”.
+          - For all other domains/names that cannot be confidently classified, end with: “and selected service providers.”
+        4. “Who” sentence
+          - Name the identifiable providers from the domains/cookie names in the input, then close with: “and selected service providers.”
+        5. Control sentence
+          - “You can change or withdraw your consent at any time, and you can do it granularly by customizing the settings.”
+        6. Links
+          - “You can read more in our [Privacy Policy] and [Cookie Declaration].”`;
 
   let pluginItems = [];
 
