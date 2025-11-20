@@ -28,6 +28,18 @@ function moveAnalyticJSTask() {
     .pipe(rename('consent.js'))
     .pipe(gulp.dest(`${dist}/plugins/aesirx-consent/assets/vendor`));
 }
+function moveAnalyticVerifyJSTask() {
+  return gulp
+    .src(['./node_modules/aesirx-consent/dist/consent-verify.js'])
+    .pipe(rename('consent-verify.js'))
+    .pipe(gulp.dest(`${dist}/plugins/aesirx-consent/assets/vendor`));
+}
+function moveAnalyticSimpleJSTask() {
+  return gulp
+    .src(['./node_modules/aesirx-consent/dist/consent-simple.js'])
+    .pipe(rename('consent-simple.js'))
+    .pipe(gulp.dest(`${dist}/plugins/aesirx-consent/assets/vendor`));
+}
 
 function moveRepeatableFieldsJSTask() {
   return gulp
@@ -110,6 +122,8 @@ exports.zip = series(
   cleanTask,
   movePluginFolderTask,
   moveAnalyticJSTask,
+  moveAnalyticVerifyJSTask,
+  moveAnalyticSimpleJSTask,
   moveRepeatableFieldsJSTask,
   moveGeoJSTask,
   moveVerifyJSTask,
@@ -133,6 +147,8 @@ exports.watch = function () {
     series(
       movePluginFolderTask,
       moveAnalyticJSTask,
+      moveAnalyticVerifyJSTask,
+      moveAnalyticSimpleJSTask,
       moveRepeatableFieldsJSTask,
       moveGeoJSTask,
       moveVerifyJSTask,
