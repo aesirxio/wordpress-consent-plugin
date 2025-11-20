@@ -32,7 +32,32 @@ require_once plugin_dir_path(__FILE__) . 'includes/settings.php';
 include_once(ABSPATH . 'wp-admin/includes/plugin.php');
 
 add_action('wp_enqueue_scripts', function (): void {
-    wp_register_script('aesirx-consent', plugins_url('assets/vendor/consent.js', __FILE__), [], '2.0.22',  array(
+    $options = get_option('aesirx_analytics_plugin_options');
+    $optionsConsentVerify = get_option('aesirx_consent_verify_plugin_options', []);
+    $template = get_option('aesirx_consent_modal_plugin_options', []);
+
+    $datastream_template = $template['datastream_template'] ?? '';
+    $minimumAge = isset($optionsConsentVerify['minimum_age']) ? (int)$optionsConsentVerify['minimum_age'] : 0;
+    $maximumAge = isset($optionsConsentVerify['maximum_age']) ? (int)$optionsConsentVerify['maximum_age'] : 0;
+    $ageCheck = (isset($optionsConsentVerify['age_check']) && $optionsConsentVerify['age_check'] === 'ageCheck')
+    ? (($minimumAge > 0 || $maximumAge > 0) ? 1 : 0)
+    : 0;
+    $allowedCountries = $optionsConsentVerify['allowed_countries'] ?? [];
+    $disallowedCountries = $optionsConsentVerify['disallowed_countries'] ?? [];
+    $countryCheck = (isset($optionsConsentVerify['country_check']) && $optionsConsentVerify['country_check'] === 'countryCheck')
+            ? ((!empty($allowedCountries) || !empty($disallowedCountries)) ? 1 : 0)
+            : 0;
+
+    if ($ageCheck || $countryCheck) {
+        $scriptFile = 'assets/vendor/consent-verify.js';
+    } elseif ($datastream_template === 'simple-consent-mode') {
+        $scriptFile = 'assets/vendor/consent-simple.js';
+    };
+    if ($datastream_template !== 'simple-consent-mode') {
+        $scriptFile = 'assets/vendor/consent.js';
+    }
+
+    wp_register_script('aesirx-consent', plugins_url($scriptFile, __FILE__), [], '2.0.22',  array(
         'in_footer' => false,
     ));
     $translation_array = array(
@@ -123,8 +148,6 @@ add_action('wp_enqueue_scripts', function (): void {
     wp_localize_script( 'aesirx-consent', 'aesirx_analytics_translate', $translation_array );
     wp_enqueue_script('aesirx-consent');
 
-    $options = get_option('aesirx_analytics_plugin_options');
-
     $domain =
         ($options['storage'] ?? 'internal') === 'internal'
             ? get_bloginfo('url')
@@ -202,17 +225,6 @@ add_action('wp_enqueue_scripts', function (): void {
     }
     $geoRules =  $configGeoHandling ? transformGeoOptions($optionsGEO) : null;
 
-    $optionsConsentVerify = get_option('aesirx_consent_verify_plugin_options', []);
-    $minimumAge = isset($optionsConsentVerify['minimum_age']) ? (int)$optionsConsentVerify['minimum_age'] : 0;
-    $maximumAge = isset($optionsConsentVerify['maximum_age']) ? (int)$optionsConsentVerify['maximum_age'] : 0;
-    $ageCheck = (isset($optionsConsentVerify['age_check']) && $optionsConsentVerify['age_check'] === 'ageCheck')
-    ? (($minimumAge > 0 || $maximumAge > 0) ? 1 : 0)
-    : 0;
-    $allowedCountries = $optionsConsentVerify['allowed_countries'] ?? [];
-    $disallowedCountries = $optionsConsentVerify['disallowed_countries'] ?? [];
-    $countryCheck = (isset($optionsConsentVerify['country_check']) && $optionsConsentVerify['country_check'] === 'countryCheck')
-            ? ((!empty($allowedCountries) || !empty($disallowedCountries)) ? 1 : 0)
-            : 0;
             
     wp_add_inline_script(
         'aesirx-consent',
