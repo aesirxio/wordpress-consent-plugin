@@ -57,7 +57,7 @@ add_action('wp_enqueue_scripts', function (): void {
         $scriptFile = 'assets/vendor/consent.js';
     }
 
-    wp_register_script('aesirx-consent', plugins_url($scriptFile, __FILE__), [], '2.0.22',  array(
+    wp_register_script('aesirx-consent', plugins_url($scriptFile, __FILE__), [], '2.0.23',  array(
         'in_footer' => false,
     ));
     $translation_array = array(
