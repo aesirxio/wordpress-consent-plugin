@@ -309,7 +309,7 @@ msgstr "管理您的同意偏好設定"
 
 #: aesirx-consent.php:55
 #: includes/settings.php:2054
-msgid "Choose how we use your data: \"Reject\" data collection, allow tracking [\"Consent\"], or use \"Decentralized Consent\" for more control over your personal data & rewards."
+msgid "Choose how we use your data: \"Reject\" data collection, allow tracking [\"Consent\"], or use \"Decentralized Consent\" for more control over your personal data."
 msgstr "選擇我們如何使用您的數據：「拒絕」數據收集，允許追蹤 [「同意」]，或使用「去中心化同意」以更好地控制您的個人數據和獎勵。"
 
 #: aesirx-consent.php:56
@@ -957,7 +957,7 @@ msgid "Default Consent Mode improves Google Consent Mode 2.0 by not loading any 
 msgstr "預設同意模式透過在給予同意之前不載入任何標籤來改善 Google Consent Mode 2.0，降低合規風險。"
 
 #: includes/settings.php:235
-msgid "Decentralized Consent Mode setup improves Google Consent Mode 2.0 by not loading any scripts, beacons, or tags until after consent is given, reducing compliance risks. It also includes Decentralized Consent, for more control over personal data and rewards."
+msgid "Decentralized Consent Mode setup improves Google Consent Mode 2.0 by not loading any scripts, beacons, or tags until after consent is given, reducing compliance risks. It also includes Decentralized Consent, for more control over personal data."
 msgstr "去中心化同意模式設定通過在給予同意之前不載入任何腳本、信標或標籤來改善 Google Consent Mode 2.0，降低合規風險。它還包括去中心化同意，以便更好地控制個人數據和獎勵。"
 
 #: includes/settings.php:950

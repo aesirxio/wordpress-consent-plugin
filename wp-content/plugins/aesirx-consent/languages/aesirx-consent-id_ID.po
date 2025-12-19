@@ -309,7 +309,7 @@ msgstr "Kelola preferensi persetujuan Anda"
 
 #: aesirx-consent.php:55
 #: includes/settings.php:2054
-msgid "Choose how we use your data: \"Reject\" data collection, allow tracking [\"Consent\"], or use \"Decentralized Consent\" for more control over your personal data & rewards."
+msgid "Choose how we use your data: \"Reject\" data collection, allow tracking [\"Consent\"], or use \"Decentralized Consent\" for more control over your personal data."
 msgstr "Pilih bagaimana kami menggunakan data Anda: 'Tolak' pengumpulan data, izinkan pelacakan ['Persetujuan'], atau gunakan 'Persetujuan Terdesentralisasi' untuk lebih mengontrol data pribadi dan hadiah Anda."
 
 #: aesirx-consent.php:56
@@ -995,7 +995,7 @@ msgid "Default Consent Mode improves Google Consent Mode 2.0 by not loading any 
 msgstr "Mode Persetujuan Default menyempurnakan Mode Persetujuan Google 2.0 dengan tidak memuat tag apa pun hingga setelah persetujuan diberikan, sehingga mengurangi risiko kepatuhan."
 
 #: includes/settings.php:235
-msgid "Decentralized Consent Mode setup improves Google Consent Mode 2.0 by not loading any scripts, beacons, or tags until after consent is given, reducing compliance risks. It also includes Decentralized Consent, for more control over personal data and rewards."
+msgid "Decentralized Consent Mode setup improves Google Consent Mode 2.0 by not loading any scripts, beacons, or tags until after consent is given, reducing compliance risks. It also includes Decentralized Consent, for more control over personal data."
 msgstr "Penyiapan Mode Persetujuan Terdesentralisasi menyempurnakan Mode Persetujuan Google 2.0 dengan tidak memuat skrip, suar, atau tag apa pun hingga setelah persetujuan diberikan, sehingga mengurangi risiko kepatuhan. Mode ini juga mencakup Persetujuan Terdesentralisasi, untuk kontrol lebih besar atas data pribadi dan hadiah."
 
 #: includes/settings.php:950

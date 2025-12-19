@@ -36,7 +36,16 @@ Class AesirX_Analytics_Get_Total_Consent_Region extends AesirxAnalyticsMysqlHelp
             ORDER BY
                 visitor.timezone, visitor.lang";
 
-        $total_sql = "";
+        $total_sql = "
+            SELECT COUNT(*) FROM (
+                SELECT 1
+                FROM `#__analytics_visitors` visitor
+                JOIN `#__analytics_visitor_consent` category_consent
+                    ON visitor.uuid = category_consent.visitor_uuid
+                WHERE " . implode(" AND ", $where_clause_2) . "
+                GROUP BY visitor.timezone, visitor.lang
+            ) AS total_table
+        ";
 
         // $sort = self::aesirx_analytics_add_sort($params, ["date", "total"], "date");
 

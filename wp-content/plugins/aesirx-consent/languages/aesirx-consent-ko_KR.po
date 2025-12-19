@@ -309,7 +309,7 @@ msgstr "동의 선호 설정 관리"
 
 #: aesirx-consent.php:55
 #: includes/settings.php:2054
-msgid "Choose how we use your data: \"Reject\" data collection, allow tracking [\"Consent\"], or use \"Decentralized Consent\" for more control over your personal data & rewards."
+msgid "Choose how we use your data: \"Reject\" data collection, allow tracking [\"Consent\"], or use \"Decentralized Consent\" for more control over your personal data."
 msgstr "데이터 사용 방식을 선택하세요: 데이터 수집 '거부', 추적 허용 ['동의'], 또는 '분산 동의'를 사용하여 개인 데이터 및 보상에 대한 더 많은 제어를 할 수 있습니다."
 
 #: aesirx-consent.php:56
@@ -995,7 +995,7 @@ msgid "Default Consent Mode improves Google Consent Mode 2.0 by not loading any 
 msgstr "기본 동의 모드는 동의가 제공될 때까지 태그를 로드하지 않아 규정 준수 위험을 줄임으로써 Google 동의 모드 2.0을 개선합니다."
 
 #: includes/settings.php:235
-msgid "Decentralized Consent Mode setup improves Google Consent Mode 2.0 by not loading any scripts, beacons, or tags until after consent is given, reducing compliance risks. It also includes Decentralized Consent, for more control over personal data and rewards."
+msgid "Decentralized Consent Mode setup improves Google Consent Mode 2.0 by not loading any scripts, beacons, or tags until after consent is given, reducing compliance risks. It also includes Decentralized Consent, for more control over personal data."
 msgstr "탈중앙화 동의 모드 설정은 동의가 제공될 때까지 스크립트, 비콘 또는 태그를 로드하지 않아 규정 준수 위험을 줄임으로써 Google 동의 모드 2.0을 개선합니다. 또한 개인 데이터 및 보상에 대한 제어력을 강화하기 위한 탈중앙화 동의 기능이 포함되어 있습니다."
 
 #: includes/settings.php:950

@@ -309,7 +309,7 @@ msgstr "Kezelje a hozzájárulási beállításait"
 
 #: aesirx-consent.php:55
 #: includes/settings.php:2054
-msgid "Choose how we use your data: \"Reject\" data collection, allow tracking [\"Consent\"], or use \"Decentralized Consent\" for more control over your personal data & rewards."
+msgid "Choose how we use your data: \"Reject\" data collection, allow tracking [\"Consent\"], or use \"Decentralized Consent\" for more control over your personal data."
 msgstr "Válassza ki, hogyan használjuk az adatait: 'Elutasítás' adatgyűjtés, nyomon követés engedélyezése ['Hozzájárulás'], vagy használja a 'Decentralizált Hozzájárulást' a személyes adatai és jutalmai feletti nagyobb ellenőrzés érdekében."
 
 #: aesirx-consent.php:56
@@ -995,7 +995,7 @@ msgid "Default Consent Mode improves Google Consent Mode 2.0 by not loading any 
 msgstr "Az alapértelmezett beleegyezési mód javítja a Google Consent Mode 2.0-t azáltal, hogy nem tölt be egyetlen címkét sem a hozzájárulás megadása után, így csökkenti a megfelelőségi kockázatokat."
 
 #: includes/settings.php:235
-msgid "Decentralized Consent Mode setup improves Google Consent Mode 2.0 by not loading any scripts, beacons, or tags until after consent is given, reducing compliance risks. It also includes Decentralized Consent, for more control over personal data and rewards."
+msgid "Decentralized Consent Mode setup improves Google Consent Mode 2.0 by not loading any scripts, beacons, or tags until after consent is given, reducing compliance risks. It also includes Decentralized Consent, for more control over personal data."
 msgstr "A decentralizált hozzájárulási mód beállítása javítja a Google Consent Mode 2.0-t azáltal, hogy nem tölt be semmilyen szkriptet, jelzőt vagy címkét a hozzájárulás megadása után, csökkentve ezzel a megfelelőségi kockázatokat. Tartalmazza a decentralizált hozzájárulást is a személyes adatok és a jutalmak feletti jobb ellenőrzés érdekében."
 
 #: includes/settings.php:950

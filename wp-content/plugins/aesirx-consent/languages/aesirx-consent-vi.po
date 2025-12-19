@@ -309,7 +309,7 @@ msgstr "Quản lý Tùy chọn Đồng ý của Bạn"
 
 #: aesirx-consent.php:55
 #: includes/settings.php:2054
-msgid "Choose how we use your data: \"Reject\" data collection, allow tracking [\"Consent\"], or use \"Decentralized Consent\" for more control over your personal data & rewards."
+msgid "Choose how we use your data: \"Reject\" data collection, allow tracking [\"Consent\"], or use \"Decentralized Consent\" for more control over your personal data."
 msgstr "Chọn cách chúng tôi sử dụng dữ liệu của bạn: 'Từ chối' thu thập dữ liệu, cho phép theo dõi ['Đồng ý'], hoặc sử dụng 'Sự Đồng Ý Phân Tán' để có nhiều quyền kiểm soát hơn đối với dữ liệu cá nhân & phần thưởng của bạn."
 
 #: aesirx-consent.php:56
@@ -995,7 +995,7 @@ msgid "Default Consent Mode improves Google Consent Mode 2.0 by not loading any 
 msgstr "Chế độ đồng ý mặc định cải thiện Chế độ đồng ý 2.0 của Google bằng cách không tải bất kỳ thẻ nào cho đến khi đồng ý được đưa ra, giảm rủi ro tuân thủ."
 
 #: includes/settings.php:235
-msgid "Decentralized Consent Mode setup improves Google Consent Mode 2.0 by not loading any scripts, beacons, or tags until after consent is given, reducing compliance risks. It also includes Decentralized Consent, for more control over personal data and rewards."
+msgid "Decentralized Consent Mode setup improves Google Consent Mode 2.0 by not loading any scripts, beacons, or tags until after consent is given, reducing compliance risks. It also includes Decentralized Consent, for more control over personal data."
 msgstr "Thiết lập Chế độ đồng ý phi tập trung cải thiện Chế độ đồng ý 2.0 của Google bằng cách không tải bất kỳ tập lệnh, đèn hiệu hoặc thẻ nào cho đến khi đồng ý được đưa ra, giảm rủi ro tuân thủ. Nó cũng bao gồm Đồng ý phi tập trung, để kiểm soát nhiều hơn đối với dữ liệu cá nhân và phần thưởng."
 
 #: includes/settings.php:950

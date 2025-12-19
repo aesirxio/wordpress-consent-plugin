@@ -309,7 +309,7 @@ msgstr "إدارة تفضيلات موافقتك"
 
 #: aesirx-consent.php:55
 #: includes/settings.php:2054
-msgid "Choose how we use your data: \"Reject\" data collection, allow tracking [\"Consent\"], or use \"Decentralized Consent\" for more control over your personal data & rewards."
+msgid "Choose how we use your data: \"Reject\" data collection, allow tracking [\"Consent\"], or use \"Decentralized Consent\" for more control over your personal data."
 msgstr "اختر كيفية استخدام بياناتك: 'رفض' جمع البيانات، السماح بالتتبع ['الموافقة']، أو استخدم 'الموافقة اللامركزية' لمزيد من السيطرة على بياناتك الشخصية والمكافآت."
 
 #: aesirx-consent.php:56
@@ -995,7 +995,7 @@ msgid "Default Consent Mode improves Google Consent Mode 2.0 by not loading any 
 msgstr "يُحسّن وضع الموافقة الافتراضي وضع موافقة جوجل 2.0 من خلال عدم تحميل أي علامات إلا بعد منح الموافقة، مما يُقلل من مخاطر الامتثال."
 
 #: includes/settings.php:235
-msgid "Decentralized Consent Mode setup improves Google Consent Mode 2.0 by not loading any scripts, beacons, or tags until after consent is given, reducing compliance risks. It also includes Decentralized Consent, for more control over personal data and rewards."
+msgid "Decentralized Consent Mode setup improves Google Consent Mode 2.0 by not loading any scripts, beacons, or tags until after consent is given, reducing compliance risks. It also includes Decentralized Consent, for more control over personal data."
 msgstr "يُحسّن إعداد وضع الموافقة اللامركزية وضع موافقة جوجل 2.0 من خلال عدم تحميل أي نصوص برمجية أو إشارات أو علامات إلا بعد منح الموافقة، مما يُقلل من مخاطر الامتثال. كما يتضمن الموافقة اللامركزية لمزيد من التحكم في البيانات الشخصية والمكافآت."
 
 #: includes/settings.php:950

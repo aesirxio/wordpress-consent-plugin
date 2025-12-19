@@ -309,7 +309,7 @@ msgstr "Hallitse suostumusasetuksiasi"
 
 #: aesirx-consent.php:55
 #: includes/settings.php:2054
-msgid "Choose how we use your data: \"Reject\" data collection, allow tracking [\"Consent\"], or use \"Decentralized Consent\" for more control over your personal data & rewards."
+msgid "Choose how we use your data: \"Reject\" data collection, allow tracking [\"Consent\"], or use \"Decentralized Consent\" for more control over your personal data."
 msgstr "Valitse, miten käytämme tietojasi: 'Hylkää' tietojen keruu, salli seuranta ['Suostumus'], tai käytä 'Hajautettua Suostumusta' saadaksesi enemmän hallintaa henkilökohtaisiin tietoihisi ja palkkioihisi."
 
 #: aesirx-consent.php:56
@@ -995,7 +995,7 @@ msgid "Default Consent Mode improves Google Consent Mode 2.0 by not loading any 
 msgstr "Oletussuostumustila parantaa Google Consent Mode 2.0:aa lataamalla tunnisteita vasta suostumuksen antamisen jälkeen, mikä vähentää vaatimustenmukaisuusriskejä."
 
 #: includes/settings.php:235
-msgid "Decentralized Consent Mode setup improves Google Consent Mode 2.0 by not loading any scripts, beacons, or tags until after consent is given, reducing compliance risks. It also includes Decentralized Consent, for more control over personal data and rewards."
+msgid "Decentralized Consent Mode setup improves Google Consent Mode 2.0 by not loading any scripts, beacons, or tags until after consent is given, reducing compliance risks. It also includes Decentralized Consent, for more control over personal data."
 msgstr "Hajautetun suostumustilan määritys parantaa Google Consent Mode 2.0:aa, koska se ei lataa komentosarjoja, majakoita tai tageja ennen kuin suostumus on annettu, mikä vähentää vaatimustenmukaisuusriskejä. Se sisältää myös hajautetun suostumuksen, jonka avulla voit hallita paremmin henkilötietoja ja palkintoja."
 
 #: includes/settings.php:950

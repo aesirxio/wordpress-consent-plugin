@@ -309,7 +309,7 @@ msgstr "同意の設定を管理する"
 
 #: aesirx-consent.php:55
 #: includes/settings.php:2054
-msgid "Choose how we use your data: \"Reject\" data collection, allow tracking [\"Consent\"], or use \"Decentralized Consent\" for more control over your personal data & rewards."
+msgid "Choose how we use your data: \"Reject\" data collection, allow tracking [\"Consent\"], or use \"Decentralized Consent\" for more control over your personal data."
 msgstr "あなたのデータの使用方法を選択してください：データ収集を「拒否」、トラッキングを許可（「同意」）、または「分散型同意」を使用して個人データと報酬のコントロールを強化します。"
 
 #: aesirx-consent.php:56
@@ -995,7 +995,7 @@ msgid "Default Consent Mode improves Google Consent Mode 2.0 by not loading any 
 msgstr "デフォルトの同意モードは、同意が得られるまでタグを読み込まないことでGoogle同意モード2.0を改良し、コンプライアンスリスクを軽減します。"
 
 #: includes/settings.php:235
-msgid "Decentralized Consent Mode setup improves Google Consent Mode 2.0 by not loading any scripts, beacons, or tags until after consent is given, reducing compliance risks. It also includes Decentralized Consent, for more control over personal data and rewards."
+msgid "Decentralized Consent Mode setup improves Google Consent Mode 2.0 by not loading any scripts, beacons, or tags until after consent is given, reducing compliance risks. It also includes Decentralized Consent, for more control over personal data."
 msgstr "分散型同意モードの設定は、同意が得られるまでスクリプト、ビーコン、タグを読み込まないことでGoogle同意モード2.0を改良し、コンプライアンスリスクを軽減します。また、個人データとリワードをより細かく制御できる分散型同意も含まれています。"
 
 #: includes/settings.php:950

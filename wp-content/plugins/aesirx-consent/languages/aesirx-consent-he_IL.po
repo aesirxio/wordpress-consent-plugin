@@ -309,7 +309,7 @@ msgstr "נהל את העדפות ההסכמה שלך"
 
 #: aesirx-consent.php:55
 #: includes/settings.php:2054
-msgid "Choose how we use your data: \"Reject\" data collection, allow tracking [\"Consent\"], or use \"Decentralized Consent\" for more control over your personal data & rewards."
+msgid "Choose how we use your data: \"Reject\" data collection, allow tracking [\"Consent\"], or use \"Decentralized Consent\" for more control over your personal data."
 msgstr "בחר כיצד אנו משתמשים בנתונים שלך: 'דחה' איסוף נתונים, אפשר מעקב ['הסכמה'], או השתמש ב'הסכמה מבוזרת' לשליטה רבה יותר על הנתונים האישיים והתגמולים שלך."
 
 #: aesirx-consent.php:56
@@ -995,7 +995,7 @@ msgid "Default Consent Mode improves Google Consent Mode 2.0 by not loading any 
 msgstr "מצב הסכמה ברירת מחדל משפר את מצב ההסכמה של Google 2.0 על ידי אי טעינת תגים כלשהם עד לאחר מתן הסכמה, מה שמפחית את סיכוני הציות."
 
 #: includes/settings.php:235
-msgid "Decentralized Consent Mode setup improves Google Consent Mode 2.0 by not loading any scripts, beacons, or tags until after consent is given, reducing compliance risks. It also includes Decentralized Consent, for more control over personal data and rewards."
+msgid "Decentralized Consent Mode setup improves Google Consent Mode 2.0 by not loading any scripts, beacons, or tags until after consent is given, reducing compliance risks. It also includes Decentralized Consent, for more control over personal data."
 msgstr "הגדרת מצב הסכמה מבוזר משפרת את מצב ההסכמה של Google 2.0 על ידי אי טעינת סקריפטים, משואות או תגים עד לאחר מתן הסכמה, מה שמפחית את סיכוני התאימות. זה כולל גם הסכמה מבוזרת, לשליטה רבה יותר על נתונים אישיים ותגמולים."
 
 #: includes/settings.php:950

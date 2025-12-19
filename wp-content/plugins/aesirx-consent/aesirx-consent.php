@@ -3,7 +3,7 @@
  * Plugin Name: AesirX Consent
  * Plugin URI: https://analytics.aesirx.io?utm_source=wpplugin&utm_medium=web&utm_campaign=wordpress&utm_id=aesirx&utm_term=wordpress&utm_content=analytics
  * Description: Aesirx Consent plugin. When you join forces with AesirX, you're not just becoming a Partner - you're also becoming a freedom fighter in the battle for privacy! Earn 25% Affiliate Commission <a href="https://aesirx.io/partner?utm_source=wpplugin&utm_medium=web&utm_campaign=wordpress&utm_id=aesirx&utm_term=wordpress&utm_content=analytics">[Click to Join]</a>
- * Version: 2.0.2
+ * Version: 2.0.3
  * Author: aesirx.io
  * Author URI: https://aesirx.io/
  * Domain Path: /languages
@@ -57,7 +57,7 @@ add_action('wp_enqueue_scripts', function (): void {
         $scriptFile = 'assets/vendor/consent.js';
     }
 
-    wp_register_script('aesirx-consent', plugins_url($scriptFile, __FILE__), [], '2.0.23',  array(
+    wp_register_script('aesirx-consent', plugins_url($scriptFile, __FILE__), [], '2.0.3',  array(
         'in_footer' => false,
     ));
     $translation_array = array(
@@ -77,7 +77,7 @@ add_action('wp_enqueue_scripts', function (): void {
         'txt_detail' => __( 'Details', 'aesirx-consent' ),
         'txt_change_consent' => __( 'Decentralized Consent', 'aesirx-consent' ),
         'txt_manage_your_consent' => __( 'Manage Your Consent Preferences', 'aesirx-consent' ),
-        'txt_choose_how_we_use' => __( 'Choose how we use your data: "Reject" data collection, allow tracking ["Consent"], or use "Decentralized Consent" for more control over your personal data & rewards.', 'aesirx-consent' ),
+        'txt_choose_how_we_use' => __( 'Choose how we use your data: "Reject" data collection, allow tracking ["Consent"], or use "Decentralized Consent" for more control over your personal data.', 'aesirx-consent' ),
         'txt_choose_how_we_use_simple' => __( 'Choose how we use your data: "Reject" data collection, allow tracking ["Consent"].', 'aesirx-consent' ),
         'txt_by_consenting' => __( 'By consenting, you allow us to collect & use your data for:', 'aesirx-consent' ),
         'txt_analytics_behavioral' => __( 'Analytics & Behavioral Data: To improve our services & personalize your experience.', 'aesirx-consent' ),

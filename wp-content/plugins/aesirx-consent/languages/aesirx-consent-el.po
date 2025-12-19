@@ -309,7 +309,7 @@ msgstr "Διαχειριστείτε τις προτιμήσεις συγκατ�
 
 #: aesirx-consent.php:55
 #: includes/settings.php:2054
-msgid "Choose how we use your data: \"Reject\" data collection, allow tracking [\"Consent\"], or use \"Decentralized Consent\" for more control over your personal data & rewards."
+msgid "Choose how we use your data: \"Reject\" data collection, allow tracking [\"Consent\"], or use \"Decentralized Consent\" for more control over your personal data."
 msgstr "Επιλέξτε πώς χρησιμοποιούμε τα δεδομένα σας: 'Απόρριψη' συλλογής δεδομένων, επιτρέψτε την παρακολούθηση ['Συναίνεση'], ή χρησιμοποιήστε 'Αποκεντρωμένη Συναίνεση' για περισσότερο έλεγχο των προσωπικών σας δεδομένων και ανταμοιβών."
 
 #: aesirx-consent.php:56
@@ -995,7 +995,7 @@ msgid "Default Consent Mode improves Google Consent Mode 2.0 by not loading any 
 msgstr "Η προεπιλεγμένη λειτουργία συναίνεσης βελτιώνει τη Λειτουργία συναίνεσης Google 2.0 με τη φόρτωση ετικετών έως ότου δοθεί η συναίνεση, μειώνοντας τους κινδύνους συμμόρφωσης."
 
 #: includes/settings.php:235
-msgid "Decentralized Consent Mode setup improves Google Consent Mode 2.0 by not loading any scripts, beacons, or tags until after consent is given, reducing compliance risks. It also includes Decentralized Consent, for more control over personal data and rewards."
+msgid "Decentralized Consent Mode setup improves Google Consent Mode 2.0 by not loading any scripts, beacons, or tags until after consent is given, reducing compliance risks. It also includes Decentralized Consent, for more control over personal data."
 msgstr "Η ρύθμιση της λειτουργίας αποκεντρωμένης συναίνεσης βελτιώνει τη Λειτουργία συναίνεσης Google 2.0 μη φορτώνοντας σενάρια, beacons ή ετικέτες έως ότου δοθεί η συγκατάθεση, μειώνοντας τους κινδύνους συμμόρφωσης. Περιλαμβάνει επίσης Αποκεντρωμένη Συναίνεση, για περισσότερο έλεγχο στα προσωπικά δεδομένα και ανταμοιβές."
 
 #: includes/settings.php:950

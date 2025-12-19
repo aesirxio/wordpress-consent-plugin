@@ -309,7 +309,7 @@ msgstr "Gestiona tus preferencias de consentimiento"
 
 #: aesirx-consent.php:55
 #: includes/settings.php:2054
-msgid "Choose how we use your data: \"Reject\" data collection, allow tracking [\"Consent\"], or use \"Decentralized Consent\" for more control over your personal data & rewards."
+msgid "Choose how we use your data: \"Reject\" data collection, allow tracking [\"Consent\"], or use \"Decentralized Consent\" for more control over your personal data."
 msgstr "Elija cómo usamos sus datos: 'Rechazar' la recopilación de datos, permitir el seguimiento ['Consentir'], o usar el 'Consentimiento Descentralizado' para tener más control sobre sus datos personales y recompensas."
 
 #: aesirx-consent.php:56
@@ -995,7 +995,7 @@ msgid "Default Consent Mode improves Google Consent Mode 2.0 by not loading any 
 msgstr "El Modo de Consentimiento Predeterminado mejora el Modo de Consentimiento de Google 2.0 al no cargar ninguna etiqueta hasta después de otorgar el consentimiento, lo que reduce los riesgos de incumplimiento."
 
 #: includes/settings.php:235
-msgid "Decentralized Consent Mode setup improves Google Consent Mode 2.0 by not loading any scripts, beacons, or tags until after consent is given, reducing compliance risks. It also includes Decentralized Consent, for more control over personal data and rewards."
+msgid "Decentralized Consent Mode setup improves Google Consent Mode 2.0 by not loading any scripts, beacons, or tags until after consent is given, reducing compliance risks. It also includes Decentralized Consent, for more control over personal data."
 msgstr "La configuración del Modo de Consentimiento Descentralizado mejora el Modo de Consentimiento de Google 2.0 al no cargar scripts, balizas ni etiquetas hasta después de otorgar el consentimiento, lo que reduce los riesgos de incumplimiento. También incluye el Consentimiento Descentralizado para un mayor control sobre los datos personales y las recompensas."
 
 #: includes/settings.php:950
