@@ -3,7 +3,7 @@
  * Plugin Name: AesirX Consent
  * Plugin URI: https://analytics.aesirx.io?utm_source=wpplugin&utm_medium=web&utm_campaign=wordpress&utm_id=aesirx&utm_term=wordpress&utm_content=analytics
  * Description: Aesirx Consent plugin. When you join forces with AesirX, you're not just becoming a Partner - you're also becoming a freedom fighter in the battle for privacy! Earn 25% Affiliate Commission <a href="https://aesirx.io/partner?utm_source=wpplugin&utm_medium=web&utm_campaign=wordpress&utm_id=aesirx&utm_term=wordpress&utm_content=analytics">[Click to Join]</a>
- * Version: 2.0.3
+ * Version: 2.0.4
  * Author: aesirx.io
  * Author URI: https://aesirx.io/
  * Domain Path: /languages
@@ -49,17 +49,42 @@ add_action('wp_enqueue_scripts', function (): void {
             : 0;
 
     if ($ageCheck || $countryCheck) {
-        $scriptFile = 'assets/vendor/consent-verify.js';
+        $scriptFile = 'assets/vendor/consent-verify-chunks/consent-verify.js';
+        $cssFile = 'assets/vendor/consent-verify-chunks/consent-verify.css';
     } elseif ($datastream_template === 'simple-consent-mode') {
-        $scriptFile = 'assets/vendor/consent-simple.js';
+        $scriptFile = 'assets/vendor/consent-simple-chunks/consent-simple.js';
+        $cssFile = 'assets/vendor/consent-simple-chunks/consent-simple.css';
     };
     if ($datastream_template !== 'simple-consent-mode') {
-        $scriptFile = 'assets/vendor/consent.js';
+        $scriptFile = 'assets/vendor/consent-chunks/consent.js';
+        $cssFile = 'assets/vendor/consent-chunks/consent.css';
     }
 
-    wp_register_script('aesirx-consent', plugins_url($scriptFile, __FILE__), [], '2.0.3',  array(
-        'in_footer' => false,
-    ));
+      // Loader
+    wp_enqueue_script(
+        'aesirx-consent',
+        plugins_url('assets/vendor/consent-loader.global.js', __FILE__),
+        [],
+        '2.0.4',
+    true
+    );
+
+    // Config for loader
+    wp_add_inline_script(
+        'aesirx-consent',
+        'window.aesirxConsentConfig = {
+            uiEntry: "' . plugins_url($scriptFile, __FILE__) . '"
+        };',
+        'before'
+    );
+    wp_register_style(
+        'aesirx-consent',
+        plugins_url($cssFile, __FILE__),
+        [],
+        '2.0.4',
+        'all'
+    );
+    wp_enqueue_style('aesirx-consent');
     $translation_array = array(
         'txt_shield_of_privacy' => __( 'Shield of Privacy', 'aesirx-consent' ),
         'txt_you_can_revoke' => __( 'Revoke your consent for data use whenever you wish.', 'aesirx-consent' ),
@@ -143,7 +168,47 @@ add_action('wp_enqueue_scripts', function (): void {
         "txt_tracking_default" => __( "This website uses tracking by default. You may opt out at any time.", 'aesirx-consent' ),
         "txt_do_not_sell" => __( "Do Not Sell or Share My Personal Information (CCPA)", 'aesirx-consent' ),
         "txt_disables_third_party" => __( "Disables third-party data sharing for California users.", 'aesirx-consent' ),
-        "txt_cookie_declaration" => __( "Cookie Declaration", 'aesirx-consent' )
+        "txt_cookie_declaration" => __( "Cookie Declaration", 'aesirx-consent' ),
+        "txt_browser_wallet_extension_not_detected" => __( "Browser wallet extension not detected", 'aesirx-consent' ),
+        "txt_failed_to_verify_age_and_country" => __( "Failed to verify age and country!", 'aesirx-consent' ),
+        "txt_your_age_does_not_fall_within_the_permitted_range" => __( "Your age does not fall within the permitted range.", 'aesirx-consent' ),
+        "txt_issuing_country_is_not_allowed" => __( "Issuing country is not allowed!", 'aesirx-consent' ),
+        "txt_verifying_age_country" => __( "Verifying your age and country...", 'aesirx-consent' ),
+        "txt_age_country_verification" => __( "Age & Country Verification", 'aesirx-consent' ),
+        "txt_age_verification" => __( "Age Verification", 'aesirx-consent' ),
+        "txt_country_verification" => __( "Country Verification", 'aesirx-consent' ),
+        "txt_choose_a_verification_method" => __( "Choose a verification method", 'aesirx-consent' ),
+        "txt_you_must_be_at_least" => __( "You must be at least", 'aesirx-consent' ),
+        "txt_years_old_to_access_this_content" => __( "years old to access this content.", 'aesirx-consent' ),
+        "txt_access_is_limited_to_users_under" => __( "Access is limited to users under.", 'aesirx-consent' ),
+        "txt_years" => __( "years.", 'aesirx-consent' ),
+        "txt_to_access_this_content_you_must_be_from" => __( "To access this content, you must be from", 'aesirx-consent' ),
+        "txt_access_is_excluded_to_users_from" => __( "Access is excluded to users from, you must be from", 'aesirx-consent' ),
+        "txt_to_comply_with_the_law_we_need_to_verify_your" => __( "To comply with the law, we need to verify your", 'aesirx-consent' ),
+        "txt_age_country" => __( "age & country", 'aesirx-consent' ),
+        "txt_age" => __( "age", 'aesirx-consent' ),
+        "txt_country" => __( "country", 'aesirx-consent' ),
+        "txt_before_granting_you_access" => __( "before granting you access.", 'aesirx-consent' ),
+        "txt_verification_is_done" => __( "Verification is done using your digital ID stored in a secure wallet of your choice – your personal details are encrypted & never stored or shared. If you don’t have a wallet ID, you can create one now.", 'aesirx-consent' ),
+        "txt_please_accept_the_request" => __( "Please accept the request on your Android device.", 'aesirx-consent' ),
+        "txt_scan_this_qr" => __( "Scan this QR code with Google Lens on Android.", 'aesirx-consent' ),
+        "txt_choose_your_wallet" => __( "Choose your wallet:", 'aesirx-consent' ),
+        "txt_select_wallet" => __( "Select a wallet that contains a valid digital ID (e.g. passport, driver’s license or mobile driver’s license).", 'aesirx-consent' ),
+        "txt_privacy_note" => __( "Privacy Note:", 'aesirx-consent' ),
+        "txt_privacy_note_1" => __( "Verification via <span class='fw-semibold'>Concordium ID</span> uses zero-knowledge proofs (ZKPs) to ensure full pseudonymity and unlinkability - no data is shared or traceable.", 'aesirx-consent' ),
+        "txt_privacy_note_2" => __( "<span class='fw-semibold'>Google Wallet</span> is also supported with ZKP-based credentials (e.g., mDL), but verification events may be linkable by Google.", 'aesirx-consent' ),
+        "txt_other_methods_coming_soon" => __( "Other methods coming soon", 'aesirx-consent' ),
+        "txt_dont_have_a_digital_wallet" => __( "Don’t have a digital wallet?", 'aesirx-consent' ),
+        "txt_create_concordium_id" => __( "Create Concordium ID", 'aesirx-consent' ),
+        "txt_register_with_your_passport" => __( "Register with your passport or other acceptable ID and download the wallet. This process uses zero-knowledge proofs, so your personal details remain private.", 'aesirx-consent' ),
+        "txt_this_feature_is_only_available_in_android_device" => __( "This feature is only available in Android device", 'aesirx-consent' ),
+        "txt_this_feature_is_only_available_in_google_chrome" => __( "This feature is only available in Google Chrome", 'aesirx-consent' ),
+        "txt_continue_to_verification" => __( "Continue to Verification", 'aesirx-consent' ),
+        "txt_save_wallet" => __( "Save wallet", 'aesirx-consent' ),
+        "txt_verifying_sign_proof" => __( "Verifying sign proof request, please return to your CryptoX Wallet app.", 'aesirx-consent' ),
+        "txt_scripts" => __( "Scripts", 'aesirx-consent' ),
+        "txt_cancel" => __( "Cancel", 'aesirx-consent' ),
+        "txt_select" => __( "Select", 'aesirx-consent' ),
     );
     wp_localize_script( 'aesirx-consent', 'aesirx_analytics_translate', $translation_array );
     wp_enqueue_script('aesirx-consent');

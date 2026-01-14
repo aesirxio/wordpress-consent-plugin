@@ -515,7 +515,10 @@ add_action('admin_init', function () {
                <div class="blocking_permanent">
                 <input type="hidden" name="aesirx_analytics_plugin_options[blocking_cookies_permanent]['.$key.']" value="off">
                 <input type="checkbox" name="aesirx_analytics_plugin_options[blocking_cookies_permanent]['.$key.']" 
-                      value="on" '.( ($options['blocking_cookies_permanent'][$key] === "on") ? 'checked' : '' ).'>
+                      value="on" '.((
+                                      isset($options['blocking_cookies_permanent'][$key]) &&
+                                      $options['blocking_cookies_permanent'][$key] === 'on'
+                                    ) ? 'checked' : '' ).'>
                 <div class="input_information_content">
                   Block permanently
                 </div>
