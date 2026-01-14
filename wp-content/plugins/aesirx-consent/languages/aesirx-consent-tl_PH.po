@@ -28,11 +28,11 @@ msgstr "aesirx.io"
 msgid "https://aesirx.io/"
 msgstr "https://aesirx.io/"
 
-#: aesirx-consent.php:249
+#: aesirx-consent.php:326
 msgid "Settings"
 msgstr "Mga Setting"
 
-#: aesirx-consent.php:364
+#: aesirx-consent.php:441
 msgid "Problem with Aesirx Analytics plugin install"
 msgstr "May problema sa pag-install ng Aesirx Analytics plugin"
 
@@ -48,8 +48,8 @@ msgstr "Walang laman ang Domain."
 msgid "Invalid domain format."
 msgstr "Hindi wastong format ng domain."
 
-#: aesirx-consent.php:43
-#: includes/settings.php:2042
+#: aesirx-consent.php:93
+#: includes/settings.php:2045
 msgid "Consent"
 msgstr "Pahintulot"
 
@@ -228,307 +228,307 @@ msgstr "AesirX Pahintulot"
 msgid "Aesirx Consent plugin. When you join forces with AesirX, you're not just becoming a Partner - you're also becoming a freedom fighter in the battle for privacy! Earn 25% Affiliate Commission <a href=\"https://aesirx.io/partner?utm_source=wpplugin&utm_medium=web&utm_campaign=wordpress&utm_id=aesirx&utm_term=wordpress&utm_content=analytics\">[Click to Join]</a>"
 msgstr "Aesirx Consent plugin. Kapag sumama ka sa AesirX, hindi ka lang nagiging Partner - nagiging tagapagtanggol ka rin ng kalayaan sa laban para sa privacy! Kumita ng 25% Affiliate Commission <a href=\"https://aesirx.io/partner?utm_source=wpplugin&utm_medium=web&utm_campaign=wordpress&utm_id=aesirx&utm_term=wordpress&utm_content=analytics\">[I-click para Sumali]</a>"
 
-#: aesirx-consent.php:39
-#: includes/settings.php:2038
+#: aesirx-consent.php:89
+#: includes/settings.php:2041
 msgid "Shield of Privacy"
 msgstr "Kalasag ng Privacy"
 
-#: aesirx-consent.php:40
-#: includes/settings.php:2039
+#: aesirx-consent.php:90
+#: includes/settings.php:2042
 msgid "Revoke your consent for data use whenever you wish."
 msgstr "Bawiin ang iyong pahintulot para sa paggamit ng data kailan mo man naisin."
 
-#: aesirx-consent.php:41
-#: includes/settings.php:2040
+#: aesirx-consent.php:91
+#: includes/settings.php:2043
 msgid "Manage Decentralized Consent"
 msgstr "Pamahalaan ang Decentralized Consent"
 
-#: aesirx-consent.php:42
-#: includes/settings.php:2041
+#: aesirx-consent.php:92
+#: includes/settings.php:2044
 msgid "Revoke Consent"
 msgstr "Bawiin ang Pahintulot"
 
-#: aesirx-consent.php:44
-#: includes/settings.php:2043
+#: aesirx-consent.php:94
+#: includes/settings.php:2046
 msgid "Reject"
 msgstr "Tanggihan"
 
-#: aesirx-consent.php:45
-#: includes/settings.php:2044
+#: aesirx-consent.php:95
+#: includes/settings.php:2047
 msgid "Please connect your Web3 wallet"
 msgstr "Pakikonekta ang iyong Web3 wallet"
 
-#: aesirx-consent.php:46
-#: includes/settings.php:2045
+#: aesirx-consent.php:96
+#: includes/settings.php:2048
 msgid "Please sign the message on your wallet twice and wait for it to be saved."
 msgstr "Pakilagdaan ang mensahe sa iyong wallet dalawang beses at hintaying ma-save ito."
 
-#: aesirx-consent.php:47
-#: includes/settings.php:2046
+#: aesirx-consent.php:97
+#: includes/settings.php:2049
 msgid "Saving..."
 msgstr "Nagse-save..."
 
-#: aesirx-consent.php:48
-#: includes/settings.php:2047
+#: aesirx-consent.php:98
+#: includes/settings.php:2050
 msgid "Please connect to your wallet"
 msgstr "Pakikonekta sa iyong wallet"
 
-#: aesirx-consent.php:49
-#: includes/settings.php:2048
+#: aesirx-consent.php:99
+#: includes/settings.php:2051
 msgid "Connecting"
 msgstr "Kumokonekta"
 
-#: aesirx-consent.php:50
-#: includes/settings.php:2049
+#: aesirx-consent.php:100
+#: includes/settings.php:2052
 msgid "TRACKING AND DATA PRIVACY PREFERENCES"
 msgstr "MGA PREFERENCES PARA SA TRACKING AT DATA PRIVACY"
 
-#: aesirx-consent.php:51
-#: includes/settings.php:2050
+#: aesirx-consent.php:101
+#: includes/settings.php:2053
 msgid "About"
 msgstr "Tungkol sa"
 
-#: aesirx-consent.php:52
-#: aesirx-consent.php:101
-#: includes/settings.php:2051
-#: includes/settings.php:2100
+#: aesirx-consent.php:102
+#: aesirx-consent.php:151
+#: includes/settings.php:2054
+#: includes/settings.php:2103
 msgid "Details"
 msgstr "Detalye"
 
-#: aesirx-consent.php:53
-#: aesirx-consent.php:81
-#: includes/settings.php:2052
-#: includes/settings.php:2080
+#: aesirx-consent.php:103
+#: aesirx-consent.php:131
+#: includes/settings.php:2055
+#: includes/settings.php:2083
 msgid "Decentralized Consent"
 msgstr "Desentralisadong Pahintulot"
 
-#: aesirx-consent.php:54
-#: includes/settings.php:2053
+#: aesirx-consent.php:104
+#: includes/settings.php:2056
 msgid "Manage Your Consent Preferences"
 msgstr "Pamahalaan ang Iyong Consent Preferences"
 
-#: aesirx-consent.php:55
-#: includes/settings.php:2054
+#: aesirx-consent.php:105
+#: includes/settings.php:2057
 msgid "Choose how we use your data: \"Reject\" data collection, allow tracking [\"Consent\"], or use \"Decentralized Consent\" for more control over your personal data."
 msgstr "Pumili kung paano namin gagamitin ang iyong data: \"Tangihan\" ang pagkolekta ng data, payagan ang tracking [\"Pahintulot\"], o gamitin ang \"Desentralisadong Pahintulot\" para sa higit na kontrol sa iyong personal data at mga reward."
 
-#: aesirx-consent.php:56
-#: includes/settings.php:2055
+#: aesirx-consent.php:106
+#: includes/settings.php:2058
 msgid "Choose how we use your data: \"Reject\" data collection, allow tracking [\"Consent\"]."
 msgstr "Pumili kung paano namin gagamitin ang iyong data: \"Tangihan\" ang pagkolekta ng data, payagan ang tracking [\"Pahintulot\"]."
 
-#: aesirx-consent.php:57
-#: includes/settings.php:2056
+#: aesirx-consent.php:107
+#: includes/settings.php:2059
 msgid "By consenting, you allow us to collect & use your data for:"
 msgstr "Sa pamamagitan ng pagbibigay ng pahintulot, pinapayagan mo kaming mangolekta at gumamit ng iyong data para sa:"
 
-#: aesirx-consent.php:58
-#: includes/settings.php:2057
+#: aesirx-consent.php:108
+#: includes/settings.php:2060
 msgid "Analytics & Behavioral Data: To improve our services & personalize your experience."
 msgstr "Analytics at Behavioral Data: Para mapabuti ang aming mga serbisyo at isapersonal ang iyong karanasan."
 
-#: aesirx-consent.php:59
-#: includes/settings.php:2058
+#: aesirx-consent.php:109
+#: includes/settings.php:2061
 msgid "Form Data: When you contact us."
 msgstr "Data sa Form: Kapag nakikipag-ugnayan ka sa amin."
 
-#: aesirx-consent.php:60
-#: includes/settings.php:2059
+#: aesirx-consent.php:110
+#: includes/settings.php:2062
 msgid "Please note"
 msgstr "Pakitandaan"
 
-#: aesirx-consent.php:61
-#: includes/settings.php:2060
+#: aesirx-consent.php:111
+#: includes/settings.php:2063
 msgid "We do not share your data with third parties without your explicit consent."
 msgstr "Hindi namin ibinabahagi ang iyong data sa mga third party nang walang iyong malinaw na pahintulot."
 
-#: aesirx-consent.php:62
-#: includes/settings.php:2061
+#: aesirx-consent.php:112
+#: includes/settings.php:2064
 msgid "You can opt-in later for specific features without giving blanket consent."
 msgstr "Maaari kang mag-opt-in mamaya para sa mga partikular na feature nang hindi nagbibigay ng pangkalahatang pahintulot."
 
-#: aesirx-consent.php:63
-#: includes/settings.php:2062
+#: aesirx-consent.php:113
+#: includes/settings.php:2065
 msgid "For more details, refer to our <a class='text-success fw-semibold text-decoration-underline' href='https://aesirx.io/privacy-policy' target='_blank'>privacy policy.</a>"
 msgstr "Para sa higit pang detalye, sumangguni sa aming <a class='text-success fw-semibold text-decoration-underline' href='https://aesirx.io/privacy-policy' target='_blank'>patakaran sa privacy.</a>"
 
-#: aesirx-consent.php:64
-#: includes/settings.php:2063
+#: aesirx-consent.php:114
+#: includes/settings.php:2066
 msgid "Benefits"
 msgstr "Mga Benepisyo"
 
-#: aesirx-consent.php:65
-#: includes/settings.php:2064
+#: aesirx-consent.php:115
+#: includes/settings.php:2067
 msgid "<span class='fw-semibold text-primary'>Control your data:</span> Choose your preferred level of data collection & tracking."
 msgstr "<span class='fw-semibold text-primary'>Kontrolin ang iyong data:</span> Piliin ang iyong gustong lebel ng pagkolekta ng data at pag-track."
 
-#: aesirx-consent.php:66
-#: includes/settings.php:2065
+#: aesirx-consent.php:116
+#: includes/settings.php:2068
 msgid "<span class='fw-semibold text-primary'>Earn rewards:</span> Participate in decentralized consent for privacy & rewards."
 msgstr "<span class='fw-semibold text-primary'>Kumita ng mga reward:</span> Makiisa sa decentralized consent para sa privacy at mga reward."
 
-#: aesirx-consent.php:67
-#: includes/settings.php:2066
+#: aesirx-consent.php:117
+#: includes/settings.php:2069
 msgid "<span class='fw-semibold text-primary'>Transparent data collection practices:</span> Understand how your data is collected & used."
 msgstr "<span class='fw-semibold text-primary'>Mga transparent na gawain sa pagkolekta ng data:</span> Unawain kung paano kinokolekta at ginagamit ang iyong data."
 
-#: aesirx-consent.php:68
-#: includes/settings.php:2067
+#: aesirx-consent.php:118
+#: includes/settings.php:2070
 msgid "Understanding Your Privacy Choices"
 msgstr "Pag-unawa sa Iyong mga Pinili sa Privacy"
 
-#: aesirx-consent.php:69
-#: includes/settings.php:2068
+#: aesirx-consent.php:119
+#: includes/settings.php:2071
 msgid "<span class='fw-semibold text-primary'>Reject:</span> No data will be collected or loaded except for anonymized page views & rejections. Some personalization features may be disabled."
 msgstr "<span class='fw-semibold text-primary'>Tanggihan:</span> Walang data ang kokolektahin o ilo-load maliban sa mga naka-anonymized na page views at mga pagtanggi. Maaaring hindi paganahin ang ilang personalization features."
 
-#: aesirx-consent.php:70
-#: includes/settings.php:2069
+#: aesirx-consent.php:120
+#: includes/settings.php:2072
 msgid "<span class='fw-semibold text-primary'>Consent:</span> First & third-party tracking data will be collected to enhance your experience."
 msgstr "<span class='fw-semibold text-primary'>Pahintulot:</span> Kokolektahin ang first at third-party tracking data para mapabuti ang iyong karanasan."
 
-#: aesirx-consent.php:71
-#: includes/settings.php:2070
+#: aesirx-consent.php:121
+#: includes/settings.php:2073
 msgid "<span class='fw-semibold text-primary'>Decentralized Consent:</span> Choose Decentralized Wallets or Decentralized Wallet + Shield of Privacy. Both options let you manage & revoke consent on-site or through AesirX dApp, plus earn rewards from digital marketing activities."
 msgstr "<span class='fw-semibold text-primary'>Desentralisadong Pahintulot:</span> Pumili ng Desentralisadong mga Wallet o Desentralisadong Wallet + Kalasag ng Privacy. Parehong opsyon ang nagbibigay-daan sa iyong pamahalaan at bawiin ang pahintulot sa site o sa pamamagitan ng AesirX dApp, dagdag pa ang pagkita ng mga reward mula sa mga aktibidad sa digital marketing."
 
-#: aesirx-consent.php:72
-#: includes/settings.php:2071
+#: aesirx-consent.php:122
+#: includes/settings.php:2074
 msgid "Our Commitment in Action"
 msgstr "Ang Aming Pangako sa Aksyon"
 
-#: aesirx-consent.php:73
-#: includes/settings.php:2072
+#: aesirx-consent.php:123
+#: includes/settings.php:2075
 msgid "<span class='fw-semibold text-primary'>Privacy Protection:</span> Users have full control over their data, ensuring maximum privacy."
 msgstr "<span class='fw-semibold text-primary'>Proteksyon sa Privacy:</span> May ganap na kontrol ang mga user sa kanilang data, tinitiyak ang maximum na privacy."
 
-#: aesirx-consent.php:74
-#: includes/settings.php:2073
+#: aesirx-consent.php:124
+#: includes/settings.php:2076
 msgid "<span class='fw-semibold text-primary'>Enables Compliance:</span> Using Shield of Privacy (SoP) ensures compliance with GDPR, CCPA, ePrivacy Directive, & other data protection regulations."
 msgstr "<span class='fw-semibold text-primary'>Pinapayagan ang Pagsunod:</span> Ang paggamit ng Shield of Privacy (SoP) ay nagsisiguro ng pagsunod sa GDPR, CCPA, ePrivacy Directive, at iba pang mga regulasyon sa proteksyon ng data."
 
-#: aesirx-consent.php:75
-#: includes/settings.php:2074
+#: aesirx-consent.php:125
+#: includes/settings.php:2077
 msgid "<span class='fw-semibold text-primary'>Proactive Protection:</span> We enhance privacy measures to safeguard your data integrity."
 msgstr "<span class='fw-semibold text-primary'>Proactive Protection:</span> Pinapahusay namin ang mga hakbang sa privacy para mapangalagaan ang integridad ng iyong data."
 
-#: aesirx-consent.php:76
-#: includes/settings.php:2075
+#: aesirx-consent.php:126
+#: includes/settings.php:2078
 msgid "<span class='fw-semibold text-primary'>Flexible Consent:</span> You can withdraw your consent anytime on-site or via our <a class='text-success fw-semibold text-decoration-underline' href='https://dapp.shield.aesirx.io' target='_blank'>dApp</a> (Decentralized Application)."
 msgstr "<span class='fw-semibold text-primary'>Flexible Consent:</span> Maaari mong bawiin ang iyong pahintulot anumang oras sa site o sa pamamagitan ng aming <a class='text-success fw-semibold text-decoration-underline' href='https://dapp.shield.aesirx.io' target='_blank'>dApp</a> (Decentralized Application)."
 
-#: aesirx-consent.php:77
-#: includes/settings.php:2076
+#: aesirx-consent.php:127
+#: includes/settings.php:2079
 msgid "<span class='fw-semibold text-primary'>Learn More:</span> Discover our approach to data processing in our <a class='text-success fw-semibold text-decoration-underline' href='https://aesirx.io/privacy-policy' target='_blank'>Privacy Policy</a>."
 msgstr "<span class='fw-semibold text-primary'>Matuto Pa:</span> Tuklasin ang aming paraan sa pagproseso ng data sa aming <a class='text-success fw-semibold text-decoration-underline' href='https://aesirx.io/privacy-policy' target='_blank'>Privacy Policy</a>."
 
-#: aesirx-consent.php:78
-#: includes/settings.php:2077
+#: aesirx-consent.php:128
+#: includes/settings.php:2080
 msgid "<span class='fw-semibold text-primary'>For Businesses:</span> Enhance trust, secure user identities, & prevent breaches."
 msgstr "<span class='fw-semibold text-primary'>Para sa Negosyo:</span> Palakasin ang tiwala, seguruhin ang mga identidad ng user, at pigilan ang mga paglabag."
 
-#: aesirx-consent.php:79
-#: includes/settings.php:2078
+#: aesirx-consent.php:129
+#: includes/settings.php:2081
 msgid "More info at <a class='text-success fw-semibold text-decoration-underline' href='https://shield.aesirx.io' target='_blank'>https://shield.aesirx.io</a>."
 msgstr "Higit pang impormasyon sa <a class='text-success fw-semibold text-decoration-underline' href='https://shield.aesirx.io' target='_blank'>https://shield.aesirx.io</a>."
 
-#: aesirx-consent.php:80
-#: includes/settings.php:2079
+#: aesirx-consent.php:130
+#: includes/settings.php:2082
 msgid "Select your preferred decentralized consent option:"
 msgstr "Piliin ang iyong gustong decentralized consent option:"
 
-#: aesirx-consent.php:82
-#: includes/settings.php:2081
+#: aesirx-consent.php:132
+#: includes/settings.php:2084
 msgid "Decentralized consent will be loaded"
 msgstr "Ilo-load ang decentralized consent"
 
-#: aesirx-consent.php:83
-#: includes/settings.php:2082
+#: aesirx-consent.php:133
+#: includes/settings.php:2085
 msgid "Both first-party & third-party tracking data will be activated."
 msgstr "Parehong first-party at third-party tracking data ang ia-activate."
 
-#: aesirx-consent.php:84
-#: includes/settings.php:2083
+#: aesirx-consent.php:134
+#: includes/settings.php:2086
 msgid "All consented data will be collected."
 msgstr "Lahat ng consented data ay kokolektahin."
 
-#: aesirx-consent.php:85
-#: includes/settings.php:2084
+#: aesirx-consent.php:135
+#: includes/settings.php:2087
 msgid "Users can revoke consent on-site at any time."
 msgstr "Maaaring bawiin ng mga user ang pahintulot on-site anumang oras."
 
-#: aesirx-consent.php:86
-#: includes/settings.php:2085
+#: aesirx-consent.php:136
+#: includes/settings.php:2088
 msgid "Decentralized Consent + Shield of Privacy"
 msgstr "Desentralisadong Pahintulot + Kalasag ng Privacy"
 
-#: aesirx-consent.php:87
-#: includes/settings.php:2086
+#: aesirx-consent.php:137
+#: includes/settings.php:2089
 msgid "Users can revoke consent on-site or from the AesirX dApp at any time."
 msgstr "Maaaring bawiin ng mga user ang pahintulot on-site o mula sa AesirX dApp anumang oras."
 
-#: aesirx-consent.php:88
-#: includes/settings.php:2087
+#: aesirx-consent.php:138
+#: includes/settings.php:2090
 msgid "Users can earn rewards from digital marketing activities."
 msgstr "Maaaring kumita ang mga user ng mga reward mula sa mga aktibidad sa digital marketing."
 
-#: aesirx-consent.php:89
-#: includes/settings.php:2088
+#: aesirx-consent.php:139
+#: includes/settings.php:2091
 msgid "Continue"
 msgstr "Magpatuloy"
 
-#: aesirx-consent.php:90
-#: includes/settings.php:2089
+#: aesirx-consent.php:140
+#: includes/settings.php:2092
 msgid "Back"
 msgstr "Bumalik"
 
-#: aesirx-consent.php:91
-#: includes/settings.php:2090
+#: aesirx-consent.php:141
+#: includes/settings.php:2093
 msgid "You've chosen to reject data collection:"
 msgstr "Pinili mong tanggihan ang koleksyon ng data:"
 
-#: aesirx-consent.php:92
-#: includes/settings.php:2091
+#: aesirx-consent.php:142
+#: includes/settings.php:2094
 msgid "Only anonymized page views & limited features will be available. To access all website features, including personalized content & enhanced functionality, please choose an option:"
 msgstr "Tanging mga anonymized page views at limitadong mga feature ang magiging available. Upang ma-access ang lahat ng mga feature ng website, kasama ang personalized na nilalaman at pinahusay na functionality, mangyaring pumili ng isang opsyon:"
 
-#: aesirx-consent.php:93
-#: includes/settings.php:2092
+#: aesirx-consent.php:143
+#: includes/settings.php:2095
 msgid "<span class='fw-semibold text-primary'>Consent:</span> Allow data collection for analytics, form data (when you contact us), & behavioral & event tracking, with the option to opt-in for specific features."
 msgstr "<span class='fw-semibold text-primary'>Pahintulot:</span> Payagan ang pagkolekta ng data para sa analytics, form data (kapag nakipag-ugnayan ka sa amin), at behavioral at event tracking, na may opsyon na mag-opt-in para sa mga partikular na feature."
 
-#: aesirx-consent.php:94
-#: includes/settings.php:2093
+#: aesirx-consent.php:144
+#: includes/settings.php:2096
 msgid "<span class='fw-semibold text-primary'>Decentralized Consent:</span> Allow data collection for analytics, form data (when you contact us), & behavioral & event tracking, with the option to revoke consent, opt-in for specific features, & earn rewards from digital marketing activities."
 msgstr "<span class='fw-semibold text-primary'>Desentralisadong Pahintulot:</span> Payagan ang pagkolekta ng data para sa analytics, form data (kapag nakipag-ugnayan ka sa amin), at behavioral at event tracking, na may opsyon na bawiin ang pahintulot, mag-opt-in para sa mga partikular na feature, at kumita ng mga reward mula sa mga aktibidad sa digital marketing."
 
-#: aesirx-consent.php:95
-#: includes/settings.php:2094
+#: aesirx-consent.php:145
+#: includes/settings.php:2097
 msgid "You can revoke consent on the site or any explicit opt-in consent, such as payment processing, at any time"
 msgstr "Maaari mong bawiin ang pahintulot sa site o anumang explicit opt-in consent, tulad ng pagproseso ng bayad, anumang oras"
 
-#: aesirx-consent.php:96
-#: includes/settings.php:2095
+#: aesirx-consent.php:146
+#: includes/settings.php:2098
 msgid "Revoke Opt-In Consent"
 msgstr "Bawiin ang Opt-In Consent"
 
-#: aesirx-consent.php:97
-#: includes/settings.php:2096
+#: aesirx-consent.php:147
+#: includes/settings.php:2099
 msgid "Revoke Opt-In Consent for Payment Processing"
 msgstr "Bawiin ang Opt-In Consent para sa Payment Processing"
 
-#: aesirx-consent.php:98
-#: includes/settings.php:2097
+#: aesirx-consent.php:148
+#: includes/settings.php:2100
 msgid "Revoke Opt-In Consent for AesirX Privacy Advisor AI"
 msgstr "Bawiin ang Opt-In Consent para sa AesirX Privacy Advisor AI"
 
-#: aesirx-consent.php:99
-#: includes/settings.php:2098
+#: aesirx-consent.php:149
+#: includes/settings.php:2101
 msgid "Revoke Consent for the site"
 msgstr "Bawiin ang Pahintulot para sa site"
 
-#: aesirx-consent.php:100
-#: includes/settings.php:2099
+#: aesirx-consent.php:150
+#: includes/settings.php:2102
 msgid "Consent Management"
 msgstr "Pamamahala sa Pahintulot"
 
@@ -561,7 +561,7 @@ msgid "AesirX Consent Shield for Domain/Path-Based Blocking"
 msgstr "AesirX Consent Shield para sa Domain/Path-Based Blocking"
 
 #: includes/settings.php:514
-#: includes/settings.php:540
+#: includes/settings.php:543
 msgid "Enter domain or path"
 msgstr "Ilagay ang domain o path"
 
@@ -569,40 +569,40 @@ msgstr "Ilagay ang domain o path"
 msgid "Removes scripts matching specified domains or paths from the browser until user consent is given."
 msgstr "Inaalis ang mga script na tumutugma sa mga tinukoy na domain o path mula sa browser hanggang sa maibigay ang pahintulot ng user."
 
-#: includes/settings.php:570
+#: includes/settings.php:573
 msgid "Blocks or removes scripts from running in the user's browser before consent is given."
 msgstr "Binablock o inaalis ang mga script mula sa pagtakbo sa browser ng user bago maibigay ang pahintulot."
 
-#: includes/settings.php:576
+#: includes/settings.php:579
 msgid "While it prevents scripts from executing, initial network requests may still occur, so it enhances privacy compliance under GDPR but may not fully meet the ePrivacy Directive requirements."
 msgstr "Habang pinipigilan nito ang pagpapatupad ng mga script, maaaring maganap pa rin ang mga paunang network request, kaya pinapahusay nito ang privacy compliance sa ilalim ng GDPR ngunit maaaring hindi ganap na matugunan ang mga kinakailangan ng ePrivacy Directive."
 
-#: includes/settings.php:590
+#: includes/settings.php:593
 msgid "Script Blocking Options"
 msgstr "Mga Opsyon sa Script Blocking"
 
-#: includes/settings.php:605
+#: includes/settings.php:608
 msgid "Only Third-Party Hosts (default)"
 msgstr "Tanging Third-Party Hosts (default)"
 
-#: includes/settings.php:616
+#: includes/settings.php:619
 msgid "Both First and Third-Party Hosts"
 msgstr "Parehong First at Third-Party Hosts"
 
-#: includes/settings.php:1023
+#: includes/settings.php:1026
 msgid "Need Help? Access Our Comprehensive Documentation Hub"
 msgstr "Kailangan ng Tulong? I-access ang Aming Comprehensive Documentation Hub"
 
-#: includes/settings.php:2185
+#: includes/settings.php:2188
 msgid "Your trial license ends in %1$s days. Please update new license <a href='%2$s' target='_blank'>%2$s</a>."
 msgstr "Matatapos ang iyong trial license sa %1$s araw. Mangyaring i-update ang bagong license <a href='%2$s' target='_blank'>%2$s</a>."
 
-#: includes/settings.php:1997
-#: includes/settings.php:2230
+#: includes/settings.php:2000
+#: includes/settings.php:2233
 msgid "Your license is expried or not found. Please update new license <a href='%1$s' target='_blank'>%1$s</a>."
 msgstr "Expired na o hindi nakita ang iyong license. Mangyaring i-update ang bagong license <a href='%1$s' target='_blank'>%1$s</a>."
 
-#: includes/settings.php:2344
+#: includes/settings.php:2347
 msgid "Your free trials has ended. Please update your license. <a href='%1$s' target='_blank'>%1$s</a>."
 msgstr "Tapos na ang iyong free trials. Mangyaring i-update ang iyong license. <a href='%1$s' target='_blank'>%1$s</a>."
 
@@ -645,43 +645,43 @@ msgid "Choose your tailored template"
 msgstr "Piliin ang iyong customized template"
 
 #: includes/settings.php:513
-#: includes/settings.php:539
+#: includes/settings.php:542
 msgid "Domain"
 msgstr "Domain"
 
-#: includes/settings.php:596
+#: includes/settings.php:599
 msgid "Configure how JavaScript is blocked based on user consent preferences."
 msgstr "I-configure kung paano binablock ang JavaScript batay sa user consent preferences."
 
-#: includes/settings.php:606
+#: includes/settings.php:609
 msgid "Blocks JavaScript from third-party domains, allowing first-party scripts to run normally & keep essential site functions intact."
 msgstr "Binablock ang JavaScript mula sa mga third-party domain, pinapayagan ang first-party scripts na tumakbo ng normal at pinapanatiling buo ang essential site functions."
 
-#: includes/settings.php:617
+#: includes/settings.php:620
 msgid "Blocks JavaScript from both first-party & third-party domains for comprehensive script control, giving you the ability to block any JavaScript from internal or external sources based on user consent."
 msgstr "Binablock ang JavaScript mula sa parehong first-party at third-party domain para sa komprehensibong script control, nagbibigay sa iyo ng kakayahang i-block ang anumang JavaScript mula sa internal o external na sources batay sa user consent."
 
-#: includes/settings.php:1033
+#: includes/settings.php:1036
 msgid "Discover the latest features & best practices."
 msgstr "Tuklasin ang pinakabagong mga feature at best practices."
 
-#: includes/settings.php:1506
+#: includes/settings.php:1509
 msgid "Scan Your Site for Privacy Risks"
 msgstr "I-scan ang Iyong Site para sa Privacy Risks"
 
-#: includes/settings.php:1510
+#: includes/settings.php:1513
 msgid "Use the Privacy Scanner to quickly identify scripts, tags, & trackers running on your site that may compromise user privacy."
 msgstr "Gamitin ang Privacy Scanner para mabilis na matukoy ang mga script, tags, at trackers na tumatakbo sa iyong site na maaaring makompromiso ang privacy ng user."
 
-#: includes/settings.php:1516
+#: includes/settings.php:1519
 msgid "Use Consent Shield to block those scripts by adding their domains or paths, ensuring quick & simple compliance."
 msgstr "Gamitin ang Consent Shield para i-block ang mga script na iyon sa pamamagitan ng pagdaragdag ng kanilang mga domain o path, tinitiyak ang mabilis at simpleng pagsunod."
 
-#: includes/settings.php:1586
-#: includes/settings.php:1649
-#: includes/settings.php:1682
-#: includes/settings.php:1727
-#: includes/settings.php:1760
+#: includes/settings.php:1589
+#: includes/settings.php:1652
+#: includes/settings.php:1685
+#: includes/settings.php:1730
+#: includes/settings.php:1763
 msgid "Save settings"
 msgstr "I-save ang settings"
 
@@ -689,7 +689,7 @@ msgstr "I-save ang settings"
 msgid "License Key"
 msgstr "License Key"
 
-#: includes/settings.php:1060
+#: includes/settings.php:1063
 msgid "Haven't got Shield of Privacy ID yet?"
 msgstr "Wala ka pa bang Shield of Privacy ID?"
 
@@ -697,11 +697,11 @@ msgstr "Wala ka pa bang Shield of Privacy ID?"
 msgid "To configure, input your Google Tag Manager Gtag ID & GTM ID in the designated fields. Once set up, Google Tag Manager will only load after the user provides consent."
 msgstr "Upang i-configure, ilagay ang iyong Google Tag Manager Gtag ID at GTM ID sa mga itinakdang field. Kapag naka-set up na, ang Google Tag Manager ay maglo-load lamang pagkatapos magbigay ng pahintulot ang user."
 
-#: includes/settings.php:1069
+#: includes/settings.php:1072
 msgid "Sign up now"
 msgstr "Mag-sign up na ngayon"
 
-#: includes/settings.php:1027
+#: includes/settings.php:1030
 msgid "Explore How-To Guides, instructions, & tutorials to get the most from AesirX Consent Shield. Whether you're a developer or admin, find all you need to configure & optimize your privacy setup."
 msgstr "Galugarin ang mga How-To Guide, mga tagubilin, at mga tutorial para masulit ang AesirX Consent Shield. Kung ikaw ay developer o admin, hanapin ang lahat ng kailangan mo para i-configure at i-optimize ang iyong privacy setup."
 
@@ -709,15 +709,15 @@ msgstr "Galugarin ang mga How-To Guide, mga tagubilin, at mga tutorial para masu
 msgid "Reset Consent"
 msgstr "I-reset ang Pahintulot"
 
-#: aesirx-consent.php:379
+#: aesirx-consent.php:456
 msgid "Important: Permalink Settings Required"
 msgstr "Mahalaga: Kailangan ang Permalink Settings"
 
-#: includes/settings.php:2308
+#: includes/settings.php:2311
 msgid "Your trial license ends in %1$s hour(s). Please update your license <a href='%2$s' target='_blank'>here</a>."
 msgstr "Matatapos ang iyong trial license sa %1$s oras. Mangyaring i-update ang iyong license <a href='%2$s' target='_blank'>dito</a>."
 
-#: aesirx-consent.php:391
+#: aesirx-consent.php:468
 msgid "click here"
 msgstr "i-click dito"
 
@@ -725,11 +725,11 @@ msgstr "i-click dito"
 msgid "GTM General"
 msgstr "GTM Pangkalahatan"
 
-#: includes/settings.php:2191
+#: includes/settings.php:2194
 msgid "Something went wrong: %1$s. Please contact the administrator."
 msgstr "May naganap na kamalian: %1$s. Mangyaring kontakin ang administrator."
 
-#: includes/settings.php:2283
+#: includes/settings.php:2286
 msgid "Check license failed: %1$s. Please contact the administrator or update your license."
 msgstr "Nabigong i-check ang license: %1$s. Mangyaring kontakin ang administrator o i-update ang iyong license."
 
@@ -737,7 +737,7 @@ msgstr "Nabigong i-check ang license: %1$s. Mangyaring kontakin ang administrato
 msgid "Check license failed: %1\\$s. Please contact the administrator."
 msgstr "Nabigong i-check ang license: %1\\$s. Mangyaring kontakin ang administrator."
 
-#: includes/settings.php:2237
+#: includes/settings.php:2240
 msgid "Your domain is not match with your license. Please update domain in your license <a href='%1$s' target='_blank'>%1$s</a> and click <span class='verify_domain'>here</span> to verify again."
 msgstr "Hindi tumutugma ang iyong domain sa iyong license. Mangyaring i-update ang domain sa iyong license <a href='%1$s' target='_blank'>%1$s</a> at i-click ang <span class='verify_domain'>dito</span> para i-verify muli."
 
@@ -750,39 +750,39 @@ msgstr "Hindi tumutugma ang iyong domain sa iyong license. Mangyaring i-update a
 msgid "Decentralized Consent Mode"
 msgstr "Decentralized Consent Mode"
 
-#: includes/settings.php:738
+#: includes/settings.php:741
 msgid "GPC Compliance"
 msgstr "Pagsunod sa GPC"
 
-#: includes/settings.php:751
+#: includes/settings.php:754
 msgid "Enable GPC Support"
 msgstr "Paganahin ang GPC Support"
 
-#: includes/settings.php:759
+#: includes/settings.php:762
 msgid "Disable GPC Support"
 msgstr "Huwag paganahin ang GPC Support"
 
-#: includes/settings.php:766
+#: includes/settings.php:769
 msgid "To comply with Global Privacy Control (GPC), please download and upload the following file:"
 msgstr "Para sumunod sa Global Privacy Control (GPC), mangyaring i-download at i-upload ang sumusunod na file:"
 
-#: includes/settings.php:769
+#: includes/settings.php:772
 msgid "Upload Instructions:"
 msgstr "Mga Tagubilin sa Pag-upload:"
 
-#: includes/settings.php:771
+#: includes/settings.php:774
 msgid "Download the gpc.json file."
 msgstr "I-download ang gpc.json file."
 
-#: includes/settings.php:772
+#: includes/settings.php:775
 msgid "Connect to your website via FTP or File Manager."
 msgstr "Kumonekta sa iyong website sa pamamagitan ng FTP o File Manager."
 
-#: includes/settings.php:773
+#: includes/settings.php:776
 msgid "Upload the file to: <code>/public_html/.well-known/gpc.json</code>"
 msgstr "I-upload ang file sa: <code>/public_html/.well-known/gpc.json</code>"
 
-#: includes/settings.php:774
+#: includes/settings.php:777
 msgid "Ensure the file is accessible by visiting: <a href='"
 msgstr "Siguraduhing accessible ang file sa pamamagitan ng pagbisita sa: <a href='"
 
@@ -798,153 +798,153 @@ msgstr "I-customize ang Reject Text"
 msgid "Reset Reject"
 msgstr "I-reset ang Reject"
 
-#: aesirx-consent.php:102
+#: aesirx-consent.php:152
 msgid "Customize"
 msgstr "I-customize"
 
-#: aesirx-consent.php:103
+#: aesirx-consent.php:153
 msgid "Save"
 msgstr "I-save"
 
-#: aesirx-consent.php:104
+#: aesirx-consent.php:154
 msgid "Always active"
 msgstr "Laging aktibo"
 
-#: aesirx-consent.php:105
+#: aesirx-consent.php:155
 msgid "Domain/Path-Based"
 msgstr "Domain/Path-Based"
 
-#: aesirx-consent.php:106
+#: aesirx-consent.php:156
 msgid "Third-Party Plugins"
 msgstr "Third-Party Plugins"
 
-#: aesirx-consent.php:107
+#: aesirx-consent.php:157
 msgid "Essential Tracking"
 msgstr "Essential Tracking"
 
-#: aesirx-consent.php:108
+#: aesirx-consent.php:158
 msgid "Required for the website to function (e.g, session cookies, security tracking)."
 msgstr "Kinakailangan para gumana ang website (hal., session cookies, security tracking)."
 
-#: aesirx-consent.php:109
+#: aesirx-consent.php:159
 msgid "Functional Tracking"
 msgstr "Functional Tracking"
 
-#: aesirx-consent.php:110
+#: aesirx-consent.php:160
 msgid "User preferencese & site enhancements (e.g, language setting, live chat)."
 msgstr "Mga kagustuhan ng user at pagpapahusay sa site (hal., setting ng wika, live chat)."
 
-#: aesirx-consent.php:111
+#: aesirx-consent.php:161
 msgid "Analytics Tracking"
 msgstr "Analytics Tracking"
 
-#: aesirx-consent.php:112
+#: aesirx-consent.php:162
 msgid "Visitor behavior monitoring (e.g, Google Analytics, Matomo)."
 msgstr "Pagmo-monitor sa gawi ng bisita (hal., Google Analytics, Matomo)."
 
-#: aesirx-consent.php:113
+#: aesirx-consent.php:163
 msgid "Advertising Tracking"
 msgstr "Advertising Tracking"
 
-#: aesirx-consent.php:114
+#: aesirx-consent.php:164
 msgid "Targeted advertising & remarketing (e.g, Facebook Pixel, Google Ads)."
 msgstr "Targeted advertising at remarketing (hal., Facebook Pixel, Google Ads)."
 
-#: aesirx-consent.php:115
+#: aesirx-consent.php:165
 msgid "Custom Tracking"
 msgstr "Custom Tracking"
 
-#: aesirx-consent.php:116
+#: aesirx-consent.php:166
 msgid "Any additional third-party integrations (e.g, customer support tools, CDNS)."
 msgstr "Anumang karagdagang third-party integrations (hal., customer support tools, CDNS)."
 
-#: aesirx-consent.php:117
+#: aesirx-consent.php:167
 msgid "Opt-Out of tracking"
 msgstr "Mag-opt-Out sa tracking"
 
-#: aesirx-consent.php:118
+#: aesirx-consent.php:168
 msgid "This website uses tracking by default. You may opt out at any time."
 msgstr "Gumagamit ang website na ito ng tracking bilang default. Maaari kang mag-opt out anumang oras."
 
-#: aesirx-consent.php:119
+#: aesirx-consent.php:169
 msgid "Do Not Sell or Share My Personal Information (CCPA)"
 msgstr "Huwag Ibenta o Ibahagi ang Aking Personal na Impormasyon (CCPA)"
 
-#: aesirx-consent.php:120
+#: aesirx-consent.php:170
 msgid "Disables third-party data sharing for California users."
 msgstr "Hindi paganahin ang third-party data sharing para sa mga user sa California."
 
-#: includes/settings.php:648
+#: includes/settings.php:651
 msgid "Configurable Consent Logic"
 msgstr "Nako-configure na Consent Logic"
 
-#: includes/settings.php:661
+#: includes/settings.php:664
 msgid "Opt-In Mode (EU)"
 msgstr "Opt-In Mode (EU)"
 
-#: includes/settings.php:662
+#: includes/settings.php:665
 msgid "No tracking technologies are activated until a user explicitly gives consent. This is required by <strong>GDPR</strong> and <strong>ePrivacy Directive 5(3)</strong>."
 msgstr "Walang tracking technologies ang maa-activate hanggang sa malinaw na magbigay ng pahintulot ang user. Ito ay kinakailangan ng <strong>GDPR</strong> at <strong>ePrivacy Directive 5(3)</strong>."
 
-#: includes/settings.php:670
+#: includes/settings.php:673
 msgid "Opt-Out Mode (California)"
 msgstr "Opt-Out Mode (California)"
 
-#: includes/settings.php:671
+#: includes/settings.php:674
 msgid "Tracking is allowed by default, but users must be able to opt out easily. This aligns with <strong>CCPA</strong> and similar U.S. privacy frameworks."
 msgstr "Ang tracking ay pinapayagan bilang default, ngunit dapat madaling mag-opt out ang mga user. Ito ay naaayon sa <strong>CCPA</strong> at katulad na U.S. privacy frameworks."
 
-#: includes/settings.php:702
+#: includes/settings.php:705
 msgid "Do not sell or share options"
 msgstr "Huwag ibenta o ibahagi ang mga opsyon"
 
-#: includes/settings.php:715
-#: includes/settings.php:821
+#: includes/settings.php:718
+#: includes/settings.php:824
 msgid "Yes"
 msgstr "Oo"
 
-#: includes/settings.php:723
-#: includes/settings.php:829
+#: includes/settings.php:726
+#: includes/settings.php:832
 msgid "No"
 msgstr "Hindi"
 
-#: includes/settings.php:808
+#: includes/settings.php:811
 msgid "Enable Geo-handling for Consent Mode"
 msgstr "Paganahin ang Geo-handling para sa Consent Mode"
 
-#: includes/settings.php:844
+#: includes/settings.php:847
 msgid "Geo-Based Consent Rules"
 msgstr "Geo-Based Consent Rules"
 
-#: includes/settings.php:943
+#: includes/settings.php:946
 msgid "Browser Language"
 msgstr "Wika ng Browser"
 
-#: includes/settings.php:944
-#: includes/settings.php:968
-#: includes/settings.php:985
+#: includes/settings.php:947
+#: includes/settings.php:971
+#: includes/settings.php:988
 msgid "Time Zone"
 msgstr "Time Zone"
 
-#: includes/settings.php:958
+#: includes/settings.php:961
 msgid "Consent Mode"
 msgstr "Consent Mode"
 
-#: includes/settings.php:959
+#: includes/settings.php:962
 msgid "Allow Override"
 msgstr "Payagan ang I-override"
 
-#: includes/settings.php:967
-#: includes/settings.php:984
+#: includes/settings.php:970
+#: includes/settings.php:987
 msgid "Language"
 msgstr "Wika"
 
-#: includes/settings.php:970
-#: includes/settings.php:987
+#: includes/settings.php:973
+#: includes/settings.php:990
 msgid "Select Mode"
 msgstr "Pumili ng Mode"
 
-#: includes/settings.php:988
+#: includes/settings.php:991
 msgid "Override"
 msgstr "I-override"
 
@@ -960,20 +960,20 @@ msgstr "Pinapabuti ng Default Consent Mode ang Google Consent Mode 2.0 sa pamama
 msgid "Decentralized Consent Mode setup improves Google Consent Mode 2.0 by not loading any scripts, beacons, or tags until after consent is given, reducing compliance risks. It also includes Decentralized Consent, for more control over personal data."
 msgstr "Ang pag-setup ng Decentralized Consent Mode ay nagpapabuti sa Google Consent Mode 2.0 sa pamamagitan ng hindi pag-load ng anumang scripts, beacons, o tags hanggang pagkatapos maibigay ang pahintulot, binabawasan ang mga panganib sa pagsunod. Kasama rin dito ang Decentralized Consent, para sa higit na kontrol sa personal data at mga reward."
 
-#: includes/settings.php:950
+#: includes/settings.php:953
 msgid "Choose how browser language and time zone are combined to determine consent rules:"
 msgstr "Pumili kung paano pinagsama ang wika ng browser at time zone upang matukoy ang mga patakaran sa pahintulot:"
 
-#: includes/settings.php:952
+#: includes/settings.php:955
 msgid "<strong>AND Logic (Stricter Match):</strong> Both language and time zone must match a region for its consent model to apply. Ideal for high-accuracy targeting."
 msgstr "<strong>AND Logic (Mas Mahigpit na Pagkakapareho):</strong> Dapat tumugma ang wika at time zone sa isang rehiyon para mailapat ang consent model nito. Mainam para sa high-accuracy targeting."
 
-#: includes/settings.php:953
+#: includes/settings.php:956
 msgid "<strong>OR Logic (More Flexible):</strong> Either language or time zone can match to apply a region’s consent model. Best for broader coverage based on user preferences."
 msgstr "<strong>OR Logic (Mas Flexible):</strong> Maaaring tumugma ang wika o time zone para mailapat ang consent model ng isang rehiyon. Pinakamahusay para sa mas malawak na saklaw batay sa kagustuhan ng user."
 
 #. translators: 1: Permalink structure example, 2: Link to Permalink Settings page
-#: aesirx-consent.php:384
+#: aesirx-consent.php:461
 msgid ""
 "Our plugin requires that your site use a pretty permalink structure (for example, %1$s) to work correctly.\n"
 "                            It looks like your current settings are using the plain permalink format, which might cause issues.\n"
@@ -1006,11 +1006,11 @@ msgid ""
 "          Remember to include the explicit purpose (e.g., analytics, marketing) in the consent text to inform users why GTM is being used.</div>"
 msgstr ""
 
-#: includes/settings.php:1525
+#: includes/settings.php:1528
 msgid "Learn how to use AesirX Privacy Scanner with Consent Shield to detect privacy-intrusive elements, using the JetPack plugin as an example."
 msgstr ""
 
-#: includes/settings.php:1064
+#: includes/settings.php:1067
 msgid "Manage License Here"
 msgstr "Pamahalaan ang Lisensya Dito"
 
@@ -1022,58 +1022,58 @@ msgstr "I-customize ang Teksto ng Pamamahala ng Pahintulot"
 msgid "Customize Details Text "
 msgstr "I-customize ang Detalye ng Teksto"
 
-#: includes/settings.php:1822
+#: includes/settings.php:1825
 msgid "Generate"
 msgstr "Gumawa"
 
-#: aesirx-consent.php:121
-#: includes/settings.php:1905
+#: aesirx-consent.php:171
+#: includes/settings.php:1908
 msgid "Cookie Declaration"
 msgstr "Deklarasyon ng Cookie"
 
-#: includes/settings.php:1935
+#: includes/settings.php:1938
 msgid "Privacy Policy"
 msgstr "Patakaran sa Privacy"
 
-#: includes/settings.php:1965
+#: includes/settings.php:1968
 msgid "Consent Request"
 msgstr "Hiling ng Pahintulot"
 
-#: includes/settings.php:1829
+#: includes/settings.php:1832
 msgid "Domain Categorization"
 msgstr "Pagkakategorya ng Domain"
 
-#: includes/settings.php:2251
-#: includes/settings.php:2318
+#: includes/settings.php:2254
+#: includes/settings.php:2321
 msgid "You are using a lifetime license."
 msgstr "Gumagamit ka ng habang-buhay na lisensya."
 
-#: includes/settings.php:2257
-#: includes/settings.php:2324
+#: includes/settings.php:2260
+#: includes/settings.php:2327
 msgid "year"
 msgid_plural "years"
 msgstr[0] "taon"
 msgstr[1] "mga taon"
 
-#: includes/settings.php:2260
-#: includes/settings.php:2327
+#: includes/settings.php:2263
+#: includes/settings.php:2330
 msgid "month"
 msgid_plural "months"
 msgstr[0] "buwan"
 msgstr[1] "mga buwan"
 
-#: includes/settings.php:2263
-#: includes/settings.php:2330
+#: includes/settings.php:2266
+#: includes/settings.php:2333
 msgid "day"
 msgid_plural "days"
 msgstr[0] "araw"
 msgstr[1] "mga araw"
 
-#: includes/settings.php:2268
+#: includes/settings.php:2271
 msgid "Your license ends in %1$s. Please update your license <a href='%2$s' target='_blank'>%2$s</a>."
 msgstr "Ang iyong lisensya ay matatapos sa loob ng %1$s. Paki-update ang iyong lisensya sa <a href='%2$s' target='_blank'>%2$s</a>."
 
-#: includes/settings.php:2335
+#: includes/settings.php:2338
 msgid "Your trial license ends in %1$s. Please update your license <a href='%2$s' target='_blank'>%2$s</a>."
 msgstr "Ang iyong trial na lisensya ay matatapos sa loob ng %1$s. Paki-update ang iyong lisensya sa <a href='%2$s' target='_blank'>%2$s</a>."
 
@@ -1081,119 +1081,125 @@ msgstr "Ang iyong trial na lisensya ay matatapos sa loob ng %1$s. Paki-update an
 msgid "Customize Cookie Declaration Text"
 msgstr ""
 
-#: includes/settings.php:1099
-#: includes/settings.php:1429
+#: aesirx-consent.php:177
+#: includes/settings.php:1102
+#: includes/settings.php:1432
 msgid "Age & Country Verification"
 msgstr ""
 
-#: includes/settings.php:1344
+#: includes/settings.php:1347
 msgid "This feature lets you restrict access by age or location using secure digital ID verification. Users without a wallet ID can create a Concordium ID with a passport or driver’s license. Verification uses zero-knowledge proofs, so the website never sees or stores personal details."
 msgstr ""
 
-#: includes/settings.php:1353
+#: includes/settings.php:1356
 msgid "Tick to require users to confirm their age using a digital ID stored in a wallet such as Concordium Wallet or Google Wallet (Note: Google Wallet support varies by region and ID type)."
 msgstr ""
 
-#: includes/settings.php:1365
+#: includes/settings.php:1368
 msgid "Tick to require users to confirm their country from their digital ID stored in a wallet such as Concordium Wallet or Google Wallet (Note: Google Wallet support varies by region and ID type)."
 msgstr ""
 
-#: includes/settings.php:1376
+#: includes/settings.php:1379
 msgid "Users must be at least this age to access."
 msgstr ""
 
-#: includes/settings.php:1388
+#: includes/settings.php:1391
 msgid "Users cannot be over this age to access."
 msgstr ""
 
-#: includes/settings.php:1400
-#: includes/settings.php:1414
+#: includes/settings.php:1403
+#: includes/settings.php:1417
 msgid "Only these countries can access (leave blank to allow all)."
 msgstr ""
 
-#: includes/settings.php:1424
+#: includes/settings.php:1427
 msgid "Message preview"
 msgstr ""
 
-#: includes/settings.php:1430
+#: aesirx-consent.php:178
+#: includes/settings.php:1433
 msgid "Age Verification"
 msgstr ""
 
-#: includes/settings.php:1431
+#: aesirx-consent.php:179
+#: includes/settings.php:1434
 msgid "Country Verification"
 msgstr ""
 
-#: includes/settings.php:1438
+#: includes/settings.php:1441
 msgid "You must be at least <span class='minimum_age_text'>%1$s</span> years old to access this content."
 msgstr ""
 
-#: includes/settings.php:1444
+#: includes/settings.php:1447
 msgid "Access is limited to users under <span class='maximum_age_text'>%1$s</span> years."
 msgstr ""
 
-#: includes/settings.php:1450
+#: includes/settings.php:1453
 msgid "To access this content, you must be from <span class='allow_country_text'>%1$s</span>."
 msgstr ""
 
-#: includes/settings.php:1456
+#: includes/settings.php:1459
 msgid "Access is excluded to users from <span class='disallow_country_text'>%1$s</span>."
 msgstr ""
 
-#: includes/settings.php:1471
+#: aesirx-consent.php:192
+#: includes/settings.php:1474
 msgid "Verification is done using your digital ID stored in a secure wallet of your choice – your personal details are encrypted & never stored or shared. If you don’t have a wallet ID, you can create one now."
 msgstr ""
 
-#: includes/settings.php:1477
+#: aesirx-consent.php:210
+#: includes/settings.php:1480
 msgid "Cancel"
 msgstr ""
 
-#: includes/settings.php:1482
+#: aesirx-consent.php:206
+#: includes/settings.php:1485
 msgid "Continue to Verification"
 msgstr ""
 
-#: includes/settings.php:1832
+#: includes/settings.php:1835
 msgid "This draft was automatically generated based on real scan data from your website and identifies third-party domains, cookies, and beacons used, categorized by purpose."
 msgstr ""
 
-#: includes/settings.php:1836
-#: includes/settings.php:1912
-#: includes/settings.php:1942
-#: includes/settings.php:1972
+#: includes/settings.php:1839
+#: includes/settings.php:1915
+#: includes/settings.php:1945
+#: includes/settings.php:1975
 msgid "Please review and adjust the content to make sure it reflects your actual data practices before publishing."
 msgstr ""
 
-#: includes/settings.php:1874
+#: includes/settings.php:1877
 msgid "Enable AI Auto-Blocking"
 msgstr ""
 
-#: includes/settings.php:1885
-#: includes/settings.php:1931
-#: includes/settings.php:1961
-#: includes/settings.php:1991
+#: includes/settings.php:1888
+#: includes/settings.php:1934
+#: includes/settings.php:1964
+#: includes/settings.php:1994
 msgid "Regenerate"
 msgstr ""
 
-#: includes/settings.php:1908
+#: includes/settings.php:1911
 msgid "This draft was automatically generated based on real scan data from your website and lists the cookies and tracking technologies detected."
 msgstr ""
 
-#: includes/settings.php:1916
+#: includes/settings.php:1919
 msgid "For full setup instructions: <a href='%1$s' target='_blank'>AesirX CMP Guide: How to Generate a Cookie Declaration with AI</a>."
 msgstr ""
 
-#: includes/settings.php:1938
+#: includes/settings.php:1941
 msgid "This draft was automatically generated based on real scan data from your website and outlines the data collection and processing activities detected."
 msgstr ""
 
-#: includes/settings.php:1946
+#: includes/settings.php:1949
 msgid "For full setup instructions: <a href='%1$s' target='_blank'>AesirX CMP Guide: How to Generate a Privacy Policy with AI</a>."
 msgstr ""
 
-#: includes/settings.php:1968
+#: includes/settings.php:1971
 msgid "This draft was automatically generated based on real scan data from your website and provides a consent message tailored to the technologies and data flows detected."
 msgstr ""
 
-#: includes/settings.php:1976
+#: includes/settings.php:1979
 msgid "For full setup instructions: AesirX CMP Guide: How to Generate Consent Request Text with AI"
 msgstr ""
 
@@ -1205,6 +1211,142 @@ msgstr ""
 msgid "Always link your own website's Privacy Policy, not the AesirX example"
 msgstr ""
 
-#: includes/settings.php:2280
+#: includes/settings.php:2283
 msgid "Unknown error"
+msgstr ""
+
+#: aesirx-consent.php:172
+msgid "Browser wallet extension not detected"
+msgstr ""
+
+#: aesirx-consent.php:173
+msgid "Failed to verify age and country!"
+msgstr ""
+
+#: aesirx-consent.php:174
+msgid "Your age does not fall within the permitted range."
+msgstr ""
+
+#: aesirx-consent.php:175
+msgid "Issuing country is not allowed!"
+msgstr ""
+
+#: aesirx-consent.php:176
+msgid "Verifying your age and country..."
+msgstr ""
+
+#: aesirx-consent.php:180
+msgid "Choose a verification method"
+msgstr ""
+
+#: aesirx-consent.php:181
+msgid "You must be at least"
+msgstr ""
+
+#: aesirx-consent.php:182
+msgid "years old to access this content."
+msgstr ""
+
+#: aesirx-consent.php:183
+msgid "Access is limited to users under."
+msgstr ""
+
+#: aesirx-consent.php:184
+msgid "years."
+msgstr ""
+
+#: aesirx-consent.php:185
+msgid "To access this content, you must be from"
+msgstr ""
+
+#: aesirx-consent.php:186
+msgid "Access is excluded to users from, you must be from"
+msgstr ""
+
+#: aesirx-consent.php:187
+msgid "To comply with the law, we need to verify your"
+msgstr ""
+
+#: aesirx-consent.php:188
+msgid "age & country"
+msgstr ""
+
+#: aesirx-consent.php:189
+msgid "age"
+msgstr ""
+
+#: aesirx-consent.php:190
+msgid "country"
+msgstr ""
+
+#: aesirx-consent.php:191
+msgid "before granting you access."
+msgstr ""
+
+#: aesirx-consent.php:193
+msgid "Please accept the request on your Android device."
+msgstr ""
+
+#: aesirx-consent.php:194
+msgid "Scan this QR code with Google Lens on Android."
+msgstr ""
+
+#: aesirx-consent.php:195
+msgid "Choose your wallet:"
+msgstr ""
+
+#: aesirx-consent.php:196
+msgid "Select a wallet that contains a valid digital ID (e.g. passport, driver’s license or mobile driver’s license)."
+msgstr ""
+
+#: aesirx-consent.php:197
+msgid "Privacy Note:"
+msgstr ""
+
+#: aesirx-consent.php:198
+msgid "Verification via <span class='fw-semibold'>Concordium ID</span> uses zero-knowledge proofs (ZKPs) to ensure full pseudonymity and unlinkability - no data is shared or traceable."
+msgstr ""
+
+#: aesirx-consent.php:199
+msgid "<span class='fw-semibold'>Google Wallet</span> is also supported with ZKP-based credentials (e.g., mDL), but verification events may be linkable by Google."
+msgstr ""
+
+#: aesirx-consent.php:200
+msgid "Other methods coming soon"
+msgstr ""
+
+#: aesirx-consent.php:201
+msgid "Don’t have a digital wallet?"
+msgstr ""
+
+#: aesirx-consent.php:202
+msgid "Create Concordium ID"
+msgstr ""
+
+#: aesirx-consent.php:203
+msgid "Register with your passport or other acceptable ID and download the wallet. This process uses zero-knowledge proofs, so your personal details remain private."
+msgstr ""
+
+#: aesirx-consent.php:204
+msgid "This feature is only available in Android device"
+msgstr ""
+
+#: aesirx-consent.php:205
+msgid "This feature is only available in Google Chrome"
+msgstr ""
+
+#: aesirx-consent.php:207
+msgid "Save wallet"
+msgstr ""
+
+#: aesirx-consent.php:208
+msgid "Verifying sign proof request, please return to your CryptoX Wallet app."
+msgstr ""
+
+#: aesirx-consent.php:209
+msgid "Scripts"
+msgstr ""
+
+#: aesirx-consent.php:211
+msgid "Select"
 msgstr ""
