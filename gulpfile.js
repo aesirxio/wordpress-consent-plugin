@@ -22,23 +22,28 @@ function movePluginFolderTask() {
     .pipe(gulp.dest(`${dist}/plugins/aesirx-consent`));
 }
 
-function moveAnalyticJSTask() {
+function moveConsentLoaderJSTask() {
   return gulp
-    .src(['./node_modules/aesirx-consent/dist/consent.js'])
-    .pipe(rename('consent.js'))
+    .src(['./node_modules/aesirx-consent/dist/consent-loader.global.js'])
+    .pipe(rename('consent-loader.global.js'))
     .pipe(gulp.dest(`${dist}/plugins/aesirx-consent/assets/vendor`));
 }
-function moveAnalyticVerifyJSTask() {
+
+function moveConsentChunksTask() {
   return gulp
-    .src(['./node_modules/aesirx-consent/dist/consent-verify.js'])
-    .pipe(rename('consent-verify.js'))
-    .pipe(gulp.dest(`${dist}/plugins/aesirx-consent/assets/vendor`));
+    .src(['./node_modules/aesirx-consent/dist/consent-chunks/**'], { allowEmpty: true })
+    .pipe(gulp.dest(`${dist}/plugins/aesirx-consent/assets/vendor/consent-chunks`));
 }
-function moveAnalyticSimpleJSTask() {
+
+function moveConsentSimpleChunksTask() {
   return gulp
-    .src(['./node_modules/aesirx-consent/dist/consent-simple.js'])
-    .pipe(rename('consent-simple.js'))
-    .pipe(gulp.dest(`${dist}/plugins/aesirx-consent/assets/vendor`));
+    .src(['./node_modules/aesirx-consent/dist/consent-simple-chunks/**'], { allowEmpty: true })
+    .pipe(gulp.dest(`${dist}/plugins/aesirx-consent/assets/vendor/consent-simple-chunks`));
+}
+function moveConsentVerifyChunksTask() {
+  return gulp
+    .src(['./node_modules/aesirx-consent/dist/consent-verify-chunks/**'], { allowEmpty: true })
+    .pipe(gulp.dest(`${dist}/plugins/aesirx-consent/assets/vendor/consent-verify-chunks`));
 }
 
 function moveRepeatableFieldsJSTask() {
@@ -121,9 +126,10 @@ async function cleanComposerTask() {
 exports.zip = series(
   cleanTask,
   movePluginFolderTask,
-  moveAnalyticJSTask,
-  moveAnalyticVerifyJSTask,
-  moveAnalyticSimpleJSTask,
+  moveConsentLoaderJSTask,
+  moveConsentChunksTask,
+  moveConsentSimpleChunksTask,
+  moveConsentVerifyChunksTask,
   moveRepeatableFieldsJSTask,
   moveGeoJSTask,
   moveVerifyJSTask,
@@ -146,9 +152,10 @@ exports.watch = function () {
     './wp-content/plugins/aesirx-consent/**',
     series(
       movePluginFolderTask,
-      moveAnalyticJSTask,
-      moveAnalyticVerifyJSTask,
-      moveAnalyticSimpleJSTask,
+      moveConsentLoaderJSTask,
+      moveConsentChunksTask,
+      moveConsentSimpleChunksTask,
+      moveConsentVerifyChunksTask,
       moveRepeatableFieldsJSTask,
       moveGeoJSTask,
       moveVerifyJSTask,
