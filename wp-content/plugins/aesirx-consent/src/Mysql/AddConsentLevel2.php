@@ -57,7 +57,8 @@ Class AesirX_Analytics_Add_Consent_Level2 extends AesirxAnalyticsMysqlHelper
             }
 
             $datetime = gmdate('Y-m-d H:i:s');
-            parent::aesirx_analytics_add_visitor_consent($params['visitor_uuid'], $uuid, null, $datetime, null, $params);
+            $expiration = gmdate('Y-m-d H:i:s', strtotime('+6 months', strtotime($datetime)));
+            parent::aesirx_analytics_add_visitor_consent($params['visitor_uuid'], $uuid, null, $datetime, $expiration, $params);
         }
 
         return true;
