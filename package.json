@@ -1,6 +1,6 @@
 {
   "name": "aesirx_consent",
-  "version": "2.0.4",
+  "version": "2.0.6",
   "description": "Consent via aesirx",
   "private": true,
   "scripts": {
@@ -37,7 +37,7 @@
     "webpack-stream": "^7.0.0"
   },
   "dependencies": {
-    "aesirx-consent": "1.7.2",
+    "aesirx-consent": "1.7.4",
     "aesirx-bi-app": "2.7.0",
     "react": "^18.2.0",
     "react-dom": "^18.3.1",
