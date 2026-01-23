@@ -2714,6 +2714,13 @@ add_filter(
       // Ensure arrays
       $old_value = is_array($old_value) ? $old_value : [];
       $new_value = is_array($new_value) ? $new_value : [];
+      if (!empty($new_value['_force_version_bump'])) {
+        $current_version = $old_value['consent_version'] ?? '1.0.0';
+        $new_value['consent_version'] = aesirx_increment_version($current_version);
+        // cleanup
+        unset($new_value['_force_version_bump']);
+        return $new_value;
+      }
       // Set default version if missing
       $current_version = $old_value['consent_version'] ?? '1.0.0';
       // Remove version before comparison
@@ -2731,3 +2738,31 @@ add_filter(
   10,
   2
 );
+
+add_action('post_updated', function ($post_ID, $post_after, $post_before) {
+    if ($post_after->post_type !== 'page') {
+        return;
+    }
+    $optionsAI = get_option('aesirx_consent_ai_plugin_options', []);
+    $privacy_link = $optionsAI['privacy_policy_link'] ?? '';
+
+    if (!$privacy_link) {
+        return;
+    }
+    $privacy_page_id = url_to_postid($privacy_link);
+     if (!$privacy_page_id || (int) $post_ID !== (int) $privacy_page_id) {
+        return;
+    }
+     // Only bump if content actually changed
+    if ($post_after->post_content === $post_before->post_content) {
+        return;
+    }
+    $consent_options = get_option('aesirx_consent_modal_plugin_options', []);
+    $current_version = $consent_options['consent_version'] ?? '1.0.0';
+    $consent_options['_force_version_bump'] = true;
+
+    $consent_options['consent_version'] = aesirx_increment_version($current_version);
+
+    update_option('aesirx_consent_modal_plugin_options', $consent_options);
+
+}, 10, 3);

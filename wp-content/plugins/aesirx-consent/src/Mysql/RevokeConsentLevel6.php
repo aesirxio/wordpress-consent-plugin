@@ -22,7 +22,7 @@ Class AesirX_Analytics_Revoke_Consent_Level6 extends AesirxAnalyticsMysqlHelper
         $wpdb->update( // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching
             $wpdb->prefix . 'analytics_visitor_consent',
             ['expiration' => $expiration],
-            ['visitor_uuid' => $visitor_uuid, 'consent_uuid' => null, 'expiration' => null],
+            ['visitor_uuid' => $visitor_uuid, 'consent_uuid' => null],
             array('%s'),  // Data type for 'expiration'
             array('%s')   // Data type for 'visitor_uuid'
         );
