@@ -65,7 +65,7 @@ add_action('wp_enqueue_scripts', function (): void {
         'aesirx-consent',
         plugins_url('assets/vendor/consent-loader.global.js', __FILE__),
         [],
-        '2.0.7',
+        '2.0.71',
     true
     );
 
@@ -81,7 +81,7 @@ add_action('wp_enqueue_scripts', function (): void {
         'aesirx-consent',
         plugins_url($cssFile, __FILE__),
         [],
-        '2.0.7',
+        '2.0.71',
         'all'
     );
     wp_enqueue_style('aesirx-consent');

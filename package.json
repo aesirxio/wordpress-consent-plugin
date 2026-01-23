@@ -37,7 +37,7 @@
     "webpack-stream": "^7.0.0"
   },
   "dependencies": {
-    "aesirx-consent": "1.8.0",
+    "aesirx-consent": "1.8.1",
     "aesirx-bi-app": "2.7.0",
     "react": "^18.2.0",
     "react-dom": "^18.3.1",
