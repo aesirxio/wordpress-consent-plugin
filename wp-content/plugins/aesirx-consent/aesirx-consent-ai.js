@@ -188,14 +188,16 @@ jQuery(document).ready(async function ($) {
                 aesirx_ajax?.cookie_declaration_link
               )
             : domain_categorization_prompt;
-    await generateAI(prompt, id);
+    const isSavingContent =
+      $(`#${id} .prompt_item_result .result`).text()?.length > 0 ? false : true;
+    await generateAI(prompt, id, isSavingContent);
     $('.prompt_item_regenerate, .auto_populated').each(function () {
       $(this).prop('disabled', false);
       $(this).find('.loader').removeClass('show');
     });
   });
 
-  async function generateAI(prompt, id) {
+  async function generateAI(prompt, id, isSavingContent = true) {
     $(`#${id} .prompt_item_result .loading`).addClass('show');
     const openai_result = await fetch(`${endpoint}/openai-assistant`, {
       method: 'POST',
@@ -215,16 +217,21 @@ jQuery(document).ready(async function ($) {
       update_thread: '1.9.0',
       [id]: openai_content,
     };
-    if (id === 'cookie_declaration' || id === 'privacy_policy') {
+    if (
+      (id === 'cookie_declaration' || id === 'privacy_policy') &&
+      isSavingContent &&
+      openai_content
+    ) {
       await saveCookiePolicy(id, openai_content);
       $(`#${id} .prompt_item_input`).removeClass('hide');
     }
-    if (id === 'consent_request') {
+    if (id === 'consent_request' && isSavingContent && openai_content) {
       await updateAesirxPluginsOptions(
         { datastream_consent: openai_content?.replace(/"/g, "'") },
         'update_aesirx_consent_modal_options'
       );
     }
+    $(`#${id} .prompt_item_update`).removeClass('hide');
     await updateAesirxOptions(newOptions);
     aesirx_ajax[id] = openai_content;
     $(`#${id} .prompt_item_result .loading`).removeClass('show');
@@ -294,6 +301,7 @@ jQuery(document).ready(async function ($) {
 
   $('#privacy_policy_link_save').click(async function () {
     $(this).find('.loader').addClass('show');
+    $(this).attr('disabled', true);
     const link = $('#privacy_policy_link').val();
     if (link) {
       aesirx_ajax.privacy_policy_link = link;
@@ -313,9 +321,11 @@ jQuery(document).ready(async function ($) {
       $('#privacy_policy_link_notification').addClass('hide');
     }
     $(this).find('.loader').removeClass('show');
+    $(this).attr('disabled', false);
   });
   $('#cookie_declaration_link_save').click(async function () {
     $(this).find('.loader').addClass('show');
+    $(this).attr('disabled', true);
     const link = $('#cookie_declaration_link').val();
     if (link) {
       aesirx_ajax.cookie_declaration_link = link;
@@ -335,6 +345,32 @@ jQuery(document).ready(async function ($) {
       $('#cookie_declaration_link_notification').addClass('hide');
     }
     $(this).find('.loader').removeClass('show');
+    $(this).attr('disabled', false);
+  });
+
+  $('#privacy_policy .prompt_item_update').click(async function () {
+    $(this).find('.loader').addClass('show');
+    $(this).attr('disabled', true);
+    await saveCookiePolicy('privacy_policy', aesirx_ajax.privacy_policy);
+    $(this).find('.loader').removeClass('show');
+    $(this).attr('disabled', false);
+  });
+  $('#cookie_declaration .prompt_item_update').click(async function () {
+    $(this).find('.loader').addClass('show');
+    $(this).attr('disabled', true);
+    await saveCookiePolicy('cookie_declaration', aesirx_ajax.cookie_declaration);
+    $(this).find('.loader').removeClass('show');
+    $(this).attr('disabled', false);
+  });
+  $('#consent_request .prompt_item_update').click(async function () {
+    $(this).find('.loader').addClass('show');
+    $(this).attr('disabled', true);
+    await updateAesirxPluginsOptions(
+      { datastream_consent: aesirx_ajax.consent_request?.replace(/"/g, "'") },
+      'update_aesirx_consent_modal_options'
+    );
+    $(this).find('.loader').removeClass('show');
+    $(this).attr('disabled', false);
   });
 
   async function saveCookiePolicy(id, content) {
@@ -361,8 +397,10 @@ jQuery(document).ready(async function ($) {
             aesirx_ajax.privacy_policy_link = response?.data?.permalink;
           }
           $(`#${id} .prompt_item_input input`).val(response?.data?.permalink);
+          if (!$(`#${id}`).find('.error_message').hasClass('hide')) {
+            $(`#${id}`).find('.error_message').addClass('hide');
+          }
         } else {
-          $(`#${id}`).find('.error_message').html('Error when saving!');
           $(`#${id}`).find('.error_message').removeClass('hide');
         }
       }

@@ -156,7 +156,7 @@ Class AesirX_Analytics_Get_Visitor_Consent_List extends AesirxAnalyticsMysqlHelp
             $currentConsentVersion = $optionsConsentModal['consent_version'] ?? null;
             foreach ($consents as $consent) {
                 if (
-                    isset($consent->consent_version, $currentConsentVersion) &&
+                    isset($currentConsentVersion) &&
                     $consent->consent_version !== $currentConsentVersion
                 ) {
                     continue;

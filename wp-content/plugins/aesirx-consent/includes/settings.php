@@ -1923,6 +1923,10 @@ window.funcAfterConsent = async function () {
                 <img width='24px' height='24px' src='<?php echo plugins_url( 'aesirx-consent/assets/images-plugin/info.png') ?>' />
                 <?php echo wp_kses(sprintf(__("For full setup instructions: <a href='%1\$s' target='_blank'>AesirX CMP Guide: How to Generate a Privacy Policy with AI</a>.", 'aesirx-consent'), 'https://aesirx.io/documentation/cmp/how-to/aesirx-cmp-guide-how-to-generate-a-privacy-policy-with-ai'), aesirx_analytics_escape_html()); ?>
               </div>
+              <div class="prompt_item_info">
+                <img width='24px' height='24px' src='<?php echo plugins_url( 'aesirx-consent/assets/images-plugin/info.png') ?>' />
+                <?php echo wp_kses(__("This URL is where the page is published. AesirX creates and manages it automatically, or you can link your own page instead.", 'aesirx-consent'), aesirx_analytics_escape_html()); ?>
+              </div>
               <div class="prompt_item_input <?php if(!$optionsPrivacyPolicy) echo 'hide'; ?>">
                   <input type="text" id="privacy_policy_link" name="privacy_policy_link" placeholder="Privacy Policy URL" value="<?php echo esc_attr($optionsPrivacyPolicyLink) ?>">
                   <button id="privacy_policy_link_save" class="prompt_item_input_save">
@@ -1944,7 +1948,10 @@ window.funcAfterConsent = async function () {
                 </div>
               </div>
               <div class="prompt_item_buttons">
-                <div class="error_message hide"> <?php echo esc_html__("Error saving!", 'aesirx-consent') ?></div>
+                <button class="prompt_item_update <?php if(!$optionsPrivacyPolicyLink) echo 'hide'; ?>">
+                  <div class="loader"></div><div><?php echo esc_html__("Update as Privacy Policy", 'aesirx-consent') ?></div>
+                </button>
+                <div class="error_message hide"> <?php echo esc_html__("Error updating!", 'aesirx-consent') ?></div>
                 <button class="prompt_item_regenerate <?php if($isAllOptionsEmpty) echo 'hide'; ?>">
                   <div class="loader"></div><div><?php echo esc_html__("Regenerate", 'aesirx-consent') ?></div>
                 </button>
@@ -1969,7 +1976,6 @@ window.funcAfterConsent = async function () {
                 <img width='24px' height='24px' src='<?php echo plugins_url( 'aesirx-consent/assets/images-plugin/info.png') ?>' />
                 <?php echo wp_kses(__("This URL is where the page is published. AesirX creates and manages it automatically, or you can link your own page instead.", 'aesirx-consent'), aesirx_analytics_escape_html()); ?>
               </div>
-              
               <div class="prompt_item_input <?php if(!$optionsCookieDeclaration) echo 'hide'; ?>">
                 <input type="text" id="cookie_declaration_link" name="cookie_declaration_link" placeholder="Cookie Declaration URL" value="<?php echo esc_attr($optionsCookieDeclarationLink) ?>">
                 <button id="cookie_declaration_link_save" class="prompt_item_input_save">
@@ -1991,7 +1997,10 @@ window.funcAfterConsent = async function () {
                 </div>
               </div>
               <div class="prompt_item_buttons">
-                <div class="error_message hide"> <?php echo esc_html__("Error saving!", 'aesirx-consent') ?></div>
+                <button class="prompt_item_update <?php if(!$optionsCookieDeclarationLink) echo 'hide'; ?>">
+                  <div class="loader"></div><div><?php echo esc_html__("Update as Cookie Declaration", 'aesirx-consent') ?></div>
+                </button>
+                <div class="error_message hide"> <?php echo esc_html__("Error updating!", 'aesirx-consent') ?></div>
                 <button class="prompt_item_regenerate <?php if($isAllOptionsEmpty) echo 'hide'; ?>">
                   <div class="loader"></div><div><?php echo esc_html__("Regenerate", 'aesirx-consent') ?></div>
                 </button>
@@ -2023,9 +2032,15 @@ window.funcAfterConsent = async function () {
                 <?php echo stripslashes($optionsConsentRequest) ?>
                 </div>
               </div>
-              <button class="prompt_item_regenerate <?php if($isAllOptionsEmpty) echo 'hide'; ?>">
+              <div class="prompt_item_buttons">
+                <button class="prompt_item_update <?php if(!$optionsConsentRequest) echo 'hide'; ?>">
+                  <div class="loader"></div><div><?php echo esc_html__("Update as Consent Request", 'aesirx-consent') ?></div>
+                </button>
+                <div class="error_message hide"> <?php echo esc_html__("Error updating!", 'aesirx-consent') ?></div>
+                <button class="prompt_item_regenerate <?php if($isAllOptionsEmpty) echo 'hide'; ?>">
                 <div class="loader"></div><div><?php echo esc_html__("Regenerate", 'aesirx-consent') ?></div>
               </button>
+              </div>
             </div>
           </div>
         <?php else : ?>
@@ -2059,10 +2074,18 @@ add_action('admin_enqueue_scripts', function ($hook) {
       'ajax_url' => admin_url('admin-ajax.php'),
       'nonce' => wp_create_nonce('aesirx_consent_nonce'),
       'thread_id' =>  $optionsAI['thread_id'] ?? '',
-      'cookie_declaration' =>  $optionsAI['cookie_declaration'] ?? '',
-      'privacy_policy' =>  $optionsAI['privacy_policy'] ?? '',
-      'consent_request' =>  $optionsAI['consent_request'] ?? '',
-      'domain_categorization' =>  $optionsAI['domain_categorization'] ?? '',
+      'cookie_declaration' => wp_kses_post(
+        html_entity_decode($optionsAI['cookie_declaration'] ?? '', ENT_QUOTES)
+      ),
+      'privacy_policy' => wp_kses_post(
+        html_entity_decode($optionsAI['privacy_policy'] ?? '', ENT_QUOTES)
+      ),
+      'consent_request' => wp_kses_post(
+        html_entity_decode($optionsAI['consent_request'] ?? '', ENT_QUOTES)
+      ),
+      'domain_categorization' => wp_kses_post(
+        html_entity_decode($optionsAI['domain_categorization'] ?? '', ENT_QUOTES)
+      ),
       'cookie_declaration_link' =>  $optionsAI['cookie_declaration_link'] ?? '',
       'privacy_policy_link' =>  $optionsAI['privacy_policy_link'] ?? ''
   ]);

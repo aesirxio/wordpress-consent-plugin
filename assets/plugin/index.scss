@@ -958,7 +958,8 @@ input.aesirx_consent_input {
   }
   .prompt_item_regenerate,
   .auto_populated,
-  .prompt_item_input_save {
+  .prompt_item_input_save,
+  .prompt_item_update {
     height: 44px;
     min-width: 178px;
     padding: 0 20px;
@@ -1040,11 +1041,15 @@ input.aesirx_consent_input {
       }
     }
   }
+  .prompt_item_update {
+    margin-left: 0;
+    margin-right: auto;
+  }
   .error_message {
-    color: #1ab394;
+    color: #d63638;
     font-weight: 500;
-    margin-right: 10px;
-    margin-left: auto;
+    margin-right: auto;
+    margin-left: 10px;
     &.hide {
       display: none;
     }
