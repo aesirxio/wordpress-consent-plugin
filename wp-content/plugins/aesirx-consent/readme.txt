@@ -3,7 +3,7 @@ Contributors: aesirx,vikingtechguy,nixa999,nguyenbao10,vietnguyen1406,devphutran
 Tags: privacy, analytics, compliance, wordpress analytics, consent
 Requires at least: 5.9
 Tested up to: 6.7.1
-Stable tag: 2.0.7
+Stable tag: 2.0.8
 Requires PHP: 7.4
 License: GPL 3.0
 
@@ -47,6 +47,9 @@ We are using our server dev01.aesirx.io for validating wallet and JWT decoding.
 The Terms of service can be found here https://aesirx.io/terms-conditions and the Privacy policy is here https://aesirx.io/privacy-policy.
 
 == Changelog ==
+
+= 2.0.8 =
+* Fix AI Advisor result, add version and expired for consent log
 
 = 2.0.7 =
 * Fix gtag load, uncheck customize

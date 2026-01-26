@@ -97,7 +97,8 @@ Class AesirX_Analytics_Add_Consent_Level3or4 extends AesirxAnalyticsMysqlHelper
             }
 
             // Add visitor consent record
-            parent::aesirx_analytics_add_visitor_consent($params['visitor_uuid'], $uuid, null, gmdate('Y-m-d H:i:s'), null, $params);
+            $expiration = gmdate('Y-m-d H:i:s', strtotime('+6 months', strtotime(gmdate('Y-m-d H:i:s'))));
+            parent::aesirx_analytics_add_visitor_consent($params['visitor_uuid'], $uuid, null, gmdate('Y-m-d H:i:s'), $expiration, $params);
         }
 
         // Update nonce

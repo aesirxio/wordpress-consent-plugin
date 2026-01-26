@@ -876,10 +876,14 @@ if (!class_exists('AesirxAnalyticsMysqlHelper')) {
                 $data['ip_consent'] = $ip;
             }
 
-            if (!empty($override_language)) {
-                $data['override_language'] = $override_language;
+            if (isset($params['request']['override_language'])) {
+                $data['override_language'] = $params['request']['override_language'];
             }
-            
+
+            if (isset($params['request']['consent_version'])) {
+                $data['consent_version'] = $params['request']['consent_version'];
+            }
+
             // Prepare the data types based on the keys
             $data_types = array_fill(0, count($data), '%s'); // Default to '%s' for all
             
@@ -1073,6 +1077,14 @@ if (!class_exists('AesirxAnalyticsMysqlHelper')) {
                     $where,
                     array('%s'),  // Data type for 'expiration'
                     array('%s')   // Data type for 'uuid'
+                );
+
+                $wpdb->update( // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching
+                    $wpdb->prefix . 'analytics_visitor_consent',
+                    ['expiration' => $expiration],
+                    ['consent_uuid' => sanitize_text_field($consent_uuid)],
+                    array('%s'),  // Data type for 'expiration'
+                    array('%s')   // Data type for 'visitor_uuid'
                 );
 
                 // Execute the query

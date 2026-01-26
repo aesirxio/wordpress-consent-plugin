@@ -1,1 +1,1 @@
-export { BiIntegration as default } from 'aesirx-bi-app';
+export { BiIntegration as default } from 'aesirx-cmp-admin';

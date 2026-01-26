@@ -299,11 +299,19 @@ jQuery(document).ready(function ($) {
           }
 
           // Listen for changes and update the input field accordingly
-          editor.model.document.on('change:data', () => {
+          function syncEditorToInput(editor, inputId, isOnChange = false) {
             let content = editor.getData();
             content = content.replace(/="([^"]*)"/g, "='$1'");
-            const hasText = content.replace(/(<([^>]+)>)/gi, '').length;
-            $(`#${inputId}`).val(hasText ? content : '');
+            const hasText = content.replace(/(<([^>]+)>)/gi, '').trim().length;
+            if ($('#' + inputId).val() || isOnChange) {
+              $('#' + inputId).val(hasText ? content : '');
+            }
+          }
+          syncEditorToInput(editor, inputId);
+
+          // Listen for changes and update the input field accordingly
+          editor.model.document.on('change:data', () => {
+            syncEditorToInput(editor, inputId, true);
           });
 
           // Reset content when the reset button is clicked

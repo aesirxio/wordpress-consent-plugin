@@ -29,6 +29,7 @@ Class AesirX_Analytics_Add_Consent_Level1 extends AesirxAnalyticsMysqlHelper
 
         // Get the current date and time
         $now = gmdate('Y-m-d H:i:s');
+        $expiration = gmdate('Y-m-d H:i:s', strtotime('+6 months', strtotime($now)));
 
         // Instantiate the class to get visitor consent list
         $class = new \AesirX_Analytics_Get_Visitor_Consent_List();
@@ -63,7 +64,7 @@ Class AesirX_Analytics_Add_Consent_Level1 extends AesirxAnalyticsMysqlHelper
             null,                                              // Consent UUID, null for new consent
             (int) $params['consent'],                          // Consent level
             $now,                                              // Current timestamp
-            null,                                              // Consent expiration, null for no expiration
+            $expiration,                                              // Consent expiration, null for no expiration
             $params                                            // Additional parameters
         );
     }

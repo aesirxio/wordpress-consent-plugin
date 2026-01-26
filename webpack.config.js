@@ -60,7 +60,10 @@ module.exports = {
               ),
             },
             {
-              source: path.resolve(__dirname, './node_modules/aesirx-bi-app/public/assets/images/'),
+              source: path.resolve(
+                __dirname,
+                './node_modules/aesirx-cmp-admin/public/assets/images/'
+              ),
               destination: path.resolve(__dirname, `${dist}/plugins/aesirx-consent/assets/images/`),
             },
           ],

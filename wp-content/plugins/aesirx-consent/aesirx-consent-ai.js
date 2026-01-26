@@ -42,19 +42,27 @@ jQuery(document).ready(async function ($) {
     cookies_post_consent: afterCookies,
     beacons_post_consent: data[1]?.hosts?.beacons?.thirdParty,
   };
-  const cookie_declaration_prompt = `
-  You are a privacy compliance assistant specializing in GDPR, ePrivacy, and global data privacy laws. Generate a legally accurate cookie declaration based on the input JSON of scanned cookies and services. Cookies should be categorized, and include name, domain, purpose, duration, and provider. Assume a consent-based model (prior consent unless strictly necessary). This declaration should only include cookies-not beacons or tracking pixels.
-  Indicate consent is required for all cookies except strictly necessary ones.
-  ${JSON.stringify(cookieData, null, 2)}
-  Additions: Explicit instruction: Exclude beacons and pixels. Emphasize consent requirements clearly in the text output. Tables remain the same for cookie display.
-  `;
-  const privacy_policy_prompt = `
+  const cookie_declaration_prompt = (privacy_policy_link, cookie_declaration_link) => {
+    return `
+    You are a privacy compliance assistant specializing in GDPR, ePrivacy, and global data privacy laws. Generate a legally accurate cookie declaration based on the input JSON of scanned cookies and services. Cookies should be categorized, and include name, domain, purpose, duration, and provider. Assume a consent-based model (prior consent unless strictly necessary). This declaration should only include cookies-not beacons or tracking pixels.
+    Indicate consent is required for all cookies except strictly necessary ones.
+    ${JSON.stringify(cookieData, null, 2)}
+    Additions: Explicit instruction: Exclude beacons and pixels. Emphasize consent requirements clearly in the text output. Tables remain the same for cookie display. No Cookie Declarations title in top.
+    Privacy Policy Link: ${privacy_policy_link}
+    Cookie Declaration Link: ${cookie_declaration_link}
+    `;
+  };
+  const privacy_policy_prompt = (cookie_declaration_link) => {
+    return `
   You are a privacy legal expert assistant tasked with generating privacy policies for websites. Use the provided scan data, services, and jurisdiction to create a GDPR/CCPA/ePrivacy-compliant privacy policy.
   Include the following: Identity of the data controller, Types of personal data collected (incl. data from beacons and tracking pixels), Use of cookies and similar technologies, Legal basis for processing, Third-party services involved, Data retention periods, Sharing of data (who receives it and why), User rights, International transfers, A disclaimer that the policy is a draft and must be reviewed.
   ${JSON.stringify(cookieData, null, 2)}
-  Additions: Explicit mention and inclusion of beacons and tracking pixels. Add a draft disclaimer in the generated policy. Ensure third-party data sharing is addressed, with optional placeholder to list vendors. Highlight user rights under GDPR/CCPA. Remove phone number since don't need it.
+  Additions: Explicit mention and inclusion of beacons and tracking pixels. Add a draft disclaimer in the generated policy. Ensure third-party data sharing is addressed, with optional placeholder to list vendors. Highlight user rights under GDPR/CCPA. Remove phone number since don't need it.  No Privacy Policy title in top.
+  Cookie Declaration Link: ${cookie_declaration_link}
   `;
-  const consent_request_prompt = `
+  };
+  const consent_request_prompt = (privacy_policy_link, cookie_declaration_link) => {
+    return `
     You are a privacy user experience expert specializing in GDPR, ePrivacy, and CCPA. Generate a SHORT, clear consent text for a website based on the scan results provided in JSON.
     Input JSON: ${JSON.stringify(cookieData, null, 2)}
     The text must answer exactly these 3 questions, in this order:
@@ -93,8 +101,8 @@ jQuery(document).ready(async function ($) {
         5. Control sentence
           - “You can change or withdraw your consent at any time, and you can do it granularly by customizing the settings.”
         6. Links
-          - “You can read more in our [Privacy Policy] and [Cookie Declaration].”`;
-
+          - “You can read more in our [Privacy Policy] and [Cookie Declaration].” Privacy Policy Link: ${privacy_policy_link}, Cookie Declaration Link: ${cookie_declaration_link}`;
+  };
   let pluginItems = [];
 
   $('.list_plugin_item').each(function () {
@@ -120,14 +128,40 @@ jQuery(document).ready(async function ($) {
   $('.ai_generate_button').click(async function () {
     $(this).prop('disabled', true);
     $(this).find('.loader').addClass('show');
-
     $('#cookie_declaration .prompt_item_result .loading').addClass('show');
     $('#privacy_policy .prompt_item_result .loading').addClass('show');
     $('#consent_request .prompt_item_result .loading').addClass('show');
     $('#domain_categorization .prompt_item_result .loading').addClass('show');
-    await generateAI(cookie_declaration_prompt, 'cookie_declaration');
-    await generateAI(privacy_policy_prompt, 'privacy_policy');
-    await generateAI(consent_request_prompt, 'consent_request');
+    if (!aesirx_ajax.cookie_declaration_link) {
+      await $.post(
+        aesirx_ajax.ajax_url,
+        {
+          action: 'aesirx_create_cookie_page',
+          security: aesirx_ajax.nonce,
+          post_content: '',
+        },
+        function (response) {
+          if (response.success) {
+            aesirx_ajax.cookie_declaration_link = response?.data?.permalink;
+          }
+        }
+      );
+    }
+    await generateAI(privacy_policy_prompt(aesirx_ajax?.cookie_declaration_link), 'privacy_policy');
+    await generateAI(
+      cookie_declaration_prompt(
+        aesirx_ajax?.privacy_policy_link,
+        aesirx_ajax?.cookie_declaration_link
+      ),
+      'cookie_declaration'
+    );
+    await generateAI(
+      consent_request_prompt(
+        aesirx_ajax?.privacy_policy_link,
+        aesirx_ajax?.cookie_declaration_link
+      ),
+      'consent_request'
+    );
     await generateAI(domain_categorization_prompt, 'domain_categorization');
     $(this).find('.loader').removeClass('show');
     $(this).prop('disabled', false);
@@ -142,20 +176,28 @@ jQuery(document).ready(async function ($) {
     const id = $(this).closest('.prompt_item').attr('id');
     const prompt =
       id === 'cookie_declaration'
-        ? cookie_declaration_prompt
+        ? cookie_declaration_prompt(
+            aesirx_ajax?.privacy_policy_link,
+            aesirx_ajax?.cookie_declaration_link
+          )
         : id === 'privacy_policy'
-          ? privacy_policy_prompt
+          ? privacy_policy_prompt(aesirx_ajax?.cookie_declaration_link)
           : id === 'consent_request'
-            ? consent_request_prompt
+            ? consent_request_prompt(
+                aesirx_ajax?.privacy_policy_link,
+                aesirx_ajax?.cookie_declaration_link
+              )
             : domain_categorization_prompt;
-    await generateAI(prompt, id);
+    const isSavingContent =
+      $(`#${id} .prompt_item_result .result`).text()?.length > 0 ? false : true;
+    await generateAI(prompt, id, isSavingContent);
     $('.prompt_item_regenerate, .auto_populated').each(function () {
       $(this).prop('disabled', false);
       $(this).find('.loader').removeClass('show');
     });
   });
 
-  async function generateAI(prompt, id) {
+  async function generateAI(prompt, id, isSavingContent = true) {
     $(`#${id} .prompt_item_result .loading`).addClass('show');
     const openai_result = await fetch(`${endpoint}/openai-assistant`, {
       method: 'POST',
@@ -175,6 +217,21 @@ jQuery(document).ready(async function ($) {
       update_thread: '1.9.0',
       [id]: openai_content,
     };
+    if (
+      (id === 'cookie_declaration' || id === 'privacy_policy') &&
+      isSavingContent &&
+      openai_content
+    ) {
+      await saveCookiePolicy(id, openai_content);
+      $(`#${id} .prompt_item_input`).removeClass('hide');
+    }
+    if (id === 'consent_request' && isSavingContent && openai_content) {
+      await updateAesirxPluginsOptions(
+        { datastream_consent: openai_content?.replace(/"/g, "'") },
+        'update_aesirx_consent_modal_options'
+      );
+    }
+    $(`#${id} .prompt_item_update`).removeClass('hide');
     await updateAesirxOptions(newOptions);
     aesirx_ajax[id] = openai_content;
     $(`#${id} .prompt_item_result .loading`).removeClass('show');
@@ -241,6 +298,114 @@ jQuery(document).ready(async function ($) {
       );
     }
   });
+
+  $('#privacy_policy_link_save').click(async function () {
+    $(this).find('.loader').addClass('show');
+    $(this).attr('disabled', true);
+    const link = $('#privacy_policy_link').val();
+    if (link) {
+      aesirx_ajax.privacy_policy_link = link;
+      const response = await updateCookiePrivacyLink({
+        privacy_policy_link: link,
+      });
+      if (!response?.success) {
+        $('#privacy_policy_link').addClass('error');
+        $('#privacy_policy_link_notification').removeClass('hide');
+        $('#privacy_policy_link_notification').html(response?.data);
+      } else {
+        $('#privacy_policy_link').removeClass('error');
+        $('#privacy_policy_link_notification').addClass('hide');
+      }
+    } else {
+      $('#privacy_policy_link').addClass('error');
+      $('#privacy_policy_link_notification').addClass('hide');
+    }
+    $(this).find('.loader').removeClass('show');
+    $(this).attr('disabled', false);
+  });
+  $('#cookie_declaration_link_save').click(async function () {
+    $(this).find('.loader').addClass('show');
+    $(this).attr('disabled', true);
+    const link = $('#cookie_declaration_link').val();
+    if (link) {
+      aesirx_ajax.cookie_declaration_link = link;
+      const response = await updateCookiePrivacyLink({
+        cookie_declaration_link: link,
+      });
+      if (!response?.success) {
+        $('#cookie_declaration_link').addClass('error');
+        $('#cookie_declaration_link_notification').removeClass('hide');
+        $('#cookie_declaration_link_notification').html(response?.data);
+      } else {
+        $('#cookie_declaration_link').removeClass('error');
+        $('#cookie_declaration_link_notification').addClass('hide');
+      }
+    } else {
+      $('#cookie_declaration_link').addClass('error');
+      $('#cookie_declaration_link_notification').addClass('hide');
+    }
+    $(this).find('.loader').removeClass('show');
+    $(this).attr('disabled', false);
+  });
+
+  $('#privacy_policy .prompt_item_update').click(async function () {
+    $(this).find('.loader').addClass('show');
+    $(this).attr('disabled', true);
+    await saveCookiePolicy('privacy_policy', aesirx_ajax.privacy_policy);
+    $(this).find('.loader').removeClass('show');
+    $(this).attr('disabled', false);
+  });
+  $('#cookie_declaration .prompt_item_update').click(async function () {
+    $(this).find('.loader').addClass('show');
+    $(this).attr('disabled', true);
+    await saveCookiePolicy('cookie_declaration', aesirx_ajax.cookie_declaration);
+    $(this).find('.loader').removeClass('show');
+    $(this).attr('disabled', false);
+  });
+  $('#consent_request .prompt_item_update').click(async function () {
+    $(this).find('.loader').addClass('show');
+    $(this).attr('disabled', true);
+    await updateAesirxPluginsOptions(
+      { datastream_consent: aesirx_ajax.consent_request?.replace(/"/g, "'") },
+      'update_aesirx_consent_modal_options'
+    );
+    $(this).find('.loader').removeClass('show');
+    $(this).attr('disabled', false);
+  });
+
+  async function saveCookiePolicy(id, content) {
+    if (id === 'cookie_declaration') {
+      await updateAesirxPluginsOptions(
+        { datastream_cookie: content?.replace(/"/g, "'") },
+        'update_aesirx_consent_modal_options'
+      );
+    }
+    await $.post(
+      aesirx_ajax.ajax_url,
+      {
+        action:
+          id === 'cookie_declaration' ? 'aesirx_create_cookie_page' : 'aesirx_create_privacy_page',
+        security: aesirx_ajax.nonce,
+        post_content: content,
+      },
+      function (response) {
+        if (response.success) {
+          if (id === 'cookie_declaration') {
+            aesirx_ajax.cookie_declaration_link = response?.data?.permalink;
+          }
+          if (id === 'privacy_policy') {
+            aesirx_ajax.privacy_policy_link = response?.data?.permalink;
+          }
+          $(`#${id} .prompt_item_input input`).val(response?.data?.permalink);
+          if (!$(`#${id}`).find('.error_message').hasClass('hide')) {
+            $(`#${id}`).find('.error_message').addClass('hide');
+          }
+        } else {
+          $(`#${id}`).find('.error_message').removeClass('hide');
+        }
+      }
+    );
+  }
 
   $('.copy_clipboard').click(async function () {
     const html = $(this).parent().find('.result').html();
@@ -329,14 +494,18 @@ jQuery(document).ready(async function ($) {
     const privacy_policy = aesirx_ajax.privacy_policy;
     const consent_request = aesirx_ajax.consent_request;
     const domain_categorization = aesirx_ajax.domain_categorization;
+    const privacy_policy_link = aesirx_ajax.privacy_policy_link;
+    const cookie_declaration_link = aesirx_ajax.cookie_declaration_link;
     const formattedOptions = {
       ...(cookie_declaration ? { cookie_declaration: cookie_declaration } : {}),
       ...(privacy_policy ? { privacy_policy: privacy_policy } : {}),
       ...(consent_request ? { consent_request: consent_request } : {}),
       ...(domain_categorization ? { domain_categorization: domain_categorization } : {}),
+      ...(privacy_policy_link ? { privacy_policy_link: privacy_policy_link } : {}),
+      ...(cookie_declaration_link ? { cookie_declaration_link: cookie_declaration_link } : {}),
       ...options,
     };
-    jQuery.ajax({
+    await jQuery.ajax({
       url: aesirx_ajax.ajax_url,
       method: 'POST',
       data: {
@@ -356,16 +525,47 @@ jQuery(document).ready(async function ($) {
       },
     });
   }
+
+  async function updateCookiePrivacyLink(options) {
+    const privacy_policy_link = aesirx_ajax.privacy_policy_link;
+    const cookie_declaration_link = aesirx_ajax.cookie_declaration_link;
+    const formattedOptions = {
+      ...(privacy_policy_link ? { privacy_policy_link: privacy_policy_link } : {}),
+      ...(cookie_declaration_link ? { cookie_declaration_link: cookie_declaration_link } : {}),
+      ...options,
+    };
+    return await jQuery.ajax({
+      url: aesirx_ajax.ajax_url,
+      method: 'POST',
+      data: {
+        action: 'update_aesirx_link_options',
+        security: aesirx_ajax.nonce,
+        options: formattedOptions,
+      },
+      success: function (response) {
+        if (response.success) {
+          console.log('Options updated successfully');
+        } else {
+          console.error('Failed to update options');
+        }
+        return response;
+      },
+      error: function (error) {
+        console.error('AJAX error:', error);
+        return error;
+      },
+    });
+  }
 });
 
-async function updateAesirxPluginsOptions(options) {
-  jQuery.ajax({
+async function updateAesirxPluginsOptions(options, action = 'update_aesirx_plugins_options') {
+  await jQuery.ajax({
     url: aesirx_ajax.ajax_url,
     method: 'POST',
     data: {
-      action: 'update_aesirx_plugins_options',
+      action: action,
       security: aesirx_ajax.nonce,
-      options: JSON.stringify(options), // stringify whole options object
+      options: action === 'update_aesirx_plugins_options' ? JSON.stringify(options) : options, // stringify whole options object
     },
     success(response) {
       if (response.success) {

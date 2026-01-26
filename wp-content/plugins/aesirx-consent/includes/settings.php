@@ -1660,6 +1660,8 @@ add_action('admin_menu', function () {
     },
   3);
 
+  
+
   add_submenu_page(
     'aesirx-consent-management-plugin',
     'Consent Logic',
@@ -1804,9 +1806,12 @@ add_action('admin_menu', function () {
         <?php
           $optionsAIKey = get_option('aesirx_consent_ai_key_plugin_options',[]);
           $optionsCookieDeclaration = $options['cookie_declaration'] ?? '';
+          $optionsCookieDeclarationLink = $options['cookie_declaration_link'] ?? '';
           $optionsPrivacyPolicy = $options['privacy_policy'] ?? '';
+          $optionsPrivacyPolicyLink = $options['privacy_policy_link'] ?? '';
           $optionsConsentRequest = $options['consent_request'] ?? '';
           $optionsDomainCategorization = $options['domain_categorization'] ?? '';
+          $isAllOptionsEmpty = empty($optionsCookieDeclaration) && empty($optionsPrivacyPolicy) && empty($optionsConsentRequest) && empty($optionsDomainCategorization);
         ?>
         <?php if( $optionsAIKey['openai_key']) : ?>
           <div class="w-100">
@@ -1884,7 +1889,7 @@ window.funcAfterConsent = async function () {
                   </div>
                   Automatically apply third-party blocking <br/> based on scan results.
                 </div>
-                <button class="prompt_item_regenerate <?php if(!$optionsDomainCategorization) echo 'hide'; ?>">
+                <button class="prompt_item_regenerate <?php if($isAllOptionsEmpty) echo 'hide'; ?>">
                   <div class="loader"></div><div><?php echo esc_html__("Regenerate", 'aesirx-consent') ?></div>
                 </button>
               </div>
@@ -1904,36 +1909,6 @@ window.funcAfterConsent = async function () {
                 ?>
               </div>
             </div>
-            <div id="cookie_declaration" class="prompt_item bg-white rounded-16px p-32px">
-              <div class="prompt_item_title"><?php echo esc_html__("Cookie Declaration", 'aesirx-consent') ?></div>
-              <div class="prompt_item_question">
-                <img width='24px' height='24px' src='<?php echo plugins_url( 'aesirx-consent/assets/images-plugin/question.png') ?>' />
-                <?php echo esc_html__("This draft was automatically generated based on real scan data from your website and lists the cookies and tracking technologies detected.", 'aesirx-consent') ?>
-              </div>
-              <div class="prompt_item_warning">
-                <img width='24px' height='24px' src='<?php echo plugins_url( 'aesirx-consent/assets/images-plugin/warning.png') ?>' />
-                <?php echo esc_html__("Please review and adjust the content to make sure it reflects your actual data practices before publishing.", 'aesirx-consent') ?>
-              </div>
-              <div class="prompt_item_info">
-                <img width='24px' height='24px' src='<?php echo plugins_url( 'aesirx-consent/assets/images-plugin/info.png') ?>' />
-                <?php echo wp_kses(sprintf(__("For full setup instructions: <a href='%1\$s' target='_blank'>AesirX CMP Guide: How to Generate a Cookie Declaration with AI</a>.", 'aesirx-consent'), 'https://aesirx.io/documentation/cmp/how-to/aesirx-cmp-how-to-generate-a-cookie-declaration-with-ai'), aesirx_analytics_escape_html()); ?>
-              </div>
-              <div class="prompt_item_result">
-                <div class="loading">
-                  <div class="loader"></div>
-                </div>
-                <div class="copy_clipboard">
-                  <img width='20px' height='20px' src='<?php echo plugins_url( 'aesirx-consent/assets/images-plugin/copy.svg') ?>' />
-                  <div class="copied_text">Copied!</div>
-                </div>
-                <div class="result">
-                  <?php echo stripslashes($optionsCookieDeclaration) ?>
-                </div>
-              </div>
-              <button class="prompt_item_regenerate <?php if(!$optionsCookieDeclaration) echo 'hide'; ?>">
-                <div class="loader"></div><div><?php echo esc_html__("Regenerate", 'aesirx-consent') ?></div>
-              </button>
-            </div>
             <div id="privacy_policy" class="prompt_item bg-white rounded-16px p-32px">
               <div class="prompt_item_title"><?php echo esc_html__("Privacy Policy", 'aesirx-consent') ?></div>
               <div class="prompt_item_question">
@@ -1948,6 +1923,18 @@ window.funcAfterConsent = async function () {
                 <img width='24px' height='24px' src='<?php echo plugins_url( 'aesirx-consent/assets/images-plugin/info.png') ?>' />
                 <?php echo wp_kses(sprintf(__("For full setup instructions: <a href='%1\$s' target='_blank'>AesirX CMP Guide: How to Generate a Privacy Policy with AI</a>.", 'aesirx-consent'), 'https://aesirx.io/documentation/cmp/how-to/aesirx-cmp-guide-how-to-generate-a-privacy-policy-with-ai'), aesirx_analytics_escape_html()); ?>
               </div>
+              <div class="prompt_item_info">
+                <img width='24px' height='24px' src='<?php echo plugins_url( 'aesirx-consent/assets/images-plugin/info.png') ?>' />
+                <?php echo wp_kses(__("This URL is where the page is published. AesirX creates and manages it automatically, or you can link your own page instead.", 'aesirx-consent'), aesirx_analytics_escape_html()); ?>
+              </div>
+              <div class="prompt_item_input <?php if(!$optionsPrivacyPolicy) echo 'hide'; ?>">
+                  <input type="text" id="privacy_policy_link" name="privacy_policy_link" placeholder="Privacy Policy URL" value="<?php echo esc_attr($optionsPrivacyPolicyLink) ?>">
+                  <button id="privacy_policy_link_save" class="prompt_item_input_save">
+                    <div class="loader"></div>
+                    <div><?php echo esc_html__("Save", 'aesirx-consent') ?></div>
+                  </button>
+                  <div id="privacy_policy_link_notification" class="link_notification hide"></div>
+              </div>
               <div class="prompt_item_result">
                 <div class="loading">
                   <div class="loader"></div>
@@ -1960,9 +1947,64 @@ window.funcAfterConsent = async function () {
                   <?php echo stripslashes($optionsPrivacyPolicy) ?>
                 </div>
               </div>
-              <button class="prompt_item_regenerate <?php if(!$optionsPrivacyPolicy) echo 'hide'; ?>">
-                <div class="loader"></div><div><?php echo esc_html__("Regenerate", 'aesirx-consent') ?></div>
-              </button>
+              <div class="prompt_item_buttons">
+                <button class="prompt_item_update <?php if(!$optionsPrivacyPolicyLink) echo 'hide'; ?>">
+                  <div class="loader"></div><div><?php echo esc_html__("Update as Privacy Policy", 'aesirx-consent') ?></div>
+                </button>
+                <div class="error_message hide"> <?php echo esc_html__("Error updating!", 'aesirx-consent') ?></div>
+                <button class="prompt_item_regenerate <?php if($isAllOptionsEmpty) echo 'hide'; ?>">
+                  <div class="loader"></div><div><?php echo esc_html__("Regenerate", 'aesirx-consent') ?></div>
+                </button>
+              </div>
+            </div>
+
+            <div id="cookie_declaration" class="prompt_item bg-white rounded-16px p-32px">
+              <div class="prompt_item_title"><?php echo esc_html__("Cookie Declaration", 'aesirx-consent') ?></div>
+              <div class="prompt_item_question">
+                <img width='24px' height='24px' src='<?php echo plugins_url( 'aesirx-consent/assets/images-plugin/question.png') ?>' />
+                <?php echo esc_html__("This draft was automatically generated based on real scan data from your website and lists the cookies and tracking technologies detected.", 'aesirx-consent') ?>
+              </div>
+              <div class="prompt_item_warning">
+                <img width='24px' height='24px' src='<?php echo plugins_url( 'aesirx-consent/assets/images-plugin/warning.png') ?>' />
+                <?php echo esc_html__("Please review and adjust the content to make sure it reflects your actual data practices before publishing.", 'aesirx-consent') ?>
+              </div>
+              <div class="prompt_item_info">
+                <img width='24px' height='24px' src='<?php echo plugins_url( 'aesirx-consent/assets/images-plugin/info.png') ?>' />
+                <?php echo wp_kses(sprintf(__("For full setup instructions: <a href='%1\$s' target='_blank'>AesirX CMP Guide: How to Generate a Cookie Declaration with AI</a>.", 'aesirx-consent'), 'https://aesirx.io/documentation/cmp/how-to/aesirx-cmp-how-to-generate-a-cookie-declaration-with-ai'), aesirx_analytics_escape_html()); ?>
+              </div>
+              <div class="prompt_item_info">
+                <img width='24px' height='24px' src='<?php echo plugins_url( 'aesirx-consent/assets/images-plugin/info.png') ?>' />
+                <?php echo wp_kses(__("This URL is where the page is published. AesirX creates and manages it automatically, or you can link your own page instead.", 'aesirx-consent'), aesirx_analytics_escape_html()); ?>
+              </div>
+              <div class="prompt_item_input <?php if(!$optionsCookieDeclaration) echo 'hide'; ?>">
+                <input type="text" id="cookie_declaration_link" name="cookie_declaration_link" placeholder="Cookie Declaration URL" value="<?php echo esc_attr($optionsCookieDeclarationLink) ?>">
+                <button id="cookie_declaration_link_save" class="prompt_item_input_save">
+                  <div class="loader"></div>
+                  <div><?php echo esc_html__("Save", 'aesirx-consent') ?></div>
+                </button>
+                <div id="cookie_declaration_link_notification" class="link_notification hide"></div>
+              </div>
+              <div class="prompt_item_result">
+                <div class="loading">
+                  <div class="loader"></div>
+                </div>
+                <div class="copy_clipboard">
+                  <img width='20px' height='20px' src='<?php echo plugins_url( 'aesirx-consent/assets/images-plugin/copy.svg') ?>' />
+                  <div class="copied_text">Copied!</div>
+                </div>
+                <div class="result">
+                  <?php echo stripslashes($optionsCookieDeclaration) ?>
+                </div>
+              </div>
+              <div class="prompt_item_buttons">
+                <button class="prompt_item_update <?php if(!$optionsCookieDeclarationLink) echo 'hide'; ?>">
+                  <div class="loader"></div><div><?php echo esc_html__("Update as Cookie Declaration", 'aesirx-consent') ?></div>
+                </button>
+                <div class="error_message hide"> <?php echo esc_html__("Error updating!", 'aesirx-consent') ?></div>
+                <button class="prompt_item_regenerate <?php if($isAllOptionsEmpty) echo 'hide'; ?>">
+                  <div class="loader"></div><div><?php echo esc_html__("Regenerate", 'aesirx-consent') ?></div>
+                </button>
+              </div>
             </div>
             <div id="consent_request" class="prompt_item bg-white rounded-16px p-32px">
               <div class="prompt_item_title"><?php echo esc_html__("Consent Request", 'aesirx-consent') ?></div>
@@ -1990,9 +2032,15 @@ window.funcAfterConsent = async function () {
                 <?php echo stripslashes($optionsConsentRequest) ?>
                 </div>
               </div>
-              <button class="prompt_item_regenerate <?php if(!$optionsConsentRequest) echo 'hide'; ?>">
+              <div class="prompt_item_buttons">
+                <button class="prompt_item_update <?php if(!$optionsConsentRequest) echo 'hide'; ?>">
+                  <div class="loader"></div><div><?php echo esc_html__("Update as Consent Request", 'aesirx-consent') ?></div>
+                </button>
+                <div class="error_message hide"> <?php echo esc_html__("Error updating!", 'aesirx-consent') ?></div>
+                <button class="prompt_item_regenerate <?php if($isAllOptionsEmpty) echo 'hide'; ?>">
                 <div class="loader"></div><div><?php echo esc_html__("Regenerate", 'aesirx-consent') ?></div>
               </button>
+              </div>
             </div>
           </div>
         <?php else : ?>
@@ -2026,10 +2074,20 @@ add_action('admin_enqueue_scripts', function ($hook) {
       'ajax_url' => admin_url('admin-ajax.php'),
       'nonce' => wp_create_nonce('aesirx_consent_nonce'),
       'thread_id' =>  $optionsAI['thread_id'] ?? '',
-      'cookie_declaration' =>  $optionsAI['cookie_declaration'] ?? '',
-      'privacy_policy' =>  $optionsAI['privacy_policy'] ?? '',
-      'consent_request' =>  $optionsAI['consent_request'] ?? '',
-      'domain_categorization' =>  $optionsAI['domain_categorization'] ?? ''
+      'cookie_declaration' => wp_kses_post(
+        html_entity_decode($optionsAI['cookie_declaration'] ?? '', ENT_QUOTES)
+      ),
+      'privacy_policy' => wp_kses_post(
+        html_entity_decode($optionsAI['privacy_policy'] ?? '', ENT_QUOTES)
+      ),
+      'consent_request' => wp_kses_post(
+        html_entity_decode($optionsAI['consent_request'] ?? '', ENT_QUOTES)
+      ),
+      'domain_categorization' => wp_kses_post(
+        html_entity_decode($optionsAI['domain_categorization'] ?? '', ENT_QUOTES)
+      ),
+      'cookie_declaration_link' =>  $optionsAI['cookie_declaration_link'] ?? '',
+      'privacy_policy_link' =>  $optionsAI['privacy_policy_link'] ?? ''
   ]);
     wp_enqueue_script('aesirx_analytics_ai');
   }
@@ -2516,3 +2574,218 @@ function update_aesirx_plugins_options() {
 
   wp_send_json_success('Options updated successfully');
 }
+
+add_action('wp_ajax_update_aesirx_consent_modal_options', 'update_aesirx_consent_modal_options');
+
+function update_aesirx_consent_modal_options() {
+    check_ajax_referer('aesirx_consent_nonce', 'security');
+    $stored = get_option('aesirx_consent_modal_plugin_options', []);
+    $stored = is_array($stored) ? $stored : [];
+    $incoming = filter_input(INPUT_POST, 'options', FILTER_DEFAULT, FILTER_REQUIRE_ARRAY);
+    $incoming = is_array($incoming) ? $incoming : [];
+    $merged = array_merge($stored, $incoming);
+    update_option('aesirx_consent_modal_plugin_options', $merged);
+    wp_send_json_success([
+        'updated_keys' => array_keys($incoming),
+    ]);
+}
+
+add_action('wp_ajax_aesirx_create_cookie_page', function () {
+    check_ajax_referer('aesirx_consent_nonce', 'security');
+    if (!current_user_can('manage_options')) {
+        wp_send_json_error(__('Permission denied', 'aesirx-consent'));
+    }
+    $aiOptions = get_option('aesirx_consent_ai_plugin_options', []);
+    $url = $aiOptions['cookie_declaration_link'] ?? '';
+    $page_id = url_to_postid($url);
+    $existing = $page_id ? get_post($page_id) : null;
+    $content = filter_input(INPUT_POST, 'post_content', FILTER_UNSAFE_RAW);
+    $content = wp_kses_post(wp_unslash($content));
+    if ($existing instanceof WP_Post) {
+        $page_id = wp_update_post([
+            'ID'           => $existing->ID,
+            'post_content' => $content,
+        ]);
+    } else {
+       $page_id = wp_insert_post([
+            'post_title'   => 'Cookie Declaration',
+            'post_content' => $content,
+            'post_status'  => 'publish',
+            'post_type'    => 'page',
+        ]);
+    }
+    if (is_wp_error($page_id)) {
+        wp_send_json_error($page_id->get_error_message());
+    }
+    wp_send_json_success([
+        'page_id'  => $page_id,
+        'edit_url' => get_edit_post_link($page_id, ''),
+        'permalink'     => get_permalink($page_id), 
+        'updated'  => (bool) $existing,
+    ]);
+});
+
+add_action('wp_ajax_aesirx_create_privacy_page', function () {
+    check_ajax_referer('aesirx_consent_nonce', 'security');
+    if (!current_user_can('manage_options')) {
+        wp_send_json_error(__('Permission denied', 'aesirx-consent'));
+    }
+    $aiOptions = get_option('aesirx_consent_ai_plugin_options', []);
+    $url = $aiOptions['privacy_policy_link'] ?? '';
+    $page_id = url_to_postid($url);
+    $existing = $page_id ? get_post($page_id) : null;
+    $content = filter_input(INPUT_POST, 'post_content', FILTER_UNSAFE_RAW);
+    $content = wp_kses_post(wp_unslash($content));
+    if ($existing instanceof WP_Post) {
+        $page_id = wp_update_post([
+            'ID'           => $existing->ID,
+            'post_content' => $content,
+        ]);
+    } else {
+       $page_id = wp_insert_post([
+            'post_title'   => 'Privacy Policy',
+            'post_content' => $content,
+            'post_status'  => 'publish',
+            'post_type'    => 'page',
+        ]);
+    }
+    if (is_wp_error($page_id)) {
+        wp_send_json_error($page_id->get_error_message());
+    }
+    wp_send_json_success([
+        'page_id'  => $page_id,
+        'edit_url' => get_edit_post_link($page_id, ''),
+        'permalink'     => get_permalink($page_id), 
+        'updated'  => (bool) $existing,
+    ]);
+});
+
+add_action('wp_ajax_update_aesirx_link_options', 'update_aesirx_link_options');
+
+function update_aesirx_link_options() {
+    check_ajax_referer('aesirx_consent_nonce', 'security');
+    if (!current_user_can('manage_options')) {
+        wp_send_json_error(__('Permission denied', 'aesirx-consent'));
+    }
+    // Get options from request
+    $incoming = filter_input(INPUT_POST, 'options', FILTER_DEFAULT, FILTER_REQUIRE_ARRAY);
+    $incoming = is_array($incoming) ? $incoming : [];
+
+    $stored = get_option('aesirx_consent_ai_plugin_options', []);
+    $stored = is_array($stored) ? $stored : [];
+
+    if (array_key_exists('privacy_policy_link', $incoming)) {
+      if (!empty($incoming['privacy_policy_link'])) {
+          $privacy_url = esc_url_raw($incoming['privacy_policy_link']);
+          $privacy_id  = url_to_postid($privacy_url);
+          if (!$privacy_id) {
+              wp_send_json_error(__('Privacy Policy link does not resolve to a page.', 'aesirx-consent'));
+          }
+          $privacy_page = get_post($privacy_id);
+          if (!$privacy_page || $privacy_page->post_type !== 'page') {
+              wp_send_json_error(__('Privacy Policy link is not a valid page.', 'aesirx-consent'));
+          }
+          $stored['privacy_policy_link'] = get_permalink($privacy_id);
+      } else {
+          unset($stored['privacy_policy_link']);
+      }
+    }
+    if (array_key_exists('cookie_declaration_link', $incoming)) {
+      if (!empty($incoming['cookie_declaration_link'])) {
+          $cookie_url = esc_url_raw($incoming['cookie_declaration_link']);
+          $cookie_id  = url_to_postid($cookie_url);
+          if (!$cookie_id) {
+              wp_send_json_error(__('Cookie Declaration link does not resolve to a page.', 'aesirx-consent'));
+          }
+          $cookie_page = get_post($cookie_id);
+          if (!$cookie_page || $cookie_page->post_type !== 'page') {
+              wp_send_json_error(__('Cookie Declaration link is not a valid page.', 'aesirx-consent'));
+          }
+          $stored['cookie_declaration_link'] = get_permalink($cookie_id);
+      } else {
+          unset($stored['cookie_declaration_link']);
+      }
+    }
+
+    // Update the option
+    update_option('aesirx_consent_ai_plugin_options', $stored);
+
+    // Return a success response
+    wp_send_json_success('Options updated successfully');
+}
+
+function aesirx_increment_version($version) {
+  $parts = array_map('intval', explode('.', $version));
+  $major = $parts[0] ?? 1;
+  $minor = $parts[1] ?? 0;
+  $patch = $parts[2] ?? 0;
+  $patch++;
+  if ($patch > 9) {
+      $patch = 0;
+      $minor++;
+  }
+  if ($minor > 9) {
+      $minor = 0;
+      $major++;
+  }
+  return "{$major}.{$minor}.{$patch}";
+}
+
+add_filter(
+  'pre_update_option_aesirx_consent_modal_plugin_options',
+  function ($new_value, $old_value) {
+      // Ensure arrays
+      $old_value = is_array($old_value) ? $old_value : [];
+      $new_value = is_array($new_value) ? $new_value : [];
+      if (!empty($new_value['_force_version_bump'])) {
+        $current_version = $old_value['consent_version'] ?? '1.0.0';
+        $new_value['consent_version'] = aesirx_increment_version($current_version);
+        // cleanup
+        unset($new_value['_force_version_bump']);
+        return $new_value;
+      }
+      // Set default version if missing
+      $current_version = $old_value['consent_version'] ?? '1.0.0';
+      // Remove version before comparison
+      $old_compare = $old_value;
+      $new_compare = $new_value;
+      unset($old_compare['consent_version'], $new_compare['consent_version']);
+      // Only bump version if something actually changed
+      if ($old_compare !== $new_compare) {
+          $new_value['consent_version'] = aesirx_increment_version($current_version);
+      } else {
+          $new_value['consent_version'] = $current_version;
+      }
+      return $new_value;
+  },
+  10,
+  2
+);
+
+add_action('post_updated', function ($post_ID, $post_after, $post_before) {
+    if ($post_after->post_type !== 'page') {
+        return;
+    }
+    $optionsAI = get_option('aesirx_consent_ai_plugin_options', []);
+    $privacy_link = $optionsAI['privacy_policy_link'] ?? '';
+
+    if (!$privacy_link) {
+        return;
+    }
+    $privacy_page_id = url_to_postid($privacy_link);
+     if (!$privacy_page_id || (int) $post_ID !== (int) $privacy_page_id) {
+        return;
+    }
+     // Only bump if content actually changed
+    if ($post_after->post_content === $post_before->post_content) {
+        return;
+    }
+    $consent_options = get_option('aesirx_consent_modal_plugin_options', []);
+    $current_version = $consent_options['consent_version'] ?? '1.0.0';
+    $consent_options['_force_version_bump'] = true;
+
+    $consent_options['consent_version'] = aesirx_increment_version($current_version);
+
+    update_option('aesirx_consent_modal_plugin_options', $consent_options);
+
+}, 10, 3);

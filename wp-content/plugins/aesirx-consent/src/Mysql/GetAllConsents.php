@@ -18,6 +18,7 @@ Class AesirX_Analytics_Get_All_Consents extends AesirxAnalyticsMysqlHelper
             "SELECT 
             visitor_consent.consent_uuid AS uuid, 
             visitor_consent.ip_consent AS ip, 
+            visitor_consent.consent_version AS consent_version,
             consent.web3id, 
             COALESCE(consent.consent, visitor_consent.consent) AS consent, 
             COALESCE(consent.datetime, visitor_consent.datetime) AS datetime, 
@@ -56,6 +57,7 @@ Class AesirX_Analytics_Get_All_Consents extends AesirxAnalyticsMysqlHelper
                 "tier",
                 "web3id",
                 "wallet",
+                "consent_version",
             ],
             "datetime",
         );
@@ -78,6 +80,7 @@ Class AesirX_Analytics_Get_All_Consents extends AesirxAnalyticsMysqlHelper
             $one = (object) $one;
             $uuid = isset($one->uuid) ? $one->uuid : null;
             $ip = isset($one->ip) ? $one->ip : null;
+            $consent_version = isset($one->consent_version) ? $one->consent_version : null;
             $wallet = isset($one->wallet_uuid) ? (object)[
                 'uuid' => $one->wallet_uuid,
                 'address' => $one->address,
@@ -93,6 +96,7 @@ Class AesirX_Analytics_Get_All_Consents extends AesirxAnalyticsMysqlHelper
                 'datetime' => $one->datetime,
                 'expiration' => isset($one->expiration) ? $one->expiration : null,
                 'wallet' => $wallet,
+                'consent_version' => $consent_version,
             ];
         }
 
