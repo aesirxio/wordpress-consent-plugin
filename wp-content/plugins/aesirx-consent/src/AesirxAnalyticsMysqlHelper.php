@@ -871,7 +871,7 @@ if (!class_exists('AesirxAnalyticsMysqlHelper')) {
                 }
             }
 
-            $ip = get_real_ip();
+            $ip = aesirx_analytics_get_real_ip();
             if (!empty($ip)) {
                 $data['ip_consent'] = $ip;
             }

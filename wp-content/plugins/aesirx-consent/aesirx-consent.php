@@ -267,7 +267,7 @@ add_action('wp_enqueue_scripts', function (): void {
     $configConsentGPCDoNotSell = (isset($optionsGPC['gpc_consent_donotsell']) && $optionsGPC['gpc_consent_donotsell'] === 'yes') ? "true" : "false";
     $configGeoHandling         = (isset($optionsGEO['geo_handling']) && $optionsGEO['geo_handling'] === 'yes');
 
-    function transformGeoOptions(array $optionsGEO): array {
+    function aesirx_analytics_transformGeoOptions(array $optionsGEO): array {
         $keys = [
             'geo_rules_language',
             'geo_rules_timezone',
@@ -288,7 +288,7 @@ add_action('wp_enqueue_scripts', function (): void {
         }
         return $result;
     }
-    $geoRules =  $configGeoHandling ? transformGeoOptions($optionsGEO) : null;
+    $geoRules =  $configGeoHandling ? aesirx_analytics_transformGeoOptions($optionsGEO) : null;
 
             
     wp_add_inline_script(
@@ -488,7 +488,7 @@ add_action('admin_init', function () {
 });
 
 global $wpdb;
-function get_real_ip() {
+function aesirx_analytics_get_real_ip() {
     $headers = ['HTTP_X_FORWARDED_FOR', 'HTTP_CLIENT_IP', 'REMOTE_ADDR'];
 
     foreach ($headers as $header) {
@@ -506,7 +506,7 @@ function get_real_ip() {
     }
     return false;
 }
-function get_real_user_agent() {
+function aesirx_analytics_get_real_user_agent() {
     $headers = ['HTTP_USER_AGENT'];
     foreach ($headers as $header) {
         if (!empty($_SERVER[$header])) {
@@ -517,8 +517,8 @@ function get_real_user_agent() {
     return false;
 }
 
-$ip = get_real_ip();
-$userAgent = get_real_user_agent();
+$ip = aesirx_analytics_get_real_ip();
+$userAgent = aesirx_analytics_get_real_user_agent();
 
 $consent = $wpdb->get_row( // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching
     $wpdb->prepare(
