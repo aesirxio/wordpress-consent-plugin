@@ -267,26 +267,28 @@ add_action('wp_enqueue_scripts', function (): void {
     $configConsentGPCDoNotSell = (isset($optionsGPC['gpc_consent_donotsell']) && $optionsGPC['gpc_consent_donotsell'] === 'yes') ? "true" : "false";
     $configGeoHandling         = (isset($optionsGEO['geo_handling']) && $optionsGEO['geo_handling'] === 'yes');
 
-    function aesirx_analytics_transformGeoOptions(array $optionsGEO): array {
-        $keys = [
-            'geo_rules_language',
-            'geo_rules_timezone',
-            'geo_rules_logic',
-            'geo_rules_consent_mode',
-            'geo_rules_override',
-        ];
-        $count = count($optionsGEO['geo_rules_language'] ?? []);
-    
-        $result = [];
-    
-        for ($i = 0; $i < $count; $i++) {
-            $item = [];
-            foreach ($keys as $key) {
-                $item[$key] = $optionsGEO[$key][$i] ?? null;
+    if (!function_exists('aesirx_analytics_transformGeoOptions')) {
+        function aesirx_analytics_transformGeoOptions(array $optionsGEO): array {
+            $keys = [
+                'geo_rules_language',
+                'geo_rules_timezone',
+                'geo_rules_logic',
+                'geo_rules_consent_mode',
+                'geo_rules_override',
+            ];
+            $count = count($optionsGEO['geo_rules_language'] ?? []);
+        
+            $result = [];
+        
+            for ($i = 0; $i < $count; $i++) {
+                $item = [];
+                foreach ($keys as $key) {
+                    $item[$key] = $optionsGEO[$key][$i] ?? null;
+                }
+                $result[] = $item;
             }
-            $result[] = $item;
+            return $result;
         }
-        return $result;
     }
     $geoRules =  $configGeoHandling ? aesirx_analytics_transformGeoOptions($optionsGEO) : null;
 
@@ -488,33 +490,37 @@ add_action('admin_init', function () {
 });
 
 global $wpdb;
-function aesirx_analytics_get_real_ip() {
-    $headers = ['HTTP_X_FORWARDED_FOR', 'HTTP_CLIENT_IP', 'REMOTE_ADDR'];
+if (!function_exists('aesirx_analytics_get_real_ip')) {
+    function aesirx_analytics_get_real_ip() {
+        $headers = ['HTTP_X_FORWARDED_FOR', 'HTTP_CLIENT_IP', 'REMOTE_ADDR'];
 
-    foreach ($headers as $header) {
-        if (!empty($_SERVER[$header])) {
-            $rawIp = sanitize_text_field(wp_unslash($_SERVER[$header])); 
-            $ipList = explode(',', $rawIp);
+        foreach ($headers as $header) {
+            if (!empty($_SERVER[$header])) {
+                $rawIp = sanitize_text_field(wp_unslash($_SERVER[$header])); 
+                $ipList = explode(',', $rawIp);
 
-            foreach ($ipList as $ip) {
-                $ip = trim($ip);
-                if (filter_var($ip, FILTER_VALIDATE_IP, FILTER_FLAG_NO_RES_RANGE)) {
-                    return $ip;
+                foreach ($ipList as $ip) {
+                    $ip = trim($ip);
+                    if (filter_var($ip, FILTER_VALIDATE_IP, FILTER_FLAG_NO_RES_RANGE)) {
+                        return $ip;
+                    }
                 }
             }
         }
+        return false;
     }
-    return false;
 }
-function aesirx_analytics_get_real_user_agent() {
-    $headers = ['HTTP_USER_AGENT'];
-    foreach ($headers as $header) {
-        if (!empty($_SERVER[$header])) {
-            $rawUserAgent = sanitize_text_field(wp_unslash($_SERVER[$header])); 
-            return $rawUserAgent;
+if (!function_exists('aesirx_analytics_get_real_user_agent')) {
+    function aesirx_analytics_get_real_user_agent() {
+        $headers = ['HTTP_USER_AGENT'];
+        foreach ($headers as $header) {
+            if (!empty($_SERVER[$header])) {
+                $rawUserAgent = sanitize_text_field(wp_unslash($_SERVER[$header])); 
+                return $rawUserAgent;
+            }
         }
+        return false;
     }
-    return false;
 }
 
 $ip = aesirx_analytics_get_real_ip();
