@@ -2,6 +2,8 @@
 
 use AesirxAnalytics\AesirxAnalyticsMysqlHelper;
 
+include_once plugin_dir_path(__FILE__) . 'ConsentWebhook.php';
+
 Class AesirX_Analytics_Revoke_Consent_Level5 extends AesirxAnalyticsMysqlHelper
 {
     function aesirx_analytics_mysql_execute($params = [])
@@ -43,12 +45,38 @@ Class AesirX_Analytics_Revoke_Consent_Level5 extends AesirxAnalyticsMysqlHelper
             ['uuid' => $visitor_uuid],
         );
 
+        // Read previously stored category consent BEFORE clearing, so we can record
+        // per-purpose denials in the GRC Suite webhook.
+        $previous_categories = [];
+        $stored_json = get_option('aesirx_analytics_plugin_options_disabled_block_domains', '');
+        if (!empty($stored_json)) {
+            $stored_items = json_decode($stored_json, true);
+            if (is_array($stored_items)) {
+                foreach ($stored_items as $item) {
+                    if (!empty($item['category'])) {
+                        $previous_categories[] = sanitize_text_field($item['category']);
+                    }
+                }
+                $previous_categories = array_unique($previous_categories);
+            }
+        }
+
         update_option('aesirx_analytics_plugin_options_disabled_block_domains', '');
 
         if ($wpdb->last_error) {
             return new WP_Error($wpdb->last_error);
         }
-        
+
+        // Forward the consent withdrawal to GRC Suite via webhook
+        if (AesirX_ComplianceOne_Webhook::is_enabled()) {
+            $webhook = new AesirX_ComplianceOne_Webhook();
+            $webhook->send(AesirX_ComplianceOne_Webhook::buildRevokePayload(
+                $visitor_uuid,
+                $validated_params,
+                $previous_categories
+            ));
+        }
+
         return true;
     }
 }

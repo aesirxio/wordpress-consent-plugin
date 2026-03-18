@@ -630,6 +630,55 @@ add_action('admin_init', function () {
       'class' => 'aesirx_analytics_blocking_cookies_mode_row',
     ]
   );
+
+  add_settings_field(
+    'aesirx_analytics_plugin_options_datastream_compliance_one',
+    esc_html__('ComplianceOne Integration', 'aesirx-consent'),
+    function () {
+    },
+    'aesirx_analytics_plugin',
+    'aesirx_analytics_settings',
+    [
+      'class' => 'aesirx_analytics_plugin_options_datastream_compliance_one_row',
+    ]
+  );
+
+  add_settings_field(
+    'aesirx_analytics_plugin_options_datastream_compliance_one_endpoint',
+    esc_html__('Endpoint', 'aesirx-consent'),
+    function () {
+      $options = get_option('aesirx_analytics_plugin_options',[]);
+      echo "<div class='input_container'>";
+      echo wp_kses("<input id='aesirx_analytics_plugin_options_datastream_compliance_one_endpoint' class='aesirx_consent_input' name='aesirx_analytics_plugin_options[datastream_compliance_one_endpoint]' type='text' value='" .
+      esc_attr($options['datastream_compliance_one_endpoint'] ?? '') .
+      "' />", aesirx_analytics_escape_html());
+      echo "</div>";
+    },
+    'aesirx_analytics_plugin',
+    'aesirx_analytics_settings',
+    [
+      'class' => 'aesirx_analytics_plugin_options_datastream_compliance_one_endpoint_row',
+    ]
+  );
+
+  add_settings_field(
+    'aesirx_analytics_plugin_options_datastream_compliance_one_secret',
+    esc_html__('Secret', 'aesirx-consent'),
+    function () {
+      $options = get_option('aesirx_analytics_plugin_options',[]);
+      echo "<div class='input_container'>";
+      echo wp_kses("<input id='aesirx_analytics_plugin_options_datastream_compliance_one_secret' class='aesirx_consent_input' name='aesirx_analytics_plugin_options[datastream_compliance_one_secret]' type='text' value='" .
+      esc_attr($options['datastream_compliance_one_secret'] ?? '') .
+      "' />", aesirx_analytics_escape_html());
+      echo "</div>";
+    },
+    'aesirx_analytics_plugin',
+    'aesirx_analytics_settings',
+    [
+      'class' => 'aesirx_analytics_plugin_options_datastream_compliance_one_secret_row',
+    ]
+  );
+
   add_settings_section(
     'aesirx_consent_gpc_settings',
     'Consent Modal Management',

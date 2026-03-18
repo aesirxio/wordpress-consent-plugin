@@ -159,7 +159,9 @@
           padding-right: 0;
         }
         &.aesirx_analytics_plugin_options_datastream_gtag_id_row,
-        &.aesirx_analytics_plugin_options_datastream_gtm_id_row {
+        &.aesirx_analytics_plugin_options_datastream_gtm_id_row,
+        &.aesirx_analytics_plugin_options_datastream_compliance_one_endpoint_row,
+        &.aesirx_analytics_plugin_options_datastream_compliance_one_secret_row {
           width: calc(33% - 25px);
           display: flex;
           flex-wrap: wrap;
@@ -167,6 +169,17 @@
           margin-top: 40px;
           input {
             width: 100%;
+          }
+        }
+        &.aesirx_analytics_plugin_options_datastream_compliance_one_row {
+          margin-top: 40px;
+          width: 100%;
+        }
+        &.aesirx_analytics_plugin_options_datastream_compliance_one_endpoint_row,
+        &.aesirx_analytics_plugin_options_datastream_compliance_one_secret_row {
+          margin-top: 20px;
+          th {
+            font-size: 16px;
           }
         }
         &.aesirx_analytics_plugin_options_datastream_gtm_id_general {

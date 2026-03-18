@@ -3260,10 +3260,10 @@ aesirx-cmp-admin@1.0.3:
     simple-react-validator "^1.6.0"
     web-vitals "^3.3.1"
 
-aesirx-consent@1.8.2:
-  version "1.8.2"
-  resolved "https://registry.yarnpkg.com/aesirx-consent/-/aesirx-consent-1.8.2.tgz#719cc5cbbed85b87a43c469847840264ec1c244d"
-  integrity sha512-z4R1+6btA9z5K4wzqCoZ4CXAGLSccCiZNrmXRHUAcyJTk+0jph+bnRzq93QS8v/5DBuS3RK9/G1wJ8VK+alllA==
+aesirx-consent@1.9.0:
+  version "1.9.0"
+  resolved "https://registry.yarnpkg.com/aesirx-consent/-/aesirx-consent-1.9.0.tgz#e8b55c21c37543c371b0c94f241e9f6093dce0f7"
+  integrity sha512-oYkxJol2wYXSZUqZ5tysWMdOA9yYZXEE8gywq17JzuQkWU6Xfe+y40BDTgoNylAZVq77pFOaLaEPILWDF8Vrzw==
   dependencies:
     "@concordium/browser-wallet-api-helpers" "3.0.1"
     "@concordium/react-components" "0.6.1"
