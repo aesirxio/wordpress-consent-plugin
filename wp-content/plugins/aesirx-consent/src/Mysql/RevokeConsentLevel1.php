@@ -2,6 +2,8 @@
 
 use AesirxAnalytics\AesirxAnalyticsMysqlHelper;
 
+include_once plugin_dir_path(__FILE__) . 'ConsentWebhook.php';
+
 Class AesirX_Analytics_Revoke_Consent_Level1 extends AesirxAnalyticsMysqlHelper
 {
     function aesirx_analytics_mysql_execute($params = [])
@@ -46,7 +48,16 @@ Class AesirX_Analytics_Revoke_Consent_Level1 extends AesirxAnalyticsMysqlHelper
         if ($wpdb->last_error) {
             return new WP_Error($wpdb->last_error);
         }
-        
+
+        // Forward the consent withdrawal to GRC Suite via webhook
+        if (AesirX_ComplianceOne_Webhook::is_enabled()) {
+            $webhook = new AesirX_ComplianceOne_Webhook();
+            $webhook->send(AesirX_ComplianceOne_Webhook::buildRevokePayload(
+                $visitor_uuid,
+                $validated_params
+            ));
+        }
+
         return true;
     }
 }

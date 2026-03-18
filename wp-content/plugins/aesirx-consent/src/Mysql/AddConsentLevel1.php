@@ -3,6 +3,7 @@
 use AesirxAnalytics\AesirxAnalyticsMysqlHelper;
 
 include_once plugin_dir_path(__FILE__) . 'GetVisitorConsentList.php';
+include_once plugin_dir_path(__FILE__) . 'ConsentWebhook.php';
 
 Class AesirX_Analytics_Add_Consent_Level1 extends AesirxAnalyticsMysqlHelper
 {
@@ -59,13 +60,28 @@ Class AesirX_Analytics_Add_Consent_Level1 extends AesirxAnalyticsMysqlHelper
         }
 
         // Add new visitor consent with the given parameters and calculated timestamps
-        return parent::aesirx_analytics_add_visitor_consent(
+        $result = parent::aesirx_analytics_add_visitor_consent(
             sanitize_text_field($params['uuid']),              // Visitor UUID
             null,                                              // Consent UUID, null for new consent
             (int) $params['consent'],                          // Consent level
             $now,                                              // Current timestamp
-            $expiration,                                              // Consent expiration, null for no expiration
+            $expiration,                                       // Consent expiration
             $params                                            // Additional parameters
         );
+
+        // When blocking_cookies_category is empty, StoreDisabledBlockDomains is never
+        // called, so we must send the webhook here instead.
+        $plugin_options = get_option('aesirx_analytics_plugin_options', []);
+        $has_categories = !empty($plugin_options['blocking_cookies_category']);
+        if (!$has_categories && AesirX_ComplianceOne_Webhook::is_enabled()) {
+            $webhook = new AesirX_ComplianceOne_Webhook();
+            $webhook->send(AesirX_ComplianceOne_Webhook::buildConsentPayload(
+                sanitize_text_field($params['uuid']),
+                (int) $params['consent'],
+                $params
+            ));
+        }
+
+        return $result;
     }
 }

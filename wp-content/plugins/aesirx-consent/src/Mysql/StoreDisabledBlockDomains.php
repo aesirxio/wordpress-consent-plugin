@@ -1,7 +1,8 @@
 <?php
 
-
 use AesirxAnalytics\AesirxAnalyticsMysqlHelper;
+
+include_once plugin_dir_path(__FILE__) . 'ConsentWebhook.php';
 
 Class AesirX_Analytics_Store_Disabled_Block_Domains extends AesirxAnalyticsMysqlHelper
 {
@@ -54,6 +55,17 @@ Class AesirX_Analytics_Store_Disabled_Block_Domains extends AesirxAnalyticsMysql
                 }
             }
         }
+        // Forward the customize consent to GRC Suite via webhook
+        if ($params[2] && $params[3] && AesirX_ComplianceOne_Webhook::is_enabled()) {
+            $webhook = new AesirX_ComplianceOne_Webhook();
+            $webhook->send(AesirX_ComplianceOne_Webhook::buildCustomizePayload(
+                sanitize_text_field($params[3]),
+                $params[2],
+                $params[1] ?? [],
+                $params
+            ));
+        }
+
         $response['disabled_block_domains'] = sanitize_text_field($jsonBlockDomain);
         return $response;
     }
