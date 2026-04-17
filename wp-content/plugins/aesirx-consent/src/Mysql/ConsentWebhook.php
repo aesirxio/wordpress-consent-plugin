@@ -164,7 +164,9 @@ class AesirX_ComplianceOne_Webhook
             'session_id'         => sanitize_text_field($params['session_id'] ?? ''),
             'consent_action'     => 'accept_all',
             'banner_interaction' => 'accept_all',
-            'consent_version'    => '1',
+            'consent_version'           => self::getVersion('consent_version'),
+            'policy_version'            => self::getVersion('policy_version'),
+            'cookie_declaration_version' => self::getVersion('cookie_declaration_version'),
             'timestamp'          => gmdate('c'),
             'purposes'           => [
                 [
@@ -212,7 +214,9 @@ class AesirX_ComplianceOne_Webhook
             'session_id'         => sanitize_text_field($params['session_id'] ?? ''),
             'consent_action'     => 'reject_all',
             'banner_interaction' => 'reject_all',
-            'consent_version'    => '1',
+            'consent_version'           => self::getVersion('consent_version'),
+            'policy_version'            => self::getVersion('policy_version'),
+            'cookie_declaration_version' => self::getVersion('cookie_declaration_version'),
             'timestamp'          => gmdate('c'),
             'purposes'           => $purposes,
         ];
@@ -255,7 +259,9 @@ class AesirX_ComplianceOne_Webhook
             'session_id'         => sanitize_text_field($params['session_id'] ?? ''),
             'consent_action'     => 'revoke',
             'banner_interaction' => 'reject_all',
-            'consent_version'    => '1',
+            'consent_version'           => self::getVersion('consent_version'),
+            'policy_version'            => self::getVersion('policy_version'),
+            'cookie_declaration_version' => self::getVersion('cookie_declaration_version'),
             'timestamp'          => gmdate('c'),
             'purposes'           => $purposes,
         ];
@@ -283,28 +289,56 @@ class AesirX_ComplianceOne_Webhook
         array $disabled_block_domains = [],
         array $params = []
     ): array {
-        // Collect the unique categories that have at least one blocked domain
-        $disabled_categories = [];
+        // Index denied domains by category for O(1) lookup
+        $denied_by_category = [];
         foreach ($disabled_block_domains as $item) {
-            if (!empty($item['category'])) {
-                $disabled_categories[] = $item['category'];
+            if (empty($item['category']) || empty($item['domain'])) {
+                continue;
             }
+            $denied_by_category[$item['category']][$item['domain']] = [
+                'domain' => sanitize_text_field($item['domain']),
+                'name'   => sanitize_text_field($item['name'] ?? ''),
+            ];
         }
-        $disabled_categories = array_unique($disabled_categories);
 
         // Full consent when no domains are blocked
-        $is_full_consent = empty($disabled_categories);
+        $is_full_consent = empty($denied_by_category);
+
+        // Full list of configured blocking domains, grouped by category
+        $all_by_category = [];
+        foreach (self::getAllBlockingDomains() as $entry) {
+            if (empty($entry['category']) || empty($entry['domain'])) {
+                continue;
+            }
+            $all_by_category[$entry['category']][] = [
+                'domain' => sanitize_text_field($entry['domain']),
+                'name'   => sanitize_text_field($entry['name'] ?? ''),
+            ];
+        }
 
         $purposes = [];
         foreach ($list_category as $category) {
             if ($category === 'essential') {
                 continue; // essential is always granted, no need to report
             }
-            $is_denied  = in_array($category, $disabled_categories, true);
+
+            $denied_map   = $denied_by_category[$category] ?? [];
+            $all_domains  = $all_by_category[$category] ?? [];
+            $granted_list = [];
+            $denied_list  = array_values($denied_map);
+
+            foreach ($all_domains as $entry) {
+                if (!isset($denied_map[$entry['domain']])) {
+                    $granted_list[] = $entry;
+                }
+            }
+
             $purposes[] = [
-                'cmp_purpose_id' => sanitize_text_field($category),
-                'status'         => $is_denied ? 'denied' : 'granted',
-                'legal_basis'    => 'consent',
+                'cmp_purpose_id'  => sanitize_text_field($category),
+                'status'          => !empty($denied_list) ? 'denied' : 'granted',
+                'legal_basis'     => 'consent',
+                'granted_domains' => $granted_list,
+                'denied_domains'  => $denied_list,
             ];
         }
 
@@ -314,7 +348,9 @@ class AesirX_ComplianceOne_Webhook
             'session_id'         => sanitize_text_field($params['session_id'] ?? ''),
             'consent_action'     => $is_full_consent ? 'accept_all' : 'grant',
             'banner_interaction' => $is_full_consent ? 'accept_all' : 'customize',
-            'consent_version'    => '1',
+            'consent_version'           => self::getVersion('consent_version'),
+            'policy_version'            => self::getVersion('policy_version'),
+            'cookie_declaration_version' => self::getVersion('cookie_declaration_version'),
             'timestamp'          => gmdate('c'),
             'purposes'           => $purposes,
         ];
@@ -331,5 +367,75 @@ class AesirX_ComplianceOne_Webhook
             return sanitize_text_field($params['domain']);
         }
         return (string) wp_parse_url(home_url(), PHP_URL_HOST);
+    }
+
+    /**
+     * Read a version field from the consent modal plugin settings.
+     *
+     * Supported keys: consent_version, policy_version, cookie_declaration_version.
+     */
+    private static function getVersion(string $key): string
+    {
+        $options = get_option('aesirx_consent_modal_plugin_options', []);
+        return (string) ($options[$key] ?? '1.0.0');
+    }
+
+    /**
+     * Rebuild the full `aesirxBlockJSDomains` list from plugin options.
+     *
+     * Mirrors the construction in aesirx-consent.php so the webhook can split
+     * each category's domains into granted vs denied without relying on
+     * client-side state.
+     *
+     * @return array<int, array{domain:string, category:string, name:string}>
+     */
+    private static function getAllBlockingDomains(): array
+    {
+        $options = get_option('aesirx_analytics_plugin_options', []);
+
+        $paths = isset($options['blocking_cookies']) && is_array($options['blocking_cookies'])
+            ? array_filter($options['blocking_cookies'], fn($v) => trim((string) $v) !== '')
+            : [];
+        $categories = (isset($options['blocking_cookies_category']) && is_array($options['blocking_cookies_category']))
+            ? $options['blocking_cookies_category']
+            : [];
+        $plugins_raw = (isset($options['blocking_cookies_plugins']) && is_array($options['blocking_cookies_plugins']))
+            ? $options['blocking_cookies_plugins']
+            : [];
+        $plugins_cat_raw = (isset($options['blocking_cookies_plugins_category']) && is_array($options['blocking_cookies_plugins_category']))
+            ? $options['blocking_cookies_plugins_category']
+            : [];
+
+        $prefix = 'wp-content/plugins/';
+        $plugins = !empty($plugins_raw)
+            ? array_map(
+                fn($v) => $prefix . $v,
+                array_filter($plugins_raw, fn($v) => trim((string) $v) !== '')
+            )
+            : [];
+
+        $plugins_category = [];
+        $plugins_name     = [];
+        foreach ($plugins_cat_raw as $slug => $pluginData) {
+            if (!is_array($pluginData)) {
+                continue;
+            }
+            foreach ($pluginData as $pluginName => $category) {
+                $plugins_category[$prefix . $slug] = $category;
+                $plugins_name[$prefix . $slug]     = $pluginName;
+            }
+        }
+
+        $merged = array_values(array_unique(array_merge($paths, $plugins), SORT_REGULAR));
+
+        $result = [];
+        foreach ($merged as $key => $domain) {
+            $result[] = [
+                'domain'   => (string) $domain,
+                'category' => (string) ($categories[$key] ?? ($plugins_category[$domain] ?? 'custom')),
+                'name'     => (string) ($plugins_name[$domain] ?? ''),
+            ];
+        }
+        return $result;
     }
 }
