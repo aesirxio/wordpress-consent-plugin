@@ -167,6 +167,7 @@ class AesirX_ComplianceOne_Webhook
             'consent_version'           => self::getVersion('consent_version'),
             'policy_version'            => self::getVersion('policy_version'),
             'cookie_declaration_version' => self::getVersion('cookie_declaration_version'),
+            'user'               => self::getCurrentWpUser(),
             'timestamp'          => gmdate('c'),
             'purposes'           => [
                 [
@@ -217,6 +218,7 @@ class AesirX_ComplianceOne_Webhook
             'consent_version'           => self::getVersion('consent_version'),
             'policy_version'            => self::getVersion('policy_version'),
             'cookie_declaration_version' => self::getVersion('cookie_declaration_version'),
+            'user'               => self::getCurrentWpUser(),
             'timestamp'          => gmdate('c'),
             'purposes'           => $purposes,
         ];
@@ -262,6 +264,7 @@ class AesirX_ComplianceOne_Webhook
             'consent_version'           => self::getVersion('consent_version'),
             'policy_version'            => self::getVersion('policy_version'),
             'cookie_declaration_version' => self::getVersion('cookie_declaration_version'),
+            'user'               => self::getCurrentWpUser(),
             'timestamp'          => gmdate('c'),
             'purposes'           => $purposes,
         ];
@@ -351,6 +354,7 @@ class AesirX_ComplianceOne_Webhook
             'consent_version'           => self::getVersion('consent_version'),
             'policy_version'            => self::getVersion('policy_version'),
             'cookie_declaration_version' => self::getVersion('cookie_declaration_version'),
+            'user'               => self::getCurrentWpUser(),
             'timestamp'          => gmdate('c'),
             'purposes'           => $purposes,
         ];
@@ -378,6 +382,50 @@ class AesirX_ComplianceOne_Webhook
     {
         $options = get_option('aesirx_consent_modal_plugin_options', []);
         return (string) ($options[$key] ?? '1.0.0');
+    }
+
+    /**
+     * Return the logged-in WordPress user's display name, email and phone, or
+     * null when the request is anonymous.
+     *
+     * Phone is read from user meta (first non-empty of: phone, billing_phone).
+     *
+     * @return array{display_name:string, email:string, phone:string}|null
+     */
+    private static function getCurrentWpUser(): ?array
+    {
+        if (!function_exists('wp_get_current_user') || !is_user_logged_in()) {
+            return null;
+        }
+        $user = wp_get_current_user();
+        if (!$user || empty($user->ID)) {
+            return null;
+        }
+
+        $phone = '';
+        foreach (['phone', 'billing_phone'] as $meta_key) {
+            $value = get_user_meta($user->ID, $meta_key, true);
+            if (is_string($value) && $value !== '') {
+                $phone = $value;
+                break;
+            }
+        }
+
+        $display = trim((string) get_user_meta($user->ID, 'nickname', true));
+        if ($display === '') {
+            $first = trim((string) get_user_meta($user->ID, 'first_name', true));
+            $last  = trim((string) get_user_meta($user->ID, 'last_name', true));
+            $display = trim($first . ' ' . $last);
+        }
+        if ($display === '') {
+            $display = (string) $user->display_name;
+        }
+
+        return [
+            'display_name' => sanitize_text_field($display),
+            'email'        => sanitize_email((string) $user->user_email),
+            'phone'        => sanitize_text_field($phone),
+        ];
     }
 
     /**
