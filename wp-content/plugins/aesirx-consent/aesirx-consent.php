@@ -3,7 +3,7 @@
  * Plugin Name: AesirX Consent
  * Plugin URI: https://analytics.aesirx.io?utm_source=wpplugin&utm_medium=web&utm_campaign=wordpress&utm_id=aesirx&utm_term=wordpress&utm_content=analytics
  * Description: Aesirx Consent plugin. When you join forces with AesirX, you're not just becoming a Partner - you're also becoming a freedom fighter in the battle for privacy! Earn 25% Affiliate Commission <a href="https://aesirx.io/partner?utm_source=wpplugin&utm_medium=web&utm_campaign=wordpress&utm_id=aesirx&utm_term=wordpress&utm_content=analytics">[Click to Join]</a>
- * Version: 2.1.0
+ * Version: 2.1.1
  * Author: aesirx.io
  * Author URI: https://aesirx.io/
  * Domain Path: /languages
@@ -65,7 +65,7 @@ add_action('wp_enqueue_scripts', function (): void {
         'aesirx-consent',
         plugins_url('assets/vendor/consent-loader.global.js', __FILE__),
         [],
-        '2.1.0',
+        '2.1.1',
     true
     );
 
@@ -81,7 +81,7 @@ add_action('wp_enqueue_scripts', function (): void {
         'aesirx-consent',
         plugins_url($cssFile, __FILE__),
         [],
-        '2.1.0',
+        '2.1.1',
         'all'
     );
     wp_enqueue_style('aesirx-consent');
@@ -378,7 +378,13 @@ function aesirx_analytics_url_handler()
                 ->setRequestMethods([Request::REQUEST_TYPE_POST])
         );
 
-        echo wp_kses_post($router->start());
+        $response = $router->start();
+        $requestUri = $_SERVER['REQUEST_URI'] ?? '';
+        if (strpos($requestUri, '/datastream/template/') !== false) {
+            echo $response;
+        } else {
+            echo wp_kses_post($response);
+        }
     } catch (Throwable $e) {
         if ($e instanceof NotFoundHttpException) {
         return;

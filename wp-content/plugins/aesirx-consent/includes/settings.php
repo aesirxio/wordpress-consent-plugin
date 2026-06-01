@@ -2787,25 +2787,52 @@ add_filter(
       // Ensure arrays
       $old_value = is_array($old_value) ? $old_value : [];
       $new_value = is_array($new_value) ? $new_value : [];
+
+      $current_consent = $old_value['consent_version'] ?? '1.0.0';
+      $current_policy  = $old_value['policy_version'] ?? '1.0.0';
+      $current_cookie  = $old_value['cookie_declaration_version'] ?? '1.0.0';
+
+      // Targeted bumps requested by internal callers.
+      // Accepts a list of version keys to increment, e.g. ['policy_version'].
       if (!empty($new_value['_force_version_bump'])) {
-        $current_version = $old_value['consent_version'] ?? '1.0.0';
-        $new_value['consent_version'] = aesirx_increment_version($current_version);
-        // cleanup
-        unset($new_value['_force_version_bump']);
-        return $new_value;
+          $targets = (array) $new_value['_force_version_bump'];
+          if (in_array('consent_version', $targets, true)) {
+              $current_consent = aesirx_increment_version($current_consent);
+          }
+          if (in_array('policy_version', $targets, true)) {
+              $current_policy = aesirx_increment_version($current_policy);
+          }
+          if (in_array('cookie_declaration_version', $targets, true)) {
+              $current_cookie = aesirx_increment_version($current_cookie);
+          }
+          $new_value['consent_version']            = $current_consent;
+          $new_value['policy_version']             = $current_policy;
+          $new_value['cookie_declaration_version'] = $current_cookie;
+          unset($new_value['_force_version_bump']);
+          return $new_value;
       }
-      // Set default version if missing
-      $current_version = $old_value['consent_version'] ?? '1.0.0';
-      // Remove version before comparison
+
+      // Diff-based bumps: strip all version fields before comparing so the
+      // versions themselves don't count as changes.
       $old_compare = $old_value;
       $new_compare = $new_value;
-      unset($old_compare['consent_version'], $new_compare['consent_version']);
-      // Only bump version if something actually changed
-      if ($old_compare !== $new_compare) {
-          $new_value['consent_version'] = aesirx_increment_version($current_version);
-      } else {
-          $new_value['consent_version'] = $current_version;
+      foreach (['consent_version', 'policy_version', 'cookie_declaration_version'] as $k) {
+          unset($old_compare[$k], $new_compare[$k]);
       }
+
+      // datastream_cookie changes only bump cookie_declaration_version — not consent_version.
+      $old_cookie_text = $old_compare['datastream_cookie'] ?? null;
+      $new_cookie_text = $new_compare['datastream_cookie'] ?? null;
+      unset($old_compare['datastream_cookie'], $new_compare['datastream_cookie']);
+
+      $cookie_changed  = $old_cookie_text !== $new_cookie_text;
+      $consent_changed = $old_compare !== $new_compare;
+
+      $new_value['consent_version']            = $consent_changed ? aesirx_increment_version($current_consent) : $current_consent;
+      $new_value['cookie_declaration_version'] = $cookie_changed ? aesirx_increment_version($current_cookie) : $current_cookie;
+      // policy_version is only bumped via _force_version_bump (from the privacy page post_updated hook).
+      $new_value['policy_version'] = $current_policy;
+
       return $new_value;
   },
   10,
@@ -2831,10 +2858,31 @@ add_action('post_updated', function ($post_ID, $post_after, $post_before) {
         return;
     }
     $consent_options = get_option('aesirx_consent_modal_plugin_options', []);
-    $current_version = $consent_options['consent_version'] ?? '1.0.0';
-    $consent_options['_force_version_bump'] = true;
+    $consent_options['_force_version_bump'] = ['policy_version'];
 
-    $consent_options['consent_version'] = aesirx_increment_version($current_version);
+    update_option('aesirx_consent_modal_plugin_options', $consent_options);
+
+}, 10, 3);
+
+add_action('post_updated', function ($post_ID, $post_after, $post_before) {
+    if ($post_after->post_type !== 'page') {
+        return;
+    }
+    $optionsAI = get_option('aesirx_consent_ai_plugin_options', []);
+    $cookie_link = $optionsAI['cookie_declaration_link'] ?? '';
+
+    if (!$cookie_link) {
+        return;
+    }
+    $cookie_page_id = url_to_postid($cookie_link);
+    if (!$cookie_page_id || (int) $post_ID !== (int) $cookie_page_id) {
+        return;
+    }
+    if ($post_after->post_content === $post_before->post_content) {
+        return;
+    }
+    $consent_options = get_option('aesirx_consent_modal_plugin_options', []);
+    $consent_options['_force_version_bump'] = ['cookie_declaration_version'];
 
     update_option('aesirx_consent_modal_plugin_options', $consent_options);
 
