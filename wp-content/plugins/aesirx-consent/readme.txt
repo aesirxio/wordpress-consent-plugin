@@ -48,6 +48,9 @@ The Terms of service can be found here https://aesirx.io/terms-conditions and th
 
 == Changelog ==
 
+= 2.1.2 =
+* Fix consent bugs
+
 = 2.1.1 =
 * Fix bugs PHP string
 
